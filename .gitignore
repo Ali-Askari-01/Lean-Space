@@ -1,0 +1,30 @@
+# Secrets — never commit
+.env
+**/.env
+!**/.env.example
+
+# Flutter / Dart
+leanspace/.dart_tool/
+leanspace/.flutter-plugins
+leanspace/.flutter-plugins-dependencies
+leanspace/build/
+leanspace/.pub-cache/
+leanspace/.pub/
+leanspace/**/doc/api/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Supabase local
+supabase/.branches/
+supabase/.temp/
+
+# Local notes (test account passwords, etc.)
+notes.local.md
