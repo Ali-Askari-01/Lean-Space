@@ -15,13 +15,33 @@ dependencies:
   flutter_secure_storage: ^9.2.4
   go_router: ^14.8.1
   supabase_flutter: ^2.9.0
+  flutter_timezone: ^4.1.0
+  intl: ^0.20.2
+  google_fonts: ^6.2.1
+  share_plus: ^10.1.4
+  path_provider: ^2.1.5
+  home_widget: ^0.7.0
+  in_app_purchase: ^3.2.1
+  android_intent_plus: ^5.3.0
+  shared_preferences: ^2.5.3
+  flutter_local_notifications: ^19.0.0
+  timezone: ^0.10.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.3
+
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: assets/app_icon.png
+  adaptive_icon_background: "#0F0D0B"
+  adaptive_icon_foreground: assets/app_icon.png
 
 flutter:
   uses-material-design: true
   assets:
     - .env
+    - assets/app_icon.png

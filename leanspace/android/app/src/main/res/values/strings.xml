@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_description">Your chain streak and today progress</string>
+    <string name="shortcut_add_widget">Add widget</string>
+    <string name="shortcut_add_widget_long">Add chain widget to home screen</string>
+    <string name="shortcut_share">Share app</string>
+    <string name="shortcut_share_long">Share LeanSpace with a friend</string>
+    <string name="shortcut_app_info">App info</string>
+    <string name="shortcut_app_info_long">Uninstall or manage app permissions</string>
+</resources>

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../core/theme/app_colors.dart';
+
 class RootShell extends StatelessWidget {
   const RootShell({super.key, required this.child});
 
@@ -17,6 +19,9 @@ class RootShell extends StatelessWidget {
     return Scaffold(
       body: child,
       bottomNavigationBar: NavigationBar(
+        height: 68,
+        backgroundColor: AppColors.bgElev,
+        indicatorColor: AppColors.accent.withValues(alpha: 0.18),
         selectedIndex: _selectedIndex(context),
         onDestinationSelected: (index) {
           switch (index) {
@@ -30,12 +35,12 @@ class RootShell extends StatelessWidget {
           NavigationDestination(
             icon: Icon(Icons.wb_sunny_outlined),
             selectedIcon: Icon(Icons.wb_sunny),
-            label: 'My Day',
+            label: 'Today',
           ),
           NavigationDestination(
-            icon: Icon(Icons.groups_outlined),
-            selectedIcon: Icon(Icons.groups),
-            label: 'Our Space',
+            icon: Icon(Icons.people_outline),
+            selectedIcon: Icon(Icons.people),
+            label: 'Buddy',
           ),
         ],
       ),

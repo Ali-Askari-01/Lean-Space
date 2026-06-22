@@ -1,27 +1,35 @@
 # Supabase — LeanSpace
 
-Migrations and Edge Functions live here once Batch 1.2 starts.
+## Apply schema (required before Phase 1 features work)
 
-## Quick start (when ready)
+**Important:** Paste **SQL code only** into the SQL Editor — not English instructions.
 
-```bash
-# From repo root — requires Supabase CLI + Docker for local stack
-supabase init   # already done if this folder exists
-supabase link --project-ref YOUR_PROJECT_REF
-supabase db push
-```
+1. Open [Supabase Dashboard](https://supabase.com/dashboard) → your project → **SQL Editor** → **New query**
+2. On your PC, open this file in a text editor:
+   `supabase/migrations/20250622000000_initial_schema.sql`
+3. Select **all** the file contents (starts with `-- LeanSpace initial schema`) and paste into the SQL Editor
+4. Click **Run** — you should see **Success. No rows returned**
 
-## Structure (created as you build)
+   That message is **normal**. `CREATE TABLE` does not return rows — it only creates tables. Check **Table Editor** to confirm tables exist.
+
+You should see 8 tables under **Table Editor**: `users`, `habits`, `todos`, `projects`, `project_members`, `daily_logs`, `consumed_invites`, `app_opens`.
+
+## Verify
+
+Sign up in the app → a row appears in `public.users` (via `handle_new_user` trigger).
+
+## Structure
 
 ```
 supabase/
-├── config.toml
-├── migrations/          # DDL from engineering/02-TRD.md
-└── functions/
-    ├── rollover-cron/
-    ├── generate-invite/
-    ├── invite-redeem/
-    └── play-billing-webhook/
+├── migrations/
+│   └── 20250622000000_initial_schema.sql
+└── functions/          # Phase 3+ (invites, scheduled rollover)
 ```
 
-For now, develop against your **cloud** Supabase project. Local Docker stack is optional until Batch 1.6 (rollover testing).
+## CLI (optional later)
+
+```bash
+supabase link --project-ref YOUR_PROJECT_REF
+supabase db push
+```
