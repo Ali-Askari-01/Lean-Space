@@ -9,7 +9,6 @@ import 'core/deep_link.dart';
 import 'core/deep_link_handlers.dart';
 import 'core/feature_flags.dart';
 import 'core/theme/app_theme.dart';
-import 'features/buddy/providers/buddy_providers.dart';
 import 'features/my_day/providers/my_day_providers.dart';
 import 'features/reminders/providers/reminder_providers.dart';
 import 'features/subscription/providers/entitlement_provider.dart';
@@ -24,35 +23,81 @@ class LeanSpaceApp extends ConsumerStatefulWidget {
 }
 
 class _LeanSpaceAppState extends ConsumerState<LeanSpaceApp> {
+  ProviderSubscription<MyDayState>? _myDaySub;
+
   @override
   void initState() {
     super.initState();
-    AppActions.listenForShortcuts((path) {
-      if (mounted) _runShortcut(path);
-    });
+    AppActions.listenForNativeIntents(
+      onShortcut: (path) {
+        if (mounted) _runShortcut(path);
+      },
+      onDeepLink: (uri) {
+        if (mounted) _runDeepLink(uri);
+      },
+    );
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _bootstrapIfNeeded();
       _initHomeWidget();
-      _handlePendingShortcut();
-      ref.read(reminderControllerProvider);
+      _handlePendingIntents();
+      _initReminders();
     });
     Supabase.instance.client.auth.onAuthStateChange.listen((event) {
       if (event.session != null) {
         _bootstrapIfNeeded();
       }
     });
+
+    _myDaySub = ref.listenManual<MyDayState>(myDayProvider, (prev, next) {
+      final tasksChanged = prev?.todayTasks != next.todayTasks;
+      final finishedLoading = prev?.isLoading == true && !next.isLoading;
+      if (!tasksChanged && !finishedLoading) return;
+
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (!mounted) return;
+        ref.read(reminderControllerProvider.notifier).rescheduleFromMyDay();
+      });
+    });
   }
 
-  Future<void> _handlePendingShortcut() async {
-    final path = await AppActions.consumePendingShortcut();
-    if (!mounted || path == null) return;
-    _runShortcut(path);
+  @override
+  void dispose() {
+    _myDaySub?.close();
+    super.dispose();
+  }
+
+  Future<void> _initReminders() async {
+    if (!mounted) return;
+    final reminders = ref.read(reminderControllerProvider.notifier);
+    await reminders.ensurePermission();
+    await reminders.rescheduleFromMyDay();
+  }
+
+  Future<void> _handlePendingIntents() async {
+    final shortcut = await AppActions.consumePendingShortcut();
+    if (mounted && shortcut != null) {
+      _runShortcut(shortcut);
+    }
+    final deepLink = await AppActions.consumePendingDeepLink();
+    if (mounted && deepLink != null) {
+      _runDeepLink(deepLink);
+    }
+  }
+
+  void _runDeepLink(Uri uri) {
+    final action = parseDeepLink(uri);
+    if (action == null) return;
+    scheduleDeepLinkAction(ref, action);
+    ref.read(appRouterProvider).go(action.path);
   }
 
   void _runShortcut(String path) {
     switch (path) {
       case '/add-widget':
-        ref.read(pendingWidgetSetupProvider.notifier).state = true;
+        scheduleDeepLinkAction(
+          ref,
+          const DeepLinkAction(path: '/my-day', showWidgetSetup: true),
+        );
         ref.read(appRouterProvider).go('/my-day');
       case '/share':
         AppActions.shareApp();
@@ -66,17 +111,7 @@ class _LeanSpaceAppState extends ConsumerState<LeanSpaceApp> {
       if (!mounted || uri == null) return;
       final action = parseDeepLink(uri);
       if (action != null) {
-        if (action.showWidgetSetup) {
-          ref.read(pendingWidgetSetupProvider.notifier).state = true;
-        }
-        if (action.addTask) {
-          ref.read(pendingAddTaskProvider.notifier).state = true;
-        }
-        if (action.buddyInviteCode != null) {
-          ref.read(pendingBuddyInviteProvider.notifier).state =
-              action.buddyInviteCode;
-        }
-        ref.read(appRouterProvider).go(action.path);
+        _runDeepLink(uri);
       } else {
         ref.read(appRouterProvider).go('/my-day');
       }
@@ -96,16 +131,11 @@ class _LeanSpaceAppState extends ConsumerState<LeanSpaceApp> {
       ref.watch(subscriptionControllerProvider);
     }
 
-    ref.listen(myDayProvider, (prev, next) {
-      if (prev?.todayTasks != next.todayTasks) {
-        ref.read(reminderControllerProvider.notifier).rescheduleFromMyDay();
-      }
-    });
-
     final router = ref.watch(appRouterProvider);
 
     return MaterialApp.router(
       title: 'LeanSpace',
+      debugShowCheckedModeBanner: false,
       theme: AppTheme.dark,
       routerConfig: router,
     );

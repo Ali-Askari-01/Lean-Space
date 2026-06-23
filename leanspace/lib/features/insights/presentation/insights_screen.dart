@@ -44,9 +44,11 @@ class _InsightsScreenState extends ConsumerState<InsightsScreen> {
       await file.writeAsBytes(bytes);
 
       AppHaptics.light();
-      await Share.shareXFiles(
-        [XFile(file.path)],
-        text: 'My week on LeanSpace. Don\'t break the chain.',
+      await SharePlus.instance.share(
+        ShareParams(
+          files: [XFile(file.path)],
+          text: 'My week on LeanSpace. Don\'t break the chain.',
+        ),
       );
     } catch (_) {
       if (mounted) {

@@ -1,6 +1,5 @@
 import 'dart:io';
 
-import 'package:android_intent_plus/android_intent.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:home_widget/home_widget.dart';
@@ -9,17 +8,22 @@ import 'package:share_plus/share_plus.dart';
 /// Long-press app icon shortcuts and in-app quick actions.
 abstract final class AppActions {
   static const _shortcutChannel = MethodChannel('com.leanspace/shortcuts');
-  static const _packageName = 'com.leanspace';
 
-  static void listenForShortcuts(void Function(String path) onShortcut) {
+  static void listenForNativeIntents({
+    void Function(String path)? onShortcut,
+    void Function(Uri uri)? onDeepLink,
+  }) {
     if (!Platform.isAndroid) return;
     _shortcutChannel.setMethodCallHandler((call) async {
       if (call.method == 'onShortcut' && call.arguments is String) {
-        onShortcut(call.arguments as String);
+        onShortcut?.call(call.arguments as String);
+      } else if (call.method == 'onDeepLink' && call.arguments is String) {
+        onDeepLink?.call(Uri.parse(call.arguments as String));
       }
       return null;
     });
   }
+
   /// Reads a shortcut path set by [MainActivity] on cold start, e.g.
   static Future<String?> consumePendingShortcut() async {
     if (!Platform.isAndroid) return null;
@@ -31,22 +35,38 @@ abstract final class AppActions {
     }
   }
 
+  /// Reads a deep link URI captured by [MainActivity] on cold or warm start.
+  static Future<Uri?> consumePendingDeepLink() async {
+    if (!Platform.isAndroid) return null;
+    try {
+      final raw =
+          await _shortcutChannel.invokeMethod<String>('getPendingDeepLink');
+      if (raw == null || raw.isEmpty) return null;
+      return Uri.parse(raw);
+    } catch (e) {
+      debugPrint('deep link bridge failed: $e');
+      return null;
+    }
+  }
+
   static Future<void> shareApp() async {
-    await Share.share(
-      'LeanSpace — five tasks, daily habits, one unbreakable chain. '
-      'Don\'t break the chain.',
-      subject: 'Try LeanSpace',
+    await SharePlus.instance.share(
+      ShareParams(
+        text: 'LeanSpace — five tasks, daily habits, one unbreakable chain. '
+            'Don\'t break the chain.',
+        subject: 'Try LeanSpace',
+      ),
     );
   }
 
   /// Opens Android app info (uninstall, permissions, storage).
   static Future<void> openAppInfo() async {
     if (!Platform.isAndroid) return;
-    const intent = AndroidIntent(
-      action: 'android.settings.APPLICATION_DETAILS_SETTINGS',
-      data: 'package:$_packageName',
-    );
-    await intent.launch();
+    try {
+      await _shortcutChannel.invokeMethod<void>('openAppInfo');
+    } catch (e) {
+      debugPrint('open app info failed: $e');
+    }
   }
 
   /// Requests pinning the home-screen widget (Android 8+). Returns false if

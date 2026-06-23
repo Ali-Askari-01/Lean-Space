@@ -1,4 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_riverpod/legacy.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 import '../../../router/app_router.dart';
@@ -8,22 +9,22 @@ final buddyRepositoryProvider = Provider<BuddyRepository>((ref) {
   return BuddyRepository(ref.watch(supabaseClientProvider));
 });
 
-class BuddyController extends StateNotifier<AsyncValue<BuddyState>> {
-  BuddyController(this._repo) : super(const AsyncValue.loading()) {
-    refresh();
+class BuddyController extends AsyncNotifier<BuddyState> {
+  @override
+  Future<BuddyState> build() async {
+    final repo = ref.watch(buddyRepositoryProvider);
+    await repo.refreshStreak();
+    return repo.fetchState();
   }
 
-  final BuddyRepository _repo;
+  BuddyRepository get _repo => ref.read(buddyRepositoryProvider);
 
   Future<void> refresh() async {
-    state = const AsyncValue.loading();
-    try {
+    state = const AsyncLoading();
+    state = await AsyncValue.guard(() async {
       await _repo.refreshStreak();
-      final buddy = await _repo.fetchState();
-      state = AsyncValue.data(buddy);
-    } catch (e, st) {
-      state = AsyncValue.error(e, st);
-    }
+      return _repo.fetchState();
+    });
   }
 
   Future<String?> createInvite() async {
@@ -86,9 +87,7 @@ class BuddyController extends StateNotifier<AsyncValue<BuddyState>> {
 }
 
 final buddyProvider =
-    StateNotifierProvider<BuddyController, AsyncValue<BuddyState>>((ref) {
-  return BuddyController(ref.watch(buddyRepositoryProvider));
-});
+    AsyncNotifierProvider<BuddyController, BuddyState>(BuddyController.new);
 
 /// Set when a buddy invite deep link is opened.
 final pendingBuddyInviteProvider = StateProvider<String?>((ref) => null);

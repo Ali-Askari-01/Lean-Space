@@ -18,9 +18,26 @@ class _BuddyScreenState extends ConsumerState<BuddyScreen> {
   final _codeController = TextEditingController();
   String? _message;
   bool _busy = false;
+  ProviderSubscription<String?>? _buddyInviteSub;
+
+  @override
+  void initState() {
+    super.initState();
+    _buddyInviteSub =
+        ref.listenManual<String?>(pendingBuddyInviteProvider, (prev, next) {
+      if (next == null || !mounted) return;
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (!mounted) return;
+        _codeController.text = next;
+        ref.read(pendingBuddyInviteProvider.notifier).state = null;
+        _accept();
+      });
+    });
+  }
 
   @override
   void dispose() {
+    _buddyInviteSub?.close();
     _codeController.dispose();
     super.dispose();
   }
@@ -37,9 +54,11 @@ class _BuddyScreenState extends ConsumerState<BuddyScreen> {
         return;
       }
       final link = 'leanspace://buddy/join?code=$code';
-      await Share.share(
-        'Join me on LeanSpace as my accountability buddy. One shared chain.\n\n$link',
-        subject: 'LeanSpace buddy invite',
+      await SharePlus.instance.share(
+        ShareParams(
+          text: 'Join me on LeanSpace as my accountability buddy. One shared chain.\n\n$link',
+          subject: 'LeanSpace buddy invite',
+        ),
       );
     } catch (_) {
       setState(() => _message = 'Could not create invite. Try again.');
@@ -98,14 +117,6 @@ class _BuddyScreenState extends ConsumerState<BuddyScreen> {
 
   @override
   Widget build(BuildContext context) {
-    ref.listen<String?>(pendingBuddyInviteProvider, (prev, next) {
-      if (next != null && mounted) {
-        _codeController.text = next;
-        ref.read(pendingBuddyInviteProvider.notifier).state = null;
-        _accept();
-      }
-    });
-
     final buddyAsync = ref.watch(buddyProvider);
     final theme = Theme.of(context);
 
@@ -116,7 +127,7 @@ class _BuddyScreenState extends ConsumerState<BuddyScreen> {
             loading: () => const Center(
               child: CircularProgressIndicator(color: AppColors.accent),
             ),
-            error: (_, __) => Center(
+            error: (error, _) => Center(
               child: Padding(
                 padding: const EdgeInsets.all(24),
                 child: Column(

@@ -55,20 +55,24 @@ class SubscriptionState {
   }
 }
 
-class SubscriptionController extends StateNotifier<SubscriptionState> {
-  SubscriptionController(this._ref, this._service)
-      : super(const SubscriptionState()) {
-    _sub = _service.purchaseStream.listen(
+class SubscriptionController extends Notifier<SubscriptionState> {
+  StreamSubscription<List<PurchaseDetails>>? _sub;
+
+  @override
+  SubscriptionState build() {
+    final service = ref.watch(subscriptionServiceProvider);
+    _sub?.cancel();
+    _sub = service.purchaseStream.listen(
       _onPurchaseUpdates,
       onError: (Object e) =>
           state = state.copyWith(error: 'Purchase failed. Try again.'),
     );
-    _init();
+    ref.onDispose(() => _sub?.cancel());
+    Future.microtask(_init);
+    return const SubscriptionState();
   }
 
-  final Ref _ref;
-  final SubscriptionService _service;
-  late final StreamSubscription<List<PurchaseDetails>> _sub;
+  SubscriptionService get _service => ref.read(subscriptionServiceProvider);
 
   Future<void> _init() async {
     try {
@@ -144,7 +148,7 @@ class SubscriptionController extends StateNotifier<SubscriptionState> {
   /// Records the purchase so the backend can reconcile, and optimistically
   /// unlocks Pro locally. The Play webhook (server) remains the source of truth.
   Future<void> _deliver(PurchaseDetails purchase) async {
-    final client = _ref.read(supabaseClientProvider);
+    final client = ref.read(supabaseClientProvider);
     try {
       await client.rpc('record_pro_purchase', params: {
         'p_product_id': purchase.productID,
@@ -154,18 +158,12 @@ class SubscriptionController extends StateNotifier<SubscriptionState> {
     } catch (e) {
       debugPrint('subscription: record_pro_purchase failed: $e');
     }
-    _ref.read(entitlementProvider.notifier).setProOptimistic();
-    await _ref.read(entitlementProvider.notifier).refresh();
-  }
-
-  @override
-  void dispose() {
-    _sub.cancel();
-    super.dispose();
+    ref.read(entitlementProvider.notifier).setProOptimistic();
+    await ref.read(entitlementProvider.notifier).refresh();
   }
 }
 
 final subscriptionControllerProvider =
-    StateNotifierProvider<SubscriptionController, SubscriptionState>((ref) {
-  return SubscriptionController(ref, ref.watch(subscriptionServiceProvider));
-});
+    NotifierProvider<SubscriptionController, SubscriptionState>(
+  SubscriptionController.new,
+);

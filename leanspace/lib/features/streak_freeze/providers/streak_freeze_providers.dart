@@ -34,12 +34,15 @@ class StreakFreezeState {
   }
 }
 
-class StreakFreezeController extends StateNotifier<StreakFreezeState> {
-  StreakFreezeController(this._repo) : super(const StreakFreezeState()) {
-    refresh();
+class StreakFreezeController extends Notifier<StreakFreezeState> {
+  @override
+  StreakFreezeState build() {
+    ref.watch(streakFreezeRepositoryProvider);
+    Future.microtask(refresh);
+    return const StreakFreezeState();
   }
 
-  final StreakFreezeRepository _repo;
+  StreakFreezeRepository get _repo => ref.read(streakFreezeRepositoryProvider);
 
   Future<void> refresh() async {
     state = state.copyWith(isLoading: true);
@@ -85,6 +88,6 @@ class StreakFreezeController extends StateNotifier<StreakFreezeState> {
 }
 
 final streakFreezeProvider =
-    StateNotifierProvider<StreakFreezeController, StreakFreezeState>((ref) {
-  return StreakFreezeController(ref.watch(streakFreezeRepositoryProvider));
-});
+    NotifierProvider<StreakFreezeController, StreakFreezeState>(
+  StreakFreezeController.new,
+);

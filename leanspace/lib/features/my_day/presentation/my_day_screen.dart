@@ -23,10 +23,47 @@ class MyDayScreen extends ConsumerStatefulWidget {
 }
 
 class _MyDayScreenState extends ConsumerState<MyDayScreen> {
+  ProviderSubscription<bool>? _addTaskSub;
+  ProviderSubscription<bool>? _widgetSetupSub;
+
   @override
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) => _maybeShowOnboarding());
+
+    _addTaskSub = ref.listenManual<bool>(pendingAddTaskProvider, (prev, next) {
+      if (!next || !mounted) return;
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (!mounted) return;
+        ref.read(pendingAddTaskProvider.notifier).state = false;
+        showModalBottomSheet<void>(
+          context: context,
+          isScrollControlled: true,
+          backgroundColor: AppColors.bgElev,
+          shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.vertical(top: Radius.circular(28)),
+          ),
+          builder: (_) => const AddTaskSheet(),
+        );
+      });
+    });
+
+    _widgetSetupSub =
+        ref.listenManual<bool>(pendingWidgetSetupProvider, (prev, next) {
+      if (!next || !mounted) return;
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (!mounted) return;
+        ref.read(pendingWidgetSetupProvider.notifier).state = false;
+        showWidgetSetupSheet(context);
+      });
+    });
+  }
+
+  @override
+  void dispose() {
+    _addTaskSub?.close();
+    _widgetSetupSub?.close();
+    super.dispose();
   }
 
   Future<void> _maybeShowOnboarding() async {
@@ -55,35 +92,8 @@ class _MyDayScreenState extends ConsumerState<MyDayScreen> {
 
   @override
   Widget build(BuildContext context) {
-    ref.listen<bool>(pendingAddTaskProvider, (prev, next) {
-      if (next && context.mounted) {
-        ref.read(pendingAddTaskProvider.notifier).state = false;
-        WidgetsBinding.instance.addPostFrameCallback((_) {
-          if (!context.mounted) return;
-          showModalBottomSheet<void>(
-            context: context,
-            isScrollControlled: true,
-            backgroundColor: AppColors.bgElev,
-            shape: const RoundedRectangleBorder(
-              borderRadius: BorderRadius.vertical(top: Radius.circular(28)),
-            ),
-            builder: (_) => const AddTaskSheet(),
-          );
-        });
-      }
-    });
-
-    ref.listen<bool>(pendingWidgetSetupProvider, (prev, next) {
-      if (next && context.mounted) {
-        ref.read(pendingWidgetSetupProvider.notifier).state = false;
-        WidgetsBinding.instance.addPostFrameCallback((_) {
-          if (context.mounted) showWidgetSetupSheet(context);
-        });
-      }
-    });
-
     final state = ref.watch(myDayProvider);
-    final buddy = ref.watch(buddyProvider).valueOrNull;
+    final buddy = ref.watch(buddyProvider).asData?.value;
     final theme = Theme.of(context);
     final completed = state.todayTasks.where((t) => t.isDone).length;
     final total = state.todayTasks.length;

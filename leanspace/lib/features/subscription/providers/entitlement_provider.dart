@@ -35,12 +35,15 @@ class Entitlement {
   }
 }
 
-class EntitlementNotifier extends StateNotifier<Entitlement> {
-  EntitlementNotifier(this._client) : super(const Entitlement()) {
-    refresh();
+class EntitlementNotifier extends Notifier<Entitlement> {
+  @override
+  Entitlement build() {
+    ref.watch(supabaseClientProvider);
+    Future.microtask(refresh);
+    return const Entitlement();
   }
 
-  final SupabaseClient _client;
+  SupabaseClient get _client => ref.read(supabaseClientProvider);
 
   Future<void> refresh() async {
     if (FeatureFlags.unlockAllFeatures) {
@@ -82,6 +85,4 @@ class EntitlementNotifier extends StateNotifier<Entitlement> {
 }
 
 final entitlementProvider =
-    StateNotifierProvider<EntitlementNotifier, Entitlement>((ref) {
-  return EntitlementNotifier(ref.watch(supabaseClientProvider));
-});
+    NotifierProvider<EntitlementNotifier, Entitlement>(EntitlementNotifier.new);
