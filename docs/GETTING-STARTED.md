@@ -23,6 +23,33 @@ Quick path from zero to `flutter run` on a physical Android device (no Android S
 
 Restart Cursor/terminal after changing these.
 
+### Windows desktop (optional)
+
+LeanSpace targets Android first. To build for Windows (`flutter build windows`):
+
+1. Enable the desktop target (once):
+   ```powershell
+   flutter config --enable-windows-desktop
+   ```
+2. Install **Visual Studio 2022 Community** with the **Desktop development with C++** workload (~8–15 GB):
+   ```powershell
+   winget install Microsoft.VisualStudio.2022.Community --override "--wait --passive --add Microsoft.VisualStudio.Workload.NativeDesktop --includeRecommended"
+   ```
+   Or download from [visualstudio.microsoft.com](https://visualstudio.microsoft.com/downloads/).
+3. Verify: `flutter doctor -v` — the Visual Studio line should be green.
+
+### Android Gradle troubleshooting
+
+If `flutter build` fails with corrupted Gradle cache (`metadata.bin`, lock timeouts):
+
+```powershell
+cd leanspace
+powershell -ExecutionPolicy Bypass -File scripts/clean_build_env.ps1
+powershell -ExecutionPolicy Bypass -File scripts/build_apk.ps1 -Clean
+```
+
+Run **one** build at a time — parallel `flutter run` / `gradlew` processes corrupt the Gradle 9.1 cache.
+
 ### You still need
 
 ## 2. Phone setup (USB)

@@ -43,17 +43,18 @@ class ReminderState {
   }
 }
 
-class ReminderController extends StateNotifier<ReminderState> {
-  ReminderController(this._ref) : super(const ReminderState()) {
-    _init();
-  }
-
-  final Ref _ref;
+class ReminderController extends Notifier<ReminderState> {
   ReminderStore? _store;
+
+  @override
+  ReminderState build() {
+    Future.microtask(_init);
+    return const ReminderState();
+  }
 
   Future<ReminderStore> _ensureStore() async {
     if (_store != null) return _store!;
-    _store = await _ref.read(reminderStoreProvider.future);
+    _store = await ref.read(reminderStoreProvider.future);
     return _store!;
   }
 
@@ -92,16 +93,16 @@ class ReminderController extends StateNotifier<ReminderState> {
     final updated = Map<String, TaskReminder>.from(state.taskReminders)
       ..remove(taskId);
     state = state.copyWith(taskReminders: updated);
-    await _ref.read(notificationServiceProvider).cancelTask(taskId);
+    await ref.read(notificationServiceProvider).cancelTask(taskId);
     await _reschedule();
   }
 
   Future<void> _reschedule() async {
     if (!state.ready) return;
-    final myDay = _ref.read(myDayProvider);
+    final myDay = ref.read(myDayProvider);
     final openTasks =
         myDay.todayTasks.where((t) => t.status == TodoStatus.open).toList();
-    final service = _ref.read(notificationServiceProvider);
+    final service = ref.read(notificationServiceProvider);
     await service.syncAll(
       openTasks: openTasks,
       taskReminders: state.taskReminders,
@@ -112,11 +113,12 @@ class ReminderController extends StateNotifier<ReminderState> {
   Future<void> rescheduleFromMyDay() => _reschedule();
 
   Future<bool> ensurePermission() async {
-    return _ref.read(notificationServiceProvider).requestPermission();
+    final service = ref.read(notificationServiceProvider);
+    final notifications = await service.requestPermission();
+    await service.ensureExactAlarmsPermission();
+    return notifications;
   }
 }
 
 final reminderControllerProvider =
-    StateNotifierProvider<ReminderController, ReminderState>((ref) {
-  return ReminderController(ref);
-});
+    NotifierProvider<ReminderController, ReminderState>(ReminderController.new);

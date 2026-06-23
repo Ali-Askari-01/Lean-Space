@@ -36,7 +36,7 @@ final appRouterProvider = Provider<GoRouter>((ref) {
     redirect: (context, state) {
       final action = parseDeepLink(state.uri);
       if (action != null) {
-        applyDeepLinkAction(ref, action);
+        scheduleDeepLinkAction(ref, action);
         final session = Supabase.instance.client.auth.currentSession;
         if (session == null) return '/auth';
         return action.path;

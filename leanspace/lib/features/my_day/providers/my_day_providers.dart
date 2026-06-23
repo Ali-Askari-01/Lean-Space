@@ -1,14 +1,15 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_riverpod/legacy.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 import '../../../router/app_router.dart';
-import '../../subscription/providers/entitlement_provider.dart';
-import '../../streak_freeze/providers/streak_freeze_providers.dart';
 import '../data/my_day_repository.dart';
 import '../domain/habit.dart';
 import '../domain/todo_item.dart';
 import '../../../core/home_widget_sync.dart';
 import '../../../core/local_date.dart';
+import '../../subscription/providers/entitlement_provider.dart';
+import '../../streak_freeze/providers/streak_freeze_providers.dart';
 
 /// Set to true when the home-screen widget "+" is tapped; My Day listens and
 /// opens the add-task sheet.
@@ -75,13 +76,17 @@ class MyDayState {
   }
 }
 
-class MyDayNotifier extends StateNotifier<MyDayState> {
-  MyDayNotifier(this._repo, this._ref) : super(const MyDayState()) {
-    refresh();
+class MyDayNotifier extends Notifier<MyDayState> {
+  TodoItem? _lastAddedTask;
+
+  @override
+  MyDayState build() {
+    ref.watch(myDayRepositoryProvider);
+    Future.microtask(refresh);
+    return const MyDayState();
   }
 
-  final MyDayRepository _repo;
-  final Ref _ref;
+  MyDayRepository get _repo => ref.read(myDayRepositoryProvider);
 
   Future<void> refresh() async {
     state = state.copyWith(isLoading: true, clearError: true);
@@ -98,7 +103,7 @@ class MyDayNotifier extends StateNotifier<MyDayState> {
       var leftBehind = results[2] as List<TodoItem>;
       final allTodos = results[3] as List<TodoItem>;
 
-      final window = _ref.read(entitlementProvider).historyWindowDays;
+      final window = ref.read(entitlementProvider).historyWindowDays;
       if (window != null) {
         final cutoff = LocalDate.today.subtract(Duration(days: window - 1));
         leftBehind = leftBehind
@@ -106,8 +111,8 @@ class MyDayNotifier extends StateNotifier<MyDayState> {
             .toList();
       }
 
-      await _ref.read(streakFreezeProvider.notifier).refresh();
-      final frozenDates = _ref.read(streakFreezeProvider).frozenDates.toSet();
+      await ref.read(streakFreezeProvider.notifier).refresh();
+      final frozenDates = ref.read(streakFreezeProvider).frozenDates.toSet();
 
       final streak = computeTaskStreak(
         allTodos,
@@ -178,7 +183,6 @@ class MyDayNotifier extends StateNotifier<MyDayState> {
     }
   }
 
-  TodoItem? _lastAddedTask;
   TodoItem? consumeLastAddedTask() {
     final task = _lastAddedTask;
     _lastAddedTask = null;
@@ -210,6 +214,4 @@ class MyDayNotifier extends StateNotifier<MyDayState> {
 }
 
 final myDayProvider =
-    StateNotifierProvider<MyDayNotifier, MyDayState>((ref) {
-  return MyDayNotifier(ref.watch(myDayRepositoryProvider), ref);
-});
+    NotifierProvider<MyDayNotifier, MyDayState>(MyDayNotifier.new);

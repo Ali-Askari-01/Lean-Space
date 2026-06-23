@@ -35,8 +35,8 @@ Future<void> main() async {
 
   tz_data.initializeTimeZones();
   try {
-    final tzName = await FlutterTimezone.getLocalTimezone();
-    tz.setLocalLocation(tz.getLocation(tzName));
+    final tzInfo = await FlutterTimezone.getLocalTimezone();
+    tz.setLocalLocation(tz.getLocation(tzInfo.identifier));
   } catch (e) {
     debugPrint('timezone init failed: $e');
   }
@@ -64,6 +64,7 @@ class LeanSpaceConfigErrorApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'LeanSpace',
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(title: const Text('Setup required')),
         body: Padding(
