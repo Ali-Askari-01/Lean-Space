@@ -25,7 +25,7 @@ class HabitRow extends ConsumerWidget {
         scrollDirection: Axis.horizontal,
         padding: const EdgeInsets.symmetric(horizontal: 20),
         itemCount: 5,
-        separatorBuilder: (_, _) => const SizedBox(width: 10),
+        separatorBuilder: (context, index) => const SizedBox(width: 10),
         itemBuilder: (context, index) {
           final habit = slots[index];
           final locked = habit == null && index >= slotLimit;
