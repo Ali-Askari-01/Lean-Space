@@ -15,7 +15,6 @@ subprojects {
     val newSubprojectBuildDir: Directory = newBuildDir.dir(project.name)
     project.layout.buildDirectory.value(newSubprojectBuildDir)
 
-    // Legacy Flutter plugins read `flutter.compileSdkVersion` during evaluation.
     project.evaluationDependsOn(":app")
 }
 

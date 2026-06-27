@@ -23,14 +23,12 @@ finally {
     Pop-Location
 }
 
-Write-Host "Clearing corrupted Gradle 9.1 caches..."
-$gradleCaches = Join-Path $env:USERPROFILE ".gradle\caches\9.1.0"
-foreach ($dir in @("transforms", "kotlin-dsl")) {
-    $path = Join-Path $gradleCaches $dir
-    if (Test-Path $path) {
-        Remove-Item -Recurse -Force $path -ErrorAction SilentlyContinue
-        Write-Host "  Removed $path"
-    }
+Write-Host "Clearing corrupted Gradle caches..."
+$gradleHome = if ($env:GRADLE_USER_HOME) { $env:GRADLE_USER_HOME } else { Join-Path $env:USERPROFILE ".gradle" }
+$gradleCaches = Join-Path $gradleHome "caches"
+if (Test-Path $gradleCaches) {
+    Remove-Item -Recurse -Force $gradleCaches -ErrorAction SilentlyContinue
+    Write-Host "  Removed $gradleCaches"
 }
 
 # Cursor sandbox redirects GRADLE_USER_HOME here; partial deletes corrupt immutable workspaces.

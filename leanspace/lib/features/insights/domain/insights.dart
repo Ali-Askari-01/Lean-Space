@@ -99,8 +99,7 @@ InsightsData buildInsights(
     created += items.length;
     completed += items.where((t) => t.isDone).length;
     final isPerfect = items.isNotEmpty &&
-        items.every((t) => t.isDone) &&
-        items.any((t) => t.isDone);
+        items.every((t) => t.isDone);
     perfectByDate[date] = isPerfect;
     if (isPerfect) perfect++;
   }
@@ -119,7 +118,7 @@ InsightsData buildInsights(
     windowDays: windowDays,
     coachingLine: _coachingLine(
       last7: last7,
-      currentStreak: computeTaskStreak(todos, today),
+      currentStreak: computeTaskStreak(todos, today, frozenDates: frozenDates),
       tasksCreated: created,
       tasksCompleted: completed,
       activeHabits: habits.length,

@@ -80,7 +80,7 @@ class _InsightsScreenState extends ConsumerState<InsightsScreen> {
             loading: () => const Center(
               child: CircularProgressIndicator(color: AppColors.accent),
             ),
-            error: (_, _) => Center(
+            error: (error, stackTrace) => Center(
               child: Padding(
                 padding: const EdgeInsets.all(24),
                 child: Text(

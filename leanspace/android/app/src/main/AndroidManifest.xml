@@ -68,7 +68,7 @@
             </intent-filter>
         </activity>
         <receiver
-            android:name=".LeanSpaceWidgetProvider"
+            android:name="com.leanspace.leanspace.LeanSpaceWidgetProvider"
             android:exported="true"
             android:label="LeanSpace Chain">
             <intent-filter>
