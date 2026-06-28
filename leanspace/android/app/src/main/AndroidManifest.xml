@@ -70,7 +70,8 @@
         <receiver
             android:name="com.leanspace.leanspace.LeanSpaceWidgetProvider"
             android:exported="true"
-            android:label="LeanSpace Chain">
+            android:label="LeanSpace Chain"
+            android:icon="@mipmap/ic_launcher">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>

@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  Android 8.0 (API 26) is our minSdk, so we deliberately do NOT use
+  targetCellWidth / targetCellHeight / widgetFeatures (those are API 31+).
+  Including them on a host that doesn't honour them has been observed to
+  cause third-party launchers to refuse to inflate the widget.
+-->
 <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
     android:minWidth="180dp"
     android:minHeight="110dp"
-    android:targetCellWidth="3"
-    android:targetCellHeight="2"
+    android:minResizeWidth="180dp"
+    android:minResizeHeight="110dp"
     android:updatePeriodMillis="1800000"
     android:initialLayout="@layout/leanspace_widget"
     android:resizeMode="horizontal|vertical"
