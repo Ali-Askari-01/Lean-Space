@@ -125,7 +125,6 @@ class _BloomTrackerAppState extends ConsumerState<BloomTrackerApp> {
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context);
     switch (_phase) {
       case _AppPhase.splash:
         return const _ScaffoldOnly(child: BloomSplash());
@@ -139,23 +138,7 @@ class _BloomTrackerAppState extends ConsumerState<BloomTrackerApp> {
                     'SUPABASE_PUBLISHABLE_KEY (or legacy SUPABASE_ANON_KEY) '
                     'to leanspace/.env, then rebuild:\n\nflutter build '
                     'apk --debug',
-            action: Container(
-              padding: const EdgeInsets.symmetric(
-                  horizontal: 16, vertical: 10),
-              decoration: BoxDecoration(
-                color: AppColors.surfaceContainerHigh,
-                borderRadius: BorderRadius.circular(12),
-                border: Border.all(color: AppColors.outlineVariant),
-              ),
-              child: Text(
-                l10n.authSetupRequired,
-                style: const TextStyle(
-                  color: AppColors.primary,
-                  fontWeight: FontWeight.w800,
-                  letterSpacing: 0.4,
-                ),
-              ),
-            ),
+            action: const _SetupRequiredBadge(),
           ),
         );
       case _AppPhase.ready:
@@ -166,6 +149,36 @@ class _BloomTrackerAppState extends ConsumerState<BloomTrackerApp> {
         }
         return _ReadyScope(notifications: _notifications!);
     }
+  }
+}
+
+/// The "Setup required" pill shown on the config-error splash. Lives in its
+/// own widget so it can call [AppLocalizations.of] inside the [MaterialApp]
+/// tree that [_ScaffoldOnly] builds — the parent [_BloomTrackerAppState.build]
+/// is *above* the MaterialApp, so calling `AppLocalizations.of` there returns
+/// null (no Localizations ancestor) and crashes the whole build.
+class _SetupRequiredBadge extends StatelessWidget {
+  const _SetupRequiredBadge();
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+      decoration: BoxDecoration(
+        color: AppColors.surfaceContainerHigh,
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: AppColors.outlineVariant),
+      ),
+      child: Text(
+        l10n.authSetupRequired,
+        style: const TextStyle(
+          color: AppColors.primary,
+          fontWeight: FontWeight.w800,
+          letterSpacing: 0.4,
+        ),
+      ),
+    );
   }
 }
 
