@@ -1,4 +1,4 @@
-﻿{
+﻿﻿﻿﻿﻿{
   "@@locale": "tr",
   "appTitle": "Bloom Tracker",
   "tabToday": "Bugün",
@@ -59,7 +59,7 @@
   "settingsLanguage": "Dil",
   "settingsLanguageValue": "Sistem varsayılanı",
   "cancel": "İptal",
-  "shareCardSnapshot": "Sığınağının bir anlık görüntüsü"
+  "shareCardSnapshot": "Sığınağının bir anlık görüntüsü",
 
 
   "commonRetry": "Retry",
@@ -166,7 +166,7 @@
   "youFromPrice": "from {price}/mo",
   "youBloomTrackerFooter": "Bloom Tracker · Habit & To-Do",
 
-  "progressMedals": "Medals",,
+  "progressMedals": "Medals",
   "progressLast7Days": "Last 7 days",
   "progressSeeAll": "See all",
   "progressSeeDayByDayActivity": "See your day-by-day activity",

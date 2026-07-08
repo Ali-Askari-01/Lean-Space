@@ -1,4 +1,4 @@
-﻿{
+﻿﻿﻿﻿﻿{
   "@@locale": "ar",
   "appTitle": "بلوم تراكر",
   "tabToday": "اليوم",
@@ -139,7 +139,7 @@
   "howItWorksProgressBody": "السلسلة، التقويم، الميداليات، السجل — كل شيء عن تقدمك مع الوقت. لا شيء عاجل هنا.",
   "howItWorksYou": "علامة تبويب أنت",
   "howItWorksYouBody": "حسابك، الإعدادات، تسجيل الخروج. هذا كل شيء.",
-  "howItWorksRule": "القاعدة: 5 أشياء صغيرة، كل يوم، بدون أعذار."
+  "howItWorksRule": "القاعدة: 5 أشياء صغيرة، كل يوم، بدون أعذار.",
 
 
   "commonRetry": "Retry",
@@ -246,7 +246,7 @@
   "youFromPrice": "from {price}/mo",
   "youBloomTrackerFooter": "Bloom Tracker · Habit & To-Do",
 
-  "progressMedals": "Medals",,
+  "progressMedals": "Medals",
   "progressLast7Days": "Last 7 days",
   "progressSeeAll": "See all",
   "progressSeeDayByDayActivity": "See your day-by-day activity",

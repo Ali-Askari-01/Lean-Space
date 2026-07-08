@@ -1,4 +1,4 @@
-﻿{
+﻿﻿﻿﻿﻿{
   "@@locale": "ps",
   "appTitle": "بلوم ټریکر",
   "tabToday": "نن",
@@ -58,7 +58,7 @@
   "settingsSignOut": "وتل",
   "settingsLanguage": "ژبه",
   "settingsLanguageValue": "د سیسټم ډیفالټ",
-  "cancel": "لغوه کول"
+  "cancel": "لغوه کول",
 
 
   "commonRetry": "Retry",
@@ -165,7 +165,7 @@
   "youFromPrice": "from {price}/mo",
   "youBloomTrackerFooter": "Bloom Tracker · Habit & To-Do",
 
-  "progressMedals": "Medals",,
+  "progressMedals": "Medals",
   "progressLast7Days": "Last 7 days",
   "progressSeeAll": "See all",
   "progressSeeDayByDayActivity": "See your day-by-day activity",

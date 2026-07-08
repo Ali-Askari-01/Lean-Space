@@ -1,4 +1,4 @@
-﻿{
+﻿﻿﻿﻿﻿{
   "@@locale": "sd",
   "appTitle": "بلم ٽريڪر",
   "tabToday": "اڄ",
@@ -58,7 +58,7 @@
   "settingsSignOut": "سائن آئوٽ",
   "settingsLanguage": "ٻولي",
   "settingsLanguageValue": "سسٽم ڊفالٽ",
-  "cancel": "منسوخ ڪريو"
+  "cancel": "منسوخ ڪريو",
 
 
   "commonRetry": "Retry",
@@ -165,7 +165,7 @@
   "youFromPrice": "from {price}/mo",
   "youBloomTrackerFooter": "Bloom Tracker · Habit & To-Do",
 
-  "progressMedals": "Medals",,
+  "progressMedals": "Medals",
   "progressLast7Days": "Last 7 days",
   "progressSeeAll": "See all",
   "progressSeeDayByDayActivity": "See your day-by-day activity",

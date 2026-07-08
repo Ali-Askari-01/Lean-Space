@@ -1,4 +1,4 @@
-﻿{
+﻿﻿﻿﻿﻿{
   "@@locale": "fr",
   "appTitle": "Bloom Tracker",
   "tabToday": "Aujourd'hui",
@@ -139,7 +139,7 @@
   "howItWorksProgressBody": "Série, calendrier, médailles, historique — tout sur ta progression. Rien d'urgent ne vit ici.",
   "howItWorksYou": "L'onglet Vous",
   "howItWorksYouBody": "Ton compte, les paramètres, la déconnexion. C'est tout.",
-  "howItWorksRule": "La règle : 5 petites choses, chaque jour, sans excuses."
+  "howItWorksRule": "La règle : 5 petites choses, chaque jour, sans excuses.",
 
 
   "commonRetry": "Retry",
@@ -246,7 +246,7 @@
   "youFromPrice": "from {price}/mo",
   "youBloomTrackerFooter": "Bloom Tracker · Habit & To-Do",
 
-  "progressMedals": "Medals",,
+  "progressMedals": "Medals",
   "progressLast7Days": "Last 7 days",
   "progressSeeAll": "See all",
   "progressSeeDayByDayActivity": "See your day-by-day activity",

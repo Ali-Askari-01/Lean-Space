@@ -832,8 +832,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get authEnterValidEmail => 'Enter a valid email address';
 
   @override
-  String get authPasswordTooShort =>
-      'Password must be at least 6 characters';
+  String get authPasswordTooShort => 'Password must be at least 6 characters';
 
   @override
   String get authAccountCreated =>
@@ -879,19 +878,16 @@ class AppLocalizationsEn extends AppLocalizations {
   String get settingsManageProSubscription => 'Manage Pro subscription';
 
   @override
-  String get settingsProCancelPlay =>
-      'Cancel or change plan in Google Play';
+  String get settingsProCancelPlay => 'Cancel or change plan in Google Play';
 
   @override
-  String get settingsProUnlock =>
-      'Unlock all 5 habits, full history, more';
+  String get settingsProUnlock => 'Unlock all 5 habits, full history, more';
 
   @override
   String get settingsTaskAlarms => 'Task alarms & Final Call';
 
   @override
-  String get settingsTaskAlarmsSubtitle =>
-      'Evening nudge and midnight warning';
+  String get settingsTaskAlarmsSubtitle => 'Evening nudge and midnight warning';
 
   @override
   String get settingsHomeScreenWidget => 'Home-screen widget';
@@ -924,7 +920,7 @@ class AppLocalizationsEn extends AppLocalizations {
       'Beta build — subscriptions paused while we test everything.';
 
   @override
-  String settingsVersion(String version, String build) {
+  String settingsVersion(Object build, Object version) {
     return 'Version $version ($build)';
   }
 
@@ -935,7 +931,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get settingsHabitMaster => 'Habit Master';
 
   @override
-  String settingsLevel(String level) {
+  String settingsLevel(Object level) {
     return 'Level $level · Habit Master';
   }
 
@@ -949,8 +945,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get youLast7DaysSubtitle => 'Day-by-day task history';
 
   @override
-  String get youLeftBehindSubtitle =>
-      'Missed tasks waiting to be re-added';
+  String get youLeftBehindSubtitle => 'Missed tasks waiting to be re-added';
 
   @override
   String get youProTier => 'Pro tier';
@@ -965,12 +960,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get youFree => 'Free';
 
   @override
-  String youLevelLabel(String level) {
+  String youLevelLabel(Object level) {
     return 'Level $level';
   }
 
   @override
-  String youBestStreakLabel(String days) {
+  String youBestStreakLabel(Object days) {
     return 'Best $days d';
   }
 
@@ -991,8 +986,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get youSeePlans => 'See plans';
 
   @override
-  String youFromPrice(String price) {
-    return 'from \$$price/mo';
+  String youFromPrice(Object price) {
+    return 'from $price/mo';
   }
 
   @override
@@ -1008,11 +1003,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get progressSeeAll => 'See all';
 
   @override
-  String get progressSeeDayByDayActivity =>
-      'See your day-by-day activity';
+  String get progressSeeDayByDayActivity => 'See your day-by-day activity';
 
   @override
-  String progressTasksFinishedPct(String done, String total, String pct) {
+  String progressTasksFinishedPct(Object done, Object pct, Object total) {
     return '$done of $total tasks finished · $pct%';
   }
 
@@ -1021,7 +1015,7 @@ class AppLocalizationsEn extends AppLocalizations {
       'No medals yet — finish a task or tend a sprout to get started.';
 
   @override
-  String progressSeeAllMedals(String earned, String total) {
+  String progressSeeAllMedals(Object earned, Object total) {
     return 'See all medals · $earned of $total earned';
   }
 
@@ -1029,17 +1023,17 @@ class AppLocalizationsEn extends AppLocalizations {
   String get progressGuardianInsight => 'Guardian insight';
 
   @override
-  String progressNextBadgeTier(String tier) {
-    return 'NEXT BADGE · ${tier.toUpperCase()}';
+  String progressNextBadgeTier(Object tier) {
+    return 'NEXT BADGE · $tier';
   }
 
   @override
-  String progressDaysTarget(String days) {
+  String progressDaysTarget(Object days) {
     return '$days day target';
   }
 
   @override
-  String progressOfTotal(String value, String target) {
+  String progressOfTotal(Object target, Object value) {
     return '$value/$target';
   }
 
@@ -1089,7 +1083,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get helpDisclaimer =>
-      'Tapping "Email us" opens your mail app with a pre-filled message (no data leaves your device until you send).';
+      'Tapping \"Email us\" opens your mail app with a pre-filled message (no data leaves your device until you send).';
 
   @override
   String get helpFaqQ1 => 'What is the 5-task cap?';
@@ -1103,7 +1097,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get helpFaqA2 =>
-      'At your local midnight, any task still marked open is stamped "missed" and moves to Left Behind. Habit streaks reset if the habit was not completed the day before.';
+      'At your local midnight, any task still marked open is stamped \"missed\" and moves to Left Behind. Habit streaks reset if the habit was not completed the day before.';
 
   @override
   String get helpFaqQ3 => 'What is Left Behind?';
@@ -1124,7 +1118,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get helpFaqA5 =>
-      'One "freeze" per calendar month, Pro only. Spend it on a day you missed to keep your chain alive. Find it on the Progress tab.';
+      'One \"freeze\" per calendar month, Pro only. Spend it on a day you missed to keep your chain alive. Find it on the Progress tab.';
 
   @override
   String get helpFaqQ6 => 'Where is my data stored?';

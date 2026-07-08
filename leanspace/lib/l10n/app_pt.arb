@@ -1,4 +1,4 @@
-﻿{
+﻿﻿﻿﻿﻿{
   "@@locale": "pt",
   "appTitle": "Bloom Tracker",
   "tabToday": "Hoje",
@@ -59,7 +59,7 @@
   "settingsLanguage": "Idioma",
   "settingsLanguageValue": "Padrão do sistema",
   "cancel": "Cancelar",
-  "shareCardSnapshot": "Um instantâneo do seu santuário"
+  "shareCardSnapshot": "Um instantâneo do seu santuário",
 
 
   "commonRetry": "Retry",
@@ -166,7 +166,7 @@
   "youFromPrice": "from {price}/mo",
   "youBloomTrackerFooter": "Bloom Tracker · Habit & To-Do",
 
-  "progressMedals": "Medals",,
+  "progressMedals": "Medals",
   "progressLast7Days": "Last 7 days",
   "progressSeeAll": "See all",
   "progressSeeDayByDayActivity": "See your day-by-day activity",

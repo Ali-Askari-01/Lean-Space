@@ -1,4 +1,4 @@
-﻿{
+﻿﻿﻿﻿﻿{
   "@@locale": "ur",
   "appTitle": "بلوم ٹریکر",
   "tabToday": "آج",
@@ -145,7 +145,7 @@
   "howItWorksProgressBody": "اسٹریک، کیلنڈر، تمغے، تاریخ — وقت کے ساتھ آپ کیسا کر رہے ہیں اس کا سب کچھ۔ یہاں کوئی فوری کام نہیں ہے۔",
   "howItWorksYou": "آپ کا ٹیب",
   "howItWorksYouBody": "آپ کا اکاؤنٹ، ترتیبات، سائن آؤٹ۔ بس۔",
-  "howItWorksRule": "اصول: 5 چھوٹی چیزیں، ہر روز، کوئی بہانہ نہیں۔"
+  "howItWorksRule": "اصول: 5 چھوٹی چیزیں، ہر روز، کوئی بہانہ نہیں۔",
 
 
   "commonRetry": "Retry",
@@ -252,7 +252,7 @@
   "youFromPrice": "from {price}/mo",
   "youBloomTrackerFooter": "Bloom Tracker · Habit & To-Do",
 
-  "progressMedals": "Medals",,
+  "progressMedals": "Medals",
   "progressLast7Days": "Last 7 days",
   "progressSeeAll": "See all",
   "progressSeeDayByDayActivity": "See your day-by-day activity",

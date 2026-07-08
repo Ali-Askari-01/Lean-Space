@@ -1,4 +1,4 @@
-﻿{
+﻿﻿﻿﻿﻿{
   "@@locale": "pa",
   "appTitle": "ਬਲੂਮ ਟਰੈਕਰ",
   "tabToday": "ਅੱਜ",
@@ -58,7 +58,7 @@
   "settingsSignOut": "ਸਾਈਨ ਆਉਟ",
   "settingsLanguage": "ਭਾਸ਼ਾ",
   "settingsLanguageValue": "ਸਿਸਟਮ ਡਿਫਾਲਟ",
-  "cancel": "ਰੱਦ ਕਰੋ"
+  "cancel": "ਰੱਦ ਕਰੋ",
 
 
   "commonRetry": "Retry",
@@ -165,7 +165,7 @@
   "youFromPrice": "from {price}/mo",
   "youBloomTrackerFooter": "Bloom Tracker · Habit & To-Do",
 
-  "progressMedals": "Medals",,
+  "progressMedals": "Medals",
   "progressLast7Days": "Last 7 days",
   "progressSeeAll": "See all",
   "progressSeeDayByDayActivity": "See your day-by-day activity",

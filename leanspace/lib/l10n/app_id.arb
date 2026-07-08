@@ -1,4 +1,4 @@
-﻿{
+﻿﻿﻿﻿﻿{
   "@@locale": "id",
   "appTitle": "Bloom Tracker",
   "tabToday": "Hari Ini",
@@ -59,7 +59,7 @@
   "settingsLanguage": "Bahasa",
   "settingsLanguageValue": "Default sistem",
   "cancel": "Batal",
-  "shareCardSnapshot": "Sekilas tentang tempat perlindungan Anda"
+  "shareCardSnapshot": "Sekilas tentang tempat perlindungan Anda",
 
 
   "commonRetry": "Retry",
@@ -166,7 +166,7 @@
   "youFromPrice": "from {price}/mo",
   "youBloomTrackerFooter": "Bloom Tracker · Habit & To-Do",
 
-  "progressMedals": "Medals",,
+  "progressMedals": "Medals",
   "progressLast7Days": "Last 7 days",
   "progressSeeAll": "See all",
   "progressSeeDayByDayActivity": "See your day-by-day activity",

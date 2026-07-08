@@ -1,4 +1,4 @@
-﻿{
+﻿﻿﻿﻿﻿{
   "@@locale": "bn",
   "appTitle": "ব্লুম ট্র্যাকার",
   "tabToday": "আজ",
@@ -68,7 +68,7 @@
   "firstRunCta": "আমার প্রথম বীজ রোপণ করুন",
   "cancel": "বাতিল",
   "shareCardSnapshot": "আপনার আশ্রয়ের একটি ঝলক",
-  "shareCardShareMyBloom": "আমার ফুল ভাগ করুন"
+  "shareCardShareMyBloom": "আমার ফুল ভাগ করুন",
 
 
   "commonRetry": "Retry",
@@ -175,7 +175,7 @@
   "youFromPrice": "from {price}/mo",
   "youBloomTrackerFooter": "Bloom Tracker · Habit & To-Do",
 
-  "progressMedals": "Medals",,
+  "progressMedals": "Medals",
   "progressLast7Days": "Last 7 days",
   "progressSeeAll": "See all",
   "progressSeeDayByDayActivity": "See your day-by-day activity",

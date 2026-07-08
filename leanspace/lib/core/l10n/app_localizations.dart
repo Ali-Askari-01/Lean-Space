@@ -1754,7 +1754,7 @@ abstract class AppLocalizations {
   ///
   /// In en, this message translates to:
   /// **'Version {version} ({build})'**
-  String settingsVersion(String version, String build);
+  String settingsVersion(Object build, Object version);
 
   /// No description provided for @settingsVersionUnknown.
   ///
@@ -1772,7 +1772,7 @@ abstract class AppLocalizations {
   ///
   /// In en, this message translates to:
   /// **'Level {level} · Habit Master'**
-  String settingsLevel(String level);
+  String settingsLevel(Object level);
 
   /// No description provided for @languagePickerTitle.
   ///
@@ -1826,13 +1826,13 @@ abstract class AppLocalizations {
   ///
   /// In en, this message translates to:
   /// **'Level {level}'**
-  String youLevelLabel(String level);
+  String youLevelLabel(Object level);
 
   /// No description provided for @youBestStreakLabel.
   ///
   /// In en, this message translates to:
   /// **'Best {days} d'**
-  String youBestStreakLabel(String days);
+  String youBestStreakLabel(Object days);
 
   /// No description provided for @youPlantHabit.
   ///
@@ -1868,7 +1868,7 @@ abstract class AppLocalizations {
   ///
   /// In en, this message translates to:
   /// **'from {price}/mo'**
-  String youFromPrice(String price);
+  String youFromPrice(Object price);
 
   /// No description provided for @youBloomTrackerFooter.
   ///
@@ -1904,7 +1904,7 @@ abstract class AppLocalizations {
   ///
   /// In en, this message translates to:
   /// **'{done} of {total} tasks finished · {pct}%'**
-  String progressTasksFinishedPct(String done, String total, String pct);
+  String progressTasksFinishedPct(Object done, Object pct, Object total);
 
   /// No description provided for @progressNoMedalsYet.
   ///
@@ -1916,7 +1916,7 @@ abstract class AppLocalizations {
   ///
   /// In en, this message translates to:
   /// **'See all medals · {earned} of {total} earned'**
-  String progressSeeAllMedals(String earned, String total);
+  String progressSeeAllMedals(Object earned, Object total);
 
   /// No description provided for @progressGuardianInsight.
   ///
@@ -1928,19 +1928,19 @@ abstract class AppLocalizations {
   ///
   /// In en, this message translates to:
   /// **'NEXT BADGE · {tier}'**
-  String progressNextBadgeTier(String tier);
+  String progressNextBadgeTier(Object tier);
 
   /// No description provided for @progressDaysTarget.
   ///
   /// In en, this message translates to:
   /// **'{days} day target'**
-  String progressDaysTarget(String days);
+  String progressDaysTarget(Object days);
 
   /// No description provided for @progressOfTotal.
   ///
   /// In en, this message translates to:
   /// **'{value}/{target}'**
-  String progressOfTotal(String value, String target);
+  String progressOfTotal(Object target, Object value);
 
   /// No description provided for @helpTitle.
   ///
@@ -2029,7 +2029,7 @@ abstract class AppLocalizations {
   /// No description provided for @helpDisclaimer.
   ///
   /// In en, this message translates to:
-  /// **'Tapping "Email us" opens your mail app with a pre-filled message (no data leaves your device until you send).'**
+  /// **'Tapping \"Email us\" opens your mail app with a pre-filled message (no data leaves your device until you send).'**
   String get helpDisclaimer;
 
   /// No description provided for @helpFaqQ1.
@@ -2053,7 +2053,7 @@ abstract class AppLocalizations {
   /// No description provided for @helpFaqA2.
   ///
   /// In en, this message translates to:
-  /// **'At your local midnight, any task still marked open is stamped "missed" and moves to Left Behind. Habit streaks reset if the habit was not completed the day before.'**
+  /// **'At your local midnight, any task still marked open is stamped \"missed\" and moves to Left Behind. Habit streaks reset if the habit was not completed the day before.'**
   String get helpFaqA2;
 
   /// No description provided for @helpFaqQ3.
@@ -2089,7 +2089,7 @@ abstract class AppLocalizations {
   /// No description provided for @helpFaqA5.
   ///
   /// In en, this message translates to:
-  /// **'One "freeze" per calendar month, Pro only. Spend it on a day you missed to keep your chain alive. Find it on the Progress tab.'**
+  /// **'One \"freeze\" per calendar month, Pro only. Spend it on a day you missed to keep your chain alive. Find it on the Progress tab.'**
   String get helpFaqA5;
 
   /// No description provided for @helpFaqQ6.

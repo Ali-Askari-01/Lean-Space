@@ -1,4 +1,4 @@
-﻿{
+﻿﻿{
   "@@locale": "en",
   "appTitle": "Bloom Tracker",
   "tabToday": "Today",
@@ -454,7 +454,7 @@
   "youFromPrice": "from {price}/mo",
   "youBloomTrackerFooter": "Bloom Tracker · Habit & To-Do",
 
-  "progressMedals": "Medals",,
+  "progressMedals": "Medals",
   "progressLast7Days": "Last 7 days",
   "progressSeeAll": "See all",
   "progressSeeDayByDayActivity": "See your day-by-day activity",

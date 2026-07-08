@@ -1,4 +1,4 @@
-﻿{
+﻿﻿﻿﻿﻿{
   "@@locale": "hi",
   "appTitle": "ब्लूम ट्रैकर",
   "tabToday": "आज",
@@ -145,7 +145,7 @@
   "howItWorksProgressBody": "स्ट्रीक, कैलेंडर, पदक, इतिहास — समय के साथ आप कैसा कर रहे हैं इसका सब कुछ। यहाँ कुछ भी जरूरी नहीं है।",
   "howItWorksYou": "आप टैब",
   "howItWorksYouBody": "आपका खाता, सेटिंग्स, साइन आउट। बस।",
-  "howItWorksRule": "नियम: 5 छोटी चीज़ें, हर दिन, कोई बहाना नहीं।"
+  "howItWorksRule": "नियम: 5 छोटी चीज़ें, हर दिन, कोई बहाना नहीं।",
 
 
   "commonRetry": "Retry",
@@ -252,7 +252,7 @@
   "youFromPrice": "from {price}/mo",
   "youBloomTrackerFooter": "Bloom Tracker · Habit & To-Do",
 
-  "progressMedals": "Medals",,
+  "progressMedals": "Medals",
   "progressLast7Days": "Last 7 days",
   "progressSeeAll": "See all",
   "progressSeeDayByDayActivity": "See your day-by-day activity",
