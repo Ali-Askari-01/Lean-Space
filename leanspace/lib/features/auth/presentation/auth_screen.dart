@@ -5,8 +5,11 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 
 import '../../../core/auth_constants.dart';
 import '../../../core/auth_errors.dart';
+import '../../../core/l10n/app_localizations.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/widgets/ambient_background.dart';
+import '../../../core/widgets/growth_widgets.dart';
+import '../../../core/widgets/guardian_mascot.dart';
 
 class AuthScreen extends ConsumerStatefulWidget {
   const AuthScreen({super.key});
@@ -48,20 +51,21 @@ class _AuthScreenState extends ConsumerState<AuthScreen>
     super.dispose();
   }
 
-  String? _validateInputs() {
+  String? _validateInputs(AppLocalizations l10n) {
     final email = _emailController.text.trim();
     final password = _passwordController.text;
 
-    if (email.isEmpty) return 'Enter your email';
-    if (!email.contains('@')) return 'Enter a valid email address';
+    if (email.isEmpty) return l10n.authEnterEmail;
+    if (!email.contains('@')) return l10n.authEnterValidEmail;
     if (password.length < 6) {
-      return 'Password must be at least 6 characters';
+      return l10n.authPasswordTooShort;
     }
     return null;
   }
 
   Future<void> _submitEmail() async {
-    final validation = _validateInputs();
+    final l10n = AppLocalizations.of(context);
+    final validation = _validateInputs(l10n);
     if (validation != null) {
       setState(() {
         _error = validation;
@@ -95,8 +99,7 @@ class _AuthScreenState extends ConsumerState<AuthScreen>
         }
 
         setState(() {
-          _info =
-              'Account created. Switch to Sign In and use your password.';
+          _info = l10n.authAccountCreated;
           _passwordController.clear();
         });
         _tabController.animateTo(0);
@@ -112,13 +115,14 @@ class _AuthScreenState extends ConsumerState<AuthScreen>
     } on AuthException catch (e) {
       setState(() => _error = friendlyAuthError(e.message));
     } catch (e) {
-      setState(() => _error = 'Something went wrong. Try again.');
+      setState(() => _error = l10n.authSomethingWentWrong);
     } finally {
       if (mounted) setState(() => _loading = false);
     }
   }
 
   Future<void> _signInWithGoogle() async {
+    final l10n = AppLocalizations.of(context);
     setState(() {
       _loading = true;
       _error = null;
@@ -134,7 +138,7 @@ class _AuthScreenState extends ConsumerState<AuthScreen>
     } on AuthException catch (e) {
       setState(() => _error = friendlyAuthError(e.message));
     } catch (e) {
-      setState(() => _error = 'Could not start Google sign-in.');
+      setState(() => _error = l10n.authCouldNotStartGoogle);
     } finally {
       if (mounted) setState(() => _loading = false);
     }
@@ -143,221 +147,221 @@ class _AuthScreenState extends ConsumerState<AuthScreen>
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final l10n = AppLocalizations.of(context);
 
     return Scaffold(
+      backgroundColor: AppColors.surface,
       body: AmbientBackground(
         child: SafeArea(
           child: SingleChildScrollView(
             padding: const EdgeInsets.fromLTRB(24, 16, 24, 32),
             child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              const SizedBox(height: 24),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  _BrandMark(),
-                  const SizedBox(width: 12),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'LEANSPACE',
-                        style: theme.textTheme.labelLarge?.copyWith(
-                          letterSpacing: 3,
-                          fontWeight: FontWeight.w800,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                const SizedBox(height: 24),
+                Center(
+                  child: Text(
+                    l10n.authBrand,
+                    style: theme.textTheme.titleLarge?.copyWith(
+                      color: AppColors.primary,
+                      letterSpacing: 4,
+                      fontWeight: FontWeight.w800,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 32),
+                Center(
+                  child: Container(
+                    width: 160,
+                    height: 160,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          color: AppColors.primary.withValues(alpha: 0.2),
+                          blurRadius: 28,
+                          offset: const Offset(0, 10),
                         ),
+                      ],
+                      border: Border.all(
+                        color: AppColors.primary.withValues(alpha: 0.15),
+                        width: 1.4,
                       ),
-                      Text(
-                        "Don't break the chain",
-                        style: theme.textTheme.bodySmall?.copyWith(
-                          color: AppColors.textMuted,
-                        ),
-                      ),
+                    ),
+                    clipBehavior: Clip.antiAlias,
+                    child: const GuardianMascot(
+                      size: 160,
+                      expression: GuardianExpression.happy,
+                      variant: GuardianMascotVariant.potStitch,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 28),
+                Text(
+                  _isSignUp ? l10n.authPlantFirstSeed : l10n.authWelcomeBack,
+                  textAlign: TextAlign.center,
+                  style: theme.textTheme.headlineSmall?.copyWith(
+                    color: AppColors.onSurface,
+                    fontWeight: FontWeight.w800,
+                    letterSpacing: -0.4,
+                  ),
+                ),
+                const SizedBox(height: 8),
+                Text(
+                  _isSignUp
+                      ? l10n.authFiveTasksDaily
+                      : l10n.authSanctuaryWaiting,
+                  textAlign: TextAlign.center,
+                  style: theme.textTheme.bodyMedium?.copyWith(
+                    color: AppColors.onSurfaceVariant,
+                  ),
+                ),
+                const SizedBox(height: 28),
+                Container(
+                  padding: const EdgeInsets.all(4),
+                  decoration: BoxDecoration(
+                    color: AppColors.surfaceContainerLow,
+                    borderRadius: BorderRadius.circular(28),
+                    border: Border.all(color: AppColors.outlineVariant),
+                  ),
+                  child: TabBar(
+                    controller: _tabController,
+                    onTap: (_) => setState(() {}),
+                    indicator: BoxDecoration(
+                      color: AppColors.primary,
+                      borderRadius: BorderRadius.circular(24),
+                    ),
+                    indicatorSize: TabBarIndicatorSize.tab,
+                    dividerColor: Colors.transparent,
+                    labelColor: AppColors.onPrimary,
+                    unselectedLabelColor: AppColors.onSurfaceVariant,
+                    labelStyle: theme.textTheme.titleSmall?.copyWith(
+                      fontWeight: FontWeight.w700,
+                    ),
+                    tabs: [
+                      Tab(text: l10n.authSignIn),
+                      Tab(text: l10n.authSignUp),
                     ],
                   ),
-                ],
-              ),
-              const SizedBox(height: 40),
-              Text(
-                _isSignUp ? 'Create your account.' : 'Welcome back.',
-                style: theme.textTheme.headlineSmall?.copyWith(
-                  fontWeight: FontWeight.w700,
-                  letterSpacing: -0.5,
                 ),
-              ),
-              const SizedBox(height: 8),
-              Text(
-                _isSignUp
-                    ? 'Five tasks. Daily habits. No excuses.'
-                    : 'Your streak is waiting.',
-                style: theme.textTheme.bodyMedium?.copyWith(
-                  color: AppColors.textMuted,
-                ),
-              ),
-              const SizedBox(height: 28),
-              TabBar(
-                controller: _tabController,
-                onTap: (_) => setState(() {}),
-                tabs: const [
-                  Tab(text: 'Sign In'),
-                  Tab(text: 'Sign Up'),
-                ],
-              ),
-              const SizedBox(height: 24),
-              Text('EMAIL', style: theme.inputDecorationTheme.labelStyle),
-              const SizedBox(height: 6),
-              TextField(
-                controller: _emailController,
-                keyboardType: TextInputType.emailAddress,
-                autofillHints: const [AutofillHints.email],
-                textInputAction: TextInputAction.next,
-                style: const TextStyle(color: AppColors.text),
-                decoration: const InputDecoration(
-                  hintText: 'you@email.com',
-                  border: OutlineInputBorder(),
-                ),
-              ),
-              const SizedBox(height: 16),
-              Text('PASSWORD', style: theme.inputDecorationTheme.labelStyle),
-              const SizedBox(height: 6),
-              TextField(
-                controller: _passwordController,
-                obscureText: true,
-                autofillHints: const [AutofillHints.password],
-                textInputAction: TextInputAction.done,
-                onSubmitted: (_) => _submitEmail(),
-                style: const TextStyle(color: AppColors.text),
-                decoration: const InputDecoration(
-                  hintText: '••••••••',
-                  border: OutlineInputBorder(),
-                ),
-              ),
-              if (_error != null) ...[
-                const SizedBox(height: 14),
-                Container(
-                  padding: const EdgeInsets.all(12),
-                  decoration: BoxDecoration(
-                    color: AppColors.danger.withValues(alpha: 0.1),
-                    borderRadius: BorderRadius.circular(10),
-                    border: Border.all(
-                      color: AppColors.danger.withValues(alpha: 0.35),
-                    ),
-                  ),
-                  child: Text(
-                    _error!,
-                    style: const TextStyle(
-                      color: AppColors.danger,
-                      fontSize: 13,
-                      height: 1.4,
-                    ),
+                const SizedBox(height: 24),
+                BlueprintLabel(l10n.authEmail, color: AppColors.onSurfaceVariant),
+                const SizedBox(height: 6),
+                TextField(
+                  controller: _emailController,
+                  keyboardType: TextInputType.emailAddress,
+                  autofillHints: const [AutofillHints.email],
+                  textInputAction: TextInputAction.next,
+                  decoration: InputDecoration(
+                    hintText: l10n.authEmailHint,
                   ),
                 ),
-              ],
-              if (_info != null) ...[
-                const SizedBox(height: 14),
-                Container(
-                  padding: const EdgeInsets.all(12),
-                  decoration: BoxDecoration(
-                    color: AppColors.accent.withValues(alpha: 0.1),
-                    borderRadius: BorderRadius.circular(10),
-                    border: Border.all(
-                      color: AppColors.accent.withValues(alpha: 0.35),
-                    ),
-                  ),
-                  child: Text(
-                    _info!,
-                    style: const TextStyle(
-                      color: AppColors.accentSoft,
-                      fontSize: 13,
-                      height: 1.4,
-                    ),
+                const SizedBox(height: 16),
+                BlueprintLabel(
+                    l10n.authPassword, color: AppColors.onSurfaceVariant),
+                const SizedBox(height: 6),
+                TextField(
+                  controller: _passwordController,
+                  obscureText: true,
+                  autofillHints: const [AutofillHints.password],
+                  textInputAction: TextInputAction.done,
+                  onSubmitted: (_) => _submitEmail(),
+                  decoration: const InputDecoration(
+                    hintText: '••••••••',
                   ),
                 ),
-              ],
-              const SizedBox(height: 24),
-              FilledButton(
-                onPressed: _loading ? null : _submitEmail,
-                child: _loading
-                    ? const SizedBox(
-                        height: 20,
-                        width: 20,
-                        child: CircularProgressIndicator(
-                          strokeWidth: 2,
-                          color: Colors.white,
-                        ),
-                      )
-                    : Text(_isSignUp ? 'Create account' : 'Sign in'),
-              ),
-              const SizedBox(height: 20),
-              Row(
-                children: [
-                  const Expanded(child: Divider()),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12),
+                if (_error != null) ...[
+                  const SizedBox(height: 14),
+                  Container(
+                    padding: const EdgeInsets.all(12),
+                    decoration: BoxDecoration(
+                      color: AppColors.error.withValues(alpha: 0.1),
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(
+                        color: AppColors.error.withValues(alpha: 0.35),
+                      ),
+                    ),
                     child: Text(
-                      'or continue with',
-                      style: theme.textTheme.bodySmall?.copyWith(
-                        color: AppColors.textFaint,
-                        fontSize: 11,
+                      _error!,
+                      style: const TextStyle(
+                        color: AppColors.error,
+                        fontSize: 13,
+                        height: 1.4,
                       ),
                     ),
                   ),
-                  const Expanded(child: Divider()),
                 ],
-              ),
-              const SizedBox(height: 16),
-              OutlinedButton(
-                onPressed: _loading ? null : _signInWithGoogle,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                if (_info != null) ...[
+                  const SizedBox(height: 14),
+                  Container(
+                    padding: const EdgeInsets.all(12),
+                    decoration: BoxDecoration(
+                      color: AppColors.primary.withValues(alpha: 0.1),
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(
+                        color: AppColors.primary.withValues(alpha: 0.35),
+                      ),
+                    ),
+                    child: Text(
+                      _info!,
+                      style: const TextStyle(
+                        color: AppColors.primary,
+                        fontSize: 13,
+                        height: 1.4,
+                      ),
+                    ),
+                  ),
+                ],
+                const SizedBox(height: 24),
+                CtaPill(
+                  label: _isSignUp ? l10n.authCreateAccount : l10n.authSignInCta,
+                  icon: _isSignUp ? Icons.eco_rounded : Icons.login_rounded,
+                  onPressed: _loading ? null : _submitEmail,
+                ),
+                const SizedBox(height: 20),
+                Row(
                   children: [
-                    _GoogleGlyph(),
-                    const SizedBox(width: 10),
-                    const Text('Continue with Google'),
+                    const Expanded(child: Divider()),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 12),
+                      child: Text(
+                        l10n.authOrContinueWith,
+                        style: theme.textTheme.bodySmall?.copyWith(
+                          color: AppColors.onSurfaceVariant,
+                          fontSize: 11,
+                        ),
+                      ),
+                    ),
+                    const Expanded(child: Divider()),
                   ],
                 ),
-              ),
-              const SizedBox(height: 32),
-              Text(
-                'By signing in, you accept that your day resets at midnight.',
-                textAlign: TextAlign.center,
-                style: theme.textTheme.bodySmall?.copyWith(
-                  color: AppColors.textFaint,
-                  fontSize: 11,
+                const SizedBox(height: 16),
+                OutlinedButton(
+                  onPressed: _loading ? null : _signInWithGoogle,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      _GoogleGlyph(),
+                      const SizedBox(width: 10),
+                      Text(l10n.authContinueWithGoogle),
+                    ],
+                  ),
                 ),
-              ),
-            ],
+                const SizedBox(height: 32),
+                Text(
+                  l10n.authMidnightReset,
+                  textAlign: TextAlign.center,
+                  style: theme.textTheme.bodySmall?.copyWith(
+                    color: AppColors.onSurfaceVariant,
+                    fontSize: 11,
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
-    ),
-    );
-  }
-}
-
-class _BrandMark extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 52,
-      height: 52,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(18),
-        gradient: const LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          colors: [AppColors.accent, AppColors.accentDeep],
-        ),
-        boxShadow: [
-          BoxShadow(
-            color: AppColors.accent.withValues(alpha: 0.35),
-            blurRadius: 24,
-            offset: const Offset(0, 8),
-          ),
-        ],
-      ),
-      child: const Icon(Icons.link_rounded, color: Colors.white, size: 26),
     );
   }
 }

@@ -35,6 +35,23 @@ class MainActivity : FlutterActivity() {
                     startActivity(intent)
                     result.success(null)
                 }
+                "openMail" -> {
+                    val to = call.argument<String>("to") ?: ""
+                    val subject = call.argument<String>("subject") ?: ""
+                    val body = call.argument<String>("body") ?: ""
+                    val uri = Uri.parse("mailto:$to" +
+                        "?subject=${Uri.encode(subject)}" +
+                        "&body=${Uri.encode(body)}")
+                    val intent = Intent(Intent.ACTION_SENDTO, uri).apply {
+                        addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                    }
+                    try {
+                        startActivity(intent)
+                        result.success(null)
+                    } catch (e: Exception) {
+                        result.error("no_mail_app", e.message, null)
+                    }
+                }
                 else -> result.notImplemented()
             }
         }

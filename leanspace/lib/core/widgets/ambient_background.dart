@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 
-import '../../core/theme/app_colors.dart';
+import '../theme/app_colors.dart';
 
-/// Ambient gradient used on auth and main screens.
+/// Soft cream + green ambient background with a subtle blueprint dot
+/// pattern. Uses [StackFit.expand] so the child fills the available
+/// space (otherwise a ListView inside gets unbounded height and renders
+/// as a single giant oversized element).
 class AmbientBackground extends StatelessWidget {
   const AmbientBackground({super.key, required this.child});
 
@@ -11,15 +14,17 @@ class AmbientBackground extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
+      fit: StackFit.expand,
       children: [
+        const ColoredBox(color: AppColors.surface),
         Positioned.fill(
           child: DecoratedBox(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               gradient: RadialGradient(
-                center: const Alignment(0, -0.7),
-                radius: 1.2,
+                center: Alignment(0, -0.8),
+                radius: 1.1,
                 colors: [
-                  AppColors.accent.withValues(alpha: 0.14),
+                  Color(0x3350C878),
                   Colors.transparent,
                 ],
               ),
@@ -28,17 +33,20 @@ class AmbientBackground extends StatelessWidget {
         ),
         Positioned.fill(
           child: DecoratedBox(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               gradient: RadialGradient(
-                center: const Alignment(0.9, 1.1),
-                radius: 0.9,
+                center: Alignment(-0.9, 1.2),
+                radius: 0.8,
                 colors: [
-                  AppColors.accentDeep.withValues(alpha: 0.08),
+                  Color(0x22FE7D5E),
                   Colors.transparent,
                 ],
               ),
             ),
           ),
+        ),
+        Positioned.fill(
+          child: CustomPaint(painter: _DotPainter()),
         ),
         child,
       ],
@@ -46,28 +54,54 @@ class AmbientBackground extends StatelessWidget {
   }
 }
 
+class _DotPainter extends CustomPainter {
+  @override
+  void paint(Canvas canvas, Size size) {
+    final paint = Paint()
+      ..color = AppColors.outlineVariant.withValues(alpha: 0.22)
+      ..style = PaintingStyle.fill;
+    const step = 26.0;
+    for (double x = 0; x < size.width; x += step) {
+      for (double y = 0; y < size.height; y += step) {
+        canvas.drawCircle(Offset(x, y), 0.5, paint);
+      }
+    }
+  }
+
+  @override
+  bool shouldRepaint(covariant _DotPainter oldDelegate) => false;
+}
+
 class SectionLabel extends StatelessWidget {
-  const SectionLabel(this.text, {super.key});
+  const SectionLabel(this.text, {super.key, this.trailing});
 
   final String text;
+  final Widget? trailing;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(20, 8, 20, 10),
-      child: Text(
-        text.toUpperCase(),
-        style: Theme.of(context).textTheme.labelSmall?.copyWith(
-              color: AppColors.textFaint,
-              letterSpacing: 2,
-              fontWeight: FontWeight.w700,
+      padding: const EdgeInsets.fromLTRB(20, 12, 20, 10),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: [
+          Expanded(
+            child: Text(
+              text,
+              style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                    color: AppColors.primary,
+                    fontWeight: FontWeight.w700,
+                    letterSpacing: -0.4,
+                  ),
             ),
+          ),
+          if (trailing != null) trailing!,
+        ],
       ),
     );
   }
 }
 
-/// Small drag handle shown at the top of bottom sheets.
 class SheetHandle extends StatelessWidget {
   const SheetHandle({super.key});
 
@@ -79,7 +113,7 @@ class SheetHandle extends StatelessWidget {
         height: 4,
         margin: const EdgeInsets.only(bottom: 20),
         decoration: BoxDecoration(
-          color: AppColors.borderStrong,
+          color: AppColors.outlineVariant,
           borderRadius: BorderRadius.circular(999),
         ),
       ),
@@ -111,7 +145,9 @@ class CapacityPips extends StatelessWidget {
             height: 3,
             margin: const EdgeInsets.only(right: 4),
             decoration: BoxDecoration(
-              color: isFilled ? AppColors.accent : AppColors.border,
+              color: isFilled
+                  ? AppColors.primary
+                  : AppColors.surfaceContainerHigh,
               borderRadius: BorderRadius.circular(2),
             ),
           );
@@ -121,7 +157,7 @@ class CapacityPips extends StatelessWidget {
           Text(
             label!,
             style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                  color: AppColors.textFaint,
+                  color: AppColors.onSurfaceVariant,
                   letterSpacing: 1.2,
                   fontWeight: FontWeight.w600,
                 ),

@@ -52,11 +52,32 @@ abstract final class AppActions {
   static Future<void> shareApp() async {
     await SharePlus.instance.share(
       ShareParams(
-        text: 'LeanSpace — five tasks, daily habits, one unbreakable chain. '
-            'Don\'t break the chain.',
-        subject: 'Try LeanSpace',
+        text: 'Bloom Tracker — five small seeds a day, one unbreakable '
+            'chain. Plant yours.',
+        subject: 'Try Bloom Tracker',
       ),
     );
+  }
+
+  /// Opens the system mail app pre-filled for a Bloom Tracker support /
+  /// bug report email. Falls back gracefully if no mail app is installed.
+  static Future<bool> openSupportEmail({
+    required String subject,
+    required String body,
+    String to = 'support@bloomtracker.app',
+  }) async {
+    if (!Platform.isAndroid) return false;
+    try {
+      await _shortcutChannel.invokeMethod<void>('openMail', {
+        'to': to,
+        'subject': subject,
+        'body': body,
+      });
+      return true;
+    } catch (e) {
+      debugPrint('open support email failed: $e');
+      return false;
+    }
   }
 
   /// Opens Android app info (uninstall, permissions, storage).

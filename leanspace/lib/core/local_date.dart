@@ -29,3 +29,12 @@ abstract final class LocalDate {
   static bool isSameDay(DateTime a, DateTime b) =>
       a.year == b.year && a.month == b.month && a.day == b.day;
 }
+
+/// Stable, per-day integer hash. Use as a seed so the same intention
+/// quote shows for the whole day instead of changing on every rebuild.
+abstract final class LocalDateHash {
+  static int get today {
+    final d = LocalDate.today;
+    return d.year * 10000 + d.month * 100 + d.day;
+  }
+}

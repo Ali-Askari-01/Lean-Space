@@ -6,9 +6,13 @@
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
     <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
     <application
-        android:label="LeanSpace"
+        android:label="Habit &amp; To-Do: Bloom Tracker"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/ic_launcher"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:allowBackup="false"
+        android:fullBackupContent="@xml/data_extraction_rules">
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -58,19 +62,11 @@
                     android:scheme="leanspace"
                     android:host="add-task" />
             </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <data
-                    android:scheme="leanspace"
-                    android:host="buddy" />
-            </intent-filter>
         </activity>
         <receiver
             android:name="com.leanspace.leanspace.LeanSpaceWidgetProvider"
             android:exported="true"
-            android:label="LeanSpace Chain"
+            android:label="Bloom Tracker Chain"
             android:icon="@mipmap/ic_launcher">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />

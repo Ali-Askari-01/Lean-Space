@@ -33,6 +33,7 @@ class InsightsData {
     required this.topHabitStreak,
     required this.windowDays,
     this.coachingLine,
+    this.dayStats = const {},
   });
 
   final int currentStreak;
@@ -47,6 +48,11 @@ class InsightsData {
   /// null = full history (Pro), otherwise the free-tier window.
   final int? windowDays;
   final String? coachingLine;
+
+  /// Per-day completion stats, keyed by date (date-only, midnight). Only
+  /// days with at least one todo are included. Used by the calendar grid
+  /// to shade each cell by completion ratio.
+  final Map<DateTime, DayStat> dayStats;
 
   double get completionRate =>
       tasksCreated == 0 ? 0 : tasksCompleted / tasksCreated;
@@ -83,7 +89,7 @@ InsightsData buildInsights(
     last7.add(statFor(today.subtract(Duration(days: i))));
   }
 
-  // Window cutoff for totals.
+  // Window cutoff for totals (Free tier = 7 days).
   final cutoff =
       windowDays == null ? null : today.subtract(Duration(days: windowDays - 1));
 
@@ -91,15 +97,26 @@ InsightsData buildInsights(
   var created = 0;
   var perfect = 0;
   final perfectByDate = <DateTime, bool>{};
+  // dayStats always covers the full history so the calendar and medals
+  // work the same for free and pro users. Only the totals (created /
+  // completed / perfect) stay windowed so the upsell messaging on the
+  // free tier stays accurate.
+  final dayStats = <DateTime, DayStat>{};
   for (final entry in byDate.entries) {
     final date = LocalDate.parseIsoDate(entry.key);
     if (date == null) continue;
-    if (cutoff != null && date.isBefore(cutoff)) continue;
     final items = entry.value;
-    created += items.length;
-    completed += items.where((t) => t.isDone).length;
     final isPerfect = items.isNotEmpty &&
         items.every((t) => t.isDone);
+    dayStats[date] = DayStat(
+      date: date,
+      created: items.length,
+      done: items.where((t) => t.isDone).length,
+      missed: items.where((t) => t.isMissed).length,
+    );
+    if (cutoff != null && date.isBefore(cutoff)) continue;
+    created += items.length;
+    completed += items.where((t) => t.isDone).length;
     perfectByDate[date] = isPerfect;
     if (isPerfect) perfect++;
   }
@@ -123,6 +140,7 @@ InsightsData buildInsights(
       tasksCompleted: completed,
       activeHabits: habits.length,
     ),
+    dayStats: dayStats,
   );
 }
 

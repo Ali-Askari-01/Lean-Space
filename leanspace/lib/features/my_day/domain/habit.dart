@@ -8,6 +8,7 @@ class Habit {
     required this.slotIndex,
     required this.streakCount,
     this.lastCompletedDate,
+    this.notes,
   });
 
   final String id;
@@ -16,12 +17,15 @@ class Habit {
   final int slotIndex;
   final int streakCount;
   final DateTime? lastCompletedDate;
+  final String? notes;
 
   bool isCompletedToday() {
     final today = LocalDate.today;
     return lastCompletedDate != null &&
         LocalDate.isSameDay(lastCompletedDate!, today);
   }
+
+  String get cadenceLabel => 'DAILY';
 
   factory Habit.fromJson(Map<String, dynamic> json) {
     return Habit(
@@ -32,6 +36,7 @@ class Habit {
       streakCount: json['streak_count'] as int? ?? 0,
       lastCompletedDate:
           LocalDate.parseIsoDate(json['last_completed_date'] as String?),
+      notes: json['notes'] as String?,
     );
   }
 
@@ -39,12 +44,15 @@ class Habit {
     required String userId,
     required String name,
     required int slotIndex,
+    String? notes,
   }) {
-    return {
+    final payload = <String, dynamic>{
       'user_id': userId,
       'name': name,
       'slot_index': slotIndex,
     };
+    if (notes != null && notes.isNotEmpty) payload['notes'] = notes;
+    return payload;
   }
 }
 

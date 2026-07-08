@@ -84,6 +84,11 @@ class ReminderController extends Notifier<ReminderState> {
     final updated = Map<String, TaskReminder>.from(state.taskReminders)
       ..[taskId] = reminder;
     state = state.copyWith(taskReminders: updated);
+    // Schedule this reminder immediately so the user gets the alarm even if
+    // the broader My Day sync hasn't caught up yet.
+    await ref
+        .read(notificationServiceProvider)
+        .scheduleTaskReminder(taskId: taskId, label: label, when: at);
     await _reschedule();
   }
 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
 
 import '../../../../core/local_date.dart';
@@ -9,9 +10,9 @@ import '../../domain/todo_item.dart';
 import '../../providers/my_day_providers.dart';
 
 class LeftBehindBanner extends ConsumerWidget {
-  const LeftBehindBanner({super.key, required this.onTap});
+  const LeftBehindBanner({super.key, this.onTap});
 
-  final VoidCallback onTap;
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -35,26 +36,45 @@ class LeftBehindBanner extends ConsumerWidget {
         children: [
           Material(
             color: AppColors.warning.withValues(alpha: 0.08),
-            borderRadius: BorderRadius.circular(14),
+            borderRadius: BorderRadius.circular(18),
             child: InkWell(
-              onTap: onTap,
-              borderRadius: BorderRadius.circular(14),
+              onTap: onTap ?? () => context.push('/left-behind'),
+              borderRadius: BorderRadius.circular(18),
               child: Padding(
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
                 child: Row(
                   children: [
                     const Icon(Icons.history,
                         color: AppColors.warning, size: 20),
                     const SizedBox(width: 12),
                     Expanded(
-                      child: Text(
-                        '${state.leftBehind.length} missed — still in Left Behind',
-                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                              fontWeight: FontWeight.w500,
-                            ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            '${state.leftBehind.length} missed — still in Left Behind',
+                            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                                  fontWeight: FontWeight.w600,
+                                  color: AppColors.onSurface,
+                                ),
+                          ),
+                          const SizedBox(height: 2),
+                          Text(
+                            'Tap to re-add or let go',
+                            style: Theme.of(context).textTheme.labelSmall?.copyWith(
+                                  color: AppColors.onSurfaceVariant,
+                                ),
+                          ),
+                        ],
                       ),
                     ),
+                    const Icon(
+                      Icons.arrow_forward_rounded,
+                      color: AppColors.warning,
+                      size: 18,
+                    ),
+                    const SizedBox(width: 4),
                     TextButton(
                       onPressed: () => ref
                           .read(myDayProvider.notifier)

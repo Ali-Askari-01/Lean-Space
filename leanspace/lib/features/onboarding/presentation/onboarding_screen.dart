@@ -1,55 +1,63 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../core/l10n/app_localizations.dart';
 import '../../../core/onboarding/onboarding_store.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/widgets/ambient_background.dart';
+import '../../../core/widgets/growth_widgets.dart';
+import '../../../core/widgets/guardian_mascot.dart';
 
-/// First-run guide shown once after sign-in.
-class OnboardingScreen extends StatefulWidget {
+class OnboardingScreen extends ConsumerStatefulWidget {
   const OnboardingScreen({super.key, required this.onDone});
 
   final VoidCallback onDone;
 
   @override
-  State<OnboardingScreen> createState() => _OnboardingScreenState();
+  ConsumerState<OnboardingScreen> createState() => _OnboardingScreenState();
 }
 
-class _OnboardingScreenState extends State<OnboardingScreen> {
+class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
   final _pageController = PageController();
   int _page = 0;
 
   static const _pages = <_OnboardingPage>[
     _OnboardingPage(
-      icon: Icons.link_rounded,
-      title: 'Welcome to LeanSpace',
-      body:
-          'A daily discipline app — not another endless to-do list. '
-          'Five tasks. Daily habits. One chain you protect.',
+      titleKey: 'p1Title',
+      bodyKey: 'p1Body',
+      showMascot: true,
     ),
     _OnboardingPage(
-      icon: Icons.checklist_rtl,
-      title: 'Five tasks, no more',
-      body:
-          'You can only add 5 tasks per day. That cap forces you to '
-          'prioritize what actually matters instead of drowning in busywork.',
+      icon: Icons.water_drop_rounded,
+      titleKey: 'p2Title',
+      bodyKey: 'p2Body',
     ),
     _OnboardingPage(
-      icon: Icons.repeat,
-      title: 'Habits & your chain',
-      body:
-          'Tap habits to complete them and grow streaks. Finish every '
-          'task you committed to today and your chain extends. Miss one '
-          'and the day doesn\'t count.',
+      icon: Icons.eco_rounded,
+      titleKey: 'p3Title',
+      bodyKey: 'p3Body',
     ),
     _OnboardingPage(
-      icon: Icons.nightlight_round,
-      title: 'Midnight is the line',
-      body:
-          'At midnight, incomplete tasks move to Left Behind. '
-          'You can re-add them tomorrow — but they cost a slot. '
-          'The countdown on Today reminds you what\'s left.',
+      icon: Icons.local_fire_department_rounded,
+      titleKey: 'p4Title',
+      bodyKey: 'p4Body',
     ),
   ];
+
+  ({String title, String body}) _resolve(AppLocalizations l10n, String titleKey, String bodyKey) {
+    switch (titleKey) {
+      case 'p1Title':
+        return (title: l10n.onboardingPage1Title, body: l10n.onboardingPage1Body);
+      case 'p2Title':
+        return (title: l10n.onboardingPage2Title, body: l10n.onboardingPage2Body);
+      case 'p3Title':
+        return (title: l10n.onboardingPage3Title, body: l10n.onboardingPage3Body);
+      case 'p4Title':
+        return (title: l10n.onboardingPage4Title, body: l10n.onboardingPage4Body);
+      default:
+        return (title: '', body: '');
+    }
+  }
 
   @override
   void dispose() {
@@ -58,14 +66,15 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   }
 
   Future<void> _finish() async {
-    await OnboardingStore.markComplete();
+    await ref.read(onboardingGateProvider.notifier).markComplete();
+    if (!mounted) return;
     widget.onDone();
   }
 
   void _next() {
     if (_page < _pages.length - 1) {
       _pageController.nextPage(
-        duration: const Duration(milliseconds: 280),
+        duration: const Duration(milliseconds: 320),
         curve: Curves.easeOutCubic,
       );
     } else {
@@ -75,11 +84,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
+    final l10n = AppLocalizations.of(context);
     final isLast = _page == _pages.length - 1;
 
     return Material(
-      color: AppColors.bg,
+      color: AppColors.surface,
       child: AmbientBackground(
         child: SafeArea(
           child: Column(
@@ -88,11 +97,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 alignment: Alignment.centerRight,
                 child: TextButton(
                   onPressed: _finish,
-                  child: Text(
-                    'Skip',
-                    style: theme.textTheme.bodyMedium?.copyWith(
-                      color: AppColors.textMuted,
-                    ),
+                  child: BlueprintLabel(
+                    l10n.onboardingSkip,
+                    color: AppColors.onSurfaceVariant,
                   ),
                 ),
               ),
@@ -103,76 +110,48 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   onPageChanged: (i) => setState(() => _page = i),
                   itemBuilder: (context, index) {
                     final p = _pages[index];
-                    return Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 32),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Container(
-                            width: 72,
-                            height: 72,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(22),
-                              gradient: const LinearGradient(
-                                colors: [
-                                  AppColors.accent,
-                                  AppColors.accentDeep,
-                                ],
-                              ),
-                            ),
-                            child: Icon(p.icon, color: Colors.white, size: 34),
-                          ),
-                          const SizedBox(height: 32),
-                          Text(
-                            p.title,
-                            textAlign: TextAlign.center,
-                            style: theme.textTheme.headlineSmall?.copyWith(
-                              fontWeight: FontWeight.w800,
-                              letterSpacing: -0.5,
-                            ),
-                          ),
-                          const SizedBox(height: 16),
-                          Text(
-                            p.body,
-                            textAlign: TextAlign.center,
-                            style: theme.textTheme.bodyLarge?.copyWith(
-                              color: AppColors.textMuted,
-                              height: 1.5,
-                            ),
-                          ),
-                        ],
-                      ),
+                    final resolved = _resolve(l10n, p.titleKey, p.bodyKey);
+                    return _OnboardingPageView(
+                      key: ValueKey(index),
+                      title: resolved.title,
+                      body: resolved.body,
+                      icon: p.icon,
+                      showMascot: p.showMascot,
                     );
                   },
                 ),
               ),
+              const SizedBox(height: 16),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: List.generate(
                   _pages.length,
                   (i) => AnimatedContainer(
-                    duration: const Duration(milliseconds: 200),
+                    duration: const Duration(milliseconds: 220),
                     margin: const EdgeInsets.symmetric(horizontal: 4),
-                    width: i == _page ? 20 : 8,
+                    width: i == _page ? 24 : 8,
                     height: 8,
                     decoration: BoxDecoration(
                       color: i == _page
-                          ? AppColors.accent
-                          : AppColors.borderStrong,
+                          ? AppColors.primary
+                          : AppColors.outlineVariant,
                       borderRadius: BorderRadius.circular(999),
                     ),
                   ),
                 ),
               ),
-              const SizedBox(height: 24),
+              const SizedBox(height: 12),
+              BlueprintLabel(
+                _page == 0 ? l10n.onboardingIntroduction : l10n.onboardingGrowYourForest,
+                color: AppColors.onSurfaceVariant,
+              ),
+              const SizedBox(height: 18),
               Padding(
                 padding: const EdgeInsets.fromLTRB(24, 0, 24, 24),
-                child: SizedBox(
-                  width: double.infinity,
-                  child: FilledButton(
-                    onPressed: _next,
-                    child: Text(isLast ? 'Start my day' : 'Next'),
-                  ),
+                child: CtaPill(
+                  label: isLast ? l10n.onboardingEnterSanctuary : l10n.onboardingNext,
+                  icon: Icons.arrow_forward_rounded,
+                  onPressed: _next,
                 ),
               ),
             ],
@@ -185,12 +164,178 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
 class _OnboardingPage {
   const _OnboardingPage({
-    required this.icon,
-    required this.title,
-    required this.body,
+    required this.titleKey,
+    required this.bodyKey,
+    this.icon,
+    this.showMascot = false,
   });
 
-  final IconData icon;
+  final String titleKey;
+  final String bodyKey;
+  final IconData? icon;
+  final bool showMascot;
+}
+
+class _OnboardingPageView extends StatefulWidget {
+  const _OnboardingPageView({
+    super.key,
+    required this.title,
+    required this.body,
+    this.icon,
+    this.showMascot = false,
+  });
   final String title;
   final String body;
+  final IconData? icon;
+  final bool showMascot;
+
+  @override
+  State<_OnboardingPageView> createState() => _OnboardingPageViewState();
+}
+
+class _OnboardingPageViewState extends State<_OnboardingPageView>
+    with TickerProviderStateMixin {
+  late final AnimationController _mascotCtrl;
+  late final Animation<double> _mascotFloat;
+  late final Animation<double> _haloPulse;
+  late final AnimationController _iconPopCtrl;
+  late final Animation<double> _iconPop;
+  late final AnimationController _titleSlideCtrl;
+  late final Animation<double> _titleSlide;
+  late final AnimationController _bodyFadeCtrl;
+  late final Animation<double> _bodyFade;
+
+  @override
+  void initState() {
+    super.initState();
+    _mascotCtrl = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 2400),
+    )..repeat(reverse: true);
+
+    _mascotFloat = Tween<double>(begin: -6, end: 6).animate(
+      CurvedAnimation(parent: _mascotCtrl, curve: Curves.easeInOut),
+    );
+    _haloPulse = Tween<double>(begin: 0.92, end: 1.08).animate(
+      CurvedAnimation(parent: _mascotCtrl, curve: Curves.easeInOut),
+    );
+
+    _iconPopCtrl = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 600),
+    )..forward();
+    _iconPop = CurvedAnimation(
+      parent: _iconPopCtrl,
+      curve: Curves.elasticOut,
+    );
+
+    _titleSlideCtrl = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 600),
+    )..forward();
+    _titleSlide = CurvedAnimation(
+      parent: _titleSlideCtrl,
+      curve: Curves.easeOutCubic,
+    );
+
+    _bodyFadeCtrl = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 800),
+    )..forward();
+    _bodyFade = CurvedAnimation(
+      parent: _bodyFadeCtrl,
+      curve: Curves.easeIn,
+    );
+  }
+
+  @override
+  void dispose() {
+    _mascotCtrl.dispose();
+    _iconPopCtrl.dispose();
+    _titleSlideCtrl.dispose();
+    _bodyFadeCtrl.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 32),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          AnimatedBuilder(
+            animation: _mascotCtrl,
+            builder: (context, child) {
+              return Transform.translate(
+                offset: Offset(0, widget.showMascot ? _mascotFloat.value : 0),
+                child: child,
+              );
+            },
+            child: ScaleTransition(
+              scale: _iconPop,
+              child: widget.showMascot
+                  ? ScaleTransition(
+                      scale: _haloPulse,
+                      child: const GuardianMascot(
+                        size: 220,
+                        expression: GuardianExpression.happy,
+                        withHalo: true,
+                        variant: GuardianMascotVariant.potStitch,
+                      ),
+                    )
+                  : Container(
+                      width: 100,
+                      height: 100,
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        color: AppColors.primaryContainer
+                            .withValues(alpha: 0.25),
+                        shape: BoxShape.circle,
+                      ),
+                      child: Icon(
+                        widget.icon,
+                        color: AppColors.primary,
+                        size: 48,
+                      ),
+                    ),
+            ),
+          ),
+          const SizedBox(height: 28),
+          SlideTransition(
+            position: Tween<Offset>(
+              begin: const Offset(0, 0.2),
+              end: Offset.zero,
+            ).animate(_titleSlide),
+            child: FadeTransition(
+              opacity: _titleSlide,
+              child: Text(
+                widget.title,
+                textAlign: TextAlign.center,
+                style: theme.textTheme.displaySmall?.copyWith(
+                  color: AppColors.onSurface,
+                  fontWeight: FontWeight.w800,
+                  letterSpacing: -0.6,
+                  height: 1.1,
+                ),
+              ),
+            ),
+          ),
+          const SizedBox(height: 16),
+          FadeTransition(
+            opacity: _bodyFade,
+            child: Text(
+              widget.body,
+              textAlign: TextAlign.center,
+              style: theme.textTheme.bodyLarge?.copyWith(
+                color: AppColors.onSurfaceVariant,
+                height: 1.55,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
 }

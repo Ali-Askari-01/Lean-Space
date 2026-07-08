@@ -8,7 +8,9 @@ import 'core/app_actions.dart';
 import 'core/deep_link.dart';
 import 'core/deep_link_handlers.dart';
 import 'core/feature_flags.dart';
+import 'core/l10n/app_localizations.dart';
 import 'core/theme/app_theme.dart';
+import 'core/widgets/locale_provider.dart';
 import 'features/my_day/providers/my_day_providers.dart';
 import 'features/reminders/providers/reminder_providers.dart';
 import 'features/subscription/providers/entitlement_provider.dart';
@@ -132,12 +134,16 @@ class _LeanSpaceAppState extends ConsumerState<LeanSpaceApp> {
     }
 
     final router = ref.watch(appRouterProvider);
+    final userLocale = ref.watch(localeProvider);
 
     return MaterialApp.router(
-      title: 'LeanSpace',
+      title: 'Bloom Tracker',
       debugShowCheckedModeBanner: false,
-      theme: AppTheme.dark,
+      theme: AppTheme.light,
       routerConfig: router,
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
+      locale: userLocale,
     );
   }
 }

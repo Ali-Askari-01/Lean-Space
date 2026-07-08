@@ -13,4 +13,8 @@ abstract final class AppHaptics {
 
   /// A blocked action (e.g. hitting the 5-task cap or a locked slot).
   static void blocked() => HapticFeedback.heavyImpact();
+
+  /// A more emphatic version of [success] for high-stakes confirmations
+  /// like completing a Pro purchase.
+  static void confirm() => HapticFeedback.heavyImpact();
 }

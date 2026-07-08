@@ -11,10 +11,10 @@ class NotificationService {
 
   final FlutterLocalNotificationsPlugin _plugin;
 
-  static const _reminderChannelId = 'leanspace_reminders';
-  static const _reminderChannelName = 'LeanSpace reminders';
-  static const _alarmChannelId = 'leanspace_alarms';
-  static const _alarmChannelName = 'LeanSpace task alarms';
+  static const _reminderChannelId = 'bloom_tracker_reminders';
+  static const _reminderChannelName = 'Bloom Tracker reminders';
+  static const _alarmChannelId = 'bloom_tracker_alarms';
+  static const _alarmChannelName = 'Bloom Tracker task alarms';
   static const _alarmSound =
       RawResourceAndroidNotificationSound('alarm_tone');
 
@@ -22,7 +22,7 @@ class NotificationService {
   static const eveningNudgeId = 9002;
 
   Future<void> initialize() async {
-    const android = AndroidInitializationSettings('@mipmap/ic_launcher');
+    const android = AndroidInitializationSettings('@drawable/ic_notification');
     const settings = InitializationSettings(android: android);
     await _plugin.initialize(settings: settings);
 
@@ -71,6 +71,27 @@ class NotificationService {
 
   int _taskNotificationId(String taskId) =>
       1000 + (taskId.hashCode.abs() % 8000);
+
+  /// Schedules a single per-task reminder directly (used right after a task
+  /// is added so the notification doesn't depend on a follow-up syncAll pass).
+  Future<void> scheduleTaskReminder({
+    required String taskId,
+    required String label,
+    required DateTime when,
+  }) async {
+    await requestPermission();
+    await ensureExactAlarmsPermission();
+    if (!when.isAfter(DateTime.now())) {
+      debugPrint('NotificationService: skip past reminder for $taskId ($when)');
+      return;
+    }
+    await _scheduleOneShot(
+      id: _taskNotificationId(taskId),
+      title: 'Task reminder',
+      body: label,
+      when: when,
+    );
+  }
 
   Future<void> syncAll({
     required List<TodoItem> openTasks,
@@ -141,12 +162,16 @@ class NotificationService {
     required String body,
     required DateTime when,
   }) async {
+    final scheduled = tz.TZDateTime.from(when, tz.local);
+    debugPrint(
+      'NotificationService: scheduling id=$id at $scheduled (now=${tz.TZDateTime.now(tz.local)})',
+    );
     await _zonedSchedule(
       id: id,
       title: title,
       body: body,
-      when: tz.TZDateTime.from(when, tz.local),
-      alarm: true,
+      when: scheduled,
+      alarm: false,
     );
   }
 
@@ -199,6 +224,7 @@ class NotificationService {
         matchDateTimeComponents:
             matchTime ? DateTimeComponents.time : null,
       );
+      debugPrint('NotificationService: scheduled id=$id (exact)');
     } catch (e) {
       debugPrint('exact notification schedule failed, retrying inexact: $e');
       try {
@@ -212,6 +238,7 @@ class NotificationService {
           matchDateTimeComponents:
               matchTime ? DateTimeComponents.time : null,
         );
+        debugPrint('NotificationService: scheduled id=$id (inexact)');
       } catch (e2) {
         debugPrint('notification schedule failed: $e2');
       }
@@ -225,6 +252,8 @@ class NotificationService {
         _reminderChannelName,
         importance: Importance.high,
         priority: Priority.high,
+        icon: '@drawable/ic_notification',
+        ticker: 'Task reminder',
       ),
     );
   }
@@ -242,6 +271,8 @@ class NotificationService {
         sound: _alarmSound,
         audioAttributesUsage: AudioAttributesUsage.alarm,
         enableVibration: true,
+        icon: '@drawable/ic_notification',
+        ticker: 'Task alarm',
       ),
     );
   }

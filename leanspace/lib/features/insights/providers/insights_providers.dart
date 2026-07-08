@@ -11,6 +11,9 @@ import '../domain/insights.dart';
 final insightsProvider = FutureProvider<InsightsData>((ref) async {
   final repo = ref.watch(myDayRepositoryProvider);
   final entitlement = ref.watch(entitlementProvider);
+  // Watch myDayProvider so insights refresh whenever the user adds,
+  // completes, or removes a task / habit.
+  ref.watch(myDayProvider);
 
   final results = await Future.wait([
     repo.fetchAllTodosForStreak(),

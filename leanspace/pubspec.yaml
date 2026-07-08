@@ -20,6 +20,10 @@ dependencies:
 
     sdk: flutter
 
+  flutter_localizations:
+
+    sdk: flutter
+
   cupertino_icons: ^1.0.8
 
   flutter_dotenv: ^6.0.1
@@ -52,6 +56,8 @@ dependencies:
 
   timezone: ^0.11.0
 
+  package_info_plus: 10.0.0
+
 
 
 dev_dependencies:
@@ -74,7 +80,7 @@ flutter_launcher_icons:
 
   image_path: assets/app_icon.png
 
-  adaptive_icon_background: "#0F0D0B"
+  adaptive_icon_background: "#F9FAF4"
 
   adaptive_icon_foreground: assets/app_icon.png
 
@@ -83,10 +89,25 @@ flutter_launcher_icons:
 flutter:
 
   uses-material-design: true
+  generate: true
 
   assets:
 
     - .env
 
     - assets/app_icon.png
+
+    - assets/brand/bloom_tracker_logo.png
+
+    - assets/brand/share_card_reference.png
+
+    - assets/mascot/pot_stitch.png
+
+    - assets/mascot/koala_basic.png
+
+    - assets/mascot/koala_adventure.png
+
+    - assets/mascot/forest_flower.png
+
+    - assets/mascot/forest_watering.png
 

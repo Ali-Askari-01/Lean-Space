@@ -83,7 +83,7 @@ class _WidgetSetupSheetState extends State<WidgetSetupSheet> {
           const SizedBox(height: 16),
           _Step(number: '1', text: 'Long-press your home screen'),
           _Step(number: '2', text: 'Tap Widgets'),
-          _Step(number: '3', text: 'Find LeanSpace Chain and drag it on'),
+          _Step(number: '3', text: 'Find Bloom Tracker and drag it on'),
           if (_message != null) ...[
             const SizedBox(height: 12),
             Text(

@@ -47,7 +47,7 @@ class _InsightsScreenState extends ConsumerState<InsightsScreen> {
       await SharePlus.instance.share(
         ShareParams(
           files: [XFile(file.path)],
-          text: 'My week on LeanSpace. Don\'t break the chain.',
+          text: 'My week on Bloom Tracker. Don\'t break the chain.',
         ),
       );
     } catch (_) {

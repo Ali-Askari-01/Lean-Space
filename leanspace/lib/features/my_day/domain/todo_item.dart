@@ -11,6 +11,8 @@ class TodoItem {
     required this.originalDate,
     this.completedDate,
     this.isCarriedForward = false,
+    this.notes,
+    this.priority,
   });
 
   final String id;
@@ -20,6 +22,8 @@ class TodoItem {
   final DateTime originalDate;
   final DateTime? completedDate;
   final bool isCarriedForward;
+  final String? notes;
+  final TodoPriority? priority;
 
   bool get isOpen => status == TodoStatus.open;
   bool get isDone => status == TodoStatus.done;
@@ -37,6 +41,8 @@ class TodoItem {
       completedDate:
           LocalDate.parseIsoDate(json['completed_date'] as String?),
       isCarriedForward: json['is_carried_forward'] as bool? ?? false,
+      notes: json['notes'] as String?,
+      priority: TodoPriorityX.parse(json['priority'] as String?),
     );
   }
 
@@ -44,6 +50,30 @@ class TodoItem {
         'done' => TodoStatus.done,
         'missed' => TodoStatus.missed,
         _ => TodoStatus.open,
+      };
+}
+
+/// Task importance — used to color-code and order Daily Seeds.
+enum TodoPriority { standard, vital, spark }
+
+extension TodoPriorityX on TodoPriority {
+  String get storageValue => switch (this) {
+        TodoPriority.standard => 'standard',
+        TodoPriority.vital => 'vital',
+        TodoPriority.spark => 'spark',
+      };
+
+  String get label => switch (this) {
+        TodoPriority.standard => 'Standard',
+        TodoPriority.vital => 'Vital',
+        TodoPriority.spark => 'Spark',
+      };
+
+  static TodoPriority? parse(String? value) => switch (value) {
+        'vital' => TodoPriority.vital,
+        'spark' => TodoPriority.spark,
+        'standard' => TodoPriority.standard,
+        _ => null,
       };
 }
 
