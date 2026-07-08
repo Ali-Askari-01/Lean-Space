@@ -27,7 +27,7 @@ class AppLocalizationsPa extends AppLocalizations {
   String get navSettings => 'ਸੈਟਿੰਗਾਂ';
 
   @override
-  String get navHelp => 'Help & Support';
+  String get navHelp => 'ਮਦਦ ਅਤੇ ਸਹਾਇਤਾ';
 
   @override
   String get navHistory => 'ਪਿਛਲੇ 7 ਦਿਨ';
@@ -36,19 +36,19 @@ class AppLocalizationsPa extends AppLocalizations {
   String get navLeftBehind => 'ਪਿੱਛੇ ਛੱਡੇ';
 
   @override
-  String get navInsights => 'Your progress';
+  String get navInsights => 'ਤੁਹਾਡੀ ਤਰੱਕੀ';
 
   @override
   String get navMedals => 'ਮੇਰੇ ਤਗਮੇ';
 
   @override
-  String get navManagePro => 'Manage Pro subscription';
+  String get navManagePro => 'Pro ਸਬਸਕ੍ਰਿਪਸ਼ਨ ਦਾ ਪ੍ਰਬੰਧਨ';
 
   @override
   String get navPaywall => 'ਬਲੂਮ ਟਰੈਕਰ Pro';
 
   @override
-  String get greetingLateNight => 'Burning the midnight oil';
+  String get greetingLateNight => 'ਅੱਧੀ ਰਾਤ ਨੂੰ ਜਾਗਦੇ ਹੋ';
 
   @override
   String get greetingMorning => 'ਸ਼ੁਭ ਸਵੇਰ, ਸੂਰਜ!';
@@ -69,48 +69,49 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String todayHabitsCount(String done, String total) {
-    return '$done of $total habits';
+    return '$total ਵਿੱਚੋਂ $done ਆਦਤਾਂ';
   }
 
   @override
-  String get todayChainGrows => 'CHAIN GROWS AS YOU FINISH';
+  String get todayChainGrows => 'ਚੇਨ ਤੁਹਾਡੇ ਪੂਰਾ ਕਰਨ ਨਾਲ ਵਧਦੀ ਹੈ';
 
   @override
-  String get todayChainComplete => 'CHAIN COMPLETE · TEND THE GARDEN TOMORROW';
+  String get todayChainComplete => 'ਚੇਨ ਪੂਰੀ · ਕੱਲ ਬਗੀਚੇ ਦੀ ਦੇਖਭਾਲ ਕਰੋ';
 
   @override
-  String get taskCapInfo => 'Why a 5-task cap?';
+  String get taskCapInfo => '5-ਕੰਮ ਦੀ ਸੀਮਾ ਕਿਉਂ?';
 
   @override
-  String get taskCapDiscipline => 'DISCIPLINE-FIRST BY DESIGN';
+  String get taskCapDiscipline => 'ਅਨੁਸ਼ਾਸਨ ਪਹਿਲਾਂ, ਡਿਜ਼ਾਈਨ ਅਨੁਸਾਰ';
 
   @override
-  String get taskCapTitle => 'We cap your day at 5 tasks on purpose.';
+  String get taskCapTitle =>
+      'ਅਸੀਂ ਜਾਣਬੁੱਝ ਕੇ ਤੁਹਾਡਾ ਦਿਨ 5 ਕੰਮਾਂ ਤੱਕ ਸੀਮਿਤ ਕਰਦੇ ਹਾਂ।';
 
   @override
   String get taskCapBody =>
-      'Small chains beat long ones. You\'re more likely to finish 3 of 5 and feel the win than to abandon 8 of 10 and feel the loss.';
+      'ਛੋਟੀਆਂ ਚੇਨਾਂ ਲੰਬੀਆਂ ਨਾਲੋਂ ਬਿਹਤਰ ਹਨ। 5 ਵਿੱਚੋਂ 3 ਪੂਰੇ ਕਰਨ ਦੀ ਜਿੱਤ ਮਹਿਸੂਸ ਕਰਨਾ 10 ਵਿੱਚੋਂ 8 ਛੱਡਣ ਦੇ ਨੁਕਸਾਨ ਨਾਲੋਂ ਵੱਧ ਸੰਭਵ ਹੈ।';
 
   @override
-  String get taskCapBulletDone => 'Done tasks count toward your chain';
+  String get taskCapBulletDone => 'ਪੂਰੇ ਕੰਮ ਤੁਹਾਡੀ ਚੇਨ ਵਿੱਚ ਗਿਣੇ ਜਾਂਦੇ ਹਨ';
 
   @override
   String get taskCapBulletDoneBody =>
-      'A day where all 5 are done extends your streak by one.';
+      'ਜਿਸ ਦਿਨ ਸਾਰੇ 5 ਪੂਰੇ ਹੋ ਜਾਂਦੇ ਹਨ, ਤੁਹਾਡੀ ਸਟ੍ਰੀਕ ਇੱਕ ਦਿਨ ਵਧ ਜਾਂਦੀ ਹੈ।';
 
   @override
-  String get taskCapBulletMissed => 'Missed tasks roll to Left Behind';
+  String get taskCapBulletMissed => 'ਛੁਟੇ ਕੰਮ ਪਿੱਛੇ ਛੱਡੇ ਵਿੱਚ ਜਾਂਦੇ ਹਨ';
 
   @override
   String get taskCapBulletMissedBody =>
-      'At midnight, unfinished tasks surface in Left Behind. Re-add only what still matters.';
+      'ਅੱਧੀ ਰਾਤ ਨੂੰ, ਬਕਾਇਆ ਕੰਮ ਪਿੱਛੇ ਛੱਡੇ ਵਿੱਚ ਸਤਹ ਤੇ ਆ ਜਾਂਦੇ ਹਨ। ਸਿਰਫ਼ ਉਹ ਨੂੰ ਹੀ ਮੁੜ ਜੋੜੋ ਜੋ ਅਜੇ ਵੀ ਮਹੱਤਵਪੂਰਨ ਹਨ।';
 
   @override
-  String get taskCapBulletFreeze => 'Streak freeze forgives a miss';
+  String get taskCapBulletFreeze => 'ਸਟ੍ਰੀਕ ਫ੍ਰੀਜ਼ ਇੱਕ ਛੁਟ ਨੂੰ ਮਾਫ਼ ਕਰਦੀ ਹੈ';
 
   @override
   String get taskCapBulletFreezeBody =>
-      'Pro gives you 2 streak freezes a month — they cover a missed day so your chain survives.';
+      'Pro ਤੁਹਾਨੂੰ ਮਹੀਨੇ ਵਿੱਚ 2 ਸਟ੍ਰੀਕ ਫ੍ਰੀਜ਼ ਦਿੰਦਾ ਹੈ — ਇਹ ਇੱਕ ਛੁੱਟੇ ਦਿਨ ਨੂੰ ਕਵਰ ਕਰਦੇ ਹਨ ਤਾਂ ਕਿ ਤੁਹਾਡੀ ਚੇਨ ਜ਼ਿੰਦਾ ਰਹੇ।';
 
   @override
   String get tasksHeader => 'ਕੰਮ';
@@ -125,43 +126,43 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get tasksCapReached =>
-      '5/5 slots used — finish one to plant a new seed.';
+      '5/5 ਸਲਾਟ ਵਰਤੇ ਗਏ — ਨਵਾਂ ਬੀਜ ਲਗਾਉਣ ਲਈ ਇੱਕ ਪੂਰਾ ਕਰੋ।';
 
   @override
-  String get tasksEmptyCta => 'Plant your first seed — what matters today?';
+  String get tasksEmptyCta => 'ਆਪਣਾ ਪਹਿਲਾ ਬੀਜ ਲਗਾਓ — ਅੱਜ ਕੀ ਮਹੱਤਵਪੂਰਨ ਹੈ?';
 
   @override
   String get habitsHeader => 'ਆਦਤਾਂ';
 
   @override
   String habitsGrowing(String count) {
-    return '$count growing';
+    return '$count ਵਧ ਰਹੇ ਹਨ';
   }
 
   @override
   String habitsBestStreak(String days) {
-    return 'Best $days d';
+    return 'ਵਧੀਆ $days ਦਿਨ';
   }
 
   @override
-  String get habitsPlantNew => 'Plant a new habit sprout';
+  String get habitsPlantNew => 'ਨਵੀਂ ਆਦਤ ਦਾ ਅੰਕੁਰ ਲਗਾਓ';
 
   @override
   String get habitsPlantFirst => 'ਆਦਤ ਲਗਾਓ';
 
   @override
-  String get habitsLocked => 'Pro habit slot — unlock to plant more sprouts';
+  String get habitsLocked => 'Pro ਆਦਤ ਸਲਾਟ — ਹੋਰ ਅੰਕੁਰ ਲਗਾਉਣ ਲਈ ਅਨਲੌਕ ਕਰੋ';
 
   @override
   String get habitsCadence => 'ਰੋਜ਼ਾਨਾ';
 
   @override
   String leftBehindBanner(String count) {
-    return '$count missed — still in Left Behind';
+    return '$count ਛੁੱਟੇ — ਅਜੇ ਵੀ ਪਿੱਛੇ ਛੱਡੇ ਵਿੱਚ';
   }
 
   @override
-  String get leftBehindTap => 'Tap to re-add or let go';
+  String get leftBehindTap => 'ਮੁੜ ਜੋੜਨ ਜਾਂ ਛੱਡਣ ਲਈ ਟੈਪ ਕਰੋ';
 
   @override
   String get leftBehindDismiss => 'ਖਾਰਜ ਕਰੋ';
@@ -170,74 +171,74 @@ class AppLocalizationsPa extends AppLocalizations {
   String get leftBehindTitle => 'ਪਿੱਛੇ ਛੱਡੇ';
 
   @override
-  String get leftBehindEmpty => 'Nothing left behind';
+  String get leftBehindEmpty => 'ਕੁਝ ਵੀ ਪਿੱਛੇ ਨਹੀਂ ਛੱਡਿਆ';
 
   @override
   String get leftBehindEmptyBody =>
-      'No missed tasks. Every seed you plant is being tended. The garden is clean.';
+      'ਕੋਈ ਛੁੱਟਿਆ ਕੰਮ ਨਹੀਂ। ਤੁਸੀਂ ਜੋ ਬੀਜ ਲਗਾਉਂਦੇ ਹੋ ਉਹ ਸਾਰੇ ਸੰਭਾਲੇ ਜਾ ਰਹੇ ਹਨ। ਬਗੀਚਾ ਸਾਫ਼ ਹੈ।';
 
   @override
   String get leftBehindClearAll => 'ਸਭ ਸਾਫ਼ ਕਰੋ';
 
   @override
-  String get leftBehindClearAllConfirm => 'Clear all left-behind?';
+  String get leftBehindClearAllConfirm => 'ਸਾਰੇ ਪਿੱਛੇ ਛੱਡੇ ਸਾਫ਼ ਕਰੋ?';
 
   @override
   String leftBehindClearAllBody(String count) {
-    return 'This will permanently remove $count missed task(s). You can\'t undo this.';
+    return 'ਇਹ ਸਥਾਈ ਤੌਰ ਤੇ $count ਛੁੱਟੇ ਕੰਮ ਹਟਾ ਦੇਵੇਗਾ। ਤੁਸੀਂ ਇਸਨੂੰ ਅਣਡੋਲ ਨਹੀਂ ਕਰ ਸਕਦੇ।';
   }
 
   @override
-  String get leftBehindReAdd => 'Re-add today';
+  String get leftBehindReAdd => 'ਅੱਜ ਮੁੜ ਜੋੜੋ';
 
   @override
   String get leftBehindLetGo => 'ਛੱਡ ਦਿਓ';
 
   @override
   String streakAtRisk(String count) {
-    return '$count task(s) left for today';
+    return 'ਅੱਜ ਲਈ $count ਕੰਮ ਬਾਕੀ';
   }
 
   @override
   String streakAtRiskLastCall(String count) {
-    return 'Last call — $count task(s) still open';
+    return 'ਆਖਰੀ ਮੌਕਾ — $count ਕੰਮ ਅਜੇ ਵੀ ਖੁੱਲ੍ਹੇ ਹਨ';
   }
 
   @override
   String get streakAtRiskBody =>
-      'Midnight is close. The chain depends on these.';
+      'ਅੱਧੀ ਰਾਤ ਨੇੜੇ ਹੈ। ਚੇਨ ਇਨ੍ਹਾਂ ਤੇ ਨਿਰਭਰ ਕਰਦੀ ਹੈ।';
 
   @override
   String get streakAtRiskBodyLow =>
-      'You still have time. A clean day extends your streak.';
+      'ਤੁਹਾਡੇ ਕੋਲ ਅਜੇ ਵੀ ਸਮਾਂ ਹੈ। ਸਾਫ਼ ਦਿਨ ਤੁਹਾਡੀ ਸਟ੍ਰੀਕ ਵਧਾਉਂਦਾ ਹੈ।';
 
   @override
-  String get streakAtRiskFreeze => 'Yesterday missed — use a streak freeze?';
+  String get streakAtRiskFreeze => 'ਕੱਲ੍ਹ ਛੁੱਟਿਆ — ਸਟ੍ਰੀਕ ਫ੍ਰੀਜ਼ ਵਰਤੋਂ?';
 
   @override
-  String get chainBrokenTitle => 'The chain broke. That\'s okay.';
+  String get chainBrokenTitle => 'ਚੇਨ ਟੁੱਟ ਗਈ। ਇਹ ਠੀਕ ਹੈ।';
 
   @override
   String get chainBrokenBody =>
-      'Every long chain ends once. What matters is what you plant today. One perfect day starts the next one.';
+      'ਹਰ ਲੰਬੀ ਚੇਨ ਇੱਕ ਵਾਰ ਖਤਮ ਹੁੰਦੀ ਹੈ। ਮਹੱਤਵਪੂਰਨ ਇਹ ਹੈ ਕਿ ਤੁਸੀਂ ਅੱਜ ਕੀ ਲਗਾਉਂਦੇ ਹੋ। ਇੱਕ ਸੰਪੂਰਨ ਦਿਨ ਅਗਲੇ ਦੀ ਸ਼ੁਰੂਆਤ ਹੈ।';
 
   @override
-  String get chainBrokenCta => 'Get back to today';
+  String get chainBrokenCta => 'ਅੱਜ ਵਾਪਸ ਜਾਓ';
 
   @override
-  String get chainBrokenCheck => 'Check Left Behind first';
+  String get chainBrokenCheck => 'ਪਹਿਲਾਂ ਪਿੱਛੇ ਛੱਡੇ ਚੈੱਕ ਕਰੋ';
 
   @override
-  String get chainBrokenBestChain => 'best chain';
+  String get chainBrokenBestChain => 'ਵਧੀਆ ਚੇਨ';
 
   @override
-  String get chainBrokenTasksDone => 'tasks done';
+  String get chainBrokenTasksDone => 'ਕੰਮ ਪੂਰੇ ਕੀਤੇ';
 
   @override
-  String get chainBrokenSprouts => 'sprouts';
+  String get chainBrokenSprouts => 'ਅੰਕੁਰ';
 
   @override
-  String get chainRecoveryFreshStart => 'A fresh start';
+  String get chainRecoveryFreshStart => 'ਨਵੀਂ ਸ਼ੁਰੂਆਤ';
 
   @override
   String get medalsTitle => 'ਮੇਰੇ ਤਗਮੇ';
@@ -250,59 +251,59 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String medalsTrophyEarned(String earned, String total) {
-    return '$earned of $total medals earned';
+    return '$total ਵਿੱਚੋਂ $earned ਤਮਗੇ ਜਿੱਤੇ';
   }
 
   @override
-  String get medalsTrophyEmpty => 'Your first badge is one task away';
+  String get medalsTrophyEmpty => 'ਤੁਹਾਡਾ ਪਹਿਲਾ ਬੈਜ ਸਿਰਫ਼ ਇੱਕ ਕੰਮ ਦੂਰ ਹੈ';
 
   @override
-  String get medalsTrophyFirst => 'You earned your first medal — keep going';
+  String get medalsTrophyFirst => 'ਤੁਸੀਂ ਆਪਣਾ ਪਹਿਲਾ ਤਮਗਾ ਜਿੱਤਿਆ — ਜਾਰੀ ਰੱਖੋ';
 
   @override
   String medalsTrophyMany(String earned) {
-    return '$earned medals in your trophy room';
+    return 'ਤੁਹਾਡੇ ਟਰਾਫੀ ਕਮਰੇ ਵਿੱਚ $earned ਤਮਗੇ';
   }
 
   @override
   String medalsProgressLabel(String total) {
-    return 'Progress to all $total medals';
+    return 'ਸਾਰੇ $total ਤਮਗਿਆਂ ਵੱਲ ਤਰੱਕੀ';
   }
 
   @override
   String get medalsShareCta => 'ਸ਼ੇਅਰ ਕਰਨ ਯੋਗ ਕਾਰਡ ਬਣਾਓ';
 
   @override
-  String get medalsEmptyTitle => 'Nothing in this category yet';
+  String get medalsEmptyTitle => 'ਇਸ ਸ਼੍ਰੇਣੀ ਵਿੱਚ ਅਜੇ ਕੁਝ ਨਹੀਂ ਹੈ';
 
   @override
   String get medalsEmptyBody =>
-      'Finish a task or tend a sprout to start your trophy room.';
+      'ਆਪਣਾ ਟਰਾਫੀ ਕਮਰਾ ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਕੋਈ ਕੰਮ ਪੂਰਾ ਕਰੋ ਜਾਂ ਕੋਈ ਅੰਕੁਰ ਸੰਭਾਲੋ।';
 
   @override
   String get medalSheetLocked => 'Pro ਤਗਮਾ';
 
   @override
   String medalSheetEarned(String tier) {
-    return 'EARNED · $tier';
+    return 'ਜਿੱਤਿਆ · $tier';
   }
 
   @override
   String get medalSheetUnlock => 'Pro ਨਾਲ ਅਨਲੌਕ ਕਰੋ';
 
   @override
-  String get medalSheetProgress => 'Progress';
+  String get medalSheetProgress => 'ਤਰੱਕੀ';
 
   @override
   String medalSheetHint(String n, String unit) {
-    return 'Just $n more $unit to unlock.';
+    return 'ਅਨਲੌਕ ਕਰਨ ਲਈ $n ਹੋਰ $unit।';
   }
 
   @override
-  String get medalSheetAlmost => 'One more step to unlock.';
+  String get medalSheetAlmost => 'ਅਨਲੌਕ ਕਰਨ ਲਈ ਇੱਕ ਹੋਰ ਕਦਮ।';
 
   @override
-  String get medalCategory => 'Category';
+  String get medalCategory => 'ਸ਼੍ਰੇਣੀ';
 
   @override
   String get medalShareOnSocials => 'ਸੋਸ਼ਲ ਉੱਤੇ ਸ਼ੇਅਰ ਕਰੋ';
@@ -314,25 +315,25 @@ class AppLocalizationsPa extends AppLocalizations {
   String get medalUnlocked => 'ਤਗਮਾ ਅਨਲੌਕ ਹੋਇਆ';
 
   @override
-  String get medalProgressTitle => 'Progress';
+  String get medalProgressTitle => 'ਤਰੱਕੀ';
 
   @override
   String get historyTitle => 'ਪਿਛਲੇ 7 ਦਿਨ';
 
   @override
   String historyThisWeek(String days) {
-    return 'LAST $days DAYS';
+    return 'ਪਿਛਲੇ $days ਦਿਨ';
   }
 
   @override
   String get historyDayByDay => 'ਦਿਨ ਬਾ ਦਿਨ';
 
   @override
-  String get historyEmpty => 'Plant some seeds to see your week unfold.';
+  String get historyEmpty => 'ਆਪਣਾ ਹਫ਼ਤਾ ਖੁੱਲ੍ਹਦਾ ਦੇਖਣ ਲਈ ਕੁਝ ਬੀਜ ਲਗਾਓ।';
 
   @override
   String historyDoneCount(String done, String total, String perfect) {
-    return 'You finished $done of $total tasks. $perfect perfect day(s).';
+    return 'ਤੁਸੀਂ $total ਵਿੱਚੋਂ $done ਕੰਮ ਪੂਰੇ ਕੀਤੇ। $perfect ਸੰਪੂਰਨ ਦਿਨ।';
   }
 
   @override
@@ -345,28 +346,28 @@ class AppLocalizationsPa extends AppLocalizations {
   String get historyPerfect => 'ਸੰਪੂਰਨ';
 
   @override
-  String get historyFrozen => 'FROZEN';
+  String get historyFrozen => 'ਜੰਮਿਆ';
 
   @override
   String get historyToday => 'ਅੱਜ';
 
   @override
-  String get historyEmptyDay => 'No seeds planted that day';
+  String get historyEmptyDay => 'ਉਸ ਦਿਨ ਕੋਈ ਬੀਜ ਨਹੀਂ ਲਗਾਇਆ ਗਿਆ';
 
   @override
   String historyLeftBehindCount(String count) {
-    return '$count left behind';
+    return '$count ਪਿੱਛੇ ਛੱਡੇ';
   }
 
   @override
   String get progressVitality => 'ਅੱਜ ਦੀ ਜੀਵਨ ਸ਼ਕਤੀ';
 
   @override
-  String get progressVitalityEmpty => 'Plant a seed to begin your garden.';
+  String get progressVitalityEmpty => 'ਆਪਣਾ ਬਗੀਚਾ ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਇੱਕ ਬੀਜ ਲਗਾਓ।';
 
   @override
   String progressVitalitySeeds(String done, String total) {
-    return '$done of $total seeds planted today.';
+    return 'ਅੱਜ $total ਵਿੱਚੋਂ $done ਬੀਜ ਲਗਾਏ ਗਏ।';
   }
 
   @override
@@ -401,65 +402,65 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String progressMedalCount(String earned, String total) {
-    return '$earned of $total';
+    return '$total ਵਿੱਚੋਂ $earned';
   }
 
   @override
-  String get progressPersonalActivity => 'Personal Activity';
+  String get progressPersonalActivity => 'ਨਿੱਜੀ ਗਤੀਵਿਧੀ';
 
   @override
   String progressBrowseMonth(String month) {
-    return 'Browsing $month. Tap \"Today\" to jump back to your live activity.';
+    return '$month ਵੇਖ ਰਹੇ ਹੋ। ਆਪਣੀ ਲਾਈਵ ਗਤੀਵਿਧੀ ਤੇ ਵਾਪਸ ਜਾਣ ਲਈ \"ਅੱਜ\" ਟੈਪ ਕਰੋ।';
   }
 
   @override
   String get progressJumpToToday => 'ਅੱਜ';
 
   @override
-  String get progressCalendarLegend => 'darker = more finished';
+  String get progressCalendarLegend => 'ਗੂੜ੍ਹਾ = ਵੱਧ ਪੂਰੇ';
 
   @override
   String get progressCalendarBody =>
-      'Dark green means a perfect day. The shade fades as you skip.';
+      'ਗੂੜ੍ਹਾ ਹਰਾ ਸੰਪੂਰਨ ਦਿਨ ਦਰਸਾਉਂਦਾ ਹੈ। ਛੁਟਣ ਨਾਲ ਰੰਗ ਫਿੱਕਾ ਹੁੰਦਾ ਜਾਂਦਾ ਹੈ।';
 
   @override
-  String get paywallTitle => 'Keep the chain unbroken.';
+  String get paywallTitle => 'ਚੇਨ ਨੂੰ ਅਟੁੱਟ ਰੱਖੋ।';
 
   @override
   String get paywallSubtitle =>
-      'Bloom Tracker Pro gives you the full discipline system.';
+      'Bloom Tracker Pro ਤੁਹਾਨੂੰ ਪੂਰੀ ਅਨੁਸ਼ਾਸਨ ਪ੍ਰਣਾਲੀ ਦਿੰਦਾ ਹੈ।';
 
   @override
   String get paywallFeatures =>
-      'All 5 habit slots, not just 3|Your full history, forever|The full medal set|Streak freeze every month|Weekly Receipt + share cards|Themes + more';
+      'ਸਾਰੇ 5 ਆਦਤ ਸਲਾਟ, ਸਿਰਫ਼ 3 ਨਹੀਂ|ਤੁਹਾਡਾ ਪੂਰਾ ਇਤਿਹਾਸ, ਹਮੇਸ਼ਾ|ਪੂਰਾ ਤਮਗਾ ਸੈੱਟ|ਹਰ ਮਹੀਨੇ ਸਟ੍ਰੀਕ ਫ੍ਰੀਜ਼|ਹਫਤਾਵਾਰੀ ਰਸੀਦ + ਸ਼ੇਅਰ ਕਾਰਡ|ਥੀਮ + ਹੋਰ';
 
   @override
   String get paywallFeaturesBodies =>
-      'Free gives you 3. Pro unlocks all five so your full daily ritual can live here.|Browse every day you\'ve completed — not just the last 7. Look back years, not weeks.|Unlock Legendary tier medals. The rarest badges are for the people who go all in.|2 streak freezes a month so a single bad day doesn\'t end your chain.|Beautiful share cards of your week. Post your chain, inspire someone else to start.|Unlock new accent colors and themes as we add them. Always free updates.';
+      'Free ਵਿੱਚ 3 ਹਨ। Pro ਸਾਰੇ 5 ਅਨਲੌਕ ਕਰਦਾ ਹੈ ਤਾਂ ਕਿ ਤੁਹਾਡੀ ਪੂਰੀ ਰੋਜ਼ਾਨਾ ਰਸਮ ਇੱਥੇ ਰਹਿ ਸਕੇ।|ਤੁਸੀਂ ਜੋ ਵੀ ਦਿਨ ਪੂਰੇ ਕੀਤੇ ਹਨ — ਸਿਰਫ਼ ਪਿਛਲੇ 7 ਹੀ ਨਹੀਂ। ਸਾਲਾਂ ਪਿੱਛੇ ਵੇਖੋ, ਹਫ਼ਤੇ ਨਹੀਂ।|Legendary ਪੱਧਰ ਦੇ ਤਮਗੇ ਅਨਲੌਕ ਕਰੋ। ਸਭ ਤੋਂ ਦੁਰਲੱਭ ਬੈਜ ਉਨ੍ਹਾਂ ਲਈ ਹਨ ਜੋ ਪੂਰੀ ਤਰ੍ਹਾਂ ਜਾਂਦੇ ਹਨ।|ਮਹੀਨੇ ਵਿੱਚ 2 ਸਟ੍ਰੀਕ ਫ੍ਰੀਜ਼ ਤਾਂ ਕਿ ਇੱਕ ਮਾੜਾ ਦਿਨ ਤੁਹਾਡੀ ਚੇਨ ਖਤਮ ਨਾ ਕਰੇ।|ਤੁਹਾਡੇ ਹਫ਼ਤੇ ਦੇ ਸੁੰਦਰ ਸ਼ੇਅਰ ਕਾਰਡ। ਆਪਣੀ ਚੇਨ ਪੋਸਟ ਕਰੋ, ਕਿਸੇ ਹੋਰ ਨੂੰ ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਪ੍ਰੇਰਿਤ ਕਰੋ।|ਜਿਵੇਂ ਜਿਵੇਂ ਅਸੀਂ ਨਵੇਂ ਰੰਗ ਅਤੇ ਥੀਮ ਜੋੜਦੇ ਹਾਂ ਉਨ੍ਹਾਂ ਨੂੰ ਅਨਲੌਕ ਕਰੋ। ਹਮੇਸ਼ਾ ਮੁਫ਼ਤ ਅਪਡੇਟ।';
 
   @override
   String get paywallYearly => 'ਸਾਲਾਨਾ';
 
   @override
-  String get paywallYearlyCaption => 'Best value · works out to ~2.50 USD/mo';
+  String get paywallYearlyCaption => 'ਵਧੀਆ ਕੀਮਤ · ਲਗਭਗ ~2.50 USD/ਮਹੀਨਾ';
 
   @override
-  String get paywallYearlyBadge => 'SAVE 35%';
+  String get paywallYearlyBadge => '35% ਬਚਤ';
 
   @override
   String get paywallMonthly => 'ਮਾਸਿਕ';
 
   @override
-  String get paywallMonthlyCaption => 'Billed every month · cancel anytime';
+  String get paywallMonthlyCaption => 'ਹਰ ਮਹੀਨੇ ਬਿੱਲ · ਕਦੇ ਵੀ ਰੱਦ ਕਰੋ';
 
   @override
   String paywallStartCta(String price) {
-    return 'Start Pro · $price/yr';
+    return 'Pro ਸ਼ੁਰੂ ਕਰੋ · $price/ਸਾਲ';
   }
 
   @override
   String paywallStartCtaMonthly(String price) {
-    return 'Start Pro · $price/mo';
+    return 'Pro ਸ਼ੁਰੂ ਕਰੋ · $price/ਮਹੀਨਾ';
   }
 
   @override
@@ -472,47 +473,47 @@ class AppLocalizationsPa extends AppLocalizations {
   String get paywallPrivacy => 'ਨਿੱਜਤਾ';
 
   @override
-  String get paywallNoRestore => 'No previous purchase found on this account.';
+  String get paywallNoRestore => 'ਇਸ ਖਾਤੇ ਤੇ ਕੋਈ ਪਿਛਲੀ ਖਰੀਦ ਨਹੀਂ ਮਿਲੀ।';
 
   @override
   String get paywallRestoreLater =>
-      'We\'ll restore your purchase on the next sync.';
+      'ਅਸੀਂ ਅਗਲੀ ਸਿੰਕ ਤੇ ਤੁਹਾਡੀ ਖਰੀਦ ਮੁੜ ਬਹਾਲ ਕਰਾਂਗੇ।';
 
   @override
-  String get paywallAlreadyPro => 'You\'re on Pro. Thank you for the support.';
+  String get paywallAlreadyPro => 'ਤੁਸੀਂ Pro ਤੇ ਹੋ। ਸਹਿਯੋਗ ਲਈ ਧੰਨਵਾਦ।';
 
   @override
   String get paywallHabitSlotHead =>
-      'You\'ve used all your free habit slots. Unlock the full set to plant every ritual you care about.';
+      'ਤੁਸੀਂ ਆਪਣੇ ਸਾਰੇ ਮੁਫ਼ਤ ਆਦਤ ਸਲਾਟ ਵਰਤ ਲਏ ਹਨ। ਹਰ ਉਸ ਰਸਮ ਨੂੰ ਲਗਾਉਣ ਲਈ ਪੂਰਾ ਸੈੱਟ ਅਨਲੌਕ ਕਰੋ ਜੋ ਤੁਹਾਡੇ ਲਈ ਮਹੱਤਵਪੂਰਨ ਹੈ।';
 
   @override
   String get paywallHistoryHead =>
-      'See your full history — every perfect day, every medal, every comeback.';
+      'ਆਪਣਾ ਪੂਰਾ ਇਤਿਹਾਸ ਵੇਖੋ — ਹਰ ਸੰਪੂਰਨ ਦਿਨ, ਹਰ ਤਮਗਾ, ਹਰ ਵਾਪਸੀ।';
 
   @override
   String get paywallMedalHead =>
-      'The rarest medals are Pro-only. Keep going — they\'re closer than you think.';
+      'ਸਭ ਤੋਂ ਦੁਰਲੱਭ ਤਮਗੇ Pro-ਮਾਤਰ ਹਨ। ਜਾਰੀ ਰੱਖੋ — ਉਹ ਜਿੰਨਾ ਤੁਸੀਂ ਸੋਚਦੇ ਹੋ ਉਸ ਤੋਂ ਕਿ ਨੇੜੇ ਹਨ।';
 
   @override
-  String get settingsYourActivity => 'YOUR ACTIVITY';
+  String get settingsYourActivity => 'ਤੁਹਾਡੀ ਗਤੀਵਿਧੀ';
 
   @override
-  String get settingsHelpInfo => 'HELP & INFO';
+  String get settingsHelpInfo => 'ਮਦਦ ਅਤੇ ਜਾਣਕਾਰੀ';
 
   @override
-  String get settingsAccount => 'ACCOUNT';
+  String get settingsAccount => 'ਖਾਤਾ';
 
   @override
-  String get settingsNurturingTools => 'NURTURING TOOLS';
+  String get settingsNurturingTools => 'ਸੰਭਾਲ ਸੰਦ';
 
   @override
-  String get settingsReminders => 'REMINDERS';
+  String get settingsReminders => 'ਰਿਮਾਈਂਡਰ';
 
   @override
-  String get settingsWidgetSanctuary => 'WIDGET SANCTUARY';
+  String get settingsWidgetSanctuary => 'ਵਿਜੇਟ ਅਸ਼ਰਮ';
 
   @override
-  String get settingsEcosystemSupport => 'ECOSYSTEM SUPPORT';
+  String get settingsEcosystemSupport => 'ਈਕੋਸਿਸਟਮ ਸਹਾਇਤਾ';
 
   @override
   String get settingsHowItWorks => 'ਇਹ ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ';
@@ -521,10 +522,10 @@ class AppLocalizationsPa extends AppLocalizations {
   String get settingsSignOut => 'ਸਾਈਨ ਆਉਟ';
 
   @override
-  String get settingsProActive => 'Active';
+  String get settingsProActive => 'ਸਰਗਰਮ';
 
   @override
-  String get settingsProFree => 'Free tier';
+  String get settingsProFree => 'Free ਪੱਧਰ';
 
   @override
   String get settingsLanguage => 'ਭਾਸ਼ਾ';
@@ -533,151 +534,152 @@ class AppLocalizationsPa extends AppLocalizations {
   String get settingsLanguageValue => 'ਸਿਸਟਮ ਡਿਫਾਲਟ';
 
   @override
-  String get firstRunGreeting => '5 tasks. No more. Make them count.';
+  String get firstRunGreeting =>
+      '5 ਕੰਮ। ਇਸ ਤੋਂ ਵੱਧ ਨਹੀਂ। ਇਨ੍ਹਾਂ ਨੂੰ ਮਹੱਤਵ ਦਿਓ।';
 
   @override
-  String get firstRunBody => 'Plant your first seed — what matters most today?';
+  String get firstRunBody =>
+      'ਆਪਣਾ ਪਹਿਲਾ ਬੀਜ ਲਗਾਓ — ਅੱਜ ਸਭ ਤੋਂ ਮਹੱਤਵਪੂਰਨ ਕੀ ਹੈ?';
 
   @override
-  String get firstRunCta => 'Plant your first seed';
+  String get firstRunCta => 'ਆਪਣਾ ਪਹਿਲਾ ਬੀਜ ਲਗਾਓ';
 
   @override
-  String get emptyStateClearAll => 'Clear all';
+  String get emptyStateClearAll => 'ਸਭ ਸਾਫ਼ ਕਰੋ';
 
   @override
   String get cancel => 'ਰੱਦ ਕਰੋ';
 
   @override
-  String get intentionTitle1 => 'Let\'s plant a new intention!';
+  String get intentionTitle1 => 'ਆਓ ਨਵੀਂ ਇੱਛਾ ਲਗਾਈਏ!';
 
   @override
   String get intentionBody1 =>
-      'Every mighty forest begins with a single tiny choice. Tell me what we\'re nurturing today?';
+      'ਹਰ ਵੱਡਾ ਜੰਗਲ ਇੱਕ ਛੋਟੇ ਚੋਣ ਤੋਂ ਸ਼ੁਰੂ ਹੁੰਦਾ ਹੈ। ਦੱਸੋ ਅੱਜ ਅਸੀਂ ਕੀ ਸੰਭਾਲ ਰਹੇ ਹਾਂ?';
 
   @override
-  String get intentionTitle2 => 'What shall we grow today?';
+  String get intentionTitle2 => 'ਅੱਜ ਕੀ ਉਗਾਈਏ?';
 
   @override
   String get intentionBody2 =>
-      'Tiny seeds, tended with care, become tall trees. Pick the one that matters most right now.';
+      'ਛੋਟੇ ਬੀਜ, ਧਿਆਨ ਨਾਲ ਸੰਭਾਲੇ ਜਾਣ ਤਾਂ ਉੱਚੇ ਦਰੱਖਤ ਬਣਦੇ ਹਨ। ਇਸ ਵੇਲੇ ਸਭ ਤੋਂ ਮਹੱਤਵਪੂਰਨ ਇੱਕ ਚੁਣੋ।';
 
   @override
-  String get intentionTitle3 => 'One seed. One breath. Begin.';
+  String get intentionTitle3 => 'ਇੱਕ ਬੀਜ। ਇੱਕ ਸਾਹ। ਸ਼ੁਰੂ ਕਰੋ।';
 
   @override
   String get intentionBody3 =>
-      'You don\'t have to plant the whole forest at once — just the next right thing.';
+      'ਤੁਹਾਨੂੰ ਇੱਕੋ ਵਾਰ ਪੂਰਾ ਜੰਗਲ ਨਹੀਂ ਲਗਾਉਣਾ — ਸਿਰਫ਼ ਅਗਲਾ ਸਹੀ ਕੰਮ।';
 
   @override
-  String get intentionTitle4 => 'Nurture the next small step.';
+  String get intentionTitle4 => 'ਅਗਲਾ ਛੋਟਾ ਕਦਮ ਸੰਭਾਲੋ।';
 
   @override
   String get intentionBody4 =>
-      'Future-you is built from the choices you make in the next five minutes. What\'s one kind one?';
+      'ਅਗਲੇ 5 ਮਿੰਟ ਵਿੱਚ ਤੁਸੀਂ ਜੋ ਚੋਣਾਂ ਕਰਦੇ ਹੋ ਉਨ੍ਹਾਂ ਤੋਂ ਭਵਿੱਖ ਦੀ ਤੁਹਾਡੀ ਸ਼ਖਸੀਅਤ ਬਣਦੀ ਹੈ। ਇੱਕ ਦਰਿਆਵਰ ਵਾਲੀ ਕੋਈ ਇੱਕ ਚੋਣ ਕਿਹੜੀ ਹੈ?';
 
   @override
-  String get intentionTitle5 => 'Choose what you want to become.';
+  String get intentionTitle5 => 'ਚੁਣੋ ਕਿ ਤੁਸੀਂ ਕੀ ਬਣਨਾ ਚਾਹੁੰਦੇ ਹੋ।';
 
   @override
   String get intentionBody5 =>
-      'Tasks are seeds, habits are sprouts. Together they form a forest you\'re proud of.';
+      'ਕੰਮ ਬੀਜ ਹਨ, ਆਦਤਾਂ ਅੰਕੁਰ ਹਨ। ਮਿਲ ਕੇ ਉਹ ਜੰਗਲ ਬਣਾਉਂਦੇ ਹਨ ਜਿਸ ਤੇ ਤੁਸੀਂ ਮਾਣ ਕਰੋ।';
 
   @override
-  String get intentionTitle6 => 'Plant something worth remembering.';
+  String get intentionTitle6 => 'ਯਾਦ ਰੱਖਣ ਯੋਗ ਕੁਝ ਲਗਾਓ।';
 
   @override
   String get intentionBody6 =>
-      'Not every day will feel huge. A watered seed still counts. Let\'s name one.';
+      'ਹਰ ਦਿਨ ਵੱਡਾ ਨਹੀਂ ਲੱਗੇਗਾ। ਪਾਣੀ ਪਿਲਾਇਆ ਬੀਜ ਵੀ ਗਿਣਦਾ ਹੈ। ਆਓ ਇੱਕ ਨਾਮ ਦੇਈਏ।';
 
   @override
-  String get intentionTitle7 => 'Make today a little braver.';
+  String get intentionTitle7 => 'ਅੱਜ ਨੂੰ ਥੋੜਾ ਹਿੰਮਤ ਬਣਾਓ।';
 
   @override
   String get intentionBody7 =>
-      'Courage compounds. Pick the seed you\'ve been postponing — even naming it moves it forward.';
+      'ਹਿੰਮਤ ਸੰਚਿਤ ਹੁੰਦੀ ਹੈ। ਉਹ ਬੀਜ ਚੁਣੋ ਜੋ ਤੁਸੀਂ ਟਾਲ ਰਹੇ ਹੋ — ਇਸ ਨੂੰ ਨਾਮ ਦੇਣਾ ਵੀ ਅੱਗੇ ਵਧਾਉਂਦਾ ਹੈ।';
 
   @override
-  String get intentionTitle8 => 'Tend the soil before the seed.';
+  String get intentionTitle8 => 'ਬੀਜ ਤੋਂ ਪਹਿਲਾਂ ਮਿੱਟੀ ਸੰਭਾਲੋ।';
 
   @override
   String get intentionBody8 =>
-      'What mindset, tool, or small ritual will make this task easier? Add it to the notes.';
+      'ਕਿਹੜੀ ਮਾਨਸਿਕਤਾ, ਸੰਦ ਜਾਂ ਛੋਟੀ ਰਸਮ ਇਸ ਕੰਮ ਨੂੰ ਆਸਾਨ ਬਣਾਏਗੀ? ਇਸ ਨੂੰ ਨੋਟਸ ਵਿੱਚ ਜੋੜੋ।';
 
   @override
-  String get shareCardSnapshot => 'A snapshot of your sanctuary';
+  String get shareCardSnapshot => 'ਤੁਹਾਡੇ ਅਸ਼ਰਮ ਦੀ ਇੱਕ ਝਲਕ';
 
   @override
   String get shareCardBody =>
-      'The card above is exported as a PNG and sent to your share sheet. Post it on your story, send it to a friend, or print it as a sticker.';
+      'ਉੱਪਰ ਦਾ ਕਾਰਡ PNG ਵਜੋਂ ਐਕਸਪੋਰਟ ਕੀਤਾ ਗਿਆ ਹੈ ਅਤੇ ਤੁਹਾਡੀ ਸ਼ੇਅਰ ਸ਼ੀਟ ਤੇ ਭੇਜਿਆ ਗਿਆ ਹੈ। ਆਪਣੀ ਸਟੋਰੀ ਤੇ ਪੋਸਟ ਕਰੋ, ਕਿਸੇ ਦੋਸਤ ਨੂੰ ਭੇਜੋ, ਜਾਂ ਸਟਿੱਕਰ ਦੇ ਤੌਰ ਤੇ ਪ੍ਰਿੰਟ ਕਰੋ।';
 
   @override
-  String get shareCardShareMyBloom => 'Share my bloom';
+  String get shareCardShareMyBloom => 'ਮੇਰਾ ਬਲੂਮ ਸ਼ੇਅਰ ਕਰੋ';
 
   @override
-  String get shareCardCouldNotShare => 'Could not share right now';
+  String get shareCardCouldNotShare => 'ਹੁਣ ਸ਼ੇਅਰ ਨਹੀਂ ਕਰ ਸਕਿਆ';
 
   @override
   String shareCardProgressText(String year) {
-    return 'My Bloom Tracker progress — $year on Bloom Tracker.';
+    return 'ਮੇਰੀ Bloom Tracker ਤਰੱਕੀ — Bloom Tracker ਤੇ $year ਸਾਲ।';
   }
 
   @override
   String shareCardMedalText(String title, String subtitle) {
-    return 'I just unlocked the \"$title\" medal on Bloom Tracker. $subtitle';
+    return 'ਮੈਂ ਹੁਣੇ Bloom Tracker ਤੇ \"$title\" ਤਮਗਾ ਅਨਲੌਕ ਕੀਤਾ। $subtitle';
   }
 
   @override
-  String get howItWorksTitle => 'How this works';
+  String get howItWorksTitle => 'ਇਹ ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ';
 
   @override
   String get howItWorksBody =>
-      'Bloom Tracker helps you keep a small, unbroken chain of discipline. That\'s it.';
+      'Bloom Tracker ਤੁਹਾਡੀ ਛੋਟੀ, ਅਟੁੱਟ ਅਨੁਸ਼ਾਸਨ ਦੀ ਚੇਨ ਬਣਾਈ ਰੱਖਣ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ। ਬੱਸ ਇਹੀ।';
 
   @override
-  String get howItWorksToday => 'The Today tab';
+  String get howItWorksToday => 'ਅੱਜ ਟੈਬ';
 
   @override
   String get howItWorksTodayBody =>
-      'This is your home. It shows the 5 tasks and the habits you set for today. Finish them by midnight, the chain extends.';
+      'ਇਹ ਤੁਹਾਡਾ ਘਰ ਹੈ। ਇਹ ਅੱਜ ਦੇ 5 ਕੰਮ ਅਤੇ ਆਦਤਾਂ ਦਿਖਾਉਂਦਾ ਹੈ। ਅੱਧੀ ਰਾਤ ਤੱਕ ਪੂਰੇ ਕਰੋ, ਚੇਨ ਵਧੇਗੀ।';
 
   @override
-  String get howItWorksCap => 'The 5-task cap is the feature';
+  String get howItWorksCap => '5-ਕੰਮ ਦੀ ਸੀਮਾ ਹੀ ਫੀਚਰ ਹੈ';
 
   @override
   String get howItWorksCapBody =>
-      'We don\'t let you add a 6th. That\'s the whole point. Small chains beat long ones. Tap the \"?\" on the home screen for the full reasoning.';
+      'ਅਸੀਂ 6ਵਾਂ ਨਹੀਂ ਜੋੜਨ ਦਿੰਦੇ। ਇਹੀ ਪੂਰੀ ਗੱਲ ਹੈ। ਛੋਟੀਆਂ ਚੇਨਾਂ ਲੰਬੀਆਂ ਨਾਲੋਂ ਬਿਹਤਰ ਹਨ। ਪੂਰੇ ਕਾਰਨ ਲਈ ਹੋਮ ਸਕ੍ਰੀਨ ਤੇ \"?\" ਟੈਪ ਕਰੋ।';
 
   @override
-  String get howItWorksHabits => 'Habits are daily, the chain is forever';
+  String get howItWorksHabits => 'ਆਦਤਾਂ ਰੋਜ਼ਾਨਾ ਹੁੰਦੀਆਂ ਹਨ, ਚੇਨ ਹਮੇਸ਼ਾ ਲਈ';
 
   @override
   String get howItWorksHabitsBody =>
-      'Habits (Morning yoga, Drink water) live forever. Tasks are one-shot. Both feed the same streak.';
+      'ਆਦਤਾਂ (ਸਵੇਰ ਦੀ ਯੋਗਾ, ਪਾਣੀ ਪੀਣਾ) ਹਮੇਸ਼ਾ ਲਈ ਰਹਿੰਦੀਆਂ ਹਨ। ਕੰਮ ਇੱਕ ਵਾਰ ਦੇ ਹੁੰਦੇ ਹਨ। ਦੋਵੇਂ ਇੱਕੋ ਸਟ੍ਰੀਕ ਨੂੰ ਭਰਦੇ ਹਨ।';
 
   @override
-  String get howItWorksLeftBehind => 'Missed tasks → Left Behind';
+  String get howItWorksLeftBehind => 'ਛੁੱਟੇ ਕੰਮ → ਪਿੱਛੇ ਛੱਡੇ';
 
   @override
   String get howItWorksLeftBehindBody =>
-      'At midnight, unfinished tasks move to Left Behind. Re-add only what still matters. The rest gets a quiet let-go.';
+      'ਅੱਧੀ ਰਾਤ, ਬਕਾਇਆ ਕੰਮ ਪਿੱਛੇ ਛੱਡੇ ਵਿੱਚ ਚਲੇ ਜਾਂਦੇ ਹਨ। ਸਿਰਫ਼ ਉਹ ਨੂੰ ਮੁੜ ਜੋੜੋ ਜੋ ਅਜੇ ਵੀ ਮਹੱਤਵਪੂਰਨ ਹਨ। ਬਾਕੀ ਨੂੰ ਚੁੱਪਚਾਪ ਛੱਡ ਦਿਓ।';
 
   @override
-  String get howItWorksProgress => 'The Progress tab';
+  String get howItWorksProgress => 'ਤਰੱਕੀ ਟੈਬ';
 
   @override
   String get howItWorksProgressBody =>
-      'Streak, calendar, medals, history — everything about how you\'re doing over time. Nothing urgent lives here.';
+      'ਸਟ੍ਰੀਕ, ਕੈਲੰਡਰ, ਤਮਗੇ, ਇਤਿਹਾਸ — ਸਮੇਂ ਨਾਲ ਤੁਸੀਂ ਕਿੰਨਾ ਕਰ ਰਹੇ ਹੋ ਇਸ ਬਾਰੇ ਸਭ ਕੁਝ। ਕੋਈ ਜ਼ਰੂਰੀ ਕੰਮ ਇੱਥੇ ਨਹੀਂ ਰਹਿੰਦਾ।';
 
   @override
-  String get howItWorksYou => 'The You tab';
+  String get howItWorksYou => 'ਤੁਸੀਂ ਟੈਬ';
 
   @override
-  String get howItWorksYouBody =>
-      'Your account, settings, sign out. That\'s all.';
+  String get howItWorksYouBody => 'ਤੁਹਾਡਾ ਖਾਤਾ, ਸੈਟਿੰਗਾਂ, ਸਾਈਨ ਆਊਟ। ਬੱਸ ਇਹੀ।';
 
   @override
   String get howItWorksRule =>
-      'The rule: 5 small things, every day, no excuses.';
+      'ਨਿਯਮ: 5 ਛੋਟੀਆਂ ਚੀਜ਼ਾਂ, ਹਰ ਰੋਜ਼, ਕੋਈ ਬਹਾਨੇ ਨਹੀਂ।';
 
   @override
   String get commonRetry => 'Retry';
