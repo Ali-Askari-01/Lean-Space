@@ -77,7 +77,7 @@ class _InsightsScreenState extends ConsumerState<InsightsScreen> {
       body: AmbientBackground(
         child: SafeArea(
           child: asyncInsights.when(
-            loading: () => const Center(
+            loading: () => Center(
               child: CircularProgressIndicator(color: AppColors.accent),
             ),
             error: (error, stackTrace) => Center(
@@ -152,7 +152,7 @@ class _InsightsScreenState extends ConsumerState<InsightsScreen> {
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Icon(
+                        Icon(
                           Icons.lightbulb_outline,
                           color: AppColors.accent,
                           size: 22,
@@ -312,7 +312,7 @@ class _UnlockHistoryCard extends StatelessWidget {
         ),
         child: Row(
           children: [
-            const Icon(Icons.lock_outline, color: AppColors.accent),
+            Icon(Icons.lock_outline, color: AppColors.accent),
             const SizedBox(width: 14),
             Expanded(
               child: Column(
@@ -333,7 +333,7 @@ class _UnlockHistoryCard extends StatelessWidget {
                 ],
               ),
             ),
-            const Icon(Icons.chevron_right, color: AppColors.textMuted),
+            Icon(Icons.chevron_right, color: AppColors.textMuted),
           ],
         ),
       ),

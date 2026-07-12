@@ -10,6 +10,23 @@ abstract final class ProProducts {
   static const all = <String>{monthly, yearly};
 }
 
+class ProductQueryResult {
+  const ProductQueryResult({
+    required this.products,
+    this.notFoundIds = const [],
+    this.errorMessage,
+  });
+
+  final List<ProductDetails> products;
+  final List<String> notFoundIds;
+  final String? errorMessage;
+
+  bool get hasMonthly =>
+      products.any((p) => p.id == ProProducts.monthly);
+  bool get hasYearly =>
+      products.any((p) => p.id == ProProducts.yearly);
+}
+
 /// Thin wrapper around [InAppPurchase] so the rest of the app never touches
 /// the plugin directly. Verification of receipts is intentionally left to the
 /// server-side webhook (see supabase/functions/play-rtdn).
@@ -23,9 +40,13 @@ class SubscriptionService {
 
   Future<bool> isAvailable() => _iap.isAvailable();
 
-  Future<List<ProductDetails>> loadProducts() async {
+  Future<ProductQueryResult> loadProducts() async {
     final response = await _iap.queryProductDetails(ProProducts.all);
-    return response.productDetails;
+    return ProductQueryResult(
+      products: response.productDetails,
+      notFoundIds: response.notFoundIDs.toList(),
+      errorMessage: response.error?.message,
+    );
   }
 
   Future<void> buy(ProductDetails product) async {

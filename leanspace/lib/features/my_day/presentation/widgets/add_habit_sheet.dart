@@ -213,7 +213,7 @@ class _AddHabitSheetState extends ConsumerState<AddHabitSheet> {
                   child: InkWell(
                     customBorder: const CircleBorder(),
                     onTap: _saving ? null : _delete,
-                    child: const SizedBox(
+                    child: SizedBox(
                       width: 56,
                       height: 56,
                       child: Icon(

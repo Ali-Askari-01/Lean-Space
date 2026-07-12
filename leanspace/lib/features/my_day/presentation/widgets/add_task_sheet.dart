@@ -310,7 +310,7 @@ class _AddTaskSheetState extends ConsumerState<AddTaskSheet> {
                         ),
                         child: Row(
                           children: [
-                            const Icon(
+                            Icon(
                               Icons.calendar_today_rounded,
                               size: 16,
                               color: AppColors.tertiary,
@@ -404,7 +404,7 @@ class _AddTaskSheetState extends ConsumerState<AddTaskSheet> {
                       color: AppColors.primaryContainer.withValues(alpha: 0.3),
                       shape: BoxShape.circle,
                     ),
-                    child: const Icon(
+                    child: Icon(
                       Icons.info_outline_rounded,
                       size: 14,
                       color: AppColors.primary,
@@ -469,7 +469,7 @@ class _AddTaskSheetState extends ConsumerState<AddTaskSheet> {
                           });
                           AppHaptics.light();
                         },
-                  child: const Tooltip(
+                  child: Tooltip(
                     message: 'Clear form',
                     child: SizedBox(
                       width: 52,
@@ -634,7 +634,7 @@ class _PriorityDropdown extends StatelessWidget {
         child: DropdownButton<TodoPriority>(
           isExpanded: true,
           value: value,
-          icon: const Icon(
+          icon: Icon(
             Icons.keyboard_arrow_down_rounded,
             color: AppColors.tertiary,
           ),

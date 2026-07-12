@@ -61,7 +61,7 @@ class _TaskCapInfoSheet extends StatelessWidget {
                     color: AppColors.primaryContainer.withValues(alpha: 0.4),
                     shape: BoxShape.circle,
                   ),
-                  child: const Icon(
+                  child: Icon(
                     Icons.eco_rounded,
                     color: AppColors.primary,
                     size: 22,

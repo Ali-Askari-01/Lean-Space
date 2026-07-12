@@ -62,7 +62,7 @@ class HabitBloom {
   if (n.contains('water') || n.contains('drink') || n.contains('hydrat')) {
     return (
       icon: Icons.water_drop_rounded,
-      tone: const MedalTone(color: AppColors.tertiary, bg: Color(0x3300629F)),
+      tone: MedalTone(color: AppColors.tertiary, bg: const Color(0x3300629F)),
       element: 'Water',
     );
   }
@@ -94,13 +94,13 @@ class HabitBloom {
       n.contains('wind')) {
     return (
       icon: Icons.air_rounded,
-      tone: const MedalTone(color: AppColors.outline, bg: Color(0x336E7A6E)),
+      tone: MedalTone(color: AppColors.outline, bg: const Color(0x336E7A6E)),
       element: 'Breeze',
     );
   }
   return (
     icon: Icons.eco_rounded,
-    tone: const MedalTone(color: AppColors.primary, bg: Color(0x33006D36)),
+    tone: MedalTone(color: AppColors.primary, bg: const Color(0x33006D36)),
     element: 'Soil',
   );
 }

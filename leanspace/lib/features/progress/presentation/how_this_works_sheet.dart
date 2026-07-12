@@ -120,7 +120,7 @@ class _HowThisWorksSheet extends StatelessWidget {
                 ),
                 child: Row(
                   children: [
-                    const Icon(
+                    Icon(
                       Icons.flag_outlined,
                       color: AppColors.primary,
                       size: 22,

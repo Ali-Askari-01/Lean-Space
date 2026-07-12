@@ -22,7 +22,7 @@ class WeeklyReceiptCard extends StatelessWidget {
       padding: const EdgeInsets.all(24),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        gradient: const LinearGradient(
+        gradient: LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [AppColors.bgElev, AppColors.surface],
@@ -40,7 +40,7 @@ class WeeklyReceiptCard extends StatelessWidget {
                 height: 34,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  gradient: const LinearGradient(
+                  gradient: LinearGradient(
                     colors: [AppColors.accent, AppColors.accentDeep],
                   ),
                 ),

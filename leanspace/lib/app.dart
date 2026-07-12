@@ -10,8 +10,10 @@ import 'core/deep_link_handlers.dart';
 import 'core/feature_flags.dart';
 import 'core/l10n/app_localizations.dart';
 import 'core/theme/app_theme.dart';
+import 'core/theme/theme_provider.dart';
 import 'core/widgets/locale_provider.dart';
 import 'features/my_day/providers/my_day_providers.dart';
+import 'features/referral/providers/referral_providers.dart';
 import 'features/reminders/providers/reminder_providers.dart';
 import 'features/subscription/providers/entitlement_provider.dart';
 import 'features/subscription/providers/subscription_providers.dart';
@@ -123,7 +125,11 @@ class _LeanSpaceAppState extends ConsumerState<LeanSpaceApp> {
   Future<void> _bootstrapIfNeeded() async {
     await bootstrapAuthenticatedUser(
       Supabase.instance.client,
-      onReady: () => ref.read(entitlementProvider.notifier).refresh(),
+      onReady: () async {
+        await ref.read(entitlementProvider.notifier).refresh();
+        await ref.read(referralControllerProvider.notifier).applyPendingIfAny();
+        await ref.read(referralControllerProvider.notifier).refresh();
+      },
     );
   }
 
@@ -133,6 +139,7 @@ class _LeanSpaceAppState extends ConsumerState<LeanSpaceApp> {
       ref.watch(subscriptionControllerProvider);
     }
 
+    ref.watch(themePresetProvider);
     final router = ref.watch(appRouterProvider);
     final userLocale = ref.watch(localeProvider);
 

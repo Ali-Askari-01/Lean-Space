@@ -12,6 +12,7 @@ import 'core/env.dart';
 import 'core/l10n/app_localizations.dart';
 import 'core/onboarding/onboarding_store.dart';
 import 'core/theme/app_colors.dart';
+import 'core/theme/theme_provider.dart';
 import 'core/widgets/bloom_splash.dart';
 import 'features/reminders/data/notification_service.dart';
 import 'features/reminders/providers/reminder_providers.dart';
@@ -34,10 +35,9 @@ enum _AppPhase {
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // Pre-warm SharedPreferences so the onboarding gate hydrates
-  // synchronously the first time it's read.
+  SharedPreferences? prefs;
   try {
-    await SharedPreferences.getInstance();
+    prefs = await SharedPreferences.getInstance();
   } catch (e) {
     debugPrint('shared_preferences warmup failed: $e');
   }
@@ -45,7 +45,14 @@ Future<void> main() async {
   // One ProviderScope for the lifetime of the process. The state machine
   // inside [BloomTrackerApp] decides which child to render (splash,
   // config error, or the full app) without ever re-creating the scope.
-  runApp(const ProviderScope(child: BloomTrackerApp()));
+  runApp(
+    ProviderScope(
+      overrides: [
+        if (prefs != null) sharedPreferencesProvider.overrideWithValue(prefs),
+      ],
+      child: const BloomTrackerApp(),
+    ),
+  );
 }
 
 class BloomTrackerApp extends ConsumerStatefulWidget {
@@ -142,9 +149,9 @@ class _BloomTrackerAppState extends ConsumerState<BloomTrackerApp> {
           ),
         );
       case _AppPhase.ready:
-        if (!_gateHydrated) {
+        if (!_gateHydrated || _notifications == null) {
           // Defensive: should never happen but keeps the splash on
-          // until the gate is hot.
+          // until bootstrap dependencies are hot.
           return const _ScaffoldOnly(child: BloomSplash());
         }
         return _ReadyScope(notifications: _notifications!);
@@ -172,7 +179,7 @@ class _SetupRequiredBadge extends StatelessWidget {
       ),
       child: Text(
         l10n.authSetupRequired,
-        style: const TextStyle(
+        style: TextStyle(
           color: AppColors.primary,
           fontWeight: FontWeight.w800,
           letterSpacing: 0.4,

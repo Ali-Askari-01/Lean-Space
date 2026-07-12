@@ -178,7 +178,7 @@ class _ProgressCalendarCardState extends ConsumerState<ProgressCalendarCard> {
             const SizedBox(height: 10),
             Row(
               children: [
-                const Icon(
+                Icon(
                   Icons.eco_rounded,
                   color: AppColors.primary,
                   size: 16,
@@ -445,7 +445,7 @@ class _MonthSelector extends StatelessWidget {
                   width: 24,
                   height: 24,
                   alignment: Alignment.center,
-                  child: const Icon(
+                  child: Icon(
                     Icons.today_rounded,
                     size: 16,
                     color: AppColors.primary,

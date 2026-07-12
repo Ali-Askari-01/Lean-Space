@@ -58,7 +58,7 @@ class BloomSplash extends StatelessWidget {
                       child: Image.asset(
                         'assets/brand/bloom_tracker_logo.png',
                         fit: BoxFit.cover,
-                        errorBuilder: (_, __, ___) => const Icon(
+                        errorBuilder: (_, __, ___) => Icon(
                           Icons.eco_rounded,
                           color: AppColors.primary,
                           size: 56,
@@ -68,8 +68,8 @@ class BloomSplash extends StatelessWidget {
                   ),
                   const SizedBox(height: 22),
                   ShaderMask(
-                    shaderCallback: (rect) => const LinearGradient(
-                      colors: [AppColors.primary, Color(0xFF005C2E)],
+                    shaderCallback: (rect) => LinearGradient(
+                      colors: [AppColors.primary, const Color(0xFF005C2E)],
                     ).createShader(rect),
                     child: Text(
                       l10n.appTitle,
@@ -106,7 +106,7 @@ class BloomSplash extends StatelessWidget {
                   ],
                   if (showSpinner) ...[
                     const SizedBox(height: 24),
-                    const SizedBox(
+                    SizedBox(
                       width: 22,
                       height: 22,
                       child: CircularProgressIndicator(

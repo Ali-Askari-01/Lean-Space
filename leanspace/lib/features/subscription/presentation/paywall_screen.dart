@@ -73,7 +73,12 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
 
     final monthly = sub.monthly;
     final yearly = sub.yearly;
-    final selected = _annual ? yearly : monthly;
+    final preferAnnual = _annual && yearly != null;
+    final selected = preferAnnual
+        ? yearly
+        : (!preferAnnual && monthly != null)
+            ? monthly
+            : yearly ?? monthly;
 
     return Scaffold(
       backgroundColor: AppColors.surface,
@@ -104,16 +109,31 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
                     ),
                     const SizedBox(height: 18),
                     if (!isPro) _PricingBlock(
-                      annual: _annual,
+                      annual: _annual && yearly != null,
                       monthlyPrice: monthly?.price ?? r'$3.99',
                       monthlyPeriod: monthly?.price,
                       yearlyPrice: yearly?.price ?? r'$29.99',
                       yearlyPeriod: yearly?.price,
+                      showMonthly: monthly != null,
+                      showYearly: yearly != null,
                       onSelect: (a) {
                         AppHaptics.light();
                         setState(() => _annual = a);
                       },
                     ),
+                    if (!isPro) ...[
+                      const SizedBox(height: 12),
+                      TextButton(
+                        onPressed: () => context.push('/referral'),
+                        child: Text(
+                          'Invite 5 friends → get 1 month free',
+                          style: theme.textTheme.bodySmall?.copyWith(
+                            color: AppColors.primary,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                      ),
+                    ],
                     if (sub.error != null && !isPro) ...[
                       const SizedBox(height: 12),
                       Text(
@@ -449,6 +469,8 @@ class _PricingBlock extends StatelessWidget {
     required this.monthlyPeriod,
     required this.yearlyPrice,
     required this.yearlyPeriod,
+    required this.showMonthly,
+    required this.showYearly,
     required this.onSelect,
   });
   final bool annual;
@@ -456,29 +478,33 @@ class _PricingBlock extends StatelessWidget {
   final dynamic monthlyPeriod;
   final String yearlyPrice;
   final dynamic yearlyPeriod;
+  final bool showMonthly;
+  final bool showYearly;
   final ValueChanged<bool> onSelect;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        _PlanOption(
-          title: 'Yearly',
-          price: yearlyPrice,
-          caption: 'Best value · works out to ~\$2.50/mo',
-          badge: 'SAVE 35%',
-          selected: annual,
-          onTap: () => onSelect(true),
-        ),
-        const SizedBox(height: 10),
-        _PlanOption(
-          title: 'Monthly',
-          price: monthlyPrice,
-          caption: 'Billed every month · cancel anytime',
-          badge: null,
-          selected: !annual,
-          onTap: () => onSelect(false),
-        ),
+        if (showYearly)
+          _PlanOption(
+            title: 'Yearly',
+            price: yearlyPrice,
+            caption: 'Best value · works out to ~\$2.50/mo',
+            badge: 'SAVE 35%',
+            selected: annual,
+            onTap: () => onSelect(true),
+          ),
+        if (showYearly && showMonthly) const SizedBox(height: 10),
+        if (showMonthly)
+          _PlanOption(
+            title: 'Monthly',
+            price: monthlyPrice,
+            caption: 'Billed every month · cancel anytime',
+            badge: null,
+            selected: !annual || !showYearly,
+            onTap: () => onSelect(false),
+          ),
       ],
     );
   }

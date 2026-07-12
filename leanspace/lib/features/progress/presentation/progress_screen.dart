@@ -239,7 +239,7 @@ class _HistoryTeaser extends ConsumerWidget {
                     color: AppColors.primary.withValues(alpha: 0.18),
                     shape: BoxShape.circle,
                   ),
-                  child: const Icon(
+                  child: Icon(
                     Icons.history_rounded,
                     color: AppColors.primary,
                     size: 22,
@@ -270,7 +270,7 @@ class _HistoryTeaser extends ConsumerWidget {
                     ],
                   ),
                 ),
-                const Icon(
+                Icon(
                   Icons.arrow_forward_rounded,
                   color: AppColors.primary,
                 ),
@@ -352,7 +352,7 @@ class _MedalsGrid extends StatelessWidget {
         ),
         child: Row(
           children: [
-            const Icon(Icons.emoji_events_outlined,
+            Icon(Icons.emoji_events_outlined,
                 color: AppColors.outline, size: 28),
             const SizedBox(width: 12),
             Expanded(
@@ -454,7 +454,7 @@ class _SeeAllMedalsCta extends StatelessWidget {
           ),
           child: Row(
             children: [
-              const Icon(
+              Icon(
                 Icons.emoji_events_rounded,
                 color: AppColors.primary,
                 size: 20,
@@ -470,7 +470,7 @@ class _SeeAllMedalsCta extends StatelessWidget {
                   ),
                 ),
               ),
-              const Icon(
+              Icon(
                 Icons.arrow_forward_rounded,
                 color: AppColors.primary,
                 size: 18,

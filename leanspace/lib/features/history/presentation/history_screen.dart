@@ -52,7 +52,7 @@ class _HistoryScreenState extends ConsumerState<HistoryScreen> {
       ),
       body: AmbientBackground(
         child: insightsAsync.when(
-          loading: () => const Center(
+          loading: () => Center(
             child: CircularProgressIndicator(color: AppColors.primary),
           ),
           error: (e, _) => Center(
@@ -168,7 +168,7 @@ class _PeriodSummary extends StatelessWidget {
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(24),
-        gradient: const LinearGradient(
+        gradient: LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: AppColors.gradientHabit,
@@ -342,7 +342,7 @@ class _DayRow extends StatelessWidget {
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            const Icon(
+                            Icon(
                               Icons.ac_unit_rounded,
                               color: AppColors.tertiary,
                               size: 12,
@@ -371,7 +371,7 @@ class _DayRow extends StatelessWidget {
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            const Icon(
+                            Icon(
                               Icons.verified_rounded,
                               color: AppColors.primary,
                               size: 12,
@@ -484,7 +484,7 @@ class _FullHistoryUpsell extends StatelessWidget {
                     color: AppColors.primary.withValues(alpha: 0.18),
                     shape: BoxShape.circle,
                   ),
-                  child: const Icon(
+                  child: Icon(
                     Icons.lock_open_rounded,
                     color: AppColors.primary,
                     size: 20,
@@ -535,7 +535,7 @@ class _FullHistoryUpsell extends StatelessWidget {
                     ],
                   ),
                 ),
-                const Icon(
+                Icon(
                   Icons.arrow_forward_rounded,
                   color: AppColors.primary,
                   size: 18,

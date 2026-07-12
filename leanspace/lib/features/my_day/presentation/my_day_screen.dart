@@ -168,7 +168,7 @@ class _MyDayScreenState extends ConsumerState<MyDayScreen> {
                 padding: const EdgeInsets.all(14),
                 child: Row(
                   children: [
-                    const Icon(Icons.error_outline,
+                    Icon(Icons.error_outline,
                         color: AppColors.error),
                     const SizedBox(width: 10),
                     Expanded(
@@ -327,7 +327,7 @@ class _DailyIntentionCard extends StatelessWidget {
                 color: AppColors.primary.withValues(alpha: 0.18),
                 shape: BoxShape.circle,
               ),
-              child: const Icon(
+              child: Icon(
                 Icons.format_quote_rounded,
                 color: AppColors.primary,
                 size: 18,
@@ -408,7 +408,7 @@ class _HabitHeader extends StatelessWidget {
           if (total > 0)
             Row(
               children: [
-                const Icon(
+                Icon(
                   Icons.local_fire_department_rounded,
                   size: 12,
                   color: AppColors.secondary,

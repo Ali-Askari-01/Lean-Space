@@ -272,10 +272,10 @@ class _ShareableCard extends StatelessWidget {
                         child: Image.asset(
                           'assets/brand/bloom_tracker_logo.png',
                           fit: BoxFit.cover,
-                          errorBuilder: (_, __, ___) => const Icon(
-                            Icons.eco_rounded,
-                            color: AppColors.primary,
-                          ),
+                          errorBuilder: (_, __, ___) => Icon(
+                              Icons.eco_rounded,
+                              color: AppColors.primary,
+                            ),
                         ),
                       ),
                     ),

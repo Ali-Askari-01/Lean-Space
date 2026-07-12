@@ -241,7 +241,7 @@ class _Divider extends StatelessWidget {
   const _Divider();
   @override
   Widget build(BuildContext context) {
-    return const Divider(
+    return Divider(
       height: 1,
       thickness: 0.5,
       color: AppColors.outlineVariant,
@@ -315,7 +315,7 @@ class _SettingsTile extends StatelessWidget {
                 ),
               ),
               if (onTap != null)
-                const Icon(
+                Icon(
                   Icons.chevron_right_rounded,
                   color: AppColors.outline,
                 ),

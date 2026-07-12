@@ -45,7 +45,7 @@ class LeftBehindBanner extends ConsumerWidget {
                     const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
                 child: Row(
                   children: [
-                    const Icon(Icons.history,
+                    Icon(Icons.history,
                         color: AppColors.warning, size: 20),
                     const SizedBox(width: 12),
                     Expanded(
@@ -69,7 +69,7 @@ class LeftBehindBanner extends ConsumerWidget {
                         ],
                       ),
                     ),
-                    const Icon(
+                    Icon(
                       Icons.arrow_forward_rounded,
                       color: AppColors.warning,
                       size: 18,

@@ -61,7 +61,22 @@ class HabitRow extends ConsumerWidget {
             );
           }),
           _PlantNewRow(
-            onTap: () => _openAddSheet(context, state.habitSlots.length, null),
+            onTap: () {
+              final firstEmptySlot = state.habitSlots.indexWhere((h) => h == null);
+              if (firstEmptySlot == -1) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text('All habit slots are currently full.')),
+                );
+                return;
+              }
+              if (firstEmptySlot >= slotLimit) {
+                AppHaptics.blocked();
+                context.push('/paywall?from=habit_slot');
+                return;
+              }
+              AppHaptics.light();
+              _openAddSheet(context, firstEmptySlot, null);
+            },
           ),
         ],
       ),
@@ -103,7 +118,7 @@ class _PlantNewRow extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Icon(Icons.add_rounded, color: AppColors.primary, size: 18),
+              Icon(Icons.add_rounded, color: AppColors.primary, size: 18),
               const SizedBox(width: 8),
               Text(
                 'Plant a new habit sprout',
@@ -145,7 +160,7 @@ class _LockedHabitRow extends StatelessWidget {
           ),
           child: Row(
             children: [
-              const Icon(Icons.lock_outline,
+              Icon(Icons.lock_outline,
                   color: AppColors.tertiary, size: 20),
               const SizedBox(width: 12),
               Expanded(
@@ -157,7 +172,7 @@ class _LockedHabitRow extends StatelessWidget {
                   ),
                 ),
               ),
-              const Icon(Icons.chevron_right_rounded,
+              Icon(Icons.chevron_right_rounded,
                   color: AppColors.tertiary),
             ],
           ),
@@ -234,7 +249,7 @@ class _HabitRowItem extends StatelessWidget {
                     color: AppColors.surfaceContainer,
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  child: const Icon(
+                  child: Icon(
                     Icons.add_rounded,
                     color: AppColors.outline,
                     size: 20,
@@ -323,7 +338,7 @@ class _HabitRowItem extends StatelessWidget {
                           child: Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
-                              const Icon(
+                              Icon(
                                 Icons.local_fire_department_rounded,
                                 size: 12,
                                 color: AppColors.secondary,
@@ -428,7 +443,7 @@ class _HabitNotesPreviewState extends State<_HabitNotesPreview> {
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Padding(
+            Padding(
               padding: EdgeInsets.only(top: 3),
               child: Icon(
                 Icons.sticky_note_2_outlined,

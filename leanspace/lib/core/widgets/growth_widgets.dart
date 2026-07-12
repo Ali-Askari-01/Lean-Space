@@ -44,7 +44,7 @@ class GlassCard extends StatelessWidget {
                     style: BorderStyle.solid,
                   )
                 : Border.all(color: AppColors.outlineVariant, width: 0.5),
-            boxShadow: const [
+            boxShadow: [
               BoxShadow(
                 color: AppColors.glassShadow,
                 blurRadius: 24,
@@ -119,7 +119,7 @@ class CtaPill extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(32),
             gradient: gradient
-                ? const LinearGradient(
+                ? LinearGradient(
                     colors: AppColors.gradientCta,
                     begin: Alignment.centerLeft,
                     end: Alignment.centerRight,

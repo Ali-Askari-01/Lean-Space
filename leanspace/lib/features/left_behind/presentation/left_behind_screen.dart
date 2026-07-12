@@ -220,7 +220,7 @@ class _HeaderCard extends StatelessWidget {
         children: [
           Row(
             children: [
-              const Icon(
+              Icon(
                 Icons.history_rounded,
                 color: AppColors.secondary,
                 size: 18,
@@ -330,7 +330,7 @@ class _MissedTile extends StatelessWidget {
               color: AppColors.secondary.withValues(alpha: 0.12),
               shape: BoxShape.circle,
             ),
-            child: const Icon(
+            child: Icon(
               Icons.check_box_outline_blank_rounded,
               color: AppColors.secondary,
               size: 18,
@@ -421,7 +421,7 @@ class _EmptyState extends StatelessWidget {
                   width: 1.5,
                 ),
               ),
-              child: const Icon(
+              child: Icon(
                 Icons.check_circle_outline_rounded,
                 color: AppColors.primary,
                 size: 36,

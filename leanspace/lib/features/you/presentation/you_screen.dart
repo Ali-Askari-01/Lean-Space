@@ -271,7 +271,7 @@ class _Header extends StatelessWidget {
     final l10n = AppLocalizations.of(context);
     return Row(
       children: [
-        const Icon(Icons.eco_rounded, color: AppColors.primary, size: 22),
+        Icon(Icons.eco_rounded, color: AppColors.primary, size: 22),
         const SizedBox(width: 6),
         Expanded(
           child: Text(
@@ -285,7 +285,7 @@ class _Header extends StatelessWidget {
         ),
         IconButton(
           onPressed: onSettings,
-          icon: const Icon(Icons.settings_outlined),
+          icon: Icon(Icons.settings_outlined),
           color: AppColors.onSurfaceVariant,
           tooltip: l10n.commonSettingsTooltip,
         ),
@@ -328,7 +328,7 @@ class _IdentityCard extends StatelessWidget {
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  gradient: const LinearGradient(
+                  gradient: LinearGradient(
                     colors: AppColors.gradientHabit,
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
@@ -493,7 +493,7 @@ class _Divider extends StatelessWidget {
   const _Divider();
   @override
   Widget build(BuildContext context) {
-    return const Divider(
+    return Divider(
       height: 1,
       thickness: 0.5,
       color: AppColors.outlineVariant,
@@ -569,10 +569,7 @@ class _SettingsTile extends StatelessWidget {
                 ),
               ),
               if (onTap != null)
-                const Icon(
-                  Icons.chevron_right_rounded,
-                  color: AppColors.outline,
-                ),
+                  Icon(Icons.chevron_right_rounded, color: AppColors.outline),
             ],
           ),
         ),

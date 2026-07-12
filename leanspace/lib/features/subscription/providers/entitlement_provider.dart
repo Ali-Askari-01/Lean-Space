@@ -66,10 +66,14 @@ class EntitlementNotifier extends Notifier<Entitlement> {
 
       final tierStr = row?['tier'] as String? ?? 'free';
       final proUntilStr = row?['pro_until'] as String?;
+      final proUntil =
+          proUntilStr != null ? DateTime.tryParse(proUntilStr) : null;
+      final activeByDate =
+          proUntil != null && proUntil.isAfter(DateTime.now());
       state = Entitlement(
-        tier: tierStr == 'pro' ? Tier.pro : Tier.free,
+        tier: tierStr == 'pro' || activeByDate ? Tier.pro : Tier.free,
         isLoading: false,
-        proUntil: proUntilStr != null ? DateTime.tryParse(proUntilStr) : null,
+        proUntil: proUntil,
       );
     } catch (e) {
       debugPrint('entitlement: refresh failed: $e');

@@ -88,7 +88,7 @@ class TaskSection extends ConsumerWidget {
                 dashed: true,
                 child: Row(
                   children: [
-                    const Icon(
+                    Icon(
                       Icons.lock_clock_rounded,
                       color: AppColors.tertiary,
                     ),
@@ -149,7 +149,7 @@ class _AddSeedRow extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Icon(Icons.add_rounded, color: AppColors.primary, size: 18),
+              Icon(Icons.add_rounded, color: AppColors.primary, size: 18),
               const SizedBox(width: 8),
               Text(
                 l10n.tasksAddSeed,
@@ -197,7 +197,7 @@ class _TaskSlot extends StatelessWidget {
           color: AppColors.error.withValues(alpha: 0.12),
           borderRadius: BorderRadius.circular(18),
         ),
-        child: const Icon(Icons.delete_outline, color: AppColors.error),
+        child: Icon(Icons.delete_outline, color: AppColors.error),
       ),
       onDismissed: (_) => onDelete(),
       child: AnimatedContainer(
@@ -272,7 +272,7 @@ class _TaskSlot extends StatelessWidget {
                         const SizedBox(height: 4),
                         Row(
                           children: [
-                            const Icon(
+                            Icon(
                               Icons.notifications_active_rounded,
                               size: 12,
                               color: AppColors.tertiary,
@@ -349,8 +349,8 @@ class _NotesPreviewState extends State<_NotesPreview> {
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Padding(
-              padding: EdgeInsets.only(top: 3),
+            Padding(
+              padding: const EdgeInsets.only(top: 3),
               child: Icon(
                 Icons.sticky_note_2_outlined,
                 size: 13,

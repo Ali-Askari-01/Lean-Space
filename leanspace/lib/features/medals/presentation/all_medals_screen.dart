@@ -158,7 +158,7 @@ class _SummaryBanner extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(20, 20, 20, 22),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(24),
-        gradient: const LinearGradient(
+        gradient: LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: AppColors.gradientHabit,
@@ -416,7 +416,7 @@ class _SectionLabel extends StatelessWidget {
           const SizedBox(width: 8),
           Text(
             title,
-            style: const TextStyle(
+            style: TextStyle(
               color: AppColors.onSurface,
               fontWeight: FontWeight.w800,
               fontSize: 15,
@@ -578,7 +578,7 @@ class _EmptyState extends StatelessWidget {
     final theme = Theme.of(context);
     return Column(
       children: [
-        const Icon(
+        Icon(
           Icons.emoji_events_outlined,
           color: AppColors.outline,
           size: 48,

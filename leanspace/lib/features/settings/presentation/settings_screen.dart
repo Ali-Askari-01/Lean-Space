@@ -17,6 +17,7 @@ import '../../reminders/presentation/reminder_settings_sheet.dart';
 import '../../streak_freeze/providers/streak_freeze_providers.dart';
 import '../../subscription/providers/entitlement_provider.dart';
 import '../../progress/presentation/how_this_works_sheet.dart';
+import 'theme_selection_sheet.dart';
 
 class SettingsScreen extends ConsumerStatefulWidget {
   const SettingsScreen({super.key});
@@ -89,7 +90,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                   title: Text(notifier.labelFor(l)),
                   trailing: (l?.languageCode ?? '') ==
                           (current?.languageCode ?? '')
-                      ? const Icon(Icons.check_rounded, color: AppColors.primary)
+                      ? Icon(Icons.check_rounded, color: AppColors.primary)
                       : null,
                   onTap: () {
                     notifier.set(l);
@@ -156,7 +157,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                     height: 56,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      gradient: const LinearGradient(
+                      gradient: LinearGradient(
                         colors: AppColors.gradientHabit,
                         begin: Alignment.topLeft,
                         end: Alignment.bottomRight,
@@ -209,7 +210,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                     width: 64,
                     height: 64,
                     alignment: Alignment.bottomCenter,
-                    child: const Icon(
+                    child: Icon(
                       Icons.eco_rounded,
                       color: AppColors.outlineVariant,
                       size: 80,
@@ -241,13 +242,30 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                   iconBg: AppColors.tertiary.withValues(alpha: 0.15),
                   iconColor: AppColors.tertiary,
                   title: l10n.settingsStreakProtection,
-                  subtitle: freeze.canUseFreeze
+                  subtitle: freeze.freezesUsedThisMonth < (isPro ? 2 : 1)
                       ? l10n.settingsStreakProtectionAvailable
                       : l10n.settingsStreakProtectionUsed,
-                  trailing: Switch(
-                    value: freeze.canUseFreeze,
-                    onChanged: (_) {},
-                    activeThumbColor: AppColors.primary,
+                  trailing: Text(
+                    '${freeze.freezesUsedThisMonth} / ${isPro ? 2 : 1}',
+                    style: theme.textTheme.labelLarge?.copyWith(
+                      color: AppColors.onSurfaceVariant,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  onTap: () => context.push('/left-behind'),
+                ),
+                const _Divider(),
+                _SettingsTile(
+                  icon: Icons.palette_outlined,
+                  iconBg: AppColors.primary.withValues(alpha: 0.15),
+                  iconColor: AppColors.primary,
+                  title: 'App Theme',
+                  subtitle: 'Select your personal sanctuary colors',
+                  onTap: () => showModalBottomSheet<void>(
+                    context: context,
+                    isScrollControlled: true,
+                    backgroundColor: AppColors.surface,
+                    builder: (ctx) => const ThemeSelectionSheet(),
                   ),
                 ),
                 const _Divider(),
@@ -302,6 +320,15 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                   title: l10n.settingsHomeScreenWidget,
                   subtitle: l10n.settingsHomeScreenWidgetSubtitle,
                   onTap: () => showWidgetSetupSheet(context),
+                ),
+                const _Divider(),
+                _SettingsTile(
+                  icon: Icons.card_giftcard_rounded,
+                  iconBg: AppColors.secondary.withValues(alpha: 0.12),
+                  iconColor: AppColors.secondary,
+                  title: 'Invite friends · Free Pro',
+                  subtitle: 'Get 1 month free when 5 friends join',
+                  onTap: () => context.push('/referral'),
                 ),
                 const _Divider(),
                 _SettingsTile(
@@ -384,7 +411,7 @@ class _BetaCard extends StatelessWidget {
       ),
       child: Row(
         children: [
-          const Icon(Icons.science_outlined, color: AppColors.primary, size: 28),
+          Icon(Icons.science_outlined, color: AppColors.primary, size: 28),
           const SizedBox(width: 14),
           Expanded(
             child: Column(
@@ -446,7 +473,7 @@ class _Divider extends StatelessWidget {
   const _Divider();
   @override
   Widget build(BuildContext context) {
-    return const Divider(
+    return Divider(
       height: 1,
       thickness: 0.5,
       color: AppColors.outlineVariant,
@@ -525,7 +552,7 @@ class _SettingsTile extends StatelessWidget {
               if (trailing != null)
                 trailing!
               else
-                const Icon(
+                Icon(
                   Icons.chevron_right_rounded,
                   color: AppColors.outline,
                 ),

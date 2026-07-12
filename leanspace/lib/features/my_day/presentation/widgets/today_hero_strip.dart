@@ -66,7 +66,7 @@ class TodayHeroStrip extends StatelessWidget {
                       shape: BoxShape.circle,
                       color: AppColors.primaryContainer.withValues(alpha: 0.45),
                     ),
-                    child: const Icon(
+                    child: Icon(
                       Icons.help_outline_rounded,
                       size: 16,
                       color: AppColors.primary,

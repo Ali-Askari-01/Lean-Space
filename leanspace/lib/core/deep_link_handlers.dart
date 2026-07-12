@@ -3,12 +3,13 @@ import 'package:flutter_riverpod/legacy.dart';
 
 import '../core/deep_link.dart';
 import '../features/my_day/providers/my_day_providers.dart';
+import '../features/referral/data/referral_store.dart';
 
 /// Set when a deep link requests the widget setup sheet.
 final pendingWidgetSetupProvider = StateProvider<bool>((ref) => false);
 
 String _deepLinkSignature(DeepLinkAction action) =>
-    '${action.path}|${action.showWidgetSetup}|${action.addTask}';
+    '${action.path}|${action.showWidgetSetup}|${action.addTask}|${action.referralCode}';
 
 DeepLinkAction? _lastScheduledAction;
 DateTime? _lastScheduledAt;
@@ -19,6 +20,9 @@ void applyDeepLinkAction(dynamic ref, DeepLinkAction action) {
   }
   if (action.addTask) {
     ref.read(pendingAddTaskProvider.notifier).state = true;
+  }
+  if (action.referralCode != null && action.referralCode!.isNotEmpty) {
+    ReferralStore.savePending(action.referralCode!);
   }
 }
 

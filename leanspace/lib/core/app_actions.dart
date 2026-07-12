@@ -49,12 +49,27 @@ abstract final class AppActions {
     }
   }
 
+  static const playStoreUrl =
+      'https://play.google.com/store/apps/details?id=com.leanspace.leanspace';
+
   static Future<void> shareApp() async {
     await SharePlus.instance.share(
       ShareParams(
         text: 'Bloom Tracker — five small seeds a day, one unbreakable '
-            'chain. Plant yours.',
+            'chain. Plant yours.\n\n$playStoreUrl',
         subject: 'Try Bloom Tracker',
+      ),
+    );
+  }
+
+  static Future<void> shareAppWithReferral(String referralCode) async {
+    final code = referralCode.trim().toUpperCase();
+    await SharePlus.instance.share(
+      ShareParams(
+        text: 'I\'m building my daily chain on Bloom Tracker — join me '
+            'with my referral code $code and we both grow.\n\n'
+            '$playStoreUrl',
+        subject: 'Join me on Bloom Tracker',
       ),
     );
   }

@@ -252,7 +252,7 @@ class _FaqList extends StatelessWidget {
           for (var i = 0; i < entries.length; i++) ...[
             _FaqTile(entry: entries[i]),
             if (i != entries.length - 1)
-              const Divider(
+              Divider(
                 height: 1,
                 thickness: 0.5,
                 color: AppColors.outlineVariant,
@@ -316,7 +316,7 @@ class _FaqTileState extends State<_FaqTile> {
                     AnimatedRotation(
                       turns: _open ? 0.5 : 0,
                       duration: const Duration(milliseconds: 200),
-                      child: const Icon(
+                      child: Icon(
                         Icons.expand_more_rounded,
                         color: AppColors.onSurfaceVariant,
                       ),
@@ -380,7 +380,7 @@ class _ContactCard extends StatelessWidget {
                   color: AppColors.primaryContainer.withValues(alpha: 0.3),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: const Icon(
+                child: Icon(
                   Icons.support_agent_rounded,
                   color: AppColors.primary,
                   size: 20,
@@ -434,21 +434,21 @@ class _ContactCard extends StatelessWidget {
               contentPadding: const EdgeInsets.all(12),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(12),
-                borderSide: const BorderSide(
+                borderSide: BorderSide(
                   color: AppColors.outlineVariant,
                   width: 0.5,
                 ),
               ),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(12),
-                borderSide: const BorderSide(
+                borderSide: BorderSide(
                   color: AppColors.outlineVariant,
                   width: 0.5,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(12),
-                borderSide: const BorderSide(
+                borderSide: BorderSide(
                   color: AppColors.primary,
                   width: 1.2,
                 ),
@@ -529,7 +529,7 @@ class _TopicChips extends StatelessWidget {
             onSelected: (_) => onChanged(t),
             selectedColor: AppColors.primary,
             backgroundColor: AppColors.surface,
-            side: const BorderSide(
+            side: BorderSide(
               color: AppColors.outlineVariant,
               width: 0.5,
             ),

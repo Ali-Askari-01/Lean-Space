@@ -46,7 +46,7 @@ class ChainRecoveryScreen extends ConsumerWidget {
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    gradient: const LinearGradient(
+                    gradient: LinearGradient(
                       colors: AppColors.gradientHabit,
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,

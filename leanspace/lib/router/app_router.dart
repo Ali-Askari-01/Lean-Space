@@ -18,6 +18,7 @@ import '../features/my_day/presentation/chain_recovery_screen.dart';
 import '../features/my_day/presentation/my_day_screen.dart';
 import '../features/onboarding/presentation/onboarding_screen.dart';
 import '../features/progress/presentation/progress_screen.dart';
+import '../features/referral/presentation/referral_screen.dart';
 import '../features/settings/presentation/help_support_screen.dart';
 import '../features/settings/presentation/settings_screen.dart';
 import '../features/shell/presentation/root_shell.dart';
@@ -186,6 +187,10 @@ final appRouterProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: '/settings/manage-pro',
         builder: (context, state) => const ManageProScreen(),
+      ),
+      GoRoute(
+        path: '/referral',
+        builder: (context, state) => const ReferralScreen(),
       ),
       GoRoute(
         path: '/medals',

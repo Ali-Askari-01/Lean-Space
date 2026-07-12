@@ -10,6 +10,7 @@ import '../../../core/theme/app_colors.dart';
 import '../../../core/widgets/ambient_background.dart';
 import '../../../core/widgets/growth_widgets.dart';
 import '../../../core/widgets/guardian_mascot.dart';
+import '../../referral/data/referral_store.dart';
 
 class AuthScreen extends ConsumerStatefulWidget {
   const AuthScreen({super.key});
@@ -23,6 +24,7 @@ class _AuthScreenState extends ConsumerState<AuthScreen>
   late final TabController _tabController;
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
+  final _referralController = TextEditingController();
   bool _loading = false;
   String? _error;
   String? _info;
@@ -41,6 +43,11 @@ class _AuthScreenState extends ConsumerState<AuthScreen>
         });
       }
     });
+    ReferralStore.readPending().then((code) {
+      if (!mounted || code == null || code.isEmpty) return;
+      _referralController.text = code;
+      setState(() {});
+    });
   }
 
   @override
@@ -48,7 +55,17 @@ class _AuthScreenState extends ConsumerState<AuthScreen>
     _tabController.dispose();
     _emailController.dispose();
     _passwordController.dispose();
+    _referralController.dispose();
     super.dispose();
+  }
+
+  Future<void> _stashReferralCode() async {
+    final code = _referralController.text.trim();
+    if (code.isEmpty) {
+      await ReferralStore.clearPending();
+      return;
+    }
+    await ReferralStore.savePending(code);
   }
 
   String? _validateInputs(AppLocalizations l10n) {
@@ -86,6 +103,7 @@ class _AuthScreenState extends ConsumerState<AuthScreen>
       final client = Supabase.instance.client;
 
       if (_isSignUp) {
+        await _stashReferralCode();
         final response = await client.auth.signUp(
           email: email,
           password: password,
@@ -130,6 +148,7 @@ class _AuthScreenState extends ConsumerState<AuthScreen>
     });
 
     try {
+      await _stashReferralCode();
       await Supabase.instance.client.auth.signInWithOAuth(
         OAuthProvider.google,
         redirectTo: authRedirectUri,
@@ -271,6 +290,22 @@ class _AuthScreenState extends ConsumerState<AuthScreen>
                     hintText: '••••••••',
                   ),
                 ),
+                if (_isSignUp) ...[
+                  const SizedBox(height: 16),
+                  BlueprintLabel(
+                    'Referral code (optional)',
+                    color: AppColors.onSurfaceVariant,
+                  ),
+                  const SizedBox(height: 6),
+                  TextField(
+                    controller: _referralController,
+                    textCapitalization: TextCapitalization.characters,
+                    textInputAction: TextInputAction.done,
+                    decoration: const InputDecoration(
+                      hintText: 'Friend\'s code',
+                    ),
+                  ),
+                ],
                 if (_error != null) ...[
                   const SizedBox(height: 14),
                   Container(
@@ -284,7 +319,7 @@ class _AuthScreenState extends ConsumerState<AuthScreen>
                     ),
                     child: Text(
                       _error!,
-                      style: const TextStyle(
+                      style: TextStyle(
                         color: AppColors.error,
                         fontSize: 13,
                         height: 1.4,
@@ -305,7 +340,7 @@ class _AuthScreenState extends ConsumerState<AuthScreen>
                     ),
                     child: Text(
                       _info!,
-                      style: const TextStyle(
+                      style: TextStyle(
                         color: AppColors.primary,
                         fontSize: 13,
                         height: 1.4,

@@ -35,7 +35,7 @@ class RootShell extends StatelessWidget {
     return Scaffold(
       body: child,
       bottomNavigationBar: Container(
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           color: AppColors.surface,
           border: Border(
             top: BorderSide(color: AppColors.outlineVariant, width: 0.5),

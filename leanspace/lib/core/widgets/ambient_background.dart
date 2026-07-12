@@ -16,7 +16,7 @@ class AmbientBackground extends StatelessWidget {
     return Stack(
       fit: StackFit.expand,
       children: [
-        const ColoredBox(color: AppColors.surface),
+        ColoredBox(color: AppColors.surface),
         Positioned.fill(
           child: DecoratedBox(
             decoration: const BoxDecoration(

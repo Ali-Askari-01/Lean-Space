@@ -114,7 +114,7 @@ class _ProTeaserCard extends StatelessWidget {
                         Flexible(
                           child: Text(
                             title,
-                            style: const TextStyle(
+                            style: TextStyle(
                               color: AppColors.onSurface,
                               fontWeight: FontWeight.w800,
                               fontSize: 15,
@@ -145,7 +145,7 @@ class _ProTeaserCard extends StatelessWidget {
                     const SizedBox(height: 2),
                     Text(
                       subtitle,
-                      style: const TextStyle(
+                      style: TextStyle(
                         color: AppColors.onSurfaceVariant,
                         fontSize: 12.5,
                         height: 1.35,

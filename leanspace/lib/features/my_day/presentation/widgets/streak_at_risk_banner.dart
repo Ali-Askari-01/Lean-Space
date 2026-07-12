@@ -102,7 +102,7 @@ class StreakAtRiskBanner extends ConsumerWidget {
                         ],
                       ),
                     ),
-                    const Icon(
+                    Icon(
                       Icons.arrow_forward_rounded,
                       color: AppColors.outline,
                       size: 16,
@@ -113,7 +113,7 @@ class StreakAtRiskBanner extends ConsumerWidget {
                   const SizedBox(height: 8),
                   Row(
                     children: [
-                      const Icon(
+                      Icon(
                         Icons.ac_unit_rounded,
                         color: AppColors.tertiary,
                         size: 14,

@@ -85,11 +85,35 @@ class SubscriptionController extends Notifier<SubscriptionState> {
         );
         return;
       }
-      final products = await _service.loadProducts();
+      final result = await _service.loadProducts();
+      if (result.notFoundIds.isNotEmpty) {
+        debugPrint(
+          'subscription: Play Console missing products: ${result.notFoundIds}',
+        );
+      }
+      if (result.errorMessage != null) {
+        debugPrint('subscription: product query error: ${result.errorMessage}');
+      }
+
+      final products = result.products;
+      String? error;
+      if (products.isEmpty) {
+        error = result.notFoundIds.isEmpty
+            ? 'Could not load subscription options.'
+            : 'Subscriptions are not available yet. '
+                'Missing: ${result.notFoundIds.join(', ')}';
+      } else if (!result.hasMonthly || !result.hasYearly) {
+        final missing = <String>[];
+        if (!result.hasMonthly) missing.add(ProProducts.monthly);
+        if (!result.hasYearly) missing.add(ProProducts.yearly);
+        debugPrint('subscription: partial catalog, missing ${missing.join(', ')}');
+      }
+
       state = state.copyWith(
-        available: true,
+        available: products.isNotEmpty,
         loading: false,
         products: products,
+        error: error,
       );
     } catch (e) {
       debugPrint('subscription: init failed: $e');
