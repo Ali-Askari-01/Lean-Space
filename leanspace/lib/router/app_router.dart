@@ -23,6 +23,7 @@ import '../features/settings/presentation/help_support_screen.dart';
 import '../features/settings/presentation/settings_screen.dart';
 import '../features/shell/presentation/root_shell.dart';
 import '../features/share/presentation/share_card_screen.dart';
+import '../features/medals/presentation/medal_share_screen.dart';
 import '../features/subscription/presentation/manage_pro_screen.dart';
 import '../features/subscription/presentation/paywall_screen.dart';
 import '../features/you/presentation/you_screen.dart';
@@ -63,7 +64,7 @@ class _AppRouterRefresh extends ChangeNotifier {
 final appRouterProvider = Provider<GoRouter>((ref) {
   final refresh = _AppRouterRefresh(ref);
 
-  return GoRouter(
+  final router = GoRouter(
     initialLocation: '/my-day',
     refreshListenable: refresh,
     redirect: (context, state) {
@@ -204,6 +205,13 @@ final appRouterProvider = Provider<GoRouter>((ref) {
         },
       ),
       GoRoute(
+        path: '/medal-share',
+        builder: (context, state) {
+          final medalId = state.uri.queryParameters['id'] ?? '';
+          return MedalShareScreen(medalId: medalId);
+        },
+      ),
+      GoRoute(
         path: '/history',
         pageBuilder: (context, state) => CustomTransitionPage(
           child: const HistoryScreen(),
@@ -226,6 +234,13 @@ final appRouterProvider = Provider<GoRouter>((ref) {
       ),
     ],
   );
+
+  ref.onDispose(() {
+    refresh.dispose();
+    router.dispose();
+  });
+
+  return router;
 });
 
 Widget _slideUpTransition(

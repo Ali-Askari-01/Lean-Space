@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../core/l10n/app_localizations.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/widgets/growth_widgets.dart';
 
@@ -31,6 +32,7 @@ class _TaskCapInfoSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final theme = Theme.of(context);
     return SafeArea(
       top: false,
@@ -73,7 +75,7 @@ class _TaskCapInfoSheet extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Why a 5-task cap?',
+                        l10n.taskCapInfo,
                         style: theme.textTheme.titleLarge?.copyWith(
                           color: AppColors.onSurface,
                           fontWeight: FontWeight.w800,
@@ -81,7 +83,7 @@ class _TaskCapInfoSheet extends StatelessWidget {
                       ),
                       const SizedBox(height: 2),
                       BlueprintLabel(
-                        'DISCIPLINE-FIRST BY DESIGN',
+                        l10n.taskCapDiscipline,
                         color: AppColors.primary,
                       ),
                     ],
@@ -91,7 +93,7 @@ class _TaskCapInfoSheet extends StatelessWidget {
             ),
             const SizedBox(height: 18),
             Text(
-              'We cap your day at 5 tasks on purpose.',
+              l10n.taskCapTitle,
               style: theme.textTheme.titleMedium?.copyWith(
                 color: AppColors.onSurface,
                 fontWeight: FontWeight.w700,
@@ -100,32 +102,29 @@ class _TaskCapInfoSheet extends StatelessWidget {
             ),
             const SizedBox(height: 8),
             Text(
-              'Small chains beat long ones. You\'re more likely to finish 3 '
-              'of 5 and feel the win than to abandon 8 of 10 and feel the loss.',
+              l10n.taskCapBody,
               style: theme.textTheme.bodyMedium?.copyWith(
                 color: AppColors.onSurfaceVariant,
                 height: 1.5,
               ),
             ),
             const SizedBox(height: 18),
-            const _BulletRow(
+            _BulletRow(
               icon: Icons.check_circle_outline_rounded,
-              title: 'Done tasks count toward your chain',
-              body: 'A day where all 5 are done extends your streak by one.',
+              title: l10n.taskCapBulletDone,
+              body: l10n.taskCapBulletDoneBody,
             ),
             const SizedBox(height: 12),
-            const _BulletRow(
+            _BulletRow(
               icon: Icons.nights_stay_outlined,
-              title: 'Missed tasks roll to Left Behind',
-              body: 'At midnight, unfinished tasks surface in Left Behind. '
-                  'Re-add only what still matters.',
+              title: l10n.taskCapBulletMissed,
+              body: l10n.taskCapBulletMissedBody,
             ),
             const SizedBox(height: 12),
-            const _BulletRow(
+            _BulletRow(
               icon: Icons.ac_unit_rounded,
-              title: 'Streak freeze forgives a miss',
-              body: 'Pro gives you 2 streak freezes a month — they cover a '
-                  'missed day so your chain survives.',
+              title: l10n.taskCapBulletFreeze,
+              body: l10n.taskCapBulletFreezeBody,
             ),
             const SizedBox(height: 8),
           ],

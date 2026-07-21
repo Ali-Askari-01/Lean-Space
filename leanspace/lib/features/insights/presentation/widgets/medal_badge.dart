@@ -2,6 +2,8 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 
+import '../../../../core/l10n/app_localizations.dart';
+import '../../../../core/l10n/medal_l10n.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../domain/medals.dart';
 
@@ -118,6 +120,7 @@ class _RibbonBanner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final fg = earned ? Colors.white : AppColors.outline;
     final bg = earned
         ? tier.ribbon
@@ -140,7 +143,7 @@ class _RibbonBanner extends StatelessWidget {
           Icon(earned ? tier.sigil : Icons.lock_rounded, size: 9, color: fg),
           const SizedBox(width: 4),
           Text(
-            tier.label.toUpperCase(),
+            tier.localizedLabel(l10n).toUpperCase(),
             style: TextStyle(
               color: fg,
               fontSize: 9,

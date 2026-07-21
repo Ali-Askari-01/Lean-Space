@@ -2,10 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../theme/app_colors.dart';
 
-/// Soft cream + green ambient background with a subtle blueprint dot
-/// pattern. Uses [StackFit.expand] so the child fills the available
-/// space (otherwise a ListView inside gets unbounded height and renders
-/// as a single giant oversized element).
 class AmbientBackground extends StatelessWidget {
   const AmbientBackground({super.key, required this.child});
 
@@ -19,28 +15,22 @@ class AmbientBackground extends StatelessWidget {
         ColoredBox(color: AppColors.surface),
         Positioned.fill(
           child: DecoratedBox(
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               gradient: RadialGradient(
-                center: Alignment(0, -0.8),
-                radius: 1.1,
-                colors: [
-                  Color(0x3350C878),
-                  Colors.transparent,
-                ],
+                center: const Alignment(0, -0.85),
+                radius: 1.15,
+                colors: AppColors.ambientGradientTop,
               ),
             ),
           ),
         ),
         Positioned.fill(
           child: DecoratedBox(
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               gradient: RadialGradient(
-                center: Alignment(-0.9, 1.2),
-                radius: 0.8,
-                colors: [
-                  Color(0x22FE7D5E),
-                  Colors.transparent,
-                ],
+                center: const Alignment(-0.9, 1.2),
+                radius: 0.85,
+                colors: AppColors.ambientGradientBottom,
               ),
             ),
           ),
@@ -58,7 +48,7 @@ class _DotPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint()
-      ..color = AppColors.outlineVariant.withValues(alpha: 0.22)
+      ..color = AppColors.dotPatternColor
       ..style = PaintingStyle.fill;
     const step = 26.0;
     for (double x = 0; x < size.width; x += step) {
@@ -113,7 +103,7 @@ class SheetHandle extends StatelessWidget {
         height: 4,
         margin: const EdgeInsets.only(bottom: 20),
         decoration: BoxDecoration(
-          color: AppColors.outlineVariant,
+          color: AppColors.bottomSheetHandle,
           borderRadius: BorderRadius.circular(999),
         ),
       ),
@@ -140,14 +130,16 @@ class CapacityPips extends StatelessWidget {
       children: [
         ...List.generate(total, (i) {
           final isFilled = i < filled;
-          return Container(
+          return AnimatedContainer(
+            duration: const Duration(milliseconds: 300),
+            curve: Curves.easeOutCubic,
             width: 18,
             height: 3,
             margin: const EdgeInsets.only(right: 4),
             decoration: BoxDecoration(
               color: isFilled
                   ? AppColors.primary
-                  : AppColors.surfaceContainerHigh,
+                  : AppColors.progressTrack,
               borderRadius: BorderRadius.circular(2),
             ),
           );

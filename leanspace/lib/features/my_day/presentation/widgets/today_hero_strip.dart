@@ -5,12 +5,6 @@ import '../../../../core/theme/app_colors.dart';
 import '../../../../core/widgets/growth_widgets.dart';
 import 'task_cap_info_sheet.dart';
 
-/// Top-of-screen summary on Today.
-///
-/// Shows: "Today · X of 5 tasks · Y of Z habits" with a combined progress
-/// bar and a small "?" icon that opens [TaskCapInfoSheet]. Designed to be
-/// the first thing a new user reads so they understand the value prop
-/// (the 5-task cap) without scrolling.
 class TodayHeroStrip extends StatelessWidget {
   const TodayHeroStrip({
     super.key,
@@ -31,7 +25,7 @@ class TodayHeroStrip extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final l10n = AppLocalizations.of(context);
-    final totalUnits = taskCap + (habitsTotal == 0 ? 1 : habitsTotal);
+    final totalUnits = taskCap + habitsTotal;
     final doneUnits = tasksDone + habitsDone;
     final ratio = totalUnits == 0 ? 0.0 : (doneUnits / totalUnits).clamp(0.0, 1.0);
 
@@ -64,7 +58,12 @@ class TodayHeroStrip extends StatelessWidget {
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      color: AppColors.primaryContainer.withValues(alpha: 0.45),
+                      gradient: LinearGradient(
+                        colors: [
+                          AppColors.primaryContainer.withValues(alpha: 0.5),
+                          AppColors.primaryContainer.withValues(alpha: 0.2),
+                        ],
+                      ),
                     ),
                     child: Icon(
                       Icons.help_outline_rounded,

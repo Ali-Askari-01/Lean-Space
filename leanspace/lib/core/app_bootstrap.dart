@@ -39,7 +39,8 @@ Future<void> bootstrapAuthenticatedUser(
   }
 
   try {
-    await client.rpc('perform_rollover_for_user', params: {'p_user_id': user.id});
+    await client.rpc('perform_rollover_for_user', params: {'p_user_id': user.id})
+        .timeout(const Duration(seconds: 15));
   } catch (e) {
     debugPrint('bootstrap: rollover failed: $e');
   }

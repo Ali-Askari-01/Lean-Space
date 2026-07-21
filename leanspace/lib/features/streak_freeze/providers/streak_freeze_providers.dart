@@ -19,7 +19,8 @@ class StreakFreezeState {
   final int freezesUsedThisMonth;
   final bool isLoading;
 
-  bool get canUseFreeze => freezesUsedThisMonth < 1;
+  bool canUseFreezeFor(bool isPro) =>
+      freezesUsedThisMonth < (isPro ? 2 : 1);
 
   StreakFreezeState copyWith({
     List<DateTime>? frozenDates,

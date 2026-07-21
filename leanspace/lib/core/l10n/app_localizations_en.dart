@@ -9,7 +9,7 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
-  String get appTitle => 'Bloom Tracker';
+  String get appTitle => 'Daily Stitch';
 
   @override
   String get tabToday => 'Today';
@@ -45,7 +45,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get navManagePro => 'Manage Pro subscription';
 
   @override
-  String get navPaywall => 'Bloom Tracker Pro';
+  String get navPaywall => 'Daily Stitch Pro';
 
   @override
   String get greetingLateNight => 'Burning the midnight oil';
@@ -153,6 +153,14 @@ class AppLocalizationsEn extends AppLocalizations {
   String get habitsLocked => 'Pro habit slot — unlock to plant more sprouts';
 
   @override
+  String get habitsSlotsFull => 'All habit slots are currently full.';
+
+  @override
+  String habitsStreakDays(String days) {
+    return '${days}d';
+  }
+
+  @override
   String get habitsCadence => 'DAILY';
 
   @override
@@ -191,7 +199,49 @@ class AppLocalizationsEn extends AppLocalizations {
   String get leftBehindReAdd => 'Re-add today';
 
   @override
+  String get leftBehindReAddButton => 'Re-add';
+
+  @override
+  String get leftBehindAddedToToday => 'Added to today';
+
+  @override
   String get leftBehindLetGo => 'Let it go';
+
+  @override
+  String get leftBehindHeader => 'LEFT BEHIND';
+
+  @override
+  String get leftBehindMissedTasks => 'MISSED TASKS';
+
+  @override
+  String get leftBehindWaitingOne => '1 task is waiting for you.';
+
+  @override
+  String leftBehindWaitingMany(String count) {
+    return '$count tasks are waiting for you.';
+  }
+
+  @override
+  String get leftBehindBody =>
+      'Re-add a task to bring it back to today, or let it go. Re-adding keeps your streak alive.';
+
+  @override
+  String leftBehindReAddedSnack(String task) {
+    return '\"$task\" is back in your day.';
+  }
+
+  @override
+  String leftBehindRemovedSnack(String task) {
+    return 'Removed \"$task\"';
+  }
+
+  @override
+  String get leftBehindClearedSnack => 'Left-behind cleared';
+
+  @override
+  String leftBehindYesterdayDate(String date) {
+    return 'Yesterday · $date';
+  }
 
   @override
   String streakAtRisk(String count) {
@@ -215,6 +265,17 @@ class AppLocalizationsEn extends AppLocalizations {
   String get streakAtRiskFreeze => 'Yesterday missed — use a streak freeze?';
 
   @override
+  String get streakFreezeUse => 'Use freeze';
+
+  @override
+  String get streakFreezeUseForYesterday =>
+      'Use monthly streak freeze for yesterday';
+
+  @override
+  String get streakFreezeAppliedYesterday =>
+      'Streak freeze applied for yesterday.';
+
+  @override
   String get chainBrokenTitle => 'The chain broke. That\'s okay.';
 
   @override
@@ -223,6 +284,9 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get chainBrokenCta => 'Get back to today';
+
+  @override
+  String get chainBrokenPlantFirst => 'Plant today\'s first seed';
 
   @override
   String get chainBrokenCheck => 'Check Left Behind first';
@@ -318,6 +382,20 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get historyTitle => 'Last 7 Days';
+
+  @override
+  String get historyFullTitle => 'Full history';
+
+  @override
+  String get historyLoadError => 'Could not load history.';
+
+  @override
+  String get historyFullCalendar => 'Full calendar';
+
+  @override
+  String historyCompletedPercent(String percent) {
+    return '$percent% completed';
+  }
 
   @override
   String historyThisWeek(String days) {
@@ -428,7 +506,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get paywallSubtitle =>
-      'Bloom Tracker Pro gives you the full discipline system.';
+      'Daily Stitch Pro gives you the full discipline system.';
 
   @override
   String get paywallFeatures =>
@@ -619,12 +697,12 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String shareCardProgressText(String year) {
-    return 'My Bloom Tracker progress — $year on Bloom Tracker.';
+    return 'My Daily Stitch progress — $year on Daily Stitch.';
   }
 
   @override
   String shareCardMedalText(String title, String subtitle) {
-    return 'I just unlocked the \"$title\" medal on Bloom Tracker. $subtitle';
+    return 'I just unlocked the \"$title\" medal on Daily Stitch. $subtitle';
   }
 
   @override
@@ -632,7 +710,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get howItWorksBody =>
-      'Bloom Tracker helps you keep a small, unbroken chain of discipline. That\'s it.';
+      'Daily Stitch helps you keep a small, unbroken chain of discipline. That\'s it.';
 
   @override
   String get howItWorksToday => 'The Today tab';
@@ -784,7 +862,7 @@ class AppLocalizationsEn extends AppLocalizations {
       'Tap habits to grow them. Skip a day and the chain doesn\'t extend. The Guardian grows with you.';
 
   @override
-  String get authBrand => 'BLOOM TRACKER';
+  String get authBrand => 'DAILY STITCH';
 
   @override
   String get authPlantFirstSeed => 'Plant your first seed.';
@@ -872,7 +950,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get settingsStreakProtectionUsed => 'Used for this month';
 
   @override
-  String get settingsProSubscription => 'Bloom Tracker Pro';
+  String get settingsProSubscription => 'Daily Stitch Pro';
 
   @override
   String get settingsManageProSubscription => 'Manage Pro subscription';
@@ -897,7 +975,7 @@ class AppLocalizationsEn extends AppLocalizations {
       'Add your chain streak to the home screen';
 
   @override
-  String get settingsShareBloomTracker => 'Share Bloom Tracker';
+  String get settingsShareBloomTracker => 'Share Daily Stitch';
 
   @override
   String get settingsShareBloomTrackerSubtitle =>
@@ -991,7 +1069,7 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-  String get youBloomTrackerFooter => 'Bloom Tracker · Habit & To-Do';
+  String get youBloomTrackerFooter => 'Daily Stitch · Habit & To-Do';
 
   @override
   String get progressMedals => 'Medals';
@@ -1066,11 +1144,11 @@ class AppLocalizationsEn extends AppLocalizations {
   String get helpCopyEmail => 'Copy support email';
 
   @override
-  String get helpCopiedEmail => 'Copied support@bloomtracker.app';
+  String get helpCopiedEmail => 'Copied support@dailystitch.app';
 
   @override
   String get helpNoMailApp =>
-      'No mail app found. Email us at support@bloomtracker.app.';
+      'No mail app found. Email us at support@dailystitch.app.';
 
   @override
   String get helpTopicLabel => 'Topic';
@@ -1132,7 +1210,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get helpFaqA7 =>
-      'Account deletion is coming to Settings in the next release. For now, email support@bloomtracker.app and we\'ll handle it within a day.';
+      'Go to Settings → Account → Delete account. This permanently removes your profile, tasks, habits, and subscription data. Active Play subscriptions must be cancelled separately in Google Play.';
 
   @override
   String get helpTopicsGeneral => 'General question';
@@ -1166,4 +1244,1270 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get prioritySpark => 'SPARK';
+
+  @override
+  String get settingsDeleteAccount => 'Delete account';
+
+  @override
+  String get settingsDeleteAccountSubtitle => 'Permanently remove your data';
+
+  @override
+  String get settingsDeleteAccountConfirmTitle => 'Delete your account?';
+
+  @override
+  String get settingsDeleteAccountConfirmBody =>
+      'This permanently deletes your profile, tasks, habits, and progress. Active subscriptions must be cancelled in Google Play separately. This cannot be undone.';
+
+  @override
+  String get settingsDeleteAccountConfirmButton => 'Delete forever';
+
+  @override
+  String get settingsDeleteAccountSuccess => 'Your account has been deleted.';
+
+  @override
+  String get settingsDeleteAccountFailed =>
+      'Could not delete account. Try again or email support@dailystitch.app.';
+
+  @override
+  String get referralYouTitle => 'Invite friends · earn free Pro';
+
+  @override
+  String referralYouSubtitle(int progress, int milestone) {
+    return '$progress of $milestone friends joined';
+  }
+
+  @override
+  String get referralYouShare => 'Share invite';
+
+  @override
+  String get referralYouDetails => 'View details';
+
+  @override
+  String get referralPaywallTitle => 'Free Pro month';
+
+  @override
+  String get referralPaywallBody =>
+      'Invite 5 friends who sign up → 1 month Pro free';
+
+  @override
+  String get referralPaywallProBody => 'Keep inviting — stack free Pro months';
+
+  @override
+  String referralPaywallProgress(Object count, Object milestone) {
+    return '$count / $milestone';
+  }
+
+  @override
+  String get insightsLoadError =>
+      'Could not load your progress. Try again later.';
+
+  @override
+  String get insightsMetricCurrentChain => 'CURRENT CHAIN';
+
+  @override
+  String get insightsMetricBestEver => 'BEST EVER';
+
+  @override
+  String get insightsMetricTasksDone => 'TASKS DONE';
+
+  @override
+  String get insightsMetricPerfectDays => 'PERFECT DAYS';
+
+  @override
+  String get insightsMetricHabits => 'HABITS';
+
+  @override
+  String get insightsDay => 'day';
+
+  @override
+  String get insightsDays => 'days';
+
+  @override
+  String get insightsSectionThisWeek => 'This week';
+
+  @override
+  String get insightsShareMyWeek => 'Share my week';
+
+  @override
+  String get insightsShareMyWeekPro => 'Share my week · Pro';
+
+  @override
+  String get insightsShareReceiptText =>
+      'My week on Daily Stitch. Don\'t break the chain.';
+
+  @override
+  String insightsHistoryWindowTitle(int days) {
+    return 'Showing the last $days days';
+  }
+
+  @override
+  String get insightsHistoryUpsell => 'Unlock your full history with Pro';
+
+  @override
+  String get referralScreenTitle => 'Invite friends';
+
+  @override
+  String get referralLaunchGift => 'Launch month gift';
+
+  @override
+  String get referralRewardTitle => 'Get 1 month of Pro free';
+
+  @override
+  String get referralRewardBody =>
+      'Share your code with friends. When 5 people sign up using it, you unlock Daily Stitch Pro for a full month.';
+
+  @override
+  String get referralYourCode => 'Your referral code';
+
+  @override
+  String get referralCopyCodeTooltip => 'Copy code';
+
+  @override
+  String get referralCodeCopied => 'Referral code copied';
+
+  @override
+  String get referralShareWithFriends => 'Share with friends';
+
+  @override
+  String get referralFooterHint =>
+      'Friends enter your code when they create an account. Each friend counts once toward your reward.';
+
+  @override
+  String referralFriendsJoinedOne(int count) {
+    return '$count friend joined';
+  }
+
+  @override
+  String referralFriendsJoinedMany(int count) {
+    return '$count friends joined';
+  }
+
+  @override
+  String referralRewardsEarnedOne(int count) {
+    return 'You have earned $count free month of Pro.';
+  }
+
+  @override
+  String referralRewardsEarnedMany(int count) {
+    return 'You have earned $count free months of Pro.';
+  }
+
+  @override
+  String get referralRewardUnlocked =>
+      'Reward unlocked — enjoy your free month of Pro!';
+
+  @override
+  String referralRemainingToUnlock(int remaining) {
+    return '$remaining more to unlock your free month';
+  }
+
+  @override
+  String youProMemberSince(String month) {
+    return 'Bloom Pro member since $month';
+  }
+
+  @override
+  String get youProPerksTitle => 'Your Pro perks';
+
+  @override
+  String get manageProThankYou => 'Thank you for supporting Bloom';
+
+  @override
+  String get manageProReferralHint => 'Invite more friends to extend your Pro';
+
+  @override
+  String bootstrapConfigErrorBody(String detail) {
+    return '$detail\n\nAdd SUPABASE_URL and SUPABASE_PUBLISHABLE_KEY (or legacy SUPABASE_ANON_KEY) to leanspace/.env, then rebuild:\n\nflutter build apk --debug';
+  }
+
+  @override
+  String get languageSystemDefault => 'System default';
+
+  @override
+  String get languageNameEn => 'English';
+
+  @override
+  String get languageNameUr => 'اردو (Urdu)';
+
+  @override
+  String get languageNameEs => 'Español';
+
+  @override
+  String get languageNamePt => 'Português';
+
+  @override
+  String get languageNameFr => 'Français';
+
+  @override
+  String get languageNameDe => 'Deutsch';
+
+  @override
+  String get languageNameIt => 'Italiano';
+
+  @override
+  String get languageNameAr => 'العربية';
+
+  @override
+  String get languageNameTr => 'Türkçe';
+
+  @override
+  String get languageNameId => 'Bahasa Indonesia';
+
+  @override
+  String get onboardingLanguageTitle => 'Choose your language';
+
+  @override
+  String get onboardingLanguageBody =>
+      'Pick the language you\'d like to use throughout Daily Stitch. You can change it anytime in Settings.';
+
+  @override
+  String get onboardingLanguageContinue => 'Continue';
+
+  @override
+  String get commonPro => 'PRO';
+
+  @override
+  String get commonFriend => 'Friend';
+
+  @override
+  String get settingsAppTheme => 'App Theme';
+
+  @override
+  String get settingsAppThemeSubtitle =>
+      'Select your personal sanctuary colors';
+
+  @override
+  String get settingsInviteFriendsTitle => 'Invite friends · Free Pro';
+
+  @override
+  String get settingsInviteFriendsSubtitle =>
+      'Get 1 month free when 5 friends join';
+
+  @override
+  String get themePickerTitle => 'Personal Sanctuary';
+
+  @override
+  String get themePickerSubtitle =>
+      'Choose a color palette that brings you peace.';
+
+  @override
+  String get themeNameClassicBloom => 'Classic Bloom';
+
+  @override
+  String get themeNameSolarTerracotta => 'Solar Terracotta';
+
+  @override
+  String get themeNameMidnightOasis => 'Midnight Oasis';
+
+  @override
+  String get themeNameLavenderDream => 'Lavender Dream';
+
+  @override
+  String get themeNameNordicFrost => 'Nordic Frost';
+
+  @override
+  String get themeNameCyberpunkNeon => 'Cyberpunk Neon';
+
+  @override
+  String get reminderTitle => 'Reminders';
+
+  @override
+  String get reminderBody =>
+      'Final Call pings you before midnight if tasks are still open.';
+
+  @override
+  String get reminderFinalCall => 'Final Call';
+
+  @override
+  String get reminderEveningNudge => 'Evening nudge';
+
+  @override
+  String get reminderChangeTime => 'Change time';
+
+  @override
+  String get reminderSave => 'Save reminders';
+
+  @override
+  String get notificationChannelReminders => 'Daily Stitch reminders';
+
+  @override
+  String get notificationChannelRemindersDesc =>
+      'Evening nudge and Final Call reminders';
+
+  @override
+  String get notificationChannelAlarms => 'Daily Stitch task alarms';
+
+  @override
+  String get notificationChannelAlarmsDesc => 'Loud alarms for task reminders';
+
+  @override
+  String get notificationTaskReminderTitle => 'Task reminder';
+
+  @override
+  String get notificationFinalCallTitle => 'Final Call';
+
+  @override
+  String notificationFinalCallBody(int count) {
+    return 'You still have $count open task(s) today.';
+  }
+
+  @override
+  String get notificationEveningTitle => 'Evening check-in';
+
+  @override
+  String get notificationEveningBody => 'How did your garden grow today?';
+
+  @override
+  String get widgetSetupTitle => 'Add chain widget';
+
+  @override
+  String get widgetSetupBody =>
+      'Keep your streak on your home screen — no need to open the app.';
+
+  @override
+  String get widgetSetupAdd => 'Add to home screen';
+
+  @override
+  String get widgetSetupStep1 => 'Long-press your home screen';
+
+  @override
+  String get widgetSetupStep2 => 'Tap Widgets';
+
+  @override
+  String get widgetSetupStep3 => 'Find Daily Stitch and drag it on';
+
+  @override
+  String get widgetSetupPinSuccess =>
+      'Check your home screen to place the widget.';
+
+  @override
+  String get widgetSetupPinFallback =>
+      'Your launcher may not support one-tap add. Use manual steps below.';
+
+  @override
+  String get paywallWelcomePro => 'Welcome to Daily Stitch Pro';
+
+  @override
+  String get paywallSavePercent => 'SAVE ~16%';
+
+  @override
+  String get paywallTermsTitle => 'Subscription terms';
+
+  @override
+  String get paywallTermsBody =>
+      'Billing is handled by Google Play. Subscriptions renew automatically until you cancel in Play Store → Subscriptions at least 24 hours before the end of the current period. You can manage or cancel your subscription at any time from your Google Play account.\n\nUninstalling the app does not cancel your subscription.\n\nPrices shown are in your local currency and may vary by region. Taxes may apply.';
+
+  @override
+  String get paywallPrivacyTitle => 'Privacy';
+
+  @override
+  String get paywallPrivacyBody =>
+      'LeanSpace stores your tasks, habits, and streak data on our Supabase backend, tied to your account. We never sell your data.\n\nSubscription purchases are processed by Google Play. We receive a verified purchase token from Google to confirm your Pro status. We do not see or store your payment details.\n\nYou can request full data export or account deletion from Settings → Account deletion.';
+
+  @override
+  String get paywallCloseTooltip => 'Close';
+
+  @override
+  String get paywallFooterLinks => 'Restore · Terms · Privacy';
+
+  @override
+  String get manageProTitle => 'Pro subscription';
+
+  @override
+  String get manageProActive => 'Active';
+
+  @override
+  String get manageProNotSubscribed => 'Not subscribed';
+
+  @override
+  String get manageProFreeTier => 'Free tier';
+
+  @override
+  String manageProRenewsOn(String date) {
+    return 'Renews or expires on $date.';
+  }
+
+  @override
+  String get manageProFreeBody =>
+      'You\'re using Daily Stitch Free. Upgrade to unlock the full system.';
+
+  @override
+  String get manageProSectionManage => 'MANAGE';
+
+  @override
+  String get manageProOpenPlay => 'Open Google Play subscriptions';
+
+  @override
+  String get manageProOpenPlaySubtitlePro =>
+      'Cancel, change plan, or update payment method';
+
+  @override
+  String get manageProOpenPlaySubtitleFree =>
+      'Find your existing subscription (if any) here';
+
+  @override
+  String get manageProShareApp => 'Share Daily Stitch';
+
+  @override
+  String get manageProShareSubtitle => 'Tell a friend about the chain';
+
+  @override
+  String get manageProSectionHelp => 'NEED HELP?';
+
+  @override
+  String get manageProHelpTitle => 'Help & Support';
+
+  @override
+  String get manageProHelpSubtitle => 'Subscription FAQ, contact, bug reports';
+
+  @override
+  String manageProBillingFooter(String version) {
+    return 'Billing handled by Google Play · $version';
+  }
+
+  @override
+  String get manageProPlayInstructions =>
+      'Open the Google Play Store app → tap your profile → Payments & subscriptions → Subscriptions.';
+
+  @override
+  String get addTaskGrowSomething => 'Grow Something';
+
+  @override
+  String get addTaskPlantSprout => 'Plant a Sprout';
+
+  @override
+  String get addTaskIntentionName => 'INTENTION NAME';
+
+  @override
+  String get addTaskSproutName => 'SPROUT NAME';
+
+  @override
+  String get addTaskHintTask => 'e.g., Morning Sun Salutation';
+
+  @override
+  String get addTaskHintHabit => 'e.g. Morning Yoga';
+
+  @override
+  String get addTaskWhen => 'WHEN?';
+
+  @override
+  String get addTaskPriority => 'PRIORITY';
+
+  @override
+  String get addTaskNotes => 'NOTES';
+
+  @override
+  String get addTaskCadenceDaily => 'Daily';
+
+  @override
+  String get addTaskCadenceWeekdays => 'Weekdays';
+
+  @override
+  String get addTaskCadence3x => '3x/week';
+
+  @override
+  String get addTaskCadenceWeekly => 'Weekly';
+
+  @override
+  String get addTaskPlantIntention => 'Plant Intention';
+
+  @override
+  String get addTaskPlantSproutCta => 'Plant Sprout';
+
+  @override
+  String get addTaskPlanting => 'Planting…';
+
+  @override
+  String get addTaskNameIntentionError => 'Name your intention';
+
+  @override
+  String get addTaskNameSproutError => 'Name your sprout';
+
+  @override
+  String get addTaskNotesMigrationWarning =>
+      'Task saved. Notes & priority need the latest Supabase migration — run supabase/migrations/20260701000000_todos_notes_priority.sql.';
+
+  @override
+  String get addTaskNoSproutSlots => 'No empty sprout slots — tend one first.';
+
+  @override
+  String get addTaskSaveSproutError => 'Could not save sprout — try again.';
+
+  @override
+  String get addTaskElementWater => 'WATER';
+
+  @override
+  String get addTaskElementLight => 'LIGHT';
+
+  @override
+  String get addTaskElementSoil => 'SOIL';
+
+  @override
+  String get addTaskElementBreeze => 'BREEZE';
+
+  @override
+  String get addTaskCadenceLabel => 'CADENCE';
+
+  @override
+  String get addTaskPreparationNotes => 'PREPARATION NOTES';
+
+  @override
+  String get addTaskTendingNotes => 'TENDING NOTES';
+
+  @override
+  String get addTaskNotesHintTask => 'Any tools or mindset tips for this task?';
+
+  @override
+  String get addTaskNotesHintHabit =>
+      'What does tending this sprout look like?';
+
+  @override
+  String get addTaskChooseElement => 'CHOOSE ELEMENT';
+
+  @override
+  String get addTaskElementsTooltip => 'What do the elements mean?';
+
+  @override
+  String get addTaskTaskSeed => 'Task Seed';
+
+  @override
+  String get addTaskHabitSprout => 'Habit Sprout';
+
+  @override
+  String get addTaskPickElement => 'Pick the right element';
+
+  @override
+  String get addTaskPickElementBody =>
+      'Each element maps to a different kind of effort. The Guardian grows stronger when you water the right one.';
+
+  @override
+  String get addTaskClearForm => 'Clear form';
+
+  @override
+  String get shareCouldNotShare => 'Could not share right now';
+
+  @override
+  String get authReferralCodeLabel => 'Referral code (optional)';
+
+  @override
+  String get authReferralCodeHint => 'Friend\'s code';
+
+  @override
+  String get youPerkHabitSlots => '5 habit slots';
+
+  @override
+  String get youPerkFullHistory => 'Full history';
+
+  @override
+  String get youPerkAllThemes => 'All themes';
+
+  @override
+  String get youPerkStreakFreezes => '2 streak freezes / month';
+
+  @override
+  String get youPerkLegendaryMedals => 'Legendary medals';
+
+  @override
+  String get subscriptionPurchaseFailed => 'Purchase failed. Try again.';
+
+  @override
+  String get subscriptionUnavailable =>
+      'In-app purchases are unavailable on this device.';
+
+  @override
+  String get subscriptionLoadFailed => 'Could not load subscription options.';
+
+  @override
+  String get subscriptionVerifyFailed =>
+      'Could not verify purchase. Try Restore purchase.';
+
+  @override
+  String get streakFreezeFailed => 'Could not use streak freeze.';
+
+  @override
+  String get streakFreezeAlreadyUsed =>
+      'You already used your freeze this month.';
+
+  @override
+  String get streakFreezeNoMissed => 'No missed tasks on that day to freeze.';
+
+  @override
+  String get streakFreezeNotPastDay => 'You can only freeze a past day.';
+
+  @override
+  String get myDayLoadError => 'Could not load My Day. Pull to refresh.';
+
+  @override
+  String get myDayCapReached => 'You\'ve hit today\'s 5-task cap.';
+
+  @override
+  String get myDayRemoveTaskError => 'Could not remove task.';
+
+  @override
+  String get shareCardTitle => 'Share your week';
+
+  @override
+  String get shareCardCta => 'Share image';
+
+  @override
+  String get medalTierSprout => 'Sprout';
+
+  @override
+  String get medalTierCommon => 'Common';
+
+  @override
+  String get medalTierRare => 'Rare';
+
+  @override
+  String get medalTierEpic => 'Epic';
+
+  @override
+  String get medalTierLegendary => 'Legendary';
+
+  @override
+  String get medalCategoryTasks => 'Tasks';
+
+  @override
+  String get medalCategoryHabits => 'Habits';
+
+  @override
+  String get medalCategoryStreaks => 'Streaks';
+
+  @override
+  String get medalCategoryMastery => 'Mastery';
+
+  @override
+  String get medalsShareTooltip => 'Share achievements';
+
+  @override
+  String get medalsFilterAll => 'All';
+
+  @override
+  String get addHabitTitleNew => 'Plant a new sprout';
+
+  @override
+  String get addHabitTitleEdit => 'Tend your sprout';
+
+  @override
+  String get addHabitLabelSproutName => 'SPROUT NAME';
+
+  @override
+  String get shareCardAppBarTitle => 'Share Card';
+
+  @override
+  String get shareCardAppBarTitleMedal => 'Share your medal';
+
+  @override
+  String shareCardDescMedal(Object title) {
+    return 'Show off your new $title badge';
+  }
+
+  @override
+  String get shareCardBodyMedal =>
+      'Share the win with your circle. The card is exported as a PNG and ready for any social app.';
+
+  @override
+  String get shareCardCtaPreparing => 'Preparing…';
+
+  @override
+  String get shareCardMilestone => 'NEW MILESTONE UNLOCKED';
+
+  @override
+  String get shareCardStatChain => 'day chain';
+
+  @override
+  String get shareCardStatSprouts => 'sprouts';
+
+  @override
+  String get shareCardStatMedals => 'medals';
+
+  @override
+  String shareCardHeadlineStreak(int days) {
+    return '$days Day Streak';
+  }
+
+  @override
+  String shareCardHeadlineMedals(int count) {
+    return '$count Medals Earned';
+  }
+
+  @override
+  String get shareCardHeadlineSproutGuardian => 'Sprout Guardian';
+
+  @override
+  String get shareCardHeadlineFirstSeeds => 'First Seeds Planted';
+
+  @override
+  String get shareCardHeadlineGardenBegins => 'A Garden Begins';
+
+  @override
+  String get shareCardSubheadMonth =>
+      'You\'ve successfully nurtured your habits for a full month.';
+
+  @override
+  String get shareCardSubheadWeek =>
+      'A full week of growth — your forest is thickening.';
+
+  @override
+  String get shareCardSubheadProgress =>
+      'Your sanctuary is showing real progress. Keep tending.';
+
+  @override
+  String get shareCardSubheadSprouts =>
+      'Your first sprouts are taking root. Water them daily.';
+
+  @override
+  String get shareCardSubheadFirstSeeds =>
+      'Your first seeds are in the soil. Watch them open.';
+
+  @override
+  String get shareCardSubheadFallback =>
+      'Every forest begins with one tiny choice.';
+
+  @override
+  String shareAppText(String url) {
+    return 'Daily Stitch — five small seeds a day, one unbreakable chain. Plant yours.\n\n$url';
+  }
+
+  @override
+  String get shareAppSubject => 'Try Daily Stitch';
+
+  @override
+  String shareAppReferralText(String code, String url) {
+    return 'I\'m building my daily chain on Daily Stitch — join me with my referral code $code and we both grow.\n\n$url';
+  }
+
+  @override
+  String get shareAppReferralSubject => 'Join me on Daily Stitch';
+
+  @override
+  String shareCardShareTextProgress(String year) {
+    return 'My Daily Stitch progress — $year on Daily Stitch.';
+  }
+
+  @override
+  String shareCardShareTextMedal(String title, String subtitle) {
+    return 'I just unlocked the \"$title\" medal on Daily Stitch. $subtitle';
+  }
+
+  @override
+  String get insightsReceiptTasksDone => 'Tasks done';
+
+  @override
+  String get insightsReceiptPerfectDays => 'Perfect days';
+
+  @override
+  String get insightsReceiptCompletion => 'Completion';
+
+  @override
+  String insightsReceiptDate(String date) {
+    return 'Week of $date';
+  }
+
+  @override
+  String get insightsReceiptFooter => 'Don\'t break the chain.';
+
+  @override
+  String get elementLabelWater => 'Water';
+
+  @override
+  String get elementLabelLight => 'Light';
+
+  @override
+  String get elementLabelSoil => 'Soil';
+
+  @override
+  String get elementLabelBreeze => 'Breeze';
+
+  @override
+  String get elementTaglineWater =>
+      'Restore. Hydration, rest, emotional care — anything that refills the well.';
+
+  @override
+  String get elementTaglineLight =>
+      'Awaken. Morning light, focus blocks, study, meditation — energy and clarity.';
+
+  @override
+  String get elementTaglineSoil =>
+      'Ground. Reading, journaling, deep work — slow roots that build long-term strength.';
+
+  @override
+  String get elementTaglineBreeze =>
+      'Move. Walks, runs, breathwork — light, mobile energy that clears the head.';
+
+  @override
+  String get elementWhenWater => 'When you feel drained or depleted.';
+
+  @override
+  String get elementWhenLight => 'When you need a clear start to your day.';
+
+  @override
+  String get elementWhenSoil =>
+      'When the work is slow but worth it (study, craft, care).';
+
+  @override
+  String get elementWhenBreeze =>
+      'When your body (or mind) needs to move and breathe.';
+
+  @override
+  String get bloomTierMastery => 'Mastery';
+
+  @override
+  String get bloomTierStrong => 'Strong';
+
+  @override
+  String get bloomTierGrowing => 'Growing';
+
+  @override
+  String get bloomTierSprouting => 'Sprouting';
+
+  @override
+  String get bloomTierLocked => 'Locked';
+
+  @override
+  String habitBloomSubtitle(int count, String element) {
+    return '$count day streak · $element';
+  }
+
+  @override
+  String get medal_id_first_spark => 'First Spark';
+
+  @override
+  String get medal_sub_first_spark => 'You lit the match.';
+
+  @override
+  String get medal_desc_first_spark =>
+      'Finish your very first task. Every chain starts here.';
+
+  @override
+  String get medal_id_triple_seed => 'Triple Seed';
+
+  @override
+  String get medal_sub_triple_seed => 'Three into the soil.';
+
+  @override
+  String get medal_desc_triple_seed => 'Finish 3 tasks in total.';
+
+  @override
+  String get medal_id_dozen_sower => 'Dozen Sower';
+
+  @override
+  String get medal_sub_dozen_sower => 'A field of twelve.';
+
+  @override
+  String get medal_desc_dozen_sower => 'Finish 12 tasks in total.';
+
+  @override
+  String get medal_id_quarter_century => 'Quarter Century';
+
+  @override
+  String get medal_sub_quarter_century => 'A season of saying yes.';
+
+  @override
+  String get medal_desc_quarter_century => 'Finish 25 tasks in total.';
+
+  @override
+  String get medal_id_productivity_titan => 'Productivity Titan';
+
+  @override
+  String get medal_sub_productivity_titan => 'Consistency compounds.';
+
+  @override
+  String get medal_desc_productivity_titan =>
+      'Finish 50 tasks — you\'ve built real momentum.';
+
+  @override
+  String get medal_id_century_planter => 'Century Planter';
+
+  @override
+  String get medal_sub_century_planter => 'A forest of your own.';
+
+  @override
+  String get medal_desc_century_planter =>
+      'Finish 100 tasks. You\'re in the top 5% of users.';
+
+  @override
+  String get medal_id_clean_day => 'Clean Slate';
+
+  @override
+  String get medal_sub_clean_day => 'Not a single weed.';
+
+  @override
+  String get medal_desc_clean_day =>
+      'Finish every task you plant on a single day.';
+
+  @override
+  String get medal_id_triple_perfect => 'Triple Perfect';
+
+  @override
+  String get medal_sub_triple_perfect => 'Three flawless runs.';
+
+  @override
+  String get medal_desc_triple_perfect => 'Hit 3 perfect days.';
+
+  @override
+  String get medal_id_perfect_week => 'Perfect Week';
+
+  @override
+  String get medal_sub_perfect_week => 'Seven days unbroken.';
+
+  @override
+  String get medal_desc_perfect_week => '7 perfect days in a row.';
+
+  @override
+  String get medal_id_two_week_chain => 'Fortnight Force';
+
+  @override
+  String get medal_sub_two_week_chain => 'Two weeks on fire.';
+
+  @override
+  String get medal_desc_two_week_chain => 'Hold a 14-day chain.';
+
+  @override
+  String get medal_id_iron_chain => 'Iron Chain';
+
+  @override
+  String get medal_sub_iron_chain => '30 links forged.';
+
+  @override
+  String get medal_desc_iron_chain => 'A 30-day chain. The hardest task medal.';
+
+  @override
+  String get medal_id_quarterly_chain => 'Quarterly Chain';
+
+  @override
+  String get medal_sub_quarterly_chain => 'A season, unbroken.';
+
+  @override
+  String get medal_desc_quarterly_chain => 'A 90-day chain. Legendary status.';
+
+  @override
+  String get medal_id_vital_priority => 'Vital Spark';
+
+  @override
+  String get medal_sub_vital_priority => 'You picked the hard ones.';
+
+  @override
+  String get medal_desc_vital_priority =>
+      'Finish 5 tasks marked as Vital priority.';
+
+  @override
+  String get medal_id_spark_priority => 'Spark Tamer';
+
+  @override
+  String get medal_sub_spark_priority => 'Quick wins add up.';
+
+  @override
+  String get medal_desc_spark_priority =>
+      'Finish 5 tasks marked as Spark priority.';
+
+  @override
+  String get medal_id_note_taker => 'Note Taker';
+
+  @override
+  String get medal_sub_note_taker => 'Plans on paper beat plans in head.';
+
+  @override
+  String get medal_desc_note_taker =>
+      'Add preparation notes to 5 different tasks.';
+
+  @override
+  String get medal_id_left_behind_rescuer => 'Left-Behind Rescuer';
+
+  @override
+  String get medal_sub_left_behind_rescuer => 'No task left behind.';
+
+  @override
+  String get medal_desc_left_behind_rescuer =>
+      'Re-add 3 missed tasks the next day.';
+
+  @override
+  String get medal_id_first_sprout => 'First Sprout';
+
+  @override
+  String get medal_sub_first_sprout => 'A new daily ritual.';
+
+  @override
+  String get medal_desc_first_sprout => 'Plant your first habit.';
+
+  @override
+  String get medal_id_trio_sprout => 'Trio Sprout';
+
+  @override
+  String get medal_sub_trio_sprout => 'A small ecosystem.';
+
+  @override
+  String get medal_desc_trio_sprout => 'Plant 3 different habits.';
+
+  @override
+  String get medal_id_week_of_growth => 'Week of Growth';
+
+  @override
+  String get medal_sub_week_of_growth => 'Roots start to hold.';
+
+  @override
+  String get medal_desc_week_of_growth => 'Tend a habit every day for 7 days.';
+
+  @override
+  String get medal_id_fortnight_floret => 'Fortnight Floret';
+
+  @override
+  String get medal_sub_fortnight_floret => 'A full bloom.';
+
+  @override
+  String get medal_desc_fortnight_floret => 'A 14-day habit streak.';
+
+  @override
+  String get medal_id_rooted_master => 'Rooted Master';
+
+  @override
+  String get medal_sub_rooted_master => 'Deep roots, deep strength.';
+
+  @override
+  String get medal_desc_rooted_master => 'A 30-day habit streak.';
+
+  @override
+  String get medal_id_half_year_bloom => 'Half-Year Bloom';
+
+  @override
+  String get medal_sub_half_year_bloom => 'The garden is permanent now.';
+
+  @override
+  String get medal_desc_half_year_bloom => 'Hold a single habit for 180 days.';
+
+  @override
+  String get medal_id_garden_keeper => 'Garden Keeper';
+
+  @override
+  String get medal_sub_garden_keeper => 'Variety, together.';
+
+  @override
+  String get medal_desc_garden_keeper =>
+      'Grow 4 different habits at the same time.';
+
+  @override
+  String get medal_id_hydration_hero => 'Hydration Hero';
+
+  @override
+  String get medal_sub_hydration_hero => 'You refill the well.';
+
+  @override
+  String get medal_desc_hydration_hero =>
+      'Plant a hydration habit (water/drink).';
+
+  @override
+  String get medal_id_mindful_mover => 'Mindful Mover';
+
+  @override
+  String get medal_sub_mindful_mover => 'The body remembers.';
+
+  @override
+  String get medal_desc_mindful_mover =>
+      'Plant a movement habit (yoga/walk/run).';
+
+  @override
+  String get medal_id_devoted_keeper => 'Devoted Keeper';
+
+  @override
+  String get medal_sub_devoted_keeper => 'Sixty days, one practice.';
+
+  @override
+  String get medal_desc_devoted_keeper =>
+      'Tend a single habit for 60 days straight.';
+
+  @override
+  String get medal_id_tending_notes => 'Tending Notes';
+
+  @override
+  String get medal_sub_tending_notes => 'Reflect as you go.';
+
+  @override
+  String get medal_desc_tending_notes => 'Add tending notes to 3 habits.';
+
+  @override
+  String get medalTierTaglineSprout => 'Plant the first seed';
+
+  @override
+  String get medalTierTaglineCommon => 'Building the habit';
+
+  @override
+  String get medalTierTaglineRare => 'Showing real momentum';
+
+  @override
+  String get medalTierTaglineEpic => 'You\'re a force of nature';
+
+  @override
+  String get medalTierTaglineLegendary => 'Mythic, almost no one gets here';
+
+  @override
+  String get guardianHeadlineNoTasks =>
+      'Today\'s soil is fresh.\nPlant your first seed\nand watch it grow.';
+
+  @override
+  String get guardianHeadlineAllDone =>
+      'Every seed you planted\nis in bloom.\nRest, Guardian — you earned it.';
+
+  @override
+  String guardianHeadlineStreak14(int count) {
+    return '$count days\nof unbroken growth.\nYour forest is thick with life.';
+  }
+
+  @override
+  String get guardianHeadlineStreak7 =>
+      'A full week in bloom,\nGuardian.\nOne more perfect day\nextends the chain.';
+
+  @override
+  String get guardianHeadlineStreak3 =>
+      'Your chain is holding.\nTend the seeds\nstill waiting to open.';
+
+  @override
+  String get guardianHeadlineNoHabitsDone =>
+      'You\'re tending tasks well.\nPlant a sprout —\nhabits are how forests grow.';
+
+  @override
+  String get guardianHeadlineSomeDone =>
+      'Some seeds opened,\nsome didn\'t. That\'s okay.\nTomorrow is another planting.';
+
+  @override
+  String get guardianHeadlineMorning =>
+      'Good morning, Guardian.\nThe day is young\nand the soil is ready.';
+
+  @override
+  String get guardianHeadlineAfternoon =>
+      'Good afternoon, Guardian.\nHalf the light remains —\nkeep tending.';
+
+  @override
+  String get guardianHeadlineEvening =>
+      'Good evening, Guardian.\nOne last sweep\nbefore the sun sets.';
+
+  @override
+  String get guardianHeadlineNight =>
+      'Burning the midnight oil?\nEven Guardians rest.\nPlant tomorrow\'s seed now.';
+
+  @override
+  String get guardianBodyNoTasks =>
+      'Your sanctuary is quiet right now. Add one intention and see what shifts by sundown.';
+
+  @override
+  String guardianBodyStreak14(int count) {
+    return '$count days running. The chain isn\'t luck — it\'s the small choices stacking up. Keep stacking.';
+  }
+
+  @override
+  String guardianBodyStreak3(int count) {
+    return 'A $count-day chain is real momentum. Finish today\'s open seeds before you call it done.';
+  }
+
+  @override
+  String guardianBodyNoHabits(int count) {
+    return 'You\'ve planted $count tasks so far. Adding even one habit sprout would let the work compound day after day.';
+  }
+
+  @override
+  String guardianBodyLowCompletion(int pct) {
+    return 'You\'re finishing $pct% of what you plant. Fewer, sharper seeds tend to grow taller than ten scattered ones.';
+  }
+
+  @override
+  String guardianBodyDefault(int tasks, int sprouts) {
+    return 'Your sanctuary is alive. $tasks tasks done, $sprouts sprout(s) growing — the work is showing.';
+  }
+
+  @override
+  String get guardianInsightWaitingTitle => 'Waiting for your first move';
+
+  @override
+  String get guardianInsightWaitingBody =>
+      'Add a task or habit and I\'ll start reading the patterns in your garden. The more you plant, the more I have to learn from.';
+
+  @override
+  String get guardianInsightWaitingCta => 'Plant your first seed';
+
+  @override
+  String get guardianInsightChainSuperTitle => 'Chain is your superpower';
+
+  @override
+  String guardianInsightChainSuperBody(int count) {
+    return 'You\'ve held a $count-day chain. Streaks beat motivation every time — keep it warm, even on slow days.';
+  }
+
+  @override
+  String get guardianInsightChainSuperCta => 'Add tomorrow\'s seed';
+
+  @override
+  String get guardianInsightChainColdTitle => 'Chain is cold — start a new one';
+
+  @override
+  String get guardianInsightChainColdBody =>
+      'You\'ve planted before, which means you can plant again. One small task done today is a longer chain tomorrow.';
+
+  @override
+  String get guardianInsightChainColdCta => 'Plant a seed';
+
+  @override
+  String get guardianInsightLessIsMoreTitle => 'Less is more this week';
+
+  @override
+  String guardianInsightLessIsMoreBody(int pct) {
+    return 'You finish about $pct% of what you plant. Try 3 sharp intentions instead of 5 loose ones — quality compounds.';
+  }
+
+  @override
+  String get guardianInsightLessIsMoreCta => 'Sharpen the day';
+
+  @override
+  String guardianInsightNextMedalTitle(String title) {
+    return 'Next medal: $title';
+  }
+
+  @override
+  String guardianInsightNextMedalBody(int value, int target, String unit) {
+    return 'You\'re $value of $target $unit in. A few more honest days and it\'s yours.';
+  }
+
+  @override
+  String get guardianInsightNextMedalCta => 'Show medal';
+
+  @override
+  String get guardianInsightSteadyTitle => 'You\'re in a steady season';
+
+  @override
+  String get guardianInsightSteadyBody =>
+      'No medal right around the corner — that\'s fine. Tend what you have. The next bloom is on the way.';
+
+  @override
+  String get guardianInsightSteadyCta => 'View progress';
+
+  @override
+  String notificationTaskReminderBody(String label) {
+    return '$label';
+  }
+
+  @override
+  String get notificationFinalCallBodyOne =>
+      '1 task left on your chain. Midnight is coming.';
+
+  @override
+  String notificationFinalCallBodyMany(int count) {
+    return '$count tasks left on your chain. Midnight is coming.';
+  }
+
+  @override
+  String get notificationEveningBodyOne => 'You still have 1 open task today.';
+
+  @override
+  String notificationEveningBodyMany(int count) {
+    return 'You still have $count open tasks today.';
+  }
+
+  @override
+  String get notificationTickerTaskReminder => 'Task reminder';
+
+  @override
+  String get notificationTickerTaskAlarm => 'Task alarm';
+
+  @override
+  String habitBloomSubtitleL10n(int count, String element) {
+    return '$count day streak · $element';
+  }
 }

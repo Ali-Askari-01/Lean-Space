@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
+import '../../../../core/l10n/app_localizations.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../domain/insights.dart';
 
@@ -15,6 +16,7 @@ class WeeklyReceiptCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final theme = Theme.of(context);
     final dateLabel = DateFormat.MMMd().format(DateTime.now());
 
@@ -49,7 +51,7 @@ class WeeklyReceiptCard extends StatelessWidget {
               ),
               const SizedBox(width: 10),
               Text(
-                'LEANSPACE',
+                l10n.appTitle.toUpperCase(),
                 style: theme.textTheme.labelMedium?.copyWith(
                   letterSpacing: 3,
                   fontWeight: FontWeight.w800,
@@ -58,7 +60,7 @@ class WeeklyReceiptCard extends StatelessWidget {
               ),
               const Spacer(),
               Text(
-                'Week of $dateLabel',
+                l10n.insightsReceiptDate(dateLabel),
                 style: theme.textTheme.labelSmall?.copyWith(
                   color: AppColors.textMuted,
                 ),
@@ -67,7 +69,7 @@ class WeeklyReceiptCard extends StatelessWidget {
           ),
           const SizedBox(height: 24),
           Text(
-            'CURRENT CHAIN',
+            l10n.insightsMetricCurrentChain,
             style: theme.textTheme.labelSmall?.copyWith(
               color: AppColors.textFaint,
               letterSpacing: 2,
@@ -90,7 +92,7 @@ class WeeklyReceiptCard extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(bottom: 8),
                 child: Text(
-                  data.currentStreak == 1 ? 'day' : 'days',
+                  data.currentStreak == 1 ? l10n.insightsDay : l10n.insightsDays,
                   style: theme.textTheme.titleMedium?.copyWith(
                     color: AppColors.textMuted,
                   ),
@@ -107,21 +109,21 @@ class WeeklyReceiptCard extends StatelessWidget {
             children: [
               _ReceiptStat(
                 value: '${data.tasksCompleted}',
-                label: 'Tasks done',
+                label: l10n.insightsReceiptTasksDone,
               ),
               _ReceiptStat(
                 value: '${data.perfectDays}',
-                label: 'Perfect days',
+                label: l10n.insightsReceiptPerfectDays,
               ),
               _ReceiptStat(
                 value: '${(data.completionRate * 100).round()}%',
-                label: 'Completion',
+                label: l10n.insightsReceiptCompletion,
               ),
             ],
           ),
           const SizedBox(height: 20),
           Text(
-            'Don\'t break the chain.',
+            l10n.insightsReceiptFooter,
             style: theme.textTheme.bodySmall?.copyWith(
               color: AppColors.accentSoft,
               fontWeight: FontWeight.w600,

@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../../../core/l10n/app_localizations.dart';
 import '../../../core/theme/app_colors.dart';
 
-/// One-page "what is this app" walkthrough. Lives in the Progress tab and
-/// linked from You → Settings. Designed to onboard a new user without
-/// re-running the multi-page onboarding flow.
 Future<void> showHowThisWorksSheet(BuildContext context) {
   return showModalBottomSheet<void>(
     context: context,
@@ -22,6 +20,7 @@ class _HowThisWorksSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final theme = Theme.of(context);
     return DraggableScrollableSheet(
       expand: false,
@@ -47,7 +46,7 @@ class _HowThisWorksSheet extends StatelessWidget {
               ),
               const SizedBox(height: 18),
               Text(
-                'How this works',
+                l10n.howItWorksTitle,
                 style: theme.textTheme.headlineSmall?.copyWith(
                   color: AppColors.onSurface,
                   fontWeight: FontWeight.w800,
@@ -56,8 +55,7 @@ class _HowThisWorksSheet extends StatelessWidget {
               ),
               const SizedBox(height: 4),
               Text(
-                'Bloom Tracker helps you keep a small, unbroken chain of '
-                'discipline. That\'s it.',
+                l10n.howItWorksBody,
                 style: theme.textTheme.bodyMedium?.copyWith(
                   color: AppColors.onSurfaceVariant,
                   height: 1.45,
@@ -66,47 +64,38 @@ class _HowThisWorksSheet extends StatelessWidget {
               const SizedBox(height: 24),
               const _Section(
                 number: '1',
-                title: 'The Today tab',
-                body: 'This is your home. It shows the 5 tasks and the habits '
-                    'you set for today. Finish them by midnight, the chain '
-                    'extends.',
+                titleKey: _SectionKey.howItWorksToday,
+                bodyKey: _SectionKey.howItWorksTodayBody,
               ),
               const SizedBox(height: 16),
               const _Section(
                 number: '2',
-                title: 'The 5-task cap is the feature',
-                body: 'We don\'t let you add a 6th. That\'s the whole point. '
-                    'Small chains beat long ones. Tap the "?" on the home '
-                    'screen for the full reasoning.',
+                titleKey: _SectionKey.howItWorksCap,
+                bodyKey: _SectionKey.howItWorksCapBody,
               ),
               const SizedBox(height: 16),
               const _Section(
                 number: '3',
-                title: 'Habits are daily, the chain is forever',
-                body: 'Habits (Morning yoga, Drink water) live forever. '
-                    'Tasks are one-shot. Both feed the same streak.',
+                titleKey: _SectionKey.howItWorksHabits,
+                bodyKey: _SectionKey.howItWorksHabitsBody,
               ),
               const SizedBox(height: 16),
               const _Section(
                 number: '4',
-                title: 'Missed tasks → Left Behind',
-                body: 'At midnight, unfinished tasks move to Left Behind. '
-                    'Re-add only what still matters. The rest gets a quiet '
-                    'let-go.',
+                titleKey: _SectionKey.howItWorksLeftBehind,
+                bodyKey: _SectionKey.howItWorksLeftBehindBody,
               ),
               const SizedBox(height: 16),
               const _Section(
                 number: '5',
-                title: 'The Progress tab',
-                body: 'Streak, calendar, medals, history — everything '
-                    'about how you\'re doing over time. Nothing urgent lives '
-                    'here.',
+                titleKey: _SectionKey.howItWorksProgress,
+                bodyKey: _SectionKey.howItWorksProgressBody,
               ),
               const SizedBox(height: 16),
               const _Section(
                 number: '6',
-                title: 'The You tab',
-                body: 'Your account, settings, sign out. That\'s all.',
+                titleKey: _SectionKey.howItWorksYou,
+                bodyKey: _SectionKey.howItWorksYouBody,
               ),
               const SizedBox(height: 28),
               Container(
@@ -127,8 +116,8 @@ class _HowThisWorksSheet extends StatelessWidget {
                     ),
                     const SizedBox(width: 12),
                     Expanded(
-                      child: Text(
-                        'The rule: 5 small things, every day, no excuses.',
+                      child: _LocalizedText(
+                        sectionKey: _SectionKey.howItWorksRule,
                         style: theme.textTheme.titleSmall?.copyWith(
                           color: AppColors.onSurface,
                           fontWeight: FontWeight.w800,
@@ -147,18 +136,68 @@ class _HowThisWorksSheet extends StatelessWidget {
   }
 }
 
-class _Section extends StatelessWidget {
-  const _Section({
-    required this.number,
-    required this.title,
-    required this.body,
-  });
-  final String number;
-  final String title;
-  final String body;
+enum _SectionKey {
+  howItWorksToday,
+  howItWorksTodayBody,
+  howItWorksCap,
+  howItWorksCapBody,
+  howItWorksHabits,
+  howItWorksHabitsBody,
+  howItWorksLeftBehind,
+  howItWorksLeftBehindBody,
+  howItWorksProgress,
+  howItWorksProgressBody,
+  howItWorksYou,
+  howItWorksYouBody,
+  howItWorksRule,
+}
+
+extension _SectionKeyX on _SectionKey {
+  String resolve(AppLocalizations l10n) => switch (this) {
+        _SectionKey.howItWorksToday => l10n.howItWorksToday,
+        _SectionKey.howItWorksTodayBody => l10n.howItWorksTodayBody,
+        _SectionKey.howItWorksCap => l10n.howItWorksCap,
+        _SectionKey.howItWorksCapBody => l10n.howItWorksCapBody,
+        _SectionKey.howItWorksHabits => l10n.howItWorksHabits,
+        _SectionKey.howItWorksHabitsBody => l10n.howItWorksHabitsBody,
+        _SectionKey.howItWorksLeftBehind => l10n.howItWorksLeftBehind,
+        _SectionKey.howItWorksLeftBehindBody => l10n.howItWorksLeftBehindBody,
+        _SectionKey.howItWorksProgress => l10n.howItWorksProgress,
+        _SectionKey.howItWorksProgressBody => l10n.howItWorksProgressBody,
+        _SectionKey.howItWorksYou => l10n.howItWorksYou,
+        _SectionKey.howItWorksYouBody => l10n.howItWorksYouBody,
+        _SectionKey.howItWorksRule => l10n.howItWorksRule,
+      };
+}
+
+class _LocalizedText extends StatelessWidget {
+  const _LocalizedText({required this.sectionKey, required this.style});
+  final _SectionKey sectionKey;
+  final TextStyle? style;
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
+    return Text(
+      sectionKey.resolve(l10n),
+      style: style,
+    );
+  }
+}
+
+class _Section extends StatelessWidget {
+  const _Section({
+    required this.number,
+    required this.titleKey,
+    required this.bodyKey,
+  });
+  final String number;
+  final _SectionKey titleKey;
+  final _SectionKey bodyKey;
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final theme = Theme.of(context);
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -185,7 +224,7 @@ class _Section extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                title,
+                titleKey.resolve(l10n),
                 style: theme.textTheme.titleMedium?.copyWith(
                   color: AppColors.onSurface,
                   fontWeight: FontWeight.w800,
@@ -193,7 +232,7 @@ class _Section extends StatelessWidget {
               ),
               const SizedBox(height: 4),
               Text(
-                body,
+                bodyKey.resolve(l10n),
                 style: theme.textTheme.bodyMedium?.copyWith(
                   color: AppColors.onSurfaceVariant,
                   height: 1.5,

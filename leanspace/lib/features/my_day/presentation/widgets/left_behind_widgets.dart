@@ -3,9 +3,11 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
 
+import '../../../../core/l10n/app_localizations.dart';
 import '../../../../core/local_date.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../streak_freeze/providers/streak_freeze_providers.dart';
+import '../../../subscription/providers/entitlement_provider.dart';
 import '../../domain/todo_item.dart';
 import '../../providers/my_day_providers.dart';
 
@@ -16,10 +18,12 @@ class LeftBehindBanner extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context);
     final state = ref.watch(myDayProvider);
     if (!state.showLeftBehindNudge) return const SizedBox.shrink();
 
     final freeze = ref.watch(streakFreezeProvider);
+    final isPro = ref.watch(entitlementProvider).isPro;
     final yesterday = LocalDate.yesterday(LocalDate.today);
     final yesterdayMissed = state.leftBehind.any(
       (t) => LocalDate.isSameDay(t.originalDate, yesterday),
@@ -27,8 +31,9 @@ class LeftBehindBanner extends ConsumerWidget {
     final yesterdayFrozen = freeze.frozenDates.any(
       (d) => LocalDate.isSameDay(d, yesterday),
     );
-    final showFreeze =
-        yesterdayMissed && freeze.canUseFreeze && !yesterdayFrozen;
+    final showFreeze = yesterdayMissed &&
+        freeze.canUseFreezeFor(isPro) &&
+        !yesterdayFrozen;
 
     return Padding(
       padding: const EdgeInsets.fromLTRB(20, 8, 20, 0),
@@ -53,7 +58,8 @@ class LeftBehindBanner extends ConsumerWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            '${state.leftBehind.length} missed — still in Left Behind',
+                            l10n.leftBehindBanner(
+                                '${state.leftBehind.length}'),
                             style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                                   fontWeight: FontWeight.w600,
                                   color: AppColors.onSurface,
@@ -61,7 +67,7 @@ class LeftBehindBanner extends ConsumerWidget {
                           ),
                           const SizedBox(height: 2),
                           Text(
-                            'Tap to re-add or let go',
+                            l10n.leftBehindTap,
                             style: Theme.of(context).textTheme.labelSmall?.copyWith(
                                   color: AppColors.onSurfaceVariant,
                                 ),
@@ -79,7 +85,7 @@ class LeftBehindBanner extends ConsumerWidget {
                       onPressed: () => ref
                           .read(myDayProvider.notifier)
                           .dismissLeftBehind(),
-                      child: const Text('Dismiss'),
+                      child: Text(l10n.leftBehindDismiss),
                     ),
                   ],
                 ),
@@ -91,7 +97,7 @@ class LeftBehindBanner extends ConsumerWidget {
             OutlinedButton.icon(
               onPressed: () => _useFreeze(context, ref, yesterday),
               icon: const Icon(Icons.ac_unit_outlined, size: 18),
-              label: const Text('Use monthly streak freeze for yesterday'),
+              label: Text(l10n.streakFreezeUseForYesterday),
             ),
           ],
         ],
@@ -104,6 +110,7 @@ class LeftBehindBanner extends ConsumerWidget {
     WidgetRef ref,
     DateTime yesterday,
   ) async {
+    final l10n = AppLocalizations.of(context);
     final error =
         await ref.read(streakFreezeProvider.notifier).freezeDate(yesterday);
     if (!context.mounted) return;
@@ -115,7 +122,7 @@ class LeftBehindBanner extends ConsumerWidget {
     await ref.read(myDayProvider.notifier).refresh();
     if (!context.mounted) return;
     ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('Streak freeze applied for yesterday.')),
+      SnackBar(content: Text(l10n.streakFreezeAppliedYesterday)),
     );
   }
 }
@@ -125,6 +132,7 @@ class LeftBehindSheet extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context);
     final state = ref.watch(myDayProvider);
     final notifier = ref.read(myDayProvider.notifier);
     final dateFormat = DateFormat.MMMd();
@@ -152,7 +160,7 @@ class LeftBehindSheet extends ConsumerWidget {
             Padding(
               padding: const EdgeInsets.all(20),
               child: Text(
-                'Left Behind',
+                l10n.leftBehindTitle,
                 style: Theme.of(context).textTheme.titleLarge?.copyWith(
                       fontWeight: FontWeight.w700,
                     ),
@@ -162,7 +170,7 @@ class LeftBehindSheet extends ConsumerWidget {
               child: state.leftBehind.isEmpty
                   ? Center(
                       child: Text(
-                        'Nothing left behind',
+                        l10n.leftBehindEmpty,
                         style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                               color: AppColors.textMuted,
                             ),
@@ -196,6 +204,7 @@ class LeftBehindSheet extends ConsumerWidget {
     MyDayNotifier notifier,
     TodoItem task,
   ) async {
+    final l10n = AppLocalizations.of(context);
     final message = await notifier.reAddTask(task);
     if (!context.mounted) return;
     if (message != null) {
@@ -204,7 +213,7 @@ class LeftBehindSheet extends ConsumerWidget {
       );
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Added to today')),
+        SnackBar(content: Text(l10n.leftBehindAddedToToday)),
       );
     }
   }
@@ -223,6 +232,7 @@ class _LeftBehindTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     return Container(
       padding: const EdgeInsets.all(14),
       decoration: BoxDecoration(
@@ -252,7 +262,10 @@ class _LeftBehindTile extends StatelessWidget {
               ],
             ),
           ),
-          TextButton(onPressed: onReAdd, child: const Text('Re-add')),
+          TextButton(
+            onPressed: onReAdd,
+            child: Text(l10n.leftBehindReAddButton),
+          ),
         ],
       ),
     );

@@ -5,10 +5,11 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 
 import 'core/app_bootstrap.dart';
 import 'core/app_actions.dart';
+import 'core/l10n/app_localizations.dart';
 import 'core/deep_link.dart';
 import 'core/deep_link_handlers.dart';
 import 'core/feature_flags.dart';
-import 'core/l10n/app_localizations.dart';
+import 'core/l10n/locale_resolution.dart';
 import 'core/theme/app_theme.dart';
 import 'core/theme/theme_provider.dart';
 import 'core/widgets/locale_provider.dart';
@@ -28,6 +29,8 @@ class LeanSpaceApp extends ConsumerStatefulWidget {
 
 class _LeanSpaceAppState extends ConsumerState<LeanSpaceApp> {
   ProviderSubscription<MyDayState>? _myDaySub;
+  StreamSubscription<AuthState>? _authSub;
+  StreamSubscription<Uri?>? _widgetClickSub;
 
   @override
   void initState() {
@@ -45,8 +48,12 @@ class _LeanSpaceAppState extends ConsumerState<LeanSpaceApp> {
       _initHomeWidget();
       _handlePendingIntents();
       _initReminders();
+      if (FeatureFlags.enableSubscriptions) {
+        // Load subscriptions immediately, no delay
+        ref.read(subscriptionControllerProvider);
+      }
     });
-    Supabase.instance.client.auth.onAuthStateChange.listen((event) {
+    _authSub = Supabase.instance.client.auth.onAuthStateChange.listen((event) {
       if (event.session != null) {
         _bootstrapIfNeeded();
       }
@@ -66,12 +73,16 @@ class _LeanSpaceAppState extends ConsumerState<LeanSpaceApp> {
 
   @override
   void dispose() {
+    _authSub?.cancel();
+    _widgetClickSub?.cancel();
     _myDaySub?.close();
     super.dispose();
   }
 
   Future<void> _initReminders() async {
     if (!mounted) return;
+    final notifications = ref.read(notificationServiceProvider);
+    await notifications.initialize();
     final reminders = ref.read(reminderControllerProvider.notifier);
     await reminders.ensurePermission();
     await reminders.rescheduleFromMyDay();
@@ -104,14 +115,14 @@ class _LeanSpaceAppState extends ConsumerState<LeanSpaceApp> {
         );
         ref.read(appRouterProvider).go('/my-day');
       case '/share':
-        AppActions.shareApp();
+        AppActions.shareApp(AppLocalizations.of(context));
       case '/app-info':
         AppActions.openAppInfo();
     }
   }
 
   void _initHomeWidget() {
-    HomeWidget.widgetClicked.listen((uri) {
+    _widgetClickSub = HomeWidget.widgetClicked.listen((uri) {
       if (!mounted || uri == null) return;
       final action = parseDeepLink(uri);
       if (action != null) {
@@ -135,22 +146,28 @@ class _LeanSpaceAppState extends ConsumerState<LeanSpaceApp> {
 
   @override
   Widget build(BuildContext context) {
-    if (FeatureFlags.enableSubscriptions) {
-      ref.watch(subscriptionControllerProvider);
-    }
-
     ref.watch(themePresetProvider);
     final router = ref.watch(appRouterProvider);
     final userLocale = ref.watch(localeProvider);
 
     return MaterialApp.router(
-      title: 'Bloom Tracker',
+      title: 'Daily Stitch',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.light,
       routerConfig: router,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       locale: userLocale,
+      localeResolutionCallback: (deviceLocale, supportedLocales) =>
+          resolveAppLocale(userLocale, deviceLocale),
+      builder: (context, child) {
+        return AnimatedTheme(
+          duration: const Duration(milliseconds: 500),
+          curve: Curves.easeOutCubic,
+          data: AppTheme.light,
+          child: child ?? const SizedBox.shrink(),
+        );
+      },
     );
   }
 }

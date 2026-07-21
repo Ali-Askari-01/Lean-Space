@@ -4,7 +4,7 @@ import 'package:go_router/go_router.dart';
 
 import '../../../core/deep_link_handlers.dart';
 import '../../../core/l10n/app_localizations.dart';
-import '../../../core/local_date.dart';
+
 import '../../../core/theme/app_colors.dart';
 import '../../../core/widgets/ambient_background.dart';
 import '../../../core/widgets/growth_widgets.dart';
@@ -190,9 +190,7 @@ class _MyDayScreenState extends ConsumerState<MyDayScreen> {
           FadeUp(
             delay: const Duration(milliseconds: 90),
             child: _DailyIntentionCard(
-              quote: IntentionQuotes.pick(
-                seed: LocalDateHash.today,
-              ),
+              quote: IntentionQuotes.pickFrom(l10n),
             ),
           ),
           const FadeUp(
@@ -301,7 +299,7 @@ class _GreetingBar extends StatelessWidget {
 
 class _DailyIntentionCard extends StatelessWidget {
   const _DailyIntentionCard({required this.quote});
-  final ({String title, String body}) quote;
+  final IntentionQuote quote;
 
   @override
   Widget build(BuildContext context) {
@@ -311,7 +309,14 @@ class _DailyIntentionCard extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.fromLTRB(16, 12, 16, 12),
         decoration: BoxDecoration(
-          color: AppColors.primary.withValues(alpha: 0.06),
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [
+              AppColors.primary.withValues(alpha: 0.08),
+              AppColors.primary.withValues(alpha: 0.03),
+            ],
+          ),
           borderRadius: BorderRadius.circular(18),
           border: Border.all(
             color: AppColors.primary.withValues(alpha: 0.20),
@@ -324,7 +329,12 @@ class _DailyIntentionCard extends StatelessWidget {
               height: 36,
               alignment: Alignment.center,
               decoration: BoxDecoration(
-                color: AppColors.primary.withValues(alpha: 0.18),
+                gradient: LinearGradient(
+                  colors: [
+                    AppColors.primary.withValues(alpha: 0.22),
+                    AppColors.primary.withValues(alpha: 0.10),
+                  ],
+                ),
                 shape: BoxShape.circle,
               ),
               child: Icon(
@@ -439,13 +449,31 @@ class _AddSeedFab extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(right: 8),
-      child: FloatingActionButton(
-        onPressed: onTap,
-        backgroundColor: AppColors.secondary,
-        foregroundColor: AppColors.onSecondary,
-        elevation: 2,
-        shape: const CircleBorder(),
-        child: const Icon(Icons.add_rounded, size: 28),
+      child: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: AppColors.fabGradient,
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
+          shape: BoxShape.circle,
+          boxShadow: [
+            BoxShadow(
+              color: AppColors.secondary.withValues(alpha: 0.35),
+              blurRadius: 16,
+              offset: const Offset(0, 6),
+            ),
+          ],
+        ),
+        child: FloatingActionButton(
+          onPressed: onTap,
+          backgroundColor: Colors.transparent,
+          foregroundColor: AppColors.onSecondary,
+          elevation: 0,
+          highlightElevation: 0,
+          shape: const CircleBorder(),
+          child: const Icon(Icons.add_rounded, size: 28),
+        ),
       ),
     );
   }
@@ -481,7 +509,7 @@ class _MyDayLoadingSkeletonState extends State<_MyDayLoadingSkeleton>
       builder: (_, __) {
         final t = _shimmer.value;
         Color bar(double opacity) =>
-            AppColors.outlineVariant.withValues(alpha: opacity);
+            AppColors.shimmerBase.withValues(alpha: opacity);
         final base = 0.18 + 0.18 * t;
         return ListView(
           padding: const EdgeInsets.only(bottom: 120),

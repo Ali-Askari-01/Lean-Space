@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../app_actions.dart';
+import '../l10n/app_localizations.dart';
 import '../theme/app_colors.dart';
 
 /// Shown when the user taps "Add widget" from settings or the app shortcut.
@@ -22,16 +23,16 @@ class _WidgetSetupSheetState extends State<WidgetSetupSheet> {
     });
     final pinned = await AppActions.requestPinWidget();
     if (!mounted) return;
+    final l10n = AppLocalizations.of(context);
     setState(() {
       _pinning = false;
-      _message = pinned
-          ? 'Check your home screen to place the widget.'
-          : 'Your launcher may not support one-tap add. Use manual steps below.';
+      _message = pinned ? l10n.widgetSetupPinSuccess : l10n.widgetSetupPinFallback;
     });
   }
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final theme = Theme.of(context);
     final bottom = MediaQuery.viewInsetsOf(context).bottom;
 
@@ -53,14 +54,14 @@ class _WidgetSetupSheetState extends State<WidgetSetupSheet> {
           ),
           const SizedBox(height: 20),
           Text(
-            'Add chain widget',
+            l10n.widgetSetupTitle,
             style: theme.textTheme.titleLarge?.copyWith(
               fontWeight: FontWeight.w700,
             ),
           ),
           const SizedBox(height: 8),
           Text(
-            'Keep your streak on your home screen — no need to open the app.',
+            l10n.widgetSetupBody,
             style: theme.textTheme.bodyMedium?.copyWith(
               color: AppColors.textMuted,
             ),
@@ -78,12 +79,12 @@ class _WidgetSetupSheetState extends State<WidgetSetupSheet> {
                     ),
                   )
                 : const Icon(Icons.widgets_outlined),
-            label: const Text('Add to home screen'),
+            label: Text(l10n.widgetSetupAdd),
           ),
           const SizedBox(height: 16),
-          _Step(number: '1', text: 'Long-press your home screen'),
-          _Step(number: '2', text: 'Tap Widgets'),
-          _Step(number: '3', text: 'Find Bloom Tracker and drag it on'),
+          _Step(number: '1', text: l10n.widgetSetupStep1),
+          _Step(number: '2', text: l10n.widgetSetupStep2),
+          _Step(number: '3', text: l10n.widgetSetupStep3),
           if (_message != null) ...[
             const SizedBox(height: 12),
             Text(

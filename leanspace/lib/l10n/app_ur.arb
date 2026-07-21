@@ -1,83 +1,277 @@
-﻿﻿﻿﻿﻿{
+{
   "@@locale": "ur",
-  "appTitle": "بلوم ٹریکر",
+  "appTitle": "Daily Stitch",
   "tabToday": "آج",
   "tabProgress": "پیشرفت",
   "tabYou": "آپ",
+
   "navMyDay": "میرا دن",
   "navSettings": "ترتیبات",
-  "navHelp": "مدد اور سپورٹ",
+  "navHelp": "مدد و معاونت",
   "navHistory": "آخری 7 دن",
-  "navLeftBehind": "پیچھے چھوڑیں",
+  "navLeftBehind": "پیچھے چھوڑے گئے",
   "navInsights": "آپ کی پیشرفت",
   "navMedals": "میرے تمغے",
-  "navManagePro": "پرو سبسکرپشن کا انتظام کریں",
-  "navPaywall": "بلوم ٹریکر پرو",
+  "navManagePro": "Pro سبسکرپشن کا انتظام کریں",
+  "navPaywall": "Daily Stitch Pro",
+
   "greetingLateNight": "رات گئی، ابھی بھی جاگ رہے ہیں",
   "greetingMorning": "صبح بخیر، سورج!",
   "greetingAfternoon": "دوپہر بخیر، دوست",
   "greetingEvening": "شام بخیر، چیمپئن",
   "greetingNight": "آرام سے سو رہے ہیں، نگہبان؟",
-  "todayTasksCount": "آج · {total} میں سے {done} کام",
-  "todayHabitsCount": "{total} میں سے {done} عادات",
+
+  "todayTasksCount": "آج · {done} / {total} کام مکمل",
+  "@todayTasksCount": {
+    "placeholders": {
+      "done": { "type": "String" },
+      "total": { "type": "String" }
+    }
+  },
+  "todayHabitsCount": "{done} / {total} عادات",
+  "@todayHabitsCount": {
+    "placeholders": {
+      "done": { "type": "String" },
+      "total": { "type": "String" }
+    }
+  },
   "todayChainGrows": "زنجیر آپ کے مکمل کرنے سے بڑھتی ہے",
   "todayChainComplete": "زنجیر مکمل · کل باغ کی دیکھ بھال کریں",
   "taskCapInfo": "5 کام کی حد کیوں؟",
   "taskCapDiscipline": "ڈیزائن سے پہلے نظم و ضبط",
   "taskCapTitle": "ہم آپ کے دن کو جان بوجھ کر 5 کام تک محدود رکھتے ہیں۔",
-  "taskCapBody": "چھوٹی زنجیریں لمبی زنجیروں سے بہتر ہیں۔ آپ 5 میں سے 3 کام مکمل کر کے جیتنے کا احساس کرنے کا امکان 10 میں سے 8 کو چھوڑ کر ہارنے کے احساس سے زیادہ ہے۔",
+  "taskCapBody": "چھوٹی زنجیریں لمبی زنجیروں سے بہتر ہیں۔ آپ 5 میں سے 3 کام مکمل کر کے جیتنے کا احساس محسوس کرنے کا امکان 10 میں سے 8 کو چھوڑ کر ہارنے کے احساس سے زیادہ ہے۔",
   "taskCapBulletDone": "مکمل شدہ کام آپ کی زنجیر میں شامل ہوتے ہیں",
   "taskCapBulletDoneBody": "وہ دن جب تمام 5 مکمل ہو جائیں آپ کی زنجیر میں ایک دن کا اضافہ کرتا ہے۔",
-  "taskCapBulletMissed": "چھوٹے ہوئے کام بائیں طرف چلے جاتے ہیں",
-  "taskCapBulletMissedBody": "رات 12 بجے، نامکمل کام بائیں طرف کی فہرست میں آ جاتے ہیں۔ صرف وہی دوبارہ شامل کریں جو ابھی بھی اہم ہوں۔",
+  "taskCapBulletMissed": "چھوٹے ہوئے کام Left Behind میں چلے جاتے ہیں",
+  "taskCapBulletMissedBody": "رات 12 بجے، نامکمل کام Left Behind میں آ جاتے ہیں۔ صرف وہی دوبارہ شامل کریں جو ابھی بھی اہم ہوں۔",
   "taskCapBulletFreeze": "اسٹریک فریز ایک چھوٹ کی معافی دیتا ہے",
-  "taskCapBulletFreezeBody": "پرو آپ کو ماہانہ 2 اسٹریک فریز دیتا ہے — وہ ایک چھوٹے ہوئے دن کو ڈھانپتے ہیں تاکہ آپ کی زنجیر زندہ رہے۔",
+  "taskCapBulletFreezeBody": "Pro آپ کو ماہانہ 2 اسٹریک فریز دیتا ہے — وہ ایک چھوٹے ہوئے دن کو ڈھانپتے ہیں تاکہ آپ کی زنجیر زندہ رہے۔",
+
   "tasksHeader": "کام",
+  "tasksProgressCount": "{done} / {total}",
+  "@tasksProgressCount": {
+    "placeholders": {
+      "done": { "type": "String" },
+      "total": { "type": "String" }
+    }
+  },
   "tasksAddSeed": "کام کا بیج شامل کریں",
   "tasksCapReached": "5/5 جگہیں استعمال ہوئیں — نیا بیج لگانے کے لیے ایک کو مکمل کریں۔",
   "tasksEmptyCta": "اپنا پہلا بیج لگائیں — آج کیا اہم ہے؟",
+
   "habitsHeader": "عادات",
+  "habitsGrowing": "{count} بڑھ رہی ہیں",
+  "@habitsGrowing": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "habitsBestStreak": "بہترین {days} دن",
+  "@habitsBestStreak": {
+    "placeholders": {
+      "days": { "type": "String" }
+    }
+  },
   "habitsPlantNew": "نئی عادت کا پودا لگائیں",
   "habitsPlantFirst": "عادت لگائیں",
-  "habitsLocked": "پرو عادت کی جگہ — مزید پودے لگانے کے لیے کھولیں",
+  "habitsLocked": "Pro عادت کی جگہ — مزید پودے لگانے کے لیے کھولیں",
+  "habitsSlotsFull": "تمام عادت کی جگہیں فل ہیں۔",
+  "habitsStreakDays": "{days}دن",
+  "@habitsStreakDays": {
+    "placeholders": {
+      "days": { "type": "String" }
+    }
+  },
   "habitsCadence": "روزانہ",
-  "leftBehindTitle": "پیچھے چھوڑیں",
-  "leftBehindDismiss": "ختم کریں",
+
+  "leftBehindBanner": "{count} چھوٹے گئے — ابھی بھی Left Behind میں ہیں",
+  "@leftBehindBanner": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
   "leftBehindTap": "دوبارہ شامل کرنے یا چھوڑنے کے لیے ٹیپ کریں",
+  "leftBehindDismiss": "ختم کریں",
+  "leftBehindTitle": "پیچھے چھوڑے گئے",
   "leftBehindEmpty": "کچھ بھی پیچھے نہیں چھوڑا",
   "leftBehindEmptyBody": "کوئی چھوٹا ہوا کام نہیں۔ ہر بیج جو آپ لگاتے ہیں اس کی دیکھ بھال ہو رہی ہے۔ باغ صاف ہے۔",
   "leftBehindClearAll": "سب صاف کریں",
   "leftBehindClearAllConfirm": "سب کچھ صاف کریں؟",
-  "leftBehindReAddToday": "آج دوبارہ شامل کریں",
+  "leftBehindClearAllBody": "یہ {count} چھوٹے ہوئے کام کو مستقل طور پر ہٹا دے گا۔ آپ اسے واپس نہیں کر سکتے۔",
+  "@leftBehindClearAllBody": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "leftBehindReAdd": "آج دوبارہ شامل کریں",
+  "leftBehindReAddButton": "دوبارہ شامل کریں",
+  "leftBehindAddedToToday": "آج شامل کر دیا گیا",
   "leftBehindLetGo": "چھوڑ دو",
+  "leftBehindHeader": "LEFT BEHIND",
+  "leftBehindMissedTasks": "چھوٹے ہوئے کام",
+  "leftBehindWaitingOne": "1 کام آپ کا منتظر ہے۔",
+  "leftBehindWaitingMany": "{count} کام آپ کا منتظر ہیں۔",
+  "@leftBehindWaitingMany": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "leftBehindBody": "کام کو آج واپس لانے کے لیے دوبارہ شامل کریں، یا چھوڑ دیں۔ دوبارہ شامل کرنے سے آپ کی اسٹریک زندہ رہتی ہے۔",
+  "leftBehindReAddedSnack": "\"{task}\" آپ کے دن میں واپس آ گیا۔",
+  "@leftBehindReAddedSnack": {
+    "placeholders": {
+      "task": { "type": "String" }
+    }
+  },
+  "leftBehindRemovedSnack": "\"{task}\" ہٹا دیا گیا",
+  "@leftBehindRemovedSnack": {
+    "placeholders": {
+      "task": { "type": "String" }
+    }
+  },
+  "leftBehindClearedSnack": "Left Behind صاف ہو گیا",
+  "leftBehindYesterdayDate": "کل · {date}",
+  "@leftBehindYesterdayDate": {
+    "placeholders": {
+      "date": { "type": "String" }
+    }
+  },
+
+  "streakAtRisk": "آج کے لیے {count} کام باقی ہیں",
+  "@streakAtRisk": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "streakAtRiskLastCall": "آخری موقع — {count} کام ابھی بھی کھلے ہیں",
+  "@streakAtRiskLastCall": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "streakAtRiskBody": "رات قریب ہے۔ زنجیر ان پر منحصر ہے۔",
+  "streakAtRiskBodyLow": "ابھی بھی وقت ہے۔ صاف دن آپ کی اسٹریک بڑھاتا ہے۔",
+  "streakAtRiskFreeze": "کل چھوٹ گیا — اسٹریک فریز استعمال کریں؟",
+  "streakFreezeUse": "فریز استعمال کریں",
+  "streakFreezeUseForYesterday": "کل کے لیے ماہانہ اسٹریک فریز استعمال کریں",
+  "streakFreezeAppliedYesterday": "کل کے لیے اسٹریک فریز لاگو ہو گیا۔",
+
+  "chainBrokenTitle": "زنجیر ٹوٹ گئی۔ کوئی بات نہیں۔",
+  "chainBrokenBody": "ہر لمبی زنجیر ایک بار ٹوٹتی ہے۔ جو اہم ہے وہ ہے آج آپ کیا لگاتے ہیں۔ ایک کامل دن اگلی زنجیر شروع کرتا ہے۔",
+  "chainBrokenCta": "آج پر واپس آئیں",
+  "chainBrokenPlantFirst": "آج کا پہلا بیج لگائیں",
+  "chainBrokenCheck": "پہلے Left Behind چیک کریں",
+  "chainBrokenBestChain": "بہترین زنجیر",
+  "chainBrokenTasksDone": "کام مکمل",
+  "chainBrokenSprouts": "پودے",
+  "chainRecoveryFreshStart": "نئی شروعات",
+
   "medalsTitle": "میرے تمغے",
   "medalsTrophyRoom": "ٹرافی روم",
   "medalsAllMedals": "تمام تمغے",
+  "medalsTrophyEarned": "{earned} / {total} تمغے حاصل",
+  "@medalsTrophyEarned": {
+    "placeholders": {
+      "earned": { "type": "String" },
+      "total": { "type": "String" }
+    }
+  },
+  "medalsTrophyEmpty": "آپ کا پہلا بیج ایک کام دور ہے",
+  "medalsTrophyFirst": "آپ نے اپنا پہلا تمغہ حاصل کر لیا — جاری رکھیں",
+  "medalsTrophyMany": "آپ کے ٹرافی روم میں {earned} تمغے",
+  "@medalsTrophyMany": {
+    "placeholders": {
+      "earned": { "type": "String" }
+    }
+  },
   "medalsProgressLabel": "تمام {total} تمغوں کی طرف پیشرفت",
+  "@medalsProgressLabel": {
+    "placeholders": {
+      "total": { "type": "String" }
+    }
+  },
   "medalsShareCta": "شیئر کرنے کے قابل کارڈ بنائیں",
   "medalsEmptyTitle": "اس زمرے میں ابھی کچھ نہیں ہے",
   "medalsEmptyBody": "ٹرافی روم شروع کرنے کے لیے کوئی کام مکمل کریں یا پودے کی دیکھ بھال کریں۔",
+
+  "medalSheetLocked": "Pro تمغہ",
   "medalSheetEarned": "حاصل · {tier}",
-  "medalSheetUnlock": "پرو سے کھولیں",
+  "@medalSheetEarned": {
+    "placeholders": {
+      "tier": { "type": "String" }
+    }
+  },
+  "medalSheetUnlock": "Pro سے کھولیں",
   "medalSheetProgress": "پیشرفت",
+  "medalSheetHint": "صرف {n} مزید {unit} کھولنے کے لیے۔",
+  "@medalSheetHint": {
+    "placeholders": {
+      "n": { "type": "String" },
+      "unit": { "type": "String" }
+    }
+  },
   "medalSheetAlmost": "کھولنے کے لیے ایک اور قدم۔",
-  "medalSheetLocked": "پرو تمغہ",
   "medalCategory": "زمرہ",
   "medalShareOnSocials": "سوشل میڈیا پر شیئر کریں",
   "medalShareLater": "بعد میں",
   "medalUnlocked": "تمغہ کھلا",
   "medalProgressTitle": "پیشرفت",
+
   "historyTitle": "آخری 7 دن",
+  "historyFullTitle": "مکمل تاریخ",
+  "historyLoadError": "تاریخ لو نہیں ہو سکی۔",
+  "historyFullCalendar": "مکمل کیلنڈر",
+  "historyCompletedPercent": "{percent}% مکمل",
+  "@historyCompletedPercent": {
+    "placeholders": {
+      "percent": { "type": "String" }
+    }
+  },
+  "historyThisWeek": "آخری {days} دن",
+  "@historyThisWeek": {
+    "placeholders": {
+      "days": { "type": "String" }
+    }
+  },
   "historyDayByDay": "دن بہ دن",
+  "historyEmpty": "اپنا ہفتہ دیکھنے کے لیے کچھ بیج لگائیں۔",
+  "historyDoneCount": "آپ نے {total} میں سے {done} کام مکمل کیے۔ {perfect} کامل دن۔",
+  "@historyDoneCount": {
+    "placeholders": {
+      "done": { "type": "String" },
+      "total": { "type": "String" },
+      "perfect": { "type": "String" }
+    }
+  },
+  "historyUpsellTitle": "اپنا مکمل تاریخ دیکھیں",
+  "historyUpsellBody": "Pro 30 دن کی تاریخ کھولتا ہے۔ مفت 7 دکھاتا ہے۔",
   "historyPerfect": "کامل",
   "historyFrozen": "منجمد",
   "historyToday": "آج",
   "historyEmptyDay": "اس دن کوئی بیج نہیں لگایا گیا",
-  "historyUpsellTitle": "اپنا مکمل تاریخ دیکھیں",
-  "historyUpsellBody": "پرو 30 دن کی تاریخ کھولتا ہے۔ مفت 7 دکھاتا ہے۔",
+  "historyLeftBehindCount": "{count} پیچھے چھوڑے گئے",
+  "@historyLeftBehindCount": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+
   "progressVitality": "آج کی جان",
   "progressVitalityEmpty": "باغ شروع کرنے کے لیے ایک بیج لگائیں۔",
+  "progressVitalitySeeds": "{done} / {total} بیج آج لگائے گئے۔",
+  "@progressVitalitySeeds": {
+    "placeholders": {
+      "done": { "type": "String" },
+      "total": { "type": "String" }
+    }
+  },
   "progressChainPill": "{days} دن کی زنجیر",
+  "@progressChainPill": {
+    "placeholders": {
+      "days": { "type": "String" }
+    }
+  },
   "progressMetricCurrent": "حالیہ",
   "progressMetricBest": "بہترین",
   "progressMetricDone": "مکمل",
@@ -86,28 +280,55 @@
   "progressHabitBlooms": "عادت کے پھول",
   "progressHabitBloomsSub": "روزانہ پانی دیے جانے والے پودوں کے لیے اسٹریک سنگ میلز۔",
   "progressNextBadge": "اگلا بیج",
+  "progressMedalCount": "{earned} / {total}",
+  "@progressMedalCount": {
+    "placeholders": {
+      "earned": { "type": "String" },
+      "total": { "type": "String" }
+    }
+  },
   "progressPersonalActivity": "ذاتی سرگرمی",
+  "progressBrowseMonth": "{month} براؤز کر رہے ہیں۔ اپنی لائیو سرگرمی پر واپس جانے کے لیے \"آج\" ٹیپ کریں۔",
+  "@progressBrowseMonth": {
+    "placeholders": {
+      "month": { "type": "String" }
+    }
+  },
   "progressJumpToToday": "آج",
   "progressCalendarLegend": "گہرا = زیادہ مکمل",
   "progressCalendarBody": "گہرا سبز ایک کامل دن کا مطلب ہے۔ جیسے جیسے آپ چھوڑتے ہیں رنگ ہلکا ہوتا جاتا ہے۔",
+
   "paywallTitle": "زنجیر کو نہ ٹوٹنے دیں۔",
-  "paywallSubtitle": "بلوم ٹریکر پرو آپ کو مکمل نظم و ضبط کا نظام دیتا ہے۔",
+  "paywallSubtitle": "Daily Stitch Pro آپ کو مکمل نظم و ضبط کا نظام دیتا ہے۔",
+  "paywallFeatures": "تمام 5 عادت کی جگہیں، صرف 3 نہیں|آپ کی مکمل تاریخ، ہمیشہ کے لیے|مکمل تمغوں کا مجموعہ|ہر ماہ اسٹریک فریز|ہفتہ وار رسید + شیئر کارڈ|تھیمز + مزید",
+  "paywallFeaturesBodies": "مفت میں صرف 3 ملتے ہیں۔ Pro تمام پانچ کھولتا ہے تاکہ آپ کی مکمل روزانہ رسم یہاں رہ سکے۔|ہر وہ دن براؤز کریں جو آپ نے مکمل کیا — صرف آخری 7 نہیں۔ سالوں کو پیچھے دیکھیں، ہفتوں کو نہیں۔|Legendary ٹائر کے تمغے کھولیں۔ سب سے نادر بیج ان لوگوں کے لیے ہیں جو پوری لگن لگاتے ہیں۔|ہر ماہ 2 اسٹریک فریز تاکہ ایک برا دن آپ کی زنجیر ختم نہ کرے۔|اپنے ہفتے کے خوبصورت شیئر کارڈ۔ اپنی زنجیر پوسٹ کریں، کسی اور کو شروع کرنے کی ترغیب دیں۔|نئے رنگ اور تھیمز کھولیں جیسے ہم شامل کرتے ہیں۔ ہمیشہ مفت اپ ڈیٹس۔",
   "paywallYearly": "سالانہ",
-  "paywallYearlyCaption": "بہترین قیمت · تقریباً 2.50 ڈالر فی ماہ",
-  "paywallYearlyBadge": "35٪ بچائیں",
+  "paywallYearlyCaption": "بہترین قیمت · تقریباً $2.50/ماہ",
+  "paywallYearlyBadge": "35% بچائیں",
   "paywallMonthly": "ماہانہ",
   "paywallMonthlyCaption": "ماہانہ بلنگ · کسی بھی وقت منسوخ کریں",
+  "paywallStartCta": "Pro شروع کریں · {price}/سال",
+  "@paywallStartCta": {
+    "placeholders": {
+      "price": { "type": "String" }
+    }
+  },
+  "paywallStartCtaMonthly": "Pro شروع کریں · {price}/ماہ",
+  "@paywallStartCtaMonthly": {
+    "placeholders": {
+      "price": { "type": "String" }
+    }
+  },
   "paywallRestore": "خریداری بحال کریں",
   "paywallTerms": "شرائط",
   "paywallPrivacy": "رازداری",
-  "paywallAlreadyPro": "آپ پرو پر ہیں۔ آپ کی حمایت کا شکریہ۔",
-  "paywallStartCta": "پرو شروع کریں · {price}/سال",
-  "paywallStartCtaMonthly": "پرو شروع کریں · {price}/ماہ",
   "paywallNoRestore": "اس اکاؤنٹ پر کوئی پچھلی خریداری نہیں ملی۔",
   "paywallRestoreLater": "ہم اگلے سنک پر آپ کی خریداری بحال کر دیں گے۔",
+  "paywallAlreadyPro": "آپ Pro پر ہیں۔ آپ کی حمایت کا شکریہ۔",
   "paywallHabitSlotHead": "آپ نے اپنی تمام مفت عادت کی جگہیں استعمال کر لی ہیں۔ مکمل سیٹ کھولیں تاکہ ہر رسم کو لگایا جا سکے۔",
   "paywallHistoryHead": "اپنا مکمل تاریخ دیکھیں — ہر کامل دن، ہر تمغہ، ہر واپسی۔",
-  "paywallMedalHead": "نادر ترین تمغے صرف پرو کے لیے ہیں۔ آگے بڑھتے رہیں — وہ آپ سے زیادہ قریب ہیں جتنا آپ سوچتے ہیں۔",
+  "paywallMedalHead": "نادر ترین تمغے صرف Pro کے لیے ہیں۔ آگے بڑھتے رہیں — وہ آپ سے زیادہ قریب ہیں جتنا آپ سوچتے ہیں۔",
+
   "settingsYourActivity": "آپ کی سرگرمی",
   "settingsHelpInfo": "مدد اور معلومات",
   "settingsAccount": "اکاؤنٹ",
@@ -117,193 +338,745 @@
   "settingsEcosystemSupport": "ماحولیاتی معاونت",
   "settingsHowItWorks": "یہ کیسے کام کرتا ہے",
   "settingsSignOut": "سائن آؤٹ",
-  "settingsLanguage": "زبان",
-  "settingsLanguageValue": "سسٹم ڈیفالٹ",
   "settingsProActive": "فعال",
   "settingsProFree": "مفت ٹائر",
+  "settingsLanguage": "زبان",
+  "settingsLanguageValue": "سسٹم ڈیفالٹ",
+
   "firstRunGreeting": "5 کام۔ بس۔ ان کی قدر رکھیں۔",
   "firstRunBody": "اپنا پہلا بیج لگائیں — آج سب سے زیادہ اہم کیا ہے؟",
   "firstRunCta": "اپنا پہلا بیج لگائیں",
+
   "emptyStateClearAll": "سب صاف کریں",
   "cancel": "منسوخ کریں",
+
+  "intentionTitle1": "آئیے نئی نیت لگائیں!",
+  "intentionBody1": "ہر طاقتور جنگل ایک چھوٹے سے انتخاب سے شروع ہوتا ہے۔ مجھے بتائیں آج ہم کیا پال رہے ہیں؟",
+  "intentionTitle2": "آج ہم کیا اگائیں؟",
+  "intentionBody2": "چھوٹے بیج، دیکھ بھال سے، لمبے درخت بن جاتے ہیں۔ ابھی سب سے اہم انتخاب کریں۔",
+  "intentionTitle3": "ایک بیج۔ ایک سانس۔ شروع کریں۔",
+  "intentionBody3": "آپ کو پورا جنگل ایک ساتھ نہیں لگانا — صرف اگلا صحح کام کریں۔",
+  "intentionTitle4": "اگلے چھوٹے قدم کی پرورش کریں۔",
+  "intentionBody4": "مستقبل کا آپ اس پانچ منٹ میں کیے گئے انتخابوں سے بنتا ہے۔ ایک مہربان انتخاب کیا ہے؟",
+  "intentionTitle5": "منتخب کریں آپ کیا بننا چاہتے ہیں۔",
+  "intentionBody5": "کام بیج ہیں، عادات پودے ہیں۔ مل کر وہ جنگل بناتے ہیں جس پر آپ کو فخر ہے۔",
+  "intentionTitle6": "کچھ ایسی چیز لگائیں جو یاد رکھنے کے قابل ہو۔",
+  "intentionBody6": "ہر دن بڑا محسوس نہیں ہوتا۔ پانی دیا گیا بیج بھی شمار ہوتا ہے۔ آئیے ایک نام دیتے ہیں۔",
+  "intentionTitle7": "آج کو تھوڑا بہادر بنائیں۔",
+  "intentionBody7": "ہمت جمع ہوتی ہے۔ وہ بیج چنیں جو آپ ٹال رہے ہیں — اس کا نام لینا بھی اسے آگے بڑھاتا ہے۔",
+  "intentionTitle8": "بیج سے پہلے زمین کی دیکھ بھال کریں۔",
+  "intentionBody8": "کون سا ذہنیت، ٹول، یا چھوٹی رسم اس کام کو آسان بنائے گی؟ نوٹس میں شامل کریں۔",
+
   "shareCardSnapshot": "آپ کے سینکچری کا ایک منظر",
+  "shareCardBody": "اوپر کا کارڈ PNG کے طور پر ایکسپورٹ ہوتا ہے اور آپ کی شیئر شیٹ میں بھیجا جاتا ہے۔ اسے اپنی اسٹوری پر پوسٹ کریں، دوست کو بھیجیں، یا اسٹکر کے طور پر پرنٹ کریں۔",
   "shareCardShareMyBloom": "اپنا پھول شیئر کریں",
   "shareCardCouldNotShare": "ابھی شیئر نہیں کر سکتے",
-  "shareCardProgressText": "میری بلوم ٹریکر پیشرفت — بلوم ٹریکر پر {year}۔",
-  "shareCardMedalText": "میں نے ابھی بلوم ٹریکر پر \"{title}\" تمغہ کھولا ہے۔ {subtitle}",
+  "shareCardProgressText": "میری Daily Stitch پیشرفت — Daily Stitch پر {year}۔",
+  "@shareCardProgressText": {
+    "placeholders": {
+      "year": { "type": "String" }
+    }
+  },
+  "shareCardMedalText": "میں نے ابھی Daily Stitch پر \"{title}\" تمغہ کھولا ہے۔ {subtitle}",
+  "@shareCardMedalText": {
+    "placeholders": {
+      "title": { "type": "String" },
+      "subtitle": { "type": "String" }
+    }
+  },
+
   "howItWorksTitle": "یہ کیسے کام کرتا ہے",
-  "howItWorksBody": "بلوم ٹریکر آپ کو نظم و ضبط کی ایک چھوٹی، نہ ٹوٹنے والی زنجیر رکھنے میں مدد کرتا ہے۔ بس۔",
+  "howItWorksBody": "Daily Stitch آپ کو نظم و ضبط کی ایک چھوٹی، نہ ٹوٹنے والی زنجیر رکھنے میں مدد کرتا ہے۔ بس۔",
   "howItWorksToday": "آج کا ٹیب",
   "howItWorksTodayBody": "یہ آپ کا گھر ہے۔ یہ 5 کام اور آج کے لیے مقرر کردہ عادات دکھاتا ہے۔ رات 12 بجے تک مکمل کریں، زنجیر بڑھتی ہے۔",
   "howItWorksCap": "5 کام کی حد ہی فیچر ہے",
   "howItWorksCapBody": "ہم آپ کو 6واں شامل نہیں کرنے دیتے۔ یہی پورا مقصد ہے۔ چھوٹی زنجیریں لمبی زنجیروں سے بہتر ہیں۔ مکمل وجہ کے لیے ہوم اسکرین پر \"?\" ٹیپ کریں۔",
   "howItWorksHabits": "عادات روزانہ ہیں، زنجیر ہمیشہ کے لیے",
   "howItWorksHabitsBody": "عادات (صبح یوگا، پانی پینا) ہمیشہ رہتی ہیں۔ کام ایک بار کے ہوتے ہیں۔ دونوں ایک ہی اسٹریک کو بڑھاتے ہیں۔",
-  "howItWorksLeftBehind": "چھوٹے کام → بائیں طرف",
-  "howItWorksLeftBehindBody": "رات 12 بجے، نامکمل کام بائیں طرف چلے جاتے ہیں۔ صرف وہی دوبارہ شامل کریں جو ابھی بھی اہم ہو۔ باقی کو خاموشی سے چھوڑ دیا جاتا ہے۔",
+  "howItWorksLeftBehind": "چھوٹے کام → Left Behind",
+  "howItWorksLeftBehindBody": "رات 12 بجے، نامکمل کام Left Behind میں چلے جاتے ہیں۔ صرف وہی دوبارہ شامل کریں جو ابھی بھی اہم ہو۔ باقی کو خاموشی سے چھوڑ دیا جاتا ہے۔",
   "howItWorksProgress": "پیشرفت کا ٹیب",
   "howItWorksProgressBody": "اسٹریک، کیلنڈر، تمغے، تاریخ — وقت کے ساتھ آپ کیسا کر رہے ہیں اس کا سب کچھ۔ یہاں کوئی فوری کام نہیں ہے۔",
   "howItWorksYou": "آپ کا ٹیب",
   "howItWorksYouBody": "آپ کا اکاؤنٹ، ترتیبات، سائن آؤٹ۔ بس۔",
   "howItWorksRule": "اصول: 5 چھوٹی چیزیں، ہر روز، کوئی بہانہ نہیں۔",
 
+  "commonRetry": "دوبارہ کوشش کریں",
+  "commonBack": "واپس",
+  "commonDismiss": "ختم کریں",
+  "commonCancel": "منسوخ کریں",
+  "commonClose": "بند کریں",
+  "commonSend": "بھیجیں",
+  "commonCopy": "کاپی کریں",
+  "commonShowLess": "کم دکھائیں",
+  "commonViewFull": "مکمل نوٹس دیکھیں",
+  "commonEdit": "ترمیم کریں",
+  "commonDelete": "حذف کریں",
+  "commonDone": "مکمل",
+  "commonError": "کچھ غلط ہو گیا",
+  "commonPageNotFound": "صفحہ نہیں ملا",
+  "commonHome": "گھر",
+  "commonUnknownError": "نامعلوم راؤٹنگ خرابی",
+  "commonSettingsTooltip": "ترتیبات",
+  "commonHowThisWorks": "یہ کیسے کام کرتا ہے",
 
-  "commonRetry": "Retry",
-  "commonBack": "Back",
-  "commonDismiss": "Dismiss",
-  "commonCancel": "Cancel",
-  "commonClose": "Close",
-  "commonSend": "Send",
-  "commonCopy": "Copy",
-  "commonShowLess": "Show less",
-  "commonViewFull": "View full notes",
-  "commonEdit": "Edit",
-  "commonDelete": "Delete",
-  "commonDone": "Done",
-  "commonError": "Something went wrong",
-  "commonPageNotFound": "Page Not Found",
-  "commonHome": "Home",
-  "commonUnknownError": "Unknown routing error",
-  "commonSettingsTooltip": "Settings",
-  "commonHowThisWorks": "How this works",
+  "myDayReminderSet": "یاد دہانی لگائی گئی",
+  "myDayPreparationNotes": "تیاری کے نوٹس",
 
-  "myDayReminderSet": "Reminder set",
-  "myDayPreparationNotes": "PREPARATION NOTES",
+  "onboardingSkip": "چھوڑیں",
+  "onboardingNext": "اگلا",
+  "onboardingEnterSanctuary": "سینکچری میں داخل ہوں",
+  "onboardingIntroduction": "تعارف",
+  "onboardingGrowYourForest": "اپنا جنگل بڑھائیں",
+  "onboardingPage1Title": "اپنے نگہبان سے ملیں۔",
+  "onboardingPage1Body": "آپ کے ذاتی سینکچری میں خوش آمدید۔ یہاں، آپ کی ترقی آپ کے جنگل کی زندگی میں جھلکتی ہے۔",
+  "onboardingPage2Title": "بیج لگائیں۔ انہیں بڑھتا دیکھیں۔",
+  "onboardingPage2Body": "ہر کام ایک چھوٹا بیج ہے۔ ہر عادت ایک پودا ہے جس کی آپ روزانہ دیکھ بھال کرتے ہیں۔ مل کر یہ نظم و ضبط کا جنگل بناتے ہیں۔",
+  "onboardingPage3Title": "پانچ کام۔ ایک زنجیر۔",
+  "onboardingPage3Body": "آپ روزانہ صرف 5 بیج لگا سکتے ہیں۔ یہ حد آپ کو واقعی اہم چیز پر توجہ دینے پر مجبور کرتی ہے — اور آپ کی زنجیر کی حفاظت کرتی ہے۔",
+  "onboardingPage4Title": "اپنے پودوں کی روزانہ دیکھ بھال کریں۔",
+  "onboardingPage4Body": "عادات بڑھانے کے لیے ٹیپ کریں۔ ایک دن چھوڑیں اور زنجیر نہیں بڑھتی۔ نگہبان آپ کے ساتھ بڑھتا ہے۔",
 
-  "onboardingSkip": "SKIP",
-  "onboardingNext": "Next",
-  "onboardingEnterSanctuary": "Enter Sanctuary",
-  "onboardingIntroduction": "INTRODUCTION",
-  "onboardingGrowYourForest": "GROW YOUR FOREST",
-  "onboardingPage1Title": "Meet your Guardian.",
-  "onboardingPage1Body": "Welcome to your Personal Sanctuary. Here, your growth is mirrored in the life of your forest.",
-  "onboardingPage2Title": "Plant seeds. Watch them grow.",
-  "onboardingPage2Body": "Each task is a tiny seed. Each habit is a sprout you tend daily. Together they form a forest of discipline.",
-  "onboardingPage3Title": "Five tasks. One chain.",
-  "onboardingPage3Body": "You can only plant 5 seeds per day. That cap forces you to focus on what actually matters — and protect your chain.",
-  "onboardingPage4Title": "Tend your sprouts daily.",
-  "onboardingPage4Body": "Tap habits to grow them. Skip a day and the chain doesn't extend. The Guardian grows with you.",
-
-  "authBrand": "BLOOM TRACKER",
-  "authPlantFirstSeed": "Plant your first seed.",
-  "authWelcomeBack": "Welcome back, Guardian.",
-  "authFiveTasksDaily": "Five tasks. Daily habits. No excuses.",
-  "authSanctuaryWaiting": "Your sanctuary is waiting.",
-  "authSignIn": "Sign In",
-  "authSignUp": "Sign Up",
-  "authEmail": "EMAIL",
-  "authPassword": "PASSWORD",
+  "authBrand": "DAILY STITCH",
+  "authPlantFirstSeed": "اپنا پہلا بیج لگائیں۔",
+  "authWelcomeBack": "خوش آمدید، نگہبان۔",
+  "authFiveTasksDaily": "پانچ کام۔ روزانہ عادات۔ کوئی بہانہ نہیں۔",
+  "authSanctuaryWaiting": "آپ کا سینکچری منتظر ہے۔",
+  "authSignIn": "سائن ان",
+  "authSignUp": "سائن اپ",
+  "authEmail": "ای میل",
+  "authPassword": "پاس ورڈ",
   "authEmailHint": "you@email.com",
-  "authCreateAccount": "Create account",
-  "authSignInCta": "Sign in",
-  "authOrContinueWith": "or continue with",
-  "authContinueWithGoogle": "Continue with Google",
-  "authEnterEmail": "Enter your email",
-  "authEnterValidEmail": "Enter a valid email address",
-  "authPasswordTooShort": "Password must be at least 6 characters",
-  "authAccountCreated": "Account created. Switch to Sign In and use your password.",
-  "authSomethingWentWrong": "Something went wrong. Try again.",
-  "authCouldNotStartGoogle": "Could not start Google sign-in.",
-  "authMidnightReset": "By signing in, you accept that your day resets at midnight.",
-  "authSetupRequired": "Setup required",
+  "authCreateAccount": "اکاؤنٹ بنائیں",
+  "authSignInCta": "سائن ان",
+  "authOrContinueWith": "یا جاری رکھیں",
+  "authContinueWithGoogle": "Google سے جاری رکھیں",
+  "authEnterEmail": "اپنا ای میل درج کریں",
+  "authEnterValidEmail": "درست ای میل ایڈریس درج کریں",
+  "authPasswordTooShort": "پاس ورڈ کم از کم 6 حروف کا ہونا چاہیے",
+  "authAccountCreated": "اکاؤنٹ بن گیا۔ سائن ان پر جائیں اور اپنا پاس ورڈ استعمال کریں۔",
+  "authSomethingWentWrong": "کچھ غلط ہو گیا۔ دوبارہ کوشش کریں۔",
+  "authCouldNotStartGoogle": "Google سائن ان شروع نہیں ہو سکا۔",
+  "authMidnightReset": "سائن ان کر کے، آپ قبول کرتے ہیں کہ آپ کا دن رات 12 بجے ری سیٹ ہوتا ہے۔",
+  "authSetupRequired": "سیٹ اپ درکار ہے",
 
-  "settingsPersonalSanctuary": "PERSONAL SANCTUARY",
-  "settingsHowThisWorks": "How this works",
-  "settingsHowThisWorksSubtitle": "What the app is, how the cap and streak work",
-  "settingsStreakProtection": "Streak Protection",
-  "settingsStreakProtectionAvailable": "1 freeze available this month",
-  "settingsStreakProtectionUsed": "Used for this month",
-  "settingsProSubscription": "Bloom Tracker Pro",
-  "settingsManageProSubscription": "Manage Pro subscription",
-  "settingsProCancelPlay": "Cancel or change plan in Google Play",
-  "settingsProUnlock": "Unlock all 5 habits, full history, more",
-  "settingsTaskAlarms": "Task alarms & Final Call",
-  "settingsTaskAlarmsSubtitle": "Evening nudge and midnight warning",
-  "settingsHomeScreenWidget": "Home-screen widget",
-  "settingsHomeScreenWidgetSubtitle": "Add your chain streak to the home screen",
-  "settingsShareBloomTracker": "Share Bloom Tracker",
-  "settingsShareBloomTrackerSubtitle": "Tell a friend about the chain",
-  "settingsHelpSupport": "Help & Support",
-  "settingsHelpSupportSubtitle": "FAQ or report a problem",
-  "settingsSignOutTile": "Sign Out",
-  "settingsAllFeaturesUnlocked": "All features unlocked",
-  "settingsAllFeaturesUnlockedSubtitle": "Beta build — subscriptions paused while we test everything.",
-  "settingsVersion": "Version {version} ({build})",
-  "settingsVersionUnknown": "Version 1.0.0",
-  "settingsHabitMaster": "Habit Master",
-  "settingsLevel": "Level {level} · Habit Master",
+  "settingsPersonalSanctuary": "ذاتی سینکچری",
+  "settingsHowThisWorks": "یہ کیسے کام کرتا ہے",
+  "settingsHowThisWorksSubtitle": "ایپ کیا ہے، حد اور اسٹریک کیسے کام کرتی ہے",
+  "settingsStreakProtection": "اسٹریک حفاظت",
+  "settingsStreakProtectionAvailable": "اس مہینے 1 فریز دستیاب ہے",
+  "settingsStreakProtectionUsed": "اس مہینے استعمال ہو چکا",
+  "settingsProSubscription": "Daily Stitch Pro",
+  "settingsManageProSubscription": "Pro سبسکرپشن کا انتظام کریں",
+  "settingsProCancelPlay": "Google Play میں منسوخ کریں یا پلان تبدیل کریں",
+  "settingsProUnlock": "تمام 5 عادات، مکمل تاریخ، مزید کھولیں",
+  "settingsTaskAlarms": "کام کے الارم اور آخری موقع",
+  "settingsTaskAlarmsSubtitle": "شام کی ترغیب اور رات 12 بجے کی تنبیہ",
+  "settingsHomeScreenWidget": "ہوم اسکرین ویجیٹ",
+  "settingsHomeScreenWidgetSubtitle": "اپنی زنجیر کی اسٹریک ہوم اسکرین پر شامل کریں",
+  "settingsShareBloomTracker": "Daily Stitch شیئر کریں",
+  "settingsShareBloomTrackerSubtitle": "دوست کو زنجیر کے بارے میں بتائیں",
+  "settingsHelpSupport": "مدد و معاونت",
+  "settingsHelpSupportSubtitle": "FAQ یا مسئلہ رپورٹ کریں",
+  "settingsSignOutTile": "سائن آؤٹ",
+  "settingsAllFeaturesUnlocked": "تمام فیچرز کھلے ہوئے",
+  "settingsAllFeaturesUnlockedSubtitle": "بیٹا بلڈ — ہم جب تک سب کچھ ٹیست کرتے ہیں سبسکرپشنز رکی ہوئی ہیں۔",
+  "settingsVersion": "ورژن {version} ({build})",
+  "settingsVersionUnknown": "ورژن 1.0.0",
+  "settingsHabitMaster": "عادت ماسٹر",
+  "settingsLevel": "لیول {level} · عادت ماسٹر",
 
-  "languagePickerTitle": "Language",
+  "languagePickerTitle": "زبان",
 
-  "youLast7Days": "Last 7 days",
-  "youLast7DaysSubtitle": "Day-by-day task history",
-  "youLeftBehindSubtitle": "Missed tasks waiting to be re-added",
-  "youProTier": "Pro tier",
-  "youFreeTier": "Free tier",
+  "youLast7Days": "آخری 7 دن",
+  "youLast7DaysSubtitle": "دن بہ دن کام کی تاریخ",
+  "youLeftBehindSubtitle": "چھوٹے ہوئے کام جو دوبارہ شامل ہونے کا منتظر ہیں",
+  "youProTier": "Pro ٹائر",
+  "youFreeTier": "مفت ٹائر",
   "youPro": "Pro",
-  "youFree": "Free",
-  "youLevelLabel": "Level {level}",
-  "youBestStreakLabel": "Best {days} d",
-  "youPlantHabit": "Plant a habit to start a chain.",
+  "youFree": "مفت",
+  "youLevelLabel": "لیول {level}",
+  "youBestStreakLabel": "بہترین {days} دن",
+  "youPlantHabit": "زنجیر شروع کرنے کے لیے عادت لگائیں۔",
   "youProBadge": "PRO",
-  "youUnlockDiscipline": "Unlock the full discipline system.",
-  "youProFeatures": "5 habit slots, full history, legendary medals, monthly streak freezes, weekly share cards.",
-  "youSeePlans": "See plans",
-  "youFromPrice": "from {price}/mo",
-  "youBloomTrackerFooter": "Bloom Tracker · Habit & To-Do",
+  "youUnlockDiscipline": "مکمل نظم و ضبط کا نظام کھولیں۔",
+  "youProFeatures": "5 عادت کی جگہیں، مکمل تاریخ، Legendary تمغے، ماہانہ اسٹریک فریز، ہفتہ وار شیئر کارڈ۔",
+  "youSeePlans": "پلان دیکھیں",
+  "youFromPrice": "{price}/ماہ سے شروع",
+  "youBloomTrackerFooter": "Daily Stitch · عادات اور کام",
 
-  "progressMedals": "Medals",
-  "progressLast7Days": "Last 7 days",
-  "progressSeeAll": "See all",
-  "progressSeeDayByDayActivity": "See your day-by-day activity",
-  "progressTasksFinishedPct": "{done} of {total} tasks finished · {pct}%",
-  "progressNoMedalsYet": "No medals yet — finish a task or tend a sprout to get started.",
-  "progressSeeAllMedals": "See all medals · {earned} of {total} earned",
-  "progressGuardianInsight": "Guardian insight",
-  "progressNextBadgeTier": "NEXT BADGE · {tier}",
-  "progressDaysTarget": "{days} day target",
+  "progressMedals": "تمغے",
+  "progressLast7Days": "آخری 7 دن",
+  "progressSeeAll": "سب دیکھیں",
+  "progressSeeDayByDayActivity": "اپنی دن بہ دن سرگرمی دیکھیں",
+  "progressTasksFinishedPct": "{done} / {total} کام مکمل · {pct}%",
+  "progressNoMedalsYet": "ابھی تک کوئی تمغے نہیں — شروع کرنے کے لیے کام مکمل کریں یا پودے کی دیکھ بھال کریں۔",
+  "progressSeeAllMedals": "تمام تمغے دیکھیں · {earned} / {total} حاصل",
+  "progressGuardianInsight": "نگہبان کی بصیرت",
+  "progressNextBadgeTier": "اگلا بیج · {tier}",
+  "progressDaysTarget": "{days} دن کا ہدف",
   "progressOfTotal": "{value}/{target}",
 
-  "helpTitle": "Help & Support",
-  "helpBody": "Most answers are below. If not, send us a note and we usually reply within 2–3 days.",
-  "helpSectionFAQ": "FREQUENT QUESTIONS",
-  "helpSectionContact": "STILL STUCK?",
-  "helpAddMessage": "Add a short message first.",
-  "helpOpening": "Opening your mail app…",
-  "helpEmailUs": "Email us",
-  "helpOpeningAction": "Opening…",
-  "helpCopyEmail": "Copy support email",
-  "helpCopiedEmail": "Copied support@bloomtracker.app",
-  "helpNoMailApp": "No mail app found. Email us at support@bloomtracker.app.",
-  "helpTopicLabel": "Topic",
-  "helpWhatHappened": "What happened?",
-  "helpHint": "A short description goes a long way…",
-  "helpDisclaimer": "Tapping \"Email us\" opens your mail app with a pre-filled message (no data leaves your device until you send).",
-  "helpFaqQ1": "What is the 5-task cap?",
-  "helpFaqA1": "You can add up to 5 tasks per local day. The 6th is blocked on purpose — discipline beats overload. The cap is the feature, not a limitation.",
-  "helpFaqQ2": "What happens at midnight?",
-  "helpFaqA2": "At your local midnight, any task still marked open is stamped \"missed\" and moves to Left Behind. Habit streaks reset if the habit was not completed the day before.",
-  "helpFaqQ3": "What is Left Behind?",
-  "helpFaqA3": "A gentle, dismissible list of tasks you didn't finish. Open it, re-add only what still matters, and let the rest go. Free tier sees the last 7 days; Pro sees full history.",
-  "helpFaqQ4": "How do streaks work?",
-  "helpFaqA4": "A day extends the chain when you had at least 1 task and 0 were missed. Days with zero tasks neither extend nor break the chain. A streak freeze forgives one missed day per month.",
-  "helpFaqQ5": "What is the streak freeze?",
-  "helpFaqA5": "One \"freeze\" per calendar month, Pro only. Spend it on a day you missed to keep your chain alive. Find it on the Progress tab.",
-  "helpFaqQ6": "Where is my data stored?",
-  "helpFaqA6": "All data lives in Supabase (Postgres) under the account that signed in. We never sell or share it. See the privacy policy linked in the Play Store listing for the full details.",
-  "helpFaqQ7": "How do I delete my account?",
-  "helpFaqA7": "Account deletion is coming to Settings in the next release. For now, email support@bloomtracker.app and we'll handle it within a day.",
-  "helpTopicsGeneral": "General question",
-  "helpTopicsBug": "Bug report",
-  "helpTopicsStreak": "Streak / rollover issue",
-  "helpTopicsBilling": "Billing or Pro tier",
-  "helpTopicsAccount": "Account & data",
-  "helpTopicsFeature": "Feature request",
-  "helpAccountAnon": "(not signed in)",
+  "helpTitle": "مدد و معاونت",
+  "helpBody": "زیادہ تر جوابات نیچے ہیں۔ اگر نہیں ملے، ہمیں نوٹ بھیجیں اور ہم عام طور پر 2-3 دن میں جواب دیتے ہیں۔",
+  "helpSectionFAQ": "عمومی سوالات",
+  "helpSectionContact": "ابھی بھی مسئلہ ہے؟",
+  "helpAddMessage": "پہلے مختصر پیغام شامل کریں۔",
+  "helpOpening": "آپ کا میل ایپ کھل رہا ہے…",
+  "helpEmailUs": "ہمیں ای میل کریں",
+  "helpOpeningAction": "کھل رہا ہے…",
+  "helpCopyEmail": "سپورٹ ای میل کاپی کریں",
+  "helpCopiedEmail": "support@dailystitch.app کاپی ہو گیا",
+  "helpNoMailApp": "کوئی میل ایپ نہیں ملی۔ ہمیں support@dailystitch.app پر ای میل کریں۔",
+  "helpTopicLabel": "موضوع",
+  "helpWhatHappened": "کیا ہوا؟",
+  "helpHint": "مختصر بیان بہت مدد کرتا ہے…",
+  "helpDisclaimer": "\"ہمیں ای میل کریں\" ٹیپ کرنے سے آپ کا میل ایپ پہلے سے بھرے ہوئے پیغام کے ساتھ کھلتا ہے (بھیجنے تک آپ کے ڈیوائس سے کوئی ڈیٹا نہیں جاتا)۔",
+  "helpFaqQ1": "5 کام کی حد کیا ہے؟",
+  "helpFaqA1": "آپ فی مقامی دن 5 تک کام شامل کر سکتے ہیں۔ 6واں جان بوجھ کر بند ہے — نظم و ضبط بھاری پر بہتر ہے۔ حد فیچر ہے، رکاوٹ نہیں۔",
+  "helpFaqQ2": "رات 12 بجے کیا ہوتا ہے؟",
+  "helpFaqA2": "آپ کے مقامی رات 12 بجے، جو بھی کام ابھی کھلا ہے وہ \"چھوٹا ہوا\" ٹیگ ہوتا ہے اور Left Behind میں چلا جاتا ہے۔ عادت کی اسٹریک ری سیٹ ہوتی ہے اگر عادت کل مکمل نہیں ہوئی۔",
+  "helpFaqQ3": "Left Behind کیا ہے؟",
+  "helpFaqA3": "آپ کے نامکمل کاموں کی ایک نرم، ختم کرنے والی فہرست۔ اسے کھولیں، صرف وہی دوبارہ شامل کریں جو ابھی بھی اہم ہو، باقی کو چھوڑ دیں۔ مفت ٹائر آخری 7 دن دیکھتا ہے؛ Pro مکمل تاریخ دیکھتا ہے۔",
+  "helpFaqQ4": "اسٹریک کیسے کام کرتی ہے؟",
+  "helpFaqA4": "دن زنجیر بڑھاتا ہے جب آپ کے پاس کم از کم 1 کام تھا اور 0 چھوٹے۔ صفر کاموں والے دن زنجیر نہ بڑھاتے نہ توڑتے۔ اسٹریک فریز ہر ماہ ایک چھوٹے ہوئے دن کو معاف کرتا ہے۔",
+  "helpFaqQ5": "اسٹریک فریز کیا ہے؟",
+  "helpFaqA5": "ہر کیلنڈر مہینے ایک \"فریز\"، صرف Pro۔ اسے اس دن استعمال کریں جو آپ نے چھوڑا تاکہ زنجیر زندہ رہے۔ اسے پیشرفت ٹیب پر تلاش کریں۔",
+  "helpFaqQ6": "میرا ڈیٹا کہاں محفوظ ہے؟",
+  "helpFaqA6": "تمام ڈیٹا Supabase (Postgres) میں اس اکاؤنٹ کے تحت محفوظ ہے جس سے سائن ان ہوا۔ ہم کبھی بیچتے یا شیئر نہیں کرتے۔ مکمل تفصیلات کے لیے Play Store لسٹنگ میں لکی رازداری پالیسی دیکھیں۔",
+  "helpFaqQ7": "میں اپنا اکاؤنٹ کیسے حذف کروں؟",
+  "helpFaqA7": "اکاؤنٹ حذف کرنا اگلی ریلیز میں ترتیبات میں آ رہا ہے۔ فی الحال، ہمیں support@dailystitch.app پر ای میل کریں اور ہم ایک دن میں سنبھال لیں گے۔",
+  "helpTopicsGeneral": "عمومی سوال",
+  "helpTopicsBug": "بگ رپورٹ",
+  "helpTopicsStreak": "اسٹریک / رول اوور مسئلہ",
+  "helpTopicsBilling": "بلنگ یا Pro ٹائر",
+  "helpTopicsAccount": "اکاؤنٹ اور ڈیٹا",
+  "helpTopicsFeature": "فیچر کی درخواست",
+  "helpAccountAnon": "(سائن ان نہیں)",
 
-  "splashTagline": "Nurture small seeds. Grow a forest.",
+  "splashTagline": "چھوٹے بیج پالیں۔ جنگل اگائیں۔",
 
-  "priorityStandard": "STANDARD",
-  "priorityVital": "VITAL",
-  "prioritySpark": "SPARK"
+  "priorityStandard": "معمولی",
+  "priorityVital": "ضروری",
+  "prioritySpark": "شعلہ",
+
+  "settingsDeleteAccount": "اکاؤنٹ حذف کریں",
+  "settingsDeleteAccountSubtitle": "اپنا ڈیٹا مستقل طور پر ہٹائیں",
+  "settingsDeleteAccountConfirmTitle": "اپنا اکاؤنٹ حذف کریں؟",
+  "settingsDeleteAccountConfirmBody": "یہ آپ کی پروفائل، کام، عادات اور پیشرفت کو مستقل طور پر حذف کرتا ہے۔ فعال Play سبسکرپشنز کو الگ سے Google Play میں منسوخ کرنا ہوگا۔ یہ واپس نہیں ہو سکتا۔",
+  "settingsDeleteAccountConfirmButton": "ہمیشہ کے لیے حذف کریں",
+  "settingsDeleteAccountSuccess": "آپ کا اکاؤنٹ حذف ہو گیا۔",
+  "settingsDeleteAccountFailed": "اکاؤنٹ حذف نہیں ہو سکا۔ دوبارہ کوشش کریں یا support@dailystitch.app پر ای میل کریں۔",
+
+  "referralYouTitle": "دوستوں کو مہمان بنائیں · مفت Pro کمائیں",
+  "referralYouSubtitle": "{milestone} میں سے {progress} دوست شامل ہوئے",
+  "@referralYouSubtitle": {
+    "placeholders": {
+      "progress": { "type": "int" },
+      "milestone": { "type": "int" }
+    }
+  },
+  "referralYouShare": "مہمانی شیئر کریں",
+  "referralYouDetails": "تفصیلات دیکھیں",
+  "referralPaywallTitle": "مفت Pro مہینہ",
+  "referralPaywallBody": "5 دستوں کو مہمان بنائیں جو سائن اپ کریں → 1 مہینہ مفت Pro",
+  "referralPaywallProBody": "مہمان بناتے رہیں — مفت Pro مہینے جمع کریں",
+  "referralPaywallProgress": "{count} / {milestone}",
+
+  "insightsLoadError": "آپ کی پیشرفت لو نہیں ہو سکی۔ بعد میں دوبارہ کوشش کریں۔",
+  "insightsMetricCurrentChain": "موجودہ زنجیر",
+  "insightsMetricBestEver": "اب تک کی بہترین",
+  "insightsMetricTasksDone": "کام مکمل",
+  "insightsMetricPerfectDays": "کامل دن",
+  "insightsMetricHabits": "عادات",
+  "insightsDay": "دن",
+  "insightsDays": "دن",
+  "insightsSectionThisWeek": "اس ہفتے",
+  "insightsShareMyWeek": "میرا ہفتہ شیئر کریں",
+  "insightsShareMyWeekPro": "میرا ہفتہ شیئر کریں · Pro",
+  "insightsShareReceiptText": "میرا ہفتہ Daily Stitch پر۔ زنجیر نہ توڑیں۔",
+  "insightsHistoryWindowTitle": "آخری {days} دن دکھا رہا ہے",
+  "@insightsHistoryWindowTitle": {
+    "placeholders": {
+      "days": { "type": "int" }
+    }
+  },
+  "insightsHistoryUpsell": "Pro سے اپنا مکمل تاریخ کھولیں",
+
+  "referralScreenTitle": "دوستوں کو مہمان بنائیں",
+  "referralLaunchGift": "-launch مہینے کا تحفہ",
+  "referralRewardTitle": "1 مہینہ مفت Pro حاصل کریں",
+  "referralRewardBody": "اپنا کوڈ دوستوں کے ساتھ شیئر کریں۔ جب 5 لوگ اس کا استعمال کرتے ہوئے سائن اپ کریں، آپ کو 1 پورا مہینہ Daily Stitch Pro ملتا ہے۔",
+  "referralYourCode": "آپ کا ریفرل کوڈ",
+  "referralCopyCodeTooltip": "کوڈ کاپی کریں",
+  "referralCodeCopied": "ریفرل کوڈ کاپی ہو گیا",
+  "referralShareWithFriends": "دوستوں کے ساتھ شیئر کریں",
+  "referralFooterHint": "دوست اکاؤنٹ بناتے وقت آپ کا کوڈ درج کرتے ہیں۔ ہر دوست آپ کے انعام کی طرف ایک بار شمار ہوتا ہے۔",
+  "referralFriendsJoinedOne": "{count} دوست شامل ہو گیا",
+  "@referralFriendsJoinedOne": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "referralFriendsJoinedMany": "{count} دوست شامل ہوئے",
+  "@referralFriendsJoinedMany": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "referralRewardsEarnedOne": "آپ نے {count} مفت مہینہ Pro حاصل کیا ہے۔",
+  "@referralRewardsEarnedOne": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "referralRewardsEarnedMany": "آپ نے {count} مفت مہینے Pro حاصل کیے ہیں۔",
+  "@referralRewardsEarnedMany": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "referralRewardUnlocked": "انعام کھل گیا — اپنا مفت مہینہ Pro کا لطف اندوز ہوں!",
+  "referralRemainingToUnlock": "اپنا مفت مہینہ کھولنے کے لیے {remaining} مزید",
+  "@referralRemainingToUnlock": {
+    "placeholders": {
+      "remaining": { "type": "int" }
+    }
+  },
+
+  "youProMemberSince": "{month} سے Daily Stitch Pro ممبر",
+  "@youProMemberSince": {
+    "placeholders": {
+      "month": { "type": "String" }
+    }
+  },
+  "youProPerksTitle": "آپ کے Pro فوائد",
+  "manageProThankYou": "Daily Stitch کی حمایت کا شکریہ",
+  "manageProReferralHint": "اپنا Pro بڑھانے کے لیے مزید دوستوں کو مہمان بنائیں",
+
+  "bootstrapConfigErrorBody": "{detail}\n\nleanspace/.env میں SUPABASE_URL اور SUPABASE_PUBLISHABLE_KEY (یا پرانی SUPABASE_ANON_KEY) شامل کریں، پھر دوبارہ بلڈ کریں:\n\nflutter build apk --debug",
+  "@bootstrapConfigErrorBody": {
+    "placeholders": {
+      "detail": { "type": "String" }
+    }
+  },
+
+  "languageSystemDefault": "سسٹم ڈیفالٹ",
+  "languageNameEn": "English",
+  "languageNameUr": "اردو (Urdu)",
+  "languageNameEs": "Español",
+  "languageNamePt": "Português",
+  "languageNameFr": "Français",
+  "languageNameDe": "Deutsch",
+  "languageNameIt": "Italiano",
+  "languageNameAr": "العربية",
+  "languageNameTr": "Türkçe",
+  "languageNameId": "Bahasa Indonesia",
+
+  "onboardingLanguageTitle": "اپنی زبان منتخب کریں",
+  "onboardingLanguageBody": "وہ زبان چنیں جو آپ Daily Stitch میں استعمال کرنا چاہتے ہیں۔ آپ اسے کسی بھی وقت ترتیبات میں تبدیل کر سکتے ہیں۔",
+  "onboardingLanguageContinue": "جاری رکھیں",
+
+  "commonPro": "PRO",
+  "commonFriend": "دوست",
+
+  "settingsAppTheme": "ایپ تھیم",
+  "settingsAppThemeSubtitle": "اپنے ذاتی سینکچری کے رنگ منتخب کریں",
+  "settingsInviteFriendsTitle": "دوستوں کو مہمان بنائیں · مفت Pro",
+  "settingsInviteFriendsSubtitle": "5 دوستوں کے شامل ہونے پر 1 مہینہ مفت",
+
+  "themePickerTitle": "ذاتی سینکچری",
+  "themePickerSubtitle": "وہ رنگ پیلیٹ چنیں جو آپ کو سکون دے۔",
+  "themeNameClassicBloom": "کلاسک بلوم",
+  "themeNameSolarTerracotta": "سولر ٹیرا کوٹا",
+  "themeNameMidnightOasis": "میڈنائٹ واسطہ",
+  "themeNameLavenderDream": "لیونڈر خواب",
+  "themeNameNordicFrost": "نارڈک فراست",
+  "themeNameCyberpunkNeon": "سائبر پنک نیون",
+
+  "reminderTitle": "یاد دہانیاں",
+  "reminderBody": "آخری موقع رات 12 بجے سے پہلے آپ کو پنگ کرتا ہے اگر کام ابھی بھی کھلے ہوں۔",
+  "reminderFinalCall": "آخری موقع",
+  "reminderEveningNudge": "شام کی ترغیب",
+  "reminderChangeTime": "وقت تبدیل کریں",
+  "reminderSave": "یاد دہانیاں محفوظ کریں",
+
+  "notificationChannelReminders": "Daily Stitch یاد دہانیاں",
+  "notificationChannelRemindersDesc": "شام کی ترغیب اور آخری موقع کی یاد دہانیاں",
+  "notificationChannelAlarms": "Daily Stitch کام کے الارم",
+  "notificationChannelAlarmsDesc": "کام کی یاد دہانیوں کے لیے بلند الارم",
+  "notificationTaskReminderTitle": "کام کی یاد دہانی",
+  "notificationFinalCallTitle": "آخری موقع",
+  "notificationFinalCallBody": "آج ابھی بھی {count} کام کھلے ہیں۔",
+  "@notificationFinalCallBody": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "notificationEveningTitle": "شام کی چیک ان",
+  "notificationEveningBody": "آج آپ کا باغ کیسا بڑھا؟",
+
+  "widgetSetupTitle": "زنجیر ویجیٹ شامل کریں",
+  "widgetSetupBody": "اپنی اسٹریک ہوم اسکرین پر رکھیں — ایپ کھولنے کی ضرورت نہیں۔",
+  "widgetSetupAdd": "ہوم اسکرین پر شامل کریں",
+  "widgetSetupStep1": "اپنی ہوم اسکرین پر دیر تک دبائیں",
+  "widgetSetupStep2": "ویجیٹس ٹیپ کریں",
+  "widgetSetupStep3": "Daily Stitch تلاش کریں اور اسے گھسیٹ لائیں",
+  "widgetSetupPinSuccess": "ویجیٹ رکھنے کے لیے اپنی ہوم اسکرین چیک کریں۔",
+  "widgetSetupPinFallback": "آپ کا لانچر ایک ٹیپ ایڈ سپورٹ نہیں کر سکتا۔ نیچے دیے گئے دستی مراحل استعمال کریں۔",
+
+  "paywallWelcomePro": "Daily Stitch Pro میں خوش آمدید",
+  "paywallSavePercent": "~16% بچائیں",
+  "paywallTermsTitle": "سبسکرپشن کی شرائط",
+  "paywallTermsBody": "بلنگ Google Play کے ذریعے سنبھالتی ہے۔ سبسکرپشنز خود بخود تجدید ہوتی ہیں جب تک آپ Play Store → سبسکرپشنز میں موجودہ مدت کے ختم ہونے سے کم از کم 24 گھنٹے پہلے منسوخ نہیں کرتے۔ آپ کسی بھی وقت اپنے Google Play اکاؤنٹ سے اپنی سبسکرپشن کا انتظام یا منسوخ کر سکتے ہیں۔\n\nایپ ان اسٹال کرنے سے آپ کی سبسکرپشن منسوخ نہیں ہوتی۔\n\nدکھائی قیمتیں آپ کی مقامی کرنسی میں ہیں اور علاقے کے مطابق مختلف ہو سکتی ہیں۔ ٹیکس لاگو ہو سکتے ہیں۔",
+  "paywallPrivacyTitle": "رازداری",
+  "paywallPrivacyBody": "Daily Stitch آپ کے کام، عادات اور اسٹریک ڈیٹا کو ہمارے Supabase بیک اینڈ پر محفوظ کرتا ہے، جو آپ کے اکاؤنٹ سے جڑا ہوا ہے۔ ہم کبھی آپ کا ڈیٹا نہیں بیچتے۔\n\nسبسکرپشن خریداریاں Google Play کے ذریعے پروسیس ہوتی ہیں۔ ہم آپ کی Pro حیثیت کی تصدیق کے لیے Google سے ایک تصدیق شدہ خریداری ٹوکن ملتے ہیں۔ ہم آپ کی ادائیگی کی تفصیلات نہیں دیکھتے یا محفوظ کرتے۔\n\nآپ ترتیبات → اکاؤنٹ حذف کریں سے مکمل ڈیٹا ایکسپورٹ یا اکاؤنٹ حذف کی درخواست کر سکتے ہیں۔",
+  "paywallCloseTooltip": "بند کریں",
+  "paywallFooterLinks": "بحال کریں · شرائط · رازداری",
+
+  "manageProTitle": "Pro سبسکرپشن",
+  "manageProActive": "فعال",
+  "manageProNotSubscribed": "سبسکرائب نہیں",
+  "manageProFreeTier": "مفت ٹائر",
+  "manageProRenewsOn": "{date} کو تجدید یا ختم ہوتا ہے۔",
+  "@manageProRenewsOn": { "placeholders": { "date": { "type": "String" } } },
+  "manageProFreeBody": "آپ Daily Stitch مفت استعمال کر رہے ہیں۔ مکمل نظام کھولنے کے لیے اپ گریڈ کریں۔",
+  "manageProSectionManage": "انتظام",
+  "manageProOpenPlay": "Google Play سبسکرپشنز کھولیں",
+  "manageProOpenPlaySubtitlePro": "منسوخ کریں، پلان تبدیل کریں، یا ادائیگی کا طریقہ اپ ڈیٹ کریں",
+  "manageProOpenPlaySubtitleFree": "اپنی موجودہ سبسکرپشن (اگر ہو) یہاں تلاش کریں",
+  "manageProShareApp": "Daily Stitch شیئر کریں",
+  "manageProShareSubtitle": "دوست کو زنجیر کے بارے میں بتائیں",
+  "manageProSectionHelp": "مدد درکار ہے؟",
+  "manageProHelpTitle": "مدد و معاونت",
+  "manageProHelpSubtitle": "سبسکرپشن FAQ، رابطہ، بگ رپورٹس",
+  "manageProBillingFooter": "بلنگ Google Play کے ذریعے · {version}",
+  "@manageProBillingFooter": { "placeholders": { "version": { "type": "String" } } },
+  "manageProPlayInstructions": "Google Play Store ایپ کھولیں → اپنی پروفائل ٹیپ کریں → ادائیگیاں اور سبسکرپشنز → سبسکرپشنز۔",
+
+  "addTaskGrowSomething": "کچھ اگائیں",
+  "addTaskPlantSprout": "پودا لگائیں",
+  "addTaskIntentionName": "نیت کا نام",
+  "addTaskSproutName": "پودے کا نام",
+  "addTaskHintTask": "مثلاً، صبح کا سورج نمسکار",
+  "addTaskHintHabit": "مثلاً، صبح کا یوگا",
+  "addTaskWhen": "کب؟",
+  "addTaskPriority": "ترجیح",
+  "addTaskNotes": "نوٹس",
+  "addTaskCadenceDaily": "روزانہ",
+  "addTaskCadenceWeekdays": "ہفتے کے دن",
+  "addTaskCadence3x": "ہفتے میں 3 بار",
+  "addTaskCadenceWeekly": "ہفتہ وار",
+  "addTaskPlantIntention": "نیت لگائیں",
+  "addTaskPlantSproutCta": "پودا لگائیں",
+  "addTaskPlanting": "لگا رہے ہیں…",
+  "addTaskNameIntentionError": "اپنی نیت کا نام دیں",
+  "addTaskNameSproutError": "اپنے پودے کا نام دیں",
+  "addTaskNotesMigrationWarning": "کام محفوظ ہو گیا۔ نوٹس اور ترجیح کو تازہ ترین Supabase مائیگریشن کی ضرورت ہے — supabase/migrations/20260701000000_todos_notes_priority.sql چلائیں۔",
+  "addTaskNoSproutSlots": "کوئی خالی پودے کی جگہ نہیں — پہلے ایک کی دیکھ بھال کریں۔",
+  "addTaskSaveSproutError": "پودا محفوظ نہیں ہو سکا — دوبارہ کوشش کریں۔",
+  "addTaskElementWater": "پانی",
+  "addTaskElementLight": "روشنی",
+  "addTaskElementSoil": "زمین",
+  "addTaskElementBreeze": "ہوا",
+  "addTaskCadenceLabel": "ترتیب",
+  "addTaskPreparationNotes": "تیاری کے نوٹس",
+  "addTaskTendingNotes": "دیکھ بھال کے نوٹس",
+  "addTaskNotesHintTask": "اس کام کے لیے کوئی ٹول یا ذہنیت ٹپس؟",
+  "addTaskNotesHintHabit": "اس پودے کی دیکھ بھال کیسا لگتا ہے؟",
+  "addTaskChooseElement": "عنصر منتخب کریں",
+  "addTaskElementsTooltip": "عناصر کا کیا مطلب ہے؟",
+  "addTaskTaskSeed": "کام کا بیج",
+  "addTaskHabitSprout": "عادت کا پودا",
+  "addTaskPickElement": "صحح عنصر چنیں",
+  "addTaskPickElementBody": "ہر عنصر مختلف قسم کی محنت سے ملتا ہے۔ نگہبان اس وقت مضبوط ہوتا ہے جب آپ صحح پانی دیتے ہیں۔",
+  "addTaskClearForm": "فارم صاف کریں",
+
+  "shareCouldNotShare": "ابھی شیئر نہیں کر سکتے",
+
+  "authReferralCodeLabel": "ریفرل کوڈ (اختیاری)",
+  "authReferralCodeHint": "دوست کا کوڈ",
+
+  "youPerkHabitSlots": "5 عادت کی جگہیں",
+  "youPerkFullHistory": "مکمل تاریخ",
+  "youPerkAllThemes": "تمام تھیمز",
+  "youPerkStreakFreezes": "2 اسٹریک فریز / ماہ",
+  "youPerkLegendaryMedals": "Legendary تمغے",
+
+  "subscriptionPurchaseFailed": "خریداری ناکام ہوئی۔ دوبارہ کوشش کریں۔",
+  "subscriptionUnavailable": "اس ڈیوائس پر ان ایپ خریداری دستیاب نہیں۔",
+  "subscriptionLoadFailed": "سبسکرپشن آپشنز لو نہیں ہو سکیں۔",
+  "subscriptionVerifyFailed": "خریداری کی تصدیق نہیں ہو سکی۔ خریداری بحال کریں دوبارہ کوشش کریں۔",
+
+  "streakFreezeFailed": "اسٹریک فریز استعمال نہیں ہو سکا۔",
+  "streakFreezeAlreadyUsed": "آپ نے اس مہینے اپنا فریز پہلے ہی استعمال کر لیا۔",
+  "streakFreezeNoMissed": "اس دن فریز کرنے کے لیے کوئی چھوٹا ہوا کام نہیں۔",
+  "streakFreezeNotPastDay": "آپ صرف گزشتہ دن فریز کر سکتے ہیں۔",
+
+  "myDayLoadError": "میرا دن لو نہیں ہو سکا۔ تازہ کرنے کے لیے کھینچیں۔",
+  "myDayCapReached": "آج کی 5 کام کی حد پوری ہو گئی۔",
+  "myDayRemoveTaskError": "کام ہٹایا نہیں جا سکا۔",
+
+  "shareCardTitle": "اپنا ہفتہ شیئر کریں",
+  "shareCardCta": "تصویر شیئر کریں",
+
+  "medalTierSprout": "پودا",
+  "medalTierCommon": " عام",
+  "medalTierRare": "نایاب",
+  "medalTierEpic": "شاندار",
+  "medalTierLegendary": " Legendary",
+
+  "medalCategoryTasks": "کام",
+  "medalCategoryHabits": "عادات",
+  "medalCategoryStreaks": "اسٹریکس",
+  "medalCategoryMastery": "مہارت",
+
+  "medalsShareTooltip": "کامیابیاں شیئر کریں",
+  "medalsFilterAll": "سب",
+
+  "addHabitTitleNew": "نیا پودا لگائیں",
+  "addHabitTitleEdit": "اپنے پودے کی دیکھ بھال کریں",
+  "addHabitLabelSproutName": "پودے کا نام",
+
+  "shareCardAppBarTitle": "شیئر کارڈ",
+  "shareCardAppBarTitleMedal": "اپنا تمغہ شیئر کریں",
+  "shareCardDescMedal": "اپنا نیا {title} بیج دکھائیں",
+  "shareCardBodyMedal": "کامیابی اپنے دائرے میں شیئر کریں۔ کارڈ PNG کے طور پر ایکسپورٹ ہوتا ہے اور کسی بھی سوشل ایپ کے لیے تیار ہوتا ہے۔",
+  "shareCardCtaPreparing": "تیار ہو رہا ہے…",
+  "shareCardMilestone": "نئے سنگ میل کھلے",
+  "shareCardStatChain": "دن کی زنجیر",
+  "shareCardStatSprouts": "پودے",
+  "shareCardStatMedals": "تمغے",
+  "shareCardHeadlineStreak": "{days} دن کی اسٹریک",
+  "@shareCardHeadlineStreak": {
+    "placeholders": { "days": { "type": "int" } }
+  },
+  "shareCardHeadlineMedals": "{count} تمغے حاصل",
+  "@shareCardHeadlineMedals": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "shareCardHeadlineSproutGuardian": "پودے کا نگہبان",
+  "shareCardHeadlineFirstSeeds": "پہلے بیج لگائے گئے",
+  "shareCardHeadlineGardenBegins": "باغ شروع ہوتا ہے",
+  "shareCardSubheadMonth": "آپ نے کامیابی سے ایک پورا مہینہ اپنی عادات کی پرورش کی ہے۔",
+  "shareCardSubheadWeek": "ایک پورا ہفتہ ترقی کا — آپ کا جنگل گھنا ہو رہا ہے۔",
+  "shareCardSubheadProgress": "آپ کا سینکچری اصلی پیشرفت دکھا رہا ہے۔ جاری رکھیں۔",
+  "shareCardSubheadSprouts": "آپ کے پہلے پودے جڑیں پکڑ رہے ہیں۔ انہیں روزانہ پانی دیں۔",
+  "shareCardSubheadFirstSeeds": "آپ کے پہلے بیج زمین میں ہیں۔ انہیں کھلتا دیکھیں۔",
+  "shareCardSubheadFallback": "ہر جنگل ایک چھوٹے سے انتخاب سے شروع ہوتا ہے۔",
+
+  "shareAppText": "Daily Stitch — روزانہ پانچ چھوٹے بیج، ایک نہ ٹوٹنے والی زنجیر۔ اپنا بیج لگائیں۔\n\n{url}",
+  "@shareAppText": {
+    "placeholders": { "url": { "type": "String" } }
+  },
+  "shareAppSubject": "Daily Stitch آزمائیں",
+  "shareAppReferralText": "میں Daily Stitch پر اپنی روزانہ زنجیر بنا رہا ہوں — میرے ریفرل کوڈ {code} سے میرے ساتھ شامل ہوں اور ہم دونوں بڑھیں۔\n\n{url}",
+  "@shareAppReferralText": {
+    "placeholders": {
+      "code": { "type": "String" },
+      "url": { "type": "String" }
+    }
+  },
+  "shareAppReferralSubject": "Daily Stitch پر میرے ساتھ شامل ہوں",
+
+  "shareCardShareTextProgress": "میری Daily Stitch پیشرفت — Daily Stitch پر {year}۔",
+  "@shareCardShareTextProgress": {
+    "placeholders": { "year": { "type": "String" } }
+  },
+  "shareCardShareTextMedal": "میں نے ابھی Daily Stitch پر \"{title}\" تمغہ کھولا ہے۔ {subtitle}",
+  "@shareCardShareTextMedal": {
+    "placeholders": {
+      "title": { "type": "String" },
+      "subtitle": { "type": "String" }
+    }
+  },
+
+  "insightsReceiptTasksDone": "کام مکمل",
+  "insightsReceiptPerfectDays": "کامل دن",
+  "insightsReceiptCompletion": "تکمیل",
+  "insightsReceiptDate": "ہفتہ {date}",
+  "@insightsReceiptDate": {
+    "placeholders": { "date": { "type": "String" } }
+  },
+  "insightsReceiptFooter": "زنجیر نہ توڑیں۔",
+
+  "elementLabelWater": "پانی",
+  "elementLabelLight": "روشنی",
+  "elementLabelSoil": "زمین",
+  "elementLabelBreeze": "ہوا",
+  "elementTaglineWater": "بحال کریں۔ آب پاشی، آرام، جذباتی دیکھ بھال — کچھ بھی جو کنویں کو دوبارہ بھرتا ہے۔",
+  "elementTaglineLight": "جاگیں۔ صبح کی روشنی، توجہ کے بلاکس، مطالعہ، مراقبہ — توانائی اور وضاحت۔",
+  "elementTaglineSoil": "بنیاد۔ مطالعہ، جرنلنگ، گہری محنت — سست جڑیں جو طویل مزاحمت بناتی ہیں۔",
+  "elementTaglineBreeze": "حرکت۔ پیدل، دوڑ، سانس کی مشق — ہلکی، متحرک توانائی جو ذہن صاف کرتی ہے۔",
+  "elementWhenWater": "جب آپ تھکے ہوئے یا تحلیل محسوس کریں۔",
+  "elementWhenLight": "جب آپ کو دن کا واضح آغاز چاہیے۔",
+  "elementWhenSoil": "جب کام سست ہے لیکن قابل ہے (مطالعہ، حرفت، دیکھ بھال)۔",
+  "elementWhenBreeze": "جب آپ کا جسم (یا ذہن) کو حرکت اور سانس کی ضرورت ہو۔",
+
+  "bloomTierMastery": "مہارت",
+  "bloomTierStrong": "مضبوط",
+  "bloomTierGrowing": "بڑھ رہا ہے",
+  "bloomTierSprouting": "پھوت دار ہو رہا ہے",
+  "bloomTierLocked": "بند",
+
+  "habitBloomSubtitle": "{count} دن کی اسٹریک · {element}",
+  "@habitBloomSubtitle": {
+    "placeholders": {
+      "count": { "type": "int" },
+      "element": { "type": "String" }
+    }
+  },
+
+  "medal_id_first_spark": "پہلا شعلہ",
+  "medal_sub_first_spark": "آپ نے مچھ جلایا۔",
+  "medal_desc_first_spark": "اپنا پہلا کام مکمل کریں۔ ہر زنجیر یہاں سے شروع ہوتی ہے۔",
+  "medal_id_triple_seed": "تین بیج",
+  "medal_sub_triple_seed": "تین زمین میں۔",
+  "medal_desc_triple_seed": "کل میں 3 کام مکمل کریں۔",
+  "medal_id_dozen_sower": "بارہ بیج لگانے والا",
+  "medal_sub_dozen_sower": "بارہ کا میدان۔",
+  "medal_desc_dozen_sower": "کل میں 12 کام مکمل کریں۔",
+  "medal_id_quarter_century": "چوتھائی صدی",
+  "medal_sub_quarter_century": "ہاں کہنے کا موسم۔",
+  "medal_desc_quarter_century": "کل میں 25 کام مکمل کریں۔",
+  "medal_id_productivity_titan": "پیداواریت کا عظیم",
+  "medal_sub_productivity_titan": "مسلسلت جمع ہوتی ہے۔",
+  "medal_desc_productivity_titan": "50 کام مکمل کریں — آپ نے اصلی رفتار بنا لی ہے۔",
+  "medal_id_century_planter": "صدی کا لگانے والا",
+  "medal_sub_century_planter": "اپنا ایک جنگل۔",
+  "medal_desc_century_planter": "100 کام مکمل کریں۔ آپ صارفین کے ٹاپ 5% میں ہیں۔",
+  "medal_id_clean_day": "صاف تختی",
+  "medal_sub_clean_day": "ایک بھی پودا نہیں۔",
+  "medal_desc_clean_day": "ایک دن میں لگائے گئے ہر کام مکمل کریں۔",
+  "medal_id_triple_perfect": "تین کامل",
+  "medal_sub_triple_perfect": "تین بے عیب دوڑ۔",
+  "medal_desc_triple_perfect": "3 کامل دن حاصل کریں۔",
+  "medal_id_perfect_week": "کامل ہفتہ",
+  "medal_sub_perfect_week": "سات دن نہ ٹوٹے۔",
+  "medal_desc_perfect_week": "مسلسل 7 کامل دن۔",
+  "medal_id_two_week_chain": "پندرہ دن کی طاقت",
+  "medal_sub_two_week_chain": "دو ہفتے آگ میں۔",
+  "medal_desc_two_week_chain": "14 دن کی زنجیر برقرار رکھیں۔",
+  "medal_id_iron_chain": "لوہے کی زنجیر",
+  "medal_sub_iron_chain": "30 لنکس دھرے گئے۔",
+  "medal_desc_iron_chain": "30 دن کی زنجیر۔ سب سے مشکل کام کا تمغہ۔",
+  "medal_id_quarterly_chain": "سہ ماہی زنجیر",
+  "medal_sub_quarterly_chain": "ایک موسم، نہ ٹوٹا۔",
+  "medal_desc_quarterly_chain": "90 دن کی زنجیر۔ Legendary حیثیت۔",
+  "medal_id_vital_priority": "ضروری شعلہ",
+  "medal_sub_vital_priority": "آپ نے مشکل چنے۔",
+  "medal_desc_vital_priority": "ضروری ترجیح والے 5 کام مکمل کریں۔",
+  "medal_id_spark_priority": "شعلے پر قابو",
+  "medal_sub_spark_priority": "تیز کامیابیاں جمع ہوتی ہیں۔",
+  "medal_desc_spark_priority": "Spark ترجیح والے 5 کام مکمل کریں۔",
+  "medal_id_note_taker": "نوٹ لینے والا",
+  "medal_sub_note_taker": "کاغذ پر منصوبے ذہن سے بہتر ہیں۔",
+  "medal_desc_note_taker": "5 مختلف کاموں میں تیاری کے نوٹس شامل کریں۔",
+  "medal_id_left_behind_rescuer": "پیچھے چھوڑے گاؤں کا بچانے والا",
+  "medal_sub_left_behind_rescuer": "کوئی کام پیچھے نہ چھوڑا۔",
+  "medal_desc_left_behind_rescuer": "اگلے دن 3 چھوٹے ہوئے کام دوبارہ شامل کریں۔",
+  "medal_id_first_sprout": "پہلا پودا",
+  "medal_sub_first_sprout": "نئی روزانہ رسم۔",
+  "medal_desc_first_sprout": "اپنی پہلی عادت لگائیں۔",
+  "medal_id_trio_sprout": "تین پودے",
+  "medal_sub_trio_sprout": "ایک چھوٹا نظام۔",
+  "medal_desc_trio_sprout": "3 مختلف عادات لگائیں۔",
+  "medal_id_week_of_growth": "ترقی کا ہفتہ",
+  "medal_sub_week_of_growth": "جڑیں پکڑنا شروع کرتی ہیں۔",
+  "medal_desc_week_of_growth": "7 دن تک روزانہ عادت کی دیکھ بھال کریں۔",
+  "medal_id_fortnight_floret": "پندرہ دن کا پھول",
+  "medal_sub_fortnight_floret": "مکمل پھول۔",
+  "medal_desc_fortnight_floret": "14 دن کی عادت کی اسٹریک۔",
+  "medal_id_rooted_master": "جڑیں پکڑنے والا ماہر",
+  "medal_sub_rooted_master": "گہری جڑیں، گہری طاقت۔",
+  "medal_desc_rooted_master": "30 دن کی عادت کی اسٹریک۔",
+  "medal_id_half_year_bloom": "آدھے سال کا پھول",
+  "medal_sub_half_year_bloom": "اب باغ مستقل ہے۔",
+  "medal_desc_half_year_bloom": "ایک عادت کو 180 دن برقرار رکھیں۔",
+  "medal_id_garden_keeper": "باغ کا رکھوالا",
+  "medal_sub_garden_keeper": "متنوعیت، ساتھ میں۔",
+  "medal_desc_garden_keeper": "ایک ساتھ 4 مختلف عادات بڑھائیں۔",
+  "medal_id_hydration_hero": "آب پاشی کا ہیرو",
+  "medal_sub_hydration_hero": "آپ کنویں کو بھرتے ہیں۔",
+  "medal_desc_hydration_hero": "آب پاشی کی عادت لگائیں (پانی/مشروب)۔",
+  "medal_id_mindful_mover": "mindful حرکت کرنے والا",
+  "medal_sub_mindful_mover": "جسم یاد رکھتا ہے۔",
+  "medal_desc_mindful_mover": "حرکت کی عادت لگائیں (یوگا/پیدل/دوڑ)۔",
+  "medal_id_devoted_keeper": "وقف رکھوالا",
+  "medal_sub_devoted_keeper": "ساٹھ دن، ایک مشق۔",
+  "medal_desc_devoted_keeper": "ایک عادت کو 60 دن تک روزانہ دیکھ بھال کریں۔",
+  "medal_id_tending_notes": "دیکھ بھال کے نوٹس",
+  "medal_sub_tending_notes": "جاتے جاتے غور کریں۔",
+  "medal_desc_tending_notes": "3 عادات میں دیکھ بھال کے نوٹس شامل کریں۔",
+
+  "medalTierTaglineSprout": "پہلا بیج لگائیں",
+  "medalTierTaglineCommon": "عادت بنا رہے ہیں",
+  "medalTierTaglineRare": "اصلی رفتار دکھا رہے ہیں",
+  "medalTierTaglineEpic": "آپ قدرت کی طاقت ہیں",
+  "medalTierTaglineLegendary": "神话ی، تقریباً کوئی یہاں نہیں پہنچتا",
+
+  "guardianHeadlineNoTasks": "آج کی زمین تازہ ہے۔\nاپنا پہلا بیج لگائیں\nاور اسے بڑھتا دیکھیں۔",
+  "guardianHeadlineAllDone": "آپ نے جو ہر بیج لگایا\nوہ پھول میں ہے۔\nآرام کریں، نگہبان — آپ نے کما لیا۔",
+  "guardianHeadlineStreak14": "{count} دن\nمسلسل ترقی کے۔\nآپ کا جنگل زندگی سے بھرا ہوا ہے۔",
+  "@guardianHeadlineStreak14": { "placeholders": { "count": { "type": "int" } } },
+  "guardianHeadlineStreak7": "ایک پورا ہفتہ پھول میں،\nنگہبان۔\nایک اور کامل دن\nزنجیر بڑھاتا ہے۔",
+  "guardianHeadlineStreak3": "آپ کی زنجیر برقرار ہے۔\nابھی بھی کھلے بیجوں کی\nدیکھ بھال کریں۔",
+  "guardianHeadlineNoHabitsDone": "آپ کاموں کی اچھی دیکھ بھال کر رہے ہیں۔\nایک پودا لگائیں —\nعادات ہیں جو جنگل بڑھاتی ہیں۔",
+  "guardianHeadlineSomeDone": "کچھ بیج کھلے،\nکچھ نہیں۔ کوئی بات نہیں۔\nکل ایک اور لگانے کا دن ہے۔",
+  "guardianHeadlineMorning": "صبح بخیر، نگہبان۔\nدن ابھی جوان ہے\nاور زمین تیار ہے۔",
+  "guardianHeadlineAfternoon": "دوپہر بخیر، نگہبان۔\nآدھی روشنی باقی ہے —\nجاری رکھیں۔",
+  "guardianHeadlineEvening": "شام بخیر، نگہبان۔\nسورج غروب ہونے سے پہلے\nایک آخری جائزہ۔",
+  "guardianHeadlineNight": "رات گئی ابھی بھی جاگ رہے ہیں؟\nنگہبان بھی آرام کرتے ہیں۔\nکل کا بیج ابھی لگائیں۔",
+
+  "guardianBodyNoTasks": "آپ کا سینکچری ابھی خاموش ہے۔ ایک نیت شامل کریں اور دیکھیں شام تک کیا بدلتا ہے۔",
+  "guardianBodyStreak14": "{count} دن سے چل رہا ہے۔ زنجیر قسمت نہیں — یہ چھوٹے انتخاب جمع ہو رہے ہیں۔ جمع ہونے دیں۔",
+  "@guardianBodyStreak14": { "placeholders": { "count": { "type": "int" } } },
+  "guardianBodyStreak3": "{count} دن کی زنجیر اصلی رفتار ہے۔ آج کے کھلے بیج مکمل کریں۔",
+  "@guardianBodyStreak3": { "placeholders": { "count": { "type": "int" } } },
+  "guardianBodyNoHabits": "آپ نے ابھی تک {count} کام لگائے ہیں۔ ایک عادت کا پودا شامل کرنے سے کام دن بدن جمع ہوتا رہے گا۔",
+  "@guardianBodyNoHabits": { "placeholders": { "count": { "type": "int" } } },
+  "guardianBodyLowCompletion": "آپ اپنے لگائے {pct}% مکمل کر رہے ہیں۔ کم، تیز بیج بکھرے ہوئے دس بیجوں سے زیادہ اونچے اگتے ہیں۔",
+  "@guardianBodyLowCompletion": { "placeholders": { "pct": { "type": "int" } } },
+  "guardianBodyDefault": "آپ کا سینکچری زندہ ہے۔ {tasks} کام مکمل، {sprouts} پودا(پودے) بڑھ رہا — کام نظر آ رہا ہے۔",
+  "@guardianBodyDefault": { "placeholders": { "tasks": { "type": "int" }, "sprouts": { "type": "int" } } },
+
+  "guardianInsightWaitingTitle": "آپ کے پہلے قدم کا منتظر",
+  "guardianInsightWaitingBody": "کام یا عادت شامل کریں اور میں آپ کے باغ میں پیٹرن پڑھنا شروع کروں گا۔ جتنا زیادہ لگائیں، میرے لیے سیکھنے کو اتنا زیادہ ہے۔",
+  "guardianInsightWaitingCta": "اپنا پہلا بیج لگائیں",
+  "guardianInsightChainSuperTitle": "زنجیر آپ کی طاقت ہے",
+  "guardianInsightChainSuperBody": "آپ نے {count} دن کی زنجیر برقرار رکھی ہے۔ اسٹریکس ہر بار حوصلے سے بہتر ہیں — اسے گرم رکھیں، سست دنوں میں بھی۔",
+  "@guardianInsightChainSuperBody": { "placeholders": { "count": { "type": "int" } } },
+  "guardianInsightChainSuperCta": "کل کا بیج شامل کریں",
+  "guardianInsightChainColdTitle": "زنجیر ٹھنڈی ہے — نئی شروع کریں",
+  "guardianInsightChainColdBody": "آپ پہلے بھی لگا چکے ہیں، جس کا مطلب ہے آپ دوبارہ لگا سکتے ہیں۔ آج ایک چھوٹا کام مکمل کرنا کل لمبی زنجیر ہے۔",
+  "guardianInsightChainColdCta": "بیج لگائیں",
+  "guardianInsightLessIsMoreTitle": "اس ہفتے کم زیادہ ہے",
+  "guardianInsightLessIsMoreBody": "آپ اپنے لگائے {pct}% مکمل کرتے ہیں۔ 5 بکھرے ہوئے کاموں کی بجائے 3 تیز نیتیں آزمائیں — معیار جمع ہوتا ہے۔",
+  "@guardianInsightLessIsMoreBody": { "placeholders": { "pct": { "type": "int" } } },
+  "guardianInsightLessIsMoreCta": "دن تیز کریں",
+  "guardianInsightNextMedalTitle": "اگلا تمغہ: {title}",
+  "@guardianInsightNextMedalTitle": { "placeholders": { "title": { "type": "String" } } },
+  "guardianInsightNextMedalBody": "آپ {target} میں سے {value} {unit} تک ہیں۔ چند اور ایمانداری والے دن اور یہ آپ کا ہے۔",
+  "@guardianInsightNextMedalBody": { "placeholders": { "value": { "type": "int" }, "target": { "type": "int" }, "unit": { "type": "String" } } },
+  "guardianInsightNextMedalCta": "تمغہ دکھائیں",
+  "guardianInsightSteadyTitle": "آپ ایک مستحکل موسم میں ہیں",
+  "guardianInsightSteadyBody": "قریب کوئی تمغہ نہیں — ٹھیک ہے۔ جو ہے اس کی دیکھ بھال کریں۔ اگلا پھول رستے میں ہے۔",
+  "guardianInsightSteadyCta": "پیشرفت دیکھیں",
+
+  "notificationTaskReminderBody": "{label}",
+  "@notificationTaskReminderBody": { "placeholders": { "label": { "type": "String" } } },
+  "notificationFinalCallBodyOne": "آپ کی زنجیر پر 1 کام باقی ہے۔ رات قریب ہے۔",
+  "notificationFinalCallBodyMany": "آپ کی زنجیر پر {count} کام باقی ہیں۔ رات قریب ہے۔",
+  "@notificationFinalCallBodyMany": { "placeholders": { "count": { "type": "int" } } },
+  "notificationEveningBodyOne": "آج ابھی بھی 1 کام کھلا ہے۔",
+  "notificationEveningBodyMany": "آج ابھی بھی {count} کام کھلے ہیں۔",
+  "@notificationEveningBodyMany": { "placeholders": { "count": { "type": "int" } } },
+  "notificationTickerTaskReminder": "کام کی یاد دہانی",
+  "notificationTickerTaskAlarm": "کام کا الارم",
+
+  "habitBloomSubtitleL10n": "{count} دن کی اسٹریک · {element}",
+  "@habitBloomSubtitleL10n": {
+    "placeholders": {
+      "count": { "type": "int" },
+      "element": { "type": "String" }
+    }
+  }
 }

@@ -5,6 +5,8 @@ import 'package:flutter/services.dart';
 import 'package:home_widget/home_widget.dart';
 import 'package:share_plus/share_plus.dart';
 
+import 'l10n/app_localizations.dart';
+
 /// Long-press app icon shortcuts and in-app quick actions.
 abstract final class AppActions {
   static const _shortcutChannel = MethodChannel('com.leanspace/shortcuts');
@@ -52,24 +54,22 @@ abstract final class AppActions {
   static const playStoreUrl =
       'https://play.google.com/store/apps/details?id=com.leanspace.leanspace';
 
-  static Future<void> shareApp() async {
+  static Future<void> shareApp(AppLocalizations l10n) async {
     await SharePlus.instance.share(
       ShareParams(
-        text: 'Bloom Tracker — five small seeds a day, one unbreakable '
-            'chain. Plant yours.\n\n$playStoreUrl',
-        subject: 'Try Bloom Tracker',
+        text: l10n.shareAppText(playStoreUrl),
+        subject: l10n.shareAppSubject,
       ),
     );
   }
 
-  static Future<void> shareAppWithReferral(String referralCode) async {
+  static Future<void> shareAppWithReferral(
+      AppLocalizations l10n, String referralCode) async {
     final code = referralCode.trim().toUpperCase();
     await SharePlus.instance.share(
       ShareParams(
-        text: 'I\'m building my daily chain on Bloom Tracker — join me '
-            'with my referral code $code and we both grow.\n\n'
-            '$playStoreUrl',
-        subject: 'Join me on Bloom Tracker',
+        text: l10n.shareAppReferralText(code, playStoreUrl),
+        subject: l10n.shareAppReferralSubject,
       ),
     );
   }
@@ -79,7 +79,7 @@ abstract final class AppActions {
   static Future<bool> openSupportEmail({
     required String subject,
     required String body,
-    String to = 'support@bloomtracker.app',
+    String to = 'support@leanspace.app',
   }) async {
     if (!Platform.isAndroid) return false;
     try {

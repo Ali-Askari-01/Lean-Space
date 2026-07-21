@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod/legacy.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
@@ -320,8 +321,51 @@ class MyDayNotifier extends Notifier<MyDayState> {
   }
 
   Future<void> toggleHabit(Habit habit) async {
-    await _repo.toggleHabit(habit);
-    await refresh();
+    // Optimistic update: immediately toggle the habit locally
+    final updatedHabits = state.habits.map((h) {
+      if (h.id != habit.id) return h;
+      final wasCompleted = h.isCompletedToday();
+      final today = LocalDate.today;
+      final yesterday = LocalDate.yesterday(today);
+      if (wasCompleted) {
+        // Undo: revert streak and date
+        final newStreak = h.streakCount > 0 ? h.streakCount - 1 : 0;
+        return Habit(
+          id: h.id,
+          userId: h.userId,
+          name: h.name,
+          slotIndex: h.slotIndex,
+          streakCount: newStreak,
+          lastCompletedDate:
+              newStreak > 0 ? yesterday : null,
+          notes: h.notes,
+        );
+      } else {
+        // Complete: increment streak and set date
+        return Habit(
+          id: h.id,
+          userId: h.userId,
+          name: h.name,
+          slotIndex: h.slotIndex,
+          streakCount: h.streakCount + 1,
+          lastCompletedDate: today,
+          notes: h.notes,
+        );
+      }
+    }).toList();
+    state = state.copyWith(habits: updatedHabits);
+
+    // Sync with server in background (fire-and-forget)
+    try {
+      await _repo.toggleHabit(habit);
+      // Silently re-sync to get server-confirmed state
+      final serverHabits = await _repo.fetchHabits();
+      state = state.copyWith(habits: serverHabits);
+    } catch (e) {
+      // Revert on error
+      debugPrint('toggleHabit failed: $e');
+      await refresh();
+    }
   }
 
   Future<AddTaskResult> addTask(
@@ -357,8 +401,32 @@ class MyDayNotifier extends Notifier<MyDayState> {
   }
 
   Future<void> completeTask(TodoItem task) async {
-    await _repo.completeTask(task);
-    await refresh();
+    // Optimistic update: immediately mark task as done
+    final updatedTasks = state.todayTasks.map((t) {
+      if (t.id != task.id) return t;
+      return TodoItem(
+        id: t.id,
+        userId: t.userId,
+        text: t.text,
+        status: TodoStatus.done,
+        originalDate: t.originalDate,
+        completedDate: LocalDate.today,
+        isCarriedForward: t.isCarriedForward,
+        notes: t.notes,
+        priority: t.priority,
+      );
+    }).toList();
+    state = state.copyWith(todayTasks: updatedTasks);
+
+    // Sync with server in background
+    try {
+      await _repo.completeTask(task);
+      final serverTasks = await _repo.fetchTodayTasks();
+      state = state.copyWith(todayTasks: serverTasks);
+    } catch (e) {
+      debugPrint('completeTask failed: $e');
+      await refresh();
+    }
   }
 
   Future<void> deleteTask(String taskId) async {

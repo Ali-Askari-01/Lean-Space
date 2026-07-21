@@ -26,9 +26,7 @@ class ReferralStats {
   final String? error;
 
   int get remainingToReward {
-    if (progress == 0 && referralCount > 0 && referralCount % milestone == 0) {
-      return milestone;
-    }
+    if (progress == 0 && referralCount > 0) return 0;
     return milestone - progress;
   }
 
@@ -114,6 +112,9 @@ class ReferralController extends Notifier<ReferralStats> {
       }
       if (msg.contains('already_referred')) {
         return 'You have already used a referral code.';
+      }
+      if (msg.contains('referee_not_eligible')) {
+        return 'Complete a task or wait 24 hours before applying a code.';
       }
       return 'Could not apply referral code. Try again.';
     }

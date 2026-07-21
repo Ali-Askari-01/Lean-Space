@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
 
 import '../../../core/local_date.dart';
+import '../../../core/l10n/app_localizations.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/widgets/ambient_background.dart';
 import '../../insights/domain/insights.dart';
@@ -19,12 +20,12 @@ class HistoryScreen extends ConsumerStatefulWidget {
 }
 
 class _HistoryScreenState extends ConsumerState<HistoryScreen> {
-  /// For Pro users we show 30 days; free users see 7.
   static const _freeWindowDays = 7;
-  static const _proWindowDays = 30;
+  static const _proWindowDays = 365;
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final insightsAsync = ref.watch(insightsProvider);
     final freeze = ref.watch(streakFreezeProvider);
     final isPro = ref.watch(entitlementProvider).isPro;
@@ -39,14 +40,14 @@ class _HistoryScreenState extends ConsumerState<HistoryScreen> {
           icon: const Icon(Icons.arrow_back_rounded),
           color: AppColors.onSurfaceVariant,
         ),
-        title: Text(isPro ? 'Last $days Days' : 'Last 7 Days'),
+        title: Text(isPro ? l10n.historyFullTitle : l10n.historyTitle),
         actions: [
           if (isPro)
             IconButton(
               onPressed: () => context.push('/progress'),
               icon: const Icon(Icons.calendar_view_month_rounded),
               color: AppColors.onSurfaceVariant,
-              tooltip: 'Full calendar',
+              tooltip: l10n.historyFullCalendar,
             ),
         ],
       ),
@@ -59,7 +60,7 @@ class _HistoryScreenState extends ConsumerState<HistoryScreen> {
             child: Padding(
               padding: const EdgeInsets.all(24),
               child: Text(
-                'Could not load history.',
+                l10n.historyLoadError,
                 style: theme.textTheme.bodyMedium?.copyWith(
                   color: AppColors.onSurfaceVariant,
                 ),
@@ -92,6 +93,7 @@ class _HistoryBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final theme = Theme.of(context);
     final today = LocalDate.today;
     final dateList = <DateTime>[
@@ -124,7 +126,7 @@ class _HistoryBody extends StatelessWidget {
         ),
         const SizedBox(height: 18),
         Text(
-          'DAY BY DAY',
+          l10n.historyDayByDay,
           style: theme.textTheme.labelSmall?.copyWith(
             color: AppColors.onSurfaceVariant,
             letterSpacing: 1.4,
@@ -163,6 +165,7 @@ class _PeriodSummary extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final theme = Theme.of(context);
     return Container(
       padding: const EdgeInsets.all(20),
@@ -190,7 +193,7 @@ class _PeriodSummary extends StatelessWidget {
                   color: Colors.white, size: 18),
               const SizedBox(width: 6),
               Text(
-                'LAST $days DAYS',
+                l10n.historyThisWeek('$days'),
                 style: theme.textTheme.labelSmall?.copyWith(
                   color: Colors.white.withValues(alpha: 0.9),
                   fontWeight: FontWeight.w800,
@@ -201,7 +204,7 @@ class _PeriodSummary extends StatelessWidget {
           ),
           const SizedBox(height: 10),
           Text(
-            '$completion% completed',
+            l10n.historyCompletedPercent('$completion'),
             style: theme.textTheme.displaySmall?.copyWith(
               color: Colors.white,
               fontWeight: FontWeight.w800,
@@ -212,8 +215,8 @@ class _PeriodSummary extends StatelessWidget {
           const SizedBox(height: 8),
           Text(
             total == 0
-                ? 'Plant some seeds to see your week unfold.'
-                : 'You finished $done of $total tasks. $perfect perfect day${perfect == 1 ? '' : 's'}.',
+                ? l10n.historyEmpty
+                : l10n.historyDoneCount('$done', '$total', '$perfect'),
             style: theme.textTheme.bodyMedium?.copyWith(
               color: Colors.white.withValues(alpha: 0.92),
               height: 1.4,
@@ -239,6 +242,7 @@ class _DayRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final theme = Theme.of(context);
     final hasData = stat != null && stat!.created > 0;
     final ratio = hasData ? (stat!.done / stat!.created).clamp(0.0, 1.0) : 0.0;
@@ -265,12 +269,12 @@ class _DayRow extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.fromLTRB(14, 12, 16, 12),
       decoration: BoxDecoration(
-        color: AppColors.surfaceContainerLow,
+        color: AppColors.elevatedCardSurface,
         borderRadius: BorderRadius.circular(18),
         border: Border.all(
           color: isPerfect
               ? AppColors.primary.withValues(alpha: 0.4)
-              : AppColors.outlineVariant,
+              : AppColors.cardBorder,
           width: isPerfect ? 1.2 : 0.5,
         ),
       ),
@@ -323,7 +327,7 @@ class _DayRow extends StatelessWidget {
                     Expanded(
                       child: Text(
                         isToday
-                            ? 'Today'
+                            ? l10n.historyToday
                             : DateFormat('EEEE, MMM d').format(date),
                         style: theme.textTheme.titleSmall?.copyWith(
                           color: AppColors.onSurface,
@@ -349,7 +353,7 @@ class _DayRow extends StatelessWidget {
                             ),
                             const SizedBox(width: 3),
                             Text(
-                              'FROZEN',
+                              l10n.historyFrozen,
                               style: theme.textTheme.labelSmall?.copyWith(
                                 color: AppColors.tertiary,
                                 fontWeight: FontWeight.w800,
@@ -378,7 +382,7 @@ class _DayRow extends StatelessWidget {
                             ),
                             const SizedBox(width: 3),
                             Text(
-                              'PERFECT',
+                              l10n.historyPerfect,
                               style: theme.textTheme.labelSmall?.copyWith(
                                 color: AppColors.primary,
                                 fontWeight: FontWeight.w800,
@@ -394,7 +398,7 @@ class _DayRow extends StatelessWidget {
                 const SizedBox(height: 8),
                 if (isEmpty)
                   Text(
-                    'No seeds planted that day',
+                    l10n.historyEmptyDay,
                     style: theme.textTheme.bodySmall?.copyWith(
                       color: AppColors.onSurfaceVariant,
                       fontStyle: FontStyle.italic,
@@ -417,7 +421,10 @@ class _DayRow extends StatelessWidget {
                       ),
                       const SizedBox(width: 10),
                       Text(
-                        '${stat!.done} / ${stat!.created}',
+                        l10n.tasksProgressCount(
+                          '${stat!.done}',
+                          '${stat!.created}',
+                        ),
                         style: theme.textTheme.labelSmall?.copyWith(
                           color: AppColors.onSurface,
                           fontWeight: FontWeight.w800,
@@ -428,7 +435,7 @@ class _DayRow extends StatelessWidget {
                 if (hasData && stat!.missed > 0) ...[
                   const SizedBox(height: 4),
                   Text(
-                    '${stat!.missed} left behind',
+                    l10n.historyLeftBehindCount('${stat!.missed}'),
                     style: theme.textTheme.labelSmall?.copyWith(
                       color: AppColors.error,
                       fontWeight: FontWeight.w700,
@@ -449,6 +456,7 @@ class _FullHistoryUpsell extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final theme = Theme.of(context);
     return Padding(
       padding: const EdgeInsets.only(top: 14),
@@ -498,7 +506,7 @@ class _FullHistoryUpsell extends StatelessWidget {
                       Row(
                         children: [
                           Text(
-                            'See your full history',
+                            l10n.historyUpsellTitle,
                             style: theme.textTheme.titleSmall?.copyWith(
                               color: AppColors.onSurface,
                               fontWeight: FontWeight.w800,
@@ -512,8 +520,8 @@ class _FullHistoryUpsell extends StatelessWidget {
                               color: AppColors.tertiary,
                               borderRadius: BorderRadius.circular(4),
                             ),
-                            child: const Text(
-                              'PRO',
+                            child: Text(
+                              l10n.youProBadge,
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 9,
@@ -526,7 +534,7 @@ class _FullHistoryUpsell extends StatelessWidget {
                       ),
                       const SizedBox(height: 2),
                       Text(
-                        'Pro unlocks 30 days of history. Free shows 7.',
+                        l10n.historyUpsellBody,
                         style: theme.textTheme.bodySmall?.copyWith(
                           color: AppColors.onSurfaceVariant,
                           height: 1.4,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../core/haptics.dart';
+import '../../../../core/l10n/app_localizations.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/widgets/guardian_mascot.dart';
 import 'add_task_sheet.dart';
@@ -24,6 +25,7 @@ class FirstRunEmptyState extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final theme = Theme.of(context);
     return Padding(
       padding: const EdgeInsets.fromLTRB(24, 48, 24, 24),
@@ -40,7 +42,7 @@ class FirstRunEmptyState extends StatelessWidget {
           ),
           const SizedBox(height: 24),
           Text(
-            '5 tasks. No more. Make them count.',
+            l10n.firstRunGreeting,
             textAlign: TextAlign.center,
             style: theme.textTheme.headlineSmall?.copyWith(
               color: AppColors.onSurface,
@@ -51,7 +53,7 @@ class FirstRunEmptyState extends StatelessWidget {
           ),
           const SizedBox(height: 10),
           Text(
-            'Plant your first seed — what matters most today?',
+            l10n.firstRunBody,
             textAlign: TextAlign.center,
             style: theme.textTheme.bodyMedium?.copyWith(
               color: AppColors.onSurfaceVariant,
@@ -69,12 +71,12 @@ class FirstRunEmptyState extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(vertical: 18, horizontal: 24),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    Icon(Icons.add_rounded, color: Colors.white, size: 22),
-                    SizedBox(width: 10),
+                  children: [
+                    const Icon(Icons.add_rounded, color: Colors.white, size: 22),
+                    const SizedBox(width: 10),
                     Text(
-                      'Plant your first seed',
-                      style: TextStyle(
+                      l10n.firstRunCta,
+                      style: const TextStyle(
                         color: Colors.white,
                         fontSize: 16,
                         fontWeight: FontWeight.w800,

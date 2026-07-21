@@ -33,12 +33,18 @@ class RootShell extends StatelessWidget {
     final selected = _selectedIndex(context);
     final l10n = AppLocalizations.of(context);
     return Scaffold(
-      body: child,
+      body: AnimatedSwitcher(
+        duration: const Duration(milliseconds: 220),
+        child: KeyedSubtree(
+          key: ValueKey<int>(selected),
+          child: child,
+        ),
+      ),
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
-          color: AppColors.surface,
+          color: AppColors.navBackground,
           border: Border(
-            top: BorderSide(color: AppColors.outlineVariant, width: 0.5),
+            top: BorderSide(color: AppColors.navBorder, width: 0.5),
           ),
         ),
         child: SafeArea(
@@ -95,37 +101,47 @@ class _NavItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: InkWell(
-        onTap: onTap,
-        borderRadius: BorderRadius.circular(20),
-        child: AnimatedContainer(
-          duration: const Duration(milliseconds: 220),
-          curve: Curves.easeOutCubic,
-          padding: const EdgeInsets.symmetric(vertical: 8),
-          decoration: BoxDecoration(
-            color: selected
-                ? AppColors.primaryContainer.withValues(alpha: 0.35)
-                : Colors.transparent,
-            borderRadius: BorderRadius.circular(20),
-          ),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Icon(
-                selected ? activeIcon : icon,
-                color: selected
-                    ? AppColors.primary
-                    : AppColors.onSurfaceVariant,
-                size: 22,
-              ),
-              const SizedBox(height: 4),
-              BlueprintLabel(
-                label,
-                color: selected
-                    ? AppColors.primary
-                    : AppColors.onSurfaceVariant,
-              ),
-            ],
+      child: Semantics(
+        label: label,
+        selected: selected,
+        button: true,
+        child: InkWell(
+          onTap: onTap,
+          borderRadius: BorderRadius.circular(20),
+          child: AnimatedContainer(
+            duration: const Duration(milliseconds: 300),
+            curve: Curves.easeOutCubic,
+            padding: const EdgeInsets.symmetric(vertical: 8),
+            decoration: BoxDecoration(
+              gradient: selected
+                  ? LinearGradient(
+                      colors: AppColors.navIndicatorGradient,
+                      begin: Alignment.centerLeft,
+                      end: Alignment.centerRight,
+                    )
+                  : null,
+              color: selected ? null : Colors.transparent,
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Icon(
+                  selected ? activeIcon : icon,
+                  color: selected
+                      ? AppColors.onPrimary
+                      : AppColors.onSurfaceVariant,
+                  size: 22,
+                ),
+                const SizedBox(height: 4),
+                BlueprintLabel(
+                  label,
+                  color: selected
+                      ? AppColors.onPrimary
+                      : AppColors.onSurfaceVariant,
+                ),
+              ],
+            ),
           ),
         ),
       ),

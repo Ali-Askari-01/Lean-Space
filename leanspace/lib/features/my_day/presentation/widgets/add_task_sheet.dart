@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../../core/l10n/app_localizations.dart';
+import '../../../../core/l10n/element_l10n.dart';
 import '../../../../core/haptics.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/widgets/growth_widgets.dart';
@@ -30,9 +32,15 @@ class _AddTaskSheetState extends ConsumerState<AddTaskSheet> {
   TimeOfDay _reminderTime = TimeOfDay.now();
   HabitElement _element = HabitElement.water;
   TodoPriority _priority = TodoPriority.standard;
-  String _cadence = 'Daily';
+  String _cadence = 'daily';
   late SeedType _type = widget.initialType;
-  late final _quote = IntentionQuotes.pick();
+  IntentionQuote? _quote;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    _quote ??= IntentionQuotes.pickFrom(AppLocalizations.of(context));
+  }
 
   @override
   void dispose() {
@@ -68,10 +76,12 @@ class _AddTaskSheetState extends ConsumerState<AddTaskSheet> {
   }
 
   Future<void> _save() async {
+    final l10n = AppLocalizations.of(context);
     final text = _nameController.text.trim();
     if (text.isEmpty) {
-      setState(() => _error =
-          _type == SeedType.task ? 'Name your intention' : 'Name your sprout');
+      setState(() => _error = _type == SeedType.task
+          ? l10n.addTaskNameIntentionError
+          : l10n.addTaskNameSproutError);
       return;
     }
 
@@ -105,11 +115,8 @@ class _AddTaskSheetState extends ConsumerState<AddTaskSheet> {
       if (result.notesDropped) {
         final messenger = ScaffoldMessenger.maybeOf(context);
         messenger?.showSnackBar(
-          const SnackBar(
-            content: Text(
-              'Task saved. Notes & priority need the latest Supabase migration '
-              '— run supabase/migrations/20260701000000_todos_notes_priority.sql.',
-            ),
+          SnackBar(
+            content: Text(l10n.addTaskNotesMigrationWarning),
             duration: Duration(seconds: 5),
           ),
         );
@@ -138,7 +145,7 @@ class _AddTaskSheetState extends ConsumerState<AddTaskSheet> {
         AppHaptics.blocked();
         setState(() {
           _saving = false;
-          _error = 'No empty sprout slots — tend one first.';
+          _error = l10n.addTaskNoSproutSlots;
         });
         return;
       }
@@ -152,7 +159,7 @@ class _AddTaskSheetState extends ConsumerState<AddTaskSheet> {
         if (!mounted) return;
         setState(() {
           _saving = false;
-          _error = 'Could not save sprout — try again.';
+          _error = l10n.addTaskSaveSproutError;
         });
         return;
       }
@@ -175,9 +182,11 @@ class _AddTaskSheetState extends ConsumerState<AddTaskSheet> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final theme = Theme.of(context);
     final bottom = MediaQuery.viewInsetsOf(context).bottom;
     final isTask = _type == SeedType.task;
+    final quote = _quote ?? IntentionQuotes.pickFrom(l10n);
 
     return SingleChildScrollView(
       padding: EdgeInsets.fromLTRB(20, 4, 20, 24 + bottom),
@@ -193,7 +202,7 @@ class _AddTaskSheetState extends ConsumerState<AddTaskSheet> {
               ),
               Expanded(
                 child: Text(
-                  isTask ? 'Grow Something' : 'Plant a Sprout',
+                  isTask ? l10n.addTaskGrowSomething : l10n.addTaskPlantSprout,
                   style: theme.textTheme.headlineSmall?.copyWith(
                     color: AppColors.primary,
                     fontWeight: FontWeight.w700,
@@ -243,8 +252,8 @@ class _AddTaskSheetState extends ConsumerState<AddTaskSheet> {
                       AnimatedSwitcher(
                         duration: const Duration(milliseconds: 280),
                         child: Text(
-                          '"${_quote.title}"',
-                          key: ValueKey(_quote.title),
+                          '"${quote.title}"',
+                          key: ValueKey(quote.title),
                           style: theme.textTheme.titleLarge?.copyWith(
                             color: AppColors.primary,
                             fontWeight: FontWeight.w700,
@@ -256,8 +265,8 @@ class _AddTaskSheetState extends ConsumerState<AddTaskSheet> {
                       AnimatedSwitcher(
                         duration: const Duration(milliseconds: 280),
                         child: Text(
-                          _quote.body,
-                          key: ValueKey(_quote.body),
+                          quote.body,
+                          key: ValueKey(quote.body),
                           style: theme.textTheme.bodyMedium?.copyWith(
                             color: AppColors.onSurfaceVariant,
                             height: 1.45,
@@ -272,7 +281,7 @@ class _AddTaskSheetState extends ConsumerState<AddTaskSheet> {
           ),
           const SizedBox(height: 20),
           BlueprintLabel(
-            isTask ? 'INTENTION NAME' : 'SPROUT NAME',
+            isTask ? l10n.addTaskIntentionName : l10n.addTaskSproutName,
             color: AppColors.primary,
           ),
           const SizedBox(height: 8),
@@ -285,9 +294,7 @@ class _AddTaskSheetState extends ConsumerState<AddTaskSheet> {
               fontWeight: FontWeight.w500,
             ),
             decoration: InputDecoration(
-              hintText: isTask
-                  ? 'e.g., Morning Sun Salutation'
-                  : 'e.g. Morning Yoga',
+              hintText: isTask ? l10n.addTaskHintTask : l10n.addTaskHintHabit,
               counterText: '',
             ),
             onSubmitted: (_) => _save(),
@@ -298,7 +305,7 @@ class _AddTaskSheetState extends ConsumerState<AddTaskSheet> {
               children: [
                 Expanded(
                   child: _FieldColumn(
-                    label: 'WHEN?',
+                    label: l10n.addTaskWhen,
                     child: GestureDetector(
                       onTap: _pickReminderTime,
                       child: Container(
@@ -329,7 +336,7 @@ class _AddTaskSheetState extends ConsumerState<AddTaskSheet> {
                 const SizedBox(width: 12),
                 Expanded(
                   child: _FieldColumn(
-                    label: 'PRIORITY',
+                    label: l10n.addTaskPriority,
                     child: _PriorityDropdown(
                       value: _priority,
                       onChanged: (p) => setState(() => _priority = p),
@@ -340,14 +347,21 @@ class _AddTaskSheetState extends ConsumerState<AddTaskSheet> {
             ),
             const SizedBox(height: 16),
           ] else ...[
-            BlueprintLabel('CADENCE', color: AppColors.primary),
+            BlueprintLabel(l10n.addTaskCadenceLabel, color: AppColors.primary),
             const SizedBox(height: 10),
             Wrap(
               spacing: 8,
-              children: ['Daily', 'Weekdays', '3x/week', 'Weekly'].map((c) {
+              children: [
+                ('daily', l10n.addTaskCadenceDaily),
+                ('weekdays', l10n.addTaskCadenceWeekdays),
+                ('3x', l10n.addTaskCadence3x),
+                ('weekly', l10n.addTaskCadenceWeekly),
+              ].map((entry) {
+                final c = entry.$1;
+                final label = entry.$2;
                 final selected = _cadence == c;
                 return ChoiceChip(
-                  label: Text(c),
+                  label: Text(label),
                   selected: selected,
                   onSelected: (_) => setState(() => _cadence = c),
                   selectedColor: AppColors.primaryContainer,
@@ -372,7 +386,7 @@ class _AddTaskSheetState extends ConsumerState<AddTaskSheet> {
             const SizedBox(height: 16),
           ],
           BlueprintLabel(
-            isTask ? 'PREPARATION NOTES' : 'TENDING NOTES',
+            isTask ? l10n.addTaskPreparationNotes : l10n.addTaskTendingNotes,
             color: AppColors.primary,
           ),
           const SizedBox(height: 8),
@@ -382,20 +396,20 @@ class _AddTaskSheetState extends ConsumerState<AddTaskSheet> {
             textCapitalization: TextCapitalization.sentences,
             decoration: InputDecoration(
               hintText: isTask
-                  ? 'Any tools or mindset tips for this task?'
-                  : 'What does tending this sprout look like?',
+                  ? l10n.addTaskNotesHintTask
+                  : l10n.addTaskNotesHintHabit,
             ),
           ),
           const SizedBox(height: 18),
           Row(
             children: [
-              BlueprintLabel('CHOOSE ELEMENT', color: AppColors.primary),
+              BlueprintLabel(l10n.addTaskChooseElement, color: AppColors.primary),
               const SizedBox(width: 6),
               InkWell(
                 onTap: _showElementInfo,
                 customBorder: const CircleBorder(),
                 child: Tooltip(
-                  message: 'What do the elements mean?',
+                  message: l10n.addTaskElementsTooltip,
                   child: Container(
                     width: 22,
                     height: 22,
@@ -441,10 +455,10 @@ class _AddTaskSheetState extends ConsumerState<AddTaskSheet> {
               Expanded(
                 child: CtaPill(
                   label: _saving
-                      ? 'Planting…'
+                      ? l10n.addTaskPlanting
                       : isTask
-                          ? 'Plant Intention'
-                          : 'Plant Sprout',
+                          ? l10n.addTaskPlantIntention
+                          : l10n.addTaskPlantSproutCta,
                   icon: _saving ? null : Icons.auto_awesome_rounded,
                   onPressed: _saving ? null : _save,
                 ),
@@ -464,13 +478,13 @@ class _AddTaskSheetState extends ConsumerState<AddTaskSheet> {
                             _reminderTime = TimeOfDay.now();
                             _priority = TodoPriority.standard;
                             _element = HabitElement.water;
-                            _cadence = 'Daily';
+                            _cadence = 'daily';
                             _error = null;
                           });
                           AppHaptics.light();
                         },
                   child: Tooltip(
-                    message: 'Clear form',
+                    message: l10n.addTaskClearForm,
                     child: SizedBox(
                       width: 52,
                       height: 52,
@@ -498,6 +512,7 @@ class _SeedTypeToggle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     return Container(
       padding: const EdgeInsets.all(4),
       decoration: BoxDecoration(
@@ -508,13 +523,13 @@ class _SeedTypeToggle extends StatelessWidget {
       child: Row(
         children: [
           _ToggleSegment(
-            label: 'Task Seed',
+            label: l10n.addTaskTaskSeed,
             icon: Icons.eco_rounded,
             selected: value == SeedType.task,
             onTap: () => onChanged(SeedType.task),
           ),
           _ToggleSegment(
-            label: 'Habit Sprout',
+            label: l10n.addTaskHabitSprout,
             icon: Icons.spa_rounded,
             selected: value == SeedType.habit,
             onTap: () => onChanged(SeedType.habit),
@@ -729,6 +744,7 @@ class _ElementInfoSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final theme = Theme.of(context);
     return DraggableScrollableSheet(
       expand: false,
@@ -754,7 +770,7 @@ class _ElementInfoSheet extends StatelessWidget {
               ),
               const SizedBox(height: 18),
               Text(
-                'Pick the right element',
+                l10n.addTaskPickElement,
                 style: theme.textTheme.titleLarge?.copyWith(
                   color: AppColors.primary,
                   fontWeight: FontWeight.w800,
@@ -762,7 +778,7 @@ class _ElementInfoSheet extends StatelessWidget {
               ),
               const SizedBox(height: 6),
               Text(
-                'Each element maps to a different kind of effort. The Guardian grows stronger when you water the right one.',
+                l10n.addTaskPickElementBody,
                 style: theme.textTheme.bodyMedium?.copyWith(
                   color: AppColors.onSurfaceVariant,
                   height: 1.4,
@@ -788,6 +804,7 @@ class _ElementInfoCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final theme = Theme.of(context);
     return GlassCard(
       padding: const EdgeInsets.all(14),
@@ -801,7 +818,7 @@ class _ElementInfoCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  element.label,
+                  l10n.elementLabel(element),
                   style: theme.textTheme.titleMedium?.copyWith(
                     fontWeight: FontWeight.w800,
                     color: AppColors.onSurface,
@@ -809,7 +826,7 @@ class _ElementInfoCard extends StatelessWidget {
                 ),
                 const SizedBox(height: 4),
                 Text(
-                  element.tagline,
+                  l10n.elementTagline(element),
                   style: theme.textTheme.bodyMedium?.copyWith(
                     color: AppColors.onSurface,
                     height: 1.4,
@@ -817,7 +834,7 @@ class _ElementInfoCard extends StatelessWidget {
                 ),
                 const SizedBox(height: 6),
                 Text(
-                  element.whenToUse,
+                  l10n.elementWhen(element),
                   style: theme.textTheme.bodySmall?.copyWith(
                     color: AppColors.onSurfaceVariant,
                     fontStyle: FontStyle.italic,

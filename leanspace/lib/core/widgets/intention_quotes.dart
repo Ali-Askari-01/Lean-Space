@@ -1,67 +1,30 @@
 import 'dart:math';
 
-/// Rotating motivational lines shown in the "Plant an intention" hero card
-/// at the top of the add-task sheet. A new line is shown every time the
-/// sheet is opened.
+import '../l10n/app_localizations.dart';
+
+class IntentionQuote {
+  const IntentionQuote(this.title, this.body);
+  final String title;
+  final String body;
+}
+
+/// Rotating motivational lines for the add-task sheet.
 class IntentionQuotes {
   const IntentionQuotes._();
 
-  static const List<_IntentionQuote> _all = [
-    _IntentionQuote(
-      title: "Let's plant a new intention!",
-      body:
-          "Every mighty forest begins with a single tiny choice. Tell me what we're nurturing today?",
-    ),
-    _IntentionQuote(
-      title: "What shall we grow today?",
-      body:
-          "Tiny seeds, tended with care, become tall trees. Pick the one that matters most right now.",
-    ),
-    _IntentionQuote(
-      title: "One seed. One breath. Begin.",
-      body:
-          "You don't have to plant the whole forest at once — just the next right thing.",
-    ),
-    _IntentionQuote(
-      title: "Nurture the next small step.",
-      body:
-          "Future-you is built from the choices you make in the next five minutes. What's one kind one?",
-    ),
-    _IntentionQuote(
-      title: "Choose what you want to become.",
-      body:
-          "Tasks are seeds, habits are sprouts. Together they form a forest you're proud of.",
-    ),
-    _IntentionQuote(
-      title: "Plant something worth remembering.",
-      body:
-          "Not every day will feel huge. A watered seed still counts. Let's name one.",
-    ),
-    _IntentionQuote(
-      title: "Make today a little braver.",
-      body:
-          "Courage compounds. Pick the seed you've been postponing — even naming it moves it forward.",
-    ),
-    _IntentionQuote(
-      title: "Tend the soil before the seed.",
-      body:
-          "What mindset, tool, or small ritual will make this task easier? Add it to the notes.",
-    ),
-  ];
-
-  /// Returns a [title, body] pair. Uses [seed] when provided so tests are
-  /// deterministic; otherwise picks a new line on every call.
-  static ({String title, String body}) pick({int? seed}) {
-    final idx = seed == null
-        ? Random().nextInt(_all.length)
-        : seed.abs() % _all.length;
-    final q = _all[idx];
-    return (title: q.title, body: q.body);
+  static IntentionQuote pickFrom(AppLocalizations l10n) {
+    final all = _all(l10n);
+    return all[Random().nextInt(all.length)];
   }
-}
 
-class _IntentionQuote {
-  const _IntentionQuote({required this.title, required this.body});
-  final String title;
-  final String body;
+  static List<IntentionQuote> _all(AppLocalizations l10n) => [
+        IntentionQuote(l10n.intentionTitle1, l10n.intentionBody1),
+        IntentionQuote(l10n.intentionTitle2, l10n.intentionBody2),
+        IntentionQuote(l10n.intentionTitle3, l10n.intentionBody3),
+        IntentionQuote(l10n.intentionTitle4, l10n.intentionBody4),
+        IntentionQuote(l10n.intentionTitle5, l10n.intentionBody5),
+        IntentionQuote(l10n.intentionTitle6, l10n.intentionBody6),
+        IntentionQuote(l10n.intentionTitle7, l10n.intentionBody7),
+        IntentionQuote(l10n.intentionTitle8, l10n.intentionBody8),
+      ];
 }

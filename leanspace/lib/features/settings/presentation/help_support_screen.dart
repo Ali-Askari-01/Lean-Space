@@ -89,11 +89,11 @@ class _HelpSupportScreenState extends ConsumerState<HelpSupportScreen> {
       ..writeln('---')
       ..writeln(
           'Account: ${email.isEmpty ? l10n.helpAccountAnon : email}')
-      ..writeln('App: Bloom Tracker $_appVersion')
+      ..writeln('App: LeanSpace $_appVersion')
       ..writeln('Device: $_deviceLine')
       ..writeln('Topic: $_topic');
     final ok = await AppActions.openSupportEmail(
-      subject: 'Bloom Tracker · $_topic',
+      subject: 'LeanSpace · $_topic',
       body: body.toString(),
     );
     if (!mounted) return;
@@ -113,7 +113,7 @@ class _HelpSupportScreenState extends ConsumerState<HelpSupportScreen> {
   void _copyEmail() {
     final l10n = AppLocalizations.of(context);
     Clipboard.setData(
-      const ClipboardData(text: 'support@bloomtracker.app'),
+      const ClipboardData(text: 'support@leanspace.app'),
     );
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(content: Text(l10n.helpCopiedEmail)),
@@ -171,7 +171,7 @@ class _HelpSupportScreenState extends ConsumerState<HelpSupportScreen> {
                     const SizedBox(height: 18),
                     Center(
                       child: Text(
-                        'Bloom Tracker · ${_appVersion ?? '…'}',
+                        'LeanSpace · ${_appVersion ?? '…'}',
                         style: theme.textTheme.labelSmall?.copyWith(
                           color: AppColors.onSurfaceVariant,
                           fontWeight: FontWeight.w700,
@@ -242,9 +242,9 @@ class _FaqList extends StatelessWidget {
     ];
     return Container(
       decoration: BoxDecoration(
-        color: AppColors.surfaceContainerLow,
+        color: AppColors.elevatedCardSurface,
         borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: AppColors.outlineVariant, width: 0.5),
+        border: Border.all(color: AppColors.cardBorder, width: 0.5),
       ),
       clipBehavior: Clip.antiAlias,
       child: Column(

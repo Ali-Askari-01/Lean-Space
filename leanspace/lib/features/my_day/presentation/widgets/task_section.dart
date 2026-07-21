@@ -201,18 +201,36 @@ class _TaskSlot extends StatelessWidget {
       ),
       onDismissed: (_) => onDelete(),
       child: AnimatedContainer(
-        duration: const Duration(milliseconds: 200),
+        duration: const Duration(milliseconds: 250),
+        curve: Curves.easeOutCubic,
         decoration: BoxDecoration(
-          color: isDone
-              ? AppColors.primaryContainer.withValues(alpha: 0.18)
-              : AppColors.surfaceContainerLow,
+          gradient: isDone
+              ? LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [
+                    AppColors.primaryContainer.withValues(alpha: 0.20),
+                    AppColors.primaryContainer.withValues(alpha: 0.08),
+                  ],
+                )
+              : null,
+          color: isDone ? null : AppColors.elevatedCardSurface,
           borderRadius: BorderRadius.circular(18),
           border: Border.all(
             color: isDone
-                ? AppColors.primaryContainer.withValues(alpha: 0.4)
-                : AppColors.outlineVariant,
-            width: 0.6,
+                ? AppColors.primaryContainer.withValues(alpha: 0.45)
+                : AppColors.cardBorder,
+            width: isDone ? 1.0 : 0.6,
           ),
+          boxShadow: isDone
+              ? [
+                  BoxShadow(
+                    color: AppColors.primary.withValues(alpha: 0.10),
+                    blurRadius: 12,
+                    offset: const Offset(0, 4),
+                  ),
+                ]
+              : null,
         ),
         child: InkWell(
           onTap: onToggle,
@@ -542,30 +560,42 @@ class _SeedCheckbox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedContainer(
-      duration: const Duration(milliseconds: 200),
-      width: 26,
-      height: 26,
-      decoration: BoxDecoration(
-        color: checked ? AppColors.primary : Colors.transparent,
-        borderRadius: BorderRadius.circular(10),
-        border: Border.all(
-          color: checked ? AppColors.primary : AppColors.outline,
-          width: 1.8,
+    return Semantics(
+      checked: checked,
+      label: checked ? 'Task completed' : 'Task not completed',
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 250),
+        curve: Curves.easeOutCubic,
+        width: 26,
+        height: 26,
+        decoration: BoxDecoration(
+          gradient: checked
+              ? LinearGradient(
+                  colors: AppColors.gradientCta,
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                )
+              : null,
+          color: checked ? null : Colors.transparent,
+          borderRadius: BorderRadius.circular(10),
+          border: Border.all(
+            color: checked ? AppColors.primary : AppColors.outline,
+            width: 1.8,
+          ),
+          boxShadow: checked
+              ? [
+                  BoxShadow(
+                    color: AppColors.primary.withValues(alpha: 0.35),
+                    blurRadius: 10,
+                    spreadRadius: 1,
+                  ),
+                ]
+              : null,
         ),
-        boxShadow: checked
-            ? [
-                BoxShadow(
-                  color: AppColors.primary.withValues(alpha: 0.3),
-                  blurRadius: 8,
-                  spreadRadius: 1,
-                ),
-              ]
+        child: checked
+            ? const Icon(Icons.check_rounded, size: 16, color: Colors.white)
             : null,
       ),
-      child: checked
-          ? const Icon(Icons.check_rounded, size: 16, color: Colors.white)
-          : null,
     );
   }
 }

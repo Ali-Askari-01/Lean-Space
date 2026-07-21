@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../core/haptics.dart';
+import '../../../../core/l10n/app_localizations.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/widgets/growth_widgets.dart';
 import '../../../../core/widgets/pop_in.dart';
@@ -16,6 +17,7 @@ class HabitRow extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context);
     final state = ref.watch(myDayProvider);
     final notifier = ref.read(myDayProvider.notifier);
     final slotLimit = ref.watch(entitlementProvider).habitSlotLimit;
@@ -65,7 +67,7 @@ class HabitRow extends ConsumerWidget {
               final firstEmptySlot = state.habitSlots.indexWhere((h) => h == null);
               if (firstEmptySlot == -1) {
                 ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('All habit slots are currently full.')),
+                  SnackBar(content: Text(l10n.habitsSlotsFull)),
                 );
                 return;
               }
@@ -99,6 +101,7 @@ class _PlantNewRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final theme = Theme.of(context);
     return Material(
       color: Colors.transparent,
@@ -121,7 +124,7 @@ class _PlantNewRow extends StatelessWidget {
               Icon(Icons.add_rounded, color: AppColors.primary, size: 18),
               const SizedBox(width: 8),
               Text(
-                'Plant a new habit sprout',
+                l10n.habitsPlantNew,
                 style: theme.textTheme.titleSmall?.copyWith(
                   color: AppColors.primary,
                   fontWeight: FontWeight.w700,
@@ -141,6 +144,7 @@ class _LockedHabitRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final theme = Theme.of(context);
     return Material(
       color: Colors.transparent,
@@ -165,7 +169,7 @@ class _LockedHabitRow extends StatelessWidget {
               const SizedBox(width: 12),
               Expanded(
                 child: Text(
-                  'Pro habit slot — unlock to plant more sprouts',
+                  l10n.habitsLocked,
                   style: theme.textTheme.bodyMedium?.copyWith(
                     color: AppColors.tertiary,
                     fontWeight: FontWeight.w600,
@@ -218,6 +222,7 @@ class _HabitRowItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final theme = Theme.of(context);
     final isEmpty = habit == null;
     final isDone = habit?.isCompletedToday() ?? false;
@@ -257,7 +262,7 @@ class _HabitRowItem extends StatelessWidget {
                 ),
                 const SizedBox(width: 12),
                 Text(
-                  'Plant a habit',
+                  l10n.habitsPlantFirst,
                   style: theme.textTheme.bodyLarge?.copyWith(
                     color: AppColors.outline,
                     fontWeight: FontWeight.w600,
@@ -280,19 +285,38 @@ class _HabitRowItem extends StatelessWidget {
         onTap: onTap,
         onLongPress: onLongPress,
         borderRadius: BorderRadius.circular(18),
-        child: Container(
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 250),
+          curve: Curves.easeOutCubic,
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(18),
-            color: isDone
-                ? AppColors.primaryContainer.withValues(alpha: 0.18)
-                : AppColors.surfaceContainerLow,
+            gradient: isDone
+                ? LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: [
+                      AppColors.primaryContainer.withValues(alpha: 0.20),
+                      AppColors.primaryContainer.withValues(alpha: 0.08),
+                    ],
+                  )
+                : null,
+            color: isDone ? null : AppColors.elevatedCardSurface,
             border: Border.all(
               color: isDone
-                  ? AppColors.primaryContainer.withValues(alpha: 0.4)
-                  : AppColors.outlineVariant,
-              width: 0.6,
+                  ? AppColors.primaryContainer.withValues(alpha: 0.45)
+                  : AppColors.cardBorder,
+              width: isDone ? 1.0 : 0.6,
             ),
+            boxShadow: isDone
+                ? [
+                    BoxShadow(
+                      color: AppColors.primary.withValues(alpha: 0.10),
+                      blurRadius: 12,
+                      offset: const Offset(0, 4),
+                    ),
+                  ]
+                : null,
           ),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -345,7 +369,7 @@ class _HabitRowItem extends StatelessWidget {
                               ),
                               const SizedBox(width: 3),
                               Text(
-                                '${habit!.streakCount}d',
+                                l10n.habitsStreakDays('${habit!.streakCount}'),
                                 style: theme.textTheme.labelSmall?.copyWith(
                                   color: AppColors.secondary,
                                   fontWeight: FontWeight.w800,
@@ -431,6 +455,7 @@ class _HabitNotesPreviewState extends State<_HabitNotesPreview> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final theme = Theme.of(context);
     final longNotes = widget.notes.length > _collapseThreshold;
     final shown = (_expanded || !longNotes)
@@ -469,7 +494,7 @@ class _HabitNotesPreviewState extends State<_HabitNotesPreview> {
             child: GestureDetector(
               onTap: () => setState(() => _expanded = !_expanded),
               child: Text(
-                _expanded ? 'Show less' : 'View full notes',
+                _expanded ? l10n.commonShowLess : l10n.commonViewFull,
                 style: theme.textTheme.labelSmall?.copyWith(
                   color: AppColors.primary,
                   fontWeight: FontWeight.w800,

@@ -2,6 +2,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:timezone/timezone.dart' as tz;
 
+import '../../../core/timezone_init.dart';
+
 import '../../my_day/domain/todo_item.dart';
 import '../domain/reminder_prefs.dart';
 
@@ -11,10 +13,10 @@ class NotificationService {
 
   final FlutterLocalNotificationsPlugin _plugin;
 
-  static const _reminderChannelId = 'bloom_tracker_reminders';
-  static const _reminderChannelName = 'Bloom Tracker reminders';
-  static const _alarmChannelId = 'bloom_tracker_alarms';
-  static const _alarmChannelName = 'Bloom Tracker task alarms';
+  static const _reminderChannelId = 'leanspace_reminders';
+  static const _reminderChannelName = 'LeanSpace reminders';
+  static const _alarmChannelId = 'leanspace_alarms';
+  static const _alarmChannelName = 'LeanSpace task alarms';
   static const _alarmSound =
       RawResourceAndroidNotificationSound('alarm_tone');
 
@@ -22,6 +24,7 @@ class NotificationService {
   static const eveningNudgeId = 9002;
 
   Future<void> initialize() async {
+    await ensureTimezonesInitialized();
     const android = AndroidInitializationSettings('@drawable/ic_notification');
     const settings = InitializationSettings(android: android);
     await _plugin.initialize(settings: settings);
@@ -70,7 +73,7 @@ class NotificationService {
   }
 
   int _taskNotificationId(String taskId) =>
-      1000 + (taskId.hashCode.abs() % 8000);
+      1000 + (taskId.hashCode.abs() % 90000);
 
   /// Schedules a single per-task reminder directly (used right after a task
   /// is added so the notification doesn't depend on a follow-up syncAll pass).
@@ -78,6 +81,7 @@ class NotificationService {
     required String taskId,
     required String label,
     required DateTime when,
+    String reminderTitle = 'Task reminder',
   }) async {
     await requestPermission();
     await ensureExactAlarmsPermission();
@@ -87,7 +91,7 @@ class NotificationService {
     }
     await _scheduleOneShot(
       id: _taskNotificationId(taskId),
-      title: 'Task reminder',
+      title: reminderTitle,
       body: label,
       when: when,
     );
@@ -97,6 +101,13 @@ class NotificationService {
     required List<TodoItem> openTasks,
     required Map<String, TaskReminder> taskReminders,
     required ReminderPrefs prefs,
+    String taskReminderTitle = 'Task reminder',
+    String finalCallTitle = 'Final Call',
+    String finalCallBodyOne = '1 task left on your chain. Midnight is coming.',
+    String finalCallBodyMany = '{count} tasks left on your chain. Midnight is coming.',
+    String eveningTitle = 'Evening check-in',
+    String eveningBodyOne = 'You still have 1 open task today.',
+    String eveningBodyMany = 'You still have {count} open tasks today.',
   }) async {
     await requestPermission();
     await ensureExactAlarmsPermission();
@@ -116,7 +127,7 @@ class NotificationService {
       if (!reminder.at.isAfter(now)) continue;
       await _scheduleOneShot(
         id: _taskNotificationId(task.id),
-        title: 'Task reminder',
+        title: taskReminderTitle,
         body: task.text,
         when: reminder.at,
       );
@@ -126,10 +137,10 @@ class NotificationService {
     if (openCount > 0 && prefs.finalCallEnabled) {
       await _scheduleDaily(
         id: finalCallId,
-        title: 'Final Call',
+        title: finalCallTitle,
         body: openCount == 1
-            ? '1 task left on your chain. Midnight is coming.'
-            : '$openCount tasks left on your chain. Midnight is coming.',
+            ? finalCallBodyOne
+            : finalCallBodyMany.replaceAll('{count}', openCount.toString()),
         hour: prefs.finalCallHour,
         minute: prefs.finalCallMinute,
       );
@@ -140,10 +151,10 @@ class NotificationService {
     if (openCount > 0 && prefs.eveningNudgeEnabled) {
       await _scheduleDaily(
         id: eveningNudgeId,
-        title: 'Evening check-in',
+        title: eveningTitle,
         body: openCount == 1
-            ? 'You still have 1 open task today.'
-            : 'You still have $openCount open tasks today.',
+            ? eveningBodyOne
+            : eveningBodyMany.replaceAll('{count}', openCount.toString()),
         hour: prefs.eveningNudgeHour,
         minute: prefs.eveningNudgeMinute,
       );

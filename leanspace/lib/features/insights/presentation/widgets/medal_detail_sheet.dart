@@ -5,6 +5,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../core/haptics.dart';
+import '../../../../core/l10n/app_localizations.dart';
+import '../../../../core/l10n/medal_l10n.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/widgets/growth_widgets.dart';
 import '../../../subscription/providers/entitlement_provider.dart';
@@ -104,6 +106,7 @@ class _MedalDetailSheetState extends ConsumerState<_MedalDetailSheet>
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final theme = Theme.of(context);
     final m = widget.medal;
     final p = widget.progress;
@@ -181,9 +184,9 @@ class _MedalDetailSheetState extends ConsumerState<_MedalDetailSheet>
                   color: AppColors.tertiary,
                   borderRadius: BorderRadius.circular(999),
                 ),
-                child: const Text(
-                  'PRO MEDAL',
-                  style: TextStyle(
+                child: Text(
+                  l10n.medalSheetLocked,
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 10,
                     fontWeight: FontWeight.w900,
@@ -221,16 +224,16 @@ class _MedalDetailSheetState extends ConsumerState<_MedalDetailSheet>
                     context.push('/paywall?from=medal');
                   },
                   borderRadius: BorderRadius.circular(20),
-                  child: const Padding(
-                    padding: EdgeInsets.symmetric(vertical: 14, horizontal: 18),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 18),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(Icons.lock_open_rounded, color: Colors.white, size: 18),
-                        SizedBox(width: 8),
+                        const Icon(Icons.lock_open_rounded, color: Colors.white, size: 18),
+                        const SizedBox(width: 8),
                         Text(
-                          'Unlock with Pro',
-                          style: TextStyle(
+                          l10n.medalSheetUnlock,
+                          style: const TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.w800,
                             fontSize: 14,
@@ -254,7 +257,7 @@ class _MedalDetailSheetState extends ConsumerState<_MedalDetailSheet>
                         const SizedBox(width: 8),
                         Expanded(
                           child: Text(
-                            'Progress',
+                            l10n.medalSheetProgress,
                             style: theme.textTheme.titleSmall?.copyWith(
                               fontWeight: FontWeight.w800,
                               color: AppColors.onSurface,
@@ -302,7 +305,7 @@ class _MedalDetailSheetState extends ConsumerState<_MedalDetailSheet>
                     Icon(Icons.verified_rounded, color: tone, size: 16),
                     const SizedBox(width: 6),
                     Text(
-                      'EARNED · ${m.tier.label.toUpperCase()}',
+                      l10n.medalSheetEarned(m.tier.localizedLabel(l10n).toUpperCase()),
                       style: theme.textTheme.labelSmall?.copyWith(
                         color: tone,
                         fontWeight: FontWeight.w800,
@@ -313,6 +316,34 @@ class _MedalDetailSheetState extends ConsumerState<_MedalDetailSheet>
                 ),
               ),
             const SizedBox(height: 12),
+            if (earned)
+              SizedBox(
+                width: double.infinity,
+                height: 48,
+                child: OutlinedButton.icon(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                    context.push('/medal-share?id=${m.id}');
+                  },
+                  style: OutlinedButton.styleFrom(
+                    foregroundColor: tone,
+                    side: BorderSide(color: tone.withValues(alpha: 0.4)),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(24),
+                    ),
+                  ),
+                  icon: Icon(Icons.ios_share_rounded, color: tone, size: 18),
+                  label: Text(
+                    l10n.medalShareOnSocials,
+                    style: TextStyle(
+                      color: tone,
+                      fontWeight: FontWeight.w700,
+                      fontSize: 13,
+                    ),
+                  ),
+                ),
+              ),
+            const SizedBox(height: 8),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -320,7 +351,7 @@ class _MedalDetailSheetState extends ConsumerState<_MedalDetailSheet>
                     color: AppColors.onSurfaceVariant, size: 14),
                 const SizedBox(width: 4),
                 Text(
-                  m.category.label,
+                  m.category.localizedLabel(l10n),
                   style: theme.textTheme.labelSmall?.copyWith(
                     color: AppColors.onSurfaceVariant,
                     fontWeight: FontWeight.w700,
@@ -336,9 +367,10 @@ class _MedalDetailSheetState extends ConsumerState<_MedalDetailSheet>
   }
 
   String _hintFor(Medal m, MedalProgress p) {
+    final l10n = AppLocalizations.of(context);
     final remaining = m.target - p.value;
-    if (remaining <= 0) return 'One more step to unlock.';
-    return 'Just $remaining more ${m.unit} to unlock.';
+    if (remaining <= 0) return l10n.medalSheetAlmost;
+    return l10n.medalSheetHint('$remaining', m.unit);
   }
 }
 

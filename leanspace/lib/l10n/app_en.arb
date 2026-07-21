@@ -1,6 +1,6 @@
-﻿﻿{
+﻿{
   "@@locale": "en",
-  "appTitle": "Bloom Tracker",
+  "appTitle": "Daily Stitch",
   "tabToday": "Today",
   "tabProgress": "Progress",
   "tabYou": "You",
@@ -13,7 +13,7 @@
   "navInsights": "Your progress",
   "navMedals": "My Medals",
   "navManagePro": "Manage Pro subscription",
-  "navPaywall": "Bloom Tracker Pro",
+  "navPaywall": "Daily Stitch Pro",
 
   "greetingLateNight": "Burning the midnight oil",
   "greetingMorning": "Morning, Sunshine!",
@@ -76,6 +76,13 @@
   "habitsPlantNew": "Plant a new habit sprout",
   "habitsPlantFirst": "Plant a habit",
   "habitsLocked": "Pro habit slot — unlock to plant more sprouts",
+  "habitsSlotsFull": "All habit slots are currently full.",
+  "habitsStreakDays": "{days}d",
+  "@habitsStreakDays": {
+    "placeholders": {
+      "days": { "type": "String" }
+    }
+  },
   "habitsCadence": "DAILY",
 
   "leftBehindBanner": "{count} missed — still in Left Behind",
@@ -98,7 +105,38 @@
     }
   },
   "leftBehindReAdd": "Re-add today",
+  "leftBehindReAddButton": "Re-add",
+  "leftBehindAddedToToday": "Added to today",
   "leftBehindLetGo": "Let it go",
+  "leftBehindHeader": "LEFT BEHIND",
+  "leftBehindMissedTasks": "MISSED TASKS",
+  "leftBehindWaitingOne": "1 task is waiting for you.",
+  "leftBehindWaitingMany": "{count} tasks are waiting for you.",
+  "@leftBehindWaitingMany": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "leftBehindBody": "Re-add a task to bring it back to today, or let it go. Re-adding keeps your streak alive.",
+  "leftBehindReAddedSnack": "\"{task}\" is back in your day.",
+  "@leftBehindReAddedSnack": {
+    "placeholders": {
+      "task": { "type": "String" }
+    }
+  },
+  "leftBehindRemovedSnack": "Removed \"{task}\"",
+  "@leftBehindRemovedSnack": {
+    "placeholders": {
+      "task": { "type": "String" }
+    }
+  },
+  "leftBehindClearedSnack": "Left-behind cleared",
+  "leftBehindYesterdayDate": "Yesterday · {date}",
+  "@leftBehindYesterdayDate": {
+    "placeholders": {
+      "date": { "type": "String" }
+    }
+  },
 
   "streakAtRisk": "{count} task(s) left for today",
   "@streakAtRisk": {
@@ -115,10 +153,14 @@
   "streakAtRiskBody": "Midnight is close. The chain depends on these.",
   "streakAtRiskBodyLow": "You still have time. A clean day extends your streak.",
   "streakAtRiskFreeze": "Yesterday missed — use a streak freeze?",
+  "streakFreezeUse": "Use freeze",
+  "streakFreezeUseForYesterday": "Use monthly streak freeze for yesterday",
+  "streakFreezeAppliedYesterday": "Streak freeze applied for yesterday.",
 
   "chainBrokenTitle": "The chain broke. That's okay.",
   "chainBrokenBody": "Every long chain ends once. What matters is what you plant today. One perfect day starts the next one.",
   "chainBrokenCta": "Get back to today",
+  "chainBrokenPlantFirst": "Plant today's first seed",
   "chainBrokenCheck": "Check Left Behind first",
   "chainBrokenBestChain": "best chain",
   "chainBrokenTasksDone": "tasks done",
@@ -177,6 +219,15 @@
   "medalProgressTitle": "Progress",
 
   "historyTitle": "Last 7 Days",
+  "historyFullTitle": "Full history",
+  "historyLoadError": "Could not load history.",
+  "historyFullCalendar": "Full calendar",
+  "historyCompletedPercent": "{percent}% completed",
+  "@historyCompletedPercent": {
+    "placeholders": {
+      "percent": { "type": "String" }
+    }
+  },
   "historyThisWeek": "LAST {days} DAYS",
   "@historyThisWeek": {
     "placeholders": {
@@ -248,7 +299,7 @@
   "progressCalendarBody": "Dark green means a perfect day. The shade fades as you skip.",
 
   "paywallTitle": "Keep the chain unbroken.",
-  "paywallSubtitle": "Bloom Tracker Pro gives you the full discipline system.",
+  "paywallSubtitle": "Daily Stitch Pro gives you the full discipline system.",
   "paywallFeatures": "All 5 habit slots, not just 3|Your full history, forever|The full medal set|Streak freeze every month|Weekly Receipt + share cards|Themes + more",
   "paywallFeaturesBodies": "Free gives you 3. Pro unlocks all five so your full daily ritual can live here.|Browse every day you've completed — not just the last 7. Look back years, not weeks.|Unlock Legendary tier medals. The rarest badges are for the people who go all in.|2 streak freezes a month so a single bad day doesn't end your chain.|Beautiful share cards of your week. Post your chain, inspire someone else to start.|Unlock new accent colors and themes as we add them. Always free updates.",
   "paywallYearly": "Yearly",
@@ -320,13 +371,13 @@
   "shareCardBody": "The card above is exported as a PNG and sent to your share sheet. Post it on your story, send it to a friend, or print it as a sticker.",
   "shareCardShareMyBloom": "Share my bloom",
   "shareCardCouldNotShare": "Could not share right now",
-  "shareCardProgressText": "My Bloom Tracker progress — {year} on Bloom Tracker.",
+  "shareCardProgressText": "My Daily Stitch progress — {year} on Daily Stitch.",
   "@shareCardProgressText": {
     "placeholders": {
       "year": { "type": "String" }
     }
   },
-  "shareCardMedalText": "I just unlocked the \"{title}\" medal on Bloom Tracker. {subtitle}",
+  "shareCardMedalText": "I just unlocked the \"{title}\" medal on Daily Stitch. {subtitle}",
   "@shareCardMedalText": {
     "placeholders": {
       "title": { "type": "String" },
@@ -335,7 +386,7 @@
   },
 
   "howItWorksTitle": "How this works",
-  "howItWorksBody": "Bloom Tracker helps you keep a small, unbroken chain of discipline. That's it.",
+  "howItWorksBody": "Daily Stitch helps you keep a small, unbroken chain of discipline. That's it.",
   "howItWorksToday": "The Today tab",
   "howItWorksTodayBody": "This is your home. It shows the 5 tasks and the habits you set for today. Finish them by midnight, the chain extends.",
   "howItWorksCap": "The 5-task cap is the feature",
@@ -386,7 +437,7 @@
   "onboardingPage4Title": "Tend your sprouts daily.",
   "onboardingPage4Body": "Tap habits to grow them. Skip a day and the chain doesn't extend. The Guardian grows with you.",
 
-  "authBrand": "BLOOM TRACKER",
+  "authBrand": "DAILY STITCH",
   "authPlantFirstSeed": "Plant your first seed.",
   "authWelcomeBack": "Welcome back, Guardian.",
   "authFiveTasksDaily": "Five tasks. Daily habits. No excuses.",
@@ -415,7 +466,7 @@
   "settingsStreakProtection": "Streak Protection",
   "settingsStreakProtectionAvailable": "1 freeze available this month",
   "settingsStreakProtectionUsed": "Used for this month",
-  "settingsProSubscription": "Bloom Tracker Pro",
+  "settingsProSubscription": "Daily Stitch Pro",
   "settingsManageProSubscription": "Manage Pro subscription",
   "settingsProCancelPlay": "Cancel or change plan in Google Play",
   "settingsProUnlock": "Unlock all 5 habits, full history, more",
@@ -423,7 +474,7 @@
   "settingsTaskAlarmsSubtitle": "Evening nudge and midnight warning",
   "settingsHomeScreenWidget": "Home-screen widget",
   "settingsHomeScreenWidgetSubtitle": "Add your chain streak to the home screen",
-  "settingsShareBloomTracker": "Share Bloom Tracker",
+  "settingsShareBloomTracker": "Share Daily Stitch",
   "settingsShareBloomTrackerSubtitle": "Tell a friend about the chain",
   "settingsHelpSupport": "Help & Support",
   "settingsHelpSupportSubtitle": "FAQ or report a problem",
@@ -452,7 +503,7 @@
   "youProFeatures": "5 habit slots, full history, legendary medals, monthly streak freezes, weekly share cards.",
   "youSeePlans": "See plans",
   "youFromPrice": "from {price}/mo",
-  "youBloomTrackerFooter": "Bloom Tracker · Habit & To-Do",
+  "youBloomTrackerFooter": "Daily Stitch · Habit & To-Do",
 
   "progressMedals": "Medals",
   "progressLast7Days": "Last 7 days",
@@ -475,8 +526,8 @@
   "helpEmailUs": "Email us",
   "helpOpeningAction": "Opening…",
   "helpCopyEmail": "Copy support email",
-  "helpCopiedEmail": "Copied support@bloomtracker.app",
-  "helpNoMailApp": "No mail app found. Email us at support@bloomtracker.app.",
+  "helpCopiedEmail": "Copied support@dailystitch.app",
+  "helpNoMailApp": "No mail app found. Email us at support@dailystitch.app.",
   "helpTopicLabel": "Topic",
   "helpWhatHappened": "What happened?",
   "helpHint": "A short description goes a long way…",
@@ -494,7 +545,7 @@
   "helpFaqQ6": "Where is my data stored?",
   "helpFaqA6": "All data lives in Supabase (Postgres) under the account that signed in. We never sell or share it. See the privacy policy linked in the Play Store listing for the full details.",
   "helpFaqQ7": "How do I delete my account?",
-  "helpFaqA7": "Account deletion is coming to Settings in the next release. For now, email support@bloomtracker.app and we'll handle it within a day.",
+  "helpFaqA7": "Go to Settings → Account → Delete account. This permanently removes your profile, tasks, habits, and subscription data. Active Play subscriptions must be cancelled separately in Google Play.",
   "helpTopicsGeneral": "General question",
   "helpTopicsBug": "Bug report",
   "helpTopicsStreak": "Streak / rollover issue",
@@ -507,5 +558,524 @@
 
   "priorityStandard": "STANDARD",
   "priorityVital": "VITAL",
-  "prioritySpark": "SPARK"
+  "prioritySpark": "SPARK",
+
+  "settingsDeleteAccount": "Delete account",
+  "settingsDeleteAccountSubtitle": "Permanently remove your data",
+  "settingsDeleteAccountConfirmTitle": "Delete your account?",
+  "settingsDeleteAccountConfirmBody": "This permanently deletes your profile, tasks, habits, and progress. Active subscriptions must be cancelled in Google Play separately. This cannot be undone.",
+  "settingsDeleteAccountConfirmButton": "Delete forever",
+  "settingsDeleteAccountSuccess": "Your account has been deleted.",
+  "settingsDeleteAccountFailed": "Could not delete account. Try again or email support@dailystitch.app.",
+
+  "referralYouTitle": "Invite friends · earn free Pro",
+  "referralYouSubtitle": "{progress} of {milestone} friends joined",
+  "@referralYouSubtitle": {
+    "placeholders": {
+      "progress": { "type": "int" },
+      "milestone": { "type": "int" }
+    }
+  },
+  "referralYouShare": "Share invite",
+  "referralYouDetails": "View details",
+  "referralPaywallTitle": "Free Pro month",
+  "referralPaywallBody": "Invite 5 friends who sign up → 1 month Pro free",
+  "referralPaywallProBody": "Keep inviting — stack free Pro months",
+  "referralPaywallProgress": "{count} / {milestone}",
+
+  "insightsLoadError": "Could not load your progress. Try again later.",
+  "insightsMetricCurrentChain": "CURRENT CHAIN",
+  "insightsMetricBestEver": "BEST EVER",
+  "insightsMetricTasksDone": "TASKS DONE",
+  "insightsMetricPerfectDays": "PERFECT DAYS",
+  "insightsMetricHabits": "HABITS",
+  "insightsDay": "day",
+  "insightsDays": "days",
+  "insightsSectionThisWeek": "This week",
+  "insightsShareMyWeek": "Share my week",
+  "insightsShareMyWeekPro": "Share my week · Pro",
+  "insightsShareReceiptText": "My week on Daily Stitch. Don't break the chain.",
+  "insightsHistoryWindowTitle": "Showing the last {days} days",
+  "@insightsHistoryWindowTitle": {
+    "placeholders": {
+      "days": { "type": "int" }
+    }
+  },
+  "insightsHistoryUpsell": "Unlock your full history with Pro",
+
+  "referralScreenTitle": "Invite friends",
+  "referralLaunchGift": "Launch month gift",
+  "referralRewardTitle": "Get 1 month of Pro free",
+  "referralRewardBody": "Share your code with friends. When 5 people sign up using it, you unlock Daily Stitch Pro for a full month.",
+  "referralYourCode": "Your referral code",
+  "referralCopyCodeTooltip": "Copy code",
+  "referralCodeCopied": "Referral code copied",
+  "referralShareWithFriends": "Share with friends",
+  "referralFooterHint": "Friends enter your code when they create an account. Each friend counts once toward your reward.",
+  "referralFriendsJoinedOne": "{count} friend joined",
+  "@referralFriendsJoinedOne": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "referralFriendsJoinedMany": "{count} friends joined",
+  "@referralFriendsJoinedMany": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "referralRewardsEarnedOne": "You have earned {count} free month of Pro.",
+  "@referralRewardsEarnedOne": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "referralRewardsEarnedMany": "You have earned {count} free months of Pro.",
+  "@referralRewardsEarnedMany": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "referralRewardUnlocked": "Reward unlocked — enjoy your free month of Pro!",
+  "referralRemainingToUnlock": "{remaining} more to unlock your free month",
+  "@referralRemainingToUnlock": {
+    "placeholders": {
+      "remaining": { "type": "int" }
+    }
+  },
+
+  "youProMemberSince": "Bloom Pro member since {month}",
+  "@youProMemberSince": {
+    "placeholders": {
+      "month": { "type": "String" }
+    }
+  },
+  "youProPerksTitle": "Your Pro perks",
+  "manageProThankYou": "Thank you for supporting Bloom",
+  "manageProReferralHint": "Invite more friends to extend your Pro",
+
+  "bootstrapConfigErrorBody": "{detail}\n\nAdd SUPABASE_URL and SUPABASE_PUBLISHABLE_KEY (or legacy SUPABASE_ANON_KEY) to leanspace/.env, then rebuild:\n\nflutter build apk --debug",
+  "@bootstrapConfigErrorBody": {
+    "placeholders": {
+      "detail": { "type": "String" }
+    }
+  },
+
+  "languageSystemDefault": "System default",
+  "languageNameEn": "English",
+  "languageNameUr": "اردو (Urdu)",
+  "languageNameEs": "Español",
+  "languageNamePt": "Português",
+  "languageNameFr": "Français",
+  "languageNameDe": "Deutsch",
+  "languageNameIt": "Italiano",
+  "languageNameAr": "العربية",
+  "languageNameTr": "Türkçe",
+  "languageNameId": "Bahasa Indonesia",
+
+  "onboardingLanguageTitle": "Choose your language",
+  "onboardingLanguageBody": "Pick the language you'd like to use throughout Daily Stitch. You can change it anytime in Settings.",
+  "onboardingLanguageContinue": "Continue",
+
+  "commonPro": "PRO",
+  "commonFriend": "Friend",
+
+  "settingsAppTheme": "App Theme",
+  "settingsAppThemeSubtitle": "Select your personal sanctuary colors",
+  "settingsInviteFriendsTitle": "Invite friends · Free Pro",
+  "settingsInviteFriendsSubtitle": "Get 1 month free when 5 friends join",
+
+  "themePickerTitle": "Personal Sanctuary",
+  "themePickerSubtitle": "Choose a color palette that brings you peace.",
+  "themeNameClassicBloom": "Classic Bloom",
+  "themeNameSolarTerracotta": "Solar Terracotta",
+  "themeNameMidnightOasis": "Midnight Oasis",
+  "themeNameLavenderDream": "Lavender Dream",
+  "themeNameNordicFrost": "Nordic Frost",
+  "themeNameCyberpunkNeon": "Cyberpunk Neon",
+
+  "reminderTitle": "Reminders",
+  "reminderBody": "Final Call pings you before midnight if tasks are still open.",
+  "reminderFinalCall": "Final Call",
+  "reminderEveningNudge": "Evening nudge",
+  "reminderChangeTime": "Change time",
+  "reminderSave": "Save reminders",
+
+  "notificationChannelReminders": "Daily Stitch reminders",
+  "notificationChannelRemindersDesc": "Evening nudge and Final Call reminders",
+  "notificationChannelAlarms": "Daily Stitch task alarms",
+  "notificationChannelAlarmsDesc": "Loud alarms for task reminders",
+  "notificationTaskReminderTitle": "Task reminder",
+  "notificationFinalCallTitle": "Final Call",
+  "notificationFinalCallBody": "You still have {count} open task(s) today.",
+  "@notificationFinalCallBody": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "notificationEveningTitle": "Evening check-in",
+  "notificationEveningBody": "How did your garden grow today?",
+
+  "widgetSetupTitle": "Add chain widget",
+  "widgetSetupBody": "Keep your streak on your home screen — no need to open the app.",
+  "widgetSetupAdd": "Add to home screen",
+  "widgetSetupStep1": "Long-press your home screen",
+  "widgetSetupStep2": "Tap Widgets",
+  "widgetSetupStep3": "Find Daily Stitch and drag it on",
+  "widgetSetupPinSuccess": "Check your home screen to place the widget.",
+  "widgetSetupPinFallback": "Your launcher may not support one-tap add. Use manual steps below.",
+
+  "paywallWelcomePro": "Welcome to Daily Stitch Pro",
+  "paywallSavePercent": "SAVE ~16%",
+  "paywallTermsTitle": "Subscription terms",
+  "paywallTermsBody": "Billing is handled by Google Play. Subscriptions renew automatically until you cancel in Play Store → Subscriptions at least 24 hours before the end of the current period. You can manage or cancel your subscription at any time from your Google Play account.\n\nUninstalling the app does not cancel your subscription.\n\nPrices shown are in your local currency and may vary by region. Taxes may apply.",
+  "paywallPrivacyTitle": "Privacy",
+  "paywallPrivacyBody": "LeanSpace stores your tasks, habits, and streak data on our Supabase backend, tied to your account. We never sell your data.\n\nSubscription purchases are processed by Google Play. We receive a verified purchase token from Google to confirm your Pro status. We do not see or store your payment details.\n\nYou can request full data export or account deletion from Settings → Account deletion.",
+  "paywallCloseTooltip": "Close",
+  "paywallFooterLinks": "Restore · Terms · Privacy",
+
+  "manageProTitle": "Pro subscription",
+  "manageProActive": "Active",
+  "manageProNotSubscribed": "Not subscribed",
+  "manageProFreeTier": "Free tier",
+  "manageProRenewsOn": "Renews or expires on {date}.",
+  "@manageProRenewsOn": { "placeholders": { "date": { "type": "String" } } },
+  "manageProFreeBody": "You're using Daily Stitch Free. Upgrade to unlock the full system.",
+  "manageProSectionManage": "MANAGE",
+  "manageProOpenPlay": "Open Google Play subscriptions",
+  "manageProOpenPlaySubtitlePro": "Cancel, change plan, or update payment method",
+  "manageProOpenPlaySubtitleFree": "Find your existing subscription (if any) here",
+  "manageProShareApp": "Share Daily Stitch",
+  "manageProShareSubtitle": "Tell a friend about the chain",
+  "manageProSectionHelp": "NEED HELP?",
+  "manageProHelpTitle": "Help & Support",
+  "manageProHelpSubtitle": "Subscription FAQ, contact, bug reports",
+  "manageProBillingFooter": "Billing handled by Google Play · {version}",
+  "@manageProBillingFooter": { "placeholders": { "version": { "type": "String" } } },
+  "manageProPlayInstructions": "Open the Google Play Store app → tap your profile → Payments & subscriptions → Subscriptions.",
+
+  "addTaskGrowSomething": "Grow Something",
+  "addTaskPlantSprout": "Plant a Sprout",
+  "addTaskIntentionName": "INTENTION NAME",
+  "addTaskSproutName": "SPROUT NAME",
+  "addTaskHintTask": "e.g., Morning Sun Salutation",
+  "addTaskHintHabit": "e.g. Morning Yoga",
+  "addTaskWhen": "WHEN?",
+  "addTaskPriority": "PRIORITY",
+  "addTaskNotes": "NOTES",
+  "addTaskCadenceDaily": "Daily",
+  "addTaskCadenceWeekdays": "Weekdays",
+  "addTaskCadence3x": "3x/week",
+  "addTaskCadenceWeekly": "Weekly",
+  "addTaskPlantIntention": "Plant Intention",
+  "addTaskPlantSproutCta": "Plant Sprout",
+  "addTaskPlanting": "Planting…",
+  "addTaskNameIntentionError": "Name your intention",
+  "addTaskNameSproutError": "Name your sprout",
+  "addTaskNotesMigrationWarning": "Task saved. Notes & priority need the latest Supabase migration — run supabase/migrations/20260701000000_todos_notes_priority.sql.",
+  "addTaskNoSproutSlots": "No empty sprout slots — tend one first.",
+  "addTaskSaveSproutError": "Could not save sprout — try again.",
+  "addTaskElementWater": "WATER",
+  "addTaskElementLight": "LIGHT",
+  "addTaskElementSoil": "SOIL",
+  "addTaskElementBreeze": "BREEZE",
+  "addTaskCadenceLabel": "CADENCE",
+  "addTaskPreparationNotes": "PREPARATION NOTES",
+  "addTaskTendingNotes": "TENDING NOTES",
+  "addTaskNotesHintTask": "Any tools or mindset tips for this task?",
+  "addTaskNotesHintHabit": "What does tending this sprout look like?",
+  "addTaskChooseElement": "CHOOSE ELEMENT",
+  "addTaskElementsTooltip": "What do the elements mean?",
+  "addTaskTaskSeed": "Task Seed",
+  "addTaskHabitSprout": "Habit Sprout",
+  "addTaskPickElement": "Pick the right element",
+  "addTaskPickElementBody": "Each element maps to a different kind of effort. The Guardian grows stronger when you water the right one.",
+  "addTaskClearForm": "Clear form",
+
+  "shareCouldNotShare": "Could not share right now",
+
+  "authReferralCodeLabel": "Referral code (optional)",
+  "authReferralCodeHint": "Friend's code",
+
+  "youPerkHabitSlots": "5 habit slots",
+  "youPerkFullHistory": "Full history",
+  "youPerkAllThemes": "All themes",
+  "youPerkStreakFreezes": "2 streak freezes / month",
+  "youPerkLegendaryMedals": "Legendary medals",
+
+  "subscriptionPurchaseFailed": "Purchase failed. Try again.",
+  "subscriptionUnavailable": "In-app purchases are unavailable on this device.",
+  "subscriptionLoadFailed": "Could not load subscription options.",
+  "subscriptionVerifyFailed": "Could not verify purchase. Try Restore purchase.",
+
+  "streakFreezeFailed": "Could not use streak freeze.",
+  "streakFreezeAlreadyUsed": "You already used your freeze this month.",
+  "streakFreezeNoMissed": "No missed tasks on that day to freeze.",
+  "streakFreezeNotPastDay": "You can only freeze a past day.",
+
+  "myDayLoadError": "Could not load My Day. Pull to refresh.",
+  "myDayCapReached": "You've hit today's 5-task cap.",
+  "myDayRemoveTaskError": "Could not remove task.",
+
+  "shareCardTitle": "Share your week",
+  "shareCardCta": "Share image",
+
+  "medalTierSprout": "Sprout",
+  "medalTierCommon": "Common",
+  "medalTierRare": "Rare",
+  "medalTierEpic": "Epic",
+  "medalTierLegendary": "Legendary",
+  "medalCategoryTasks": "Tasks",
+  "medalCategoryHabits": "Habits",
+  "medalCategoryStreaks": "Streaks",
+  "medalCategoryMastery": "Mastery",
+
+  "medalsShareTooltip": "Share achievements",
+  "medalsFilterAll": "All",
+
+  "addHabitTitleNew": "Plant a new sprout",
+  "addHabitTitleEdit": "Tend your sprout",
+  "addHabitLabelSproutName": "SPROUT NAME",
+
+  "shareCardAppBarTitle": "Share Card",
+  "shareCardAppBarTitleMedal": "Share your medal",
+  "shareCardDescMedal": "Show off your new {title} badge",
+  "shareCardBodyMedal": "Share the win with your circle. The card is exported as a PNG and ready for any social app.",
+  "shareCardCtaPreparing": "Preparing…",
+  "shareCardMilestone": "NEW MILESTONE UNLOCKED",
+  "shareCardStatChain": "day chain",
+  "shareCardStatSprouts": "sprouts",
+  "shareCardStatMedals": "medals",
+  "shareCardHeadlineStreak": "{days} Day Streak",
+  "@shareCardHeadlineStreak": {
+    "placeholders": { "days": { "type": "int" } }
+  },
+  "shareCardHeadlineMedals": "{count} Medals Earned",
+  "@shareCardHeadlineMedals": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "shareCardHeadlineSproutGuardian": "Sprout Guardian",
+  "shareCardHeadlineFirstSeeds": "First Seeds Planted",
+  "shareCardHeadlineGardenBegins": "A Garden Begins",
+  "shareCardSubheadMonth": "You've successfully nurtured your habits for a full month.",
+  "shareCardSubheadWeek": "A full week of growth — your forest is thickening.",
+  "shareCardSubheadProgress": "Your sanctuary is showing real progress. Keep tending.",
+  "shareCardSubheadSprouts": "Your first sprouts are taking root. Water them daily.",
+  "shareCardSubheadFirstSeeds": "Your first seeds are in the soil. Watch them open.",
+  "shareCardSubheadFallback": "Every forest begins with one tiny choice.",
+
+  "shareAppText": "Daily Stitch — five small seeds a day, one unbreakable chain. Plant yours.\n\n{url}",
+  "@shareAppText": {
+    "placeholders": { "url": { "type": "String" } }
+  },
+  "shareAppSubject": "Try Daily Stitch",
+  "shareAppReferralText": "I'm building my daily chain on Daily Stitch — join me with my referral code {code} and we both grow.\n\n{url}",
+  "@shareAppReferralText": {
+    "placeholders": {
+      "code": { "type": "String" },
+      "url": { "type": "String" }
+    }
+  },
+  "shareAppReferralSubject": "Join me on Daily Stitch",
+
+  "shareCardShareTextProgress": "My Daily Stitch progress — {year} on Daily Stitch.",
+  "@shareCardShareTextProgress": {
+    "placeholders": { "year": { "type": "String" } }
+  },
+  "shareCardShareTextMedal": "I just unlocked the \"{title}\" medal on Daily Stitch. {subtitle}",
+  "@shareCardShareTextMedal": {
+    "placeholders": {
+      "title": { "type": "String" },
+      "subtitle": { "type": "String" }
+    }
+  },
+
+  "insightsReceiptTasksDone": "Tasks done",
+  "insightsReceiptPerfectDays": "Perfect days",
+  "insightsReceiptCompletion": "Completion",
+  "insightsReceiptDate": "Week of {date}",
+  "@insightsReceiptDate": {
+    "placeholders": { "date": { "type": "String" } }
+  },
+  "insightsReceiptFooter": "Don't break the chain.",
+
+  "elementLabelWater": "Water",
+  "elementLabelLight": "Light",
+  "elementLabelSoil": "Soil",
+  "elementLabelBreeze": "Breeze",
+  "elementTaglineWater": "Restore. Hydration, rest, emotional care — anything that refills the well.",
+  "elementTaglineLight": "Awaken. Morning light, focus blocks, study, meditation — energy and clarity.",
+  "elementTaglineSoil": "Ground. Reading, journaling, deep work — slow roots that build long-term strength.",
+  "elementTaglineBreeze": "Move. Walks, runs, breathwork — light, mobile energy that clears the head.",
+  "elementWhenWater": "When you feel drained or depleted.",
+  "elementWhenLight": "When you need a clear start to your day.",
+  "elementWhenSoil": "When the work is slow but worth it (study, craft, care).",
+  "elementWhenBreeze": "When your body (or mind) needs to move and breathe.",
+
+  "bloomTierMastery": "Mastery",
+  "bloomTierStrong": "Strong",
+  "bloomTierGrowing": "Growing",
+  "bloomTierSprouting": "Sprouting",
+  "bloomTierLocked": "Locked",
+
+  "habitBloomSubtitle": "{count} day streak · {element}",
+  "@habitBloomSubtitle": {
+    "placeholders": {
+      "count": { "type": "int" },
+      "element": { "type": "String" }
+    }
+  },
+
+  "medal_id_first_spark": "First Spark",
+  "medal_sub_first_spark": "You lit the match.",
+  "medal_desc_first_spark": "Finish your very first task. Every chain starts here.",
+  "medal_id_triple_seed": "Triple Seed",
+  "medal_sub_triple_seed": "Three into the soil.",
+  "medal_desc_triple_seed": "Finish 3 tasks in total.",
+  "medal_id_dozen_sower": "Dozen Sower",
+  "medal_sub_dozen_sower": "A field of twelve.",
+  "medal_desc_dozen_sower": "Finish 12 tasks in total.",
+  "medal_id_quarter_century": "Quarter Century",
+  "medal_sub_quarter_century": "A season of saying yes.",
+  "medal_desc_quarter_century": "Finish 25 tasks in total.",
+  "medal_id_productivity_titan": "Productivity Titan",
+  "medal_sub_productivity_titan": "Consistency compounds.",
+  "medal_desc_productivity_titan": "Finish 50 tasks — you've built real momentum.",
+  "medal_id_century_planter": "Century Planter",
+  "medal_sub_century_planter": "A forest of your own.",
+  "medal_desc_century_planter": "Finish 100 tasks. You're in the top 5% of users.",
+  "medal_id_clean_day": "Clean Slate",
+  "medal_sub_clean_day": "Not a single weed.",
+  "medal_desc_clean_day": "Finish every task you plant on a single day.",
+  "medal_id_triple_perfect": "Triple Perfect",
+  "medal_sub_triple_perfect": "Three flawless runs.",
+  "medal_desc_triple_perfect": "Hit 3 perfect days.",
+  "medal_id_perfect_week": "Perfect Week",
+  "medal_sub_perfect_week": "Seven days unbroken.",
+  "medal_desc_perfect_week": "7 perfect days in a row.",
+  "medal_id_two_week_chain": "Fortnight Force",
+  "medal_sub_two_week_chain": "Two weeks on fire.",
+  "medal_desc_two_week_chain": "Hold a 14-day chain.",
+  "medal_id_iron_chain": "Iron Chain",
+  "medal_sub_iron_chain": "30 links forged.",
+  "medal_desc_iron_chain": "A 30-day chain. The hardest task medal.",
+  "medal_id_quarterly_chain": "Quarterly Chain",
+  "medal_sub_quarterly_chain": "A season, unbroken.",
+  "medal_desc_quarterly_chain": "A 90-day chain. Legendary status.",
+  "medal_id_vital_priority": "Vital Spark",
+  "medal_sub_vital_priority": "You picked the hard ones.",
+  "medal_desc_vital_priority": "Finish 5 tasks marked as Vital priority.",
+  "medal_id_spark_priority": "Spark Tamer",
+  "medal_sub_spark_priority": "Quick wins add up.",
+  "medal_desc_spark_priority": "Finish 5 tasks marked as Spark priority.",
+  "medal_id_note_taker": "Note Taker",
+  "medal_sub_note_taker": "Plans on paper beat plans in head.",
+  "medal_desc_note_taker": "Add preparation notes to 5 different tasks.",
+  "medal_id_left_behind_rescuer": "Left-Behind Rescuer",
+  "medal_sub_left_behind_rescuer": "No task left behind.",
+  "medal_desc_left_behind_rescuer": "Re-add 3 missed tasks the next day.",
+  "medal_id_first_sprout": "First Sprout",
+  "medal_sub_first_sprout": "A new daily ritual.",
+  "medal_desc_first_sprout": "Plant your first habit.",
+  "medal_id_trio_sprout": "Trio Sprout",
+  "medal_sub_trio_sprout": "A small ecosystem.",
+  "medal_desc_trio_sprout": "Plant 3 different habits.",
+  "medal_id_week_of_growth": "Week of Growth",
+  "medal_sub_week_of_growth": "Roots start to hold.",
+  "medal_desc_week_of_growth": "Tend a habit every day for 7 days.",
+  "medal_id_fortnight_floret": "Fortnight Floret",
+  "medal_sub_fortnight_floret": "A full bloom.",
+  "medal_desc_fortnight_floret": "A 14-day habit streak.",
+  "medal_id_rooted_master": "Rooted Master",
+  "medal_sub_rooted_master": "Deep roots, deep strength.",
+  "medal_desc_rooted_master": "A 30-day habit streak.",
+  "medal_id_half_year_bloom": "Half-Year Bloom",
+  "medal_sub_half_year_bloom": "The garden is permanent now.",
+  "medal_desc_half_year_bloom": "Hold a single habit for 180 days.",
+  "medal_id_garden_keeper": "Garden Keeper",
+  "medal_sub_garden_keeper": "Variety, together.",
+  "medal_desc_garden_keeper": "Grow 4 different habits at the same time.",
+  "medal_id_hydration_hero": "Hydration Hero",
+  "medal_sub_hydration_hero": "You refill the well.",
+  "medal_desc_hydration_hero": "Plant a hydration habit (water/drink).",
+  "medal_id_mindful_mover": "Mindful Mover",
+  "medal_sub_mindful_mover": "The body remembers.",
+  "medal_desc_mindful_mover": "Plant a movement habit (yoga/walk/run).",
+  "medal_id_devoted_keeper": "Devoted Keeper",
+  "medal_sub_devoted_keeper": "Sixty days, one practice.",
+  "medal_desc_devoted_keeper": "Tend a single habit for 60 days straight.",
+  "medal_id_tending_notes": "Tending Notes",
+  "medal_sub_tending_notes": "Reflect as you go.",
+  "medal_desc_tending_notes": "Add tending notes to 3 habits.",
+
+  "medalTierTaglineSprout": "Plant the first seed",
+  "medalTierTaglineCommon": "Building the habit",
+  "medalTierTaglineRare": "Showing real momentum",
+  "medalTierTaglineEpic": "You're a force of nature",
+  "medalTierTaglineLegendary": "Mythic, almost no one gets here",
+
+  "guardianHeadlineNoTasks": "Today's soil is fresh.\nPlant your first seed\nand watch it grow.",
+  "guardianHeadlineAllDone": "Every seed you planted\nis in bloom.\nRest, Guardian — you earned it.",
+  "guardianHeadlineStreak14": "{count} days\nof unbroken growth.\nYour forest is thick with life.",
+  "@guardianHeadlineStreak14": { "placeholders": { "count": { "type": "int" } } },
+  "guardianHeadlineStreak7": "A full week in bloom,\nGuardian.\nOne more perfect day\nextends the chain.",
+  "guardianHeadlineStreak3": "Your chain is holding.\nTend the seeds\nstill waiting to open.",
+  "guardianHeadlineNoHabitsDone": "You're tending tasks well.\nPlant a sprout —\nhabits are how forests grow.",
+  "guardianHeadlineSomeDone": "Some seeds opened,\nsome didn't. That's okay.\nTomorrow is another planting.",
+  "guardianHeadlineMorning": "Good morning, Guardian.\nThe day is young\nand the soil is ready.",
+  "guardianHeadlineAfternoon": "Good afternoon, Guardian.\nHalf the light remains —\nkeep tending.",
+  "guardianHeadlineEvening": "Good evening, Guardian.\nOne last sweep\nbefore the sun sets.",
+  "guardianHeadlineNight": "Burning the midnight oil?\nEven Guardians rest.\nPlant tomorrow's seed now.",
+
+  "guardianBodyNoTasks": "Your sanctuary is quiet right now. Add one intention and see what shifts by sundown.",
+  "guardianBodyStreak14": "{count} days running. The chain isn't luck — it's the small choices stacking up. Keep stacking.",
+  "@guardianBodyStreak14": { "placeholders": { "count": { "type": "int" } } },
+  "guardianBodyStreak3": "A {count}-day chain is real momentum. Finish today's open seeds before you call it done.",
+  "@guardianBodyStreak3": { "placeholders": { "count": { "type": "int" } } },
+  "guardianBodyNoHabits": "You've planted {count} tasks so far. Adding even one habit sprout would let the work compound day after day.",
+  "@guardianBodyNoHabits": { "placeholders": { "count": { "type": "int" } } },
+  "guardianBodyLowCompletion": "You're finishing {pct}% of what you plant. Fewer, sharper seeds tend to grow taller than ten scattered ones.",
+  "@guardianBodyLowCompletion": { "placeholders": { "pct": { "type": "int" } } },
+  "guardianBodyDefault": "Your sanctuary is alive. {tasks} tasks done, {sprouts} sprout(s) growing — the work is showing.",
+  "@guardianBodyDefault": { "placeholders": { "tasks": { "type": "int" }, "sprouts": { "type": "int" } } },
+
+  "guardianInsightWaitingTitle": "Waiting for your first move",
+  "guardianInsightWaitingBody": "Add a task or habit and I'll start reading the patterns in your garden. The more you plant, the more I have to learn from.",
+  "guardianInsightWaitingCta": "Plant your first seed",
+  "guardianInsightChainSuperTitle": "Chain is your superpower",
+  "guardianInsightChainSuperBody": "You've held a {count}-day chain. Streaks beat motivation every time — keep it warm, even on slow days.",
+  "@guardianInsightChainSuperBody": { "placeholders": { "count": { "type": "int" } } },
+  "guardianInsightChainSuperCta": "Add tomorrow's seed",
+  "guardianInsightChainColdTitle": "Chain is cold — start a new one",
+  "guardianInsightChainColdBody": "You've planted before, which means you can plant again. One small task done today is a longer chain tomorrow.",
+  "guardianInsightChainColdCta": "Plant a seed",
+  "guardianInsightLessIsMoreTitle": "Less is more this week",
+  "guardianInsightLessIsMoreBody": "You finish about {pct}% of what you plant. Try 3 sharp intentions instead of 5 loose ones — quality compounds.",
+  "@guardianInsightLessIsMoreBody": { "placeholders": { "pct": { "type": "int" } } },
+  "guardianInsightLessIsMoreCta": "Sharpen the day",
+  "guardianInsightNextMedalTitle": "Next medal: {title}",
+  "@guardianInsightNextMedalTitle": { "placeholders": { "title": { "type": "String" } } },
+  "guardianInsightNextMedalBody": "You're {value} of {target} {unit} in. A few more honest days and it's yours.",
+  "@guardianInsightNextMedalBody": { "placeholders": { "value": { "type": "int" }, "target": { "type": "int" }, "unit": { "type": "String" } } },
+  "guardianInsightNextMedalCta": "Show medal",
+  "guardianInsightSteadyTitle": "You're in a steady season",
+  "guardianInsightSteadyBody": "No medal right around the corner — that's fine. Tend what you have. The next bloom is on the way.",
+  "guardianInsightSteadyCta": "View progress",
+
+  "notificationTaskReminderBody": "{label}",
+  "@notificationTaskReminderBody": { "placeholders": { "label": { "type": "String" } } },
+  "notificationFinalCallBodyOne": "1 task left on your chain. Midnight is coming.",
+  "notificationFinalCallBodyMany": "{count} tasks left on your chain. Midnight is coming.",
+  "@notificationFinalCallBodyMany": { "placeholders": { "count": { "type": "int" } } },
+  "notificationEveningBodyOne": "You still have 1 open task today.",
+  "notificationEveningBodyMany": "You still have {count} open tasks today.",
+  "@notificationEveningBodyMany": { "placeholders": { "count": { "type": "int" } } },
+  "notificationTickerTaskReminder": "Task reminder",
+  "notificationTickerTaskAlarm": "Task alarm",
+
+  "habitBloomSubtitleL10n": "{count} day streak · {element}",
+  "@habitBloomSubtitleL10n": {
+    "placeholders": {
+      "count": { "type": "int" },
+      "element": { "type": "String" }
+    }
+  }
 }

@@ -3,8 +3,10 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
+import '../../../core/l10n/app_localizations.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/widgets/ambient_background.dart';
+import '../../referral/providers/referral_providers.dart';
 import '../providers/entitlement_provider.dart';
 
 /// Settings → Pro → "Manage subscription" landing page. For Android, the
@@ -27,12 +29,17 @@ class _ManageProScreenState extends ConsumerState<ManageProScreen> {
       if (!mounted) return;
       setState(() => _info = value);
     });
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      ref.read(referralControllerProvider.notifier).refresh();
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final l10n = AppLocalizations.of(context);
     final entitlement = ref.watch(entitlementProvider);
+    final referral = ref.watch(referralControllerProvider);
     final isPro = entitlement.isPro;
     final proUntil = entitlement.proUntil;
 
@@ -43,7 +50,7 @@ class _ManageProScreenState extends ConsumerState<ManageProScreen> {
           icon: const Icon(Icons.arrow_back_rounded),
           onPressed: () => context.pop(),
         ),
-        title: const Text('Pro subscription'),
+        title: Text(l10n.manageProTitle),
       ),
       body: AmbientBackground(
         child: ListView(
@@ -53,11 +60,18 @@ class _ManageProScreenState extends ConsumerState<ManageProScreen> {
               padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(22),
-                gradient: const LinearGradient(
+                gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
-                  colors: [Color(0xFF1A4D2E), Color(0xFF0F2E1B)],
+                  colors: AppColors.heroGradient,
                 ),
+                boxShadow: [
+                  BoxShadow(
+                    color: AppColors.primary.withValues(alpha: 0.25),
+                    blurRadius: 20,
+                    offset: const Offset(0, 8),
+                  ),
+                ],
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -68,11 +82,11 @@ class _ManageProScreenState extends ConsumerState<ManageProScreen> {
                         padding: const EdgeInsets.symmetric(
                             horizontal: 8, vertical: 3),
                         decoration: BoxDecoration(
-                          color: const Color(0xFFE8A33D),
+                          color: AppColors.shareCardAccent,
                           borderRadius: BorderRadius.circular(6),
                         ),
-                        child: const Text(
-                          'PRO',
+                        child: Text(
+                          l10n.commonPro,
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 10,
@@ -83,10 +97,10 @@ class _ManageProScreenState extends ConsumerState<ManageProScreen> {
                       ),
                       const Spacer(),
                       Text(
-                        isPro ? 'Active' : 'Not subscribed',
+                        isPro ? l10n.manageProActive : l10n.manageProNotSubscribed,
                         style: TextStyle(
                           color: isPro
-                              ? const Color(0xFF66DD8B)
+                              ? AppColors.primaryContainer
                               : Colors.white70,
                           fontSize: 11,
                           fontWeight: FontWeight.w800,
@@ -97,7 +111,7 @@ class _ManageProScreenState extends ConsumerState<ManageProScreen> {
                   ),
                   const SizedBox(height: 12),
                   Text(
-                    isPro ? 'You\'re on Pro' : 'Free tier',
+                    isPro ? l10n.manageProThankYou : l10n.manageProFreeTier,
                     style: theme.textTheme.headlineSmall?.copyWith(
                       color: Colors.white,
                       fontWeight: FontWeight.w800,
@@ -107,10 +121,8 @@ class _ManageProScreenState extends ConsumerState<ManageProScreen> {
                   const SizedBox(height: 4),
                   Text(
                     isPro && proUntil != null
-                        ? 'Renews or expires on '
-                            '${_formatDate(proUntil)}.'
-                        : 'You\'re using Bloom Tracker Free. '
-                            'Upgrade to unlock the full system.',
+                        ? l10n.manageProRenewsOn(_formatDate(context, proUntil))
+                        : l10n.manageProFreeBody,
                     style: theme.textTheme.bodyMedium?.copyWith(
                       color: Colors.white.withValues(alpha: 0.78),
                     ),
@@ -119,17 +131,17 @@ class _ManageProScreenState extends ConsumerState<ManageProScreen> {
               ),
             ),
             const SizedBox(height: 20),
-            _SectionLabel('MANAGE'),
+            _SectionLabel(l10n.manageProSectionManage),
             _SettingsCard(
               children: [
                 _SettingsTile(
                   icon: Icons.open_in_new_rounded,
                   iconBg: AppColors.tertiary.withValues(alpha: 0.15),
                   iconColor: AppColors.tertiary,
-                  title: 'Open Google Play subscriptions',
+                  title: l10n.manageProOpenPlay,
                   subtitle: isPro
-                      ? 'Cancel, change plan, or update payment method'
-                      : 'Find your existing subscription (if any) here',
+                      ? l10n.manageProOpenPlaySubtitlePro
+                      : l10n.manageProOpenPlaySubtitleFree,
                   onTap: _openPlaySubscriptions,
                 ),
                 if (isPro) ...[
@@ -138,23 +150,33 @@ class _ManageProScreenState extends ConsumerState<ManageProScreen> {
                     icon: Icons.ios_share_rounded,
                     iconBg: AppColors.secondary.withValues(alpha: 0.10),
                     iconColor: AppColors.secondary,
-                    title: 'Share Bloom Tracker',
-                    subtitle: 'Tell a friend about the chain',
+                    title: l10n.manageProShareApp,
+                    subtitle: l10n.manageProShareSubtitle,
                     onTap: () => context.push('/share-card'),
+                  ),
+                  const _Divider(),
+                  _SettingsTile(
+                    icon: Icons.card_giftcard_rounded,
+                    iconBg: AppColors.primary.withValues(alpha: 0.12),
+                    iconColor: AppColors.primary,
+                    title: l10n.referralYouTitle,
+                    subtitle:
+                        '${l10n.manageProReferralHint} · ${referral.progress}/${referral.milestone}',
+                    onTap: () => context.push('/referral'),
                   ),
                 ],
               ],
             ),
             const SizedBox(height: 24),
-            _SectionLabel('NEED HELP?'),
+            _SectionLabel(l10n.manageProSectionHelp),
             _SettingsCard(
               children: [
                 _SettingsTile(
                   icon: Icons.help_outline_rounded,
                   iconBg: AppColors.tertiary.withValues(alpha: 0.15),
                   iconColor: AppColors.tertiary,
-                  title: 'Help & Support',
-                  subtitle: 'Subscription FAQ, contact, bug reports',
+                  title: l10n.manageProHelpTitle,
+                  subtitle: l10n.manageProHelpSubtitle,
                   onTap: () => context.push('/help'),
                 ),
               ],
@@ -162,7 +184,7 @@ class _ManageProScreenState extends ConsumerState<ManageProScreen> {
             const SizedBox(height: 32),
             Center(
               child: Text(
-                'Billing handled by Google Play · ${_info?.version ?? '1.0.0'}',
+                l10n.manageProBillingFooter(_info?.version ?? '1.0.0'),
                 style: theme.textTheme.labelSmall?.copyWith(
                   color: AppColors.onSurfaceVariant,
                   letterSpacing: 0.4,
@@ -175,25 +197,16 @@ class _ManageProScreenState extends ConsumerState<ManageProScreen> {
     );
   }
 
-  String _formatDate(DateTime d) {
-    const months = [
-      'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-      'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',
-    ];
-    return '${months[d.month - 1]} ${d.day}, ${d.year}';
+  String _formatDate(BuildContext context, DateTime d) {
+    return MaterialLocalizations.of(context).formatMediumDate(d);
   }
 
   Future<void> _openPlaySubscriptions() async {
-    // We avoid pulling in url_launcher just for this — the Play app icon
-    // is the canonical place to manage Google Play subscriptions. Show
-    // a short instruction snackbar.
     if (!mounted) return;
+    final l10n = AppLocalizations.of(context);
     ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text(
-          'Open the Google Play Store app → tap your profile → '
-          'Payments & subscriptions → Subscriptions.',
-        ),
+      SnackBar(
+        content: Text(l10n.manageProPlayInstructions),
         duration: Duration(seconds: 6),
       ),
     );
@@ -227,9 +240,9 @@ class _SettingsCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: AppColors.surfaceContainerLow,
+        color: AppColors.elevatedCardSurface,
         borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: AppColors.outlineVariant, width: 0.5),
+        border: Border.all(color: AppColors.cardBorder, width: 0.5),
       ),
       clipBehavior: Clip.antiAlias,
       child: Column(children: children),

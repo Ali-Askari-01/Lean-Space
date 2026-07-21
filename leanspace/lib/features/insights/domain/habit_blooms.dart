@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../core/l10n/app_localizations.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../my_day/domain/habit.dart';
 import 'medals.dart';
@@ -37,33 +38,32 @@ class HabitBloom {
   }
 }
 
-/// Picks the bloom tier (Mastery / Strong / Sprouting / Locked) for a given
-/// habit based on its streak length.
-({String label, Color color}) _bloomTier(int streak) {
+/// Picks the bloom tier for a given habit based on its streak length.
+({String label, Color color}) _bloomTier(int streak, AppLocalizations l10n) {
   if (streak >= 30) {
-    return (label: 'Mastery', color: AppColors.primary);
+    return (label: l10n.bloomTierMastery, color: AppColors.primary);
   }
   if (streak >= 14) {
-    return (label: 'Strong', color: AppColors.tertiary);
+    return (label: l10n.bloomTierStrong, color: AppColors.tertiary);
   }
   if (streak >= 7) {
-    return (label: 'Growing', color: AppColors.secondary);
+    return (label: l10n.bloomTierGrowing, color: AppColors.secondary);
   }
   if (streak >= 1) {
-    return (label: 'Sprouting', color: AppColors.primary);
+    return (label: l10n.bloomTierSprouting, color: AppColors.primary);
   }
-  return (label: 'Locked', color: AppColors.outline);
+  return (label: l10n.bloomTierLocked, color: AppColors.outline);
 }
 
 /// Maps a habit to a visual element (water / light / soil / breeze) using
 /// the same heuristic the rest of the app uses.
-({IconData icon, MedalTone tone, String element}) _elementFor(Habit h) {
+({IconData icon, MedalTone tone, String element}) _elementFor(Habit h, AppLocalizations l10n) {
   final n = h.name.toLowerCase();
   if (n.contains('water') || n.contains('drink') || n.contains('hydrat')) {
     return (
       icon: Icons.water_drop_rounded,
       tone: MedalTone(color: AppColors.tertiary, bg: const Color(0x3300629F)),
-      element: 'Water',
+      element: l10n.elementLabelWater,
     );
   }
   if (n.contains('yoga') ||
@@ -75,7 +75,7 @@ class HabitBloom {
     return (
       icon: Icons.wb_sunny_rounded,
       tone: const MedalTone(color: Color(0xFFE8A33D), bg: Color(0x33E8A33D)),
-      element: 'Light',
+      element: l10n.elementLabelLight,
     );
   }
   if (n.contains('read') ||
@@ -85,7 +85,7 @@ class HabitBloom {
     return (
       icon: Icons.grass_rounded,
       tone: const MedalTone(color: Color(0xFF8B5E2B), bg: Color(0x338B5E2B)),
-      element: 'Soil',
+      element: l10n.elementLabelSoil,
     );
   }
   if (n.contains('run') ||
@@ -95,29 +95,29 @@ class HabitBloom {
     return (
       icon: Icons.air_rounded,
       tone: MedalTone(color: AppColors.outline, bg: const Color(0x336E7A6E)),
-      element: 'Breeze',
+      element: l10n.elementLabelBreeze,
     );
   }
   return (
     icon: Icons.eco_rounded,
     tone: MedalTone(color: AppColors.primary, bg: const Color(0x33006D36)),
-    element: 'Soil',
+    element: l10n.elementLabelSoil,
   );
 }
 
 /// Builds the list of Habit Blooms to show on the journal screen.
 /// Real blooms first (sorted by streak), then aspirational locked ones.
-List<HabitBloom> buildHabitBlooms(List<Habit> habits) {
+List<HabitBloom> buildHabitBlooms(List<Habit> habits, AppLocalizations l10n) {
   final real = <HabitBloom>[];
   for (final h in habits) {
-    final el = _elementFor(h);
-    final tier = _bloomTier(h.streakCount);
+    final el = _elementFor(h, l10n);
+    final tier = _bloomTier(h.streakCount, l10n);
     final target = h.streakCount >= 30 ? 30 : (h.streakCount >= 7 ? 30 : 7);
     real.add(
       HabitBloom(
         id: h.id,
         title: h.name,
-        subtitle: '${h.streakCount} day streak · ${el.element}',
+        subtitle: l10n.habitBloomSubtitleL10n(h.streakCount, el.element),
         icon: el.icon,
         tone: el.tone,
         streak: h.streakCount,

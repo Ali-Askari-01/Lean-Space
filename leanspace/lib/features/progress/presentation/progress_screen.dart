@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../core/l10n/app_localizations.dart';
+import '../../../core/l10n/medal_l10n.dart';
 import '../../../core/local_date.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/widgets/ambient_background.dart';
@@ -54,9 +55,9 @@ class ProgressScreen extends ConsumerWidget {
     final progress = evaluateAll(catalogue, ctx);
     final next = nextMedal(catalogue, progress);
     final earned = earnedCount(progress);
-    final insight = GuardianAngel.insight(ctx);
+    final insight = GuardianAngel.insight(ctx, l10n);
 
-    final blooms = buildHabitBlooms(myDay.habits);
+    final blooms = buildHabitBlooms(myDay.habits, l10n);
 
     return Scaffold(
       backgroundColor: AppColors.surface,
@@ -221,13 +222,20 @@ class _HistoryTeaser extends ConsumerWidget {
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
                 colors: [
-                  AppColors.primary.withValues(alpha: 0.10),
-                  AppColors.tertiary.withValues(alpha: 0.10),
+                  AppColors.primary.withValues(alpha: 0.12),
+                  AppColors.tertiary.withValues(alpha: 0.08),
                 ],
               ),
               border: Border.all(
-                color: AppColors.primary.withValues(alpha: 0.25),
+                color: AppColors.primary.withValues(alpha: 0.28),
               ),
+              boxShadow: [
+                BoxShadow(
+                  color: AppColors.primary.withValues(alpha: 0.08),
+                  blurRadius: 16,
+                  offset: const Offset(0, 4),
+                ),
+              ],
             ),
             child: Row(
               children: [
@@ -441,7 +449,7 @@ class _SeeAllMedalsCta extends StatelessWidget {
     final theme = Theme.of(context);
     final l10n = AppLocalizations.of(context);
     return Material(
-      color: AppColors.surfaceContainerLow,
+      color: AppColors.elevatedCardSurface,
       borderRadius: BorderRadius.circular(20),
       child: InkWell(
         borderRadius: BorderRadius.circular(20),
@@ -450,7 +458,7 @@ class _SeeAllMedalsCta extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
-            border: Border.all(color: AppColors.outlineVariant),
+            border: Border.all(color: AppColors.cardBorder),
           ),
           child: Row(
             children: [
@@ -495,16 +503,35 @@ class _BloomCard extends StatelessWidget {
       width: 220,
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
+        gradient: bloom.locked
+            ? null
+            : LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [
+                  color.withValues(alpha: 0.08),
+                  AppColors.elevatedCardSurface,
+                ],
+              ),
         color: bloom.locked
             ? AppColors.surfaceContainer.withValues(alpha: 0.6)
-            : AppColors.surfaceContainerLow,
+            : null,
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
           color: bloom.locked
-              ? AppColors.outlineVariant
+              ? AppColors.cardBorder
               : color.withValues(alpha: 0.3),
           width: 1,
         ),
+        boxShadow: bloom.locked
+            ? null
+            : [
+                BoxShadow(
+                  color: color.withValues(alpha: 0.08),
+                  blurRadius: 16,
+                  offset: const Offset(0, 4),
+                ),
+              ],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -605,13 +632,17 @@ class _GuardianInsightCard extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-        color: AppColors.inverseSurface,
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: AppColors.heroGradient,
+        ),
         borderRadius: BorderRadius.circular(24),
         boxShadow: [
           BoxShadow(
-            color: AppColors.primary.withValues(alpha: 0.18),
-            blurRadius: 24,
-            offset: const Offset(0, 6),
+            color: AppColors.primary.withValues(alpha: 0.25),
+            blurRadius: 28,
+            offset: const Offset(0, 8),
           ),
         ],
       ),
@@ -664,12 +695,19 @@ class _NextMedalCard extends StatelessWidget {
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(24),
-          color: AppColors.surfaceContainerLow,
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [
+              tone.withValues(alpha: 0.08),
+              AppColors.elevatedCardSurface,
+            ],
+          ),
           border: Border.all(color: tone.withValues(alpha: 0.30)),
           boxShadow: [
             BoxShadow(
-              color: tone.withValues(alpha: 0.10),
-              blurRadius: 16,
+              color: tone.withValues(alpha: 0.12),
+              blurRadius: 20,
               offset: const Offset(0, 6),
             ),
           ],
@@ -687,7 +725,7 @@ class _NextMedalCard extends StatelessWidget {
                     children: [
                       Text(
                         AppLocalizations.of(context)
-                            .progressNextBadgeTier(medal.tier.label),
+                            .progressNextBadgeTier(medal.tier.localizedLabel(AppLocalizations.of(context))),
                         style: theme.textTheme.labelSmall?.copyWith(
                           color: medal.tier.accent,
                           fontWeight: FontWeight.w800,

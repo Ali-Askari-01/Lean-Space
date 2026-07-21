@@ -2,11 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../core/l10n/app_localizations.dart';
+import '../../../core/l10n/locale_resolution.dart';
 import '../../../core/onboarding/onboarding_store.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/widgets/ambient_background.dart';
 import '../../../core/widgets/growth_widgets.dart';
 import '../../../core/widgets/guardian_mascot.dart';
+import '../../../core/widgets/language_picker_sheet.dart';
+import '../../../core/widgets/locale_provider.dart';
 
 class OnboardingScreen extends ConsumerStatefulWidget {
   const OnboardingScreen({super.key, required this.onDone});
@@ -20,8 +23,9 @@ class OnboardingScreen extends ConsumerStatefulWidget {
 class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
   final _pageController = PageController();
   int _page = 0;
+  Locale? _selectedLanguage;
 
-  static const _pages = <_OnboardingPage>[
+  static const _storyPages = <_OnboardingPage>[
     _OnboardingPage(
       titleKey: 'p1Title',
       bodyKey: 'p1Body',
@@ -44,16 +48,51 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
     ),
   ];
 
-  ({String title, String body}) _resolve(AppLocalizations l10n, String titleKey, String bodyKey) {
+  int get _totalPages => 1 + _storyPages.length;
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) => _seedLanguage());
+  }
+
+  void _seedLanguage() {
+    final saved = ref.read(localeProvider);
+    if (saved != null) {
+      setState(() => _selectedLanguage = saved);
+      return;
+    }
+    final device = WidgetsBinding.instance.platformDispatcher.locale;
+    final resolved = resolveAppLocale(null, device);
+    setState(() => _selectedLanguage = resolved);
+  }
+
+  ({String title, String body}) _resolve(
+    AppLocalizations l10n,
+    String titleKey,
+    String bodyKey,
+  ) {
     switch (titleKey) {
       case 'p1Title':
-        return (title: l10n.onboardingPage1Title, body: l10n.onboardingPage1Body);
+        return (
+          title: l10n.onboardingPage1Title,
+          body: l10n.onboardingPage1Body,
+        );
       case 'p2Title':
-        return (title: l10n.onboardingPage2Title, body: l10n.onboardingPage2Body);
+        return (
+          title: l10n.onboardingPage2Title,
+          body: l10n.onboardingPage2Body,
+        );
       case 'p3Title':
-        return (title: l10n.onboardingPage3Title, body: l10n.onboardingPage3Body);
+        return (
+          title: l10n.onboardingPage3Title,
+          body: l10n.onboardingPage3Body,
+        );
       case 'p4Title':
-        return (title: l10n.onboardingPage4Title, body: l10n.onboardingPage4Body);
+        return (
+          title: l10n.onboardingPage4Title,
+          body: l10n.onboardingPage4Body,
+        );
       default:
         return (title: '', body: '');
     }
@@ -71,8 +110,19 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
     widget.onDone();
   }
 
+  Future<void> _persistLanguage(Locale locale) async {
+    setState(() => _selectedLanguage = locale);
+    await ref.read(localeProvider.notifier).set(locale);
+  }
+
   void _next() {
-    if (_page < _pages.length - 1) {
+    if (_page == 0) {
+      final locale = _selectedLanguage;
+      if (locale != null) {
+        ref.read(localeProvider.notifier).set(locale);
+      }
+    }
+    if (_page < _totalPages - 1) {
       _pageController.nextPage(
         duration: const Duration(milliseconds: 320),
         curve: Curves.easeOutCubic,
@@ -82,10 +132,22 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
     }
   }
 
+  void _skip() {
+    if (_page == 0) {
+      _pageController.nextPage(
+        duration: const Duration(milliseconds: 320),
+        curve: Curves.easeOutCubic,
+      );
+      return;
+    }
+    _finish();
+  }
+
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
-    final isLast = _page == _pages.length - 1;
+    final isLast = _page == _totalPages - 1;
+    final isLanguagePage = _page == 0;
 
     return Material(
       color: AppColors.surface,
@@ -96,7 +158,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
               Align(
                 alignment: Alignment.centerRight,
                 child: TextButton(
-                  onPressed: _finish,
+                  onPressed: _skip,
                   child: BlueprintLabel(
                     l10n.onboardingSkip,
                     color: AppColors.onSurfaceVariant,
@@ -106,10 +168,16 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
               Expanded(
                 child: PageView.builder(
                   controller: _pageController,
-                  itemCount: _pages.length,
+                  itemCount: _totalPages,
                   onPageChanged: (i) => setState(() => _page = i),
                   itemBuilder: (context, index) {
-                    final p = _pages[index];
+                    if (index == 0) {
+                      return _OnboardingLanguagePage(
+                        selected: _selectedLanguage,
+                        onSelected: _persistLanguage,
+                      );
+                    }
+                    final p = _storyPages[index - 1];
                     final resolved = _resolve(l10n, p.titleKey, p.bodyKey);
                     return _OnboardingPageView(
                       key: ValueKey(index),
@@ -122,42 +190,105 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                 ),
               ),
               const SizedBox(height: 16),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: List.generate(
-                  _pages.length,
-                  (i) => AnimatedContainer(
-                    duration: const Duration(milliseconds: 220),
-                    margin: const EdgeInsets.symmetric(horizontal: 4),
-                    width: i == _page ? 24 : 8,
-                    height: 8,
-                    decoration: BoxDecoration(
-                      color: i == _page
-                          ? AppColors.primary
-                          : AppColors.outlineVariant,
-                      borderRadius: BorderRadius.circular(999),
+              Semantics(
+                label: 'Page ${_page + 1} of $_totalPages',
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: List.generate(
+                    _totalPages,
+                    (i) => AnimatedContainer(
+                      duration: const Duration(milliseconds: 220),
+                      margin: const EdgeInsets.symmetric(horizontal: 4),
+                      width: i == _page ? 24 : 8,
+                      height: 8,
+                      decoration: BoxDecoration(
+                        color: i == _page
+                            ? AppColors.primary
+                            : AppColors.outlineVariant,
+                        borderRadius: BorderRadius.circular(999),
+                      ),
                     ),
                   ),
                 ),
               ),
               const SizedBox(height: 12),
-              BlueprintLabel(
-                _page == 0 ? l10n.onboardingIntroduction : l10n.onboardingGrowYourForest,
-                color: AppColors.onSurfaceVariant,
-              ),
+              if (!isLanguagePage)
+                BlueprintLabel(
+                  _page == 1
+                      ? l10n.onboardingIntroduction
+                      : l10n.onboardingGrowYourForest,
+                  color: AppColors.onSurfaceVariant,
+                ),
               const SizedBox(height: 18),
               Padding(
                 padding: const EdgeInsets.fromLTRB(24, 0, 24, 24),
                 child: CtaPill(
-                  label: isLast ? l10n.onboardingEnterSanctuary : l10n.onboardingNext,
+                  label: isLanguagePage
+                      ? l10n.onboardingLanguageContinue
+                      : isLast
+                          ? l10n.onboardingEnterSanctuary
+                          : l10n.onboardingNext,
                   icon: Icons.arrow_forward_rounded,
-                  onPressed: _next,
+                  onPressed: _selectedLanguage == null && isLanguagePage
+                      ? null
+                      : _next,
                 ),
               ),
             ],
           ),
         ),
       ),
+    );
+  }
+}
+
+class _OnboardingLanguagePage extends StatelessWidget {
+  const _OnboardingLanguagePage({
+    required this.selected,
+    required this.onSelected,
+  });
+
+  final Locale? selected;
+  final ValueChanged<Locale> onSelected;
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
+    final theme = Theme.of(context);
+
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.fromLTRB(32, 8, 32, 16),
+          child: Column(
+            children: [
+              Text(
+                l10n.onboardingLanguageTitle,
+                textAlign: TextAlign.center,
+                style: theme.textTheme.headlineSmall?.copyWith(
+                  color: AppColors.onSurface,
+                  fontWeight: FontWeight.w800,
+                ),
+              ),
+              const SizedBox(height: 12),
+              Text(
+                l10n.onboardingLanguageBody,
+                textAlign: TextAlign.center,
+                style: theme.textTheme.bodyLarge?.copyWith(
+                  color: AppColors.onSurfaceVariant,
+                  height: 1.5,
+                ),
+              ),
+            ],
+          ),
+        ),
+        Expanded(
+          child: OnboardingLanguagePicker(
+            selected: selected,
+            onSelected: onSelected,
+          ),
+        ),
+      ],
     );
   }
 }

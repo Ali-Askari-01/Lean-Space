@@ -114,15 +114,19 @@ InsightsData buildInsights(
       done: items.where((t) => t.isDone).length,
       missed: items.where((t) => t.isMissed).length,
     );
+    // Track perfect status for ALL dates (not just within window)
+    // so best streak calculation works for free-tier users too.
+    perfectByDate[date] = isPerfect;
     if (cutoff != null && date.isBefore(cutoff)) continue;
     created += items.length;
     completed += items.where((t) => t.isDone).length;
-    perfectByDate[date] = isPerfect;
     if (isPerfect) perfect++;
   }
 
+  final streak = computeTaskStreak(todos, today, frozenDates: frozenDates);
+
   return InsightsData(
-    currentStreak: computeTaskStreak(todos, today, frozenDates: frozenDates),
+    currentStreak: streak,
     bestStreak: _bestStreak(perfectByDate),
     last7Days: last7,
     tasksCompleted: completed,
@@ -135,7 +139,7 @@ InsightsData buildInsights(
     windowDays: windowDays,
     coachingLine: _coachingLine(
       last7: last7,
-      currentStreak: computeTaskStreak(todos, today, frozenDates: frozenDates),
+      currentStreak: streak,
       tasksCreated: created,
       tasksCompleted: completed,
       activeHabits: habits.length,

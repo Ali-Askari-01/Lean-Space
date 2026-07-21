@@ -10,10 +10,12 @@ import 'package:intl/intl.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:share_plus/share_plus.dart';
 
+import '../../../core/l10n/app_localizations.dart';
 import '../../../core/haptics.dart';
 import '../../../core/local_date.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/widgets/growth_widgets.dart';
+import '../../../core/widgets/premium_logo.dart';
 import '../../insights/domain/insights.dart';
 import '../../insights/domain/medals.dart';
 import '../../insights/providers/insights_providers.dart';
@@ -22,8 +24,6 @@ import '../../my_day/providers/my_day_providers.dart';
 class ShareCardScreen extends ConsumerStatefulWidget {
   const ShareCardScreen({super.key, this.highlightMedalId});
 
-  /// When set, the share card is themed around the user's newest
-  /// medal so they can post a celebratory card right after they earn it.
   final String? highlightMedalId;
 
   @override
@@ -50,8 +50,6 @@ class _ShareCardScreenState extends ConsumerState<ShareCardScreen> {
       final file = File('${dir.path}/bloom_tracker_share.png');
       await file.writeAsBytes(bytes);
 
-      // Re-resolve the highlighted medal from the catalogue so the share
-      // caption can include its name + tagline.
       String? highlightTitle;
       String? highlightSubtitle;
       if (widget.highlightMedalId != null) {
@@ -64,18 +62,20 @@ class _ShareCardScreenState extends ConsumerState<ShareCardScreen> {
         }
       }
       AppHaptics.light();
+      final l10n = AppLocalizations.of(context);
       await SharePlus.instance.share(
         ShareParams(
           files: [XFile(file.path)],
           text: highlightTitle == null
-              ? 'My Bloom Tracker progress — ${DateTime.now().year} on Bloom Tracker.'
-              : 'I just unlocked the "$highlightTitle" medal on Bloom Tracker. $highlightSubtitle',
+              ? l10n.shareCardProgressText('${DateTime.now().year}')
+              : l10n.shareCardMedalText(highlightTitle, highlightSubtitle ?? ''),
         ),
       );
     } catch (_) {
       if (mounted) {
+        final l10n = AppLocalizations.of(context);
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Could not share right now')),
+          SnackBar(content: Text(l10n.shareCouldNotShare)),
         );
       }
     } finally {
@@ -85,6 +85,7 @@ class _ShareCardScreenState extends ConsumerState<ShareCardScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final myDay = ref.watch(myDayProvider);
     final insightsAsync = ref.watch(insightsProvider);
     final insights = insightsAsync.asData?.value ??
@@ -112,9 +113,6 @@ class _ShareCardScreenState extends ConsumerState<ShareCardScreen> {
     final strongest = _pickStrongest(insights, myDay.habits.length, earned.length);
     final theme = Theme.of(context);
 
-    // If the user opened this from the celebration sheet, find that
-    // medal and use it as the headline; otherwise pick the most
-    // share-worthy stat (existing behaviour).
     Medal? highlighted;
     if (widget.highlightMedalId != null) {
       for (var i = 0; i < catalogue.length; i++) {
@@ -134,7 +132,7 @@ class _ShareCardScreenState extends ConsumerState<ShareCardScreen> {
           color: AppColors.onSurfaceVariant,
         ),
         title: Text(
-          highlighted == null ? 'Share Card' : 'Share your medal',
+          highlighted == null ? l10n.shareCardAppBarTitle : l10n.shareCardAppBarTitleMedal,
         ),
         backgroundColor: AppColors.surface,
         elevation: 0,
@@ -158,8 +156,8 @@ class _ShareCardScreenState extends ConsumerState<ShareCardScreen> {
           const SizedBox(height: 20),
           Text(
             highlighted == null
-                ? 'A snapshot of your sanctuary'
-                : 'Show off your new ${highlighted.title} badge',
+                ? l10n.shareCardSnapshot
+                : l10n.shareCardDescMedal(highlighted.title),
             style: theme.textTheme.titleMedium?.copyWith(
               color: AppColors.onSurface,
               fontWeight: FontWeight.w800,
@@ -168,11 +166,8 @@ class _ShareCardScreenState extends ConsumerState<ShareCardScreen> {
           const SizedBox(height: 6),
           Text(
             highlighted == null
-                ? 'The card above is exported as a PNG and sent to your share '
-                    'sheet. Post it on your story, send it to a friend, or print '
-                    'it as a sticker.'
-                : 'Share the win with your circle. The card is exported as a PNG '
-                    'and ready for any social app.',
+                ? l10n.shareCardBody
+                : l10n.shareCardBodyMedal,
             style: theme.textTheme.bodySmall?.copyWith(
               color: AppColors.onSurfaceVariant,
               height: 1.4,
@@ -180,7 +175,7 @@ class _ShareCardScreenState extends ConsumerState<ShareCardScreen> {
           ),
           const SizedBox(height: 20),
           CtaPill(
-            label: _sharing ? 'Preparing…' : 'Share my bloom',
+            label: _sharing ? l10n.shareCardCtaPreparing : l10n.shareCardShareMyBloom,
             icon: _sharing ? null : Icons.ios_share_rounded,
             onPressed: _sharing ? null : _share,
           ),
@@ -189,7 +184,6 @@ class _ShareCardScreenState extends ConsumerState<ShareCardScreen> {
     );
   }
 
-  /// Picks the single most share-worthy number for the card headline.
   String _pickStrongest(
     InsightsData insights,
     int habitsCount,
@@ -222,31 +216,31 @@ class _ShareableCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final dateLabel = DateFormat('MMMM d, yyyy').format(DateTime.now());
+    final gradientColors = AppColors.shareCardGradient;
+    final bokehColors = AppColors.shareCardBokeh;
+    final accent = AppColors.shareCardAccent;
     return AspectRatio(
       aspectRatio: 9 / 16,
       child: ClipRRect(
         borderRadius: BorderRadius.circular(28),
         child: Container(
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
             gradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
-              colors: [
-                Color(0xFF0F2E1B),
-                Color(0xFF1B4A2E),
-                Color(0xFF2A6B43),
-              ],
+              colors: gradientColors,
               stops: [0.0, 0.55, 1.0],
             ),
           ),
           child: Stack(
             children: [
-              // Bokeh light dots, evoking the reference design.
               Positioned.fill(
-                child: CustomPaint(painter: _BokehPainter()),
+                child: ExcludeSemantics(
+                  child: CustomPaint(painter: _BokehPainter(colors: bokehColors)),
+                ),
               ),
-              // Brand mark.
               Positioned(
                 top: 24,
                 left: 0,
@@ -261,27 +255,20 @@ class _ShareableCard extends StatelessWidget {
                         color: AppColors.surface,
                         boxShadow: [
                           BoxShadow(
-                            color: Colors.white.withValues(alpha: 0.2),
+                            color: accent.withValues(alpha: 0.3),
                             blurRadius: 18,
                           ),
                         ],
                       ),
-                      padding: const EdgeInsets.all(6),
+                      padding: const EdgeInsets.all(4),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(10),
-                        child: Image.asset(
-                          'assets/brand/bloom_tracker_logo.png',
-                          fit: BoxFit.cover,
-                          errorBuilder: (_, __, ___) => Icon(
-                              Icons.eco_rounded,
-                              color: AppColors.primary,
-                            ),
-                        ),
+                        child: const PremiumLogo(size: 48, showGlow: false),
                       ),
                     ),
                     const SizedBox(height: 6),
-                    const Text(
-                      'Bloom Tracker',
+                    Text(
+                      l10n.appTitle,
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 14,
@@ -292,7 +279,6 @@ class _ShareableCard extends StatelessWidget {
                   ],
                 ),
               ),
-              // Headline circle.
               Positioned.fill(
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(28, 110, 28, 28),
@@ -306,15 +292,14 @@ class _ShareableCard extends StatelessWidget {
                         alignment: Alignment.center,
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
-                          gradient: const RadialGradient(
-                            colors: [Color(0xFFFFA37A), Color(0xFFE5643B)],
+                          gradient: RadialGradient(
+                            colors: [accent, accent.withValues(alpha: 0.7)],
                             center: Alignment.topLeft,
                             radius: 1.1,
                           ),
                           boxShadow: [
                             BoxShadow(
-                              color:
-                                  const Color(0xFFE5643B).withValues(alpha: 0.5),
+                              color: accent.withValues(alpha: 0.5),
                               blurRadius: 24,
                             ),
                           ],
@@ -333,8 +318,8 @@ class _ShareableCard extends StatelessWidget {
                           color: Colors.white.withValues(alpha: 0.16),
                           borderRadius: BorderRadius.circular(999),
                         ),
-                        child: const Text(
-                          'NEW MILESTONE UNLOCKED',
+                        child: Text(
+                          l10n.shareCardMilestone,
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 11,
@@ -345,7 +330,7 @@ class _ShareableCard extends StatelessWidget {
                       ),
                       const SizedBox(height: 12),
                       Text(
-                        _headline(),
+                        _headline(l10n),
                         textAlign: TextAlign.center,
                         style: const TextStyle(
                           color: Colors.white,
@@ -357,7 +342,7 @@ class _ShareableCard extends StatelessWidget {
                       ),
                       const SizedBox(height: 8),
                       Text(
-                        _subhead(),
+                        _subhead(l10n),
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Colors.white.withValues(alpha: 0.85),
@@ -369,7 +354,6 @@ class _ShareableCard extends StatelessWidget {
                   ),
                 ),
               ),
-              // Bottom row: stats.
               Positioned(
                 left: 0,
                 right: 0,
@@ -381,24 +365,26 @@ class _ShareableCard extends StatelessWidget {
                     children: [
                       _StatBubble(
                         value: '${insights.currentStreak}',
-                        label: 'day chain',
+                        label: l10n.shareCardStatChain,
                         icon: Icons.local_fire_department_rounded,
+                        accent: accent,
                       ),
                       _StatBubble(
                         value: '$habitsCount',
-                        label: 'sprouts',
+                        label: l10n.shareCardStatSprouts,
                         icon: Icons.eco_rounded,
+                        accent: accent,
                       ),
                       _StatBubble(
                         value: '$medalsEarned/$totalMedals',
-                        label: 'medals',
+                        label: l10n.shareCardStatMedals,
                         icon: Icons.emoji_events_rounded,
+                        accent: accent,
                       ),
                     ],
                   ),
                 ),
               ),
-              // Footer date.
               Positioned(
                 right: 16,
                 bottom: 0,
@@ -419,48 +405,23 @@ class _ShareableCard extends StatelessWidget {
     );
   }
 
-  String _headline() {
-    if (highlight != null) {
-      return highlight!.title;
-    }
-    if (insights.currentStreak >= 30) {
-      return '${insights.currentStreak} Day Streak';
-    }
-    if (insights.currentStreak >= 7) {
-      return '${insights.currentStreak} Day Streak';
-    }
-    if (medalsEarned > 0) {
-      return '$medalsEarned Medal${medalsEarned == 1 ? '' : 's'} Earned';
-    }
-    if (habitsCount > 0) {
-      return 'Sprout Guardian';
-    }
-    if (insights.tasksCompleted > 0) {
-      return 'First Seeds Planted';
-    }
-    return 'A Garden Begins';
+  String _headline(AppLocalizations l10n) {
+    if (highlight != null) return highlight!.title;
+    if (insights.currentStreak >= 7) return l10n.shareCardHeadlineStreak(insights.currentStreak);
+    if (medalsEarned > 0) return l10n.shareCardHeadlineMedals(medalsEarned);
+    if (habitsCount > 0) return l10n.shareCardHeadlineSproutGuardian;
+    if (insights.tasksCompleted > 0) return l10n.shareCardHeadlineFirstSeeds;
+    return l10n.shareCardHeadlineGardenBegins;
   }
 
-  String _subhead() {
-    if (highlight != null) {
-      return highlight!.subtitle;
-    }
-    if (insights.currentStreak >= 30) {
-      return "You've successfully nurtured your habits for a full month.";
-    }
-    if (insights.currentStreak >= 7) {
-      return "A full week of growth — your forest is thickening.";
-    }
-    if (medalsEarned > 0) {
-      return "Your sanctuary is showing real progress. Keep tending.";
-    }
-    if (habitsCount > 0) {
-      return "Your first sprouts are taking root. Water them daily.";
-    }
-    if (insights.tasksCompleted > 0) {
-      return "Your first seeds are in the soil. Watch them open.";
-    }
-    return "Every forest begins with one tiny choice.";
+  String _subhead(AppLocalizations l10n) {
+    if (highlight != null) return highlight!.subtitle;
+    if (insights.currentStreak >= 30) return l10n.shareCardSubheadMonth;
+    if (insights.currentStreak >= 7) return l10n.shareCardSubheadWeek;
+    if (medalsEarned > 0) return l10n.shareCardSubheadProgress;
+    if (habitsCount > 0) return l10n.shareCardSubheadSprouts;
+    if (insights.tasksCompleted > 0) return l10n.shareCardSubheadFirstSeeds;
+    return l10n.shareCardSubheadFallback;
   }
 }
 
@@ -469,10 +430,12 @@ class _StatBubble extends StatelessWidget {
     required this.value,
     required this.label,
     required this.icon,
+    required this.accent,
   });
   final String value;
   final String label;
   final IconData icon;
+  final Color accent;
 
   @override
   Widget build(BuildContext context) {
@@ -484,7 +447,11 @@ class _StatBubble extends StatelessWidget {
           height: 44,
           alignment: Alignment.center,
           decoration: BoxDecoration(
-            color: Colors.white.withValues(alpha: 0.18),
+            gradient: LinearGradient(
+              colors: [accent.withValues(alpha: 0.25), accent.withValues(alpha: 0.10)],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
             shape: BoxShape.circle,
           ),
           child: Icon(icon, color: Colors.white, size: 20),
@@ -514,21 +481,18 @@ class _StatBubble extends StatelessWidget {
 }
 
 class _BokehPainter extends CustomPainter {
+  const _BokehPainter({required this.colors});
+  final List<Color> colors;
+
   @override
   void paint(Canvas canvas, Size size) {
-    final colors = [
-      const Color(0xFFFFE08A),
-      const Color(0xFFFFA37A),
-      const Color(0xFF8FE3B6),
-      Colors.white,
-    ];
     final rng = math.Random(7);
-    for (var i = 0; i < 24; i++) {
+    for (var i = 0; i < 28; i++) {
       final c = colors[rng.nextInt(colors.length)];
-      final paint = Paint()..color = c.withValues(alpha: 0.18);
+      final paint = Paint()..color = c.withValues(alpha: 0.15 + rng.nextDouble() * 0.1);
       final x = rng.nextDouble() * size.width;
       final y = rng.nextDouble() * size.height;
-      final r = 4 + rng.nextDouble() * 18;
+      final r = 4 + rng.nextDouble() * 20;
       canvas.drawCircle(Offset(x, y), r, paint);
     }
   }

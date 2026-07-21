@@ -11,6 +11,7 @@ import '../../../core/theme/app_colors.dart';
 import '../../../core/widgets/ambient_background.dart';
 import '../../../core/widgets/growth_widgets.dart';
 import '../../../core/widgets/guardian_mascot.dart';
+import '../../../core/widgets/language_picker_sheet.dart';
 import '../../../core/widgets/locale_provider.dart';
 import '../../../core/widgets/widget_setup_sheet.dart';
 import '../../reminders/presentation/reminder_settings_sheet.dart';
@@ -39,70 +40,77 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
   }
 
   Future<void> _signOut(BuildContext context) async {
+    final l10n = AppLocalizations.of(context);
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: Text(l10n.settingsSignOut),
+        content: Text(l10n.settingsSignOutConfirm),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(ctx).pop(false),
+            child: Text(l10n.cancel),
+          ),
+          FilledButton(
+            onPressed: () => Navigator.of(ctx).pop(true),
+            child: Text(l10n.settingsSignOut),
+          ),
+        ],
+      ),
+    );
+    if (confirmed != true) return;
     await Supabase.instance.client.auth.signOut();
     if (context.mounted) context.go('/auth');
   }
 
-  void _showLanguagePicker(BuildContext context, WidgetRef ref) {
-    showModalBottomSheet<void>(
+  Future<void> _deleteAccount(BuildContext context) async {
+    final l10n = AppLocalizations.of(context);
+    final confirmed = await showDialog<bool>(
       context: context,
-      backgroundColor: AppColors.surface,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(28)),
-      ),
-      builder: (sheetCtx) {
-        final l10n = AppLocalizations.of(sheetCtx);
-        final current = ref.read(localeProvider);
-        final notifier = ref.read(localeProvider.notifier);
-        return SafeArea(
-          child: ListView(
-            shrinkWrap: true,
-            children: [
-              const SizedBox(height: 12),
-              Center(
-                child: Container(
-                  width: 40,
-                  height: 4,
-                  decoration: BoxDecoration(
-                    color: AppColors.outlineVariant,
-                    borderRadius: BorderRadius.circular(999),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(24, 18, 24, 8),
-                child: Text(
-                  l10n.languagePickerTitle,
-                  style: const TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w800,
-                  ),
-                ),
-              ),
-              for (final l in const [null, ...supportedAppLocales])
-                ListTile(
-                  leading: Icon(
-                    l == null
-                        ? Icons.smartphone_rounded
-                        : Icons.translate_rounded,
-                    color: AppColors.primary,
-                  ),
-                  title: Text(notifier.labelFor(l)),
-                  trailing: (l?.languageCode ?? '') ==
-                          (current?.languageCode ?? '')
-                      ? Icon(Icons.check_rounded, color: AppColors.primary)
-                      : null,
-                  onTap: () {
-                    notifier.set(l);
-                    Navigator.of(sheetCtx).pop();
-                  },
-                ),
-              const SizedBox(height: 12),
-            ],
+      builder: (ctx) => AlertDialog(
+        title: Text(l10n.settingsDeleteAccountConfirmTitle),
+        content: Text(l10n.settingsDeleteAccountConfirmBody),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(ctx).pop(false),
+            child: Text(l10n.cancel),
           ),
-        );
-      },
+          FilledButton(
+            onPressed: () => Navigator.of(ctx).pop(true),
+            style: FilledButton.styleFrom(
+              backgroundColor: AppColors.error,
+            ),
+            child: Text(l10n.settingsDeleteAccountConfirmButton),
+          ),
+        ],
+      ),
     );
+    if (confirmed != true || !context.mounted) return;
+
+    try {
+      final response =
+          await Supabase.instance.client.functions.invoke('delete-account');
+      if (response.status != 200) {
+        throw Exception('delete failed');
+      }
+      await Supabase.instance.client.auth.signOut();
+      if (context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(l10n.settingsDeleteAccountSuccess)),
+        );
+        context.go('/auth');
+      }
+    } catch (_) {
+      if (context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(l10n.settingsDeleteAccountFailed)),
+        );
+      }
+    }
+  }
+
+  void _showLanguagePicker(BuildContext context, WidgetRef ref) {
+    LanguagePickerSheet.show(context);
   }
 
   @override
@@ -113,8 +121,8 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
     final theme = Theme.of(context);
     final displayName = user?.userMetadata?['display_name'] as String? ??
         user?.email?.split('@').first ??
-        'Friend';
-    final isPro = ref.watch(entitlementProvider).tier == Tier.pro;
+        l10n.commonFriend;
+    final isPro = ref.watch(entitlementProvider).isPro;
     final level = isPro ? 12 : 3;
 
     return Scaffold(
@@ -259,8 +267,8 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                   icon: Icons.palette_outlined,
                   iconBg: AppColors.primary.withValues(alpha: 0.15),
                   iconColor: AppColors.primary,
-                  title: 'App Theme',
-                  subtitle: 'Select your personal sanctuary colors',
+                  title: l10n.settingsAppTheme,
+                  subtitle: l10n.settingsAppThemeSubtitle,
                   onTap: () => showModalBottomSheet<void>(
                     context: context,
                     isScrollControlled: true,
@@ -304,7 +312,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                   iconColor: AppColors.tertiary,
                   title: l10n.settingsLanguage,
                   subtitle: ref.watch(localeProvider.notifier)
-                          .labelFor(ref.watch(localeProvider)),
+                          .labelFor(ref.watch(localeProvider), l10n),
                   onTap: () => _showLanguagePicker(context, ref),
                 ),
               ],
@@ -326,8 +334,8 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                   icon: Icons.card_giftcard_rounded,
                   iconBg: AppColors.secondary.withValues(alpha: 0.12),
                   iconColor: AppColors.secondary,
-                  title: 'Invite friends · Free Pro',
-                  subtitle: 'Get 1 month free when 5 friends join',
+                  title: l10n.settingsInviteFriendsTitle,
+                  subtitle: l10n.settingsInviteFriendsSubtitle,
                   onTap: () => context.push('/referral'),
                 ),
                 const _Divider(),
@@ -337,7 +345,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                   iconColor: AppColors.tertiary,
                   title: l10n.settingsShareBloomTracker,
                   subtitle: l10n.settingsShareBloomTrackerSubtitle,
-                  onTap: () => AppActions.shareApp(),
+                  onTap: () => AppActions.shareApp(AppLocalizations.of(context)),
                 ),
               ],
             ),
@@ -352,6 +360,16 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                   title: l10n.settingsHelpSupport,
                   subtitle: l10n.settingsHelpSupportSubtitle,
                   onTap: () => context.push('/help'),
+                ),
+                const _Divider(),
+                _SettingsTile(
+                  icon: Icons.delete_forever_outlined,
+                  iconBg: AppColors.error.withValues(alpha: 0.12),
+                  iconColor: AppColors.error,
+                  title: l10n.settingsDeleteAccount,
+                  subtitle: l10n.settingsDeleteAccountSubtitle,
+                  titleColor: AppColors.error,
+                  onTap: () => _deleteAccount(context),
                 ),
                 const _Divider(),
                 _SettingsTile(
@@ -406,7 +424,14 @@ class _BetaCard extends StatelessWidget {
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(18),
-        color: AppColors.primary.withValues(alpha: 0.08),
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [
+            AppColors.primary.withValues(alpha: 0.10),
+            AppColors.primary.withValues(alpha: 0.04),
+          ],
+        ),
         border: Border.all(color: AppColors.primary.withValues(alpha: 0.3)),
       ),
       child: Row(
@@ -459,9 +484,9 @@ class _SettingsCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: AppColors.surfaceContainerLow,
+        color: AppColors.elevatedCardSurface,
         borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: AppColors.outlineVariant, width: 0.5),
+        border: Border.all(color: AppColors.cardBorder, width: 0.5),
       ),
       clipBehavior: Clip.antiAlias,
       child: Column(children: children),
@@ -476,7 +501,7 @@ class _Divider extends StatelessWidget {
     return Divider(
       height: 1,
       thickness: 0.5,
-      color: AppColors.outlineVariant,
+      color: AppColors.dividerColor,
       indent: 64,
     );
   }

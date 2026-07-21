@@ -18,7 +18,9 @@ class StreakFreezeRepository {
 
     return (data as List)
         .map((row) =>
-            LocalDate.parseIsoDate(row['frozen_date'] as String) ?? LocalDate.today)
+            LocalDate.parseIsoDate(row['frozen_date'] as String?))
+        .where((date) => date != null)
+        .cast<DateTime>()
         .toList();
   }
 

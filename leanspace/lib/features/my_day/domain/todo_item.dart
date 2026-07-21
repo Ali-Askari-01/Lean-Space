@@ -31,12 +31,12 @@ class TodoItem {
 
   factory TodoItem.fromJson(Map<String, dynamic> json) {
     return TodoItem(
-      id: json['id'] as String,
-      userId: json['user_id'] as String,
-      text: json['text'] as String,
-      status: _parseStatus(json['status'] as String),
+      id: json['id'] as String? ?? '',
+      userId: json['user_id'] as String? ?? '',
+      text: json['text'] as String? ?? '',
+      status: _parseStatus(json['status'] as String? ?? 'open'),
       originalDate:
-          LocalDate.parseIsoDate(json['original_date'] as String) ??
+          LocalDate.parseIsoDate(json['original_date'] as String?) ??
               LocalDate.today,
       completedDate:
           LocalDate.parseIsoDate(json['completed_date'] as String?),

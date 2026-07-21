@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../../core/l10n/app_localizations.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/widgets/growth_widgets.dart';
 import '../../domain/habit.dart';
@@ -48,7 +49,7 @@ class _AddHabitSheetState extends ConsumerState<AddHabitSheet> {
   Future<void> _save() async {
     final name = _controller.text.trim();
     if (name.isEmpty) {
-      setState(() => _error = 'Name your sprout');
+      setState(() => _error = AppLocalizations.of(context).addTaskNameSproutError);
       return;
     }
 
@@ -66,7 +67,7 @@ class _AddHabitSheetState extends ConsumerState<AddHabitSheet> {
           );
       if (mounted) Navigator.pop(context);
     } catch (e) {
-      setState(() => _error = 'Could not save sprout — try again.');
+      setState(() => _error = AppLocalizations.of(context).addTaskSaveSproutError);
     } finally {
       if (mounted) setState(() => _saving = false);
     }
@@ -87,6 +88,7 @@ class _AddHabitSheetState extends ConsumerState<AddHabitSheet> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final theme = Theme.of(context);
     final bottom = MediaQuery.viewInsetsOf(context).bottom;
 
@@ -105,8 +107,8 @@ class _AddHabitSheetState extends ConsumerState<AddHabitSheet> {
               Expanded(
                 child: Text(
                   widget.habit == null
-                      ? 'Plant a new sprout'
-                      : 'Tend your sprout',
+                      ? l10n.addHabitTitleNew
+                      : l10n.addHabitTitleEdit,
                   style: theme.textTheme.headlineSmall?.copyWith(
                     color: AppColors.primary,
                     fontWeight: FontWeight.w700,
@@ -116,7 +118,7 @@ class _AddHabitSheetState extends ConsumerState<AddHabitSheet> {
             ],
           ),
           const SizedBox(height: 18),
-          BlueprintLabel('SPROUT NAME', color: AppColors.primary),
+          BlueprintLabel(l10n.addTaskSproutName, color: AppColors.primary),
           const SizedBox(height: 8),
           TextField(
             controller: _controller,
@@ -126,17 +128,22 @@ class _AddHabitSheetState extends ConsumerState<AddHabitSheet> {
             style: theme.textTheme.bodyLarge?.copyWith(
               fontWeight: FontWeight.w500,
             ),
-            decoration: const InputDecoration(
-              hintText: 'e.g. Morning Yoga',
+            decoration: InputDecoration(
+              hintText: l10n.addTaskHintHabit,
               counterText: '',
             ),
           ),
           const SizedBox(height: 18),
-          BlueprintLabel('CADENCE', color: AppColors.primary),
+          BlueprintLabel(l10n.addTaskCadenceLabel, color: AppColors.primary),
           const SizedBox(height: 10),
           Wrap(
             spacing: 8,
-            children: ['Daily', 'Weekdays', '3x/week', 'Weekly'].map((c) {
+            children: [
+              l10n.addTaskCadenceDaily,
+              l10n.addTaskCadenceWeekdays,
+              l10n.addTaskCadence3x,
+              l10n.addTaskCadenceWeekly,
+            ].map((c) {
               final selected = _cadence == c;
               return ChoiceChip(
                 label: Text(c),
@@ -162,18 +169,18 @@ class _AddHabitSheetState extends ConsumerState<AddHabitSheet> {
             }).toList(),
           ),
           const SizedBox(height: 18),
-          BlueprintLabel('TENDING NOTES', color: AppColors.primary),
+          BlueprintLabel(l10n.addTaskTendingNotes, color: AppColors.primary),
           const SizedBox(height: 8),
           TextField(
             controller: _notesController,
             maxLines: 3,
             textCapitalization: TextCapitalization.sentences,
-            decoration: const InputDecoration(
-              hintText: 'What does tending this sprout look like?',
+            decoration: InputDecoration(
+              hintText: l10n.addTaskNotesHintHabit,
             ),
           ),
           const SizedBox(height: 18),
-          BlueprintLabel('CHOOSE ELEMENT', color: AppColors.primary),
+          BlueprintLabel(l10n.addTaskChooseElement, color: AppColors.primary),
           const SizedBox(height: 12),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -200,7 +207,7 @@ class _AddHabitSheetState extends ConsumerState<AddHabitSheet> {
             children: [
               Expanded(
                 child: CtaPill(
-                  label: _saving ? 'Planting…' : 'Plant Sprout',
+                  label: _saving ? l10n.addTaskPlanting : l10n.addTaskPlantSproutCta,
                   icon: _saving ? null : Icons.eco_rounded,
                   onPressed: _saving ? null : _save,
                 ),
@@ -246,11 +253,12 @@ class _ElementChoice extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final l10n = AppLocalizations.of(context);
     final label = switch (element) {
-      HabitElement.water => 'WATER',
-      HabitElement.light => 'LIGHT',
-      HabitElement.soil => 'SOIL',
-      HabitElement.breeze => 'BREEZE',
+      HabitElement.water => l10n.addTaskElementWater,
+      HabitElement.light => l10n.addTaskElementLight,
+      HabitElement.soil => l10n.addTaskElementSoil,
+      HabitElement.breeze => l10n.addTaskElementBreeze,
     };
     return GestureDetector(
       onTap: onTap,

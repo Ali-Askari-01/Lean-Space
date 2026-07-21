@@ -29,10 +29,10 @@ class Habit {
 
   factory Habit.fromJson(Map<String, dynamic> json) {
     return Habit(
-      id: json['id'] as String,
-      userId: json['user_id'] as String,
-      name: json['name'] as String,
-      slotIndex: json['slot_index'] as int,
+      id: json['id'] as String? ?? '',
+      userId: json['user_id'] as String? ?? '',
+      name: json['name'] as String? ?? '',
+      slotIndex: json['slot_index'] as int? ?? 0,
       streakCount: json['streak_count'] as int? ?? 0,
       lastCompletedDate:
           LocalDate.parseIsoDate(json['last_completed_date'] as String?),

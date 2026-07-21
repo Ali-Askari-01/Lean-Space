@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../../core/l10n/app_localizations.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../streak_freeze/providers/streak_freeze_providers.dart';
+import '../../../subscription/providers/entitlement_provider.dart';
 import '../../../../core/local_date.dart';
 import '../../providers/my_day_providers.dart';
 
@@ -15,15 +17,17 @@ class StreakAtRiskBanner extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context);
     final state = ref.watch(myDayProvider);
     final freeze = ref.watch(streakFreezeProvider);
+    final isPro = ref.watch(entitlementProvider).isPro;
 
     final open = state.todayTasks.where((t) => t.isOpen).length;
     if (open == 0) return const SizedBox.shrink();
 
     final hour = DateTime.now().hour;
-    // Only nudge after 6pm and before 11pm, so the user has time to act.
-    if (hour < 18 || hour >= 23) return const SizedBox.shrink();
+    // Nudge after 4pm and before midnight, so the user has time to act.
+    if (hour < 16 || hour >= 24) return const SizedBox.shrink();
 
     final yesterday = LocalDate.yesterday(LocalDate.today);
     final yesterdayMissed = state.leftBehind.any(
@@ -32,7 +36,9 @@ class StreakAtRiskBanner extends ConsumerWidget {
     final yesterdayFrozen = freeze.frozenDates.any(
       (d) => LocalDate.isSameDay(d, yesterday),
     );
-    final canFreeze = yesterdayMissed && freeze.canUseFreeze && !yesterdayFrozen;
+    final canFreeze = yesterdayMissed &&
+        freeze.canUseFreezeFor(isPro) &&
+        !yesterdayFrozen;
 
     final urgency = hour >= 21 ? 'high' : 'low';
     final accent = urgency == 'high' ? AppColors.error : AppColors.tertiary;
@@ -77,8 +83,8 @@ class StreakAtRiskBanner extends ConsumerWidget {
                         children: [
                           Text(
                             urgency == 'high'
-                                ? 'Last call — $open task${open == 1 ? '' : 's'} still open'
-                                : '$open task${open == 1 ? '' : 's'} left for today',
+                                ? l10n.streakAtRiskLastCall('$open')
+                                : l10n.streakAtRisk('$open'),
                             style: Theme.of(context)
                                 .textTheme
                                 .bodyMedium
@@ -90,8 +96,8 @@ class StreakAtRiskBanner extends ConsumerWidget {
                           const SizedBox(height: 2),
                           Text(
                             urgency == 'high'
-                                ? 'Midnight is close. The chain depends on these.'
-                                : 'You still have time. A clean day extends your streak.',
+                                ? l10n.streakAtRiskBody
+                                : l10n.streakAtRiskBodyLow,
                             style: Theme.of(context)
                                 .textTheme
                                 .labelSmall
@@ -121,7 +127,7 @@ class StreakAtRiskBanner extends ConsumerWidget {
                       const SizedBox(width: 6),
                       Expanded(
                         child: Text(
-                          'Yesterday missed — use a streak freeze?',
+                          l10n.streakAtRiskFreeze,
                           style: Theme.of(context)
                               .textTheme
                               .labelSmall
@@ -140,7 +146,7 @@ class StreakAtRiskBanner extends ConsumerWidget {
                           minimumSize: const Size(0, 36),
                           visualDensity: VisualDensity.compact,
                         ),
-                        child: const Text('Use freeze'),
+                        child: Text(l10n.streakFreezeUse),
                       ),
                     ],
                   ),
@@ -158,6 +164,7 @@ class StreakAtRiskBanner extends ConsumerWidget {
     WidgetRef ref,
     DateTime yesterday,
   ) async {
+    final l10n = AppLocalizations.of(context);
     final err =
         await ref.read(streakFreezeProvider.notifier).freezeDate(yesterday);
     if (!context.mounted) return;
@@ -169,7 +176,7 @@ class StreakAtRiskBanner extends ConsumerWidget {
     await ref.read(myDayProvider.notifier).refresh();
     if (!context.mounted) return;
     ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('Streak freeze applied for yesterday.')),
+      SnackBar(content: Text(l10n.streakFreezeAppliedYesterday)),
     );
   }
 }

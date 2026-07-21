@@ -1,4 +1,4 @@
-# Bloom Tracker — Launch Checklist
+# LeanSpace — Launch Checklist
 
 A pre-flight check before submitting `com.leanspace.leanspace` to the
 Google Play Store. Walk through every item and tick the box.
@@ -6,7 +6,7 @@ Google Play Store. Walk through every item and tick the box.
 ## 1. Build environment
 
 - [ ] `flutter --version` reports the same SDK the team committed to
-- [ ] `./scripts/seed.sh` (or manual SQL) has been run against the
+- [ ] All migrations have been run against the
       production Supabase project, in this order:
       1. `20250622000000_initial_schema.sql`
       2. `20250622100000_users_self_insert.sql`
@@ -14,12 +14,28 @@ Google Play Store. Walk through every item and tick the box.
       4. `20250622300000_streak_freeze_and_buddy.sql`
       5. `20260701000000_todos_notes_priority.sql`
       6. `20260701100000_habits_notes.sql`
+      7. `20260713000000_security_and_limits.sql`
+      8. `20260713120000_referrals.sql`
+      9. `20260713200000_billing_hardening.sql`
+      10. `20260713210000_rls_pro_gates.sql`
+      11. `20260713220000_referral_hardening.sql`
+      12. `20260714000000_purchase_token_unique.sql`
+      13. `20260714000001_text_length_constraints.sql`
+      14. `20260714000002_fix_orphan_cascade.sql`
+      15. `20260714000003_buddy_toctou_fixes.sql`
+      16. `20260714000004_updated_at_and_triggers.sql`
+- [ ] Edge functions deployed: `verify-play-purchase`, `delete-account`, `play-rtdn`
+- [ ] Edge function secrets: `GOOGLE_SERVICE_ACCOUNT_JSON`, `PLAY_PUBSUB_TOKEN` (required)
 - [ ] Supabase Auth → URL Configuration has the redirect:
       `com.leanspace://login-callback` (Android) and the iOS / web ones
       if applicable.
 - [ ] `supabase functions deploy play-rtdn --no-verify-jwt` is live and
       has `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `PLAY_PUBSUB_TOKEN`
-      set. Pub/Sub push subscription points at the function URL.
+      set. Pub/Sub push subscription uses `X-PubSub-Token` header.
+- [ ] **Security: Verify `feature_flags.dart` has `unlockAllFeatures = false` and `enableSubscriptions = true`**
+- [ ] **Security: Verify `grant_promotional_pro` is NOT executable by authenticated role**
+- [ ] **Security: Verify CORS headers are origin-restricted on ALL Edge Functions**
+- [ ] **Security: Verify all new migrations applied (purchase_token UNIQUE, text length constraints, etc.)**
 
 ## 2. Google Play Console
 

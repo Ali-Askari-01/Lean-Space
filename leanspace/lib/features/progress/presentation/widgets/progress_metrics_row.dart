@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../../core/l10n/app_localizations.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../insights/domain/insights.dart';
 import '../../../insights/providers/insights_providers.dart';
@@ -13,6 +14,7 @@ class ProgressMetricsRow extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context);
     final insightsAsync = ref.watch(insightsProvider);
     final insights = insightsAsync.asData?.value ??
         const InsightsData(
@@ -34,7 +36,7 @@ class ProgressMetricsRow extends ConsumerWidget {
             children: [
               Expanded(
                 child: _Metric(
-                  label: 'Current',
+                  label: l10n.progressMetricCurrent,
                   value: '${insights.currentStreak}d',
                   color: AppColors.primary,
                   icon: Icons.local_fire_department_rounded,
@@ -43,7 +45,7 @@ class ProgressMetricsRow extends ConsumerWidget {
               const SizedBox(width: 6),
               Expanded(
                 child: _Metric(
-                  label: 'Best',
+                  label: l10n.progressMetricBest,
                   value: '${insights.bestStreak}d',
                   color: AppColors.secondary,
                   icon: Icons.emoji_events_rounded,
@@ -52,7 +54,7 @@ class ProgressMetricsRow extends ConsumerWidget {
               const SizedBox(width: 6),
               Expanded(
                 child: _Metric(
-                  label: 'Done',
+                  label: l10n.progressMetricDone,
                   value: '${insights.tasksCompleted}',
                   color: AppColors.tertiary,
                   icon: Icons.check_circle_outline_rounded,
@@ -65,7 +67,7 @@ class ProgressMetricsRow extends ConsumerWidget {
             children: [
               Expanded(
                 child: _Metric(
-                  label: 'Perfect',
+                  label: l10n.progressMetricPerfect,
                   value: '${insights.perfectDays}',
                   color: AppColors.primary,
                   icon: Icons.eco_rounded,
@@ -74,7 +76,7 @@ class ProgressMetricsRow extends ConsumerWidget {
               const SizedBox(width: 6),
               Expanded(
                 child: _Metric(
-                  label: 'Habits',
+                  label: l10n.progressMetricHabits,
                   value: '${insights.activeHabits}',
                   color: AppColors.tertiary,
                   icon: Icons.spa_rounded,

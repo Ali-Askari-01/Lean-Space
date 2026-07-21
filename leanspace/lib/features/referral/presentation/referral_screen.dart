@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../../core/app_actions.dart';
 import '../../../core/haptics.dart';
+import '../../../core/l10n/app_localizations.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/widgets/ambient_background.dart';
 import '../providers/referral_providers.dart';
@@ -13,6 +14,7 @@ class ReferralScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context);
     final theme = Theme.of(context);
     final stats = ref.watch(referralControllerProvider);
 
@@ -23,7 +25,7 @@ class ReferralScreen extends ConsumerWidget {
           icon: const Icon(Icons.arrow_back_rounded),
           onPressed: () => context.pop(),
         ),
-        title: const Text('Invite friends'),
+        title: Text(l10n.referralScreenTitle),
       ),
       body: AmbientBackground(
         child: ListView(
@@ -33,19 +35,26 @@ class ReferralScreen extends ConsumerWidget {
               padding: const EdgeInsets.all(22),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(22),
-                gradient: const LinearGradient(
+                gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
-                  colors: [Color(0xFF1A4D2E), Color(0xFF0F2E1B)],
+                  colors: AppColors.heroGradient,
                 ),
+                boxShadow: [
+                  BoxShadow(
+                    color: AppColors.primary.withValues(alpha: 0.25),
+                    blurRadius: 20,
+                    offset: const Offset(0, 8),
+                  ),
+                ],
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
-                    'Launch month gift',
+                  Text(
+                    l10n.referralLaunchGift,
                     style: TextStyle(
-                      color: Color(0xFFE8A33D),
+                      color: AppColors.shareCardAccent,
                       fontWeight: FontWeight.w800,
                       fontSize: 12,
                       letterSpacing: 1.2,
@@ -53,7 +62,7 @@ class ReferralScreen extends ConsumerWidget {
                   ),
                   const SizedBox(height: 8),
                   Text(
-                    'Get 1 month of Pro free',
+                    l10n.referralRewardTitle,
                     style: theme.textTheme.headlineSmall?.copyWith(
                       color: Colors.white,
                       fontWeight: FontWeight.w800,
@@ -61,8 +70,7 @@ class ReferralScreen extends ConsumerWidget {
                   ),
                   const SizedBox(height: 8),
                   Text(
-                    'Share your code with friends. When 5 people sign up '
-                    'using it, you unlock Bloom Tracker Pro for a full month.',
+                    l10n.referralRewardBody,
                     style: theme.textTheme.bodyMedium?.copyWith(
                       color: Colors.white.withValues(alpha: 0.85),
                       height: 1.45,
@@ -73,7 +81,7 @@ class ReferralScreen extends ConsumerWidget {
             ),
             const SizedBox(height: 24),
             Text(
-              'Your referral code',
+              l10n.referralYourCode,
               style: theme.textTheme.titleSmall?.copyWith(
                 fontWeight: FontWeight.w800,
                 color: AppColors.onSurface,
@@ -106,16 +114,15 @@ class ReferralScreen extends ConsumerWidget {
                     ? null
                     : () {
                         AppHaptics.confirm();
-                        AppActions.shareAppWithReferral(stats.code);
+                        AppActions.shareAppWithReferral(l10n, stats.code);
                       },
                 icon: const Icon(Icons.ios_share_rounded),
-                label: const Text('Share with friends'),
+                label: Text(l10n.referralShareWithFriends),
               ),
             ),
             const SizedBox(height: 12),
             Text(
-              'Friends enter your code when they create an account. '
-              'Each friend counts once toward your reward.',
+              l10n.referralFooterHint,
               textAlign: TextAlign.center,
               style: theme.textTheme.bodySmall?.copyWith(
                 color: AppColors.onSurfaceVariant,
@@ -135,13 +142,14 @@ class _CodeCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final theme = Theme.of(context);
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 16),
       decoration: BoxDecoration(
-        color: AppColors.surfaceContainerLow,
+        color: AppColors.elevatedCardSurface,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: AppColors.outlineVariant),
+        border: Border.all(color: AppColors.cardBorder),
       ),
       child: Row(
         children: [
@@ -156,14 +164,14 @@ class _CodeCard extends StatelessWidget {
             ),
           ),
           IconButton(
-            tooltip: 'Copy code',
+            tooltip: l10n.referralCopyCodeTooltip,
             onPressed: code.isEmpty
                 ? null
                 : () {
                     AppHaptics.light();
                     Clipboard.setData(ClipboardData(text: code));
                     ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(content: Text('Referral code copied')),
+                      SnackBar(content: Text(l10n.referralCodeCopied)),
                     );
                   },
             icon: const Icon(Icons.copy_rounded),
@@ -180,6 +188,7 @@ class _ProgressCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final theme = Theme.of(context);
     final milestone = stats.milestone;
     final modulo = stats.referralCount % milestone;
@@ -187,6 +196,14 @@ class _ProgressCard extends StatelessWidget {
         stats.referralCount > 0 && modulo == 0;
     final displayProgress = atMilestone ? milestone : modulo;
     final remaining = atMilestone ? 0 : milestone - modulo;
+
+    final progressMessage = stats.rewardsEarned > 0
+        ? (stats.rewardsEarned == 1
+            ? l10n.referralRewardsEarnedOne(stats.rewardsEarned)
+            : l10n.referralRewardsEarnedMany(stats.rewardsEarned))
+        : atMilestone
+            ? l10n.referralRewardUnlocked
+            : l10n.referralRemainingToUnlock(remaining);
 
     return Container(
       padding: const EdgeInsets.all(18),
@@ -205,7 +222,9 @@ class _ProgressCard extends StatelessWidget {
               Icon(Icons.people_rounded, color: AppColors.primary, size: 22),
               const SizedBox(width: 8),
               Text(
-                '${stats.referralCount} friend${stats.referralCount == 1 ? '' : 's'} joined',
+                stats.referralCount == 1
+                    ? l10n.referralFriendsJoinedOne(stats.referralCount)
+                    : l10n.referralFriendsJoinedMany(stats.referralCount),
                 style: theme.textTheme.titleMedium?.copyWith(
                   fontWeight: FontWeight.w800,
                 ),
@@ -224,11 +243,7 @@ class _ProgressCard extends StatelessWidget {
           ),
           const SizedBox(height: 10),
           Text(
-            stats.rewardsEarned > 0
-                ? 'You have earned ${stats.rewardsEarned} free month${stats.rewardsEarned == 1 ? '' : 's'} of Pro.'
-                : atMilestone
-                    ? 'Reward unlocked — enjoy your free month of Pro!'
-                    : '$remaining more to unlock your free month',
+            progressMessage,
             style: theme.textTheme.bodyMedium?.copyWith(
               color: AppColors.onSurfaceVariant,
               fontWeight: FontWeight.w600,

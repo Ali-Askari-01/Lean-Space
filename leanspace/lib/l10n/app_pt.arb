@@ -1,6 +1,6 @@
-﻿﻿﻿﻿﻿{
+{
   "@@locale": "pt",
-  "appTitle": "Bloom Tracker",
+  "appTitle": "Daily Stitch",
   "tabToday": "Hoje",
   "tabProgress": "Progresso",
   "tabYou": "Você",
@@ -9,11 +9,15 @@
   "navHistory": "Últimos 7 dias",
   "navLeftBehind": "Pendentes",
   "navMedals": "Minhas medalhas",
-  "navPaywall": "Bloom Tracker Pro",
+  "navPaywall": "Daily Stitch Pro",
+  "navHelp": "Ajuda & Suporte",
+  "navInsights": "Seu progresso",
+  "navManagePro": "Gerenciar assinatura Pro",
   "greetingMorning": "Bom dia, sol!",
   "greetingAfternoon": "Boa tarde, amigo",
   "greetingEvening": "Boa noite, campeão",
   "greetingNight": "Descansando bem, guardião?",
+  "greetingLateNight": "Queimando o azeite da meia-noite",
   "todayTasksCount": "Hoje · {done} de {total} tarefas",
   "tasksHeader": "Tarefas",
   "tasksAddSeed": "Adicionar uma semente de tarefa",
@@ -39,7 +43,7 @@
   "historyPerfect": "PERFEITO",
   "historyToday": "Hoje",
   "historyUpsellTitle": "Veja seu histórico completo",
-  "historyUpsellBody": "Pro desbloqueia 30 dias de histórico.",
+  "historyUpsellBody": "O Pro desbloqueia 30 dias de histórico.",
   "progressVitality": "VITALIDADE DE HOJE",
   "progressChainPill": "{days}d de sequência",
   "progressMetricCurrent": "Atual",
@@ -60,164 +64,1235 @@
   "settingsLanguageValue": "Padrão do sistema",
   "cancel": "Cancelar",
   "shareCardSnapshot": "Um instantâneo do seu santuário",
-
-
-  "commonRetry": "Retry",
-  "commonBack": "Back",
-  "commonDismiss": "Dismiss",
-  "commonCancel": "Cancel",
-  "commonClose": "Close",
-  "commonSend": "Send",
-  "commonCopy": "Copy",
-  "commonShowLess": "Show less",
-  "commonViewFull": "View full notes",
-  "commonEdit": "Edit",
-  "commonDelete": "Delete",
-  "commonDone": "Done",
-  "commonError": "Something went wrong",
-  "commonPageNotFound": "Page Not Found",
-  "commonHome": "Home",
-  "commonUnknownError": "Unknown routing error",
-  "commonSettingsTooltip": "Settings",
-  "commonHowThisWorks": "How this works",
-
-  "myDayReminderSet": "Reminder set",
-  "myDayPreparationNotes": "PREPARATION NOTES",
-
-  "onboardingSkip": "SKIP",
-  "onboardingNext": "Next",
-  "onboardingEnterSanctuary": "Enter Sanctuary",
-  "onboardingIntroduction": "INTRODUCTION",
-  "onboardingGrowYourForest": "GROW YOUR FOREST",
-  "onboardingPage1Title": "Meet your Guardian.",
-  "onboardingPage1Body": "Welcome to your Personal Sanctuary. Here, your growth is mirrored in the life of your forest.",
-  "onboardingPage2Title": "Plant seeds. Watch them grow.",
-  "onboardingPage2Body": "Each task is a tiny seed. Each habit is a sprout you tend daily. Together they form a forest of discipline.",
-  "onboardingPage3Title": "Five tasks. One chain.",
-  "onboardingPage3Body": "You can only plant 5 seeds per day. That cap forces you to focus on what actually matters — and protect your chain.",
-  "onboardingPage4Title": "Tend your sprouts daily.",
-  "onboardingPage4Body": "Tap habits to grow them. Skip a day and the chain doesn't extend. The Guardian grows with you.",
-
-  "authBrand": "BLOOM TRACKER",
-  "authPlantFirstSeed": "Plant your first seed.",
-  "authWelcomeBack": "Welcome back, Guardian.",
-  "authFiveTasksDaily": "Five tasks. Daily habits. No excuses.",
-  "authSanctuaryWaiting": "Your sanctuary is waiting.",
-  "authSignIn": "Sign In",
-  "authSignUp": "Sign Up",
-  "authEmail": "EMAIL",
-  "authPassword": "PASSWORD",
-  "authEmailHint": "you@email.com",
-  "authCreateAccount": "Create account",
-  "authSignInCta": "Sign in",
-  "authOrContinueWith": "or continue with",
-  "authContinueWithGoogle": "Continue with Google",
-  "authEnterEmail": "Enter your email",
-  "authEnterValidEmail": "Enter a valid email address",
-  "authPasswordTooShort": "Password must be at least 6 characters",
-  "authAccountCreated": "Account created. Switch to Sign In and use your password.",
-  "authSomethingWentWrong": "Something went wrong. Try again.",
-  "authCouldNotStartGoogle": "Could not start Google sign-in.",
-  "authMidnightReset": "By signing in, you accept that your day resets at midnight.",
-  "authSetupRequired": "Setup required",
-
-  "settingsPersonalSanctuary": "PERSONAL SANCTUARY",
-  "settingsHowThisWorks": "How this works",
-  "settingsHowThisWorksSubtitle": "What the app is, how the cap and streak work",
-  "settingsStreakProtection": "Streak Protection",
-  "settingsStreakProtectionAvailable": "1 freeze available this month",
-  "settingsStreakProtectionUsed": "Used for this month",
-  "settingsProSubscription": "Bloom Tracker Pro",
-  "settingsManageProSubscription": "Manage Pro subscription",
-  "settingsProCancelPlay": "Cancel or change plan in Google Play",
-  "settingsProUnlock": "Unlock all 5 habits, full history, more",
-  "settingsTaskAlarms": "Task alarms & Final Call",
-  "settingsTaskAlarmsSubtitle": "Evening nudge and midnight warning",
-  "settingsHomeScreenWidget": "Home-screen widget",
-  "settingsHomeScreenWidgetSubtitle": "Add your chain streak to the home screen",
-  "settingsShareBloomTracker": "Share Bloom Tracker",
-  "settingsShareBloomTrackerSubtitle": "Tell a friend about the chain",
-  "settingsHelpSupport": "Help & Support",
-  "settingsHelpSupportSubtitle": "FAQ or report a problem",
-  "settingsSignOutTile": "Sign Out",
-  "settingsAllFeaturesUnlocked": "All features unlocked",
-  "settingsAllFeaturesUnlockedSubtitle": "Beta build — subscriptions paused while we test everything.",
-  "settingsVersion": "Version {version} ({build})",
-  "settingsVersionUnknown": "Version 1.0.0",
-  "settingsHabitMaster": "Habit Master",
-  "settingsLevel": "Level {level} · Habit Master",
-
-  "languagePickerTitle": "Language",
-
-  "youLast7Days": "Last 7 days",
-  "youLast7DaysSubtitle": "Day-by-day task history",
-  "youLeftBehindSubtitle": "Missed tasks waiting to be re-added",
-  "youProTier": "Pro tier",
-  "youFreeTier": "Free tier",
+  "commonRetry": "Tentar novamente",
+  "commonBack": "Voltar",
+  "commonDismiss": "Dispensar",
+  "commonCancel": "Cancelar",
+  "commonClose": "Fechar",
+  "commonSend": "Enviar",
+  "commonCopy": "Copiar",
+  "commonShowLess": "Mostrar menos",
+  "commonViewFull": "Ver notas completas",
+  "commonEdit": "Editar",
+  "commonDelete": "Excluir",
+  "commonDone": "Feito",
+  "commonError": "Algo deu errado",
+  "commonPageNotFound": "Página não encontrada",
+  "commonHome": "Início",
+  "commonUnknownError": "Erro de roteamento desconhecido",
+  "commonSettingsTooltip": "Configurações",
+  "commonHowThisWorks": "Como funciona",
+  "myDayReminderSet": "Lembrete definido",
+  "myDayPreparationNotes": "NOTAS DE PREPARAÇÃO",
+  "onboardingSkip": "PULAR",
+  "onboardingNext": "Próximo",
+  "onboardingEnterSanctuary": "Entrar no Santuário",
+  "onboardingIntroduction": "INTRODUÇÃO",
+  "onboardingGrowYourForest": "CRESCA SUA FLORESTA",
+  "onboardingPage1Title": "Conheça seu Guardião.",
+  "onboardingPage1Body": "Bem-vindo ao seu Santuário Pessoal. Aqui, seu crescimento se reflete na vida da sua floresta.",
+  "onboardingPage2Title": "Plante sementes. Veja crescer.",
+  "onboardingPage2Body": "Cada tarefa é uma sementinha. Cada hábito é um broto que você cuida todos os dias. Juntos, eles formam uma floresta de disciplina.",
+  "onboardingPage3Title": "Cinco tarefas. Uma corrente.",
+  "onboardingPage3Body": "Você só pode plantar 5 sementes por dia. Essa restrição força você a se concentrar no que realmente importa — e proteger sua corrente.",
+  "onboardingPage4Title": "Cuide dos brotos diariamente.",
+  "onboardingPage4Body": "Toque nos hábitos para fazê-los crescer. Pule um dia e a corrente não se estende. O Guardião cresce com você.",
+  "authBrand": "DAILY STITCH",
+  "authPlantFirstSeed": "Plante sua primeira semente.",
+  "authWelcomeBack": "Bem-vindo de volta, Guardião.",
+  "authFiveTasksDaily": "Cinco tarefas. Hábitos diários. Sem desculpas.",
+  "authSanctuaryWaiting": "Seu santuário está esperando.",
+  "authSignIn": "Entrar",
+  "authSignUp": "Cadastrar-se",
+  "authEmail": "E-MAIL",
+  "authPassword": "SENHA",
+  "authEmailHint": "seu@email.com",
+  "authCreateAccount": "Criar conta",
+  "authSignInCta": "Entrar",
+  "authOrContinueWith": "ou continuar com",
+  "authContinueWithGoogle": "Continuar com Google",
+  "authEnterEmail": "Digite seu e-mail",
+  "authEnterValidEmail": "Digite um endereço de e-mail válido",
+  "authPasswordTooShort": "A senha deve ter pelo menos 6 caracteres",
+  "authAccountCreated": "Conta criada. Mude para Entrar e use sua senha.",
+  "authSomethingWentWrong": "Algo deu errado. Tente novamente.",
+  "authCouldNotStartGoogle": "Não foi possível iniciar o login com Google.",
+  "authMidnightReset": "Ao entrar, você aceita que seu dia reinicia à meia-noite.",
+  "authSetupRequired": "Configuração necessária",
+  "settingsPersonalSanctuary": "SANTUÁRIO PESSOAL",
+  "settingsHowThisWorks": "Como funciona",
+  "settingsHowThisWorksSubtitle": "O que o app faz, como a restrição e a sequência funcionam",
+  "settingsStreakProtection": "Proteção de sequência",
+  "settingsStreakProtectionAvailable": "1 congelamento disponível este mês",
+  "settingsStreakProtectionUsed": "Usado para este mês",
+  "settingsProSubscription": "Daily Stitch Pro",
+  "settingsManageProSubscription": "Gerenciar assinatura Pro",
+  "settingsProCancelPlay": "Cancelar ou mudar plano no Google Play",
+  "settingsProUnlock": "Desbloquear todos os 5 hábitos, histórico completo e mais",
+  "settingsTaskAlarms": "Alarmes de tarefa & Chamado Final",
+  "settingsTaskAlarmsSubtitle": "Toque noturno e aviso de meia-noite",
+  "settingsHomeScreenWidget": "Widget da tela inicial",
+  "settingsHomeScreenWidgetSubtitle": "Adicione sua sequência de corrente à tela inicial",
+  "settingsShareBloomTracker": "Compartilhar Daily Stitch",
+  "settingsShareBloomTrackerSubtitle": "Conte a um amigo sobre a corrente",
+  "settingsHelpSupport": "Ajuda & Suporte",
+  "settingsHelpSupportSubtitle": "Perguntas frequentes ou reportar um problema",
+  "settingsSignOutTile": "Sair",
+  "settingsAllFeaturesUnlocked": "Todos os recursos desbloqueados",
+  "settingsAllFeaturesUnlockedSubtitle": "Versão beta — assinaturas pausadas enquanto testamos tudo.",
+  "settingsVersion": "Versão {version} ({build})",
+  "settingsVersionUnknown": "Versão 1.0.0",
+  "settingsHabitMaster": "Mestre dos Hábitos",
+  "settingsLevel": "Nível {level} · Mestre dos Hábitos",
+  "languagePickerTitle": "Idioma",
+  "youLast7Days": "Últimos 7 dias",
+  "youLast7DaysSubtitle": "Histórico de tarefas dia a dia",
+  "youLeftBehindSubtitle": "Tarefas perdidas esperando para serem re-adicionadas",
+  "youProTier": "Nível Pro",
+  "youFreeTier": "Nível Gratuito",
   "youPro": "Pro",
-  "youFree": "Free",
-  "youLevelLabel": "Level {level}",
-  "youBestStreakLabel": "Best {days} d",
-  "youPlantHabit": "Plant a habit to start a chain.",
+  "youFree": "Grátis",
+  "youLevelLabel": "Nível {level}",
+  "youBestStreakLabel": "Melhor {days} d",
+  "youPlantHabit": "Plante um hábito para iniciar uma corrente.",
   "youProBadge": "PRO",
-  "youUnlockDiscipline": "Unlock the full discipline system.",
-  "youProFeatures": "5 habit slots, full history, legendary medals, monthly streak freezes, weekly share cards.",
-  "youSeePlans": "See plans",
-  "youFromPrice": "from {price}/mo",
-  "youBloomTrackerFooter": "Bloom Tracker · Habit & To-Do",
-
-  "progressMedals": "Medals",
-  "progressLast7Days": "Last 7 days",
-  "progressSeeAll": "See all",
-  "progressSeeDayByDayActivity": "See your day-by-day activity",
-  "progressTasksFinishedPct": "{done} of {total} tasks finished · {pct}%",
-  "progressNoMedalsYet": "No medals yet — finish a task or tend a sprout to get started.",
-  "progressSeeAllMedals": "See all medals · {earned} of {total} earned",
-  "progressGuardianInsight": "Guardian insight",
-  "progressNextBadgeTier": "NEXT BADGE · {tier}",
-  "progressDaysTarget": "{days} day target",
+  "youUnlockDiscipline": "Desbloqueie o sistema completo de disciplina.",
+  "youProFeatures": "5 espaços de hábitos, histórico completo, medalhas lendárias, congelamentos mensais de sequência, cartões de compartilhamento semanais.",
+  "youSeePlans": "Ver planos",
+  "youFromPrice": "a partir de {price}/mês",
+  "youBloomTrackerFooter": "Daily Stitch · Hábitos & Tarefas",
+  "progressMedals": "Medalhas",
+  "progressLast7Days": "Últimos 7 dias",
+  "progressSeeAll": "Ver todas",
+  "progressSeeDayByDayActivity": "Veja sua atividade dia a dia",
+  "progressTasksFinishedPct": "{done} de {total} tarefas finalizadas · {pct}%",
+  "progressNoMedalsYet": "Nenhuma medalha ainda — finalize uma tarefa ou cuide de um broto para começar.",
+  "progressSeeAllMedals": "Ver todas as medalhas · {earned} de {total} conquistadas",
+  "guardianInsight": "Insight do Guardião",
+  "progressGuardianInsight": "Insight do Guardião",
+  "progressNextBadgeTier": "PRÓXIMO EMBLEMA · {tier}",
+  "progressDaysTarget": "Meta de {days} dias",
   "progressOfTotal": "{value}/{target}",
-
-  "helpTitle": "Help & Support",
-  "helpBody": "Most answers are below. If not, send us a note and we usually reply within 2–3 days.",
-  "helpSectionFAQ": "FREQUENT QUESTIONS",
-  "helpSectionContact": "STILL STUCK?",
-  "helpAddMessage": "Add a short message first.",
-  "helpOpening": "Opening your mail app…",
-  "helpEmailUs": "Email us",
-  "helpOpeningAction": "Opening…",
-  "helpCopyEmail": "Copy support email",
-  "helpCopiedEmail": "Copied support@bloomtracker.app",
-  "helpNoMailApp": "No mail app found. Email us at support@bloomtracker.app.",
-  "helpTopicLabel": "Topic",
-  "helpWhatHappened": "What happened?",
-  "helpHint": "A short description goes a long way…",
-  "helpDisclaimer": "Tapping \"Email us\" opens your mail app with a pre-filled message (no data leaves your device until you send).",
-  "helpFaqQ1": "What is the 5-task cap?",
-  "helpFaqA1": "You can add up to 5 tasks per local day. The 6th is blocked on purpose — discipline beats overload. The cap is the feature, not a limitation.",
-  "helpFaqQ2": "What happens at midnight?",
-  "helpFaqA2": "At your local midnight, any task still marked open is stamped \"missed\" and moves to Left Behind. Habit streaks reset if the habit was not completed the day before.",
-  "helpFaqQ3": "What is Left Behind?",
-  "helpFaqA3": "A gentle, dismissible list of tasks you didn't finish. Open it, re-add only what still matters, and let the rest go. Free tier sees the last 7 days; Pro sees full history.",
-  "helpFaqQ4": "How do streaks work?",
-  "helpFaqA4": "A day extends the chain when you had at least 1 task and 0 were missed. Days with zero tasks neither extend nor break the chain. A streak freeze forgives one missed day per month.",
-  "helpFaqQ5": "What is the streak freeze?",
-  "helpFaqA5": "One \"freeze\" per calendar month, Pro only. Spend it on a day you missed to keep your chain alive. Find it on the Progress tab.",
-  "helpFaqQ6": "Where is my data stored?",
-  "helpFaqA6": "All data lives in Supabase (Postgres) under the account that signed in. We never sell or share it. See the privacy policy linked in the Play Store listing for the full details.",
-  "helpFaqQ7": "How do I delete my account?",
-  "helpFaqA7": "Account deletion is coming to Settings in the next release. For now, email support@bloomtracker.app and we'll handle it within a day.",
-  "helpTopicsGeneral": "General question",
-  "helpTopicsBug": "Bug report",
-  "helpTopicsStreak": "Streak / rollover issue",
-  "helpTopicsBilling": "Billing or Pro tier",
-  "helpTopicsAccount": "Account & data",
-  "helpTopicsFeature": "Feature request",
-  "helpAccountAnon": "(not signed in)",
-
-  "splashTagline": "Nurture small seeds. Grow a forest.",
-
-  "priorityStandard": "STANDARD",
+  "helpTitle": "Ajuda & Suporte",
+  "helpBody": "A maioria das respostas está abaixo. Se não encontrar, nos envie uma mensagem e geralmente respondemos em 2–3 dias.",
+  "helpSectionFAQ": "PERGUNTAS FREQUENTES",
+  "helpSectionContact": "AINDA COM DÚVIDAS?",
+  "helpAddMessage": "Adicione uma mensagem curta primeiro.",
+  "helpOpening": "Abrindo seu app de e-mail…",
+  "helpEmailUs": "Envie-nos um e-mail",
+  "helpOpeningAction": "Abrindo…",
+  "helpCopyEmail": "Copiar e-mail de suporte",
+  "helpCopiedEmail": "Copiado support@dailystitch.app",
+  "helpNoMailApp": "Nenhum app de e-mail encontrado. Envie um e-mail para support@dailystitch.app.",
+  "helpTopicLabel": "Assunto",
+  "helpWhatHappened": "O que aconteceu?",
+  "helpHint": "Uma descrição curta ajuda muito…",
+  "helpDisclaimer": "Ao tocar em \"Envie-nos um e-mail\", seu app de e-mail abre com uma mensagem pré-preenchida (nenhum dado sai do seu dispositivo até você enviar).",
+  "helpFaqQ1": "O que é a restrição de 5 tarefas?",
+  "helpFaqA1": "Você pode adicionar até 5 tarefas por dia local. A 6ª é bloqueada de propósito — disciplina vence sobrecarga. A restrição é o recurso, não uma limitação.",
+  "helpFaqQ2": "O que acontece à meia-noite?",
+  "helpFaqA2": "Na meia-noite do seu horário local, qualquer tarefa ainda marcada como aberta recebe o selo \"perdida\" e vai para Pendentes. Sequências de hábitos são redefinidas se o hábito não foi concluído no dia anterior.",
+  "helpFaqQ3": "O que são Pendentes?",
+  "helpFaqA3": "Uma lista gentil e dispensável de tarefas que você não finalizou. Abra-a, re-adicione apenas o que ainda importa e deixe o resto ir. O nível Gratuito mostra os últimos 7 dias; o Pro mostra o histórico completo.",
+  "helpFaqQ4": "Como as sequências funcionam?",
+  "helpFaqA4": "Um dia estende a corrente quando você teve pelo menos 1 tarefa e 0 foram perdidas. Dias com zero tarefas não estendem nem quebram a corrente. Um congelamento de sequência perdoa um dia perdido por mês.",
+  "helpFaqQ5": "O que é o congelamento de sequência?",
+  "helpFaqA5": "Um \"congelamento\" por mês calendário, apenas para o Pro. Use-o em um dia que você perdeu para manter sua corrente viva. Encontre-o na aba Progresso.",
+  "helpFaqQ6": "Onde meus dados são armazenados?",
+  "helpFaqA6": "Todos os dados ficam no Supabase (Postgres) vinculados à conta que fez login. Nunca vendemos ou compartilhamos. Veja a política de privacidade no link da listagem na Play Store para detalhes completos.",
+  "helpFaqQ7": "Como excluo minha conta?",
+  "helpFaqA7": "Vá para Configurações → Conta → Excluir conta. Isso remove permanentemente seu perfil, tarefas, hábitos e dados de assinatura. Assinaturas ativas do Play devem ser canceladas separadamente no Google Play.",
+  "helpTopicsGeneral": "Pergunta geral",
+  "helpTopicsBug": "Relatório de bug",
+  "helpTopicsStreak": "Problema de sequência",
+  "helpTopicsBilling": "Cobrança ou nível Pro",
+  "helpTopicsAccount": "Conta & dados",
+  "helpTopicsFeature": "Solicitação de recurso",
+  "helpAccountAnon": "(não conectado)",
+  "splashTagline": "Cuide de pequenas sementes. Cresça uma floresta.",
+  "priorityStandard": "PADRÃO",
   "priorityVital": "VITAL",
-  "prioritySpark": "SPARK"
+  "prioritySpark": "FAÍSCA",
+  "todayHabitsCount": "{done} de {total} hábitos",
+  "todayChainGrows": "A CORRENTE CRECE AO FINALIZAR",
+  "todayChainComplete": "CORRENTE COMPLETA · CUIDE DO JARDIM AMANHÃ",
+  "taskCapInfo": "Por que a restrição de 5 tarefas?",
+  "taskCapDiscipline": "DISCIPLINA EM PRIMEIRO LUGAR POR CONCEITO",
+  "taskCapTitle": "Limitamos seu dia a 5 tarefas de propósito.",
+  "taskCapBody": "Correntes pequenas vencem as longas. Você tem mais chance de finalizar 3 de 5 e sentir a vitória do que abandonar 8 de 10 e sentir a derrota.",
+  "taskCapBulletDone": "Tarefas finalizadas contam para sua corrente",
+  "taskCapBulletDoneBody": "Um dia em que as 5 são finalizadas estende sua sequência em um.",
+  "taskCapBulletMissed": "Tarefas perdidas vão para Pendentes",
+  "taskCapBulletMissedBody": "À meia-noite, tarefas não finalizadas aparecem em Pendentes. Re-adicione apenas o que ainda importa.",
+  "taskCapBulletFreeze": "Congelamento de sequência perdoa uma perda",
+  "taskCapBulletFreezeBody": "O Pro dá 2 congelamentos de sequência por mês — eles cobrem um dia perdido para sua corrente sobreviver.",
+  "tasksProgressCount": "{done} / {total}",
+  "tasksCapReached": "5/5 espaços usados — finalize um para plantar uma nova semente.",
+  "tasksEmptyCta": "Plante sua primeira semente — o que importa hoje?",
+  "habitsGrowing": "{count} crescendo",
+  "habitsBestStreak": "Melhor {days} d",
+  "habitsPlantNew": "Plantar um novo broto de hábito",
+  "habitsLocked": "Espaço de hábito Pro — desbloqueie para plantar mais brotos",
+  "habitsSlotsFull": "Todos os espaços de hábitos estão atualmente ocupados.",
+  "habitsStreakDays": "{days}d",
+  "leftBehindBanner": "{count} perdidos — ainda em Pendentes",
+  "leftBehindTap": "Toque para re-adicionar ou deixar ir",
+  "leftBehindEmpty": "Nada pendente",
+  "leftBehindEmptyBody": "Nenhuma tarefa perdida. Toda semente que você planta está sendo cuidada. O jardim está limpo.",
+  "leftBehindClearAllConfirm": "Limpar todos os pendentes?",
+  "leftBehindClearAllBody": "Isso removerá permanentemente {count} tarefa(s) perdida(s). Isso não pode ser desfeito.",
+  "leftBehindReAdd": "Re-adicionar hoje",
+  "leftBehindReAddButton": "Re-adicionar",
+  "leftBehindAddedToToday": "Adicionado ao hoje",
+  "leftBehindHeader": "PENDENTES",
+  "leftBehindMissedTasks": "TAREFAS PERDIDAS",
+  "leftBehindWaitingOne": "1 tarefa está esperando por você.",
+  "leftBehindWaitingMany": "{count} tarefas estão esperando por você.",
+  "leftBehindBody": "Re-adicione uma tarefa para trazê-la de volta ao hoje, ou deixe-a ir. Re-adicionar mantém sua corrente viva.",
+  "leftBehindReAddedSnack": "\"{task}\" está de volta no seu dia.",
+  "leftBehindRemovedSnack": "Removido \"{task}\"",
+  "leftBehindClearedSnack": "Pendentes limpos",
+  "leftBehindYesterdayDate": "Ontem · {date}",
+  "streakAtRisk": "{count} tarefa(s) restante(s) para hoje",
+  "streakAtRiskLastCall": "Último chamado — {count} tarefa(s) ainda aberta(s)",
+  "streakAtRiskBody": "A meia-noite está próxima. A corrente depende disso.",
+  "streakAtRiskBodyLow": "Você ainda tem tempo. Um dia limpo estende sua sequência.",
+  "streakAtRiskFreeze": "Ontem perdido — usar congelamento de sequência?",
+  "streakFreezeUse": "Usar congelamento",
+  "streakFreezeUseForYesterday": "Usar congelamento mensal para ontem",
+  "streakFreezeAppliedYesterday": "Congelamento de sequência aplicado para ontem.",
+  "chainBrokenTitle": "A corrente quebrou. Tudo bem.",
+  "chainBrokenBody": "Toda corrente longa termina uma vez. O que importa é o que você planta hoje. Um dia perfeito começa o próximo.",
+  "chainBrokenCta": "Voltar para hoje",
+  "chainBrokenPlantFirst": "Plante a primeira semente de hoje",
+  "chainBrokenCheck": "Verifique Pendentes primeiro",
+  "chainBrokenBestChain": "melhor corrente",
+  "chainBrokenTasksDone": "tarefas feitas",
+  "chainBrokenSprouts": "brotos",
+  "chainRecoveryFreshStart": "Um novo começo",
+  "medalsTrophyEarned": "{earned} de {total} medalhas conquistadas",
+  "medalsTrophyEmpty": "Seu primeiro emblema está a uma tarefa de distância",
+  "medalsTrophyFirst": "Você conquistou sua primeira medalha — continue",
+  "medalsTrophyMany": "{earned} medalhas na sua sala de troféus",
+  "medalsProgressLabel": "Progresso para todas as {total} medalhas",
+  "medalsEmptyTitle": "Nada nesta categoria ainda",
+  "medalsEmptyBody": "Finalize uma tarefa ou cuide de um broto para começar sua sala de troféus.",
+  "medalSheetEarned": "CONQUISTADA · {tier}",
+  "medalSheetProgress": "Progresso",
+  "medalSheetHint": "Faltam apenas {n} {unit} para desbloquear.",
+  "medalSheetAlmost": "Mais um passo para desbloquear.",
+  "medalCategory": "Categoria",
+  "medalProgressTitle": "Progresso",
+  "historyTitle": "Últimos 7 dias",
+  "historyFullTitle": "Histórico completo",
+  "historyLoadError": "Não foi possível carregar o histórico.",
+  "historyFullCalendar": "Calendário completo",
+  "historyCompletedPercent": "{percent}% concluído",
+  "historyThisWeek": "ÚLTIMOS {days} DIAS",
+  "historyDayByDay": "DIA A DIA",
+  "historyEmpty": "Plante algumas sementes para ver sua semana se desenrolar.",
+  "historyDoneCount": "Você finalizou {done} de {total} tarefas. {perfect} dia(s) perfeito(s).",
+  "historyUpsellTitle": "Veja seu histórico completo",
+  "historyUpsellBody": "O Pro desbloqueia 30 dias de histórico. O Gratuito mostra 7.",
+  "historyPerfect": "PERFEITO",
+  "historyFrozen": "CONGELADO",
+  "historyToday": "Hoje",
+  "historyEmptyDay": "Nenhuma semente plantada nesse dia",
+  "historyLeftBehindCount": "{count} pendente(s)",
+  "progressVitality": "VITALIDADE DE HOJE",
+  "progressVitalityEmpty": "Plante uma semente para começar seu jardim.",
+  "progressVitalitySeeds": "{done} de {total} sementes plantadas hoje.",
+  "progressChainPill": "{days}d de corrente",
+  "progressMetricCurrent": "Atual",
+  "progressMetricBest": "Melhor",
+  "progressMetricDone": "Feito",
+  "progressMetricPerfect": "Perfeito",
+  "progressMetricHabits": "Hábitos",
+  "progressHabitBlooms": "Florações de hábitos",
+  "progressHabitBloomsSub": "Marcos de sequência para os brotos que você rega diariamente.",
+  "progressNextBadge": "Próximo emblema",
+  "progressMedalCount": "{earned} de {total}",
+  "progressPersonalActivity": "Atividade Pessoal",
+  "progressBrowseMonth": "Navegando {month}. Toque em \"Hoje\" para voltar à sua atividade atual.",
+  "progressJumpToToday": "Hoje",
+  "progressCalendarLegend": "mais escuro = mais finalizados",
+  "progressCalendarBody": "Verde escuro significa um dia perfeito. A tonalidade desvance conforme você pula.",
+  "paywallTitle": "Mantenha a corrente inquebrável.",
+  "paywallSubtitle": "O Daily Stitch Pro dá a você o sistema completo de disciplina.",
+  "paywallFeatures": "Todos os 5 espaços de hábitos, não apenas 3|Seu histórico completo, para sempre|O conjunto completo de medalhas|Congelamento de sequência todo mês|Recibo semanal + cartões de compartilhamento|Temas + mais",
+  "paywallFeaturesBodies": "O Gratuito dá 3. O Pro desbloqueia todos os cinco para que seu ritual diário completo possa viver aqui.|Navegue por cada dia que você completou — não apenas os últimos 7. Olhe para trás anos, não semanas.|Desbloqueie medalhas de nível Lendário. Os emblemas mais raros são para quem vai até o final.|2 congelamentos de sequência por mês para que um único dia ruim não encerre sua corrente.|Belos cartões de compartilhamento da sua semana. Poste sua corrente, inspire alguém mais a começar.|Desbloqueie novas cores de destaque e temas à medida que os adicionamos. Sempre atualizações gratuitas.",
+  "paywallYearly": "Anual",
+  "paywallYearlyCaption": "Melhor valor · fica ~2,50 USD/mês",
+  "paywallYearlyBadge": "ECONOMIZE 35%",
+  "paywallMonthly": "Mensal",
+  "paywallMonthlyCaption": "Cobrado todo mês · cancele quando quiser",
+  "paywallStartCta": "Iniciar Pro · {price}/ano",
+  "paywallStartCtaMonthly": "Iniciar Pro · {price}/mês",
+  "paywallRestore": "Restaurar compra",
+  "paywallTerms": "Termos",
+  "paywallPrivacy": "Privacidade",
+  "paywallNoRestore": "Nenhuma compra anterior encontrada nesta conta.",
+  "paywallRestoreLater": "Restauraremos sua compra na próxima sincronização.",
+  "paywallAlreadyPro": "Você já está no Pro. Obrigado pelo apoio.",
+  "paywallHabitSlotHead": "Você usou todos os seus espaços de hábitos gratuitos. Desbloqueie o conjunto completo para plantar todos os rituais que importam para você.",
+  "paywallHistoryHead": "Veja seu histórico completo — cada dia perfeito, cada medalha, cada retorno.",
+  "paywallMedalHead": "As medalhas mais raras são exclusivas do Pro. Continue — elas estão mais perto do que você pensa.",
+  "paywallWelcomePro": "Bem-vindo ao Daily Stitch Pro",
+  "paywallSavePercent": "ECONOMIZE ~16%",
+  "paywallTermsTitle": "Termos da assinatura",
+  "paywallTermsBody": "A cobrança é tratada pelo Google Play. As assinaturas renovam automaticamente até que você cancele na Play Store → Assinaturas pelo menos 24 horas antes do término do período atual. Você pode gerenciar ou cancelar sua assinatura a qualquer momento na sua conta do Google Play.\n\nDesinstalar o app não cancela sua assinatura.\n\nOs preços exibidos estão na sua moeda local e podem variar por região. Impostos podem ser aplicados.",
+  "paywallPrivacyTitle": "Privacidade",
+  "paywallPrivacyBody": "O Daily Stitch armazena suas tarefas, hábitos e dados de sequência em nosso backend Supabase, vinculados à sua conta. Nunca vendemos seus dados.\n\nAs compras de assinatura são processadas pelo Google Play. Recebemos um token de compra verificado do Google para confirmar seu status Pro. Não vemos nem armazenamos seus dados de pagamento.\n\nVocê pode solicitar exportação completa de dados ou exclusão de conta em Configurações → Exclusão de conta.",
+  "paywallCloseTooltip": "Fechar",
+  "paywallFooterLinks": "Restaurar · Termos · Privacidade",
+  "settingsYourActivity": "SUA ATIVIDADE",
+  "settingsHelpInfo": "AJUDA & INFORMAÇÕES",
+  "settingsAccount": "CONTA",
+  "settingsNurturingTools": "FERRAMENTAS DE CUIDADO",
+  "settingsReminders": "LEMBRETES",
+  "settingsWidgetSanctuary": "SANTUÁRIO DO WIDGET",
+  "settingsEcosystemSupport": "SUPORTE DO ECOSSISTEMA",
+  "settingsHowItWorks": "Como funciona",
+  "settingsHowItWorksSubtitle": "O que o app faz, como a restrição e a sequência funcionam",
+  "settingsStreakProtection": "Proteção de sequência",
+  "settingsStreakProtectionAvailable": "1 congelamento disponível este mês",
+  "settingsStreakProtectionUsed": "Usado para este mês",
+  "settingsProSubscription": "Daily Stitch Pro",
+  "settingsManageProSubscription": "Gerenciar assinatura Pro",
+  "settingsProCancelPlay": "Cancelar ou mudar plano no Google Play",
+  "settingsProUnlock": "Desbloquear todos os 5 hábitos, histórico completo e mais",
+  "settingsTaskAlarms": "Alarmes de tarefa & Chamado Final",
+  "settingsTaskAlarmsSubtitle": "Toque noturno e aviso de meia-noite",
+  "settingsHomeScreenWidget": "Widget da tela inicial",
+  "settingsHomeScreenWidgetSubtitle": "Adicione sua sequência de corrente à tela inicial",
+  "settingsShareBloomTracker": "Compartilhar Daily Stitch",
+  "settingsShareBloomTrackerSubtitle": "Conte a um amigo sobre a corrente",
+  "settingsHelpSupport": "Ajuda & Suporte",
+  "settingsHelpSupportSubtitle": "Perguntas frequentes ou reportar um problema",
+  "settingsSignOutTile": "Sair",
+  "settingsAllFeaturesUnlocked": "Todos os recursos desbloqueados",
+  "settingsAllFeaturesUnlockedSubtitle": "Versão beta — assinaturas pausadas enquanto testamos tudo.",
+  "settingsVersion": "Versão {version} ({build})",
+  "settingsVersionUnknown": "Versão 1.0.0",
+  "settingsHabitMaster": "Mestre dos Hábitos",
+  "settingsLevel": "Nível {level} · Mestre dos Hábitos",
+  "settingsProActive": "Ativo",
+  "settingsProFree": "Nível Gratuito",
+  "settingsDeleteAccount": "Excluir conta",
+  "settingsDeleteAccountSubtitle": "Remover seus dados permanentemente",
+  "settingsDeleteAccountConfirmTitle": "Excluir sua conta?",
+  "settingsDeleteAccountConfirmBody": "Isso exclui permanentemente seu perfil, tarefas, hábitos e progresso. Assinaturas ativas devem ser canceladas separadamente no Google Play. Isso não pode ser desfeito.",
+  "settingsDeleteAccountConfirmButton": "Excluir para sempre",
+  "settingsDeleteAccountSuccess": "Sua conta foi excluída.",
+  "settingsDeleteAccountFailed": "Não foi possível excluir a conta. Tente novamente ou envie um e-mail para support@dailystitch.app.",
+  "firstRunGreeting": "5 tarefas. Não mais. Faça-as valer.",
+  "firstRunBody": "Plante sua primeira semente — o que mais importa hoje?",
+  "firstRunCta": "Plante sua primeira semente",
+  "emptyStateClearAll": "Limpar tudo",
+  "intentionTitle1": "Vamos plantar uma nova intenção!",
+  "intentionBody1": "Toda floresta poderosa começa com uma única escolha pequena. Me diga o que estamos cuidando hoje?",
+  "intentionTitle2": "O que vamos cultivar hoje?",
+  "intentionBody2": "Sementinhas, cuidadas com carinho, se tornam árvores altas. Escolha a que mais importa agora.",
+  "intentionTitle3": "Uma semente. Uma respiração. Comece.",
+  "intentionBody3": "Você não precisa plantar a floresta inteira de uma vez — apenas a próxima coisa certa.",
+  "intentionTitle4": "Cuide do próximo pequeno passo.",
+  "intentionBody4": "Seu eu do futuro é construído pelas escolhas que você faz nos próximos cinco minutos. Qual é uma gentil?",
+  "intentionTitle5": "Escolha o que você quer se tornar.",
+  "intentionBody5": "Tarefas são sementes, hábitos são brotos. Juntos, eles formam uma floresta da qual você tem orgulho.",
+  "intentionTitle6": "Plante algo que vale a pena lembrar.",
+  "intentionBody6": "Nem todo dia vai parecer enorme. Uma semente regada ainda conta. Vamos nomear uma.",
+  "intentionTitle7": "Torne hoje um pouco mais corajoso.",
+  "intentionBody7": "A coragem se acumula. Escolha a semente que você vem adiando — mesmo nomeá-la a faz avançar.",
+  "intentionTitle8": "Cuide do solo antes da semente.",
+  "intentionBody8": "Qual mentalidade, ferramenta ou pequeno ritual tornará esta tarefa mais fácil? Adicione às notas.",
+  "shareCardSnapshot": "Um instantâneo do seu santuário",
+  "shareCardBody": "O cartão acima é exportado como PNG e enviado para sua aba de compartilhamento. Poste na sua história, envie a um amigo ou imprima como adesivo.",
+  "shareCardShareMyBloom": "Compartilhar minha floração",
+  "shareCardCouldNotShare": "Não foi possível compartilhar agora",
+  "shareCardProgressText": "Meu progresso no Daily Stitch — {year} no Daily Stitch.",
+  "shareCardMedalText": "Acabei de desbloquear a medalha \"{title}\" no Daily Stitch. {subtitle}",
+  "shareCardTitle": "Compartilhe sua semana",
+  "shareCardCta": "Compartilhar imagem",
+  "howItWorksTitle": "Como funciona",
+  "howItWorksBody": "O Daily Stitch ajuda você a manter uma corrente pequena e inquebrável de disciplina. É isso.",
+  "howItWorksToday": "A aba Hoje",
+  "howItWorksTodayBody": "Este é o seu lar. Mostra as 5 tarefas e os hábitos que você definiu para hoje. Finalize-os até a meia-noite, a corrente se estende.",
+  "howItWorksCap": "A restrição de 5 tarefas é o recurso",
+  "howItWorksCapBody": "Nós não deixamos você adicionar uma 6ª. Esse é o ponto todo. Correntes pequenas vencem as longas. Toque no \"?\" na tela inicial para o raciocínio completo.",
+  "howItWorksHabits": "Hábitos são diários, a corrente é para sempre",
+  "howItWorksHabitsBody": "Hábitos (Yoga matinal, Beber água) vivem para sempre. Tarefas são únicas. Ambos alimentam a mesma sequência.",
+  "howItWorksLeftBehind": "Tarefas perdidas → Pendentes",
+  "howItWorksLeftBehindBody": "À meia-noite, tarefas não finalizadas vão para Pendentes. Re-adicione apenas o que ainda importa. O resto recebe um afastamento silencioso.",
+  "howItWorksProgress": "A aba Progresso",
+  "howItWorksProgressBody": "Sequência, calendário, medalhas, histórico — tudo sobre como você está indo ao longo do tempo. Nada urgente vive aqui.",
+  "howItWorksYou": "A aba Você",
+  "howItWorksYouBody": "Sua conta, configurações, sair. É tudo.",
+  "howItWorksRule": "A regra: 5 coisas pequenas, todos os dias, sem desculpas.",
+  "referralYouTitle": "Convide amigos · ganhe Pro grátis",
+  "referralYouSubtitle": "{progress} de {milestone} amigos participaram",
+  "referralYouShare": "Compartilhar convite",
+  "referralYouDetails": "Ver detalhes",
+  "referralPaywallTitle": "Mês grátis de Pro",
+  "referralPaywallBody": "Convide 5 amigos que se inscreverem → 1 mês de Pro grátis",
+  "referralPaywallProBody": "Continue convidando — acumule meses grátis de Pro",
+  "referralPaywallProgress": "{count} / {milestone}",
+  "insightsLoadError": "Não foi possível carregar seu progresso. Tente novamente mais tarde.",
+  "insightsMetricCurrentChain": "CORRENTE ATUAL",
+  "insightsMetricBestEver": "MELHOR DE TODOS",
+  "insightsMetricTasksDone": "TAREFAS FEITAS",
+  "insightsMetricPerfectDays": "DIAS PERFEITOS",
+  "insightsMetricHabits": "HÁBITOS",
+  "insightsDay": "dia",
+  "insightsDays": "dias",
+  "insightsSectionThisWeek": "Esta semana",
+  "insightsShareMyWeek": "Compartilhar minha semana",
+  "insightsShareMyWeekPro": "Compartilhar minha semana · Pro",
+  "insightsShareReceiptText": "Minha semana no Daily Stitch. Não quebre a corrente.",
+  "insightsHistoryWindowTitle": "Mostrando os últimos {days} dias",
+  "insightsHistoryUpsell": "Desbloqueie seu histórico completo com Pro",
+  "referralScreenTitle": "Convidar amigos",
+  "referralLaunchGift": "Presente do mês de lançamento",
+  "referralRewardTitle": "Ganhe 1 mês de Pro grátis",
+  "referralRewardBody": "Compartilhe seu código com amigos. Quando 5 pessoas se inscreverem usando ele, você desbloqueia o Daily Stitch Pro por um mês completo.",
+  "referralYourCode": "Seu código de indicação",
+  "referralCopyCodeTooltip": "Copiar código",
+  "referralCodeCopied": "Código de indicação copiado",
+  "referralShareWithFriends": "Compartilhar com amigos",
+  "referralFooterHint": "Os amigos inserem seu código ao criar uma conta. Cada amigo conta uma vez para sua recompensa.",
+  "referralFriendsJoinedOne": "{count} amigo participou",
+  "referralFriendsJoinedMany": "{count} amigos participaram",
+  "referralRewardsEarnedOne": "Você ganhou {count} mês grátis de Pro.",
+  "referralRewardsEarnedMany": "Você ganhou {count} meses grátis de Pro.",
+  "referralRewardUnlocked": "Recompensa desbloqueada — aproveite seu mês grátis de Pro!",
+  "referralRemainingToUnlock": "{remaining} mais para desbloquear seu mês grátis",
+  "youProMemberSince": "Membro Bloom Pro desde {month}",
+  "youProPerksTitle": "Seus benefícios Pro",
+  "manageProThankYou": "Obrigado por apoiar o Bloom",
+  "manageProReferralHint": "Convide mais amigos para estender seu Pro",
+  "bootstrapConfigErrorBody": "{detail}\n\nAdicione SUPABASE_URL e SUPABASE_PUBLISHABLE_KEY (ou o legado SUPABASE_ANON_KEY) ao arquivo leanspace/.env, depois reconstrua:\n\nflutter build apk --debug",
+  "languageSystemDefault": "Padrão do sistema",
+  "languageNameEn": "English",
+  "languageNameUr": "اردو (Urdu)",
+  "languageNameHi": "हिन्दी (Hindi)",
+  "languageNamePa": "ਪੰਜਾਬੀ (Punjabi)",
+  "languageNameSd": "سنڌي (Sindhi)",
+  "languageNameBn": "বাংলা (Bengali)",
+  "languageNamePs": "پښتو (Pashto)",
+  "languageNameEs": "Español",
+  "languageNamePt": "Português",
+  "languageNameFr": "Français",
+  "languageNameDe": "Deutsch",
+  "languageNameIt": "Italiano",
+  "languageNameAr": "العربية",
+  "languageNameTr": "Türkçe",
+  "languageNameId": "Bahasa Indonesia",
+  "onboardingLanguageTitle": "Escolha seu idioma",
+  "onboardingLanguageBody": "Escolha o idioma que você gostaria de usar no Daily Stitch. Você pode alterá-lo a qualquer momento nas Configurações.",
+  "onboardingLanguageContinue": "Continuar",
+  "commonPro": "PRO",
+  "commonFriend": "Amigo",
+  "settingsAppTheme": "Tema do App",
+  "settingsAppThemeSubtitle": "Escolha as cores do seu santuário pessoal",
+  "settingsInviteFriendsTitle": "Convidar amigos · Pro grátis",
+  "settingsInviteFriendsSubtitle": "Ganhe 1 mês grátis quando 5 amigos participarem",
+  "themePickerTitle": "Santuário Pessoal",
+  "themePickerSubtitle": "Escolha uma paleta de cores que traga paz.",
+  "themeNameClassicBloom": "Floração Clássica",
+  "themeNameSolarTerracotta": "Terracota Solar",
+  "themeNameMidnightOasis": "Oásis da Meia-Noite",
+  "themeNameLavenderDream": "Sonho de Lavanda",
+  "themeNameNordicFrost": "Geada Nórdica",
+  "themeNameCyberpunkNeon": "Neon Cyberpunk",
+  "reminderTitle": "Lembretes",
+  "reminderBody": "O Chamado Final avisa você antes da meia-noite se houver tarefas ainda abertas.",
+  "reminderFinalCall": "Chamado Final",
+  "reminderEveningNudge": "Toque noturno",
+  "reminderChangeTime": "Alterar horário",
+  "reminderSave": "Salvar lembretes",
+  "notificationChannelReminders": "Lembretes do Daily Stitch",
+  "notificationChannelRemindersDesc": "Toque noturno e lembretes do Chamado Final",
+  "notificationChannelAlarms": "Alarmes de tarefa do Daily Stitch",
+  "notificationChannelAlarmsDesc": "Alarmes altos para lembretes de tarefas",
+  "notificationTaskReminderTitle": "Lembrete de tarefa",
+  "notificationFinalCallTitle": "Chamado Final",
+  "notificationFinalCallBody": "Você ainda tem {count} tarefa(s) aberta(s) hoje.",
+  "notificationEveningTitle": "Verificação noturna",
+  "notificationEveningBody": "Como seu jardim cresceu hoje?",
+  "widgetSetupTitle": "Adicionar widget de corrente",
+  "widgetSetupBody": "Mantenha sua sequência na tela inicial — sem precisar abrir o app.",
+  "widgetSetupAdd": "Adicionar à tela inicial",
+  "widgetSetupStep1": "Pressione longamente na tela inicial",
+  "widgetSetupStep2": "Toque em Widgets",
+  "widgetSetupStep3": "Encontre o Daily Stitch e arraste",
+  "widgetSetupPinSuccess": "Verifique sua tela inicial para posicionar o widget.",
+  "widgetSetupPinFallback": "Seu launcher pode não suportar adição com um toque. Use os passos manuais abaixo.",
+  "manageProTitle": "Assinatura Pro",
+  "manageProActive": "Ativa",
+  "manageProNotSubscribed": "Não assinado",
+  "manageProFreeTier": "Nível Gratuito",
+  "manageProRenewsOn": "Renova ou expira em {date}.",
+  "manageProFreeBody": "Você está usando o Daily Stitch Gratuito. Faça upgrade para desbloquear o sistema completo.",
+  "manageProSectionManage": "GERENCIAR",
+  "manageProOpenPlay": "Abrir assinaturas do Google Play",
+  "manageProOpenPlaySubtitlePro": "Cancelar, mudar plano ou atualizar método de pagamento",
+  "manageProOpenPlaySubtitleFree": "Encontre sua assinatura existente (se houver) aqui",
+  "manageProShareApp": "Compartilhar Daily Stitch",
+  "manageProShareSubtitle": "Conte a um amigo sobre a corrente",
+  "manageProSectionHelp": "PRECISA DE AJUDA?",
+  "manageProHelpTitle": "Ajuda & Suporte",
+  "manageProHelpSubtitle": "FAQ de assinatura, contato, relatórios de bugs",
+  "manageProBillingFooter": "Cobrança tratada pelo Google Play · {version}",
+  "manageProPlayInstructions": "Abra o app Google Play Store → toque no seu perfil → Pagamentos & assinaturas → Assinaturas.",
+  "addTaskGrowSomething": "Cultivar Algo",
+  "addTaskPlantSprout": "Plantar um BROTO",
+  "addTaskIntentionName": "NOME DA INTENÇÃO",
+  "addTaskSproutName": "NOME DO BROTO",
+  "addTaskHintTask": "ex., Saudação ao Sol da Manhã",
+  "addTaskHintHabit": "ex. Yoga Matinal",
+  "addTaskWhen": "QUANDO?",
+  "addTaskPriority": "PRIORIDADE",
+  "addTaskNotes": "NOTAS",
+  "addTaskCadenceDaily": "Diário",
+  "addTaskCadenceWeekdays": "Dias úteis",
+  "addTaskCadence3x": "3x/semana",
+  "addTaskCadenceWeekly": "Semanal",
+  "addTaskPlantIntention": "Plantar Intenção",
+  "addTaskPlantSproutCta": "Plantar Broto",
+  "addTaskPlanting": "Plantando…",
+  "addTaskNameIntentionError": "Dê um nome à sua intenção",
+  "addTaskNameSproutError": "Dê um nome ao seu broto",
+  "addTaskNotesMigrationWarning": "Tarefa salva. Notas e prioridade precisam da migração mais recente do Supabase — execute supabase/migrations/20260701000000_todos_notes_priority.sql.",
+  "addTaskNoSproutSlots": "Nenhum espaço de broto vazio — cuide de um primeiro.",
+  "addTaskSaveSproutError": "Não foi possível salvar o broto — tente novamente.",
+  "addTaskElementWater": "ÁGUA",
+  "addTaskElementLight": "LUZ",
+  "addTaskElementSoil": "SOLO",
+  "addTaskElementBreeze": "BRIOSA",
+  "addTaskCadenceLabel": "CADÊNCIA",
+  "addTaskPreparationNotes": "NOTAS DE PREPARAÇÃO",
+  "addTaskTendingNotes": "NOTAS DE CUIDADO",
+  "addTaskNotesHintTask": "Algumas ferramentas ou dicas de mentalidade para esta tarefa?",
+  "addTaskNotesHintHabit": "Como é cuidar deste broto?",
+  "addTaskChooseElement": "ESCOLHA O ELEMENTO",
+  "addTaskElementsTooltip": "O que os elementos significam?",
+  "addTaskTaskSeed": "Semente de Tarefa",
+  "addTaskHabitSprout": "Broto de Hábito",
+  "addTaskPickElement": "Escolha o elemento certo",
+  "addTaskPickElementBody": "Cada elemento corresponde a um tipo diferente de esforço. O Guardião cresce mais forte quando você rega o elemento certo.",
+  "addTaskClearForm": "Limpar formulário",
+  "shareCouldNotShare": "Não foi possível compartilhar agora",
+  "authReferralCodeLabel": "Código de indicação (opcional)",
+  "authReferralCodeHint": "Código do amigo",
+  "youPerkHabitSlots": "5 espaços de hábitos",
+  "youPerkFullHistory": "Histórico completo",
+  "youPerkAllThemes": "Todos os temas",
+  "youPerkStreakFreezes": "2 congelamentos de sequência / mês",
+  "youPerkLegendaryMedals": "Medalhas lendárias",
+  "subscriptionPurchaseFailed": "Compra falhou. Tente novamente.",
+  "subscriptionUnavailable": "Compras in-app estão indisponíveis neste dispositivo.",
+  "subscriptionLoadFailed": "Não foi possível carregar as opções de assinatura.",
+  "subscriptionVerifyFailed": "Não foi possível verificar a compra. Tente Restaurar compra.",
+  "streakFreezeFailed": "Não foi possível usar o congelamento de sequência.",
+  "streakFreezeAlreadyUsed": "Você já usou seu congelamento este mês.",
+  "streakFreezeNoMissed": "Nenhuma tarefa perdida nesse dia para congelar.",
+  "streakFreezeNotPastDay": "Você só pode congelar um dia passado.",
+  "myDayLoadError": "Não foi possível carregar Meu Dia. Puxe para atualizar.",
+  "myDayCapReached": "Você atingiu a restrição de 5 tarefas de hoje.",
+  "myDayRemoveTaskError": "Não foi possível remover a tarefa.",
+  "medalTierSprout": "Broto",
+  "medalTierCommon": "Comum",
+  "medalTierRare": "Raro",
+  "medalTierEpic": "Épico",
+  "medalTierLegendary": "Lendário",
+  "medalCategoryTasks": "Tarefas",
+  "medalCategoryHabits": "Hábitos",
+  "medalCategoryStreaks": "Sequências",
+  "medalCategoryMastery": "Maestria",
+  "medalsShareTooltip": "Compartilhar conquistas",
+  "medalsFilterAll": "Todas",
+  "addHabitTitleNew": "Plantar um novo broto",
+  "addHabitTitleEdit": "Cuidar do seu broto",
+  "addHabitLabelSproutName": "NOME DO BROTO",
+  "shareCardAppBarTitle": "Cartão de compartilhamento",
+  "shareCardAppBarTitleMedal": "Compartilhe sua medalha",
+  "shareCardDescMedal": "Exiba seu novo emblema {title}",
+  "shareCardBodyMedal": "Compartilhe a vitória com seu círculo. O cartão é exportado como PNG e está pronto para qualquer app de rede social.",
+  "shareCardCtaPreparing": "Preparando…",
+  "shareCardMilestone": "NOVO MARCO DESBLOQUEADO",
+  "shareCardStatChain": "dias de corrente",
+  "shareCardStatSprouts": "brotos",
+  "shareCardStatMedals": "medalhas",
+  "shareCardHeadlineStreak": "Sequência de {days} Dias",
+  "shareCardHeadlineMedals": "{count} Medalhas Conquistadas",
+  "shareCardHeadlineSproutGuardian": "Guardião de Brotos",
+  "shareCardHeadlineFirstSeeds": "Primeiras Sementes Plantadas",
+  "shareCardHeadlineGardenBegins": "Um Jardim Começa",
+  "shareCardSubheadMonth": "Você cuidou dos seus hábitos com sucesso por um mês completo.",
+  "shareCardSubheadWeek": "Uma semana completa de crescimento — sua floresta está engrossando.",
+  "shareCardSubheadProgress": "Seu santuário está mostrando progresso real. Continue cuidando.",
+  "shareCardSubheadSprouts": "Seus primeiros brotos estão enraizando. Regue-os diariamente.",
+  "shareCardSubheadFirstSeeds": "Suas primeiras sementes estão no solo. Veja abrir.",
+  "shareCardSubheadFallback": "Toda floresta começa com uma única escolha pequena.",
+  "shareAppText": "Daily Stitch — cinco sementinhas por dia, uma corrente inquebrável. Plante a sua.\n\n{url}",
+  "shareAppSubject": "Experimente o Daily Stitch",
+  "shareAppReferralText": "Estou construindo minha corrente diária no Daily Stitch — junte-se a mim com meu código de indicação {code} e ambos crescemos.\n\n{url}",
+  "shareAppReferralSubject": "Junte-se a mim no Daily Stitch",
+  "shareCardShareTextProgress": "Meu progresso no Daily Stitch — {year} no Daily Stitch.",
+  "shareCardShareTextMedal": "Acabei de desbloquear a medalha \"{title}\" no Daily Stitch. {subtitle}",
+  "insightsReceiptTasksDone": "Tarefas feitas",
+  "insightsReceiptPerfectDays": "Dias perfeitos",
+  "insightsReceiptCompletion": "Conclusão",
+  "insightsReceiptDate": "Semana de {date}",
+  "insightsReceiptFooter": "Não quebre a corrente.",
+  "elementLabelWater": "Água",
+  "elementLabelLight": "Luz",
+  "elementLabelSoil": "Solo",
+  "elementLabelBreeze": "Brisa",
+  "elementTaglineWater": "Restaurar. Hidratação, descanso, cuidado emocional — qualquer coisa que encha o poço.",
+  "elementTaglineLight": "Despertar. Luz da manhã, blocos de foco, estudo, meditação — energia e clareza.",
+  "elementTaglineSoil": "Enraizar. Leitura, diário, trabalho profundo — raízes lentas que constroem força a longo prazo.",
+  "elementTaglineBreeze": "Mover. Caminhadas, corridas, respiração — energia leve e móvel que limpa a cabeça.",
+  "elementWhenWater": "Quando você se sentir esgotado ou vazio.",
+  "elementWhenLight": "Quando precisar de um início claro para seu dia.",
+  "elementWhenSoil": "Quando o trabalho é lento mas vale a pena (estudo, ofício, cuidado).",
+  "elementWhenBreeze": "Quando seu corpo (ou mente) precisa se mover e respirar.",
+  "bloomTierMastery": "Maestria",
+  "bloomTierStrong": "Forte",
+  "bloomTierGrowing": "Crescendo",
+  "bloomTierSprouting": "Brotando",
+  "bloomTierLocked": "Bloqueado",
+  "habitBloomSubtitle": "{count} dias de sequência · {element}",
+  "habitBloomSubtitleL10n": "{count} dias de sequência · {element}",
+  "medal_id_first_spark": "Primeira Faísca",
+  "medal_sub_first_spark": "Acendeu a chama.",
+  "medal_desc_first_spark": "Termine sua primeira tarefa. Toda corrente começa aqui.",
+  "medal_id_triple_seed": "Tríplice Semente",
+  "medal_sub_triple_seed": "Três no solo.",
+  "medal_desc_triple_seed": "Termine 3 tarefas no total.",
+  "medal_id_dozen_sower": "Semeador de Dúzia",
+  "medal_sub_dozen_sower": "Um campo de doze.",
+  "medal_desc_dozen_sower": "Termine 12 tarefas no total.",
+  "medal_id_quarter_century": "Quarto de Século",
+  "medal_sub_quarter_century": "Uma temporada de sim.",
+  "medal_desc_quarter_century": "Termine 25 tarefas no total.",
+  "medal_id_productivity_titan": "Titã da Produtividade",
+  "medal_sub_productivity_titan": "Consistência se acumula.",
+  "medal_desc_productivity_titan": "Termine 50 tarefas — você construiu momentum real.",
+  "medal_id_century_planter": "Plantador do Século",
+  "medal_sub_century_planter": "Uma floresta sua.",
+  "medal_desc_century_planter": "Termine 100 tarefas. Você está no top 5% dos usuários.",
+  "medal_id_clean_day": "Dia Limpo",
+  "medal_sub_clean_day": "Nem uma erva daninha.",
+  "medal_desc_clean_day": "Termine cada tarefa que planta em um único dia.",
+  "medal_id_triple_perfect": "Tríplice Perfeito",
+  "medal_sub_triple_perfect": "Três execuções impecáveis.",
+  "medal_desc_triple_perfect": "Alcance 3 dias perfeitos.",
+  "medal_id_perfect_week": "Semana Perfeita",
+  "medal_sub_perfect_week": "Sete dias sem quebras.",
+  "medal_desc_perfect_week": "7 dias perfeitos seguidos.",
+  "medal_id_two_week_chain": "Força do Fortnight",
+  "medal_sub_two_week_chain": "Duas semanas em chamas.",
+  "medal_desc_two_week_chain": "Mantenha uma corrente de 14 dias.",
+  "medal_id_iron_chain": "Corrente de Ferro",
+  "medal_sub_iron_chain": "30 elos forjados.",
+  "medal_desc_iron_chain": "Uma corrente de 30 dias. A medalha mais difícil.",
+  "medal_id_quarterly_chain": "Corrente Trimestral",
+  "medal_sub_quarterly_chain": "Uma temporada, sem quebras.",
+  "medal_desc_quarterly_chain": "Uma corrente de 90 dias. Status lendário.",
+  "medal_id_vital_priority": "Faísca Vital",
+  "medal_sub_vital_priority": "Você escolheu as difíceis.",
+  "medal_desc_vital_priority": "Termine 5 tarefas marcadas como Prioridade Vital.",
+  "medal_id_spark_priority": "Domador de Faíscas",
+  "medal_sub_spark_priority": "Vitórias rápidas se acumulam.",
+  "medal_desc_spark_priority": "Termine 5 tarefas marcadas como Prioridade Faísca.",
+  "medal_id_note_taker": "Anotador",
+  "medal_sub_note_taker": "Planos no papel superam planos na cabeça.",
+  "medal_desc_note_taker": "Adicione notas de preparação a 5 tarefas diferentes.",
+  "medal_id_left_behind_rescuer": "Resgatador de Deixados",
+  "medal_sub_left_behind_rescuer": "Nenhuma tarefa deixada para trás.",
+  "medal_desc_left_behind_rescuer": "Re-adicione 3 tarefas perdidas no dia seguinte.",
+  "medal_id_first_sprout": "Primeira Broto",
+  "medal_sub_first_sprout": "Um novo ritual diário.",
+  "medal_desc_first_sprout": "Plante seu primeiro hábito.",
+  "medal_id_trio_sprout": "Tríplice Broto",
+  "medal_sub_trio_sprout": "Um pequeno ecossistema.",
+  "medal_desc_trio_sprout": "Plante 3 hábitos diferentes.",
+  "medal_id_week_of_growth": "Semana de Crescimento",
+  "medal_sub_week_of_growth": "As raízes começam a segurar.",
+  "medal_desc_week_of_growth": "Cuide de um hábito todos os dias por 7 dias.",
+  "medal_id_fortnight_floret": "Flor do Fortnight",
+  "medal_sub_fortnight_floret": "Uma floração completa.",
+  "medal_desc_fortnight_floret": "Uma sequência de hábitos de 14 dias.",
+  "medal_id_rooted_master": "Mestre Enraizado",
+  "medal_sub_rooted_master": "Raízes profundas, força profunda.",
+  "medal_desc_rooted_master": "Uma sequência de hábitos de 30 dias.",
+  "medal_id_half_year_bloom": "Floração Semestral",
+  "medal_sub_half_year_bloom": "O jardim é permanente agora.",
+  "medal_desc_half_year_bloom": "Mantenha um único hábito por 180 dias.",
+  "medal_id_garden_keeper": "Guardião do Jardim",
+  "medal_sub_garden_keeper": "Variedade, juntos.",
+  "medal_desc_garden_keeper": "Cultive 4 hábitos diferentes ao mesmo tempo.",
+  "medal_id_hydration_hero": "Herói da Hidratação",
+  "medal_sub_hydration_hero": "Enche o poço.",
+  "medal_desc_hydration_hero": "Plante um hábito de hidratação (água/bebida).",
+  "medal_id_mindful_mover": "Movimento Consciente",
+  "medal_sub_mindful_mover": "O corpo lembra.",
+  "medal_desc_mindful_mover": "Plante um hábito de movimento (yoga/correr/caminhar).",
+  "medal_id_devoted_keeper": "Guardião Devotado",
+  "medal_sub_devoted_keeper": "Sessenta dias, uma prática.",
+  "medal_desc_devoted_keeper": "Cuide de um único hábito por 60 dias seguidos.",
+  "medal_id_tending_notes": "Notas de Cuidado",
+  "medal_sub_tending_notes": "Refletindo pelo caminho.",
+  "medal_desc_tending_notes": "Adicione notas de cuidado a 3 hábitos.",
+  "medalTierTaglineSprout": "Plante a primeira semente",
+  "medalTierTaglineCommon": "Construir o hábito",
+  "medalTierTaglineRare": "Mostrando momentum real",
+  "medalTierTaglineEpic": "Você é uma força da natureza",
+  "medalTierTaglineLegendary": "Mítico, quase ninguém chega aqui",
+  "guardianHeadlineNoTasks": "O solo de hoje está fresco.\nPlante sua primeira semente\ne veja crescer.",
+  "guardianHeadlineAllDone": "Cada semente que você plantou\nestá em floração.\nDescanse, Guardião — você mereceu.",
+  "guardianHeadlineStreak14": "{count} dias\nde crescimento ininterrupto.\nSua floresta está cheia de vida.",
+  "guardianHeadlineStreak7": "Uma semana completa em floração,\nGuardião.\nMais um dia perfeito\nestende a corrente.",
+  "guardianHeadlineStreak3": "Sua corrente está segurando.\nCuide das sementes\nque esperam abrir.",
+  "guardianHeadlineNoHabitsDone": "Você está cuidando bem das tarefas.\nPlante um broto —\nhábitos fazem florestas crescerem.",
+  "guardianHeadlineSomeDone": "Algumas sementes abriram,\noutras não. Tudo bem.\nAmanhã é outra plantação.",
+  "guardianHeadlineMorning": "Bom dia, Guardião.\nO dia é jovem\ne o solo está pronto.",
+  "guardianHeadlineAfternoon": "Boa tarde, Guardião.\nMetade da luz permanece —\ncontinue cuidando.",
+  "guardianHeadlineEvening": "Boa noite, Guardião.\nUma última verificação\nantes do sol se pôr.",
+  "guardianHeadlineNight": "Queimando o azeite da meia-noite?\nAté Guardiões descansam.\nPlante a semente de amanhã.",
+  "guardianBodyNoTasks": "Seu santuário está silencioso agora. Adicione uma intenção e veja o que muda ao anoitecer.",
+  "guardianBodyStreak14": "{count} dias rodando. A corrente não é sorte — são as pequenas escolhas se acumulando. Continue acumulando.",
+  "guardianBodyStreak3": "Uma corrente de {count} dias é momentum real. Termine as sementes abertas de hoje antes de dizer que terminou.",
+  "guardianBodyNoHabits": "Você plantou {count} tarefas até agora. Adicionar até um único broto de hábito faria o trabalho crescer dia após dia.",
+  "guardianBodyLowCompletion": "Você está terminando {pct}% do que planta. Menos, mais afiadas sementes tendem a crescer mais altas que dez espalhadas.",
+  "guardianBodyDefault": "Seu santuário está vivo. {tasks} tarefas feitas, {sprouts} brotos crescendo — o trabalho está se mostrando.",
+  "guardianInsightWaitingTitle": "Esperando seu primeiro movimento",
+  "guardianInsightWaitingBody": "Adicione uma tarefa ou hábito e começarei a ler os padrões no seu jardim. Quanto mais você plantar, mais tenho para aprender.",
+  "guardianInsightWaitingCta": "Plante sua primeira semente",
+  "guardianInsightChainSuperTitle": "A corrente é seu superpoder",
+  "guardianInsightChainSuperBody": "Você manteve uma corrente de {count} dias. Sequências vencem a motivação sempre — mantenha-a quente, mesmo nos dias lentos.",
+  "guardianInsightChainSuperCta": "Adicione a semente de amanhã",
+  "guardianInsightChainColdTitle": "A corrente está fria — comece uma nova",
+  "guardianInsightChainColdBody": "Você plantou antes, o que significa que pode plantar de novo. Uma pequena tarefa feita hoje é uma corrente mais longa amanhã.",
+  "guardianInsightChainColdCta": "Plante uma semente",
+  "guardianInsightLessIsMoreTitle": "Menos é mais esta semana",
+  "guardianInsightLessIsMoreBody": "Você termina cerca de {pct}% do que planta. Tente 3 intenções afiadas em vez de 5 soltas — qualidade se acumula.",
+  "guardianInsightLessIsMoreCta": "Afie o dia",
+  "guardianInsightNextMedalTitle": "Próxima medalha: {title}",
+  "guardianInsightNextMedalBody": "Você está em {value} de {target} {unit}. Alguns dias mais honestos e é sua.",
+  "guardianInsightNextMedalCta": "Mostrar medalha",
+  "guardianInsightSteadyTitle": "Você está em uma temporada estável",
+  "guardianInsightSteadyBody": "Nenhuma medalha à vista — tudo bem. Cuide do que tem. A próxima floração está a caminho.",
+  "guardianInsightSteadyCta": "Ver progresso",
+  "notificationTaskReminderBody": "{label}",
+  "notificationFinalCallBodyOne": "1 tarefa na sua corrente. A meia-noite se aproxima.",
+  "notificationFinalCallBodyMany": "{count} tarefas na sua corrente. A meia-noite se aproxima.",
+  "notificationEveningBodyOne": "Você ainda tem 1 tarefa aberta hoje.",
+  "notificationEveningBodyMany": "Você ainda tem {count} tarefas abertas hoje.",
+  "notificationTickerTaskReminder": "Lembrete de tarefa",
+  "notificationTickerTaskAlarm": "Alarme de tarefa",
+  "@bootstrapConfigErrorBody": {
+    "placeholders": {
+      "detail": {
+        "type": "String"
+      }
+    }
+  },
+  "@habitsBestStreak": {
+    "placeholders": {
+      "days": {
+        "type": "String"
+      }
+    }
+  },
+  "@habitsGrowing": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "@habitsStreakDays": {
+    "placeholders": {
+      "days": {
+        "type": "String"
+      }
+    }
+  },
+  "@historyCompletedPercent": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "@historyDoneCount": {
+    "placeholders": {
+      "done": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "perfect": {
+        "type": "String"
+      }
+    }
+  },
+  "@historyLeftBehindCount": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "@historyThisWeek": {
+    "placeholders": {
+      "days": {
+        "type": "String"
+      }
+    }
+  },
+  "@insightsHistoryWindowTitle": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "@leftBehindBanner": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "@leftBehindClearAllBody": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "@leftBehindReAddedSnack": {
+    "placeholders": {
+      "task": {
+        "type": "String"
+      }
+    }
+  },
+  "@leftBehindRemovedSnack": {
+    "placeholders": {
+      "task": {
+        "type": "String"
+      }
+    }
+  },
+  "@leftBehindWaitingMany": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "@leftBehindYesterdayDate": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "@manageProBillingFooter": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "@manageProRenewsOn": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "@medalSheetEarned": {
+    "placeholders": {
+      "tier": {
+        "type": "String"
+      }
+    }
+  },
+  "@medalSheetHint": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "@medalsProgressLabel": {
+    "placeholders": {
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@medalsTrophyEarned": {
+    "placeholders": {
+      "earned": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@medalsTrophyMany": {
+    "placeholders": {
+      "earned": {
+        "type": "String"
+      }
+    }
+  },
+  "@notificationFinalCallBody": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@paywallStartCta": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "@paywallStartCtaMonthly": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "@progressBrowseMonth": {
+    "placeholders": {
+      "month": {
+        "type": "String"
+      }
+    }
+  },
+  "@progressMedalCount": {
+    "placeholders": {
+      "earned": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@progressVitalitySeeds": {
+    "placeholders": {
+      "done": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@referralFriendsJoinedMany": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@referralFriendsJoinedOne": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@referralRemainingToUnlock": {
+    "placeholders": {
+      "remaining": {
+        "type": "int"
+      }
+    }
+  },
+  "@referralRewardsEarnedMany": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@referralRewardsEarnedOne": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@referralYouSubtitle": {
+    "placeholders": {
+      "progress": {
+        "type": "int"
+      },
+      "milestone": {
+        "type": "int"
+      }
+    }
+  },
+  "@shareCardMedalText": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      },
+      "subtitle": {
+        "type": "String"
+      }
+    }
+  },
+  "@shareCardProgressText": {
+    "placeholders": {
+      "year": {
+        "type": "String"
+      }
+    }
+  },
+  "@streakAtRisk": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "@streakAtRiskLastCall": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "@tasksProgressCount": {
+    "placeholders": {
+      "done": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@todayHabitsCount": {
+    "placeholders": {
+      "done": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@youProMemberSince": {
+    "placeholders": {
+      "month": {
+        "type": "String"
+      }
+    }
+  },
+  "@notificationTaskReminderBody": {
+    "placeholders": {
+      "label": {
+        "type": "String"
+      }
+    }
+  },
+  "@notificationFinalCallBodyOne": {
+    "placeholders": {}
+  },
+  "@notificationFinalCallBodyMany": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@notificationEveningBodyOne": {
+    "placeholders": {}
+  },
+  "@notificationEveningBodyMany": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@notificationTickerTaskReminder": {
+    "placeholders": {}
+  },
+  "@notificationTickerTaskAlarm": {
+    "placeholders": {}
+  },
+  "@habitBloomSubtitleL10n": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "element": {
+        "type": "String"
+      }
+    }
+  },
+  "@guardianHeadlineStreak14": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@guardianBodyStreak14": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@guardianBodyStreak3": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@guardianBodyNoHabits": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@guardianBodyLowCompletion": {
+    "placeholders": {
+      "pct": {
+        "type": "int"
+      }
+    }
+  },
+  "@guardianBodyDefault": {
+    "placeholders": {
+      "tasks": {
+        "type": "int"
+      },
+      "sprouts": {
+        "type": "int"
+      }
+    }
+  },
+  "@guardianInsightChainSuperBody": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@guardianInsightLessIsMoreBody": {
+    "placeholders": {
+      "pct": {
+        "type": "int"
+      }
+    }
+  },
+  "@guardianInsightNextMedalTitle": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "@guardianInsightNextMedalBody": {
+    "placeholders": {
+      "value": {
+        "type": "int"
+      },
+      "target": {
+        "type": "int"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "@shareAppText": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "@shareAppReferralText": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "@shareCardShareTextProgress": {
+    "placeholders": {
+      "year": {
+        "type": "String"
+      }
+    }
+  },
+  "@shareCardShareTextMedal": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      },
+      "subtitle": {
+        "type": "String"
+      }
+    }
+  },
+  "@insightsReceiptDate": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "@habitBloomSubtitle": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "element": {
+        "type": "String"
+      }
+    }
+  },
+  "@shareCardHeadlineStreak": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "@shareCardHeadlineMedals": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  }
 }

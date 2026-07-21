@@ -28,6 +28,8 @@ class _AuthScreenState extends ConsumerState<AuthScreen>
   bool _loading = false;
   String? _error;
   String? _info;
+  int _attempts = 0;
+  DateTime? _lockedUntil;
 
   bool get _isSignUp => _tabController.index == 1;
 
@@ -73,7 +75,10 @@ class _AuthScreenState extends ConsumerState<AuthScreen>
     final password = _passwordController.text;
 
     if (email.isEmpty) return l10n.authEnterEmail;
-    if (!email.contains('@')) return l10n.authEnterValidEmail;
+    final emailRegex = RegExp(
+      r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$',
+    );
+    if (!emailRegex.hasMatch(email)) return l10n.authEnterValidEmail;
     if (password.length < 6) {
       return l10n.authPasswordTooShort;
     }
@@ -82,6 +87,14 @@ class _AuthScreenState extends ConsumerState<AuthScreen>
 
   Future<void> _submitEmail() async {
     final l10n = AppLocalizations.of(context);
+
+    // Rate limiting: lock after 5 failed attempts
+    if (_lockedUntil != null && DateTime.now().isBefore(_lockedUntil!)) {
+      final seconds = _lockedUntil!.difference(DateTime.now()).inSeconds + 1;
+      setState(() => _error = 'Too many attempts. Try again in ${seconds}s.');
+      return;
+    }
+
     final validation = _validateInputs(l10n);
     if (validation != null) {
       setState(() {
@@ -130,8 +143,14 @@ class _AuthScreenState extends ConsumerState<AuthScreen>
       );
 
       if (mounted) context.go('/my-day');
+      _attempts = 0; // Reset on success
     } on AuthException catch (e) {
       setState(() => _error = friendlyAuthError(e.message));
+      _attempts++;
+      if (_attempts >= 5) {
+        _lockedUntil = DateTime.now().add(const Duration(seconds: 30));
+        _attempts = 0;
+      }
     } catch (e) {
       setState(() => _error = l10n.authSomethingWentWrong);
     } finally {
@@ -293,7 +312,7 @@ class _AuthScreenState extends ConsumerState<AuthScreen>
                 if (_isSignUp) ...[
                   const SizedBox(height: 16),
                   BlueprintLabel(
-                    'Referral code (optional)',
+                    l10n.authReferralCodeLabel,
                     color: AppColors.onSurfaceVariant,
                   ),
                   const SizedBox(height: 6),
@@ -301,8 +320,8 @@ class _AuthScreenState extends ConsumerState<AuthScreen>
                     controller: _referralController,
                     textCapitalization: TextCapitalization.characters,
                     textInputAction: TextInputAction.done,
-                    decoration: const InputDecoration(
-                      hintText: 'Friend\'s code',
+                    decoration: InputDecoration(
+                      hintText: l10n.authReferralCodeHint,
                     ),
                   ),
                 ],

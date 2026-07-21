@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../core/haptics.dart';
+import '../../../core/l10n/app_localizations.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../insights/domain/medals.dart';
 import '../../insights/presentation/widgets/medal_badge.dart';
@@ -84,6 +85,7 @@ class _CelebrationSheetState extends ConsumerState<_CelebrationSheet>
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final m = widget.medal;
     final theme = Theme.of(context);
     return SafeArea(
@@ -163,7 +165,7 @@ class _CelebrationSheetState extends ConsumerState<_CelebrationSheet>
             ),
             const SizedBox(height: 12),
             Text(
-              'MEDAL UNLOCKED',
+              l10n.medalUnlocked,
               style: theme.textTheme.labelSmall?.copyWith(
                 color: m.tier.accent,
                 fontWeight: FontWeight.w800,
@@ -206,7 +208,7 @@ class _CelebrationSheetState extends ConsumerState<_CelebrationSheet>
               child: FilledButton.icon(
                 onPressed: () {
                   Navigator.of(context).pop();
-                  context.push('/share-card?highlight=${m.id}');
+                  context.push('/medal-share?id=${m.id}');
                 },
                 style: FilledButton.styleFrom(
                   backgroundColor: m.tier.accent,
@@ -215,9 +217,9 @@ class _CelebrationSheetState extends ConsumerState<_CelebrationSheet>
                   ),
                 ),
                 icon: const Icon(Icons.ios_share_rounded, color: Colors.white),
-                label: const Text(
-                  'Share on your socials',
-                  style: TextStyle(
+                label: Text(
+                  l10n.medalShareOnSocials,
+                  style: const TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.w800,
                     fontSize: 15,
@@ -230,7 +232,7 @@ class _CelebrationSheetState extends ConsumerState<_CelebrationSheet>
             TextButton(
               onPressed: () => Navigator.of(context).pop(),
               child: Text(
-                'Maybe later',
+                l10n.medalShareLater,
                 style: theme.textTheme.bodyMedium?.copyWith(
                   color: AppColors.onSurfaceVariant,
                   fontWeight: FontWeight.w600,

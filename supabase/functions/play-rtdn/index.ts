@@ -9,10 +9,14 @@
 // PLAY_PUBSUB_TOKEN secret (a shared query-string token) to reject spoofed calls.
 //
 // Required secrets (supabase secrets set ...):
-//   SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, PLAY_PUBSUB_TOKEN
-//   GOOGLE_SERVICE_ACCOUNT_JSON  (to verify purchases via the Play Developer API)
+//   SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, PLAY_PUBSUB_TOKEN (required)
+//   GOOGLE_SERVICE_ACCOUNT_JSON, PLAY_PACKAGE_NAME (optional, default package)
 
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+import { verifyPlaySubscription } from "../_shared/play_api.ts";
+
+const PACKAGE_NAME =
+  Deno.env.get("PLAY_PACKAGE_NAME") ?? "com.leanspace.leanspace";
 
 // Play subscription notification types we care about.
 // https://developer.android.com/google/play/billing/rtdn-reference
@@ -28,10 +32,14 @@ interface DeveloperNotification {
 }
 
 Deno.serve(async (req) => {
-  // 1. Reject spoofed callers using a shared token in the query string.
-  const url = new URL(req.url);
+  // 1. Reject spoofed callers — token is mandatory.
   const expected = Deno.env.get("PLAY_PUBSUB_TOKEN");
-  if (expected && url.searchParams.get("token") !== expected) {
+  if (!expected) {
+    console.error("PLAY_PUBSUB_TOKEN not configured");
+    return new Response("misconfigured", { status: 500 });
+  }
+  const token = req.headers.get("X-PubSub-Token");
+  if (!token || token !== expected) {
     return new Response("forbidden", { status: 403 });
   }
 
@@ -54,8 +62,7 @@ Deno.serve(async (req) => {
     Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
   );
 
-  // 2. Find which user this purchase token belongs to. The client wrote the
-  //    token via record_pro_purchase at checkout time.
+  // 2. Find which user this purchase token belongs to.
   const { data: row } = await supabase
     .from("subscriptions")
     .select("user_id, product_id")
@@ -63,25 +70,37 @@ Deno.serve(async (req) => {
     .maybeSingle();
 
   if (!row) {
-    // Token not seen yet (race with client write); ack so Pub/Sub retries later.
+    // Token not seen yet (race with client verify); ack so Pub/Sub retries later.
     return new Response("ok", { status: 200 });
   }
 
-  // 3. TODO (production hardening): call the Google Play Developer API
-  //    (purchases.subscriptionsv2.get) with GOOGLE_SERVICE_ACCOUNT_JSON to read
-  //    the authoritative expiry time instead of trusting the notification type.
   const isActive = ACTIVE_TYPES.has(sub.notificationType);
   const isInactive = INACTIVE_TYPES.has(sub.notificationType);
   if (!isActive && !isInactive) return new Response("ok", { status: 200 });
 
-  const status = isActive ? "active" : "expired";
-  // Without the Play API call we approximate the period end.
-  const periodEnd = isActive
-    ? new Date(
-        Date.now() +
-          (sub.subscriptionId.includes("yearly") ? 365 : 30) * 86_400_000,
-      ).toISOString()
-    : new Date().toISOString();
+  // 3. Authoritative expiry from Google Play Developer API.
+  let status = isActive ? "active" : "expired";
+  let periodEnd = new Date().toISOString();
+
+  try {
+    const playInfo = await verifyPlaySubscription(
+      PACKAGE_NAME,
+      sub.purchaseToken,
+    );
+    if (playInfo) {
+      periodEnd = playInfo.expiryTime;
+      status = playInfo.isActive ? "active" : "expired";
+    } else if (isInactive) {
+      status = "expired";
+      periodEnd = new Date().toISOString();
+    }
+  } catch (e) {
+    console.error("Play API verification failed", e);
+    if (!isActive && !isInactive) return new Response("error", { status: 500 });
+    // Fall back to notification type when API fails — use grace status
+    // instead of guessing synthetic expiry dates
+    status = isActive ? 'grace' : 'expired';
+  }
 
   const { error } = await supabase.rpc("apply_subscription_state", {
     p_user_id: row.user_id,

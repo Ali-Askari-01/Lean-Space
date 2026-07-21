@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:intl/intl.dart';
 
 import '../../../../core/local_date.dart';
 import '../../../../core/theme/app_colors.dart';
@@ -206,21 +207,7 @@ class _ProgressCalendarCardState extends ConsumerState<ProgressCalendarCard> {
   }
 
   String _monthYear(DateTime today) {
-    const months = [
-      'JANUARY',
-      'FEBRUARY',
-      'MARCH',
-      'APRIL',
-      'MAY',
-      'JUNE',
-      'JULY',
-      'AUGUST',
-      'SEPTEMBER',
-      'OCTOBER',
-      'NOVEMBER',
-      'DECEMBER',
-    ];
-    return '${months[today.month - 1]} ${today.year}';
+    return DateFormat('MMMM yyyy').format(today).toUpperCase();
   }
 }
 

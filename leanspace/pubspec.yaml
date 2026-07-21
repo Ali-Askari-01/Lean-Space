@@ -58,6 +58,8 @@ dependencies:
 
   package_info_plus: 10.0.0
 
+  sentry_flutter: ^8.0.0
+
 
 
 dev_dependencies:
@@ -69,6 +71,7 @@ dev_dependencies:
   flutter_lints: ^6.0.0
 
   flutter_launcher_icons: ^0.14.3
+  flutter_native_splash: ^2.4.4
 
 
 
@@ -78,11 +81,21 @@ flutter_launcher_icons:
 
   ios: false
 
-  image_path: assets/app_icon.png
+  image_path: assets/app_logo.png
 
   adaptive_icon_background: "#F9FAF4"
 
-  adaptive_icon_foreground: assets/app_icon.png
+  adaptive_icon_foreground: assets/app_logo.png
+
+
+flutter_native_splash:
+  color: "#F9FAF4"
+  image: assets/app_logo.png
+  android: true
+  ios: false
+  android_12:
+    color: "#F9FAF4"
+    image: assets/app_logo.png
 
 
 
@@ -94,6 +107,8 @@ flutter:
   assets:
 
     - .env
+
+    - assets/app_logo.png
 
     - assets/app_icon.png
 

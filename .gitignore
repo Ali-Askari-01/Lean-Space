@@ -28,3 +28,10 @@ supabase/.temp/
 
 # Local notes (test account passwords, etc.)
 notes.local.md
+
+# Build secrets
+env.json
+*.jks
+*.keystore
+**/keystore.properties
+google-services.json

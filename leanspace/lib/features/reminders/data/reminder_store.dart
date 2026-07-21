@@ -34,17 +34,20 @@ class ReminderStore {
     if (raw == null) return {};
     try {
       final map = jsonDecode(raw) as Map<String, dynamic>;
-      return map.map((taskId, value) {
-        final entry = value as Map<String, dynamic>;
-        return MapEntry(
-          taskId,
-          TaskReminder(
-            taskId: taskId,
-            at: DateTime.parse(entry['at'] as String),
-            label: entry['label'] as String? ?? 'Task',
-          ),
-        );
-      });
+      final result = <String, TaskReminder>{};
+      for (final entry in map.entries) {
+        try {
+          final value = entry.value as Map<String, dynamic>;
+          result[entry.key] = TaskReminder(
+            taskId: entry.key,
+            at: DateTime.parse(value['at'] as String),
+            label: value['label'] as String? ?? 'Task',
+          );
+        } catch (_) {
+          // Skip malformed entry, keep the rest
+        }
+      }
+      return result;
     } catch (_) {
       return {};
     }

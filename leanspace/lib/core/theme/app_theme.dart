@@ -7,10 +7,14 @@ abstract final class AppTheme {
   static ThemeData get light {
     final base = ThemeData(
       useMaterial3: true,
-      brightness: Brightness.light,
+      brightness: AppColors.surface.computeLuminance() > 0.3
+          ? Brightness.light
+          : Brightness.dark,
       scaffoldBackgroundColor: AppColors.surface,
       colorScheme: ColorScheme(
-        brightness: Brightness.light,
+        brightness: AppColors.surface.computeLuminance() > 0.3
+            ? Brightness.light
+            : Brightness.dark,
         primary: AppColors.primary,
         onPrimary: AppColors.onPrimary,
         primaryContainer: AppColors.primaryContainer,
@@ -106,11 +110,11 @@ abstract final class AppTheme {
         ),
       ),
       cardTheme: CardThemeData(
-        color: AppColors.surfaceContainerLow,
+        color: AppColors.elevatedCardSurface,
         elevation: 0,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16),
-          side: BorderSide(color: AppColors.outlineVariant, width: 0.5),
+          side: BorderSide(color: AppColors.cardBorder, width: 0.8),
         ),
       ),
       inputDecorationTheme: InputDecorationTheme(
@@ -173,7 +177,7 @@ abstract final class AppTheme {
         ),
       ),
       navigationBarTheme: NavigationBarThemeData(
-        backgroundColor: AppColors.surface,
+        backgroundColor: AppColors.navBackground,
         indicatorColor: Colors.transparent,
         surfaceTintColor: Colors.transparent,
         height: 76,
@@ -185,7 +189,7 @@ abstract final class AppTheme {
                 : FontWeight.w500,
             letterSpacing: 0.5,
             color: states.contains(WidgetState.selected)
-                ? AppColors.primary
+                ? AppColors.onPrimary
                 : AppColors.onSurfaceVariant,
           ),
         ),
@@ -193,13 +197,13 @@ abstract final class AppTheme {
           (states) => IconThemeData(
             size: 24,
             color: states.contains(WidgetState.selected)
-                ? AppColors.primary
+                ? AppColors.onPrimary
                 : AppColors.onSurfaceVariant,
           ),
         ),
       ),
       dividerTheme: DividerThemeData(
-        color: AppColors.outlineVariant,
+        color: AppColors.dividerColor,
         space: 1,
         thickness: 0.5,
       ),
@@ -219,7 +223,7 @@ abstract final class AppTheme {
           borderRadius: BorderRadius.vertical(top: Radius.circular(28)),
         ),
         showDragHandle: true,
-        dragHandleColor: AppColors.outlineVariant,
+        dragHandleColor: AppColors.bottomSheetHandle,
       ),
       dialogTheme: DialogThemeData(
         backgroundColor: AppColors.surface,

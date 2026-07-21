@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../core/l10n/app_localizations.dart';
 import '../../../core/theme/app_colors.dart';
 import '../domain/reminder_prefs.dart';
 import '../providers/reminder_providers.dart';
@@ -59,6 +60,7 @@ class _ReminderSettingsSheetState extends ConsumerState<ReminderSettingsSheet> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final theme = Theme.of(context);
     final bottom = MediaQuery.viewInsetsOf(context).bottom;
 
@@ -80,14 +82,14 @@ class _ReminderSettingsSheetState extends ConsumerState<ReminderSettingsSheet> {
           ),
           const SizedBox(height: 20),
           Text(
-            'Reminders',
+            l10n.reminderTitle,
             style: theme.textTheme.titleLarge?.copyWith(
               fontWeight: FontWeight.w700,
             ),
           ),
           const SizedBox(height: 8),
           Text(
-            'Final Call pings you before midnight if tasks are still open.',
+            l10n.reminderBody,
             style: theme.textTheme.bodyMedium?.copyWith(
               color: AppColors.textMuted,
             ),
@@ -95,7 +97,7 @@ class _ReminderSettingsSheetState extends ConsumerState<ReminderSettingsSheet> {
           const SizedBox(height: 20),
           SwitchListTile(
             contentPadding: EdgeInsets.zero,
-            title: const Text('Final Call'),
+            title: Text(l10n.reminderFinalCall),
             subtitle: Text(
               _formatTime(_prefs.finalCallHour, _prefs.finalCallMinute),
             ),
@@ -118,13 +120,13 @@ class _ReminderSettingsSheetState extends ConsumerState<ReminderSettingsSheet> {
                     ),
                   ),
                 ),
-                child: const Text('Change time'),
+                child: Text(l10n.reminderChangeTime),
               ),
             ),
           const Divider(),
           SwitchListTile(
             contentPadding: EdgeInsets.zero,
-            title: const Text('Evening nudge'),
+            title: Text(l10n.reminderEveningNudge),
             subtitle: Text(
               _formatTime(_prefs.eveningNudgeHour, _prefs.eveningNudgeMinute),
             ),
@@ -147,13 +149,13 @@ class _ReminderSettingsSheetState extends ConsumerState<ReminderSettingsSheet> {
                     ),
                   ),
                 ),
-                child: const Text('Change time'),
+                child: Text(l10n.reminderChangeTime),
               ),
             ),
           const SizedBox(height: 20),
           FilledButton(
             onPressed: _save,
-            child: const Text('Save reminders'),
+            child: Text(l10n.reminderSave),
           ),
         ],
       ),
@@ -161,9 +163,8 @@ class _ReminderSettingsSheetState extends ConsumerState<ReminderSettingsSheet> {
   }
 
   String _formatTime(int hour, int minute) {
-    final period = hour >= 12 ? 'PM' : 'AM';
-    final h = hour % 12 == 0 ? 12 : hour % 12;
-    final m = minute.toString().padLeft(2, '0');
-    return '$h:$m $period';
+    final material = MaterialLocalizations.of(context);
+    final time = TimeOfDay(hour: hour, minute: minute);
+    return material.formatTimeOfDay(time);
   }
 }

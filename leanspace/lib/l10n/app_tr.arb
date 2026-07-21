@@ -1,223 +1,1081 @@
-﻿﻿﻿﻿﻿{
+{
   "@@locale": "tr",
-  "appTitle": "Bloom Tracker",
+  "appTitle": "Daily Stitch",
   "tabToday": "Bugün",
   "tabProgress": "İlerleme",
   "tabYou": "Sen",
-  "navMyDay": "Bugünüm",
+
+  "navMyDay": "Günüm",
   "navSettings": "Ayarlar",
+  "navHelp": "Yardım & Destek",
   "navHistory": "Son 7 Gün",
-  "navLeftBehind": "Geri Kalan",
+  "navLeftBehind": "Geri Kalanlar",
+  "navInsights": "İlerlemen",
   "navMedals": "Madalyalarım",
-  "navPaywall": "Bloom Tracker Pro",
-  "greetingMorning": "Günaydın, güneş!",
-  "greetingAfternoon": "İyi günler, dostum",
-  "greetingEvening": "İyi akşamlar, şampiyon",
-  "greetingNight": "İyi dinleniyor musun, koruyucu?",
-  "todayTasksCount": "Bugün · {total} görevden {done} tanesi",
+  "navManagePro": "Pro aboneliğini yönet",
+  "navPaywall": "Daily Stitch Pro",
+
+  "greetingLateNight": "Gece yarısında çalışıyor musun",
+  "greetingMorning": "Günaydın, Günışığı!",
+  "greetingAfternoon": "İyi günler, Arkadaş",
+  "greetingEvening": "İyi akşamlar, Şampiyon",
+  "greetingNight": "İyi dinleniyorsun, Koruyucu?",
+
+  "todayTasksCount": "Bugün · {done}/{total} görev",
+  "@todayTasksCount": {
+    "placeholders": {
+      "done": { "type": "String" },
+      "total": { "type": "String" }
+    }
+  },
+  "todayHabitsCount": "{done}/{total} alışkanlık",
+  "@todayHabitsCount": {
+    "placeholders": {
+      "done": { "type": "String" },
+      "total": { "type": "String" }
+    }
+  },
+  "todayChainGrows": "ZİNCİR SEN BİTİRİNCE BÜYÜR",
+  "todayChainComplete": "ZİNCİR TAMAMLANDI · BAHÇEYİ YARIN SÜSLE",
+  "taskCapInfo": "Neden 5 görev sınırlaması var?",
+  "taskCapDiscipline": "ÖNCE DİSİPLİN TASARIMI",
+  "taskCapTitle": "Gününü kasıtlı olarak 5 görevle sınırlıyoruz.",
+  "taskCapBody": "Kısa zincirler uzun olanlardan daha iyidir. 5'ten 3'ünü bitirip kazanma hissini yaşamak, 10'dan 8'ini bırakıp kaybetme hissini yaşamaktan daha olasıdır.",
+  "taskCapBulletDone": "Tamamlanan görevler zincirine eklenir",
+  "taskCapBulletDoneBody": "5'ini de tamamladığın bir gün, serini bir gün uzatır.",
+  "taskCapBulletMissed": "Kaçırılan görevler Geri Kalanlar'a gider",
+  "taskCapBulletMissedBody": "Gece yarısında tamamlanmamış görevler Geri Kalanlar'da belirir. Sadece hâlâ önemli olanları tekrar ekle.",
+  "taskCapBulletFreeze": "Seri dondurması bir kaçırmayı affeder",
+  "taskCapBulletFreezeBody": "Pro sana ayda 2 seri dondurması verir — kaçırılan bir günü kapsar, böylece zincirin hayatta kalır.",
+
   "tasksHeader": "Görevler",
-  "tasksAddSeed": "Görev tohumu ekle",
+  "tasksProgressCount": "{done}/{total}",
+  "@tasksProgressCount": {
+    "placeholders": {
+      "done": { "type": "String" },
+      "total": { "type": "String" }
+    }
+  },
+  "tasksAddSeed": "Bir görev tohumu ekle",
+  "tasksCapReached": "5/5 yer kullanıldı — yeni bir tohum ekmek için birini tamamla.",
+  "tasksEmptyCta": "İlk tohumunu ek — bugün ne önemli?",
+
   "habitsHeader": "Alışkanlıklar",
-  "habitsPlantFirst": "Alışkanlık ek",
+  "habitsGrowing": "{count} büyüyor",
+  "@habitsGrowing": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "habitsBestStreak": "En iyi {days} gün",
+  "@habitsBestStreak": {
+    "placeholders": {
+      "days": { "type": "String" }
+    }
+  },
+  "habitsPlantNew": "Yeni bir alışkanlık filizi ek",
+  "habitsPlantFirst": "Bir alışkanlık eke",
+  "habitsLocked": "Pro alışkanlık slotu — daha fazla filiz ekmek için aç",
+  "habitsSlotsFull": "Tüm alışkanlık slotları şu anda dolu.",
+  "habitsStreakDays": "{days}g",
+  "@habitsStreakDays": {
+    "placeholders": {
+      "days": { "type": "String" }
+    }
+  },
   "habitsCadence": "GÜNLÜK",
-  "leftBehindTitle": "Geri Kalan",
-  "leftBehindDismiss": "Yoksay",
+
+  "leftBehindBanner": "{count} kaçırıldı — hâlâ Geri Kalanlar'da",
+  "@leftBehindBanner": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "leftBehindTap": "Tekrar eklemek için dokun veya bırak",
+  "leftBehindDismiss": "Kapat",
+  "leftBehindTitle": "Geri Kalanlar",
+  "leftBehindEmpty": "Hiçbir şey geride kalmadı",
+  "leftBehindEmptyBody": "Kaçırılmış görev yok. Ektiğin her tohum bakılıyor. Bahçe temiz.",
   "leftBehindClearAll": "Tümünü temizle",
-  "leftBehindReAddToday": "Bugün yeniden ekle",
-  "leftBehindLetGo": "Bırak",
+  "leftBehindClearAllConfirm": "Tüm geri kalanlar temizlensin mi?",
+  "leftBehindClearAllBody": "Bu, {count} kaçırılmış görevi kalıcı olarak silecek. Bunu geri alamazsın.",
+  "@leftBehindClearAllBody": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "leftBehindReAdd": "Bugüne tekrar ekle",
+  "leftBehindReAddButton": "Tekrar ekle",
+  "leftBehindAddedToToday": "Bugüne eklendi",
+  "leftBehindLetGo": "Bırak gitsin",
+  "leftBehindHeader": "GERİ KALANLAR",
+  "leftBehindMissedTasks": "KAÇIRILAN GÖREVLER",
+  "leftBehindWaitingOne": "1 görev seni bekliyor.",
+  "leftBehindWaitingMany": "{count} görev seni bekliyor.",
+  "@leftBehindWaitingMany": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "leftBehindBody": "Bir görevi bugüne geri eklemek için dokun veya bırak. Tekrar eklemek serini canlı tutar.",
+  "leftBehindReAddedSnack": "\"{task}\" günümüze geri döndü.",
+  "@leftBehindReAddedSnack": {
+    "placeholders": {
+      "task": { "type": "String" }
+    }
+  },
+  "leftBehindRemovedSnack": "\"{task}\" kaldırıldı",
+  "@leftBehindRemovedSnack": {
+    "placeholders": {
+      "task": { "type": "String" }
+    }
+  },
+  "leftBehindClearedSnack": "Geri kalanlar temizlendi",
+  "leftBehindYesterdayDate": "Dün · {date}",
+  "@leftBehindYesterdayDate": {
+    "placeholders": {
+      "date": { "type": "String" }
+    }
+  },
+
+  "streakAtRisk": "Bugün için {count} görev kaldı",
+  "@streakAtRisk": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "streakAtRiskLastCall": "Son çağrı — {count} görev hâlâ açık",
+  "@streakAtRiskLastCall": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "streakAtRiskBody": "Gece yarısına yakın. Zincir bunlara bağlı.",
+  "streakAtRiskBodyLow": "Hâlâ zamanın var. Temiz bir gün serini uzatır.",
+  "streakAtRiskFreeze": "Dün kaçırıldı — seri dondurması kullanılsın mı?",
+  "streakFreezeUse": "Dondurmayı kullan",
+  "streakFreezeUseForYesterday": "Dünkü için aylık seri dondurmasını kullan",
+  "streakFreezeAppliedYesterday": "Dün için seri dondurması uygulandı.",
+
+  "chainBrokenTitle": "Zincir kırıldı. Sorun değil.",
+  "chainBrokenBody": "Her uzun zincir bir gün biter. Önemli olan bugünkü ektiklerin. Mükemmel bir gün bir sonrakini başlatır.",
+  "chainBrokenCta": "Bugüne dön",
+  "chainBrokenPlantFirst": "Bugünün ilk tohumunu ek",
+  "chainBrokenCheck": "Önce Geri Kalanlar'a bak",
+  "chainBrokenBestChain": "en iyi zincir",
+  "chainBrokenTasksDone": "tamamlanan görev",
+  "chainBrokenSprouts": "filiz",
+  "chainRecoveryFreshStart": "Yeni bir başlangıç",
+
   "medalsTitle": "Madalyalarım",
   "medalsTrophyRoom": "Kupa Odası",
   "medalsAllMedals": "Tüm Madalyalar",
-  "medalsShareCta": "Paylaşılabilir kart oluştur",
+  "medalsTrophyEarned": "{total} madalyadan {earned} tanesi kazanıldı",
+  "@medalsTrophyEarned": {
+    "placeholders": {
+      "earned": { "type": "String" },
+      "total": { "type": "String" }
+    }
+  },
+  "medalsTrophyEmpty": "İlk rozetin bir görev uzağında",
+  "medalsTrophyFirst": "İlk madalyanı kazandın — devam et",
+  "medalsTrophyMany": "Kupa odanda {earned} madalya var",
+  "@medalsTrophyMany": {
+    "placeholders": {
+      "earned": { "type": "String" }
+    }
+  },
+  "medalsProgressLabel": "{total} madalyanın ilerlemesi",
+  "@medalsProgressLabel": {
+    "placeholders": {
+      "total": { "type": "String" }
+    }
+  },
+  "medalsShareCta": "Paylaşılabilir bir kart oluştur",
+  "medalsEmptyTitle": "Bu kategoride henüz bir şey yok",
+  "medalsEmptyBody": "Kupa odanı başlatmak için bir görevi tamamla veya bir filizi sula.",
+
+  "medalSheetLocked": "PRO MADALYASI",
+  "medalSheetEarned": "KAZANILDI · {tier}",
+  "@medalSheetEarned": {
+    "placeholders": {
+      "tier": { "type": "String" }
+    }
+  },
   "medalSheetUnlock": "Pro ile aç",
-  "medalSheetLocked": "PRO MADALYA",
-  "medalShareOnSocials": "Sosyal medyada paylaş",
+  "medalSheetProgress": "İlerleme",
+  "medalSheetHint": "Açmak için sadece {n} {unit} daha.",
+  "@medalSheetHint": {
+    "placeholders": {
+      "n": { "type": "String" },
+      "unit": { "type": "String" }
+    }
+  },
+  "medalSheetAlmost": "Açmak için bir adım daha.",
+  "medalCategory": "Kategori",
+  "medalShareOnSocials": "Sosyal medyanda paylaş",
   "medalShareLater": "Belki sonra",
   "medalUnlocked": "MADALYA AÇILDI",
+  "medalProgressTitle": "İlerleme",
+
   "historyTitle": "Son 7 Gün",
+  "historyFullTitle": "Tam geçmiş",
+  "historyLoadError": "Geçmiş yüklenemedi.",
+  "historyFullCalendar": "Takvim",
+  "historyCompletedPercent": "%{percent} tamamlandı",
+  "@historyCompletedPercent": {
+    "placeholders": {
+      "percent": { "type": "String" }
+    }
+  },
+  "historyThisWeek": "SON {days} GÜN",
+  "@historyThisWeek": {
+    "placeholders": {
+      "days": { "type": "String" }
+    }
+  },
   "historyDayByDay": "GÜN GÜN",
-  "historyPerfect": "MÜKEMMEL",
-  "historyToday": "Bugün",
+  "historyEmpty": "Haftanın nasıl geçtiğini görmek için biraz tohum ek.",
+  "historyDoneCount": "{total} görevden {done} tanesini tamamladın. {perfect} mükemmel gün.",
+  "@historyDoneCount": {
+    "placeholders": {
+      "done": { "type": "String" },
+      "total": { "type": "String" },
+      "perfect": { "type": "String" }
+    }
+  },
   "historyUpsellTitle": "Tam geçmişini gör",
-  "historyUpsellBody": "Pro 30 günlük geçmişi açar.",
-  "progressVitality": "BUGÜNÜN ENERJİSİ",
-  "progressChainPill": "{days}g zincir",
+  "historyUpsellBody": "Pro 30 günlük geçmişi açar. Ücretsiz olan 7 gün gösterir.",
+  "historyPerfect": "MÜKEMMEL",
+  "historyFrozen": "DONMUŞ",
+  "historyToday": "Bugün",
+  "historyEmptyDay": "O gün hiçbir tohum ekilmedi",
+  "historyLeftBehindCount": "{count} geride kaldı",
+  "@historyLeftBehindCount": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+
+  "progressVitality": "BUGÜNÜN CANLILIĞI",
+  "progressVitalityEmpty": "Bahçenü başlatmak için bir tohum ek.",
+  "progressVitalitySeeds": "Bugün {total} tohumdan {done} tanesi ekildi.",
+  "@progressVitalitySeeds": {
+    "placeholders": {
+      "done": { "type": "String" },
+      "total": { "type": "String" }
+    }
+  },
+  "progressChainPill": "{days} günlük zincir",
+  "@progressChainPill": {
+    "placeholders": {
+      "days": { "type": "String" }
+    }
+  },
   "progressMetricCurrent": "Şu an",
   "progressMetricBest": "En iyi",
-  "progressMetricDone": "Bitti",
+  "progressMetricDone": "Tamamlandı",
   "progressMetricPerfect": "Mükemmel",
   "progressMetricHabits": "Alışkanlıklar",
+  "progressHabitBlooms": "Alışkanlık çiçekleri",
+  "progressHabitBloomsSub": "Her gün suladığın filizler için seri kilometre taşları.",
   "progressNextBadge": "Sonraki rozet",
+  "progressMedalCount": "{earned}/{total}",
+  "@progressMedalCount": {
+    "placeholders": {
+      "earned": { "type": "String" },
+      "total": { "type": "String" }
+    }
+  },
+  "progressPersonalActivity": "Kişisel Aktivite",
+  "progressBrowseMonth": "{month} ayını görüntülüyorsun. Canlı etkinliğine dönmek için \"Bugün\"e dokun.",
+  "@progressBrowseMonth": {
+    "placeholders": {
+      "month": { "type": "String" }
+    }
+  },
   "progressJumpToToday": "Bugün",
+  "progressCalendarLegend": "daha koyu = daha çok tamamlandı",
+  "progressCalendarBody": "Koyu yeşil mükemmel bir gün demektir. Atladıkça renk solar.",
+
+  "paywallTitle": "Zinciri kırılmamış tut.",
+  "paywallSubtitle": "Daily Stitch Pro sana tam disiplin sistemini verir.",
+  "paywallFeatures": "Tam 5 alışkanlık slotu, sadece 3 değil|Tam geçmişin, sonsuza kadar|Tüm madalya seti|Her ay seri dondurması|Haftalık Makbuz + paylaşım kartları|Temalar + daha fazlası",
+  "paywallFeaturesBodies": "Ücretsiz olan 3 verir. Pro hepsini açar, böylece günlük ritüelin burada yaşayabilir.|Tamamladığın her günü görüntüle — sadece son 7 değil. Haftalarca değil, yıllarca geriye bak. |Efsanevi seviye madalyalarını aç. En nadir rozetler, her şeyini verenler içindir.|Ayda 2 seri dondurması, böylece tek bir kötü gün zincirini bitirmez.|Haftanın güzel paylaşım kartları. Zincirini paylaş, başkasını başlatmaya ilham ver.|Yeni vurgu renkleri ve temaları ekledikçe aç. Her zaman ücretsiz güncellemeler.",
   "paywallYearly": "Yıllık",
+  "paywallYearlyCaption": "En iyi değer · ayda ~2.50 USD civarında",
+  "paywallYearlyBadge": "%35 TASARRUF",
   "paywallMonthly": "Aylık",
-  "paywallRestore": "Satın alımı geri yükle",
-  "paywallTerms": "Şartlar",
+  "paywallMonthlyCaption": "Her ay faturalanır · istediğin zaman iptal et",
+  "paywallStartCta": "Pro'yu Başlat · {price}/yıl",
+  "@paywallStartCta": {
+    "placeholders": {
+      "price": { "type": "String" }
+    }
+  },
+  "paywallStartCtaMonthly": "Pro'yu Başlat · {price}/ay",
+  "@paywallStartCtaMonthly": {
+    "placeholders": {
+      "price": { "type": "String" }
+    }
+  },
+  "paywallRestore": "Satın almayı geri yükle",
+  "paywallTerms": "Koşullar",
   "paywallPrivacy": "Gizlilik",
-  "settingsHowItWorks": "Nasıl çalışır",
-  "settingsSignOut": "Çıkış",
+  "paywallNoRestore": "Bu hesapta önceki bir satın alım bulunamadı.",
+  "paywallRestoreLater": "Satın almanı sonraki senkronizasyonda geri yükleyeceğiz.",
+  "paywallAlreadyPro": "Pro üyesisin. Desteğin için teşekkürler.",
+  "paywallHabitSlotHead": "Tüm ücretsiz alışkanlık slotlarını kullandın. Önemsediğin her ritüeli eklemek için tam seti aç.",
+  "paywallHistoryHead": "Tam geçmişini gör — her mükemmel günü, her madalyayı, her geri dönüşü.",
+  "paywallMedalHead": "En nadir madalyalar sadece Pro'ya özel. Devam et — düşündüğünden daha yakınlar.",
+
+  "settingsYourActivity": "AKTİVİTEN",
+  "settingsHelpInfo": "YARDIM & BİLGİ",
+  "settingsAccount": "HESAP",
+  "settingsNurturingTools": "BÜYÜTME ALETLERİ",
+  "settingsReminders": "HATIRLATMALAR",
+  "settingsWidgetSanctuary": "WİDGET KORUNAĞI",
+  "settingsEcosystemSupport": "EKOSİSTEM DESTEĞİ",
+  "settingsHowItWorks": "Bu nasıl çalışır",
+  "settingsSignOut": "Çıkış yap",
+  "settingsProActive": "Aktif",
+  "settingsProFree": "Ücretsiz katman",
   "settingsLanguage": "Dil",
   "settingsLanguageValue": "Sistem varsayılanı",
+
+  "firstRunGreeting": "5 görev. Daha fazla değil. Onları sayılı kıl.",
+  "firstRunBody": "İlk tohumunu ek — bugün en çok ne önemli?",
+  "firstRunCta": "İlk tohumunu ek",
+
+  "emptyStateClearAll": "Tümünü temizle",
   "cancel": "İptal",
-  "shareCardSnapshot": "Sığınağının bir anlık görüntüsü",
 
+  "intentionTitle1": "Yeni bir niyet ekelim!",
+  "intentionBody1": "Her muhteşem orman tek bir küçük choix ile başlar. Bugün neyi büyütüyoruz?",
+  "intentionTitle2": "Bugün ne ekelim?",
+  "intentionBody2": "Küçük tohumlar, özenle bakılırsa yüksek ağaçlara dönüşür. Şu anda en çok önemli olanı seç.",
+  "intentionTitle3": "Bir tohum. Bir nefes. Başla.",
+  "intentionBody3": "Tüm ormanı bir anda ekmen gerekmez — sadece bir sonraki doğru şey.",
+  "intentionTitle4": "Bir sonraki küçük adımı besle.",
+  "intentionBody4": "Gelecekteki sen, önümüzdeki beş dakikada yaptığın seçimlerden oluşur. Nazik bir tane hangisi?",
+  "intentionTitle5": "Neye dönüşmek istediğine karar ver.",
+  "intentionBody5": "Görevler tohumlardır, alışkanlıklar filizlerdir. Birlikte gurur duyduğun bir orman oluştururlar.",
+  "intentionTitle6": "Hatıralık bir şey ek.",
+  "intentionBody6": "Her gün muhteşem hissettirmeyebilir. Sulanmış bir tohum bile sayılır. Bir tane seçelim.",
+  "intentionTitle7": "Bugünü biraz daha cesur yap.",
+  "intentionBody7": "Cesaret birikir. Ertelediğin tohumu seç — adını koymak bile ileriye doğru bir adımdır.",
+  "intentionTitle8": "Tohumdan önce toprağı hazırla.",
+  "intentionBody8": "Bu görevi kolaylaştıracak bir zihin, araç veya küçük ritüel ne olur? Notlara ekle.",
 
-  "commonRetry": "Retry",
-  "commonBack": "Back",
-  "commonDismiss": "Dismiss",
-  "commonCancel": "Cancel",
-  "commonClose": "Close",
-  "commonSend": "Send",
-  "commonCopy": "Copy",
-  "commonShowLess": "Show less",
-  "commonViewFull": "View full notes",
-  "commonEdit": "Edit",
-  "commonDelete": "Delete",
-  "commonDone": "Done",
-  "commonError": "Something went wrong",
-  "commonPageNotFound": "Page Not Found",
-  "commonHome": "Home",
-  "commonUnknownError": "Unknown routing error",
-  "commonSettingsTooltip": "Settings",
-  "commonHowThisWorks": "How this works",
+  "shareCardSnapshot": "Korunağının bir anlık görüntüsü",
+  "shareCardBody": "Yukarıdaki kart PNG olarak dışa aktarılır ve paylaşım sayfasına gönderilir. Hikayende paylaş, bir arkadaşına gönder veya sticker olarak yazdır.",
+  "shareCardShareMyBloom": "Çiçeğimi paylaş",
+  "shareCardCouldNotShare": "Şu anda paylaşılamadı",
+  "shareCardProgressText": "Daily Stitch ilerlemem — {year} Daily Stitch'te.",
+  "@shareCardProgressText": {
+    "placeholders": {
+      "year": { "type": "String" }
+    }
+  },
+  "shareCardMedalText": "Daily Stitch'te \"{title}\" madalyasını açtım. {subtitle}",
+  "@shareCardMedalText": {
+    "placeholders": {
+      "title": { "type": "String" },
+      "subtitle": { "type": "String" }
+    }
+  },
 
-  "myDayReminderSet": "Reminder set",
-  "myDayPreparationNotes": "PREPARATION NOTES",
+  "howItWorksTitle": "Bu nasıl çalışır",
+  "howItWorksBody": "Daily Stitch, küçük ve kırılmaz bir disiplin zinciri tutmana yardımcı olur. Hepsi bu.",
+  "howItWorksToday": "Bugün sekmesi",
+  "howItWorksTodayBody": "Bu senin evin. Bugünkü 5 görev ve ayarladığın alışkanlıkları gösterir. Gece yarısına kadar tamamlarsan, zincir uzar.",
+  "howItWorksCap": "5 görev sınırı özelliği",
+  "howItWorksCapBody": "6. görevi eklemene izin vermiyoruz. Tüm mesele bu. Kısa zincirler uzun olanlardan iyidir. Tam açıklama için ana ekrandaki \"?\" butonuna dokun.",
+  "howItWorksHabits": "Alışkanlıklar günlük, zincir ömür boyu",
+  "howItWorksHabitsBody": "Alışkanlıklar (Sabah yogası, Su içme) sonsuza kadar yaşar. Görevler tek seferlik. İkisi de aynı seriyi besler.",
+  "howItWorksLeftBehind": "Kaçırılan görevler → Geri Kalanlar",
+  "howItWorksLeftBehindBody": "Gece yarısında, tamamlanmamış görevler Geri Kalanlar'a taşınır. Sadece hâlâ önemli olanları tekrar ekle. Geri kalanı sessizce bırakılır.",
+  "howItWorksProgress": "İlerleme sekmesi",
+  "howItWorksProgressBody": "Seri, takvim, madalyalar, geçmiş — zaman içinde nasıl gittiğin hakkında her şey. Burada acil bir şey yok.",
+  "howItWorksYou": "Sen sekmesi",
+  "howItWorksYouBody": "Hesabın, ayarların, çıkış. Hepsi bu.",
+  "howItWorksRule": "Kural: Her gün 5 küçük şey, bahane yok.",
 
-  "onboardingSkip": "SKIP",
-  "onboardingNext": "Next",
-  "onboardingEnterSanctuary": "Enter Sanctuary",
-  "onboardingIntroduction": "INTRODUCTION",
-  "onboardingGrowYourForest": "GROW YOUR FOREST",
-  "onboardingPage1Title": "Meet your Guardian.",
-  "onboardingPage1Body": "Welcome to your Personal Sanctuary. Here, your growth is mirrored in the life of your forest.",
-  "onboardingPage2Title": "Plant seeds. Watch them grow.",
-  "onboardingPage2Body": "Each task is a tiny seed. Each habit is a sprout you tend daily. Together they form a forest of discipline.",
-  "onboardingPage3Title": "Five tasks. One chain.",
-  "onboardingPage3Body": "You can only plant 5 seeds per day. That cap forces you to focus on what actually matters — and protect your chain.",
-  "onboardingPage4Title": "Tend your sprouts daily.",
-  "onboardingPage4Body": "Tap habits to grow them. Skip a day and the chain doesn't extend. The Guardian grows with you.",
+  "commonRetry": "Tekrar dene",
+  "commonBack": "Geri",
+  "commonDismiss": "Kapat",
+  "commonCancel": "İptal",
+  "commonClose": "Kapat",
+  "commonSend": "Gönder",
+  "commonCopy": "Kopyala",
+  "commonShowLess": "Daha az göster",
+  "commonViewFull": "Tam notları gör",
+  "commonEdit": "Düzenle",
+  "commonDelete": "Sil",
+  "commonDone": "Tamamlandı",
+  "commonError": "Bir şey yanlış gitti",
+  "commonPageNotFound": "Sayfa Bulunamadı",
+  "commonHome": "Ana Sayfa",
+  "commonUnknownError": "Bilinmeyen yönlendirme hatası",
+  "commonSettingsTooltip": "Ayarlar",
+  "commonHowThisWorks": "Bu nasıl çalışır",
 
-  "authBrand": "BLOOM TRACKER",
-  "authPlantFirstSeed": "Plant your first seed.",
-  "authWelcomeBack": "Welcome back, Guardian.",
-  "authFiveTasksDaily": "Five tasks. Daily habits. No excuses.",
-  "authSanctuaryWaiting": "Your sanctuary is waiting.",
-  "authSignIn": "Sign In",
-  "authSignUp": "Sign Up",
-  "authEmail": "EMAIL",
-  "authPassword": "PASSWORD",
-  "authEmailHint": "you@email.com",
-  "authCreateAccount": "Create account",
-  "authSignInCta": "Sign in",
-  "authOrContinueWith": "or continue with",
-  "authContinueWithGoogle": "Continue with Google",
-  "authEnterEmail": "Enter your email",
-  "authEnterValidEmail": "Enter a valid email address",
-  "authPasswordTooShort": "Password must be at least 6 characters",
-  "authAccountCreated": "Account created. Switch to Sign In and use your password.",
-  "authSomethingWentWrong": "Something went wrong. Try again.",
-  "authCouldNotStartGoogle": "Could not start Google sign-in.",
-  "authMidnightReset": "By signing in, you accept that your day resets at midnight.",
-  "authSetupRequired": "Setup required",
+  "myDayReminderSet": "Hatırlatıcı ayarlandı",
+  "myDayPreparationNotes": "HAZIRLIK NOTLARI",
 
-  "settingsPersonalSanctuary": "PERSONAL SANCTUARY",
-  "settingsHowThisWorks": "How this works",
-  "settingsHowThisWorksSubtitle": "What the app is, how the cap and streak work",
-  "settingsStreakProtection": "Streak Protection",
-  "settingsStreakProtectionAvailable": "1 freeze available this month",
-  "settingsStreakProtectionUsed": "Used for this month",
-  "settingsProSubscription": "Bloom Tracker Pro",
-  "settingsManageProSubscription": "Manage Pro subscription",
-  "settingsProCancelPlay": "Cancel or change plan in Google Play",
-  "settingsProUnlock": "Unlock all 5 habits, full history, more",
-  "settingsTaskAlarms": "Task alarms & Final Call",
-  "settingsTaskAlarmsSubtitle": "Evening nudge and midnight warning",
-  "settingsHomeScreenWidget": "Home-screen widget",
-  "settingsHomeScreenWidgetSubtitle": "Add your chain streak to the home screen",
-  "settingsShareBloomTracker": "Share Bloom Tracker",
-  "settingsShareBloomTrackerSubtitle": "Tell a friend about the chain",
-  "settingsHelpSupport": "Help & Support",
-  "settingsHelpSupportSubtitle": "FAQ or report a problem",
-  "settingsSignOutTile": "Sign Out",
-  "settingsAllFeaturesUnlocked": "All features unlocked",
-  "settingsAllFeaturesUnlockedSubtitle": "Beta build — subscriptions paused while we test everything.",
-  "settingsVersion": "Version {version} ({build})",
-  "settingsVersionUnknown": "Version 1.0.0",
-  "settingsHabitMaster": "Habit Master",
-  "settingsLevel": "Level {level} · Habit Master",
+  "onboardingSkip": "ATLA",
+  "onboardingNext": "İleri",
+  "onboardingEnterSanctuary": "Korunağa Gir",
+  "onboardingIntroduction": "GİRİŞ",
+  "onboardingGrowYourForest": "ORMANINI BÜYÜT",
+  "onboardingPage1Title": "Koruyucunla tanış.",
+  "onboardingPage1Body": "Kişisel Korunağına hoş geldin. Burada, büyümen ormanının yansır.",
+  "onboardingPage2Title": "Tohumlar ek. Büyürken izle.",
+  "onboardingPage2Body": "Her görev küçük bir tohumdur. Her alışkanlık günlük baktığın bir filizdir. Birlikte disiplin dolu bir orman oluştururlar.",
+  "onboardingPage3Title": "Beş görev. Bir zincir.",
+  "onboardingPage3Body": "Günde sadece 5 tohum ekabilirsin. Bu sınır, gerçekten önemli olan şeylere odaklanmanı ve zincirini korumanı sağlar.",
+  "onboardingPage4Title": "Filizlerini her gün sula.",
+  "onboardingPage4Body": "Alışkanlıklara dokunarak büyüt. Bir gün atla, zincir uzamaz. Koruyucu seninle birlikte büyür.",
 
-  "languagePickerTitle": "Language",
+  "authBrand": "DAILY STITCH",
+  "authPlantFirstSeed": "İlk tohumunu ek.",
+  "authWelcomeBack": "Hoş geldin, Koruyucu.",
+  "authFiveTasksDaily": "Beş görev. Günlük alışkanlıklar. Bahane yok.",
+  "authSanctuaryWaiting": "Korunağın seni bekliyor.",
+  "authSignIn": "Giriş Yap",
+  "authSignUp": "Kayıt Ol",
+  "authEmail": "E-POSTA",
+  "authPassword": "ŞİFRE",
+  "authEmailHint": "ornek@email.com",
+  "authCreateAccount": "Hesap oluştur",
+  "authSignInCta": "Giriş yap",
+  "authOrContinueWith": "veya şununla devam et",
+  "authContinueWithGoogle": "Google ile devam et",
+  "authEnterEmail": "E-posta adresini gir",
+  "authEnterValidEmail": "Geçerli bir e-posta adresi gir",
+  "authPasswordTooShort": "Şifre en az 6 karakter olmalıdır",
+  "authAccountCreated": "Hesap oluşturuldu. Giriş Yap'a geç ve şifreni kullan.",
+  "authSomethingWentWrong": "Bir şey yanlış gitti. Tekrar dene.",
+  "authCouldNotStartGoogle": "Google oturumu başlatılamadı.",
+  "authMidnightReset": "Giriş yaparak gününün gece yarısında sıfırlandığını kabul edersin.",
+  "authSetupRequired": "Kurulum gerekli",
 
-  "youLast7Days": "Last 7 days",
-  "youLast7DaysSubtitle": "Day-by-day task history",
-  "youLeftBehindSubtitle": "Missed tasks waiting to be re-added",
-  "youProTier": "Pro tier",
-  "youFreeTier": "Free tier",
+  "settingsPersonalSanctuary": "KİŞİSEL KORUNAK",
+  "settingsHowThisWorks": "Bu nasıl çalışır",
+  "settingsHowThisWorksSubtitle": "Uygulama nedir, sınır ve seri nasıl çalışır",
+  "settingsStreakProtection": "Seri Koruması",
+  "settingsStreakProtectionAvailable": "Bu ay 1 dondurma mevcut",
+  "settingsStreakProtectionUsed": "Bu ay için kullanıldı",
+  "settingsProSubscription": "Daily Stitch Pro",
+  "settingsManageProSubscription": "Pro aboneliğini yönet",
+  "settingsProCancelPlay": "Google Play'de planı iptal et veya değiştir",
+  "settingsProUnlock": "Tüm 5 alışkanlığı, tam geçmişi ve daha fazlasını aç",
+  "settingsTaskAlarms": "Görev alarmı ve Son Çağrı",
+  "settingsTaskAlarmsSubtitle": "Akşam hatırlatması ve gece yarısı uyarısı",
+  "settingsHomeScreenWidget": "Ana ekran widget'ı",
+  "settingsHomeScreenWidgetSubtitle": "Zincir serini ana ekrana ekle",
+  "settingsShareBloomTracker": "Daily Stitch'i paylaş",
+  "settingsShareBloomTrackerSubtitle": "Bir arkadaşına zincirden bahset",
+  "settingsHelpSupport": "Yardım & Destek",
+  "settingsHelpSupportSubtitle": "SSS veya sorun bildir",
+  "settingsSignOutTile": "Çıkış Yap",
+  "settingsAllFeaturesUnlocked": "Tüm özellikler açıldı",
+  "settingsAllFeaturesUnlockedSubtitle": "Beta sürümü — her şeyi test ederken abonelikler duraklatıldı.",
+  "settingsVersion": "Sürüm {version} ({build})",
+  "settingsVersionUnknown": "Sürüm 1.0.0",
+  "settingsHabitMaster": "Alışkanlık Ustası",
+  "settingsLevel": "Seviye {level} · Alışkanlık Ustası",
+
+  "languagePickerTitle": "Dil",
+
+  "youLast7Days": "Son 7 gün",
+  "youLast7DaysSubtitle": "Günlük görev geçmişi",
+  "youLeftBehindSubtitle": "Tekrar ekilmeyi bekleyen kaçırılan görevler",
+  "youProTier": "Pro katmanı",
+  "youFreeTier": "Ücretsiz katman",
   "youPro": "Pro",
-  "youFree": "Free",
-  "youLevelLabel": "Level {level}",
-  "youBestStreakLabel": "Best {days} d",
-  "youPlantHabit": "Plant a habit to start a chain.",
+  "youFree": "Ücretsiz",
+  "youLevelLabel": "Seviye {level}",
+  "youBestStreakLabel": "En iyi {days} gün",
+  "youPlantHabit": "Bir zincir başlatmak için bir alışkanlık ek.",
   "youProBadge": "PRO",
-  "youUnlockDiscipline": "Unlock the full discipline system.",
-  "youProFeatures": "5 habit slots, full history, legendary medals, monthly streak freezes, weekly share cards.",
-  "youSeePlans": "See plans",
-  "youFromPrice": "from {price}/mo",
-  "youBloomTrackerFooter": "Bloom Tracker · Habit & To-Do",
+  "youUnlockDiscipline": "Tam disiplin sistemini aç.",
+  "youProFeatures": "5 alışkanlık slotu, tam geçmiş, efsanevi madalyalar, aylık seri dondurmaları, haftalık paylaşım kartları.",
+  "youSeePlans": "Planları gör",
+  "youFromPrice": "{price}/ay'dan başlayan fiyatlarla",
+  "youBloomTrackerFooter": "Daily Stitch · Alışkanlık & Yapılacak",
 
-  "progressMedals": "Medals",
-  "progressLast7Days": "Last 7 days",
-  "progressSeeAll": "See all",
-  "progressSeeDayByDayActivity": "See your day-by-day activity",
-  "progressTasksFinishedPct": "{done} of {total} tasks finished · {pct}%",
-  "progressNoMedalsYet": "No medals yet — finish a task or tend a sprout to get started.",
-  "progressSeeAllMedals": "See all medals · {earned} of {total} earned",
-  "progressGuardianInsight": "Guardian insight",
-  "progressNextBadgeTier": "NEXT BADGE · {tier}",
-  "progressDaysTarget": "{days} day target",
+  "progressMedals": "Madalyalar",
+  "progressLast7Days": "Son 7 gün",
+  "progressSeeAll": "Tümünü gör",
+  "progressSeeAllMedals": "Tüm madalyaları gör · {earned}/{total} kazanıldı",
+  "progressTasksFinishedPct": "{total} görevden {done} tanesi tamamlandı · %{pct}",
+  "progressNoMedalsYet": "Henüz madalya yok — başlamak için bir görevi tamamla veya bir filizi sula.",
+  "progressSeeDayByDayActivity": "Günlük aktiviteni gör",
+  "progressGuardianInsight": "Koruyucu içgörüsü",
+  "progressNextBadgeTier": "SONRAKİ ROZET · {tier}",
+  "progressDaysTarget": "{days} günlük hedef",
   "progressOfTotal": "{value}/{target}",
 
-  "helpTitle": "Help & Support",
-  "helpBody": "Most answers are below. If not, send us a note and we usually reply within 2–3 days.",
-  "helpSectionFAQ": "FREQUENT QUESTIONS",
-  "helpSectionContact": "STILL STUCK?",
-  "helpAddMessage": "Add a short message first.",
-  "helpOpening": "Opening your mail app…",
-  "helpEmailUs": "Email us",
-  "helpOpeningAction": "Opening…",
-  "helpCopyEmail": "Copy support email",
-  "helpCopiedEmail": "Copied support@bloomtracker.app",
-  "helpNoMailApp": "No mail app found. Email us at support@bloomtracker.app.",
-  "helpTopicLabel": "Topic",
-  "helpWhatHappened": "What happened?",
-  "helpHint": "A short description goes a long way…",
-  "helpDisclaimer": "Tapping \"Email us\" opens your mail app with a pre-filled message (no data leaves your device until you send).",
-  "helpFaqQ1": "What is the 5-task cap?",
-  "helpFaqA1": "You can add up to 5 tasks per local day. The 6th is blocked on purpose — discipline beats overload. The cap is the feature, not a limitation.",
-  "helpFaqQ2": "What happens at midnight?",
-  "helpFaqA2": "At your local midnight, any task still marked open is stamped \"missed\" and moves to Left Behind. Habit streaks reset if the habit was not completed the day before.",
-  "helpFaqQ3": "What is Left Behind?",
-  "helpFaqA3": "A gentle, dismissible list of tasks you didn't finish. Open it, re-add only what still matters, and let the rest go. Free tier sees the last 7 days; Pro sees full history.",
-  "helpFaqQ4": "How do streaks work?",
-  "helpFaqA4": "A day extends the chain when you had at least 1 task and 0 were missed. Days with zero tasks neither extend nor break the chain. A streak freeze forgives one missed day per month.",
-  "helpFaqQ5": "What is the streak freeze?",
-  "helpFaqA5": "One \"freeze\" per calendar month, Pro only. Spend it on a day you missed to keep your chain alive. Find it on the Progress tab.",
-  "helpFaqQ6": "Where is my data stored?",
-  "helpFaqA6": "All data lives in Supabase (Postgres) under the account that signed in. We never sell or share it. See the privacy policy linked in the Play Store listing for the full details.",
-  "helpFaqQ7": "How do I delete my account?",
-  "helpFaqA7": "Account deletion is coming to Settings in the next release. For now, email support@bloomtracker.app and we'll handle it within a day.",
-  "helpTopicsGeneral": "General question",
-  "helpTopicsBug": "Bug report",
-  "helpTopicsStreak": "Streak / rollover issue",
-  "helpTopicsBilling": "Billing or Pro tier",
-  "helpTopicsAccount": "Account & data",
-  "helpTopicsFeature": "Feature request",
-  "helpAccountAnon": "(not signed in)",
+  "helpTitle": "Yardım & Destek",
+  "helpBody": "Cevapların çoğu aşağıda. Yoksa bize bir not gönder, genellikle 2-3 gün içinde yanıt veririz.",
+  "helpSectionFAQ": "SIK SORULAN SORULAR",
+  "helpSectionContact": "HALEN TAKILDI MI?",
+  "helpAddMessage": "Önce kısa bir mesaj ekle.",
+  "helpOpening": "E-posta uygulaman açılıyor…",
+  "helpEmailUs": "Bize e-posta gönder",
+  "helpOpeningAction": "Açılıyor…",
+  "helpCopyEmail": "Destek e-postasını kopyala",
+  "helpCopiedEmail": "support@dailystitch.app kopyalandı",
+  "helpNoMailApp": "E-posta uygulaması bulunamadı. Bize support@dailystitch.app adresinden yazın.",
+  "helpTopicLabel": "Konu",
+  "helpWhatHappened": "Ne oldu?",
+  "helpHint": "Kısa bir açıklama çok yol alır…",
+  "helpDisclaimer": "\"Bize e-posta gönder\"e dokunmak, önceden doldurulmuş bir mesajla e-posta uygulamanı açar (gönderene kadar hiçbir veri cihazından ayrılmaz).",
+  "helpFaqQ1": "5 görev sınırı nedir?",
+  "helpFaqA1": "Yerel gün başına en fazla 5 görev ekleyebilirsin. 6. görev kasıtlı olarak engellenir — disiplin aşırı yüklemeyi yener. Sınır bir özelliktir, bir kısıtlama değil.",
+  "helpFaqQ2": "Gece yarısında ne olur?",
+  "helpFaqA2": "Yerel gece yarısında, hâlâ açık olarak işaretli her görev \"kaçırıldı\" damgası alır ve Geri Kalanlar'a gider. Alışkanlık, bir önceki gün tamamlanmamışsa seri sıfırlanır.",
+  "helpFaqQ3": "Geri Kalanlar nedir?",
+  "helpFaqA3": "Bitiremediğin görevlerin nazik bir listesi. Aç, sadece hâlâ önemli olanları tekrar ekle, gerisini bırak. Ücretsiz katman son 7 günü gösterir; Pro tam geçmişi gösterir.",
+  "helpFaqQ4": "Seriler nasıl çalışır?",
+  "helpFaqA4": "En az 1 görevin olduğu ve 0 kaçırdığın bir gün zinciri uzatır. Sıfır görevli günler ne uzatır ne de kırar. Bir seri dondurması ayda bir kaçırılan günü affeder.",
+  "helpFaqQ5": "Seri dondurması nedir?",
+  "helpFaqA5": "Takvim ayına bir \"dondurma\", sadece Pro. Kaçırıldığın bir günde kullan, zincirini canlı tut. İlerleme sekmesinde bul.",
+  "helpFaqQ6": "Verilerim nerede saklanıyor?",
+  "helpFaqA6": "Tüm veriler, giriş yaptığın hesap altında Supabase'de (Postgres) saklanır. Verilerini asla satmıyoruz veya paylaşmıyoruz. Tüm ayrıntılar için Play Store listesindeki gizlilik politikasına bak.",
+  "helpFaqQ7": "Hesabımı nasıl silerim?",
+  "helpFaqA7": "Ayarlar → Hesap → Hesabı sil yolunu izle. Bu, profilini, görevlerini, alışkanlıklarını ve abonelik verilerini kalıcı olarak siler. Aktif Play abonelikleri Google Play'de ayrıca iptal edilmelidir.",
+  "helpTopicsGeneral": "Genel soru",
+  "helpTopicsBug": "Hata raporu",
+  "helpTopicsStreak": "Seri / devretme sorunu",
+  "helpTopicsBilling": "Faturalama veya Pro katmanı",
+  "helpTopicsAccount": "Hesap & veri",
+  "helpTopicsFeature": "Özellik isteği",
+  "helpAccountAnon": "(giriş yapılmadı)",
 
-  "splashTagline": "Nurture small seeds. Grow a forest.",
+  "splashTagline": "Küçük tohumları besle. Bir orman yetiştir.",
 
-  "priorityStandard": "STANDARD",
-  "priorityVital": "VITAL",
-  "prioritySpark": "SPARK"
+  "priorityStandard": "STANDART",
+  "priorityVital": "VİTAL",
+  "prioritySpark": "KIVILCIM",
+
+  "settingsDeleteAccount": "Hesabı sil",
+  "settingsDeleteAccountSubtitle": "Verilerini kalıcı olarak kaldır",
+  "settingsDeleteAccountConfirmTitle": "Hesabını silmek istiyor musun?",
+  "settingsDeleteAccountConfirmBody": "Bu, profilini, görevlerini, alışkanlıklarını ve ilerlemeni kalıcı olarak siler. Aktif abonelikler Google Play'de ayrıca iptal edilmelidir. Bu işlem geri alınamaz.",
+  "settingsDeleteAccountConfirmButton": "Kalıcı olarak sil",
+  "settingsDeleteAccountSuccess": "Hesabın silindi.",
+  "settingsDeleteAccountFailed": "Hesap silinemedi. Tekrar dene veya support@dailystitch.app adresine yaz.",
+
+  "referralYouTitle": "Arkadaşlarını davet et · Ücretsiz Pro kazan",
+  "referralYouSubtitle": "{milestone} arkadaştan {progress} tanesi katıldı",
+  "@referralYouSubtitle": {
+    "placeholders": {
+      "progress": { "type": "int" },
+      "milestone": { "type": "int" }
+    }
+  },
+  "referralYouShare": "Daveti paylaş",
+  "referralYouDetails": "Detayları gör",
+  "referralPaywallTitle": "Ücretsiz Pro ayı",
+  "referralPaywallBody": "5 arkadaş davet et ve katılsın → 1 ay ücretsiz Pro",
+  "referralPaywallProBody": "Davet etmeye devam et — ücretsiz Pro aylarını biriktir",
+  "referralPaywallProgress": "{count}/{milestone}",
+
+  "insightsLoadError": "İlerlemen yüklenemedi. Daha sonra tekrar dene.",
+  "insightsMetricCurrentChain": "MEVCUT ZİNCİR",
+  "insightsMetricBestEver": "EN İYİ",
+  "insightsMetricTasksDone": "TAMAMLANAN GÖREVLER",
+  "insightsMetricPerfectDays": "MÜKEMMEL GÜNLER",
+  "insightsMetricHabits": "ALIŞKANLIKLAR",
+  "insightsDay": "gün",
+  "insightsDays": "gün",
+  "insightsSectionThisWeek": "Bu hafta",
+  "insightsShareMyWeek": "Haftamı paylaş",
+  "insightsShareMyWeekPro": "Haftamı paylaş · Pro",
+  "insightsShareReceiptText": "Daily Stitch'te geçen haftam. Zinciri kırma.",
+  "insightsHistoryWindowTitle": "Son {days} gün gösteriliyor",
+  "@insightsHistoryWindowTitle": {
+    "placeholders": {
+      "days": { "type": "int" }
+    }
+  },
+  "insightsHistoryUpsell": "Pro ile tam geçmişini aç",
+
+  "referralScreenTitle": "Arkadaşlarını davet et",
+  "referralLaunchGift": "Lansman ayı hediyesi",
+  "referralRewardTitle": "1 ay ücretsiz Pro kazan",
+  "referralRewardBody": "Kodunu arkadaşlarınla paylaş. 5 kişi kodunu kullanarak kayıt olduğunda, Daily Stitch Pro'yu tam bir ay açarsın.",
+  "referralYourCode": "Davet kodun",
+  "referralCopyCodeTooltip": "Kodu kopyala",
+  "referralCodeCopied": "Davet kodu kopyalandı",
+  "referralShareWithFriends": "Arkadaşlarınla paylaş",
+  "referralFooterHint": "Arkadaşlar hesap oluştururken kodunu girer. Her arkadaş ödüle bir kez sayılır.",
+  "referralFriendsJoinedOne": "{count} arkadaş katıldı",
+  "@referralFriendsJoinedOne": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "referralFriendsJoinedMany": "{count} arkadaş katıldı",
+  "@referralFriendsJoinedMany": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "referralRewardsEarnedOne": "{count} ücretsiz Pro ayı kazandın.",
+  "@referralRewardsEarnedOne": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "referralRewardsEarnedMany": "{count} ücretsiz Pro ayı kazandın.",
+  "@referralRewardsEarnedMany": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "referralRewardUnlocked": "Ödül açıldı — ücretsiz Pro ayının tadını çıkar!",
+  "referralRemainingToUnlock": "Ücretsiz ayını açmak için {remaining} tane daha",
+  "@referralRemainingToUnlock": {
+    "placeholders": {
+      "remaining": { "type": "int" }
+    }
+  },
+
+  "youProMemberSince": "{month} ayından beri Bloom Pro üyesisin",
+  "@youProMemberSince": {
+    "placeholders": {
+      "month": { "type": "String" }
+    }
+  },
+  "youProPerksTitle": "Pro avantajların",
+  "manageProThankYou": "Bloom'a destek olduğun için teşekkürler",
+  "manageProReferralHint": "Pro süreni uzatmak için daha fazla arkadaş davet et",
+
+  "bootstrapConfigErrorBody": "{detail}\n\nleanspace/.env dosyasına SUPABASE_URL ve SUPABASE_PUBLISHABLE_KEY (veya eski SUPABASE_ANON_KEY) ekle, sonra yeniden derle:\n\nflutter build apk --debug",
+  "@bootstrapConfigErrorBody": {
+    "placeholders": {
+      "detail": { "type": "String" }
+    }
+  },
+
+  "languageSystemDefault": "Sistem varsayılanı",
+  "languageNameEn": "English",
+  "languageNameUr": "اردو (Urdu)",
+  "languageNameEs": "Español",
+  "languageNamePt": "Português",
+  "languageNameFr": "Français",
+  "languageNameDe": "Deutsch",
+  "languageNameIt": "Italiano",
+  "languageNameAr": "العربية",
+  "languageNameTr": "Türkçe",
+  "languageNameId": "Bahasa Indonesia",
+
+  "onboardingLanguageTitle": "Dilini seç",
+  "onboardingLanguageBody": "Daily Stitch boyunca kullanmak istediğin dili seç. İstediğin zaman Ayarlar'dan değiştirebilirsin.",
+  "onboardingLanguageContinue": "Devam",
+
+  "commonPro": "PRO",
+  "commonFriend": "Arkadaş",
+
+  "settingsAppTheme": "Uygulama Teması",
+  "settingsAppThemeSubtitle": "Kişisel korunak renklerini seç",
+  "settingsInviteFriendsTitle": "Arkadaşlarını davet et · Ücretsiz Pro",
+  "settingsInviteFriendsSubtitle": "5 arkadaş katıldığında 1 ay ücretsiz kazan",
+
+  "themePickerTitle": "Kişisel Korunak",
+  "themePickerSubtitle": "Sana huzur veren bir renk paleti seç.",
+  "themeNameClassicBloom": "Klasik Çiçek",
+  "themeNameSolarTerracotta": "Güneş Terrakota",
+  "themeNameMidnightOasis": "Gece Yarısı Vahası",
+  "themeNameLavenderDream": "Lavanta Rüyası",
+  "themeNameNordicFrost": "Kuzey Buzulu",
+  "themeNameCyberpunkNeon": "Cyberpunk Neon",
+
+  "reminderTitle": "Hatırlatmalar",
+  "reminderBody": "Son Çağrı, görevler hâlâ açıksa gece yarısından önce sana haber verir.",
+  "reminderFinalCall": "Son Çağrı",
+  "reminderEveningNudge": "Akşam hatırlatması",
+  "reminderChangeTime": "Saati değiştir",
+  "reminderSave": "Hatırlatmaları kaydet",
+
+  "notificationChannelReminders": "Daily Stitch hatırlatmaları",
+  "notificationChannelRemindersDesc": "Akşam hatırlatması ve Son Çağrı hatırlatmaları",
+  "notificationChannelAlarms": "Daily Stitch görev alarmları",
+  "notificationChannelAlarmsDesc": "Görev hatırlatmaları için sesli alarmlar",
+  "notificationTaskReminderTitle": "Görev hatırlatması",
+  "notificationFinalCallTitle": "Son Çağrı",
+  "notificationFinalCallBody": "Bugün hâlâ {count} açık görevin var.",
+  "@notificationFinalCallBody": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "notificationEveningTitle": "Akşam kontrolü",
+  "notificationEveningBody": "Bahçen bugün nasıl büyüdü?",
+
+  "widgetSetupTitle": "Zincir widget'ı ekle",
+  "widgetSetupBody": "Serini ana ekranda tut — uygulamayı açmana gerek yok.",
+  "widgetSetupAdd": "Ana ekrana ekle",
+  "widgetSetupStep1": "Ana ekranında uzun bas",
+  "widgetSetupStep2": "Widget'lara dokun",
+  "widgetSetupStep3": "Daily Stitch'i bul ve sürükle",
+  "widgetSetupPinSuccess": "Widget'ı yerleştirmek için ana ekranına bak.",
+  "widgetSetupPinFallback": "Başlatıcın tek dokunuşla eklemeyi desteklemiyor olabilir. Aşağıdaki manuel adımları kullan.",
+
+  "paywallWelcomePro": "Daily Stitch Pro'ya hoş geldin",
+  "paywallSavePercent": "~%16 TASARRUF",
+  "paywallTermsTitle": "Abonelik koşulları",
+  "paywallTermsBody": "Faturalama Google Play tarafından yapılır. Abonelikler, mevcut dönemin sonundan en az 24 saat önce Play Store → Abonelikler'den iptal etmediğin sürece otomatik olarak yenilenir. Aboneliğini Google Play hesabından istediğin zaman yönetebilir veya iptal edebilirsin.\n\nUygulamayı kaldırman aboneliğini iptal etmez.\n\nGösterilen fiyatlar yerel para birimindedir ve bölgeye göre değişebilir. Vergiler uygulanabilir.",
+  "paywallCloseTooltip": "Kapat",
+  "paywallFooterLinks": "Geri Yükle · Koşullar · Gizlilik",
+  "paywallPrivacyTitle": "Gizlilik",
+  "paywallPrivacyBody": "LeanSpace, görevlerini, alışkanlıklarını ve seri verilerini Supabase arka ucunda hesabına bağlı olarak saklar. Verilerini asla satmıyoruz.\n\nAbonelik satın alımları Google Play tarafından işlenir. Pro durumunu onaylamak için Google'dan doğrulanmış bir satın alım belirteci alırız. Ödeme bilgilerini görmeyiz veya saklamayız.\n\nAyarlar → Hesap silme yolundan tam veri dışa aktarma veya hesap silme talebinde bulunabilirsin.",
+
+  "manageProTitle": "Pro aboneliği",
+  "manageProActive": "Aktif",
+  "manageProNotSubscribed": "Abone değil",
+  "manageProFreeTier": "Ücretsiz katman",
+  "manageProRenewsOn": "{date} tarihinde yenilenir veya sona erer.",
+  "@manageProRenewsOn": { "placeholders": { "date": { "type": "String" } } },
+  "manageProFreeBody": "Daily Stitch Ücretsiz'i kullanıyorsun. Tam sistemi açmak için yükselt.",
+  "manageProSectionManage": "YÖNET",
+  "manageProOpenPlay": "Google Play aboneliklerini aç",
+  "manageProOpenPlaySubtitlePro": "İptal et, planı değiştir veya ödeme yöntemini güncelle",
+  "manageProOpenPlaySubtitleFree": "Mevcut aboneliğini (varsa) burada bul",
+  "manageProShareApp": "Daily Stitch'i paylaş",
+  "manageProShareSubtitle": "Bir arkadaşına zincirden bahset",
+  "manageProSectionHelp": "YARDIM MI LAZIM?",
+  "manageProHelpTitle": "Yardım & Destek",
+  "manageProHelpSubtitle": "Abonelik SSS, iletişim, hata raporları",
+  "manageProBillingFooter": "Faturalama Google Play tarafından yapılır · {version}",
+  "@manageProBillingFooter": { "placeholders": { "version": { "type": "String" } } },
+  "manageProPlayInstructions": "Google Play Store uygulamasını aç → profil resmine dokun → Ödemeler ve abonelikler → Abonelikler.",
+
+  "addTaskGrowSomething": "Bir Şey Büyüt",
+  "addTaskPlantSprout": "Bir Filiz Ek",
+  "addTaskIntentionName": "NİYET ADI",
+  "addTaskSproutName": "FİLİZ ADI",
+  "addTaskHintTask": "ör. Sabah Güneş Selamı",
+  "addTaskHintHabit": "ör. Sabah Yogası",
+  "addTaskWhen": "NE ZAMAN?",
+  "addTaskPriority": "ÖNCELİK",
+  "addTaskNotes": "NOTLAR",
+  "addTaskCadenceDaily": "Günlük",
+  "addTaskCadenceWeekdays": "İş günleri",
+  "addTaskCadence3x": "Haftada 3x",
+  "addTaskCadenceWeekly": "Haftalık",
+  "addTaskPlantIntention": "Niyet Ek",
+  "addTaskPlantSproutCta": "Filiz Ek",
+  "addTaskPlanting": "Ekiliyor…",
+  "addTaskNameIntentionError": "Niyetini adlandır",
+  "addTaskNameSproutError": "Filizini adlandır",
+  "addTaskNotesMigrationWarning": "Görev kaydedildi. Notlar ve öncelik için en son Supabase migrasyonu gerekiyor — supabase/migrations/20260701000000_todos_notes_priority.sql dosyasını çalıştır.",
+  "addTaskNoSproutSlots": "Boş filiz slotu yok — önce birini sula.",
+  "addTaskSaveSproutError": "Filiz kaydedilemedi — tekrar dene.",
+  "addTaskElementWater": "SU",
+  "addTaskElementLight": "IŞIK",
+  "addTaskElementSoil": "TOPRAK",
+  "addTaskElementBreeze": "RÜZGAR",
+  "addTaskCadenceLabel": "SIKLIK",
+  "addTaskPreparationNotes": "HAZIRLIK NOTLARI",
+  "addTaskTendingNotes": "BAKIM NOTLARI",
+  "addTaskNotesHintTask": "Bu görev için araçlar veya zihin ipuçları var mı?",
+  "addTaskNotesHintHabit": "Bu filize bakmak nasıl görünüyor?",
+  "addTaskChooseElement": "ÖĞE SEÇ",
+  "addTaskElementsTooltip": "Öğeler ne anlama gelir?",
+  "addTaskTaskSeed": "Görev Tohumu",
+  "addTaskHabitSprout": "Alışkanlık Filizi",
+  "addTaskPickElement": "Doğru öğeyi seç",
+  "addTaskPickElementBody": "Her öğe farklı bir çaba türüne karşılık gelir. Doğru olanı suladığında Koruyucu daha güçlü hale gelir.",
+  "addTaskClearForm": "Formu temizle",
+
+  "shareCouldNotShare": "Şu anda paylaşılamadı",
+
+  "authReferralCodeLabel": "Davet kodu (isteğe bağlı)",
+  "authReferralCodeHint": "Arkadaş kodu",
+
+  "youPerkHabitSlots": "5 alışkanlık slotu",
+  "youPerkFullHistory": "Tam geçmiş",
+  "youPerkAllThemes": "Tüm temalar",
+  "youPerkStreakFreezes": "Ayda 2 seri dondurması",
+  "youPerkLegendaryMedals": "Efsanevi madalyalar",
+
+  "subscriptionPurchaseFailed": "Satın alınamadı. Tekrar dene.",
+  "subscriptionUnavailable": "Bu cihazda uygulama içi satın alımlar kullanılamıyor.",
+  "subscriptionLoadFailed": "Abonelik seçenekleri yüklenemedi.",
+  "subscriptionVerifyFailed": "Satın alım doğrulanamadı. Satın Almayı Geri Yükle'yi dene.",
+
+  "streakFreezeFailed": "Seri dondurması kullanılamadı.",
+  "streakFreezeAlreadyUsed": "Bu ay dondurmanı zaten kullandın.",
+  "streakFreezeNoMissed": "O günde dondurulacak kaçırılmış görev yok.",
+  "streakFreezeNotPastDay": "Sadece geçmiş bir günü dondurabilirsin.",
+
+  "myDayLoadError": "Günüm yüklenemedi. Yenilemek için çek.",
+  "myDayCapReached": "Bugünün 5 görev sınırına ulaştın.",
+  "myDayRemoveTaskError": "Görev kaldırılamadı.",
+
+  "shareCardTitle": "Haftanı paylaş",
+  "shareCardCta": "Görseli paylaş",
+
+  "medalTierSprout": "Filiz",
+  "medalTierCommon": "Yaygın",
+  "medalTierRare": "Nadir",
+  "medalTierEpic": "Destansı",
+  "medalTierLegendary": "Efsanevi",
+  "medalCategoryTasks": "Görevler",
+  "medalCategoryHabits": "Alışkanlıklar",
+  "medalCategoryStreaks": "Seriler",
+  "medalCategoryMastery": "Ustalık",
+
+  "medalsShareTooltip": "Başarıları paylaş",
+  "medalsFilterAll": "Tümü",
+
+  "addHabitTitleNew": "Yeni bir filiz ek",
+  "addHabitTitleEdit": "Filizine bakım yap",
+  "addHabitLabelSproutName": "FİLİZ ADI",
+
+  "shareCardAppBarTitle": "Paylaşım Kartı",
+  "shareCardAppBarTitleMedal": "Madalyanı paylaş",
+  "shareCardDescMedal": "{title} rozetini göster",
+  "shareCardBodyMedal": "Kazancını çevrenle paylaş. Kart PNG olarak dışa aktarılır ve herhangi bir sosyal uygulama için hazırdır.",
+  "shareCardCtaPreparing": "Hazırlanıyor…",
+  "shareCardMilestone": "YENİ KİLOMETRE TAŞI AÇILDI",
+  "shareCardStatChain": "günlük zincir",
+  "shareCardStatSprouts": "filiz",
+  "shareCardStatMedals": "madalya",
+  "shareCardHeadlineStreak": "{days} Günlük Seri",
+  "@shareCardHeadlineStreak": {
+    "placeholders": { "days": { "type": "int" } }
+  },
+  "shareCardHeadlineMedals": "{count} Madalya Kazanıldı",
+  "@shareCardHeadlineMedals": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "shareCardHeadlineSproutGuardian": "Filiz Koruyucusu",
+  "shareCardHeadlineFirstSeeds": "İlk Tohumlar Ekildi",
+  "shareCardHeadlineGardenBegins": "Bir Bahçe Başlıyor",
+  "shareCardSubheadMonth": "Alışkanlıklarını tam bir ay başarıyla besledin.",
+  "shareCardSubheadWeek": "Tam bir hafta büyüme — ormanınız sıklaşıyor.",
+  "shareCardSubheadProgress": "Korunağın gerçek ilerleme gösteriyor. Bakmaya devam et.",
+  "shareCardSubheadSprouts": "İlk filizlerin kök salıyor. Her gün sula.",
+  "shareCardSubheadFirstSeeds": "İlk tohumların toprağa ekildi. Açılmalarını izle.",
+  "shareCardSubheadFallback": "Her orman tek bir küçük seçimle başlar.",
+
+  "shareAppText": "Daily Stitch — günde beş küçük tohum, kırılmaz bir zincir. Seninkini ek.\n\n{url}",
+  "@shareAppText": {
+    "placeholders": { "url": { "type": "String" } }
+  },
+  "shareAppSubject": "Daily Stitch'i dene",
+  "shareAppReferralText": "Daily Stitch'te günlük zincirimi oluşturuyorum — {code} davet kodumla katıl, ikimiz de büyüyelim.\n\n{url}",
+  "@shareAppReferralText": {
+    "placeholders": {
+      "code": { "type": "String" },
+      "url": { "type": "String" }
+    }
+  },
+  "shareAppReferralSubject": "Bana Daily Stitch'te katıl",
+
+  "shareCardShareTextProgress": "Daily Stitch ilerlemem — {year} Daily Stitch'te.",
+  "@shareCardShareTextProgress": {
+    "placeholders": { "year": { "type": "String" } }
+  },
+  "shareCardShareTextMedal": "Daily Stitch'te \"{title}\" madalyasını açtım. {subtitle}",
+  "@shareCardShareTextMedal": {
+    "placeholders": {
+      "title": { "type": "String" },
+      "subtitle": { "type": "String" }
+    }
+  },
+
+  "insightsReceiptTasksDone": "Tamamlanan görevler",
+  "insightsReceiptPerfectDays": "Mükemmel günler",
+  "insightsReceiptCompletion": "Tamamlanma",
+  "insightsReceiptDate": "Hafta: {date}",
+  "@insightsReceiptDate": {
+    "placeholders": { "date": { "type": "String" } }
+  },
+  "insightsReceiptFooter": "Zinciri kırma.",
+
+  "elementLabelWater": "Su",
+  "elementLabelLight": "Işık",
+  "elementLabelSoil": "Toprak",
+  "elementLabelBreeze": "Rüzgar",
+  "elementTaglineWater": "Yenile. Hidrasyon, dinlenme, duygusal bakım — kuyuyu dolduran her şey.",
+  "elementTaglineLight": "Uyan. Sabah ışığı, odak blokları, çalışma, meditasyon — enerji ve netlik.",
+  "elementTaglineSoil": "Yerleş. Okuma, günlük, derin çalışma — uzun vadeli güç inşa eden yavaş kökler.",
+  "elementTaglineBreeze": "Hareket et. Yürüyüşler, koşular, nefes egzersizleri — kafayı temizleyen hafif, mobil enerji.",
+  "elementWhenWater": "Tükenmiş veya yorgun hissettiğinde.",
+  "elementWhenLight": "Güne net bir başlangıç gerektiğinde.",
+  "elementWhenSoil": "İş yavaş ama değerli olduğunda (çalışma, zanaat, bakım).",
+  "elementWhenBreeze": "Bedensel (veya zihinsel) olarak hareket etmeye ve nefes almaya ihtiyacın olduğunda.",
+
+  "bloomTierMastery": "Ustalık",
+  "bloomTierStrong": "Güçlü",
+  "bloomTierGrowing": "Büyüyor",
+  "bloomTierSprouting": "Filizleniyor",
+  "bloomTierLocked": "Kilitli",
+
+  "habitBloomSubtitle": "{count} günlük seri · {element}",
+  "@habitBloomSubtitle": {
+    "placeholders": {
+      "count": { "type": "int" },
+      "element": { "type": "String" }
+    }
+  },
+
+  "medal_id_first_spark": "İlk Kıvılcım",
+  "medal_sub_first_spark": "Çakmağı yaktın.",
+  "medal_desc_first_spark": "İlk görevini tamamla. Her zincir burada başlar.",
+  "medal_id_triple_seed": "Üçlü Tohum",
+  "medal_sub_triple_seed": "Üçü toprağa.",
+  "medal_desc_triple_seed": "Toplam 3 görev tamamla.",
+  "medal_id_dozen_sower": "On İkili Ekici",
+  "medal_sub_dozen_sower": "On iki tarla.",
+  "medal_desc_dozen_sower": "Toplam 12 görev tamamla.",
+  "medal_id_quarter_century": "Çeyrek Asır",
+  "medal_sub_quarter_century": "Evet demenin mevsimi.",
+  "medal_desc_quarter_century": "Toplam 25 görev tamamla.",
+  "medal_id_productivity_titan": "Verimlilik Devi",
+  "medal_sub_productivity_titan": "Tutarlılık birikir.",
+  "medal_desc_productivity_titan": "50 görev tamamla — gerçek bir ivme oluşturdun.",
+  "medal_id_century_planter": "Yüzlük Ekici",
+  "medal_sub_century_planter": "Kendi ormanın.",
+  "medal_desc_century_planter": "100 görev tamamla. Kullanıcıların %5'indesin.",
+  "medal_id_clean_day": "Temiz Sayfa",
+  "medal_sub_clean_day": "Tek bir bile yok.",
+  "medal_desc_clean_day": "Tek bir günde ektiğin her görevi tamamla.",
+  "medal_id_triple_perfect": "Üçlü Mükemmel",
+  "medal_sub_triple_perfect": "Üç kusursuz koşu.",
+  "medal_desc_triple_perfect": "3 mükemmel gün ulaş.",
+  "medal_id_perfect_week": "Mükemmel Hafta",
+  "medal_sub_perfect_week": "Yedi gün kırılmadı.",
+  "medal_desc_perfect_week": "Art arda 7 mükemmel gün.",
+  "medal_id_two_week_chain": "İki Haftalık Kuvvet",
+  "medal_sub_two_week_chain": "İki hafta ateş içinde.",
+  "medal_desc_two_week_chain": "14 günlük zincirini koru.",
+  "medal_id_iron_chain": "Demir Zincir",
+  "medal_sub_iron_chain": "30 bağlantı dövüldü.",
+  "medal_desc_iron_chain": "30 günlük zincir. En zor görev madalyası.",
+  "medal_id_quarterly_chain": "Üç Aylık Zincir",
+  "medal_sub_quarterly_chain": "Bir mevsim, kırılmadı.",
+  "medal_desc_quarterly_chain": "90 günlük zincir. Efsanevi statü.",
+  "medal_id_vital_priority": "Vital Kıvılcım",
+  "medal_sub_vital_priority": "Zor olanları seçtin.",
+  "medal_desc_vital_priority": "Vital öncelikli 5 görevi tamamla.",
+  "medal_id_spark_priority": "Kıvılcım Eğitici",
+  "medal_sub_spark_priority": "Hızlı kazançlar birikir.",
+  "medal_desc_spark_priority": "Kıvılcım öncelikli 5 görevi tamamla.",
+  "medal_id_note_taker": "Not Tutan",
+  "medal_sub_note_taker": "Kağıttaki planlar kafadaki planları yener.",
+  "medal_desc_note_taker": "5 farklı göreve hazırlık notları ekle.",
+  "medal_id_left_behind_rescuer": "Geri Kalan Kurtarıcı",
+  "medal_sub_left_behind_rescuer": "Görev geride kalmadı.",
+  "medal_desc_left_behind_rescuer": "Ertesi gün 3 kaçırılmış görevi tekrar ekle.",
+  "medal_id_first_sprout": "İlk Filiz",
+  "medal_sub_first_sprout": "Yeni bir günlük ritüel.",
+  "medal_desc_first_sprout": "İlk alışkanlığını ek.",
+  "medal_id_trio_sprout": "Üçlü Filiz",
+  "medal_sub_trio_sprout": "Küçük bir ekosistem.",
+  "medal_desc_trio_sprout": "3 farklı alışkanlık ek.",
+  "medal_id_week_of_growth": "Büyüme Haftası",
+  "medal_sub_week_of_growth": "Kökler tutunmaya başlıyor.",
+  "medal_desc_week_of_growth": "7 gün boyunca her gün bir alışkanlığı sula.",
+  "medal_id_fortnight_floret": "İki Haftalık Çiçek",
+  "medal_sub_fortnight_floret": "Tam çiçek açma.",
+  "medal_desc_fortnight_floret": "14 günlük alışkanlık serisi.",
+  "medal_id_rooted_master": "Köklenmiş Usta",
+  "medal_sub_rooted_master": "Derin kökler, derin güç.",
+  "medal_desc_rooted_master": "30 günlük alışkanlık serisi.",
+  "medal_id_half_year_bloom": "Yıllık Çiçek",
+  "medal_sub_half_year_bloom": "Bahçe artık kalıcı.",
+  "medal_desc_half_year_bloom": "Tek bir alışkanlığı 180 gün koru.",
+  "medal_id_garden_keeper": "Bahçe Bekçisi",
+  "medal_sub_garden_keeper": "Çeşitlilik, birlikte.",
+  "medal_desc_garden_keeper": "Aynı anda 4 farklı alışkanlık büyüt.",
+  "medal_id_hydration_hero": "Hidrasyon Kahramanı",
+  "medal_sub_hydration_hero": "Kuyuyu dolduruyorsun.",
+  "medal_desc_hydration_hero": "Bir hidrasyon alışkanlığı ek (su/içecek).",
+  "medal_id_mindful_mover": "Bilinçli Hareketçi",
+  "medal_sub_mindful_mover": "Beden hatırlar.",
+  "medal_desc_mindful_mover": "Bir hareket alışkanlığı ek (yoga/yürüyüş/koşu).",
+  "medal_id_devoted_keeper": "Adanmış Bekçi",
+  "medal_sub_devoted_keeper": "Altmış gün, bir uygulama.",
+  "medal_desc_devoted_keeper": "Tek bir alışkanlığı aralıksız 60 gün sula.",
+  "medal_id_tending_notes": "Bakım Notları",
+  "medal_sub_tending_notes": "Yolculuk boyunca düşün.",
+  "medal_desc_tending_notes": "3 alışkanlığa bakım notları ekle.",
+
+  "medalTierTaglineSprout": "İlk tohumu ek",
+  "medalTierTaglineCommon": "Alışkanlığı inşa et",
+  "medalTierTaglineRare": "Gerçek bir ivme göster",
+  "medalTierTaglineEpic": "Sen bir doğa gücüsün",
+  "medalTierTaglineLegendary": "Efsanevi, neredeyse kimse buraya ulaşamaz",
+
+  "guardianHeadlineNoTasks": "Bugünün toprağı taze.\nİlk tohumunu ek\nve büyürken izle.",
+  "guardianHeadlineAllDone": "Ektiğin her tohum\nççek açtı.\nDinlen, Koruyucu — hak ettin.",
+  "guardianHeadlineStreak14": "{count} gün\nkırılmadan büyüdü.\nOrmanın hayatla dolu.",
+  "@guardianHeadlineStreak14": { "placeholders": { "count": { "type": "int" } } },
+  "guardianHeadlineStreak7": "Tam bir hafta çiçek açtı,\nKoruyucu.\nBir mükemmel gün daha\nzinciri uzatır.",
+  "guardianHeadlineStreak3": "Zincirin ayakta.\nHâlâ açılacak\ntohunlara bakım yap.",
+  "guardianHeadlineNoHabitsDone": "Görevleri iyi yönetiyorsun.\nBir filiz ek —\nalışkanlıklar ormanın nasıl büyüdüğünü belirler.",
+  "guardianHeadlineSomeDone": "Bazı tohumlar açtı,\nbazı açmadı. Sorun değil.\nYarın yeni bir ekim günü.",
+  "guardianHeadlineMorning": "Günaydın, Koruyucu.\nGün henüz genç\nve toprak hazır.",
+  "guardianHeadlineAfternoon": "İyi günler, Koruyucu.\nIşığın yarısı kaldı —\nbakmaya devam et.",
+  "guardianHeadlineEvening": "İyi akşamlar, Koruyucu.\nGüneş batmadan önce\nson bir tarama.",
+  "guardianHeadlineNight": "Gece yarısında çalışıyor musun?\nKoruyucular bile dinlenir.\nYarının tohumunu şimdi ek.",
+
+  "guardianBodyNoTasks": "Korunağın şu anda sessiz. Bir niyet ekle ve gün batımına kadar neyin değiştiğine bak.",
+  "guardianBodyStreak14": "{count} gündür devam ediyor. Zincir şans değil — biriken küçük seçimler. Biriktirmeye devam et.",
+  "@guardianBodyStreak14": { "placeholders": { "count": { "type": "int" } } },
+  "guardianBodyStreak3": "{count} günlük zincir gerçek bir ivme. Bugün açık tohumlarını bitirmeden bitirme.",
+  "@guardianBodyStreak3": { "placeholders": { "count": { "type": "int" } } },
+  "guardianBodyNoHabits": "Şimdiye kadar {count} görev ekledin. Tek bir alışkanlık filizi eklemek, işin her gün birikmesini sağlar.",
+  "@guardianBodyNoHabits": { "placeholders": { "count": { "type": "int" } } },
+  "guardianBodyLowCompletion": "Ektiklerinin %{pct}'ini tamamlıyorsun. Daha az, daha keskin tohumlar genellikle on saçılımdan daha yüksek büyür.",
+  "@guardianBodyLowCompletion": { "placeholders": { "pct": { "type": "int" } } },
+  "guardianBodyDefault": "Korunağın canlı. {tasks} görev tamamlandı, {sprouts} filiz büyüyor — emek meyvesini veriyor.",
+  "@guardianBodyDefault": { "placeholders": { "tasks": { "type": "int" }, "sprouts": { "type": "int" } } },
+
+  "guardianInsightWaitingTitle": "İlk hamleni bekliyor",
+  "guardianInsightWaitingBody": "Bir görev veya alışkanlık ekle, bahçendeki kalıpları okumaya başlayayım. Ne kadar çok ekersen, o kadar çok şey öğrenirim.",
+  "guardianInsightWaitingCta": "İlk tohumunu ek",
+  "guardianInsightChainSuperTitle": "Zincir süper gücün",
+  "guardianInsightChainSuperBody": "{count} günlük bir zincirin var. Seriler her zaman motivasyonu yener — yavaş günlerde bile sıcak tut.",
+  "@guardianInsightChainSuperBody": { "placeholders": { "count": { "type": "int" } } },
+  "guardianInsightChainSuperCta": "Yarının tohumunu ekle",
+  "guardianInsightChainColdTitle": "Zincir soğuk — yeni bir tane başlat",
+  "guardianInsightChainColdBody": "Daha önce ektin, bu tekrar ekebileceğin anlamına gelir. Bugün yapılan küçük bir görev, yarın daha uzun bir zincirdir.",
+  "guardianInsightChainColdCta": "Bir tohum ek",
+  "guardianInsightLessIsMoreTitle": "Bu hafta daha az daha fazla",
+  "guardianInsightLessIsMoreBody": "Ektiklerinin yaklaşık %{pct}'ini tamamlıyorsun. 5 gevşek niyet yerine 3 keskin niyet dene — kalite birikir.",
+  "@guardianInsightLessIsMoreBody": { "placeholders": { "pct": { "type": "int" } } },
+  "guardianInsightLessIsMoreCta": "Günü keskinleştir",
+  "guardianInsightNextMedalTitle": "Sonraki madalya: {title}",
+  "@guardianInsightNextMedalTitle": { "placeholders": { "title": { "type": "String" } } },
+  "guardianInsightNextMedalBody": "{target} {unit}ten {value}'indesin. Birkaç dürüst gün daha ve senin.",
+  "@guardianInsightNextMedalBody": { "placeholders": { "value": { "type": "int" }, "target": { "type": "int" }, "unit": { "type": "String" } } },
+  "guardianInsightNextMedalCta": "Madalyayı göster",
+  "guardianInsightSteadyTitle": "Dengeli bir mevsimdesin",
+  "guardianInsightSteadyBody": "Hemen köşede bir madalya yok — sorun değil. Sahip olduğuna bakım yap. Bir sonraki çiçek açma yolda.",
+  "guardianInsightSteadyCta": "İlerlemeyi gör",
+
+  "notificationTaskReminderBody": "{label}",
+  "@notificationTaskReminderBody": { "placeholders": { "label": { "type": "String" } } },
+  "notificationFinalCallBodyOne": "Zincirinde 1 görev kaldı. Gece yarısı geliyor.",
+  "notificationFinalCallBodyMany": "Zincirinde {count} görev kaldı. Gece yarısı geliyor.",
+  "@notificationFinalCallBodyMany": { "placeholders": { "count": { "type": "int" } } },
+  "notificationEveningBodyOne": "Bugün hâlâ 1 açık görevin var.",
+  "notificationEveningBodyMany": "Bugün hâlâ {count} açık görevin var.",
+  "@notificationEveningBodyMany": { "placeholders": { "count": { "type": "int" } } },
+  "notificationTickerTaskReminder": "Görev hatırlatması",
+  "notificationTickerTaskAlarm": "Görev alarmı",
+
+  "habitBloomSubtitleL10n": "{count} günlük seri · {element}",
+  "@habitBloomSubtitleL10n": {
+    "placeholders": {
+      "count": { "type": "int" },
+      "element": { "type": "String" }
+    }
+  }
 }

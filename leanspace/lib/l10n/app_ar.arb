@@ -1,9 +1,10 @@
-﻿﻿﻿﻿﻿{
+﻿{
   "@@locale": "ar",
-  "appTitle": "بلوم تراكر",
+  "appTitle": "ديلي ستتش",
   "tabToday": "اليوم",
   "tabProgress": "التقدم",
   "tabYou": "أنت",
+
   "navMyDay": "يومي",
   "navSettings": "الإعدادات",
   "navHelp": "المساعدة والدعم",
@@ -12,66 +13,265 @@
   "navInsights": "تقدمك",
   "navMedals": "ميدالياتي",
   "navManagePro": "إدارة اشتراك Pro",
-  "navPaywall": "بلوم تراكر Pro",
+  "navPaywall": "ديلي ستتش Pro",
+
   "greetingLateNight": "تسهر حتى منتصف الليل",
   "greetingMorning": "صباح الخير، أيتها الشمس!",
   "greetingAfternoon": "مساء الخير، يا صديق",
   "greetingEvening": "مساء الخير، أيها البطل",
   "greetingNight": "ترتاح جيداً، أيها الحارس؟",
+
   "todayTasksCount": "اليوم · {done} من {total} مهمة",
+  "@todayTasksCount": {
+    "placeholders": {
+      "done": { "type": "String" },
+      "total": { "type": "String" }
+    }
+  },
   "todayHabitsCount": "{done} من {total} عادات",
+  "@todayHabitsCount": {
+    "placeholders": {
+      "done": { "type": "String" },
+      "total": { "type": "String" }
+    }
+  },
   "todayChainGrows": "السلسلة تنمو كلما أنهيت",
   "todayChainComplete": "السلسلة مكتملة · اعتنِ بالحديقة غداً",
   "taskCapInfo": "لماذا حد 5 مهام؟",
-  "taskCapDiscipline": "الانضباط أولاً",
+  "taskCapDiscipline": "الانضباط أولاً بالتصميم",
   "taskCapTitle": "نحدد يومك بـ 5 مهام عمداً.",
   "taskCapBody": "السلاسل الصغيرة أفضل من الطويلة. من المرجح أن تنهي 3 من 5 وتشعر بالانتصار بدلاً من أن تتخلى عن 8 من 10 وتشعر بالخسارة.",
+  "taskCapBulletDone": "يتم احتساب المهام المنجزة ضمن سلسلتك",
+  "taskCapBulletDoneBody": "إن اليوم الذي تنتهي فيه من الخمسة كلها يزيد من خطك بمقدار واحد.",
+  "taskCapBulletMissed": "يتم نقل المهام الفائتة إلى المتروكة",
+  "taskCapBulletMissedBody": "في منتصف الليل، تظهر المهام غير المكتملة في المتروكة. إعادة إضافة فقط ما لا يزال يهم.",
+  "taskCapBulletFreeze": "تجميد السلسلة يغفر الخطأ",
+  "taskCapBulletFreezeBody": "يمنحك Pro تجميدَي سلسلة في الشهر - فهي تغطي يوماً ضائعاً حتى تبقى سلسلتك على قيد الحياة.",
+
   "tasksHeader": "المهام",
+  "tasksProgressCount": "{done} / {total}",
+  "@tasksProgressCount": {
+    "placeholders": {
+      "done": { "type": "String" },
+      "total": { "type": "String" }
+    }
+  },
   "tasksAddSeed": "أضف بذرة مهمة",
   "tasksCapReached": "تم استخدام 5/5 خانات — أنهِ واحدة لزرع بذرة جديدة.",
   "tasksEmptyCta": "ازرع أول بذرة — ما الذي يهم اليوم؟",
+
   "habitsHeader": "العادات",
+  "habitsGrowing": "{count} تزايد",
+  "@habitsGrowing": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "habitsBestStreak": "أفضل {days} د",
+  "@habitsBestStreak": {
+    "placeholders": {
+      "days": { "type": "String" }
+    }
+  },
   "habitsPlantNew": "ازرع عادة جديدة",
   "habitsPlantFirst": "ازرع عادة",
   "habitsLocked": "خانة عادة Pro — افتح لزرع المزيد",
+  "habitsSlotsFull": "جميع خانات العادة ممتلئة حاليًا.",
+  "habitsStreakDays": "{days} د",
+  "@habitsStreakDays": {
+    "placeholders": {
+      "days": { "type": "String" }
+    }
+  },
   "habitsCadence": "يومي",
-  "leftBehindTitle": "المتروكة",
-  "leftBehindDismiss": "تجاهل",
+
+  "leftBehindBanner": "{count} غاب — لا يزال في المتروكة",
+  "@leftBehindBanner": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
   "leftBehindTap": "انقر للإضافة مرة أخرى أو اتركها",
+  "leftBehindDismiss": "تجاهل",
+  "leftBehindTitle": "المتروكة",
   "leftBehindEmpty": "لا شيء متروك",
   "leftBehindEmptyBody": "لا توجد مهام فائتة. كل بذرة تزرعها يتم الاعتناء بها. الحديقة نظيفة.",
   "leftBehindClearAll": "مسح الكل",
   "leftBehindClearAllConfirm": "مسح كل المتروك؟",
-  "leftBehindReAddToday": "أعد إضافة اليوم",
+  "leftBehindClearAllBody": "سيؤدي هذا إلى إزالة {count} من المهام الفائتة بشكل دائم. لا يمكنك التراجع عن هذا.",
+  "@leftBehindClearAllBody": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "leftBehindReAdd": "إعادة إضافة اليوم",
+  "leftBehindReAddButton": "إعادة الإضافة",
+  "leftBehindAddedToToday": "يضاف إلى اليوم",
   "leftBehindLetGo": "اتركها",
+  "leftBehindHeader": "المتروكة",
+  "leftBehindMissedTasks": "المهام الفائتة",
+  "leftBehindWaitingOne": "مهمة واحدة في انتظارك.",
+  "leftBehindWaitingMany": "{count} من المهام في انتظارك.",
+  "@leftBehindWaitingMany": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "leftBehindBody": "أعد إضافة مهمة لإعادتها إلى اليوم، أو اتركها. إعادة الإضافة تحافظ على خطك حيًا.",
+  "leftBehindReAddedSnack": "\"{task}\" عادت إلى يومك.",
+  "@leftBehindReAddedSnack": {
+    "placeholders": {
+      "task": { "type": "String" }
+    }
+  },
+  "leftBehindRemovedSnack": "تمت إزالة \"{task}\"",
+  "@leftBehindRemovedSnack": {
+    "placeholders": {
+      "task": { "type": "String" }
+    }
+  },
+  "leftBehindClearedSnack": "تم مسح المتروكة",
+  "leftBehindYesterdayDate": "أمس · {date}",
+  "@leftBehindYesterdayDate": {
+    "placeholders": {
+      "date": { "type": "String" }
+    }
+  },
+
+  "streakAtRisk": "{count} من المهام المتبقية لهذا اليوم",
+  "@streakAtRisk": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "streakAtRiskLastCall": "المكالمة الأخيرة - لا تزال {count} مهمة مفتوحة",
+  "@streakAtRiskLastCall": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "streakAtRiskBody": "منتصف الليل قريب. السلسلة تعتمد على هذه.",
+  "streakAtRiskBodyLow": "لا يزال لديك الوقت. يوم نظيف يمتد خطك.",
+  "streakAtRiskFreeze": "غاب بالأمس - استخدم تجميد السلسلة؟",
+  "streakFreezeUse": "استخدم التجميد",
+  "streakFreezeUseForYesterday": "استخدم تجميد السلسلة الشهري ليوم أمس",
+  "streakFreezeAppliedYesterday": "تم تطبيق تجميد السلسلة يوم أمس.",
+
+  "chainBrokenTitle": "انكسرت السلسلة. هذا جيد.",
+  "chainBrokenBody": "كل سلسلة طويلة تنتهي مرة واحدة. المهم هو ما تزرعه اليوم. يوم مثالي يبدأ باليوم التالي.",
+  "chainBrokenCta": "العودة إلى اليوم",
+  "chainBrokenPlantFirst": "ازرع البذرة الأولى اليوم",
+  "chainBrokenCheck": "تحقق من المتروكة أولاً",
+  "chainBrokenBestChain": "أفضل سلسلة",
+  "chainBrokenTasksDone": "المهام المنجزة",
+  "chainBrokenSprouts": "براعم",
+  "chainRecoveryFreshStart": "بداية جديدة",
+
   "medalsTitle": "ميدالياتي",
   "medalsTrophyRoom": "غرفة الكؤوس",
   "medalsAllMedals": "كل الميداليات",
+  "medalsTrophyEarned": "{earned} من {total} الميداليات المكتسبة",
+  "@medalsTrophyEarned": {
+    "placeholders": {
+      "earned": { "type": "String" },
+      "total": { "type": "String" }
+    }
+  },
+  "medalsTrophyEmpty": "شارتك الأولى على بعد مهمة واحدة",
+  "medalsTrophyFirst": "حصلت على ميداليتك الأولى — استمر",
+  "medalsTrophyMany": "{earned} ميدالية في غرفة الكؤوس",
+  "@medalsTrophyMany": {
+    "placeholders": {
+      "earned": { "type": "String" }
+    }
+  },
   "medalsProgressLabel": "التقدم نحو {total} ميدالية",
+  "@medalsProgressLabel": {
+    "placeholders": {
+      "total": { "type": "String" }
+    }
+  },
   "medalsShareCta": "أنشئ بطاقة قابلة للمشاركة",
   "medalsEmptyTitle": "لا شيء في هذه الفئة بعد",
   "medalsEmptyBody": "أنهِ مهمة أو اعتنِ ببرعم لبدء غرفة الكؤوس.",
+
+  "medalSheetLocked": "ميدالية PRO",
   "medalSheetEarned": "مُكتسبة · {tier}",
+  "@medalSheetEarned": {
+    "placeholders": {
+      "tier": { "type": "String" }
+    }
+  },
   "medalSheetUnlock": "افتح مع Pro",
   "medalSheetProgress": "التقدم",
+  "medalSheetHint": "فقط {n} {unit} إضافية لفتحها.",
+  "@medalSheetHint": {
+    "placeholders": {
+      "n": { "type": "String" },
+      "unit": { "type": "String" }
+    }
+  },
   "medalSheetAlmost": "خطوة واحدة للفتح.",
-  "medalSheetLocked": "ميدالية PRO",
   "medalCategory": "الفئة",
   "medalShareOnSocials": "شارك على وسائل التواصل",
   "medalShareLater": "لاحقاً",
   "medalUnlocked": "تم فتح الميدالية",
   "medalProgressTitle": "التقدم",
+
   "historyTitle": "آخر 7 أيام",
+  "historyFullTitle": "التاريخ الكامل",
+  "historyLoadError": "تعذر تحميل السجل.",
+  "historyFullCalendar": "تقويم كامل",
+  "historyCompletedPercent": "تم إكمال {percent}%",
+  "@historyCompletedPercent": {
+    "placeholders": {
+      "percent": { "type": "String" }
+    }
+  },
+  "historyThisWeek": "آخر {days} أيام",
+  "@historyThisWeek": {
+    "placeholders": {
+      "days": { "type": "String" }
+    }
+  },
   "historyDayByDay": "يوم بيوم",
+  "historyEmpty": "زرع بعض البذور لرؤية أسبوعك يتكشف.",
+  "historyDoneCount": "أنجزت {done} من أصل {total} مهمة. {perfect} يوم (أيام) مثالية.",
+  "@historyDoneCount": {
+    "placeholders": {
+      "done": { "type": "String" },
+      "total": { "type": "String" },
+      "perfect": { "type": "String" }
+    }
+  },
+  "historyUpsellTitle": "اعرض سجلك الكامل",
+  "historyUpsellBody": "يفتح Pro 30 يوماً من السجل. المجاني يعرض 7.",
   "historyPerfect": "مثالي",
   "historyFrozen": "مجمد",
   "historyToday": "اليوم",
   "historyEmptyDay": "لم تزرع أي بذرة في ذلك اليوم",
-  "historyUpsellTitle": "اعرض سجلك الكامل",
-  "historyUpsellBody": "يفتح Pro 30 يوماً من السجل. المجاني يعرض 7.",
+  "historyLeftBehindCount": "{count} تركوا وراءهم",
+  "@historyLeftBehindCount": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+
   "progressVitality": "حيوية اليوم",
   "progressVitalityEmpty": "ازرع بذرة لبدء حديقتك.",
+  "progressVitalitySeeds": "{done} من {total} بذور مزروعة اليوم.",
+  "@progressVitalitySeeds": {
+    "placeholders": {
+      "done": { "type": "String" },
+      "total": { "type": "String" }
+    }
+  },
   "progressChainPill": "سلسلة {days}ي",
+  "@progressChainPill": {
+    "placeholders": {
+      "days": { "type": "String" }
+    }
+  },
   "progressMetricCurrent": "الحالية",
   "progressMetricBest": "الأفضل",
   "progressMetricDone": "منجزة",
@@ -80,28 +280,64 @@
   "progressHabitBlooms": "إزهار العادات",
   "progressHabitBloomsSub": "معالم السلسلة للبراعم التي تسقيها يومياً.",
   "progressNextBadge": "الشارة التالية",
+  "progressMedalCount": "{earned} من {total}",
+  "@progressMedalCount": {
+    "placeholders": {
+      "earned": { "type": "String" },
+      "total": { "type": "String" }
+    }
+  },
   "progressPersonalActivity": "النشاط الشخصي",
+  "progressBrowseMonth": "التصفح {month}. اضغط على \"اليوم\" للعودة إلى نشاطك المباشر.",
+  "@progressBrowseMonth": {
+    "placeholders": {
+      "month": { "type": "String" }
+    }
+  },
   "progressJumpToToday": "اليوم",
   "progressCalendarLegend": "الأغمق = الأكثر إنجازاً",
   "progressCalendarBody": "الأخضر الغامق يعني يوماً مثالياً. يتلاشى اللون كلما تخطيت.",
+  "progressSeeAll": "عرض الكل",
+  "progressSeeDayByDayActivity": "عرض نشاطك يوم بيوم",
+  "progressTasksFinishedPct": "{done} من {total} مهمة مكتملة · {pct}%",
+  "progressNoMedalsYet": "لا ميداليات بعد — أنهِ مهمة أو اعتنِ ببرعم للبدء.",
+  "progressSeeAllMedals": "عرض كل الميداليات · {earned} من {total} مكتسبة",
+  "progressGuardianInsight": "رؤية الحارس",
+  "progressNextBadgeTier": "الشارة التالية · {tier}",
+  "progressDaysTarget": "هدف {days} يوم",
+  "progressOfTotal": "{value}/{target}",
+
   "paywallTitle": "لا تكسر السلسلة.",
-  "paywallSubtitle": "يمنحك Bloom Tracker Pro نظام الانضباط الكامل.",
+  "paywallSubtitle": "يمنحك Daily Stitch Pro نظام الانضباط الكامل.",
+  "paywallFeatures": "جميع فتحات العادات الخمس، وليس 3 فقط|تاريخك الكامل، إلى الأبد|مجموعة الميداليات الكاملة|تجميد السلسلة كل شهر|الإيصال الأسبوعي + بطاقات المشاركة|المواضيع + المزيد",
+  "paywallFeaturesBodies": "الإصدار المجاني يمنحك 3 فتحات. يفتح Pro جميع الخمس حتى تتمكن طقوسك اليومية الكاملة من العيش هنا.|تصفح كل يوم أكملته — وليس فقط آخر 7 أيام. انظر إلى السنوات الماضية، وليس الأسابيع.|افتح ميداليات الطبقة الأسطورية. أندر الشارات هي للأشخاص الذين يبذلون كل ما في وسعهم.|تجميدان شهريان حتى لا ينهي يوم سيء سلسلتك.|بطاقات مشاركة جميلة لأسبوعك. انشر سلسلتك، وألهم شخصاً آخر للبدء.|افتح ألواناً وسمات مميزة جديدة عندما نضيفها. تحديثات مجانية دائماً.",
   "paywallYearly": "سنوي",
   "paywallYearlyCaption": "أفضل قيمة · ~2.50$/شهر",
   "paywallYearlyBadge": "وفر 35%",
   "paywallMonthly": "شهري",
-  "paywallMonthlyCaption": "فوتر شهري · إلغاء في أي وقت",
+  "paywallMonthlyCaption": "فوترة شهرية · إلغاء في أي وقت",
+  "paywallStartCta": "ابدأ Pro · {price}/سنة",
+  "@paywallStartCta": {
+    "placeholders": {
+      "price": { "type": "String" }
+    }
+  },
+  "paywallStartCtaMonthly": "ابدأ Pro · {price}/شهر",
+  "@paywallStartCtaMonthly": {
+    "placeholders": {
+      "price": { "type": "String" }
+    }
+  },
   "paywallRestore": "استعادة الشراء",
   "paywallTerms": "الشروط",
   "paywallPrivacy": "الخصوصية",
-  "paywallAlreadyPro": "أنت على Pro. شكراً لدعمك.",
-  "paywallStartCta": "ابدأ Pro · {price}/سنة",
-  "paywallStartCtaMonthly": "ابدأ Pro · {price}/شهر",
   "paywallNoRestore": "لم يتم العثور على عملية شراء سابقة على هذا الحساب.",
   "paywallRestoreLater": "سنستعيد عملية الشراء عند المزامنة التالية.",
+  "paywallAlreadyPro": "أنت على Pro. شكراً لدعمك.",
   "paywallHabitSlotHead": "لقد استخدمت كل خانات العادات المجانية. افتح المجموعة الكاملة.",
   "paywallHistoryHead": "اعرض سجلك الكامل — كل يوم مثالي، كل ميدالية، كل عودة.",
-  "paywallMedalHead": "ال ميداليات النادرة حصرية لـ Pro. استمر — أنت أقرب مما تظن.",
+  "paywallMedalHead": "الميداليات النادرة حصرية لـ Pro. استمر — أنت أقرب مما تظن.",
+
   "settingsYourActivity": "نشاطك",
   "settingsHelpInfo": "مساعدة ومعلومات",
   "settingsAccount": "الحساب",
@@ -111,193 +347,739 @@
   "settingsEcosystemSupport": "الدعم",
   "settingsHowItWorks": "كيف يعمل",
   "settingsSignOut": "تسجيل الخروج",
-  "settingsLanguage": "اللغة",
-  "settingsLanguageValue": "افتراضي النظام",
   "settingsProActive": "نشط",
   "settingsProFree": "المستوى المجاني",
+  "settingsLanguage": "اللغة",
+  "settingsLanguageValue": "افتراضي النظام",
+
   "firstRunGreeting": "5 مهام. لا أكثر. اجعلها ذات قيمة.",
   "firstRunBody": "ازرع أول بذرة — ما الذي يهم اليوم؟",
   "firstRunCta": "ازرع أول بذرة",
+
   "emptyStateClearAll": "مسح الكل",
   "cancel": "إلغاء",
-  "shareCardSnapshot": "لقطة من محرابك",
+
+  "intentionTitle1": "دعونا نزرع نية جديدة!",
+  "intentionBody1": "كل غابة عظيمة تبدأ باختيار واحد صغير. أخبرني ماذا نرعى اليوم؟",
+  "intentionTitle2": "ماذا سننمو اليوم؟",
+  "intentionBody2": "البذور الصغيرة، إذا تم الاعتناء بها بعناية، تصبح أشجاراً طويلة. اختر الأكثر أهمية الآن.",
+  "intentionTitle3": "بذرة واحدة. نفس واحد. يبدأ.",
+  "intentionBody3": "ليس من الضروري أن تزرع الغابة بأكملها مرة واحدة، فقط الشيء الصحيح التالي.",
+  "intentionTitle4": "رعاية الخطوة الصغيرة التالية.",
+  "intentionBody4": "المستقبل — أنت مبني على الاختيارات التي تقوم بها في الدقائق الخمس القادمة. ما هي واحدة لطيفة؟",
+  "intentionTitle5": "اختر ما تريد أن تصبح.",
+  "intentionBody5": "المهام بذور، والعادات براعم. معاً يشكلون غابة تفتخر بها.",
+  "intentionTitle6": "ازرع شيئاً يستحق التذكر.",
+  "intentionBody6": "لن تشعر بالضخامة كل يوم. لا تزال البذرة المسقية ذات أهمية. لنسمِ واحداً.",
+  "intentionTitle7": "اجعل اليوم أكثر شجاعة قليلاً.",
+  "intentionBody7": "شجاعة تتراكم. اختر البذرة التي كنت تؤجلها — حتى تسميتها تدفعها للأمام.",
+  "intentionTitle8": "رعاية التربة قبل البذرة.",
+  "intentionBody8": "ما هي العقلية أو الأداة أو الطقوس الصغيرة التي ستجعل هذه المهمة أسهل؟ أضفها إلى الملاحظات.",
+
+  "shareCardSnapshot": "لقطة من ملاذك",
+  "shareCardBody": "يتم تصدير البطاقة أعلاه بصيغة PNG وإرسالها إلى ورقة المشاركة. انشرها على قصتك، أو أرسلها إلى صديق، أو اطبعها كملصق.",
   "shareCardShareMyBloom": "شارك إزهارتي",
   "shareCardCouldNotShare": "لا يمكن المشاركة الآن",
-  "shareCardProgressText": "تقدمي في Bloom Tracker — {year} على Bloom Tracker.",
-  "shareCardMedalText": "لقد فتحت للتو ميدالية \"{title}\" في Bloom Tracker. {subtitle}",
+  "shareCardProgressText": "تقدمي في Daily Stitch — {year} على Daily Stitch.",
+  "@shareCardProgressText": {
+    "placeholders": {
+      "year": { "type": "String" }
+    }
+  },
+  "shareCardMedalText": "لقد فتحت للتو ميدالية \"{title}\" في Daily Stitch. {subtitle}",
+  "@shareCardMedalText": {
+    "placeholders": {
+      "title": { "type": "String" },
+      "subtitle": { "type": "String" }
+    }
+  },
+
   "howItWorksTitle": "كيف يعمل",
-  "howItWorksBody": "يساعدك Bloom Tracker في الحفاظ على سلسلة انضباط صغيرة لا تنكسر. هذا كل شيء.",
+  "howItWorksBody": "يساعدك Daily Stitch في الحفاظ على سلسلة انضباط صغيرة لا تنكسر. هذا كل شيء.",
   "howItWorksToday": "علامة تبويب اليوم",
   "howItWorksTodayBody": "هذا هو منزلك. يعرض 5 المهام والعادات التي حددتها لليوم. أنهها قبل منتصف الليل، السلسلة تتمدد.",
   "howItWorksCap": "حد الـ 5 مهام هو الميزة",
-  "howItWorksCapBody": "لا نسمح لك بإضافة السادس. هذه هي النقطة. انقر \"?\" على الشاشة الرئيسية للشرح الكامل.",
+  "howItWorksCapBody": "لا نسمح لك بإضافة السادس. هذه هي النقطة. السلاسل الصغيرة تتفوق على الطويلة. انقر \"?\" على الشاشة الرئيسية للشرح الكامل.",
   "howItWorksHabits": "العادات يومية، السلسلة للأبد",
   "howItWorksHabitsBody": "العادات (يوغا الصباح، شرب الماء) تعيش للأبد. المهام لمرة واحدة. كلاهما يغذي نفس السلسلة.",
   "howItWorksLeftBehind": "المهام الفائتة → المتروكة",
-  "howItWorksLeftBehindBody": "عند منتصف الليل، المهام غير المكتملة تنتقل إلى المتروكة. أعد إضافة ما يهم فقط.",
+  "howItWorksLeftBehindBody": "عند منتصف الليل، المهام غير المكتملة تنتقل إلى المتروكة. أعد إضافة ما يهم فقط. الباقي يحصل على راحة بهدوء.",
   "howItWorksProgress": "علامة تبويب التقدم",
   "howItWorksProgressBody": "السلسلة، التقويم، الميداليات، السجل — كل شيء عن تقدمك مع الوقت. لا شيء عاجل هنا.",
   "howItWorksYou": "علامة تبويب أنت",
   "howItWorksYouBody": "حسابك، الإعدادات، تسجيل الخروج. هذا كل شيء.",
   "howItWorksRule": "القاعدة: 5 أشياء صغيرة، كل يوم، بدون أعذار.",
 
+  "commonRetry": "إعادة المحاولة",
+  "commonBack": "رجوع",
+  "commonDismiss": "تجاهل",
+  "commonCancel": "إلغاء",
+  "commonClose": "إغلاق",
+  "commonSend": "إرسال",
+  "commonCopy": "نسخ",
+  "commonShowLess": "عرض أقل",
+  "commonViewFull": "عرض الملاحظات الكاملة",
+  "commonEdit": "تعديل",
+  "commonDelete": "حذف",
+  "commonDone": "تم",
+  "commonError": "حدث خطأ ما",
+  "commonPageNotFound": "الصفحة غير موجودة",
+  "commonHome": "الرئيسية",
+  "commonUnknownError": "خطأ توجيه غير معروف",
+  "commonSettingsTooltip": "الإعدادات",
+  "commonHowThisWorks": "كيف يعمل هذا",
 
-  "commonRetry": "Retry",
-  "commonBack": "Back",
-  "commonDismiss": "Dismiss",
-  "commonCancel": "Cancel",
-  "commonClose": "Close",
-  "commonSend": "Send",
-  "commonCopy": "Copy",
-  "commonShowLess": "Show less",
-  "commonViewFull": "View full notes",
-  "commonEdit": "Edit",
-  "commonDelete": "Delete",
-  "commonDone": "Done",
-  "commonError": "Something went wrong",
-  "commonPageNotFound": "Page Not Found",
-  "commonHome": "Home",
-  "commonUnknownError": "Unknown routing error",
-  "commonSettingsTooltip": "Settings",
-  "commonHowThisWorks": "How this works",
+  "myDayReminderSet": "تم تعيين التذكير",
+  "myDayPreparationNotes": "ملاحظات التحضير",
 
-  "myDayReminderSet": "Reminder set",
-  "myDayPreparationNotes": "PREPARATION NOTES",
+  "onboardingSkip": "تخطي",
+  "onboardingNext": "التالي",
+  "onboardingEnterSanctuary": "دخول الملاذ",
+  "onboardingIntroduction": "مقدمة",
+  "onboardingGrowYourForest": "نمّي غابتك",
+  "onboardingPage1Title": "تعرّف على حارسك.",
+  "onboardingPage1Body": "مرحبًا بك في ملاذك الشخصي. هنا، يتجلى نموك في حياة غابتك.",
+  "onboardingPage2Title": "ازرع بذوراً. شاهدها تنمو.",
+  "onboardingPage2Body": "كل مهمة بذرة صغيرة. كل عادة برعم تعتني به يومياً. معاً يشكّلون غابة من الانضباط.",
+  "onboardingPage3Title": "خمس مهام. سلسلة واحدة.",
+  "onboardingPage3Body": "يمكنك زراعة 5 بذور فقط في اليوم. هذا الحد يجبرك على التركيز على ما يهم فعلاً — وحماية سلسلتك.",
+  "onboardingPage4Title": "اعتنِ ببراعمك يومياً.",
+  "onboardingPage4Body": "اضغط على العادات لتنميتها. تخطَّ يوماً ولن تمتد السلسلة. الحارس ينمو معك.",
 
-  "onboardingSkip": "SKIP",
-  "onboardingNext": "Next",
-  "onboardingEnterSanctuary": "Enter Sanctuary",
-  "onboardingIntroduction": "INTRODUCTION",
-  "onboardingGrowYourForest": "GROW YOUR FOREST",
-  "onboardingPage1Title": "Meet your Guardian.",
-  "onboardingPage1Body": "Welcome to your Personal Sanctuary. Here, your growth is mirrored in the life of your forest.",
-  "onboardingPage2Title": "Plant seeds. Watch them grow.",
-  "onboardingPage2Body": "Each task is a tiny seed. Each habit is a sprout you tend daily. Together they form a forest of discipline.",
-  "onboardingPage3Title": "Five tasks. One chain.",
-  "onboardingPage3Body": "You can only plant 5 seeds per day. That cap forces you to focus on what actually matters — and protect your chain.",
-  "onboardingPage4Title": "Tend your sprouts daily.",
-  "onboardingPage4Body": "Tap habits to grow them. Skip a day and the chain doesn't extend. The Guardian grows with you.",
-
-  "authBrand": "BLOOM TRACKER",
-  "authPlantFirstSeed": "Plant your first seed.",
-  "authWelcomeBack": "Welcome back, Guardian.",
-  "authFiveTasksDaily": "Five tasks. Daily habits. No excuses.",
-  "authSanctuaryWaiting": "Your sanctuary is waiting.",
-  "authSignIn": "Sign In",
-  "authSignUp": "Sign Up",
-  "authEmail": "EMAIL",
-  "authPassword": "PASSWORD",
+  "authBrand": "DAILY STITCH",
+  "authPlantFirstSeed": "ازرع بذرتك الأولى.",
+  "authWelcomeBack": "مرحبًا بعودتك، يا حارس.",
+  "authFiveTasksDaily": "خمس مهام. عادات يومية. لا أعذار.",
+  "authSanctuaryWaiting": "ملاذك في انتظارك.",
+  "authSignIn": "تسجيل الدخول",
+  "authSignUp": "إنشاء حساب",
+  "authEmail": "البريد الإلكتروني",
+  "authPassword": "كلمة المرور",
   "authEmailHint": "you@email.com",
-  "authCreateAccount": "Create account",
-  "authSignInCta": "Sign in",
-  "authOrContinueWith": "or continue with",
-  "authContinueWithGoogle": "Continue with Google",
-  "authEnterEmail": "Enter your email",
-  "authEnterValidEmail": "Enter a valid email address",
-  "authPasswordTooShort": "Password must be at least 6 characters",
-  "authAccountCreated": "Account created. Switch to Sign In and use your password.",
-  "authSomethingWentWrong": "Something went wrong. Try again.",
-  "authCouldNotStartGoogle": "Could not start Google sign-in.",
-  "authMidnightReset": "By signing in, you accept that your day resets at midnight.",
-  "authSetupRequired": "Setup required",
+  "authCreateAccount": "إنشاء حساب",
+  "authSignInCta": "تسجيل الدخول",
+  "authOrContinueWith": "أو تابع باستخدام",
+  "authContinueWithGoogle": "المتابعة مع Google",
+  "authEnterEmail": "أدخل بريدك الإلكتروني",
+  "authEnterValidEmail": "أدخل عنوان بريد إلكتروني صالح",
+  "authPasswordTooShort": "يجب أن تكون كلمة المرور 6 أحرف على الأقل",
+  "authAccountCreated": "تم إنشاء الحساب. انتقل إلى تسجيل الدخول واستخدم كلمة المرور.",
+  "authSomethingWentWrong": "حدث خطأ ما. حاول مرة أخرى.",
+  "authCouldNotStartGoogle": "تعذر بدء تسجيل الدخول عبر Google.",
+  "authMidnightReset": "بتسجيل الدخول، أنت توافق على إعادة تعيين يومك عند منتصف الليل.",
+  "authSetupRequired": "الإعداد مطلوب",
 
-  "settingsPersonalSanctuary": "PERSONAL SANCTUARY",
-  "settingsHowThisWorks": "How this works",
-  "settingsHowThisWorksSubtitle": "What the app is, how the cap and streak work",
-  "settingsStreakProtection": "Streak Protection",
-  "settingsStreakProtectionAvailable": "1 freeze available this month",
-  "settingsStreakProtectionUsed": "Used for this month",
-  "settingsProSubscription": "Bloom Tracker Pro",
-  "settingsManageProSubscription": "Manage Pro subscription",
-  "settingsProCancelPlay": "Cancel or change plan in Google Play",
-  "settingsProUnlock": "Unlock all 5 habits, full history, more",
-  "settingsTaskAlarms": "Task alarms & Final Call",
-  "settingsTaskAlarmsSubtitle": "Evening nudge and midnight warning",
-  "settingsHomeScreenWidget": "Home-screen widget",
-  "settingsHomeScreenWidgetSubtitle": "Add your chain streak to the home screen",
-  "settingsShareBloomTracker": "Share Bloom Tracker",
-  "settingsShareBloomTrackerSubtitle": "Tell a friend about the chain",
-  "settingsHelpSupport": "Help & Support",
-  "settingsHelpSupportSubtitle": "FAQ or report a problem",
-  "settingsSignOutTile": "Sign Out",
-  "settingsAllFeaturesUnlocked": "All features unlocked",
-  "settingsAllFeaturesUnlockedSubtitle": "Beta build — subscriptions paused while we test everything.",
-  "settingsVersion": "Version {version} ({build})",
-  "settingsVersionUnknown": "Version 1.0.0",
-  "settingsHabitMaster": "Habit Master",
-  "settingsLevel": "Level {level} · Habit Master",
+  "settingsPersonalSanctuary": "الملاذ الشخصي",
+  "settingsHowThisWorks": "كيف يعمل هذا",
+  "settingsHowThisWorksSubtitle": "ما هو التطبيق، وكيف يعمل حد المهام والأرقام المتتالية",
+  "settingsStreakProtection": "حماية السلسلة",
+  "settingsStreakProtectionAvailable": "تجميد واحد متاح هذا الشهر",
+  "settingsStreakProtectionUsed": "مستخدم لهذا الشهر",
+  "settingsProSubscription": "Daily Stitch Pro",
+  "settingsManageProSubscription": "إدارة اشتراك Pro",
+  "settingsProCancelPlay": "إلغاء أو تغيير الخطة في Google Play",
+  "settingsProUnlock": "افتح جميع العادات الخمس، السجل الكامل، والمزيد",
+  "settingsTaskAlarms": "إنذارات المهام والمكالمة النهائية",
+  "settingsTaskAlarmsSubtitle": "تنبيه مسائي وتنبيه منتصف الليل",
+  "settingsHomeScreenWidget": "ودجة الشاشة الرئيسية",
+  "settingsHomeScreenWidgetSubtitle": "أضف سلسلتك إلى الشاشة الرئيسية",
+  "settingsShareBloomTracker": "مشاركة Daily Stitch",
+  "settingsShareBloomTrackerSubtitle": "أخبر صديقاً عن السلسلة",
+  "settingsHelpSupport": "المساعدة والدعم",
+  "settingsHelpSupportSubtitle": "الأسئلة الشائعة أو الإبلاغ عن مشكلة",
+  "settingsSignOutTile": "تسجيل الخروج",
+  "settingsAllFeaturesUnlocked": "جميع الميزات مفتوحة",
+  "settingsAllFeaturesUnlockedSubtitle": "إصدار تجريبي — الاشتراكات متوقفة أثناء اختبار كل شيء.",
+  "settingsVersion": "الإصدار {version} ({build})",
+  "settingsVersionUnknown": "الإصدار 1.0.0",
+  "settingsHabitMaster": "سيد العادات",
+  "settingsLevel": "المستوى {level} · سيد العادات",
 
-  "languagePickerTitle": "Language",
+  "languagePickerTitle": "اللغة",
 
-  "youLast7Days": "Last 7 days",
-  "youLast7DaysSubtitle": "Day-by-day task history",
-  "youLeftBehindSubtitle": "Missed tasks waiting to be re-added",
-  "youProTier": "Pro tier",
-  "youFreeTier": "Free tier",
+  "youLast7Days": "آخر 7 أيام",
+  "youLast7DaysSubtitle": "سجل المهام يوم بيوم",
+  "youLeftBehindSubtitle": "مهام فائتة في انتظار إعادة الإضافة",
+  "youProTier": "مستوى Pro",
+  "youFreeTier": "المستوى المجاني",
   "youPro": "Pro",
-  "youFree": "Free",
-  "youLevelLabel": "Level {level}",
-  "youBestStreakLabel": "Best {days} d",
-  "youPlantHabit": "Plant a habit to start a chain.",
+  "youFree": "مجاني",
+  "youLevelLabel": "المستوى {level}",
+  "youBestStreakLabel": "أفضل {days} د",
+  "youPlantHabit": "ازرع عادة لبدء سلسلة.",
   "youProBadge": "PRO",
-  "youUnlockDiscipline": "Unlock the full discipline system.",
-  "youProFeatures": "5 habit slots, full history, legendary medals, monthly streak freezes, weekly share cards.",
-  "youSeePlans": "See plans",
-  "youFromPrice": "from {price}/mo",
-  "youBloomTrackerFooter": "Bloom Tracker · Habit & To-Do",
+  "youUnlockDiscipline": "افتح نظام الانضباط الكامل.",
+  "youProFeatures": "5 فتحات عادات، السجل الكامل، ميداليات أسطورية، تجميد سلسلة شهري، بطاقات مشاركة أسبوعية.",
+  "youSeePlans": "عرض الخطط",
+  "youFromPrice": "من {price}/شهر",
+  "youBloomTrackerFooter": "Daily Stitch · عادات ومهام",
 
-  "progressMedals": "Medals",
-  "progressLast7Days": "Last 7 days",
-  "progressSeeAll": "See all",
-  "progressSeeDayByDayActivity": "See your day-by-day activity",
-  "progressTasksFinishedPct": "{done} of {total} tasks finished · {pct}%",
-  "progressNoMedalsYet": "No medals yet — finish a task or tend a sprout to get started.",
-  "progressSeeAllMedals": "See all medals · {earned} of {total} earned",
-  "progressGuardianInsight": "Guardian insight",
-  "progressNextBadgeTier": "NEXT BADGE · {tier}",
-  "progressDaysTarget": "{days} day target",
-  "progressOfTotal": "{value}/{target}",
+  "progressMedals": "الميداليات",
+  "progressLast7Days": "آخر 7 أيام",
 
-  "helpTitle": "Help & Support",
-  "helpBody": "Most answers are below. If not, send us a note and we usually reply within 2–3 days.",
-  "helpSectionFAQ": "FREQUENT QUESTIONS",
-  "helpSectionContact": "STILL STUCK?",
-  "helpAddMessage": "Add a short message first.",
-  "helpOpening": "Opening your mail app…",
-  "helpEmailUs": "Email us",
-  "helpOpeningAction": "Opening…",
-  "helpCopyEmail": "Copy support email",
-  "helpCopiedEmail": "Copied support@bloomtracker.app",
-  "helpNoMailApp": "No mail app found. Email us at support@bloomtracker.app.",
-  "helpTopicLabel": "Topic",
-  "helpWhatHappened": "What happened?",
-  "helpHint": "A short description goes a long way…",
-  "helpDisclaimer": "Tapping \"Email us\" opens your mail app with a pre-filled message (no data leaves your device until you send).",
-  "helpFaqQ1": "What is the 5-task cap?",
-  "helpFaqA1": "You can add up to 5 tasks per local day. The 6th is blocked on purpose — discipline beats overload. The cap is the feature, not a limitation.",
-  "helpFaqQ2": "What happens at midnight?",
-  "helpFaqA2": "At your local midnight, any task still marked open is stamped \"missed\" and moves to Left Behind. Habit streaks reset if the habit was not completed the day before.",
-  "helpFaqQ3": "What is Left Behind?",
-  "helpFaqA3": "A gentle, dismissible list of tasks you didn't finish. Open it, re-add only what still matters, and let the rest go. Free tier sees the last 7 days; Pro sees full history.",
-  "helpFaqQ4": "How do streaks work?",
-  "helpFaqA4": "A day extends the chain when you had at least 1 task and 0 were missed. Days with zero tasks neither extend nor break the chain. A streak freeze forgives one missed day per month.",
-  "helpFaqQ5": "What is the streak freeze?",
-  "helpFaqA5": "One \"freeze\" per calendar month, Pro only. Spend it on a day you missed to keep your chain alive. Find it on the Progress tab.",
-  "helpFaqQ6": "Where is my data stored?",
-  "helpFaqA6": "All data lives in Supabase (Postgres) under the account that signed in. We never sell or share it. See the privacy policy linked in the Play Store listing for the full details.",
-  "helpFaqQ7": "How do I delete my account?",
-  "helpFaqA7": "Account deletion is coming to Settings in the next release. For now, email support@bloomtracker.app and we'll handle it within a day.",
-  "helpTopicsGeneral": "General question",
-  "helpTopicsBug": "Bug report",
-  "helpTopicsStreak": "Streak / rollover issue",
-  "helpTopicsBilling": "Billing or Pro tier",
-  "helpTopicsAccount": "Account & data",
-  "helpTopicsFeature": "Feature request",
-  "helpAccountAnon": "(not signed in)",
+  "helpTitle": "المساعدة والدعم",
+  "helpBody": "معظم الإجابات أدناه. إذا لم تجدها، أرسل لنا رسالة ونرد عادةً خلال 2-3 أيام.",
+  "helpSectionFAQ": "الأسئلة الشائعة",
+  "helpSectionContact": "لا تزال عالقاً؟",
+  "helpAddMessage": "أضف رسالة قصيرة أولاً.",
+  "helpOpening": "جاري فتح تطبيق البريد…",
+  "helpEmailUs": "أرسل لنا بريداً إلكترونياً",
+  "helpOpeningAction": "جاري الفتح…",
+  "helpCopyEmail": "نسخ البريد الإلكتروني للدعم",
+  "helpCopiedEmail": "تم نسخ support@dailystitch.app",
+  "helpNoMailApp": "لم يتم العثور على تطبيق بريد. أرسل لنا على support@dailystitch.app.",
+  "helpTopicLabel": "الموضوع",
+  "helpWhatHappened": "ما الذي حدث؟",
+  "helpHint": "وصف قصير يساعد كثيراً…",
+  "helpDisclaimer": "بالنقر على \"أرسل لنا بريداً\" سيفتح تطبيق البريد مع رسالة مجهزة مسبقاً (لا تغادر أي بيانات جهازك حتى ترسل).",
+  "helpFaqQ1": "ما هو حد 5 مهام؟",
+  "helpFaqA1": "يمكنك إضافة حتى 5 مهام في اليوم المحلي. السادس محظور عمداً — الانضباط يتفوق على الحمل الزائد. الحد هو الميزة، وليس قيداً.",
+  "helpFaqQ2": "ماذا يحدث عند منتصف الليل؟",
+  "helpFaqA2": "عند منتصف الليل المحلي، أي مهمة لا تزال مفتوحة يتم وضع علامة \"فائتة\" عليها والانتقال إلى المتروكة. تُعاد تعيين أرقام العادات إذا لم تُكتمل العادة في اليوم السابق.",
+  "helpFaqQ3": "ما هي المتروكة؟",
+  "helpFaqA3": "قائمة لطيفة ويمكن إلغاؤها بالمهام التي لم تكملها. افتحها، أعد إضافة ما يزال يهم، واترك الباقي. المستوى المجاني يرى آخر 7 أيام؛ Pro يرى السجل الكامل.",
+  "helpFaqQ4": "كيف تعمل الأرقام المتتالية؟",
+  "helpFaqA4": "يوم يمتد السلسلة عندما كانت لديك مهمة واحدة على الأقل ولم يتم تفويت أي منها. الأيام التي بها صفر مهام لا تمتد ولا تكسر السلسلة. تجميد السلسلة يغفر يوماً ضائعاً واحداً في الشهر.",
+  "helpFaqQ5": "ما هو تجميد السلسلة؟",
+  "helpFaqA5": "\"تجميد\" واحد لكل تقويم شهر، لمستوى Pro فقط. استخدمه في يوم فاتك للحفاظ على سلسلتك حية. ابحث عنه في علامة تبويب التقدم.",
+  "helpFaqQ6": "أين يتم تخزين بياناتي؟",
+  "helpFaqA6": "جميع البيانات مخزنة في Supabase (Postgres) تحت الحساب الذي سجل الدخول. نحن لا نبيع أو نشارك أبداً. راجع سياسة الخصوصية المرتبطة في صفحة Play Store للتفاصيل الكاملة.",
+  "helpFaqQ7": "كيف أحذف حسابي؟",
+  "helpFaqA7": "اذهب إلى الإعدادات ← الحساب ← حذف الحساب. يؤدي هذا إلى حذف ملفك الشخصي ومهامك وعاداتك وبيانات اشتراكك بشكل دائم. يجب إلغاء اشتراكات Play النشطة بشكل منفصل في Google Play.",
+  "helpTopicsGeneral": "سؤال عام",
+  "helpTopicsBug": "تقرير خطأ",
+  "helpTopicsStreak": "مشكلة سلسلة / ترحيل",
+  "helpTopicsBilling": "الفواتير أو مستوى Pro",
+  "helpTopicsAccount": "الحساب والبيانات",
+  "helpTopicsFeature": "طلب ميزة",
+  "helpAccountAnon": "(غير مسجل الدخول)",
 
-  "splashTagline": "Nurture small seeds. Grow a forest.",
+  "splashTagline": "اعتني بالبذور الصغيرة. ازرع غابة.",
 
-  "priorityStandard": "STANDARD",
-  "priorityVital": "VITAL",
-  "prioritySpark": "SPARK"
+  "priorityStandard": "عادي",
+  "priorityVital": "حيوي",
+  "prioritySpark": "شرارة",
+
+  "settingsDeleteAccount": "حذف الحساب",
+  "settingsDeleteAccountSubtitle": "إزالة بياناتك نهائيamente",
+  "settingsDeleteAccountConfirmTitle": "هل تريد حذف حسابك؟",
+  "settingsDeleteAccountConfirmBody": "يؤدي هذا إلى حذف ملفك الشخصي ومهامك وعاداتك وتقدمك بشكل دائم. يجب إلغاء الاشتراكات النشطة في Google Play بشكل منفصل. لا يمكن التراجع عن هذا.",
+  "settingsDeleteAccountConfirmButton": "حذف إلى الأبد",
+  "settingsDeleteAccountSuccess": "تم حذف حسابك.",
+  "settingsDeleteAccountFailed": "لا يمكن حذف الحساب. حاول مرة أخرى أو أرسل بريداً إلكترونياً إلى support@dailystitch.app.",
+
+  "referralYouTitle": "قم بدعوة الأصدقاء · اربح Pro مجاناً",
+  "referralYouSubtitle": "{progress} من {milestone} من الأصدقاء انضموا",
+  "@referralYouSubtitle": {
+    "placeholders": {
+      "progress": { "type": "int" },
+      "milestone": { "type": "int" }
+    }
+  },
+  "referralYouShare": "مشاركة الدعوة",
+  "referralYouDetails": "عرض التفاصيل",
+  "referralPaywallTitle": "شهر Pro مجاني",
+  "referralPaywallBody": "قم بدعوة 5 أصدقاء قاموا بالتسجيل ← شهر واحد مجاناً",
+  "referralPaywallProBody": "استمر في دعوتك — قم بتكديس أشهر Pro المجانية",
+  "referralPaywallProgress": "{count} / {milestone}",
+
+  "insightsLoadError": "تعذر تحميل تقدمك. حاول مرة أخرى لاحقاً.",
+  "insightsMetricCurrentChain": "السلسلة الحالية",
+  "insightsMetricBestEver": "الأفضل على الإطلاق",
+  "insightsMetricTasksDone": "المهام المنجزة",
+  "insightsMetricPerfectDays": "أيام مثالية",
+  "insightsMetricHabits": "العادات",
+  "insightsDay": "يوم",
+  "insightsDays": "أيام",
+  "insightsSectionThisWeek": "هذا الأسبوع",
+  "insightsShareMyWeek": "شارك أسبوعي",
+  "insightsShareMyWeekPro": "شارك أسبوعي · Pro",
+  "insightsShareReceiptText": "أسبوعي على Daily Stitch. لا تكسر السلسلة.",
+  "insightsHistoryWindowTitle": "عرض آخر {days} أيام",
+  "@insightsHistoryWindowTitle": {
+    "placeholders": {
+      "days": { "type": "int" }
+    }
+  },
+  "insightsHistoryUpsell": "افتح سجلك الكامل مع Pro",
+
+  "referralScreenTitle": "دعوة الأصدقاء",
+  "referralLaunchGift": "هدية شهر الإطلاق",
+  "referralRewardTitle": "احصل على شهر واحد من Pro مجاناً",
+  "referralRewardBody": "شارك رمزك مع الأصدقاء. عندما يقوم 5 أشخاص بالتسجيل باستخدامه، يمكنك فتح Daily Stitch Pro لمدة شهر كامل.",
+  "referralYourCode": "رمز الإحالة الخاص بك",
+  "referralCopyCodeTooltip": "نسخ الرمز",
+  "referralCodeCopied": "تم نسخ رمز الإحالة",
+  "referralShareWithFriends": "شارك مع الأصدقاء",
+  "referralFooterHint": "يقوم الأصدقاء بإدخال رمزك عند إنشاء حساب. يتم احتساب كل صديق مرة واحدة في مكافأتك.",
+  "referralFriendsJoinedOne": "انضم {count} صديق",
+  "@referralFriendsJoinedOne": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "referralFriendsJoinedMany": "انضم {count} من الأصدقاء",
+  "@referralFriendsJoinedMany": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "referralRewardsEarnedOne": "ربحت {count} شهر مجانياً من Pro.",
+  "@referralRewardsEarnedOne": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "referralRewardsEarnedMany": "ربحت {count} شهراً مجانياً من Pro.",
+  "@referralRewardsEarnedMany": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "referralRewardUnlocked": "تم فتح المكافأة — استمتع بشهر Pro المجاني!",
+  "referralRemainingToUnlock": "{remaining} إضافية لفتح شهرك المجاني",
+  "@referralRemainingToUnlock": {
+    "placeholders": {
+      "remaining": { "type": "int" }
+    }
+  },
+
+  "youProMemberSince": "عضو في Daily Stitch Pro منذ {month}",
+  "@youProMemberSince": {
+    "placeholders": {
+      "month": { "type": "String" }
+    }
+  },
+  "youProPerksTitle": "امتيازات Pro الخاصة بك",
+  "manageProThankYou": "شكراً لدعمك Daily Stitch",
+  "manageProReferralHint": "قم بدعوة المزيد من الأصدقاء لتوسيع نطاق Pro الخاص بك",
+
+  "bootstrapConfigErrorBody": "{detail}\n\nأضف SUPABASE_URL وSUPABASE_PUBLISHABLE_KEY (أو SUPABASE_ANON_KEY القديم) إلى leanspace/.env، ثم أعد البناء:\n\nflutter build apk --debug",
+  "@bootstrapConfigErrorBody": {
+    "placeholders": {
+      "detail": { "type": "String" }
+    }
+  },
+
+  "languageSystemDefault": "الافتراضي للنظام",
+  "languageNameEn": "إنجليزي",
+  "languageNameUr": "اردو (الأردية)",
+  "languageNameEs": "الإسبانية",
+  "languageNamePt": "البرتغالية",
+  "languageNameFr": "الفرنسية",
+  "languageNameDe": "الألمانية",
+  "languageNameIt": "الإيطالية",
+  "languageNameAr": "العربية",
+  "languageNameTr": "التركية",
+  "languageNameId": "البهاسا الإندونيسية",
+  "languageNameHi": "الهندية",
+  "languageNamePa": "البنجابية",
+  "languageNameSd": "السندية",
+  "languageNameBn": "البنغالية",
+  "languageNamePs": "الباشتو",
+
+  "onboardingLanguageTitle": "اختر لغتك",
+  "onboardingLanguageBody": "اختر اللغة التي ترغب في استخدامها عبر Daily Stitch. يمكنك تغييرها في أي وقت في الإعدادات.",
+  "onboardingLanguageContinue": "متابعة",
+
+  "commonPro": "للمحترفين",
+  "commonFriend": "صديق",
+
+  "settingsAppTheme": "سمة التطبيق",
+  "settingsAppThemeSubtitle": "اختر ألوان ملاذك الشخصي",
+  "settingsInviteFriendsTitle": "دعوة الأصدقاء · مجاني مع Pro",
+  "settingsInviteFriendsSubtitle": "احصل على شهر مجاني عند انضمام 5 أصدقاء",
+
+  "themePickerTitle": "ملاذ شخصي",
+  "themePickerSubtitle": "اختر لوحة الألوان التي تجلب لك السلام.",
+  "themeNameClassicBloom": "كلاسيك بلوم",
+  "themeNameSolarTerracotta": "الطين الشمسي",
+  "themeNameMidnightOasis": "واحة منتصف الليل",
+  "themeNameLavenderDream": "حلم الخزامى",
+  "themeNameNordicFrost": "الصقيع الشمالي",
+  "themeNameCyberpunkNeon": "سايبربانك النيون",
+
+  "reminderTitle": "التذكيرات",
+  "reminderBody": "تنبهك المكالمة النهائية قبل منتصف الليل إذا كانت المهام لا تزال مفتوحة.",
+  "reminderFinalCall": "المكالمة النهائية",
+  "reminderEveningNudge": "تنبيه مسائي",
+  "reminderChangeTime": "تغيير الوقت",
+  "reminderSave": "حفظ التذكيرات",
+
+  "notificationChannelReminders": "تذكيرات Daily Stitch",
+  "notificationChannelRemindersDesc": "تنبيه مسائي وتذكير المكالمة النهائية",
+  "notificationChannelAlarms": "إنذارات مهام Daily Stitch",
+  "notificationChannelAlarmsDesc": "إنذارات عالية لتذكير المهام",
+  "notificationTaskReminderTitle": "تذكير بالمهمة",
+  "notificationFinalCallTitle": "المكالمة النهائية",
+  "notificationFinalCallBody": "لا يزال لديك {count} مهمة مفتوحة اليوم.",
+  "@notificationFinalCallBody": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "notificationEveningTitle": "تسجيل الوصول المسائي",
+  "notificationEveningBody": "كيف تنمو حديقتك اليوم؟",
+
+  "widgetSetupTitle": "إضافة ودجة السلسلة",
+  "widgetSetupBody": "حافظ على سلسلتك على شاشتك الرئيسية — لا داعي لفتح التطبيق.",
+  "widgetSetupAdd": "إضافة إلى الشاشة الرئيسية",
+  "widgetSetupStep1": "اضغط لفترة طويلة على شاشتك الرئيسية",
+  "widgetSetupStep2": "اضغط على الودجات",
+  "widgetSetupStep3": "ابحث عن Daily Stitch واسحبه",
+  "widgetSetupPinSuccess": "تحقق من شاشتك الرئيسية لوضع الودجة.",
+  "widgetSetupPinFallback": "قد لا يدعم المشغل الخاص بك الإضافة بنقرة واحدة. استخدم الخطوات اليدوية أدناه.",
+
+  "paywallWelcomePro": "مرحباً بكم في Daily Stitch Pro",
+  "paywallSavePercent": "وفّر ~16%",
+  "paywallTermsTitle": "شروط الاشتراك",
+  "paywallTermsBody": "تتم معالجة الفواتير عن طريق Google Play. يتم تجديد الاشتراكات تلقائياً حتى تقوم بالإلغاء في Play Store ← الاشتراكات قبل 24 ساعة على الأقل من نهاية الفترة الحالية. يمكنك إدارة أو إلغاء اشتراكك في أي وقت من حساب Google Play الخاص بك.\n\nلا يؤدي إلغاء تثبيت التطبيق إلى إلغاء اشتراكك.\n\nالأسعار المعروضة هي بعملتك المحلية وقد تختلف حسب المنطقة. قد يتم تطبيق الضرائب.",
+  "paywallPrivacyTitle": "الخصوصية",
+  "paywallPrivacyBody": "يخزن Daily Stitch مهامك وعاداتك وبيانات سلسلتك على واجهتنا الخلفية Supabase المرتبطة بحسابك. نحن لا نبيع بياناتك أبداً.\n\nتتم معالجة عمليات شراء الاشتراك بواسطة Google Play. نتلقى رمز شراء موثوقاً من Google لتأكيد حالة Pro الخاصة بك. نحن لا نرى أو نخزن تفاصيل الدفع الخاصة بك.\n\nيمكنك طلب تصدير البيانات الكاملة أو حذف الحساب من الإعدادات ← حذف الحساب.",
+  "paywallCloseTooltip": "إغلاق",
+  "paywallFooterLinks": "استعادة · الشروط · الخصوصية",
+
+  "manageProTitle": "اشتراك Pro",
+  "manageProActive": "نشط",
+  "manageProNotSubscribed": "غير مشترك",
+  "manageProFreeTier": "المستوى المجاني",
+  "manageProRenewsOn": "يتم تجديده أو انتهاء صلاحيته في {date}.",
+  "@manageProRenewsOn": { "placeholders": { "date": { "type": "String" } } },
+  "manageProFreeBody": "أنت تستخدم Daily Stitch المجاني. قم بالترقية لفتح النظام الكامل.",
+  "manageProSectionManage": "إدارة",
+  "manageProOpenPlay": "فتح اشتراكات Google Play",
+  "manageProOpenPlaySubtitlePro": "إلغاء أو تغيير الخطة أو تحديث طريقة الدفع",
+  "manageProOpenPlaySubtitleFree": "ابحث عن اشتراكك الحالي (إن وجد) هنا",
+  "manageProShareApp": "مشاركة Daily Stitch",
+  "manageProShareSubtitle": "أخبر صديقاً عن السلسلة",
+  "manageProSectionHelp": "بحاجة إلى مساعدة؟",
+  "manageProHelpTitle": "المساعدة والدعم",
+  "manageProHelpSubtitle": "الأسئلة الشائعة حول الاشتراك، جهة الاتصال، تقارير الأخطاء",
+  "manageProBillingFooter": "تمت معالجة الفوترة بواسطة Google Play · {version}",
+  "@manageProBillingFooter": { "placeholders": { "version": { "type": "String" } } },
+  "manageProPlayInstructions": "افتح تطبيق Google Play Store ← اضغط على ملفك الشخصي ← المدفوعات والاشتراكات ← الاشتراكات.",
+
+  "addTaskGrowSomething": "نمّ شيئاً",
+  "addTaskPlantSprout": "ازرع برعماً",
+  "addTaskIntentionName": "اسم النية",
+  "addTaskSproutName": "اسم البرعم",
+  "addTaskHintTask": "مثلاً، تحية شمس الصباح",
+  "addTaskHintHabit": "مثلاً، اليوغا الصباحية",
+  "addTaskWhen": "متى؟",
+  "addTaskPriority": "الأولوية",
+  "addTaskNotes": "ملاحظات",
+  "addTaskCadenceDaily": "يومياً",
+  "addTaskCadenceWeekdays": "أيام الأسبوع",
+  "addTaskCadence3x": "3 مرات/أسبوع",
+  "addTaskCadenceWeekly": "أسبوعي",
+  "addTaskPlantIntention": "ازرع النية",
+  "addTaskPlantSproutCta": "ازرع البرعم",
+  "addTaskPlanting": "جارٍ الزراعة…",
+  "addTaskNameIntentionError": "سمِّ نيتك",
+  "addTaskNameSproutError": "سمِّ برعمك",
+  "addTaskNotesMigrationWarning": "تم حفظ المهمة. تحتاج الملاحظات والأولوية إلى أحدث ترحيل Supabase — قم بتشغيل supabase/migrations/20260701000000_todos_notes_priority.sql.",
+  "addTaskNoSproutSlots": "لا توجد فتحات براعم فارغة — قم بالعناية بأحدها أولاً.",
+  "addTaskSaveSproutError": "تعذر حفظ البرعم — حاول مرة أخرى.",
+  "addTaskElementWater": "ماء",
+  "addTaskElementLight": "ضوء",
+  "addTaskElementSoil": "تربة",
+  "addTaskElementBreeze": "نسيم",
+  "addTaskCadenceLabel": "الإيقاع",
+  "addTaskPreparationNotes": "ملاحظات التحضير",
+  "addTaskTendingNotes": "ملاحظات العناية",
+  "addTaskNotesHintTask": "هل هناك أي أدوات أو نصائح عقلية لهذه المهمة؟",
+  "addTaskNotesHintHabit": "كيف تبدو رعاية هذا البرعم؟",
+  "addTaskChooseElement": "اختر العنصر",
+  "addTaskElementsTooltip": "ماذا تعني العناصر؟",
+  "addTaskTaskSeed": "بذرة المهمة",
+  "addTaskHabitSprout": "برعم العادة",
+  "addTaskPickElement": "اختر العنصر المناسب",
+  "addTaskPickElementBody": "يعين كل عنصر نوعاً مختلفاً من الجهد. يصبح الحارس أقوى عندما تسقيه بشكل صحيح.",
+  "addTaskClearForm": "مسح النموذج",
+
+  "shareCouldNotShare": "لا يمكن المشاركة الآن",
+
+  "authReferralCodeLabel": "رمز الإحالة (اختياري)",
+  "authReferralCodeHint": "كود الصديق",
+
+  "youPerkHabitSlots": "5 فتحات عادات",
+  "youPerkFullHistory": "السجل الكامل",
+  "youPerkAllThemes": "جميع المواضيع",
+  "youPerkStreakFreezes": "تجميد سلسلة 2 مرة / شهر",
+  "youPerkLegendaryMedals": "ميداليات أسطورية",
+
+  "subscriptionPurchaseFailed": "فشل الشراء. حاول مرة أخرى.",
+  "subscriptionUnavailable": "عمليات الشراء داخل التطبيق غير متاحة على هذا الجهاز.",
+  "subscriptionLoadFailed": "لا يمكن تحميل خيارات الاشتراك.",
+  "subscriptionVerifyFailed": "لا يمكن التحقق من الشراء. حاول استعادة الشراء.",
+
+  "streakFreezeFailed": "لا يمكن استخدام تجميد السلسلة.",
+  "streakFreezeAlreadyUsed": "لقد استخدمت تجميدك هذا الشهر بالفعل.",
+  "streakFreezeNoMissed": "لا توجد مهام فائتة في ذلك اليوم للتجميد.",
+  "streakFreezeNotPastDay": "يمكنك تجميد يوم الماضي فقط.",
+
+  "myDayLoadError": "تعذر تحميل يومي. اسحب للتحديث.",
+  "myDayCapReached": "لقد وصلت إلى الحد الأقصى المكون من 5 مهام اليوم.",
+  "myDayRemoveTaskError": "لا يمكن إزالة المهمة.",
+
+  "shareCardTitle": "شارك أسبوعك",
+  "shareCardCta": "مشاركة الصورة",
+
+  "medalTierSprout": "برعم",
+  "medalTierCommon": "شائع",
+  "medalTierRare": "نادر",
+  "medalTierEpic": "ملحمي",
+  "medalTierLegendary": "الأسطوري",
+  "medalCategoryTasks": "المهام",
+  "medalCategoryHabits": "العادات",
+  "medalCategoryStreaks": "السلسلات",
+  "medalCategoryMastery": "الإتقان",
+
+  "medalsShareTooltip": "مشاركة الإنجازات",
+  "medalsFilterAll": "الكل",
+
+  "addHabitTitleNew": "ازرع برعماً جديداً",
+  "addHabitTitleEdit": "اعتنِ ببرعمك",
+  "addHabitLabelSproutName": "اسم البرعم",
+
+  "shareCardAppBarTitle": "بطاقة المشاركة",
+  "shareCardAppBarTitleMedal": "شارك ميداليتك",
+  "shareCardDescMedal": "أظهر شارة \"{title}\" الجديدة الخاصة بك",
+  "shareCardBodyMedal": "شارك الانتصار مع دائرتك. يتم تصدير البطاقة بصيغة PNG وجاهزة لأي تطبيق تواصل.",
+  "shareCardCtaPreparing": "جارٍ التحضير…",
+  "shareCardMilestone": "تم فتح معلم جديد",
+  "shareCardStatChain": "سلسلة أيام",
+  "shareCardStatSprouts": "براعم",
+  "shareCardStatMedals": "ميداليات",
+  "shareCardHeadlineStreak": "سلسلة {days} يوم",
+  "@shareCardHeadlineStreak": {
+    "placeholders": { "days": { "type": "int" } }
+  },
+  "shareCardHeadlineMedals": "{count} ميدالية مكتسبة",
+  "@shareCardHeadlineMedals": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "shareCardHeadlineSproutGuardian": "حارس البراعم",
+  "shareCardHeadlineFirstSeeds": "أول البذور المزروعة",
+  "shareCardHeadlineGardenBegins": "بداية حديقة",
+  "shareCardSubheadMonth": "لقد اعتنيت بعاداتك بنجاح لمدة شهر كامل.",
+  "shareCardSubheadWeek": "أسبوع كامل من النمو — غابتك تتكاثف.",
+  "shareCardSubheadProgress": "ملاذك يُظهر تقدماً حقيقياً. واصل العناية.",
+  "shareCardSubheadSprouts": "براعمك الأولى تتجذر. اسقِها يومياً.",
+  "shareCardSubheadFirstSeeds": "بذورك الأولى في التربة. شاهد فتحها.",
+  "shareCardSubheadFallback": "كل غابة تبدأ باختيار واحد صغير.",
+
+  "shareAppText": "Daily Stitch — خمس بذور صغيرة في اليوم، سلسلة واحدة لا تنكسر. ازرع بذرتك.\n\n{url}",
+  "@shareAppText": {
+    "placeholders": { "url": { "type": "String" } }
+  },
+  "shareAppSubject": "جرّب Daily Stitch",
+  "shareAppReferralText": "أبني سلسلتي اليومية على Daily Stitch — انضم إليّ باستخدام رمز إحالتي {code} وسننمو معاً.\n\n{url}",
+  "@shareAppReferralText": {
+    "placeholders": {
+      "code": { "type": "String" },
+      "url": { "type": "String" }
+    }
+  },
+  "shareAppReferralSubject": "انضم إليّ على Daily Stitch",
+
+  "shareCardShareTextProgress": "تقدمي في Daily Stitch — {year} على Daily Stitch.",
+  "@shareCardShareTextProgress": {
+    "placeholders": { "year": { "type": "String" } }
+  },
+  "shareCardShareTextMedal": "لقد فتحت للتو ميدالية \"{title}\" في Daily Stitch. {subtitle}",
+  "@shareCardShareTextMedal": {
+    "placeholders": {
+      "title": { "type": "String" },
+      "subtitle": { "type": "String" }
+    }
+  },
+
+  "insightsReceiptTasksDone": "المهام المنجزة",
+  "insightsReceiptPerfectDays": "أيام مثالية",
+  "insightsReceiptCompletion": "النسبة المكتملة",
+  "insightsReceiptDate": "أسبوع {date}",
+  "@insightsReceiptDate": {
+    "placeholders": { "date": { "type": "String" } }
+  },
+  "insightsReceiptFooter": "لا تكسر السلسلة.",
+
+  "elementLabelWater": "ماء",
+  "elementLabelLight": "ضوء",
+  "elementLabelSoil": "تربة",
+  "elementLabelBreeze": "نسيم",
+  "elementTaglineWater": "الاسترداد. الترطيب، الراحة، العناية العاطفية — أي شيء يعيد ملء البئر.",
+  "elementTaglineLight": "الاستيقاظ. ضوء الصباح، فترات التركيز، الدراسة، التأمل — الطاقة والوضوح.",
+  "elementTaglineSoil": "التأصيل. القراءة، الكتابة اليومية، العمل العميق — جذور بطيئة تبني قوة طويلة المدى.",
+  "elementTaglineBreeze": "الحركة. المشي، الجري، تمارين التنفس — طاقة خفيفة متحركة تُنسي الرأس.",
+  "elementWhenWater": "عندما تشعر بالإنهاك أو الاستنزاف.",
+  "elementWhenLight": "عندما تحتاج بداية واضحة ليومك.",
+  "elementWhenSoil": "عندما يكون العمل بطيئاً لكنه يستحق (الدراسة، الحرفية، العناية).",
+  "elementWhenBreeze": "عندما يحتاج جسدك (أو عقلك) إلى الحركة والتنفس.",
+
+  "bloomTierMastery": "الإتقان",
+  "bloomTierStrong": "قوي",
+  "bloomTierGrowing": "متنامي",
+  "bloomTierSprouting": "بادئ بالنمو",
+  "bloomTierLocked": "مقفل",
+
+  "habitBloomSubtitle": "سلسلة {count} يوم · {element}",
+  "@habitBloomSubtitle": {
+    "placeholders": {
+      "count": { "type": "int" },
+      "element": { "type": "String" }
+    }
+  },
+
+  "medal_id_first_spark": "شرارة أولى",
+  "medal_sub_first_spark": "أضعت الشرارة.",
+  "medal_desc_first_spark": "أنجز مهمتك الأولى. كل سلسلة تبدأ هنا.",
+  "medal_id_triple_seed": "ثلاثية البذور",
+  "medal_sub_triple_seed": "ثلاث في التربة.",
+  "medal_desc_triple_seed": "أنجز 3 مهام في المجموع.",
+  "medal_id_dozen_sower": "زارع الدزينة",
+  "medal_sub_dozen_sower": "حقل من اثني عشر.",
+  "medal_desc_dozen_sower": "أنجز 12 مهمة في المجموع.",
+  "medal_id_quarter_century": "ربع قرن",
+  "medal_sub_quarter_century": "موسم من قول نعم.",
+  "medal_desc_quarter_century": "أنجز 25 مهمة في المجموع.",
+  "medal_id_productivity_titan": "عمال الإنتاجية",
+  "medal_sub_productivity_titan": "الاستمرارية تتراكم.",
+  "medal_desc_productivity_titan": "أنجز 50 مهمة — لقد بنيت زخماً حقيقياً.",
+  "medal_id_century_planter": "زارع المائة",
+  "medal_sub_century_planter": "غابة خاصة بك.",
+  "medal_desc_century_planter": "أنجز 100 مهمة. أنت في أفضل 5% من المستخدمين.",
+  "medal_id_clean_day": "يوم نظيف",
+  "medal_sub_clean_day": "لا حشيشة واحدة.",
+  "medal_desc_clean_day": "أنجز كل مهمة تزرعها في يوم واحد.",
+  "medal_id_triple_perfect": "ثلاثي مثالي",
+  "medal_sub_triple_perfect": "ثلاث جولات بلا خطأ.",
+  "medal_desc_triple_perfect": "حقق 3 أيام مثالية.",
+  "medal_id_perfect_week": "أسبوع مثالي",
+  "medal_sub_perfect_week": "سبعة أيام بلا انقطاع.",
+  "medal_desc_perfect_week": "7 أيام مثالية متتالية.",
+  "medal_id_two_week_chain": "قوة الأسبوعين",
+  "medal_sub_two_week_chain": "أسبوعان من النار.",
+  "medal_desc_two_week_chain": "حافظ على سلسلة 14 يوماً.",
+  "medal_id_iron_chain": "سلسلة حديدية",
+  "medal_sub_iron_chain": "30 حلقة مطروقة.",
+  "medal_desc_iron_chain": "سلسلة 30 يوماً. أصعب ميدالية مهام.",
+  "medal_id_quarterly_chain": "سلسلة ربع سنوية",
+  "medal_sub_quarterly_chain": "موسم، بلا انقطاع.",
+  "medal_desc_quarterly_chain": "سلسلة 90 يوماً. حالة أسطورية.",
+  "medal_id_vital_priority": "شرارة حيوية",
+  "medal_sub_vital_priority": "اخترت الصعبة.",
+  "medal_desc_vital_priority": "أنجز 5 مهام بدرجة أولوية حيوية.",
+  "medal_id_spark_priority": "رواد الشرارات",
+  "medal_sub_spark_priority": "الانتصارات السريعة تتراكم.",
+  "medal_desc_spark_priority": "أنجز 5 مهام بدرجة أولوية شرارة.",
+  "medal_id_note_taker": "كاتب ملاحظات",
+  "medal_sub_note_taker": "خطط على الورق تتفوق على الخطط في الرأس.",
+  "medal_desc_note_taker": "أضف ملاحظات تأهيل إلى 5 مهام مختلفة.",
+  "medal_id_left_behind_rescuer": "منقذ المتروكين",
+  "medal_sub_left_behind_rescuer": "لا مهمة متروكة.",
+  "medal_desc_left_behind_rescuer": "أعد إضافة 3 مهام فائتة في اليوم التالي.",
+  "medal_id_first_sprout": "برعم أول",
+  "medal_sub_first_sprout": "طقوس يومية جديدة.",
+  "medal_desc_first_sprout": "ازرع عادتك الأولى.",
+  "medal_id_trio_sprout": "ثلاثية البراعم",
+  "medal_sub_trio_sprout": "نظام بيئي صغير.",
+  "medal_desc_trio_sprout": "ازرع 3 عادات مختلفة.",
+  "medal_id_week_of_growth": "أسبوع النمو",
+  "medal_sub_week_of_growth": "الجذور بدأت تثبت.",
+  "medal_desc_week_of_growth": "عتني بعادة يومياً لمدة 7 أيام.",
+  "medal_id_fortnight_floret": "زهرة الأسبوعين",
+  "medal_sub_fortnight_floret": "إزهار كامل.",
+  "medal_desc_fortnight_floret": "سلسلة عادات 14 يوماً.",
+  "medal_id_rooted_master": "سيد متجذر",
+  "medal_sub_rooted_master": "جذور عميقة، قوة عميقة.",
+  "medal_desc_rooted_master": "سلسلة عادات 30 يوماً.",
+  "medal_id_half_year_bloom": "إزهار نصف سنوي",
+  "medal_sub_half_year_bloom": "الحديقة دائمة الآن.",
+  "medal_desc_half_year_bloom": "حافظ على عادة واحدة لمدة 180 يوماً.",
+  "medal_id_garden_keeper": "حارس الحديقة",
+  "medal_sub_garden_keeper": "تنوع، معاً.",
+  "medal_desc_garden_keeper": "ازرع 4 عادات مختلفة في نفس الوقت.",
+  "medal_id_hydration_hero": "بطل الترطيب",
+  "medal_sub_hydration_hero": "تملأ البئر.",
+  "medal_desc_hydration_hero": "ازرع عادة ترطيب (ماء/شرب).",
+  "medal_id_mindful_mover": "متحرك واعٍ",
+  "medal_sub_mindful_mover": "الجسم يتذكر.",
+  "medal_desc_mindful_mover": "ازرع عادة حركة (يوغا/جري/مشي).",
+  "medal_id_devoted_keeper": "حارس مكرس",
+  "medal_sub_devoted_keeper": "ستون يوماً، ممارسة واحدة.",
+  "medal_desc_devoted_keeper": "عتني بعادة واحدة لمدة 60 يوماً متتالية.",
+  "medal_id_tending_notes": "ملاحظات العناية",
+  "medal_sub_tending_notes": "تفكر أثناء السير.",
+  "medal_desc_tending_notes": "أضف ملاحظات عناية إلى 3 عادات.",
+  "medalTierTaglineSprout": "ازرع أول بذرة",
+  "medalTierTaglineCommon": "بناء العادة",
+  "medalTierTaglineRare": "إظهار زخم حقيقي",
+  "medalTierTaglineEpic": "أنت قوة من قوى الطبيعة",
+  "medalTierTaglineLegendary": "أسطوري، لا أحد يكاد يصل هنا",
+
+  "guardianHeadlineNoTasks": "تربة اليوم طازجة.\nازرع بذرتك الأولى\nوانظر كيف تنمو.",
+  "guardianHeadlineAllDone": "كل بذرة زرعتها\nفي إزهار.\nاسترح يا حارس — لقد كسبتها.",
+  "guardianHeadlineStreak14": "{count} أيام\nنمو متواصل.\nغابتك مليئة بالحياة.",
+  "guardianHeadlineStreak7": "أسبوع كامل في إزهار،\nيا حارس.\nيوم مثالي آخر\nيُمدّ السلسلة.",
+  "guardianHeadlineStreak3": "سلسلتك صامدة.\nعتني بالبذور\nالتي تنتظر أن تتفتح.",
+  "guardianHeadlineNoHabitsDone": "أنت تعتني بالمهام جيداً.\nازرع برعماً —\nالعادات تنمو الغابات.",
+  "guardianHeadlineSomeDone": "بعض البذور انفتحت،\nوبعضها لا. لا بأس.\nغداً زراعة أخرى.",
+  "guardianHeadlineMorning": "صباح الخير يا حارس.\nاليوم شاب\nوالتربة جاهزة.",
+  "guardianHeadlineAfternoon": "مساء الخير يا حارس.\nنصف الضوء باقٍ —\nواصل العناية.",
+  "guardianHeadlineEvening": "مساء الخير يا حارس.\nجولة أخيرة\nقبل غروب الشمس.",
+  "guardianHeadlineNight": "تسهر حتى منتصف الليل؟\nحتى الحراس يستريحون.\nازرع بذرة الغد.",
+  "guardianBodyNoTasks": "ملاذك هادئ الآن. أضف نية وانظر ما يتغير عند الغروب.",
+  "guardianBodyStreak14": "{count} أيام جارية. السلسلة ليست حظاً — إنها الخيارات الصغيرة المتراكمة. واصل التراكم.",
+  "guardianBodyStreak3": "سلسلة {count} أيام زخم حقيقي. أنهي البذور المفتوحة اليوم قبل أن تقول أنك انتهى.",
+  "guardianBodyNoHabits": "لقد زرعت {count} مهمة حتى الآن. إضافة حتى برعم عادة واحد سيجعل العمل ينمو يوماً بعد يوم.",
+  "guardianBodyLowCompletion": "أنت تنهي حوالي {pct}% مما تزرعه. بذور أقل وأكثر حدة تميل إلى النمو أعلى من عشر مبعثرة.",
+  "guardianBodyDefault": "ملاذك حي. {tasks} مهمة منجزة، {sprouts} براعم تنمو — العمل يظهر.",
+
+  "guardianInsightWaitingTitle": "في انتظار حركتك الأولى",
+  "guardianInsightWaitingBody": "أضف مهمة أو عادة وسأبدأ في قراءة الأنماط في حديقتك. كلما زرعت أكثر، كلما تعلمت أكثر.",
+  "guardianInsightWaitingCta": "ازرع بذرتك الأولى",
+  "guardianInsightChainSuperTitle": "السلسلة هي قوتك الخارقة",
+  "guardianInsightChainSuperBody": "لقد حافظت على سلسلة {count} أيام. السلاسل تتفوق على الدافع في كل مرة — حافظ عليها دافئة، حتى في الأيام البطيئة.",
+  "guardianInsightChainSuperCta": "أضف بذرة الغد",
+  "guardianInsightChainColdTitle": "السلسلة باردة — ابدأ جديدة",
+  "guardianInsightChainColdBody": "لقد زرعت من قبل، مما يعني أنك يمكنك الزراعة مرة أخرى. مهمة صغيرة منجزة اليوم هي سلسلة أطول غداً.",
+  "guardianInsightChainColdCta": "ازرع بذرة",
+  "guardianInsightLessIsMoreTitle": "أقل هو أكثر هذا الأسبوع",
+  "guardianInsightLessIsMoreBody": "أنت تنهي حوالي {pct}% مما تزرعه. جرب 3 نوايا حادة بدلاً من 5 فضفاضة — الجودة تتراكم.",
+  "guardianInsightLessIsMoreCta": "شحذ اليوم",
+  "guardianInsightNextMedalTitle": "الميدالية التالية: {title}",
+  "@guardianInsightNextMedalTitle": {
+    "placeholders": {
+      "title": { "type": "String" }
+    }
+  },
+  "guardianInsightNextMedalBody": "أنت عند {value} من {target} {unit}. بضعة أيام صادقة أخرى وهي لك.",
+  "guardianInsightNextMedalCta": "عرض الميدالية",
+  "guardianInsightSteadyTitle": "أنت في موسم مستقر",
+  "guardianInsightSteadyBody": "لا ميدالية في الأفق — لا بأس. اعتني بما لديك. الإزهار التالي في الطريق.",
+  "guardianInsightSteadyCta": "عرض التقدم",
+
+  "notificationTaskReminderBody": "{label}",
+  "@notificationTaskReminderBody": {
+    "placeholders": {
+      "label": { "type": "String" }
+    }
+  },
+  "notificationFinalCallBodyOne": "1 مهمة في سلسلتك. منتصف الليل يقترب.",
+  "notificationFinalCallBodyMany": "{count} مهام في سلسلتك. منتصف الليل يقترب.",
+  "@notificationFinalCallBodyMany": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "notificationEveningBodyOne": "لديك بعد مهمة واحدة مفتوحة اليوم.",
+  "notificationEveningBodyMany": "لديك بعد {count} مهام مفتوحة اليوم.",
+  "@notificationEveningBodyMany": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "notificationTickerTaskReminder": "تذكير بالمهمة",
+  "notificationTickerTaskAlarm": "إنذار المهمة",
+
+  "habitBloomSubtitleL10n": "سلسلة {count} يوم · {element}"
 }

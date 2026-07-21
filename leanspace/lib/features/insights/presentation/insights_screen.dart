@@ -9,6 +9,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:share_plus/share_plus.dart';
 
 import '../../../core/haptics.dart';
+import '../../../core/l10n/app_localizations.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/widgets/ambient_background.dart';
 import '../../subscription/providers/entitlement_provider.dart';
@@ -44,16 +45,18 @@ class _InsightsScreenState extends ConsumerState<InsightsScreen> {
       await file.writeAsBytes(bytes);
 
       AppHaptics.light();
+      final l10n = AppLocalizations.of(context);
       await SharePlus.instance.share(
         ShareParams(
           files: [XFile(file.path)],
-          text: 'My week on Bloom Tracker. Don\'t break the chain.',
+          text: l10n.insightsShareReceiptText,
         ),
       );
     } catch (_) {
       if (mounted) {
+        final l10n = AppLocalizations.of(context);
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Could not share right now')),
+          SnackBar(content: Text(l10n.shareCardCouldNotShare)),
         );
       }
     } finally {
@@ -63,12 +66,13 @@ class _InsightsScreenState extends ConsumerState<InsightsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final asyncInsights = ref.watch(insightsProvider);
     final entitlement = ref.watch(entitlementProvider);
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Your progress'),
+        title: Text(l10n.navInsights),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () => context.pop(),
@@ -84,7 +88,7 @@ class _InsightsScreenState extends ConsumerState<InsightsScreen> {
               child: Padding(
                 padding: const EdgeInsets.all(24),
                 child: Text(
-                  'Could not load your progress. Try again later.',
+                  l10n.insightsLoadError,
                   textAlign: TextAlign.center,
                   style: TextStyle(color: AppColors.textMuted),
                 ),
@@ -97,18 +101,22 @@ class _InsightsScreenState extends ConsumerState<InsightsScreen> {
                   children: [
                     Expanded(
                       child: _MetricTile(
-                        label: 'CURRENT CHAIN',
+                        label: l10n.insightsMetricCurrentChain,
                         value: '${data.currentStreak}',
-                        suffix: data.currentStreak == 1 ? 'day' : 'days',
+                        suffix: data.currentStreak == 1
+                            ? l10n.insightsDay
+                            : l10n.insightsDays,
                         emphasized: true,
                       ),
                     ),
                     const SizedBox(width: 12),
                     Expanded(
                       child: _MetricTile(
-                        label: 'BEST EVER',
+                        label: l10n.insightsMetricBestEver,
                         value: '${data.bestStreak}',
-                        suffix: data.bestStreak == 1 ? 'day' : 'days',
+                        suffix: data.bestStreak == 1
+                            ? l10n.insightsDay
+                            : l10n.insightsDays,
                       ),
                     ),
                   ],
@@ -118,21 +126,21 @@ class _InsightsScreenState extends ConsumerState<InsightsScreen> {
                   children: [
                     Expanded(
                       child: _MetricTile(
-                        label: 'TASKS DONE',
+                        label: l10n.insightsMetricTasksDone,
                         value: '${data.tasksCompleted}',
                       ),
                     ),
                     const SizedBox(width: 12),
                     Expanded(
                       child: _MetricTile(
-                        label: 'PERFECT DAYS',
+                        label: l10n.insightsMetricPerfectDays,
                         value: '${data.perfectDays}',
                       ),
                     ),
                     const SizedBox(width: 12),
                     Expanded(
                       child: _MetricTile(
-                        label: 'HABITS',
+                        label: l10n.insightsMetricHabits,
                         value: '${data.activeHabits}',
                       ),
                     ),
@@ -171,26 +179,36 @@ class _InsightsScreenState extends ConsumerState<InsightsScreen> {
                   ),
                 ],
                 const SizedBox(height: 24),
-                const _SectionLabel('This week'),
+                _SectionLabel(l10n.insightsSectionThisWeek),
                 RepaintBoundary(
                   key: _receiptKey,
                   child: WeeklyReceiptCard(data: data),
                 ),
                 const SizedBox(height: 16),
-                OutlinedButton.icon(
-                  onPressed: _sharing ? null : _shareReceipt,
-                  icon: _sharing
-                      ? const SizedBox(
-                          width: 16,
-                          height: 16,
-                          child: CircularProgressIndicator(strokeWidth: 2),
-                        )
-                      : const Icon(Icons.ios_share, size: 18),
-                  label: const Text('Share my week'),
-                ),
+                if (entitlement.isPro)
+                  OutlinedButton.icon(
+                    onPressed: _sharing ? null : _shareReceipt,
+                    icon: _sharing
+                        ? const SizedBox(
+                            width: 16,
+                            height: 16,
+                            child: CircularProgressIndicator(strokeWidth: 2),
+                          )
+                        : const Icon(Icons.ios_share, size: 18),
+                    label: Text(l10n.insightsShareMyWeek),
+                  )
+                else
+                  OutlinedButton.icon(
+                    onPressed: () => context.push('/paywall?from=weekly_receipt'),
+                    icon: const Icon(Icons.lock_outline_rounded, size: 18),
+                    label: Text(l10n.insightsShareMyWeekPro),
+                  ),
                 if (!entitlement.isPro) ...[
                   const SizedBox(height: 24),
-                  _UnlockHistoryCard(windowDays: data.windowDays ?? 7),
+                  _UnlockHistoryCard(
+                    title: l10n.insightsHistoryWindowTitle(data.windowDays ?? 7),
+                    subtitle: l10n.insightsHistoryUpsell,
+                  ),
                 ],
               ],
             ),
@@ -293,9 +311,13 @@ class _SectionLabel extends StatelessWidget {
 }
 
 class _UnlockHistoryCard extends StatelessWidget {
-  const _UnlockHistoryCard({required this.windowDays});
+  const _UnlockHistoryCard({
+    required this.title,
+    required this.subtitle,
+  });
 
-  final int windowDays;
+  final String title;
+  final String subtitle;
 
   @override
   Widget build(BuildContext context) {
@@ -319,13 +341,13 @@ class _UnlockHistoryCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Showing the last $windowDays days',
+                    title,
                     style: theme.textTheme.bodyMedium?.copyWith(
                       fontWeight: FontWeight.w600,
                     ),
                   ),
                   Text(
-                    'Unlock your full history with Pro',
+                    subtitle,
                     style: theme.textTheme.bodySmall?.copyWith(
                       color: AppColors.textMuted,
                     ),

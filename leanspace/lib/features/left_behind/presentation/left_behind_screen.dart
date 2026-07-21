@@ -4,11 +4,13 @@ import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
 
 import '../../../core/local_date.dart';
+import '../../../core/l10n/app_localizations.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/widgets/ambient_background.dart';
 import '../../my_day/domain/todo_item.dart';
 import '../../my_day/providers/my_day_providers.dart';
 import '../../streak_freeze/providers/streak_freeze_providers.dart';
+import '../../subscription/providers/entitlement_provider.dart';
 
 class LeftBehindScreen extends ConsumerStatefulWidget {
   const LeftBehindScreen({super.key});
@@ -21,20 +23,22 @@ class _LeftBehindScreenState extends ConsumerState<LeftBehindScreen> {
   bool _dismissingAll = false;
 
   Future<void> _reAdd(BuildContext context, TodoItem task) async {
+    final l10n = AppLocalizations.of(context);
     final notifier = ref.read(myDayProvider.notifier);
     final result = await notifier.reAddTask(task);
     if (!context.mounted) return;
-    final msg = result ?? '"${task.text}" is back in your day.';
+    final msg = result ?? l10n.leftBehindReAddedSnack(task.text);
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(msg)));
   }
 
   Future<void> _dismiss(BuildContext context, TodoItem task) async {
+    final l10n = AppLocalizations.of(context);
     final notifier = ref.read(myDayProvider.notifier);
     final err = await notifier.dismissMissed(task);
     if (!context.mounted) return;
     if (err == null) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Removed "${task.text}"')),
+        SnackBar(content: Text(l10n.leftBehindRemovedSnack(task.text))),
       );
     } else {
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(err)));
@@ -42,26 +46,25 @@ class _LeftBehindScreenState extends ConsumerState<LeftBehindScreen> {
   }
 
   Future<void> _dismissAll(BuildContext context) async {
+    final l10n = AppLocalizations.of(context);
     final state = ref.read(myDayProvider);
     if (state.leftBehind.isEmpty) return;
     final confirm = await showDialog<bool>(
       context: context,
       builder: (ctx) => AlertDialog(
-        title: const Text('Clear all left-behind?'),
+        title: Text(l10n.leftBehindClearAllConfirm),
         content: Text(
-          'This will permanently remove ${state.leftBehind.length} '
-          'missed task${state.leftBehind.length == 1 ? '' : 's'}. '
-          'You can\'t undo this.',
+          l10n.leftBehindClearAllBody('${state.leftBehind.length}'),
         ),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(ctx, false),
-            child: const Text('Cancel'),
+            child: Text(l10n.commonCancel),
           ),
           FilledButton.tonal(
             style: FilledButton.styleFrom(foregroundColor: AppColors.error),
             onPressed: () => Navigator.pop(ctx, true),
-            child: const Text('Clear all'),
+            child: Text(l10n.leftBehindClearAll),
           ),
         ],
       ),
@@ -76,15 +79,17 @@ class _LeftBehindScreenState extends ConsumerState<LeftBehindScreen> {
     setState(() => _dismissingAll = false);
     if (context.mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Left-behind cleared')),
+        SnackBar(content: Text(l10n.leftBehindClearedSnack)),
       );
     }
   }
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final state = ref.watch(myDayProvider);
     final freeze = ref.watch(streakFreezeProvider);
+    final isPro = ref.watch(entitlementProvider).isPro;
     final yesterday = LocalDate.yesterday(LocalDate.today);
     final yesterdayMissed = state.leftBehind.any(
       (t) => LocalDate.isSameDay(t.originalDate, yesterday),
@@ -92,7 +97,9 @@ class _LeftBehindScreenState extends ConsumerState<LeftBehindScreen> {
     final yesterdayFrozen = freeze.frozenDates.any(
       (d) => LocalDate.isSameDay(d, yesterday),
     );
-    final showFreeze = yesterdayMissed && freeze.canUseFreeze && !yesterdayFrozen;
+    final showFreeze = yesterdayMissed &&
+        freeze.canUseFreezeFor(isPro) &&
+        !yesterdayFrozen;
 
     // Group by day for clearer display
     final grouped = <DateTime, List<TodoItem>>{};
@@ -111,13 +118,13 @@ class _LeftBehindScreenState extends ConsumerState<LeftBehindScreen> {
           icon: const Icon(Icons.arrow_back_rounded),
           color: AppColors.onSurfaceVariant,
         ),
-        title: const Text('Left Behind'),
+        title: Text(l10n.leftBehindTitle),
         actions: [
           if (state.leftBehind.isNotEmpty)
             TextButton.icon(
               onPressed: _dismissingAll ? null : () => _dismissAll(context),
               icon: const Icon(Icons.delete_sweep_rounded, size: 18),
-              label: const Text('Clear all'),
+              label: Text(l10n.leftBehindClearAll),
               style: TextButton.styleFrom(foregroundColor: AppColors.error),
             ),
         ],
@@ -131,13 +138,13 @@ class _LeftBehindScreenState extends ConsumerState<LeftBehindScreen> {
                   _HeaderCard(
                     count: state.leftBehind.length,
                     yesterdayMissed: yesterdayMissed,
-                    canUseFreeze: freeze.canUseFreeze,
+                    canUseFreeze: freeze.canUseFreezeFor(isPro),
                     showFreeze: showFreeze,
                     onUseFreeze: () => _useFreeze(context, yesterday),
                   ),
                   const SizedBox(height: 18),
                   Text(
-                    'MISSED TASKS',
+                    l10n.leftBehindMissedTasks,
                     style: Theme.of(context).textTheme.labelSmall?.copyWith(
                           color: AppColors.onSurfaceVariant,
                           letterSpacing: 1.4,
@@ -165,6 +172,7 @@ class _LeftBehindScreenState extends ConsumerState<LeftBehindScreen> {
   }
 
   Future<void> _useFreeze(BuildContext context, DateTime yesterday) async {
+    final l10n = AppLocalizations.of(context);
     final err =
         await ref.read(streakFreezeProvider.notifier).freezeDate(yesterday);
     if (!context.mounted) return;
@@ -176,7 +184,7 @@ class _LeftBehindScreenState extends ConsumerState<LeftBehindScreen> {
     await ref.read(myDayProvider.notifier).refresh();
     if (!context.mounted) return;
     ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('Streak freeze applied for yesterday.')),
+      SnackBar(content: Text(l10n.streakFreezeAppliedYesterday)),
     );
   }
 }
@@ -198,6 +206,7 @@ class _HeaderCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final theme = Theme.of(context);
     return Container(
       padding: const EdgeInsets.fromLTRB(20, 18, 20, 18),
@@ -227,7 +236,7 @@ class _HeaderCard extends StatelessWidget {
               ),
               const SizedBox(width: 6),
               Text(
-                'LEFT BEHIND',
+                l10n.leftBehindHeader,
                 style: theme.textTheme.labelSmall?.copyWith(
                   color: AppColors.secondary,
                   fontWeight: FontWeight.w800,
@@ -239,8 +248,8 @@ class _HeaderCard extends StatelessWidget {
           const SizedBox(height: 10),
           Text(
             count == 1
-                ? '1 task is waiting for you.'
-                : '$count tasks are waiting for you.',
+                ? l10n.leftBehindWaitingOne
+                : l10n.leftBehindWaitingMany('$count'),
             style: theme.textTheme.titleLarge?.copyWith(
               color: AppColors.onSurface,
               fontWeight: FontWeight.w800,
@@ -250,8 +259,7 @@ class _HeaderCard extends StatelessWidget {
           ),
           const SizedBox(height: 6),
           Text(
-            'Re-add a task to bring it back to today, or let it go. '
-            'Re-adding keeps your streak alive.',
+            l10n.leftBehindBody,
             style: theme.textTheme.bodyMedium?.copyWith(
               color: AppColors.onSurfaceVariant,
               height: 1.45,
@@ -262,7 +270,7 @@ class _HeaderCard extends StatelessWidget {
             OutlinedButton.icon(
               onPressed: onUseFreeze,
               icon: const Icon(Icons.ac_unit_outlined, size: 18),
-              label: const Text('Use monthly freeze for yesterday'),
+              label: Text(l10n.streakFreezeUseForYesterday),
               style: OutlinedButton.styleFrom(
                 foregroundColor: AppColors.tertiary,
                 side: BorderSide(
@@ -282,13 +290,14 @@ class _DayHeader extends StatelessWidget {
   final DateTime date;
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final theme = Theme.of(context);
     final isYesterday = LocalDate.isSameDay(date, LocalDate.yesterday(LocalDate.today));
     return Padding(
       padding: const EdgeInsets.only(top: 4, left: 4, bottom: 2),
       child: Text(
         isYesterday
-            ? 'Yesterday · ${DateFormat.MMMd().format(date)}'
+            ? l10n.leftBehindYesterdayDate(DateFormat.MMMd().format(date))
             : DateFormat('EEEE · MMM d').format(date),
         style: theme.textTheme.labelMedium?.copyWith(
           color: AppColors.onSurface,
@@ -311,13 +320,14 @@ class _MissedTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final theme = Theme.of(context);
     return Container(
       padding: const EdgeInsets.fromLTRB(16, 14, 12, 14),
       decoration: BoxDecoration(
-        color: AppColors.surfaceContainerLow,
+        color: AppColors.elevatedCardSurface,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: AppColors.outlineVariant, width: 0.5),
+        border: Border.all(color: AppColors.cardBorder, width: 0.5),
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -368,7 +378,7 @@ class _MissedTile extends StatelessWidget {
                       child: FilledButton.icon(
                         onPressed: onReAdd,
                         icon: const Icon(Icons.replay_rounded, size: 16),
-                        label: const Text('Re-add today'),
+                        label: Text(l10n.leftBehindReAdd),
                         style: FilledButton.styleFrom(
                           backgroundColor: AppColors.primary,
                           padding:
@@ -382,7 +392,7 @@ class _MissedTile extends StatelessWidget {
                       onPressed: onDismiss,
                       icon: const Icon(Icons.delete_outline_rounded),
                       color: AppColors.outline,
-                      tooltip: 'Let it go',
+                      tooltip: l10n.leftBehindLetGo,
                       style: IconButton.styleFrom(
                         backgroundColor: AppColors.surfaceContainerHigh,
                       ),
@@ -402,6 +412,7 @@ class _EmptyState extends StatelessWidget {
   const _EmptyState();
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final theme = Theme.of(context);
     return Center(
       child: Padding(
@@ -429,7 +440,7 @@ class _EmptyState extends StatelessWidget {
             ),
             const SizedBox(height: 18),
             Text(
-              'Nothing left behind',
+              l10n.leftBehindEmpty,
               style: theme.textTheme.titleLarge?.copyWith(
                 color: AppColors.onSurface,
                 fontWeight: FontWeight.w800,
@@ -437,8 +448,7 @@ class _EmptyState extends StatelessWidget {
             ),
             const SizedBox(height: 6),
             Text(
-              'No missed tasks. Every seed you plant is being '
-              'tended. The garden is clean.',
+              l10n.leftBehindEmptyBody,
               textAlign: TextAlign.center,
               style: theme.textTheme.bodyMedium?.copyWith(
                 color: AppColors.onSurfaceVariant,

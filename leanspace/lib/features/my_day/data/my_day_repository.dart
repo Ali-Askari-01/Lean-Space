@@ -32,7 +32,8 @@ class MyDayRepository {
     String? existingId,
     String? notes,
   }) async {
-    final userId = _userId!;
+    final userId = _userId;
+    if (userId == null) throw StateError('User not authenticated');
 
     final base = <String, dynamic>{'name': name};
     final hasNotes = notes != null && notes.isNotEmpty;
@@ -134,10 +135,13 @@ class MyDayRepository {
     final userId = _userId;
     if (userId == null) return [];
 
+    final cutoff = LocalDate.toIsoDate(
+      LocalDate.today.subtract(const Duration(days: 365)));
     final data = await _client
         .from('todos')
         .select()
         .eq('user_id', userId)
+        .gte('original_date', cutoff)
         .order('original_date', ascending: false);
 
     return (data as List)
@@ -151,7 +155,8 @@ class MyDayRepository {
     String? notes,
     TodoPriority? priority,
   }) async {
-    final userId = _userId!;
+    final userId = _userId;
+    if (userId == null) throw StateError('User not authenticated');
     final today = LocalDate.toIsoDate(LocalDate.today);
 
     final base = <String, dynamic>{
@@ -203,7 +208,7 @@ class MyDayRepository {
   bool _isMissingColumnError(PostgrestException e) {
     final msg = e.message.toLowerCase();
     return msg.contains('schema cache') ||
-        msg.contains('column') && msg.contains("not found") ||
+        (msg.contains('column') && msg.contains("not found")) ||
         msg.contains('could not find');
   }
 

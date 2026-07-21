@@ -29,26 +29,29 @@ class GlassCard extends StatelessWidget {
       child: InkWell(
         onTap: onTap,
         borderRadius: radius_,
-        child: Container(
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 300),
+          curve: Curves.easeOutCubic,
           padding: padding,
           decoration: BoxDecoration(
             borderRadius: radius_,
-            gradient: gradient,
-            color: gradient == null
-                ? AppColors.surfaceContainerLow
-                : null,
+            gradient: gradient ?? LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: AppColors.cardGradient,
+            ),
             border: dashed
                 ? Border.all(
-                    color: AppColors.outlineVariant,
+                    color: AppColors.cardBorder,
                     width: 1.2,
                     style: BorderStyle.solid,
                   )
-                : Border.all(color: AppColors.outlineVariant, width: 0.5),
+                : Border.all(color: AppColors.cardBorder, width: 0.8),
             boxShadow: [
               BoxShadow(
-                color: AppColors.glassShadow,
+                color: AppColors.cardShadow,
                 blurRadius: 24,
-                offset: Offset(0, 4),
+                offset: const Offset(0, 4),
               ),
             ],
           ),
@@ -128,9 +131,9 @@ class CtaPill extends StatelessWidget {
             color: gradient ? null : AppColors.primary,
             boxShadow: [
               BoxShadow(
-                color: AppColors.primary.withValues(alpha: 0.25),
-                blurRadius: 16,
-                offset: const Offset(0, 6),
+                color: AppColors.primary.withValues(alpha: 0.30),
+                blurRadius: 20,
+                offset: const Offset(0, 8),
               ),
             ],
           ),
@@ -181,54 +184,35 @@ class LiquidProgressBar extends StatelessWidget {
     return Container(
       height: height,
       decoration: BoxDecoration(
-        color: trackColor ?? AppColors.surfaceContainerHigh,
+        color: trackColor ?? AppColors.progressTrack,
         borderRadius: BorderRadius.circular(height),
         border: Border.all(
-          color: AppColors.outlineVariant.withValues(alpha: 0.4),
+          color: AppColors.cardBorder.withValues(alpha: 0.5),
           width: 0.5,
         ),
       ),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(height),
-        child: Stack(
-          children: [
-            FractionallySizedBox(
-              widthFactor: pct,
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(height),
-                  gradient: LinearGradient(
-                    colors: color != null
-                        ? [color!, color!]
-                        : AppColors.gradientHabit,
-                  ),
-                  boxShadow: [
-                    BoxShadow(
-                      color: AppColors.primary.withValues(alpha: 0.25),
-                      blurRadius: 8,
-                    ),
-                  ],
-                ),
+        child: AnimatedFractionallySizedBox(
+          duration: const Duration(milliseconds: 400),
+          curve: Curves.easeOutCubic,
+          widthFactor: pct,
+          child: Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(height),
+              gradient: LinearGradient(
+                colors: color != null
+                    ? [color!, color!]
+                    : AppColors.progressFill,
               ),
-            ),
-            Positioned.fill(
-              child: IgnorePointer(
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(height),
-                    gradient: LinearGradient(
-                      colors: [
-                        Colors.white.withValues(alpha: 0.25),
-                        Colors.white.withValues(alpha: 0.0),
-                      ],
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                    ),
-                  ),
+              boxShadow: [
+                BoxShadow(
+                  color: AppColors.primary.withValues(alpha: 0.30),
+                  blurRadius: 8,
                 ),
-              ),
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );
@@ -256,21 +240,29 @@ class ElementIcon extends StatelessWidget {
       HabitElement.breeze => AppColors.outline,
     };
     return AnimatedContainer(
-      duration: const Duration(milliseconds: 180),
+      duration: const Duration(milliseconds: 250),
+      curve: Curves.easeOutCubic,
       width: size,
       height: size,
       decoration: BoxDecoration(
-        color: selected ? color : AppColors.surfaceContainer,
+        gradient: selected
+            ? LinearGradient(
+                colors: [color, color.withValues(alpha: 0.7)],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              )
+            : null,
+        color: selected ? null : AppColors.surfaceContainer,
         borderRadius: BorderRadius.circular(16),
         border: Border.all(
-          color: selected ? color : AppColors.outlineVariant,
+          color: selected ? color : AppColors.cardBorder,
           width: selected ? 1.5 : 1,
         ),
         boxShadow: selected
             ? [
                 BoxShadow(
-                  color: color.withValues(alpha: 0.25),
-                  blurRadius: 12,
+                  color: color.withValues(alpha: 0.30),
+                  blurRadius: 14,
                   offset: const Offset(0, 4),
                 ),
               ]
@@ -292,8 +284,6 @@ class ElementIcon extends StatelessWidget {
 
 enum HabitElement { water, light, soil, breeze }
 
-/// Plain-language meaning for each element — surfaced in the info dialog
-/// next to "CHOOSE ELEMENT" so users know what they're picking.
 extension HabitElementMeta on HabitElement {
   String get label => switch (this) {
         HabitElement.water => 'Water',
@@ -352,7 +342,7 @@ class _BlueprintPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint()
-      ..color = AppColors.outlineVariant.withValues(alpha: 0.55)
+      ..color = AppColors.dotPatternColor
       ..strokeWidth = 0.6
       ..style = PaintingStyle.fill;
     const step = 18.0;

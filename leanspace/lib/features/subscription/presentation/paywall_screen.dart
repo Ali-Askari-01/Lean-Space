@@ -3,8 +3,11 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../core/haptics.dart';
+import '../../../core/l10n/app_localizations.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/widgets/ambient_background.dart';
+import '../../../core/widgets/reveal_animations.dart';
+import '../../referral/providers/referral_providers.dart';
 import '../providers/entitlement_provider.dart';
 import '../providers/subscription_providers.dart';
 
@@ -20,50 +23,38 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
   bool _annual = true;
   bool _restoreMessageShown = false;
 
-  static const _features = <(IconData, String, String)>[
-    (
-      Icons.spa_rounded,
-      'All 5 habit slots',
-      'Free gives you 3. Pro unlocks all five so your full daily ritual can live here.'
-    ),
-    (
-      Icons.history_rounded,
-      'Your full history',
-      'Browse every day you\'ve completed — not just the last 7. Look back years, not weeks.'
-    ),
-    (
-      Icons.emoji_events_rounded,
-      'The full medal set',
-      'Unlock Legendary tier medals. The rarest badges are for the people who go all in.'
-    ),
-    (
-      Icons.ac_unit_rounded,
-      'Streak freeze every month',
-      '2 streak freezes a month so a single bad day doesn\'t end your chain.'
-    ),
-    (
-      Icons.auto_awesome_rounded,
-      'Weekly Receipt + share cards',
-      'Beautiful share cards of your week. Post your chain, inspire someone else to start.'
-    ),
-    (
-      Icons.palette_rounded,
-      'Themes + more',
-      'Unlock new accent colors and themes as we add them. Always free updates.'
-    ),
+  static const _featureIcons = <IconData>[
+    Icons.spa_rounded,
+    Icons.history_rounded,
+    Icons.emoji_events_rounded,
+    Icons.ac_unit_rounded,
+    Icons.auto_awesome_rounded,
+    Icons.palette_rounded,
   ];
+
+  List<(IconData, String, String)> _features(AppLocalizations l10n) {
+    final titles = l10n.paywallFeatures.split('|');
+    final bodies = l10n.paywallFeaturesBodies.split('|');
+    final count = titles.length < bodies.length ? titles.length : bodies.length;
+    return [
+      for (var i = 0; i < _featureIcons.length && i < count; i++)
+        (_featureIcons[i], titles[i], bodies[i]),
+    ];
+  }
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final l10n = AppLocalizations.of(context);
     final sub = ref.watch(subscriptionControllerProvider);
+    final referral = ref.watch(referralControllerProvider);
     final isPro = ref.watch(entitlementProvider).isPro;
 
     ref.listen(entitlementProvider, (prev, next) {
       if (next.isPro && (prev == null || !prev.isPro) && mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('Welcome to Bloom Tracker Pro'),
+          SnackBar(
+            content: Text(l10n.paywallWelcomePro),
             duration: Duration(seconds: 3),
           ),
         );
@@ -97,22 +88,25 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
                     const SizedBox(height: 8),
                     _HeroBlock(source: widget.source),
                     const SizedBox(height: 22),
-                    ..._features.map(
-                      (f) => Padding(
+                    ..._features(l10n).asMap().entries.map(
+                      (e) => Padding(
                         padding: const EdgeInsets.only(bottom: 4),
-                        child: _FeatureRow(
-                          icon: f.$1,
-                          title: f.$2,
-                          body: f.$3,
+                        child: FadeUp(
+                          delay: Duration(milliseconds: 40 * e.key),
+                          child: _FeatureRow(
+                            icon: e.value.$1,
+                            title: e.value.$2,
+                            body: e.value.$3,
+                          ),
                         ),
                       ),
                     ),
                     const SizedBox(height: 18),
                     if (!isPro) _PricingBlock(
                       annual: _annual && yearly != null,
-                      monthlyPrice: monthly?.price ?? r'$3.99',
+                      monthlyPrice: monthly?.price ?? r'$1.99',
                       monthlyPeriod: monthly?.price,
-                      yearlyPrice: yearly?.price ?? r'$29.99',
+                      yearlyPrice: yearly?.price ?? r'$19.99',
                       yearlyPeriod: yearly?.price,
                       showMonthly: monthly != null,
                       showYearly: yearly != null,
@@ -123,15 +117,31 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
                     ),
                     if (!isPro) ...[
                       const SizedBox(height: 12),
-                      TextButton(
-                        onPressed: () => context.push('/referral'),
-                        child: Text(
-                          'Invite 5 friends → get 1 month free',
-                          style: theme.textTheme.bodySmall?.copyWith(
-                            color: AppColors.primary,
-                            fontWeight: FontWeight.w700,
-                          ),
+                      _ReferralPlanCard(
+                        isPro: false,
+                        progress: referral.progress,
+                        milestone: referral.milestone,
+                        title: l10n.referralPaywallTitle,
+                        body: l10n.referralPaywallBody,
+                        progressLabel: l10n.referralPaywallProgress(
+                          referral.progress,
+                          referral.milestone,
                         ),
+                        onTap: () => context.push('/referral'),
+                      ),
+                    ] else ...[
+                      const SizedBox(height: 12),
+                      _ReferralPlanCard(
+                        isPro: true,
+                        progress: referral.progress,
+                        milestone: referral.milestone,
+                        title: l10n.referralPaywallTitle,
+                        body: l10n.referralPaywallProBody,
+                        progressLabel: l10n.referralPaywallProgress(
+                          referral.progress,
+                          referral.milestone,
+                        ),
+                        onTap: () => context.push('/referral'),
                       ),
                     ],
                     if (sub.error != null && !isPro) ...[
@@ -183,8 +193,10 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
                                     .buy(selected);
                               },
                         label: _annual
-                            ? 'Start Pro · ${yearly?.price ?? r'$29.99'}/yr'
-                            : 'Start Pro · ${monthly?.price ?? r'$3.99'}/mo',
+                            ? l10n.paywallStartCta(yearly?.price ?? r'$19.99')
+                            : l10n.paywallStartCtaMonthly(
+                                monthly?.price ?? r'$1.99',
+                              ),
                       ),
                       const SizedBox(height: 8),
                       Row(
@@ -202,7 +214,7 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
                                         .restore();
                                   },
                             child: Text(
-                              'Restore purchase',
+                              l10n.paywallRestore,
                               style: theme.textTheme.bodySmall?.copyWith(
                                 color: AppColors.onSurfaceVariant,
                                 fontWeight: FontWeight.w600,
@@ -218,7 +230,7 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
                           TextButton(
                             onPressed: () => _showTerms(context),
                             child: Text(
-                              'Terms',
+                              l10n.paywallTerms,
                               style: theme.textTheme.bodySmall?.copyWith(
                                 color: AppColors.onSurfaceVariant,
                                 fontWeight: FontWeight.w600,
@@ -234,7 +246,7 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
                           TextButton(
                             onPressed: () => _showPrivacy(context),
                             child: Text(
-                              'Privacy',
+                              l10n.paywallPrivacy,
                               style: theme.textTheme.bodySmall?.copyWith(
                                 color: AppColors.onSurfaceVariant,
                                 fontWeight: FontWeight.w600,
@@ -247,8 +259,8 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
                         const SizedBox(height: 4),
                         Text(
                           sub.available
-                              ? 'No previous purchase found on this account.'
-                              : 'We\'ll restore your purchase on the next sync.',
+                              ? l10n.paywallNoRestore
+                              : l10n.paywallRestoreLater,
                           textAlign: TextAlign.center,
                           style: theme.textTheme.labelSmall?.copyWith(
                             color: AppColors.onSurfaceVariant,
@@ -266,43 +278,31 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
   }
 
   void _showTerms(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     showModalBottomSheet<void>(
       context: context,
       backgroundColor: AppColors.surface,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(28)),
       ),
-      builder: (_) => const _LegalSheet(
-        title: 'Subscription terms',
-        body:
-            'Billing is handled by Google Play. Subscriptions renew automatically '
-            'until you cancel in Play Store → Subscriptions at least 24 hours '
-            'before the end of the current period. You can manage or cancel '
-            'your subscription at any time from your Google Play account.\n\n'
-            'Uninstalling the app does not cancel your subscription.\n\n'
-            'Prices shown are in your local currency and may vary by region. '
-            'Taxes may apply.',
+      builder: (_) => _LegalSheet(
+        title: l10n.paywallTermsTitle,
+        body: l10n.paywallTermsBody,
       ),
     );
   }
 
   void _showPrivacy(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     showModalBottomSheet<void>(
       context: context,
       backgroundColor: AppColors.surface,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(28)),
       ),
-      builder: (_) => const _LegalSheet(
-        title: 'Privacy',
-        body:
-            'Bloom Tracker stores your tasks, habits, and streak data on our '
-            'Supabase backend, tied to your account. We never sell your data.\n\n'
-            'Subscription purchases are processed by Google Play. We receive a '
-            'verified purchase token from Google to confirm your Pro status. We '
-            'do not see or store your payment details.\n\n'
-            'You can request full data export or account deletion from '
-            'Settings → Account deletion.',
+      builder: (_) => _LegalSheet(
+        title: l10n.paywallPrivacyTitle,
+        body: l10n.paywallPrivacyBody,
       ),
     );
   }
@@ -315,6 +315,7 @@ class _HeaderBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     return Padding(
       padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
       child: Row(
@@ -323,12 +324,12 @@ class _HeaderBar extends StatelessWidget {
             icon: const Icon(Icons.close_rounded),
             color: AppColors.onSurfaceVariant,
             onPressed: onClose,
-            tooltip: 'Close',
+            tooltip: l10n.paywallCloseTooltip,
           ),
           const Spacer(),
           if (!isPro)
             Text(
-              'Restore · Terms · Privacy',
+              l10n.paywallFooterLinks,
               style: TextStyle(
                 color: AppColors.onSurfaceVariant,
                 fontSize: 11,
@@ -347,7 +348,14 @@ class _HeroBlock extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final theme = Theme.of(context);
+    final subtitle = switch (source) {
+      'habit_slot' => l10n.paywallHabitSlotHead,
+      'history' => l10n.paywallHistoryHead,
+      'medal' => l10n.paywallMedalHead,
+      _ => l10n.paywallSubtitle,
+    };
     return Column(
       children: [
         Container(
@@ -356,10 +364,10 @@ class _HeroBlock extends StatelessWidget {
           alignment: Alignment.center,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            gradient: const LinearGradient(
+            gradient: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
-              colors: [Color(0xFFE8A33D), Color(0xFFA53B22)],
+              colors: AppColors.gradientCta,
             ),
             boxShadow: [
               BoxShadow(
@@ -377,7 +385,7 @@ class _HeroBlock extends StatelessWidget {
         ),
         const SizedBox(height: 18),
         Text(
-          'Keep the chain unbroken.',
+          l10n.paywallTitle,
           textAlign: TextAlign.center,
           style: theme.textTheme.headlineSmall?.copyWith(
             fontWeight: FontWeight.w800,
@@ -387,13 +395,7 @@ class _HeroBlock extends StatelessWidget {
         ),
         const SizedBox(height: 6),
         Text(
-          source == 'habit_slot'
-              ? 'You\'ve used all your free habit slots. Unlock the full set to plant every ritual you care about.'
-              : source == 'history'
-                  ? 'See your full history — every perfect day, every medal, every comeback.'
-                  : source == 'medal'
-                      ? 'The rarest medals are Pro-only. Keep going — they\'re closer than you think.'
-                      : 'Bloom Tracker Pro gives you the full discipline system. Less friction, more growth.',
+          subtitle,
           textAlign: TextAlign.center,
           style: theme.textTheme.bodyMedium?.copyWith(
             color: AppColors.onSurfaceVariant,
@@ -484,23 +486,24 @@ class _PricingBlock extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     return Column(
       children: [
         if (showYearly)
           _PlanOption(
-            title: 'Yearly',
+            title: l10n.paywallYearly,
             price: yearlyPrice,
-            caption: 'Best value · works out to ~\$2.50/mo',
-            badge: 'SAVE 35%',
+            caption: l10n.paywallYearlyCaption,
+            badge: l10n.paywallSavePercent,
             selected: annual,
             onTap: () => onSelect(true),
           ),
         if (showYearly && showMonthly) const SizedBox(height: 10),
         if (showMonthly)
           _PlanOption(
-            title: 'Monthly',
+            title: l10n.paywallMonthly,
             price: monthlyPrice,
-            caption: 'Billed every month · cancel anytime',
+            caption: l10n.paywallMonthlyCaption,
             badge: null,
             selected: !annual || !showYearly,
             onTap: () => onSelect(false),
@@ -538,12 +541,12 @@ class _PlanOption extends StatelessWidget {
         decoration: BoxDecoration(
           color: selected
               ? AppColors.primary.withValues(alpha: 0.08)
-              : AppColors.surfaceContainerLow,
+              : AppColors.elevatedCardSurface,
           borderRadius: BorderRadius.circular(18),
           border: Border.all(
             color: selected
                 ? AppColors.primary
-                : AppColors.outlineVariant,
+                : AppColors.cardBorder,
             width: selected ? 2 : 0.8,
           ),
         ),
@@ -705,6 +708,116 @@ class _LegalSheet extends StatelessWidget {
               ),
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class _ReferralPlanCard extends StatelessWidget {
+  const _ReferralPlanCard({
+    required this.isPro,
+    required this.progress,
+    required this.milestone,
+    required this.title,
+    required this.body,
+    required this.progressLabel,
+    required this.onTap,
+  });
+
+  final bool isPro;
+  final int progress;
+  final int milestone;
+  final String title;
+  final String body;
+  final String progressLabel;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final fraction = milestone == 0 ? 0.0 : progress / milestone;
+    return Material(
+      color: Colors.transparent,
+      borderRadius: BorderRadius.circular(18),
+      child: InkWell(
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(18),
+        child: Container(
+          padding: const EdgeInsets.all(16),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(18),
+            border: Border.all(
+              color: AppColors.secondary.withValues(alpha: 0.35),
+              width: 1.2,
+            ),
+            gradient: LinearGradient(
+              colors: [
+                AppColors.secondary.withValues(alpha: 0.08),
+                AppColors.tertiary.withValues(alpha: 0.06),
+              ],
+            ),
+          ),
+          child: Row(
+            children: [
+              Stack(
+                alignment: Alignment.center,
+                children: [
+                  SizedBox(
+                    width: 48,
+                    height: 48,
+                    child: CircularProgressIndicator(
+                      value: fraction.clamp(0.0, 1.0),
+                      strokeWidth: 3,
+                      color: AppColors.secondary,
+                      backgroundColor:
+                          AppColors.outlineVariant.withValues(alpha: 0.4),
+                    ),
+                  ),
+                  Icon(
+                    Icons.card_giftcard_rounded,
+                    color: AppColors.secondary,
+                    size: 22,
+                  ),
+                ],
+              ),
+              const SizedBox(width: 14),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Text(
+                          title,
+                          style: theme.textTheme.titleSmall?.copyWith(
+                            fontWeight: FontWeight.w800,
+                          ),
+                        ),
+                        const SizedBox(width: 8),
+                        Text(
+                          progressLabel,
+                          style: theme.textTheme.labelSmall?.copyWith(
+                            color: AppColors.secondary,
+                            fontWeight: FontWeight.w800,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 4),
+                    Text(
+                      body,
+                      style: theme.textTheme.bodySmall?.copyWith(
+                        color: AppColors.onSurfaceVariant,
+                        height: 1.35,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Icon(Icons.chevron_right_rounded, color: AppColors.outline),
+            ],
+          ),
         ),
       ),
     );

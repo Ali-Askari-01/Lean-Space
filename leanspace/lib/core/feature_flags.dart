@@ -3,7 +3,7 @@ abstract final class FeatureFlags {
   /// When true, every Pro feature is unlocked and billing is disabled.
   /// Use only for local dogfooding / screenshot capture. Flip to false
   /// before any external build.
-  static const unlockAllFeatures = false;
+  static const unlockAllFeatures = bool.fromEnvironment('UNLOCK_ALL_FEATURES', defaultValue: false);
 
   /// When true, the subscription controller wires up and the paywall
   /// surface is reachable. Always true in release builds.

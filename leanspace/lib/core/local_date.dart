@@ -16,11 +16,15 @@ abstract final class LocalDate {
     if (value == null || value.isEmpty) return null;
     final parts = value.split('-');
     if (parts.length != 3) return null;
-    return DateTime(
-      int.parse(parts[0]),
-      int.parse(parts[1]),
-      int.parse(parts[2]),
-    );
+    try {
+      return DateTime(
+        int.parse(parts[0]),
+        int.parse(parts[1]),
+        int.parse(parts[2]),
+      );
+    } catch (_) {
+      return null;
+    }
   }
 
   static DateTime yesterday(DateTime date) =>

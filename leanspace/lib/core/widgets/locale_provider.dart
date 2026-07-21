@@ -2,87 +2,80 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../l10n/app_localizations.dart';
+
 /// Per-user language override. When null, the system locale is used.
 class LocaleNotifier extends Notifier<Locale?> {
   static const _key = 'app_locale';
 
+  bool _hydrated = false;
+  bool _hydrating = false;
+  bool get isHydrated => _hydrated;
+
   @override
   Locale? build() {
-    // Async hydrate so the splash holds until we know the user's choice.
-    _hydrate();
     return null;
   }
 
-  Future<void> _hydrate() async {
+  /// Await before showing UI so splash uses the saved locale.
+  Future<void> ensureHydrated() async {
+    if (_hydrated || _hydrating) return;
+    _hydrating = true;
     try {
       final prefs = await SharedPreferences.getInstance();
       final code = prefs.getString(_key);
       if (code != null && code.isNotEmpty) {
-        state = _fromCode(code);
+        state = Locale(code);
       }
     } catch (_) {
       // Default to system locale on any failure.
     }
+    _hydrated = true;
+    _hydrating = false;
   }
 
   Future<void> set(Locale? locale) async {
     state = locale;
+    _hydrated = true;
     try {
       final prefs = await SharedPreferences.getInstance();
       if (locale == null) {
         await prefs.remove(_key);
       } else {
-        await prefs.setString(_key, _toCode(locale));
+        await prefs.setString(_key, locale.languageCode);
       }
     } catch (_) {
       // Best-effort persistence.
     }
   }
 
-  /// Human-readable label for the picker UI.
-  String labelFor(Locale? locale) {
-    if (locale == null) return 'System default';
+  /// Human-readable label for the picker UI (native script where applicable).
+  String labelFor(Locale? locale, [AppLocalizations? l10n]) {
+    if (locale == null) {
+      return l10n?.languageSystemDefault ?? 'System default';
+    }
     switch (locale.languageCode) {
       case 'en':
-        return 'English';
-      case 'ur':
-        return 'اردو (Urdu)';
-      case 'hi':
-        return 'हिन्दी (Hindi)';
-      case 'pa':
-        return 'ਪੰਜਾਬੀ (Punjabi)';
-      case 'sd':
-        return 'سنڌي (Sindhi)';
-      case 'bn':
-        return 'বাংলা (Bengali)';
-      case 'ps':
-        return 'پښتو (Pashto)';
+        return l10n?.languageNameEn ?? 'English';
       case 'es':
-        return 'Español';
+        return l10n?.languageNameEs ?? 'Español';
       case 'pt':
-        return 'Português';
+        return l10n?.languageNamePt ?? 'Português';
       case 'fr':
-        return 'Français';
+        return l10n?.languageNameFr ?? 'Français';
       case 'de':
-        return 'Deutsch';
+        return l10n?.languageNameDe ?? 'Deutsch';
       case 'it':
-        return 'Italiano';
+        return l10n?.languageNameIt ?? 'Italiano';
       case 'ar':
-        return 'العربية';
+        return l10n?.languageNameAr ?? 'العربية';
       case 'tr':
-        return 'Türkçe';
+        return l10n?.languageNameTr ?? 'Türkçe';
       case 'id':
-        return 'Bahasa Indonesia';
+        return l10n?.languageNameId ?? 'Bahasa Indonesia';
       default:
         return locale.languageCode;
     }
-  }
-
-  /// 4-letter language code (no country variant) used for persistence.
-  String _toCode(Locale locale) => locale.languageCode;
-
-  Locale? _fromCode(String code) {
-    return Locale(code);
   }
 }
 
@@ -93,12 +86,6 @@ final localeProvider =
 /// order. Keep this in sync with lib/l10n/app_*.arb.
 const supportedAppLocales = <Locale>[
   Locale('en'),
-  Locale('ur'),
-  Locale('hi'),
-  Locale('pa'),
-  Locale('sd'),
-  Locale('bn'),
-  Locale('ps'),
   Locale('es'),
   Locale('pt'),
   Locale('fr'),

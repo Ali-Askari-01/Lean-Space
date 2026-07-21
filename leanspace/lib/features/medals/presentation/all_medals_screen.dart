@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../core/l10n/app_localizations.dart';
+import '../../../core/l10n/medal_l10n.dart';
 import '../../../core/local_date.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/widgets/ambient_background.dart';
@@ -26,6 +28,7 @@ class _AllMedalsScreenState extends ConsumerState<AllMedalsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final myDay = ref.watch(myDayProvider);
     final insightsAsync = ref.watch(insightsProvider);
     final insights = insightsAsync.asData?.value ??
@@ -79,13 +82,13 @@ class _AllMedalsScreenState extends ConsumerState<AllMedalsScreen> {
           icon: const Icon(Icons.arrow_back_rounded),
           color: AppColors.onSurfaceVariant,
         ),
-        title: const Text('My Medals'),
+        title: Text(l10n.medalsTitle),
         actions: [
           IconButton(
             onPressed: () => context.push('/share-card'),
             icon: const Icon(Icons.ios_share_rounded),
             color: AppColors.onSurfaceVariant,
-            tooltip: 'Share achievements',
+            tooltip: l10n.medalsShareTooltip,
           ),
         ],
       ),
@@ -103,7 +106,7 @@ class _AllMedalsScreenState extends ConsumerState<AllMedalsScreen> {
               if (earned.isNotEmpty && _filter == null) ...[
                 const SizedBox(height: 18),
                 _SectionLabel(
-                  title: 'Trophy Room',
+                  title: l10n.medalsTrophyRoom,
                   icon: Icons.emoji_events_rounded,
                   color: AppColors.primary,
                   count: earned.length,
@@ -113,7 +116,7 @@ class _AllMedalsScreenState extends ConsumerState<AllMedalsScreen> {
               ],
               const SizedBox(height: 18),
               _SectionLabel(
-                title: _filter == null ? 'All Medals' : '${_filter!.label} Medals',
+                title: _filter == null ? l10n.medalsAllMedals : '${_filter!.localizedLabel(l10n)} ${l10n.medalsAllMedals.toLowerCase()}',
                 icon: Icons.workspace_premium_rounded,
                 color: AppColors.tertiary,
                 count: filtered.length,
@@ -147,11 +150,12 @@ class _SummaryBanner extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final pct = total == 0 ? 0.0 : (earned / total);
+    final l10n = AppLocalizations.of(context);
     final headline = earned == 0
-        ? 'Your first badge is one task away'
+        ? l10n.medalsTrophyEmpty
         : earned == 1
-            ? 'You earned your first medal — keep going'
-            : '$earned medals in your trophy room';
+            ? l10n.medalsTrophyFirst
+            : l10n.medalsTrophyMany('$earned');
 
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 4),
@@ -200,7 +204,7 @@ class _SummaryBanner extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Trophy Room',
+                      l10n.medalsTrophyRoom,
                       style: theme.textTheme.titleLarge?.copyWith(
                         color: Colors.white,
                         fontWeight: FontWeight.w800,
@@ -227,7 +231,7 @@ class _SummaryBanner extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'Progress to all $total medals',
+                l10n.medalsProgressLabel('$total'),
                 style: theme.textTheme.labelSmall?.copyWith(
                   color: Colors.white.withValues(alpha: 0.85),
                   fontWeight: FontWeight.w700,
@@ -274,6 +278,7 @@ class _TierPill extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
       decoration: BoxDecoration(
@@ -287,7 +292,7 @@ class _TierPill extends StatelessWidget {
           Icon(tier.sigil, color: tier.ribbon, size: 12),
           const SizedBox(width: 4),
           Text(
-            tier.label,
+            tier.localizedLabel(l10n),
             style: TextStyle(
               color: tier.ribbon,
               fontSize: 11,
@@ -308,6 +313,7 @@ class _CategoryFilter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     return SizedBox(
       height: 36,
       child: ListView(
@@ -315,7 +321,7 @@ class _CategoryFilter extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 4),
         children: [
           _Chip(
-            label: 'All',
+            label: l10n.medalsFilterAll,
             icon: Icons.dashboard_rounded,
             color: AppColors.onSurface,
             selected: selected == null,
@@ -324,7 +330,7 @@ class _CategoryFilter extends StatelessWidget {
           const SizedBox(width: 8),
           for (final c in MedalCategory.values) ...[
             _Chip(
-              label: c.label,
+              label: c.localizedLabel(l10n),
               icon: c.icon,
               color: AppColors.primary,
               selected: selected == c,
@@ -486,7 +492,7 @@ class _EarnedCard extends StatelessWidget {
         padding: const EdgeInsets.fromLTRB(10, 14, 10, 12),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
-          color: AppColors.surfaceContainerLow,
+          color: AppColors.elevatedCardSurface,
           border: Border.all(color: medal.tier.accent.withValues(alpha: 0.35)),
           boxShadow: [
             BoxShadow(
@@ -575,6 +581,7 @@ class _EmptyState extends StatelessWidget {
   const _EmptyState();
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final theme = Theme.of(context);
     return Column(
       children: [
@@ -585,7 +592,7 @@ class _EmptyState extends StatelessWidget {
         ),
         const SizedBox(height: 10),
         Text(
-          'Nothing in this category yet',
+          l10n.medalsEmptyTitle,
           textAlign: TextAlign.center,
           style: theme.textTheme.titleMedium?.copyWith(
             color: AppColors.onSurface,
@@ -594,7 +601,7 @@ class _EmptyState extends StatelessWidget {
         ),
         const SizedBox(height: 4),
         Text(
-          'Finish a task or tend a sprout to start your trophy room.',
+          l10n.medalsEmptyBody,
           textAlign: TextAlign.center,
           style: theme.textTheme.bodySmall?.copyWith(
             color: AppColors.onSurfaceVariant,
@@ -610,6 +617,7 @@ class _ShareCta extends StatelessWidget {
   final VoidCallback onTap;
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final theme = Theme.of(context);
     return Material(
       color: AppColors.primary,
@@ -625,7 +633,7 @@ class _ShareCta extends StatelessWidget {
               const Icon(Icons.ios_share_rounded, color: Colors.white),
               const SizedBox(width: 10),
               Text(
-                'Create a shareable card',
+                l10n.medalsShareCta,
                 style: theme.textTheme.titleMedium?.copyWith(
                   color: Colors.white,
                   fontWeight: FontWeight.w800,

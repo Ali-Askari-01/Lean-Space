@@ -140,7 +140,12 @@ class MedalContext {
   final DateTime today;
 }
 
-List<Medal> getMedalCatalogue() => [
+/// Cached medal catalogue — created once and reused across all builds.
+final List<Medal> _cachedMedalCatalogue = _buildMedalCatalogue();
+
+List<Medal> getMedalCatalogue() => _cachedMedalCatalogue;
+
+List<Medal> _buildMedalCatalogue() => [
       // ── TASK ACHIEVEMENTS (rising through tiers) ─────────────────
       Medal(
         id: 'first_spark',

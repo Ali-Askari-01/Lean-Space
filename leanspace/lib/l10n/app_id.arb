@@ -1,223 +1,1086 @@
-﻿﻿﻿﻿﻿{
+{
   "@@locale": "id",
-  "appTitle": "Bloom Tracker",
+  "appTitle": "Daily Stitch",
   "tabToday": "Hari Ini",
   "tabProgress": "Progres",
   "tabYou": "Anda",
+
   "navMyDay": "Hari Saya",
   "navSettings": "Pengaturan",
+  "navHelp": "Bantuan & Dukungan",
   "navHistory": "7 Hari Terakhir",
   "navLeftBehind": "Tertinggal",
+  "navInsights": "Progres Anda",
   "navMedals": "Medali Saya",
-  "navPaywall": "Bloom Tracker Pro",
+  "navManagePro": "Kelola langganan Pro",
+  "navPaywall": "Daily Stitch Pro",
+
+  "greetingLateNight": "Bekerja larut malam",
   "greetingMorning": "Selamat pagi, matahari!",
   "greetingAfternoon": "Selamat siang, teman",
   "greetingEvening": "Selamat sore, juara",
   "greetingNight": "Beristirahat dengan baik, penjaga?",
+
   "todayTasksCount": "Hari ini · {done} dari {total} tugas",
+  "@todayTasksCount": {
+    "placeholders": {
+      "done": { "type": "String" },
+      "total": { "type": "String" }
+    }
+  },
+  "todayHabitsCount": "{done} dari {total} kebiasaan",
+  "@todayHabitsCount": {
+    "placeholders": {
+      "done": { "type": "String" },
+      "total": { "type": "String" }
+    }
+  },
+  "todayChainGrows": "RANTAI BERGROW SAAT ANDA MENYELESAIKAN",
+  "todayChainComplete": "RANTAI SELESAI · RAWAT KEBUN BESOK",
+  "taskCapInfo": "Mengapa ada batas 5 tugas?",
+  "taskCapDiscipline": "DISIPLIN-ORIENTED SEJAK AWAL",
+  "taskCapTitle": "Kami membatasi hari Anda hingga 5 tugas secara sengaja.",
+  "taskCapBody": "Rantai kecil lebih baik dari yang panjang. Anda lebih mungkin menyelesaikan 3 dari 5 dan merasakan kemenangan daripada meninggalkan 8 dari 10 dan merasakan kekalahan.",
+  "taskCapBulletDone": "Tugas selesai dihitung ke dalam rantai Anda",
+  "taskCapBulletDoneBody": "Hari di mana semua 5 tugas selesai memperpanjang rantai Anda satu hari.",
+  "taskCapBulletMissed": "Tugas yang terlewat masuk ke Tertinggal",
+  "taskCapBulletMissedBody": "Pada tengah malam, tugas yang belum selesai muncul di Tertinggal. Tambahkan kembali hanya yang masih penting.",
+  "taskCapBulletFreeze": "Pembekuan rantai memaafkan satu hari terlewat",
+  "taskCapBulletFreezeBody": "Pro memberi Anda 2 pembekuan rantai per bulan — mereka menutupi hari yang terlewat sehingga rantai Anda bertahan.",
+
   "tasksHeader": "Tugas",
+  "tasksProgressCount": "{done} / {total}",
+  "@tasksProgressCount": {
+    "placeholders": {
+      "done": { "type": "String" },
+      "total": { "type": "String" }
+    }
+  },
   "tasksAddSeed": "Tambah benih tugas",
+  "tasksCapReached": "5/5 slot terpakai — selesaikan satu untuk menanam benih baru.",
+  "tasksEmptyCta": "Tanam benih pertama Anda — apa yang penting hari ini?",
+
   "habitsHeader": "Kebiasaan",
+  "habitsGrowing": "{count} sedang tumbuh",
+  "@habitsGrowing": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "habitsBestStreak": "Terbaik {days} h",
+  "@habitsBestStreak": {
+    "placeholders": {
+      "days": { "type": "String" }
+    }
+  },
+  "habitsPlantNew": "Tanam tunas kebiasaan baru",
   "habitsPlantFirst": "Tanam kebiasaan",
+  "habitsLocked": "Slot kebiasaan Pro — buka kunci untuk menanam lebih banyak tunas",
+  "habitsSlotsFull": "Semua slot kebiasaan sedang penuh.",
+  "habitsStreakDays": "{days}h",
+  "@habitsStreakDays": {
+    "placeholders": {
+      "days": { "type": "String" }
+    }
+  },
   "habitsCadence": "HARIAN",
-  "leftBehindTitle": "Tertinggal",
+
+  "leftBehindBanner": "{count} terlewat — masih di Tertinggal",
+  "@leftBehindBanner": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "leftBehindTap": "Ketuk untuk menambahkan kembali atau lepaskan",
   "leftBehindDismiss": "Abaikan",
+  "leftBehindTitle": "Tertinggal",
+  "leftBehindEmpty": "Tidak ada yang tertinggal",
+  "leftBehindEmptyBody": "Tidak ada tugas yang terlewat. Setiap benih yang Anda tanam sedang dirawat. Kebun bersih.",
   "leftBehindClearAll": "Hapus semua",
-  "leftBehindReAddToday": "Tambah lagi hari ini",
-  "leftBehindLetGo": "Lepas",
+  "leftBehindClearAllConfirm": "Hapus semua yang tertinggal?",
+  "leftBehindClearAllBody": "Ini akan menghapus {count} tugas yang terlewat secara permanen. Anda tidak dapat membatalkan ini.",
+  "@leftBehindClearAllBody": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "leftBehindReAdd": "Tambahkan kembali hari ini",
+  "leftBehindReAddButton": "Tambahkan kembali",
+  "leftBehindAddedToToday": "Ditambahkan ke hari ini",
+  "leftBehindLetGo": "Lepaskan",
+  "leftBehindHeader": "TERTINGGAL",
+  "leftBehindMissedTasks": "TUGAS YANG TERLEWAT",
+  "leftBehindWaitingOne": "1 tugas menunggu Anda.",
+  "leftBehindWaitingMany": "{count} tugas menunggu Anda.",
+  "@leftBehindWaitingMany": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "leftBehindBody": "Tambahkan kembali tugas untuk membawanya ke hari ini, atau lepaskan. Menambahkan kembali menjaga rantai Anda tetap hidup.",
+  "leftBehindReAddedSnack": "\"{task}\" kembali ke hari Anda.",
+  "@leftBehindReAddedSnack": {
+    "placeholders": {
+      "task": { "type": "String" }
+    }
+  },
+  "leftBehindRemovedSnack": "Menghapus \"{task}\"",
+  "@leftBehindRemovedSnack": {
+    "placeholders": {
+      "task": { "type": "String" }
+    }
+  },
+  "leftBehindClearedSnack": "Yang tertinggal dihapus",
+  "leftBehindYesterdayDate": "Kemarin · {date}",
+  "@leftBehindYesterdayDate": {
+    "placeholders": {
+      "date": { "type": "String" }
+    }
+  },
+
+  "streakAtRisk": "{count} tugas tersisa untuk hari ini",
+  "@streakAtRisk": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "streakAtRiskLastCall": "Panggilan terakhir — {count} tugas masih terbuka",
+  "@streakAtRiskLastCall": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "streakAtRiskBody": "Tengah malam sudah dekat. Rantai bergantung pada ini.",
+  "streakAtRiskBodyLow": "Anda masih punya waktu. Hari yang bersih memperpanjang rantai Anda.",
+  "streakAtRiskFreeze": "Kemarin terlewat — gunakan pembekuan rantai?",
+  "streakFreezeUse": "Gunakan pembekuan",
+  "streakFreezeUseForYesterday": "Gunakan pembekuan rantai bulanan untuk kemarin",
+  "streakFreezeAppliedYesterday": "Pembekuan rantai diterapkan untuk kemarin.",
+
+  "chainBrokenTitle": "Rantai putus. Itu tidak apa-apa.",
+  "chainBrokenBody": "Setiap rantai panjang berakhir sekali. Yang penting adalah apa yang Anda tanam hari ini. Satu hari sempurna memulai yang berikutnya.",
+  "chainBrokenCta": "Kembali ke hari ini",
+  "chainBrokenPlantFirst": "Tanam benih pertama hari ini",
+  "chainBrokenCheck": "Periksa Tertinggal terlebih dahulu",
+  "chainBrokenBestChain": "rantai terbaik",
+  "chainBrokenTasksDone": "tugas selesai",
+  "chainBrokenSprouts": "tunas",
+  "chainRecoveryFreshStart": "Mulai baru",
+
   "medalsTitle": "Medali Saya",
   "medalsTrophyRoom": "Ruang Trofi",
   "medalsAllMedals": "Semua Medali",
+  "medalsTrophyEarned": "{earned} dari {total} medali diraih",
+  "@medalsTrophyEarned": {
+    "placeholders": {
+      "earned": { "type": "String" },
+      "total": { "type": "String" }
+    }
+  },
+  "medalsTrophyEmpty": "Lencana pertama Anda tinggal satu tugas lagi",
+  "medalsTrophyFirst": "Anda meraih medali pertama — terus lanjutkan",
+  "medalsTrophyMany": "{earned} medali di ruang trofi Anda",
+  "@medalsTrophyMany": {
+    "placeholders": {
+      "earned": { "type": "String" }
+    }
+  },
+  "medalsProgressLabel": "Progres menuju {total} medali",
+  "@medalsProgressLabel": {
+    "placeholders": {
+      "total": { "type": "String" }
+    }
+  },
   "medalsShareCta": "Buat kartu yang bisa dibagikan",
-  "medalSheetUnlock": "Buka dengan Pro",
+  "medalsEmptyTitle": "Belum ada di kategori ini",
+  "medalsEmptyBody": "Selesaikan tugas atau rawat tunas untuk memulai ruang trofi Anda.",
+
   "medalSheetLocked": "MEDALI PRO",
-  "medalShareOnSocials": "Bagikan ke sosial",
+  "medalSheetEarned": "DIRAIH · {tier}",
+  "@medalSheetEarned": {
+    "placeholders": {
+      "tier": { "type": "String" }
+    }
+  },
+  "medalSheetUnlock": "Buka dengan Pro",
+  "medalSheetProgress": "Progres",
+  "medalSheetHint": "Hanya {n} {unit} lagi untuk membuka.",
+  "@medalSheetHint": {
+    "placeholders": {
+      "n": { "type": "String" },
+      "unit": { "type": "String" }
+    }
+  },
+  "medalSheetAlmost": "Satu langkah lagi untuk membuka.",
+  "medalCategory": "Kategori",
+  "medalShareOnSocials": "Bagikan ke media sosial",
   "medalShareLater": "Nanti saja",
   "medalUnlocked": "MEDALI TERBUKA",
+  "medalProgressTitle": "Progres",
+
   "historyTitle": "7 Hari Terakhir",
+  "historyFullTitle": "Riwayat lengkap",
+  "historyLoadError": "Tidak dapat memuat riwayat.",
+  "historyFullCalendar": "Kalender lengkap",
+  "historyCompletedPercent": "{percent}% selesai",
+  "@historyCompletedPercent": {
+    "placeholders": {
+      "percent": { "type": "String" }
+    }
+  },
+  "historyThisWeek": "{days} HARI TERAKHIR",
+  "@historyThisWeek": {
+    "placeholders": {
+      "days": { "type": "String" }
+    }
+  },
   "historyDayByDay": "HARI PER HARI",
-  "historyPerfect": "SEMPURNA",
-  "historyToday": "Hari Ini",
+  "historyEmpty": "Tanam beberapa benih untuk melihat minggu Anda terungkap.",
+  "historyDoneCount": "Anda menyelesaikan {done} dari {total} tugas. {perfect} hari sempurna.",
+  "@historyDoneCount": {
+    "placeholders": {
+      "done": { "type": "String" },
+      "total": { "type": "String" },
+      "perfect": { "type": "String" }
+    }
+  },
   "historyUpsellTitle": "Lihat riwayat lengkap",
-  "historyUpsellBody": "Pro membuka 30 hari riwayat.",
+  "historyUpsellBody": "Pro membuka 30 hari riwayat. Gratis menampilkan 7 hari.",
+  "historyPerfect": "SEMPURNA",
+  "historyFrozen": "BEKU",
+  "historyToday": "Hari Ini",
+  "historyEmptyDay": "Tidak ada benih yang ditanam hari itu",
+  "historyLeftBehindCount": "{count} tertinggal",
+  "@historyLeftBehindCount": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+
   "progressVitality": "VITALITAS HARI INI",
+  "progressVitalityEmpty": "Tanam benih untuk memulai kebun Anda.",
+  "progressVitalitySeeds": "{done} dari {total} benih ditanam hari ini.",
+  "@progressVitalitySeeds": {
+    "placeholders": {
+      "done": { "type": "String" },
+      "total": { "type": "String" }
+    }
+  },
   "progressChainPill": "rantai {days}h",
+  "@progressChainPill": {
+    "placeholders": {
+      "days": { "type": "String" }
+    }
+  },
   "progressMetricCurrent": "Saat ini",
   "progressMetricBest": "Terbaik",
   "progressMetricDone": "Selesai",
   "progressMetricPerfect": "Sempurna",
   "progressMetricHabits": "Kebiasaan",
+  "progressHabitBlooms": "Mekar kebiasaan",
+  "progressHabitBloomsSub": "Tonggak rantai untuk tunas yang Anda sirami setiap hari.",
   "progressNextBadge": "Lencana berikutnya",
+  "progressMedalCount": "{earned} dari {total}",
+  "@progressMedalCount": {
+    "placeholders": {
+      "earned": { "type": "String" },
+      "total": { "type": "String" }
+    }
+  },
+  "progressPersonalActivity": "Aktivitas Pribadi",
+  "progressBrowseMonth": "Menjelajahi {month}. Ketuk \"Hari Ini\" untuk kembali ke aktivitas terkini.",
+  "@progressBrowseMonth": {
+    "placeholders": {
+      "month": { "type": "String" }
+    }
+  },
   "progressJumpToToday": "Hari Ini",
+  "progressCalendarLegend": "lebih gelap = lebih banyak selesai",
+  "progressCalendarBody": "Hijau tua berarti hari sempurna. Warna memudar saat Anda melewatkan hari.",
+
+  "paywallTitle": "Pertahankan rantai tetap utuh.",
+  "paywallSubtitle": "Daily Stitch Pro memberikan Anda sistem disiplin lengkap.",
+  "paywallFeatures": "Semua 5 slot kebiasaan, bukan hanya 3|Riwayat lengkap Anda, selamanya|Set medali lengkap|Pembekuan rantai setiap bulan|Resi mingguan + kartu bagikan|Tema + lainnya",
+  "paywallFeaturesBodies": "Gratis memberi Anda 3. Pro membuka semua lima sehingga ritual harian Anda bisa hidup di sini.|Jelajahi setiap hari yang telah Anda selesaikan — bukan hanya 7 hari terakhir. Lihat ke belakang bertahun-tahun, bukan minggu.|Buka kunci medali tier Legendaris. Lencana paling langka adalah untuk orang-orang yang benar-benar berkommitmen.|2 pembekuan rantai per bulan sehingga satu hari buruk tidak mengakhiri rantai Anda.|Kartu bagikan mingguan yang indah. Posting rantai Anda, inspirasi orang lain untuk memulai.|Buka kunci warna aksen dan tema baru saat kami menambahkannya. Selalu pembaruan gratis.",
   "paywallYearly": "Tahunan",
+  "paywallYearlyCaption": "Nilai terbaik · setara dengan ~2.50 USD/bulan",
+  "paywallYearlyBadge": "HEMAT 35%",
   "paywallMonthly": "Bulanan",
+  "paywallMonthlyCaption": "Ditagih setiap bulan · batalkan kapan saja",
+  "paywallStartCta": "Mulai Pro · {price}/thn",
+  "@paywallStartCta": {
+    "placeholders": {
+      "price": { "type": "String" }
+    }
+  },
+  "paywallStartCtaMonthly": "Mulai Pro · {price}/bln",
+  "@paywallStartCtaMonthly": {
+    "placeholders": {
+      "price": { "type": "String" }
+    }
+  },
   "paywallRestore": "Pulihkan pembelian",
   "paywallTerms": "Ketentuan",
   "paywallPrivacy": "Privasi",
+  "paywallNoRestore": "Tidak ada pembelian sebelumnya yang ditemukan di akun ini.",
+  "paywallRestoreLater": "Kami akan memulihkan pembelian Anda pada sinkronisasi berikutnya.",
+  "paywallAlreadyPro": "Anda sudah menggunakan Pro. Terima kasih atas dukungannya.",
+  "paywallHabitSlotHead": "Anda telah menggunakan semua slot kebiasaan gratis Anda. Buka kunci set lengkap untuk menanam semua ritual yang Anda pedulikan.",
+  "paywallHistoryHead": "Lihat riwayat lengkap Anda — setiap hari sempurna, setiap medali, setiap kebangkitan.",
+  "paywallMedalHead": "Medali paling langka hanya untuk Pro. Terus lanjutkan — mereka lebih dekat dari yang Anda kira.",
+
+  "settingsYourActivity": "AKTIVITAS ANDA",
+  "settingsHelpInfo": "BANTUAN & INFO",
+  "settingsAccount": "AKUN",
+  "settingsNurturingTools": "ALAT PEMELIHARAAN",
+  "settingsReminders": "PENGINGAT",
+  "settingsWidgetSanctuary": "SUCCI WIDGET",
+  "settingsEcosystemSupport": "DUKUNGAN EKOSISTEM",
   "settingsHowItWorks": "Cara kerjanya",
   "settingsSignOut": "Keluar",
+  "settingsProActive": "Aktif",
+  "settingsProFree": "Tier gratis",
   "settingsLanguage": "Bahasa",
   "settingsLanguageValue": "Default sistem",
+
+  "firstRunGreeting": "5 tugas. Tidak lebih. Buatlah berarti.",
+  "firstRunBody": "Tanam benih pertama Anda — apa yang paling penting hari ini?",
+  "firstRunCta": "Tanam benih pertama Anda",
+
+  "emptyStateClearAll": "Hapus semua",
   "cancel": "Batal",
+
+  "intentionTitle1": "Yuk tanam niat baru!",
+  "intentionBody1": "Setiap hutan yang megah dimulai dari satu pilihan kecil. Ceritakan apa yang kita rawat hari ini?",
+  "intentionTitle2": "Apa yang ingin kita tumbuhkan hari ini?",
+  "intentionBody2": "Benih kecil, dirawat dengan penuh kasih, menjadi pohon yang tinggi. Pilih yang paling penting saat ini.",
+  "intentionTitle3": "Satu benih. Satu tarikan napas. Mulai.",
+  "intentionBody3": "Anda tidak harus menanam seluruh hutan sekaligus — cukup hal yang benar berikutnya.",
+  "intentionTitle4": "Rawat langkah kecil berikutnya.",
+  "intentionBody4": "Diri Anda di masa depan dibangun dari pilihan yang Anda buat dalam lima menit ke depan. Apa satu kebaikan yang bisa Anda lakukan?",
+  "intentionTitle5": "Pilih apa yang ingin Anda jadikan.",
+  "intentionBody5": "Tugas adalah benih, kebiasaan adalah tunas. Bersama-sama mereka membentuk hutan yang Anda banggakan.",
+  "intentionTitle6": "Tanam sesuatu yang layak dikenang.",
+  "intentionBody6": "Tidak setiap hari akan terasa luar biasa. Benih yang disiram tetap dihitung. Yuk namai satu.",
+  "intentionTitle7": "Buat hari ini sedikit lebih berani.",
+  "intentionBody7": "Keberanian berlipat ganda. Pilih benih yang telah Anda tunda — bahkan memberi nama sudah membuatnya maju.",
+  "intentionTitle8": "Rawat tanah sebelum benih.",
+  "intentionBody8": "Pola pikir, alat, atau ritual kecil apa yang akan membuat tugas ini lebih mudah? Tambahkan ke catatan.",
+
   "shareCardSnapshot": "Sekilas tentang tempat perlindungan Anda",
+  "shareCardBody": "Kartu di atas diekspor sebagai PNG dan dikirim ke lembar bagikan Anda. Posting di cerita Anda, kirim ke teman, atau cetak sebagai stiker.",
+  "shareCardShareMyBloom": "Bagikan mekaran saya",
+  "shareCardCouldNotShare": "Tidak dapat berbagi saat ini",
+  "shareCardProgressText": "Progres Daily Stitch saya — {year} di Daily Stitch.",
+  "@shareCardProgressText": {
+    "placeholders": {
+      "year": { "type": "String" }
+    }
+  },
+  "shareCardMedalText": "Saya baru saja membuka medali \"{title}\" di Daily Stitch. {subtitle}",
+  "@shareCardMedalText": {
+    "placeholders": {
+      "title": { "type": "String" },
+      "subtitle": { "type": "String" }
+    }
+  },
 
+  "howItWorksTitle": "Cara kerjanya",
+  "howItWorksBody": "Daily Stitch membantu Anda mempertahankan rantai disiplin yang kecil dan tak terputus. Itu saja.",
+  "howItWorksToday": "Tab Hari Ini",
+  "howItWorksTodayBody": "Ini adalah rumah Anda. Menampilkan 5 tugas dan kebiasaan yang Anda tetapkan untuk hari ini. Selesaikan sebelum tengah malam, rantai akan memanjang.",
+  "howItWorksCap": "Batas 5 tugas adalah fitur utama",
+  "howItWorksCapBody": "Kami tidak membiarkan Anda menambahkan tugas ke-6. Itu intinya. Rantai kecil lebih baik dari yang panjang. Ketuk \"?\" di layar utama untuk penjelasan lengkap.",
+  "howItWorksHabits": "Kebiasaan bersifat harian, rantai bersifat selamanya",
+  "howItWorksHabitsBody": "Kebiasaan (Yoga pagi, Minum air) hidup selamanya. Tugas bersifat satu kali. Keduanya memberi makan rantai yang sama.",
+  "howItWorksLeftBehind": "Tugas terlewat → Tertinggal",
+  "howItWorksLeftBehindBody": "Pada tengah malam, tugas yang belum selesai pindah ke Tertinggal. Tambahkan kembali hanya yang masih penting. Sisanya dilepaskan dengan tenang.",
+  "howItWorksProgress": "Tab Progres",
+  "howItWorksProgressBody": "Rantai, kalender, medali, riwayat — semuanya tentang bagaimana Anda berkembang dari waktu ke waktu. Tidak ada yang mendesak di sini.",
+  "howItWorksYou": "Tab Anda",
+  "howItWorksYouBody": "Akun Anda, pengaturan, keluar. Itu saja.",
+  "howItWorksRule": "Aturannya: 5 hal kecil, setiap hari, tanpa alasan.",
 
-  "commonRetry": "Retry",
-  "commonBack": "Back",
-  "commonDismiss": "Dismiss",
-  "commonCancel": "Cancel",
-  "commonClose": "Close",
-  "commonSend": "Send",
-  "commonCopy": "Copy",
-  "commonShowLess": "Show less",
-  "commonViewFull": "View full notes",
+  "commonRetry": "Coba lagi",
+  "commonBack": "Kembali",
+  "commonDismiss": "Abaikan",
+  "commonCancel": "Batal",
+  "commonClose": "Tutup",
+  "commonSend": "Kirim",
+  "commonCopy": "Salin",
+  "commonShowLess": "Tampilkan lebih sedikit",
+  "commonViewFull": "Lihat catatan lengkap",
   "commonEdit": "Edit",
-  "commonDelete": "Delete",
-  "commonDone": "Done",
-  "commonError": "Something went wrong",
-  "commonPageNotFound": "Page Not Found",
-  "commonHome": "Home",
-  "commonUnknownError": "Unknown routing error",
-  "commonSettingsTooltip": "Settings",
-  "commonHowThisWorks": "How this works",
+  "commonDelete": "Hapus",
+  "commonDone": "Selesai",
+  "commonError": "Terjadi kesalahan",
+  "commonPageNotFound": "Halaman Tidak Ditemukan",
+  "commonHome": "Beranda",
+  "commonUnknownError": "Kesalahan routing tidak dikenal",
+  "commonSettingsTooltip": "Pengaturan",
+  "commonHowThisWorks": "Cara kerjanya",
 
-  "myDayReminderSet": "Reminder set",
-  "myDayPreparationNotes": "PREPARATION NOTES",
+  "myDayReminderSet": "Pengingat ditetapkan",
+  "myDayPreparationNotes": "CATATAN PERSIAPAN",
 
-  "onboardingSkip": "SKIP",
-  "onboardingNext": "Next",
-  "onboardingEnterSanctuary": "Enter Sanctuary",
-  "onboardingIntroduction": "INTRODUCTION",
-  "onboardingGrowYourForest": "GROW YOUR FOREST",
-  "onboardingPage1Title": "Meet your Guardian.",
-  "onboardingPage1Body": "Welcome to your Personal Sanctuary. Here, your growth is mirrored in the life of your forest.",
-  "onboardingPage2Title": "Plant seeds. Watch them grow.",
-  "onboardingPage2Body": "Each task is a tiny seed. Each habit is a sprout you tend daily. Together they form a forest of discipline.",
-  "onboardingPage3Title": "Five tasks. One chain.",
-  "onboardingPage3Body": "You can only plant 5 seeds per day. That cap forces you to focus on what actually matters — and protect your chain.",
-  "onboardingPage4Title": "Tend your sprouts daily.",
-  "onboardingPage4Body": "Tap habits to grow them. Skip a day and the chain doesn't extend. The Guardian grows with you.",
+  "onboardingSkip": "LEWATI",
+  "onboardingNext": "Berikutnya",
+  "onboardingEnterSanctuary": "Masuk ke Tempat Perlindungan",
+  "onboardingIntroduction": "PENDAHULUAN",
+  "onboardingGrowYourForest": "TUMBUHKAN HUTAN ANDA",
+  "onboardingPage1Title": "Kenali Penjaga Anda.",
+  "onboardingPage1Body": "Selamat datang di Tempat Perlindungan Pribadi Anda. Di sini, pertumbuhan Anda tercermin dalam kehidupan hutan Anda.",
+  "onboardingPage2Title": "Tanam benih. Saksikan mereka tumbuh.",
+  "onboardingPage2Body": "Setiap tugas adalah benih kecil. Setiap kebiasaan adalah tunas yang Anda rawat setiap hari. Bersama-sama mereka membentuk hutan disiplin.",
+  "onboardingPage3Title": "Lima tugas. Satu rantai.",
+  "onboardingPage3Body": "Anda hanya bisa menanam 5 benih per hari. Batas itu memaksa Anda untuk fokus pada yang benar-benar penting — dan melindungi rantai Anda.",
+  "onboardingPage4Title": "Rawat tunas Anda setiap hari.",
+  "onboardingPage4Body": "Ketuk kebiasaan untuk menumbuhkannya. Lewati satu hari dan rantai tidak akan memanjang. Penjaga tumbuh bersama Anda.",
 
-  "authBrand": "BLOOM TRACKER",
-  "authPlantFirstSeed": "Plant your first seed.",
-  "authWelcomeBack": "Welcome back, Guardian.",
-  "authFiveTasksDaily": "Five tasks. Daily habits. No excuses.",
-  "authSanctuaryWaiting": "Your sanctuary is waiting.",
-  "authSignIn": "Sign In",
-  "authSignUp": "Sign Up",
+  "authBrand": "DAILY STITCH",
+  "authPlantFirstSeed": "Tanam benih pertama Anda.",
+  "authWelcomeBack": "Selamat datang kembali, Penjaga.",
+  "authFiveTasksDaily": "Lima tugas. Kebiasaan harian. Tanpa alasan.",
+  "authSanctuaryWaiting": "Tempat perlindungan Anda menunggu.",
+  "authSignIn": "Masuk",
+  "authSignUp": "Daftar",
   "authEmail": "EMAIL",
-  "authPassword": "PASSWORD",
-  "authEmailHint": "you@email.com",
-  "authCreateAccount": "Create account",
-  "authSignInCta": "Sign in",
-  "authOrContinueWith": "or continue with",
-  "authContinueWithGoogle": "Continue with Google",
-  "authEnterEmail": "Enter your email",
-  "authEnterValidEmail": "Enter a valid email address",
-  "authPasswordTooShort": "Password must be at least 6 characters",
-  "authAccountCreated": "Account created. Switch to Sign In and use your password.",
-  "authSomethingWentWrong": "Something went wrong. Try again.",
-  "authCouldNotStartGoogle": "Could not start Google sign-in.",
-  "authMidnightReset": "By signing in, you accept that your day resets at midnight.",
-  "authSetupRequired": "Setup required",
+  "authPassword": "KATA SANDI",
+  "authEmailHint": "anda@email.com",
+  "authCreateAccount": "Buat akun",
+  "authSignInCta": "Masuk",
+  "authOrContinueWith": "atau lanjutkan dengan",
+  "authContinueWithGoogle": "Lanjutkan dengan Google",
+  "authEnterEmail": "Masukkan email Anda",
+  "authEnterValidEmail": "Masukkan alamat email yang valid",
+  "authPasswordTooShort": "Kata sandi harus minimal 6 karakter",
+  "authAccountCreated": "Akun dibuat. Beralih ke Masuk dan gunakan kata sandi Anda.",
+  "authSomethingWentWrong": "Terjadi kesalahan. Coba lagi.",
+  "authCouldNotStartGoogle": "Tidak dapat memulai masuk Google.",
+  "authMidnightReset": "Dengan masuk, Anda menerima bahwa hari Anda direset pada tengah malam.",
+  "authSetupRequired": "Pengaturan diperlukan",
 
-  "settingsPersonalSanctuary": "PERSONAL SANCTUARY",
-  "settingsHowThisWorks": "How this works",
-  "settingsHowThisWorksSubtitle": "What the app is, how the cap and streak work",
-  "settingsStreakProtection": "Streak Protection",
-  "settingsStreakProtectionAvailable": "1 freeze available this month",
-  "settingsStreakProtectionUsed": "Used for this month",
-  "settingsProSubscription": "Bloom Tracker Pro",
-  "settingsManageProSubscription": "Manage Pro subscription",
-  "settingsProCancelPlay": "Cancel or change plan in Google Play",
-  "settingsProUnlock": "Unlock all 5 habits, full history, more",
-  "settingsTaskAlarms": "Task alarms & Final Call",
-  "settingsTaskAlarmsSubtitle": "Evening nudge and midnight warning",
-  "settingsHomeScreenWidget": "Home-screen widget",
-  "settingsHomeScreenWidgetSubtitle": "Add your chain streak to the home screen",
-  "settingsShareBloomTracker": "Share Bloom Tracker",
-  "settingsShareBloomTrackerSubtitle": "Tell a friend about the chain",
-  "settingsHelpSupport": "Help & Support",
-  "settingsHelpSupportSubtitle": "FAQ or report a problem",
-  "settingsSignOutTile": "Sign Out",
-  "settingsAllFeaturesUnlocked": "All features unlocked",
-  "settingsAllFeaturesUnlockedSubtitle": "Beta build — subscriptions paused while we test everything.",
-  "settingsVersion": "Version {version} ({build})",
-  "settingsVersionUnknown": "Version 1.0.0",
-  "settingsHabitMaster": "Habit Master",
-  "settingsLevel": "Level {level} · Habit Master",
+  "settingsPersonalSanctuary": "TEMPAT PERLINDUNGAN PRIBADI",
+  "settingsHowThisWorks": "Cara kerjanya",
+  "settingsHowThisWorksSubtitle": "Apa itu aplikasi, bagaimana batas dan rantai bekerja",
+  "settingsStreakProtection": "Perlindungan Rantai",
+  "settingsStreakProtectionAvailable": "1 pembekuan tersedia bulan ini",
+  "settingsStreakProtectionUsed": "Digunakan untuk bulan ini",
+  "settingsProSubscription": "Daily Stitch Pro",
+  "settingsManageProSubscription": "Kelola langganan Pro",
+  "settingsProCancelPlay": "Batalkan atau ubah paket di Google Play",
+  "settingsProUnlock": "Buka semua 5 kebiasaan, riwayat lengkap, lainnya",
+  "settingsTaskAlarms": "Alarm tugas & Panggilan Terakhir",
+  "settingsTaskAlarmsSubtitle": "Dorongan malam dan peringatan tengah malam",
+  "settingsHomeScreenWidget": "Widget layar beranda",
+  "settingsHomeScreenWidgetSubtitle": "Tambahkan rantai Anda ke layar beranda",
+  "settingsShareBloomTracker": "Bagikan Daily Stitch",
+  "settingsShareBloomTrackerSubtitle": "Ceritakan tentang rantai kepada teman",
+  "settingsHelpSupport": "Bantuan & Dukungan",
+  "settingsHelpSupportSubtitle": "FAQ atau laporkan masalah",
+  "settingsSignOutTile": "Keluar",
+  "settingsAllFeaturesUnlocked": "Semua fitur terbuka",
+  "settingsAllFeaturesUnlockedSubtitle": "Versi beta — langganan dijeda saat kami menguji segalanya.",
+  "settingsVersion": "Versi {version} ({build})",
+  "settingsVersionUnknown": "Versi 1.0.0",
+  "settingsHabitMaster": "Master Kebiasaan",
+  "settingsLevel": "Level {level} · Master Kebiasaan",
 
-  "languagePickerTitle": "Language",
+  "languagePickerTitle": "Bahasa",
 
-  "youLast7Days": "Last 7 days",
-  "youLast7DaysSubtitle": "Day-by-day task history",
-  "youLeftBehindSubtitle": "Missed tasks waiting to be re-added",
-  "youProTier": "Pro tier",
-  "youFreeTier": "Free tier",
+  "youLast7Days": "7 hari terakhir",
+  "youLast7DaysSubtitle": "Riwayat tugas hari demi hari",
+  "youLeftBehindSubtitle": "Tugas yang terlewat menunggu untuk ditambahkan kembali",
+  "youProTier": "Tier Pro",
+  "youFreeTier": "Tier gratis",
   "youPro": "Pro",
-  "youFree": "Free",
+  "youFree": "Gratis",
   "youLevelLabel": "Level {level}",
-  "youBestStreakLabel": "Best {days} d",
-  "youPlantHabit": "Plant a habit to start a chain.",
+  "youBestStreakLabel": "Terbaik {days} h",
+  "youPlantHabit": "Tanam kebiasaan untuk memulai rantai.",
   "youProBadge": "PRO",
-  "youUnlockDiscipline": "Unlock the full discipline system.",
-  "youProFeatures": "5 habit slots, full history, legendary medals, monthly streak freezes, weekly share cards.",
-  "youSeePlans": "See plans",
-  "youFromPrice": "from {price}/mo",
-  "youBloomTrackerFooter": "Bloom Tracker · Habit & To-Do",
+  "youUnlockDiscipline": "Buka kunci sistem disiplin lengkap.",
+  "youProFeatures": "5 slot kebiasaan, riwayat lengkap, medali legendaris, pembekuan rantai bulanan, kartu bagikan mingguan.",
+  "youSeePlans": "Lihat paket",
+  "youFromPrice": "dari {price}/bln",
+  "youBloomTrackerFooter": "Daily Stitch · Kebiasaan & To-Do",
 
-  "progressMedals": "Medals",
-  "progressLast7Days": "Last 7 days",
-  "progressSeeAll": "See all",
-  "progressSeeDayByDayActivity": "See your day-by-day activity",
-  "progressTasksFinishedPct": "{done} of {total} tasks finished · {pct}%",
-  "progressNoMedalsYet": "No medals yet — finish a task or tend a sprout to get started.",
-  "progressSeeAllMedals": "See all medals · {earned} of {total} earned",
-  "progressGuardianInsight": "Guardian insight",
-  "progressNextBadgeTier": "NEXT BADGE · {tier}",
-  "progressDaysTarget": "{days} day target",
+  "progressMedals": "Medali",
+  "progressLast7Days": "7 hari terakhir",
+  "progressSeeAll": "Lihat semua",
+  "progressSeeDayByDayActivity": "Lihat aktivitas hari demi hari Anda",
+  "progressTasksFinishedPct": "{done} dari {total} tugas selesai · {pct}%",
+  "progressNoMedalsYet": "Belum ada medali — selesaikan tugas atau rawat tunas untuk memulai.",
+  "progressSeeAllMedals": "Lihat semua medali · {earned} dari {total} diraih",
+  "progressGuardianInsight": "Wawasan Penjaga",
+  "progressNextBadgeTier": "LENCANA BERIKUTNYA · {tier}",
+  "progressDaysTarget": "Target {days} hari",
   "progressOfTotal": "{value}/{target}",
 
-  "helpTitle": "Help & Support",
-  "helpBody": "Most answers are below. If not, send us a note and we usually reply within 2–3 days.",
-  "helpSectionFAQ": "FREQUENT QUESTIONS",
-  "helpSectionContact": "STILL STUCK?",
-  "helpAddMessage": "Add a short message first.",
-  "helpOpening": "Opening your mail app…",
-  "helpEmailUs": "Email us",
-  "helpOpeningAction": "Opening…",
-  "helpCopyEmail": "Copy support email",
-  "helpCopiedEmail": "Copied support@bloomtracker.app",
-  "helpNoMailApp": "No mail app found. Email us at support@bloomtracker.app.",
-  "helpTopicLabel": "Topic",
-  "helpWhatHappened": "What happened?",
-  "helpHint": "A short description goes a long way…",
-  "helpDisclaimer": "Tapping \"Email us\" opens your mail app with a pre-filled message (no data leaves your device until you send).",
-  "helpFaqQ1": "What is the 5-task cap?",
-  "helpFaqA1": "You can add up to 5 tasks per local day. The 6th is blocked on purpose — discipline beats overload. The cap is the feature, not a limitation.",
-  "helpFaqQ2": "What happens at midnight?",
-  "helpFaqA2": "At your local midnight, any task still marked open is stamped \"missed\" and moves to Left Behind. Habit streaks reset if the habit was not completed the day before.",
-  "helpFaqQ3": "What is Left Behind?",
-  "helpFaqA3": "A gentle, dismissible list of tasks you didn't finish. Open it, re-add only what still matters, and let the rest go. Free tier sees the last 7 days; Pro sees full history.",
-  "helpFaqQ4": "How do streaks work?",
-  "helpFaqA4": "A day extends the chain when you had at least 1 task and 0 were missed. Days with zero tasks neither extend nor break the chain. A streak freeze forgives one missed day per month.",
-  "helpFaqQ5": "What is the streak freeze?",
-  "helpFaqA5": "One \"freeze\" per calendar month, Pro only. Spend it on a day you missed to keep your chain alive. Find it on the Progress tab.",
-  "helpFaqQ6": "Where is my data stored?",
-  "helpFaqA6": "All data lives in Supabase (Postgres) under the account that signed in. We never sell or share it. See the privacy policy linked in the Play Store listing for the full details.",
-  "helpFaqQ7": "How do I delete my account?",
-  "helpFaqA7": "Account deletion is coming to Settings in the next release. For now, email support@bloomtracker.app and we'll handle it within a day.",
-  "helpTopicsGeneral": "General question",
-  "helpTopicsBug": "Bug report",
-  "helpTopicsStreak": "Streak / rollover issue",
-  "helpTopicsBilling": "Billing or Pro tier",
-  "helpTopicsAccount": "Account & data",
-  "helpTopicsFeature": "Feature request",
-  "helpAccountAnon": "(not signed in)",
+  "helpTitle": "Bantuan & Dukungan",
+  "helpBody": "Kebanyakan jawaban ada di bawah. Jika tidak, kirimkan catatan kepada kami dan kami biasanya membalas dalam 2–3 hari.",
+  "helpSectionFAQ": "PERTANYAAN UMUM",
+  "helpSectionContact": "MASIH BINGUNG?",
+  "helpAddMessage": "Tambahkan pesan singkat terlebih dahulu.",
+  "helpOpening": "Membuka aplikasi email Anda…",
+  "helpEmailUs": "Email kami",
+  "helpOpeningAction": "Membuka…",
+  "helpCopyEmail": "Salin email dukungan",
+  "helpCopiedEmail": "Menyalin support@dailystitch.app",
+  "helpNoMailApp": "Tidak ditemukan aplikasi email. Email kami di support@dailystitch.app.",
+  "helpTopicLabel": "Topik",
+  "helpWhatHappened": "Apa yang terjadi?",
+  "helpHint": "Deskripsi singkat sangat membantu…",
+  "helpDisclaimer": "Mengetuk \"Email kami\" membuka aplikasi email Anda dengan pesan yang sudah diisi (tidak ada data yang keluar dari perangkat Anda sampai Anda mengirim).",
+  "helpFaqQ1": "Apa itu batas 5 tugas?",
+  "helpFaqA1": "Anda dapat menambahkan hingga 5 tugas per hari lokal. Tugas ke-6 diblokir secara sengaja — disiplin mengalahkan beban berlebih. Batas itu adalah fitur, bukan keterbatasan.",
+  "helpFaqQ2": "Apa yang terjadi pada tengah malam?",
+  "helpFaqA2": "Pada tengah malam lokal Anda, setiap tugas yang masih ditandai terbuka diberi cap \"terlewat\" dan pindah ke Tertinggal. Rantai kebiasaan direset jika kebiasaan tidak diselesaikan hari sebelumnya.",
+  "helpFaqQ3": "Apa itu Tertinggal?",
+  "helpFaqA3": "Daftar yang lembut dan dapat ditutup dari tugas yang tidak Anda selesaikan. Buka, tambahkan kembali hanya yang masih penting, dan lepaskan sisanya. Tier gratis melihat 7 hari terakhir; Pro melihat riwayat lengkap.",
+  "helpFaqQ4": "Bagaimana rantai bekerja?",
+  "helpFaqA4": "Satu hari memperpanjang rantai ketika Anda memiliki setidaknya 1 tugas dan 0 yang terlewat. Hari dengan nol tugas tidak memperpanjang atau memutus rantai. Pembekuan rantai memaafkan satu hari terlewat per bulan.",
+  "helpFaqQ5": "Apa itu pembekuan rantai?",
+  "helpFaqA5": "Satu \"pembekuan\" per bulan kalender, hanya untuk Pro. Gunakan pada hari yang Anda lewatkan untuk menjaga rantai Anda tetap hidup. Temukan di tab Progres.",
+  "helpFaqQ6": "Di mana data saya disimpan?",
+  "helpFaqA6": "Semua data tersimpan di Supabase (Postgres) di bawah akun yang masuk. Kami tidak pernah menjual atau membaginya. Lihat kebijakan privasi yang tertaut di daftar Play Store untuk detail lengkap.",
+  "helpFaqQ7": "Bagaimana cara menghapus akun saya?",
+  "helpFaqA7": "Buka Pengaturan → Akun → Hapus akun. Ini menghapus profil, tugas, kebiasaan, dan data langganan Anda secara permanen. Langganan Play yang aktif harus dibatalkan secara terpisah di Google Play.",
+  "helpTopicsGeneral": "Pertanyaan umum",
+  "helpTopicsBug": "Laporan bug",
+  "helpTopicsStreak": "Masalah rantai / bergulir",
+  "helpTopicsBilling": "Penagihan atau tier Pro",
+  "helpTopicsAccount": "Akun & data",
+  "helpTopicsFeature": "Permintaan fitur",
+  "helpAccountAnon": "(belum masuk)",
 
-  "splashTagline": "Nurture small seeds. Grow a forest.",
+  "splashTagline": "Rawat benih kecil. Tumbuhkan hutan.",
 
   "priorityStandard": "STANDARD",
   "priorityVital": "VITAL",
-  "prioritySpark": "SPARK"
+  "prioritySpark": "SPARK",
+
+  "settingsDeleteAccount": "Hapus akun",
+  "settingsDeleteAccountSubtitle": "Hapus data Anda secara permanen",
+  "settingsDeleteAccountConfirmTitle": "Hapus akun Anda?",
+  "settingsDeleteAccountConfirmBody": "Ini menghapus profil, tugas, kebiasaan, dan progres Anda secara permanen. Langganan aktif harus dibatalkan di Google Play secara terpisah. Tindakan ini tidak dapat dibatalkan.",
+  "settingsDeleteAccountConfirmButton": "Hapus selamanya",
+  "settingsDeleteAccountSuccess": "Akun Anda telah dihapus.",
+  "settingsDeleteAccountFailed": "Tidak dapat menghapus akun. Coba lagi atau email support@dailystitch.app.",
+
+  "referralYouTitle": "Undang teman · dapatkan Pro gratis",
+  "referralYouSubtitle": "{progress} dari {milestone} teman bergabung",
+  "@referralYouSubtitle": {
+    "placeholders": {
+      "progress": { "type": "int" },
+      "milestone": { "type": "int" }
+    }
+  },
+  "referralYouShare": "Bagikan undangan",
+  "referralYouDetails": "Lihat detail",
+  "referralPaywallTitle": "Bulan Pro gratis",
+  "referralPaywallBody": "Undang 5 teman yang mendaftar → 1 bulan Pro gratis",
+  "referralPaywallProBody": "Terus mengundang — kumpulkan bulan Pro gratis",
+  "referralPaywallProgress": "{count} / {milestone}",
+
+  "insightsLoadError": "Tidak dapat memuat progres Anda. Coba lagi nanti.",
+  "insightsMetricCurrentChain": "RANTAI SAAT INI",
+  "insightsMetricBestEver": "TERBAIK SEPANJANG MASA",
+  "insightsMetricTasksDone": "TUGAS SELESAI",
+  "insightsMetricPerfectDays": "HARI SEMPURNA",
+  "insightsMetricHabits": "KEBIASAAN",
+  "insightsDay": "hari",
+  "insightsDays": "hari",
+  "insightsSectionThisWeek": "Minggu ini",
+  "insightsShareMyWeek": "Bagikan minggu saya",
+  "insightsShareMyWeekPro": "Bagikan minggu saya · Pro",
+  "insightsShareReceiptText": "Minggu saya di Daily Stitch. Jangan putus rantainya.",
+  "insightsHistoryWindowTitle": "Menampilkan {days} hari terakhir",
+  "@insightsHistoryWindowTitle": {
+    "placeholders": {
+      "days": { "type": "int" }
+    }
+  },
+  "insightsHistoryUpsell": "Buka riwayat lengkap dengan Pro",
+
+  "referralScreenTitle": "Undang teman",
+  "referralLaunchGift": "Hadiah bulan peluncuran",
+  "referralRewardTitle": "Dapatkan 1 bulan Pro gratis",
+  "referralRewardBody": "Bagikan kode Anda kepada teman. Ketika 5 orang mendaftar menggunakan kode Anda, Anda membuka Daily Stitch Pro selama satu bulan penuh.",
+  "referralYourCode": "Kode referral Anda",
+  "referralCopyCodeTooltip": "Salin kode",
+  "referralCodeCopied": "Kode referral disalin",
+  "referralShareWithFriends": "Bagikan dengan teman",
+  "referralFooterHint": "Teman memasukkan kode Anda saat membuat akun. Setiap teman dihitung satu kali untuk hadiah Anda.",
+  "referralFriendsJoinedOne": "{count} teman bergabung",
+  "@referralFriendsJoinedOne": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "referralFriendsJoinedMany": "{count} teman bergabung",
+  "@referralFriendsJoinedMany": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "referralRewardsEarnedOne": "Anda telah mendapatkan {count} bulan Pro gratis.",
+  "@referralRewardsEarnedOne": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "referralRewardsEarnedMany": "Anda telah mendapatkan {count} bulan Pro gratis.",
+  "@referralRewardsEarnedMany": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "referralRewardUnlocked": "Hadiah terbuka — nikmati bulan Pro gratis Anda!",
+  "referralRemainingToUnlock": "{remaining} lagi untuk membuka bulan gratis Anda",
+  "@referralRemainingToUnlock": {
+    "placeholders": {
+      "remaining": { "type": "int" }
+    }
+  },
+
+  "youProMemberSince": "Anggota Pro sejak {month}",
+  "@youProMemberSince": {
+    "placeholders": {
+      "month": { "type": "String" }
+    }
+  },
+  "youProPerksTitle": "Keistimewaan Pro Anda",
+  "manageProThankYou": "Terima kasih telah mendukung Bloom",
+  "manageProReferralHint": "Undang lebih banyak teman untuk memperpanjang Pro Anda",
+
+  "bootstrapConfigErrorBody": "{detail}\n\nTambahkan SUPABASE_URL dan SUPABASE_PUBLISHABLE_KEY (atau SUPABASE_ANON_KEY lama) ke leanspace/.env, lalu bangun ulang:\n\nflutter build apk --debug",
+  "@bootstrapConfigErrorBody": {
+    "placeholders": {
+      "detail": { "type": "String" }
+    }
+  },
+
+  "languageSystemDefault": "Default sistem",
+  "languageNameEn": "English",
+  "languageNameUr": "اردو (Urdu)",
+  "languageNameHi": "हिन्दी (Hindi)",
+  "languageNamePa": "ਪੰਜਾਬੀ (Punjabi)",
+  "languageNameSd": "سنڌي (Sindhi)",
+  "languageNameBn": "বাংলা (Bengali)",
+  "languageNamePs": "پښتو (Pashto)",
+  "languageNameEs": "Español",
+  "languageNamePt": "Português",
+  "languageNameFr": "Français",
+  "languageNameDe": "Deutsch",
+  "languageNameIt": "Italiano",
+  "languageNameAr": "العربية",
+  "languageNameTr": "Türkçe",
+  "languageNameId": "Bahasa Indonesia",
+
+  "onboardingLanguageTitle": "Pilih bahasa Anda",
+  "onboardingLanguageBody": "Pilih bahasa yang ingin Anda gunakan di Daily Stitch. Anda dapat mengubahnya kapan saja di Pengaturan.",
+  "onboardingLanguageContinue": "Lanjutkan",
+
+  "commonPro": "PRO",
+  "commonFriend": "Teman",
+
+  "settingsAppTheme": "Tema Aplikasi",
+  "settingsAppThemeSubtitle": "Pilih warna tempat perlindungan pribadi Anda",
+  "settingsInviteFriendsTitle": "Undang teman · Pro Gratis",
+  "settingsInviteFriendsSubtitle": "Dapatkan 1 bulan gratis saat 5 teman bergabung",
+
+  "themePickerTitle": "Tempat Perlindungan Pribadi",
+  "themePickerSubtitle": "Pilih palet warna yang membawa kedamaian.",
+  "themeNameClassicBloom": "Bloom Klasik",
+  "themeNameSolarTerracotta": "Terracotta Surya",
+  "themeNameMidnightOasis": "Oasis Tengah Malam",
+  "themeNameLavenderDream": "Impian Lavender",
+  "themeNameNordicFrost": "Embun Nordik",
+  "themeNameCyberpunkNeon": "Neon Cyberpunk",
+
+  "reminderTitle": "Pengingat",
+  "reminderBody": "Panggilan Terakhir memberi tahu Anda sebelum tengah malam jika tugas masih terbuka.",
+  "reminderFinalCall": "Panggilan Terakhir",
+  "reminderEveningNudge": "Dorongan malam",
+  "reminderChangeTime": "Ubah waktu",
+  "reminderSave": "Simpan pengingat",
+
+  "notificationChannelReminders": "Pengingat Daily Stitch",
+  "notificationChannelRemindersDesc": "Dorongan malam dan pengingat Panggilan Terakhir",
+  "notificationChannelAlarms": "Alarm tugas Daily Stitch",
+  "notificationChannelAlarmsDesc": "Alarm keras untuk pengingat tugas",
+  "notificationTaskReminderTitle": "Pengingat tugas",
+  "notificationFinalCallTitle": "Panggilan Terakhir",
+  "notificationFinalCallBody": "Anda masih memiliki {count} tugas terbuka hari ini.",
+  "@notificationFinalCallBody": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "notificationEveningTitle": "Cek malam",
+  "notificationEveningBody": "Bagaimana kebun Anda tumbuh hari ini?",
+
+  "widgetSetupTitle": "Tambahkan widget rantai",
+  "widgetSetupBody": "Pertahankan rantai di layar beranda Anda — tidak perlu membuka aplikasi.",
+  "widgetSetupAdd": "Tambahkan ke layar beranda",
+  "widgetSetupStep1": "Tekan lama layar beranda Anda",
+  "widgetSetupStep2": "Ketuk Widget",
+  "widgetSetupStep3": "Temukan Daily Stitch dan seret ke atas",
+  "widgetSetupPinSuccess": "Periksa layar beranda Anda untuk menempatkan widget.",
+  "widgetSetupPinFallback": "Peluncur Anda mungkin tidak mendukung penambahan sekali ketuk. Gunakan langkah manual di bawah ini.",
+
+  "paywallWelcomePro": "Selamat datang di Daily Stitch Pro",
+  "paywallSavePercent": "HEMAT ~16%",
+  "paywallTermsTitle": "Ketentuan langganan",
+  "paywallTermsBody": "Penagihan ditangani oleh Google Play. Langganan memperbarui secara otomatis sampai Anda membatalkan di Play Store → Langganan setidaknya 24 jam sebelum akhir periode berjalan. Anda dapat mengelola atau membatalkan langganan kapan saja dari akun Google Play Anda.\n\nMenghapus aplikasi tidak membatalkan langganan Anda.\n\nHarga yang ditampilkan dalam mata uang lokal Anda dan dapat berbeda per wilayah. Pajak mungkin berlaku.",
+  "paywallPrivacyTitle": "Privasi",
+  "paywallPrivacyBody": "Daily Stitch menyimpan tugas, kebiasaan, dan data rantai Anda di backend Supabase kami, terkait dengan akun Anda. Kami tidak pernah menjual data Anda.\n\nPembelian langganan diproses oleh Google Play. Kami menerima token pembelian terverifikasi dari Google untuk mengonfirmasi status Pro Anda. Kami tidak melihat atau menyimpan detail pembayaran Anda.\n\nAnda dapat meminta ekspor data lengkap atau penghapusan akun dari Pengaturan → Penghapusan akun.",
+  "paywallCloseTooltip": "Tutup",
+  "paywallFooterLinks": "Pulihkan · Ketentuan · Privasi",
+
+  "manageProTitle": "Langganan Pro",
+  "manageProActive": "Aktif",
+  "manageProNotSubscribed": "Belum berlangganan",
+  "manageProFreeTier": "Tier gratis",
+  "manageProRenewsOn": "Memperbarui atau berakhir pada {date}.",
+  "@manageProRenewsOn": { "placeholders": { "date": { "type": "String" } } },
+  "manageProFreeBody": "Anda menggunakan Daily Stitch Gratis. Tingkatkan untuk membuka sistem lengkap.",
+  "manageProSectionManage": "KELOLA",
+  "manageProOpenPlay": "Buka langganan Google Play",
+  "manageProOpenPlaySubtitlePro": "Batalkan, ubah paket, atau perbarui metode pembayaran",
+  "manageProOpenPlaySubtitleFree": "Temukan langganan Anda yang ada (jika ada) di sini",
+  "manageProShareApp": "Bagikan Daily Stitch",
+  "manageProShareSubtitle": "Ceritakan tentang rantai kepada teman",
+  "manageProSectionHelp": "BUTUH BANTUAN?",
+  "manageProHelpTitle": "Bantuan & Dukungan",
+  "manageProHelpSubtitle": "FAQ langganan, kontak, laporan bug",
+  "manageProBillingFooter": "Penagihan ditangani oleh Google Play · {version}",
+  "@manageProBillingFooter": { "placeholders": { "version": { "type": "String" } } },
+  "manageProPlayInstructions": "Buka aplikasi Google Play Store → ketuk profil Anda → Pembayaran & langganan → Langganan.",
+
+  "addTaskGrowSomething": "Tumbuhkan Sesuatu",
+  "addTaskPlantSprout": "Tanam Tunas",
+  "addTaskIntentionName": "NAMA NIAT",
+  "addTaskSproutName": "NAMA TUNAS",
+  "addTaskHintTask": "contoh, Salam Matahari Pagi",
+  "addTaskHintHabit": "contoh Yoga Pagi",
+  "addTaskWhen": "KAPAN?",
+  "addTaskPriority": "PRIORITAS",
+  "addTaskNotes": "CATATAN",
+  "addTaskCadenceDaily": "Harian",
+  "addTaskCadenceWeekdays": "Hari kerja",
+  "addTaskCadence3x": "3x/minggu",
+  "addTaskCadenceWeekly": "Mingguan",
+  "addTaskPlantIntention": "Tanam Niat",
+  "addTaskPlantSproutCta": "Tanam Tunas",
+  "addTaskPlanting": "Menanam…",
+  "addTaskNameIntentionError": "Namai niat Anda",
+  "addTaskNameSproutError": "Namai tunas Anda",
+  "addTaskNotesMigrationWarning": "Tugas tersimpan. Catatan & prioritas memerlukan migrasi Supabase terbaru — jalankan supabase/migrations/20260701000000_todos_notes_priority.sql.",
+  "addTaskNoSproutSlots": "Tidak ada slot tunas kosong — rawat satu terlebih dahulu.",
+  "addTaskSaveSproutError": "Tidak dapat menyimpan tunas — coba lagi.",
+  "addTaskElementWater": "AIR",
+  "addTaskElementLight": "CAHAYA",
+  "addTaskElementSoil": "TANAH",
+  "addTaskElementBreeze": "ANGIN",
+  "addTaskCadenceLabel": "KADENSI",
+  "addTaskPreparationNotes": "CATATAN PERSIAPAN",
+  "addTaskTendingNotes": "CATATAN PERAWATAN",
+  "addTaskNotesHintTask": "Alat atau tips pola pikir untuk tugas ini?",
+  "addTaskNotesHintHabit": "Seperti apa merawat tunas ini?",
+  "addTaskChooseElement": "PILIH ELEMEN",
+  "addTaskElementsTooltip": "Apa arti elemen-elemen ini?",
+  "addTaskTaskSeed": "Benih Tugas",
+  "addTaskHabitSprout": "Tunas Kebiasaan",
+  "addTaskPickElement": "Pilih elemen yang tepat",
+  "addTaskPickElementBody": "Setiap elemen mewakili jenis usaha yang berbeda. Penjaga menjadi lebih kuat saat Anda menyiram yang benar.",
+  "addTaskClearForm": "Bersihkan formulir",
+
+  "shareCouldNotShare": "Tidak dapat berbagi saat ini",
+
+  "authReferralCodeLabel": "Kode referral (opsional)",
+  "authReferralCodeHint": "Kode teman",
+
+  "youPerkHabitSlots": "5 slot kebiasaan",
+  "youPerkFullHistory": "Riwayat lengkap",
+  "youPerkAllThemes": "Semua tema",
+  "youPerkStreakFreezes": "2 pembekuan rantai / bulan",
+  "youPerkLegendaryMedals": "Medali legendaris",
+
+  "subscriptionPurchaseFailed": "Pembelian gagal. Coba lagi.",
+  "subscriptionUnavailable": "Pembelian dalam aplikasi tidak tersedia di perangkat ini.",
+  "subscriptionLoadFailed": "Tidak dapat memuat opsi langganan.",
+  "subscriptionVerifyFailed": "Tidak dapat memverifikasi pembelian. Coba Pulihkan pembelian.",
+
+  "streakFreezeFailed": "Tidak dapat menggunakan pembekuan rantai.",
+  "streakFreezeAlreadyUsed": "Anda sudah menggunakan pembekuan bulan ini.",
+  "streakFreezeNoMissed": "Tidak ada tugas yang terlewat hari itu untuk dibekukan.",
+  "streakFreezeNotPastDay": "Anda hanya dapat membekukan hari yang sudah lewat.",
+
+  "myDayLoadError": "Tidak dapat memuat Hari Saya. Tarik untuk menyegarkan.",
+  "myDayCapReached": "Anda telah mencapai batas 5 tugas hari ini.",
+  "myDayRemoveTaskError": "Tidak dapat menghapus tugas.",
+
+  "shareCardTitle": "Bagikan minggu Anda",
+  "shareCardCta": "Bagikan gambar",
+
+  "medalTierSprout": "Tunas",
+  "medalTierCommon": "Biasa",
+  "medalTierRare": "Langka",
+  "medalTierEpic": "Epik",
+  "medalTierLegendary": "Legendaris",
+  "medalCategoryTasks": "Tugas",
+  "medalCategoryHabits": "Kebiasaan",
+  "medalCategoryStreaks": "Rantai",
+  "medalCategoryMastery": "Penguasaan",
+
+  "medalsShareTooltip": "Bagikan pencapaian",
+  "medalsFilterAll": "Semua",
+
+  "addHabitTitleNew": "Tanam tunas baru",
+  "addHabitTitleEdit": "Rawat tunas Anda",
+  "addHabitLabelSproutName": "NAMA TUNAS",
+
+  "shareCardAppBarTitle": "Kartu Bagikan",
+  "shareCardAppBarTitleMedal": "Bagikan medali Anda",
+  "shareCardDescMedal": "Pamerkan lencana {title} baru Anda",
+  "shareCardBodyMedal": "Bagikan kemenangan dengan lingkaran Anda. Kartu diekspor sebagai PNG dan siap untuk aplikasi sosial apa pun.",
+  "shareCardCtaPreparing": "Mempersiapkan…",
+  "shareCardMilestone": "TONGGAK BARU TERBUKA",
+  "shareCardStatChain": "hari rantai",
+  "shareCardStatSprouts": "tunas",
+  "shareCardStatMedals": "medali",
+  "shareCardHeadlineStreak": "Rantai {days} Hari",
+  "@shareCardHeadlineStreak": {
+    "placeholders": { "days": { "type": "int" } }
+  },
+  "shareCardHeadlineMedals": "{count} Medali Diraih",
+  "@shareCardHeadlineMedals": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "shareCardHeadlineSproutGuardian": "Penjaga Tunas",
+  "shareCardHeadlineFirstSeeds": "Benih Pertama Ditanam",
+  "shareCardHeadlineGardenBegins": "Sebuah Kebun Dimulai",
+  "shareCardSubheadMonth": "Anda telah berhasil merawat kebiasaan Anda selama satu bulan penuh.",
+  "shareCardSubheadWeek": "Satu minggu penuh pertumbuhan — hutan Anda semakin lebat.",
+  "shareCardSubheadProgress": "Tempat perlindungan Anda menunjukkan kemajuan nyata. Terus rawat.",
+  "shareCardSubheadSprouts": "Tunas pertama Anda mulai berakar. Sirami setiap hari.",
+  "shareCardSubheadFirstSeeds": "Benih pertama Anda sudah di tanah. Saksikan mereka terbuka.",
+  "shareCardSubheadFallback": "Setiap hutan dimulai dari satu pilihan kecil.",
+
+  "shareAppText": "Daily Stitch — lima benih kecil sehari, satu rantai tak terputus. Tanam milik Anda.\n\n{url}",
+  "@shareAppText": {
+    "placeholders": { "url": { "type": "String" } }
+  },
+  "shareAppSubject": "Coba Daily Stitch",
+  "shareAppReferralText": "Saya membangun rantai harian saya di Daily Stitch — gabung dengan saya menggunakan kode referral saya {code} dan kita berdua tumbuh.\n\n{url}",
+  "@shareAppReferralText": {
+    "placeholders": {
+      "code": { "type": "String" },
+      "url": { "type": "String" }
+    }
+  },
+  "shareAppReferralSubject": "Gabung dengan saya di Daily Stitch",
+
+  "shareCardShareTextProgress": "Progres Daily Stitch saya — {year} di Daily Stitch.",
+  "@shareCardShareTextProgress": {
+    "placeholders": { "year": { "type": "String" } }
+  },
+  "shareCardShareTextMedal": "Saya baru saja membuka medali \"{title}\" di Daily Stitch. {subtitle}",
+  "@shareCardShareTextMedal": {
+    "placeholders": {
+      "title": { "type": "String" },
+      "subtitle": { "type": "String" }
+    }
+  },
+
+  "insightsReceiptTasksDone": "Tugas selesai",
+  "insightsReceiptPerfectDays": "Hari sempurna",
+  "insightsReceiptCompletion": "Penyelesaian",
+  "insightsReceiptDate": "Minggu tanggal {date}",
+  "@insightsReceiptDate": {
+    "placeholders": { "date": { "type": "String" } }
+  },
+  "insightsReceiptFooter": "Jangan putus rantainya.",
+
+  "elementLabelWater": "Air",
+  "elementLabelLight": "Cahaya",
+  "elementLabelSoil": "Tanah",
+  "elementLabelBreeze": "Angin",
+  "elementTaglineWater": "Pulihkan. Hidrasi, istirahat, perawatan emosional — apa pun yang mengisi kembali.",
+  "elementTaglineLight": "Bangunkan. Cahaya pagi, blok fokus, belajar, meditasi — energi dan kejernihan.",
+  "elementTaglineSoil": "Pendalaman. Membaca, menulis jurnal, pekerjaan mendalam — akar kuat yang membangun kekuatan jangka panjang.",
+  "elementTaglineBreeze": "Gerak. Berjalan, berlari, latihan pernapasan — energi ringan dan gerak yang membersihkan pikiran.",
+  "elementWhenWater": "Saat Anda merasa lelah atau kehabisan energi.",
+  "elementWhenLight": "Saat Anda butuh awal yang jelas untuk hari Anda.",
+  "elementWhenSoil": "Saat pekerjaannya lambat tetapi sepadan (belajar, kerajinan, perawatan).",
+  "elementWhenBreeze": "Saat tubuh (atau pikiran) Anda perlu bergerak dan bernapas.",
+
+  "bloomTierMastery": "Penguasaan",
+  "bloomTierStrong": "Kuat",
+  "bloomTierGrowing": "Tumbuh",
+  "bloomTierSprouting": "Bertunas",
+  "bloomTierLocked": "Terkunci",
+
+  "habitBloomSubtitle": "Rantai {count} hari · {element}",
+  "@habitBloomSubtitle": {
+    "placeholders": {
+      "count": { "type": "int" },
+      "element": { "type": "String" }
+    }
+  },
+
+  "medal_id_first_spark": "Percikan Pertama",
+  "medal_sub_first_spark": "Anda menyalakan korek api.",
+  "medal_desc_first_spark": "Selesaikan tugas pertama Anda. Setiap rantai dimulai dari sini.",
+  "medal_id_triple_seed": "Triple Benih",
+  "medal_sub_triple_seed": "Tiga ke dalam tanah.",
+  "medal_desc_triple_seed": "Selesaikan 3 tugas secara total.",
+  "medal_id_dozen_sower": "Penabur Sebelas",
+  "medal_sub_dozen_sower": "Sebuah ladang dua belas.",
+  "medal_desc_dozen_sower": "Selesaikan 12 tugas secara total.",
+  "medal_id_quarter_century": "Seperempat Abad",
+  "medal_sub_quarter_century": "Satu musim berkata ya.",
+  "medal_desc_quarter_century": "Selesaikan 25 tugas secara total.",
+  "medal_id_productivity_titan": "Titan Produktivitas",
+  "medal_sub_productivity_titan": "Konsistensi berlipat ganda.",
+  "medal_desc_productivity_titan": "Selesaikan 50 tugas — Anda telah membangun momentum nyata.",
+  "medal_id_century_planter": "Penanam Abad",
+  "medal_sub_century_planter": "Hutan milik Anda sendiri.",
+  "medal_desc_century_planter": "Selesaikan 100 tugas. Anda termasuk 5% pengguna teratas.",
+  "medal_id_clean_day": "Lembaran Bersih",
+  "medal_sub_clean_day": "Tak ada satu pun gulma.",
+  "medal_desc_clean_day": "Selesaikan setiap tugas yang Anda tanam dalam satu hari.",
+  "medal_id_triple_perfect": "Triple Sempurna",
+  "medal_sub_triple_perfect": "Tiga lari tanpa cela.",
+  "medal_desc_triple_perfect": "Capai 3 hari sempurna.",
+  "medal_id_perfect_week": "Minggu Sempurna",
+  "medal_sub_perfect_week": "Tujuh hari tanpa putus.",
+  "medal_desc_perfect_week": "7 hari sempurna berturut-turut.",
+  "medal_id_two_week_chain": "Kekuatan Dua Minggu",
+  "medal_sub_two_week_chain": "Dua minggu menyala.",
+  "medal_desc_two_week_chain": "Pertahankan rantai 14 hari.",
+  "medal_id_iron_chain": "Rantai Besi",
+  "medal_sub_iron_chain": "30 tautan ditempa.",
+  "medal_desc_iron_chain": "Rantai 30 hari. Medali tugas tersulit.",
+  "medal_id_quarterly_chain": "Rantai Kuartalan",
+  "medal_sub_quarterly_chain": "Satu musim, tanpa putus.",
+  "medal_desc_quarterly_chain": "Rantai 90 hari. Status legendaris.",
+  "medal_id_vital_priority": "Percikan Vital",
+  "medal_sub_vital_priority": "Anda memilih yang sulit.",
+  "medal_desc_vital_priority": "Selesaikan 5 tugas yang ditandai prioritas Vital.",
+  "medal_id_spark_priority": "Penjinak Percikan",
+  "medal_sub_spark_priority": "Kemenangan cepat bertambah.",
+  "medal_desc_spark_priority": "Selesaikan 5 tugas yang ditandai prioritas Spark.",
+  "medal_id_note_taker": "Pencatat",
+  "medal_sub_note_taker": "Rencana di atas kertas lebih baik dari rencana di kepala.",
+  "medal_desc_note_taker": "Tambahkan catatan persiapan ke 5 tugas berbeda.",
+  "medal_id_left_behind_rescuer": "Penyelamat Tertinggal",
+  "medal_sub_left_behind_rescuer": "Tidak ada tugas yang tertinggal.",
+  "medal_desc_left_behind_rescuer": "Tambahkan kembali 3 tugas yang terlewat keesokan harinya.",
+  "medal_id_first_sprout": "Tunas Pertama",
+  "medal_sub_first_sprout": "Ritual harian baru.",
+  "medal_desc_first_sprout": "Tanam kebiasaan pertama Anda.",
+  "medal_id_trio_sprout": "Trio Tunas",
+  "medal_sub_trio_sprout": "Ekosistem kecil.",
+  "medal_desc_trio_sprout": "Tanam 3 kebiasaan berbeda.",
+  "medal_id_week_of_growth": "Minggu Pertumbuhan",
+  "medal_sub_week_of_growth": "Akar mulai bertahan.",
+  "medal_desc_week_of_growth": "Rawat kebiasaan setiap hari selama 7 hari.",
+  "medal_id_fortnight_floret": "Floret Dua Minggu",
+  "medal_sub_fortnight_floret": "Mekar penuh.",
+  "medal_desc_fortnight_floret": "Rantai kebiasaan 14 hari.",
+  "medal_id_rooted_master": "Master Berakar",
+  "medal_sub_rooted_master": "Akar dalam, kekuatan dalam.",
+  "medal_desc_rooted_master": "Rantai kebiasaan 30 hari.",
+  "medal_id_half_year_bloom": "Mekar Setengah Tahun",
+  "medal_sub_half_year_bloom": "Kebun permanen sekarang.",
+  "medal_desc_half_year_bloom": "Pertahankan satu kebiasaan selama 180 hari.",
+  "medal_id_garden_keeper": "Penjaga Kebun",
+  "medal_sub_garden_keeper": "Variasi, bersama-sama.",
+  "medal_desc_garden_keeper": "Tumbuhkan 4 kebiasaan berbeda secara bersamaan.",
+  "medal_id_hydration_hero": "Pahlawan Hidrasi",
+  "medal_sub_hydration_hero": "Anda mengisi kembali.",
+  "medal_desc_hydration_hero": "Tanam kebiasaan hidrasi (air/minum).",
+  "medal_id_mindful_mover": "Pemindah Sadar",
+  "medal_sub_mindful_mover": "Tubuh mengingat.",
+  "medal_desc_mindful_mover": "Tanam kebiasaan bergerak (yoga/jalan/lari).",
+  "medal_id_devoted_keeper": "Penjaga Setia",
+  "medal_sub_devoted_keeper": "Enam puluh hari, satu latihan.",
+  "medal_desc_devoted_keeper": "Rawat satu kebiasaan selama 60 hari berturut-turut.",
+  "medal_id_tending_notes": "Catatan Perawatan",
+  "medal_sub_tending_notes": "Renungkan saat melangkah.",
+  "medal_desc_tending_notes": "Tambahkan catatan perawatan ke 3 kebiasaan.",
+
+  "medalTierTaglineSprout": "Tanam benih pertama",
+  "medalTierTaglineCommon": "Membangun kebiasaan",
+  "medalTierTaglineRare": "Menunjukkan momentum nyata",
+  "medalTierTaglineEpic": "Anda adalah kekuatan alam",
+  "medalTierTaglineLegendary": "Mitosis, hampir tidak ada yang sampai di sini",
+
+  "guardianHeadlineNoTasks": "Tanah hari ini segar.\nTanam benih pertama\ndan saksikan ia tumbuh.",
+  "guardianHeadlineAllDone": "Setiap benih yang Anda tanam\nsedang mekar.\nIstirahatlah, Penjaga — Anda sudah mendapatkannya.",
+  "guardianHeadlineStreak14": "{count} hari\npertumbuhan tanpa putus.\nHutan Anda dipenuhi kehidupan.",
+  "@guardianHeadlineStreak14": { "placeholders": { "count": { "type": "int" } } },
+  "guardianHeadlineStreak7": "Satu minggu penuh mekar,\nPenjaga.\nSatu hari sempurna lagi\nmemperpanjang rantai.",
+  "guardianHeadlineStreak3": "Rantai Anda bertahan.\nRawat benih\nyang masih menunggu untuk terbuka.",
+  "guardianHeadlineNoHabitsDone": "Anda merawat tugas dengan baik.\nTanam tunas —\nkebiasaan adalah cara hutan tumbuh.",
+  "guardianHeadlineSomeDone": "Beberapa benih terbuka,\nbeberapa tidak. Itu tidak apa-apa.\nBesok adalah hari penanaman lagi.",
+  "guardianHeadlineMorning": "Selamat pagi, Penjaga.\nHari ini masih muda\ndan tanah siap.",
+  "guardianHeadlineAfternoon": "Selamat siang, Penjaga.\nSetengah cahaya tersisa —\nterus rawat.",
+  "guardianHeadlineEvening": "Selamat sore, Penjaga.\nSatu sapuan terakhir\nsebelum matahari terbenam.",
+  "guardianHeadlineNight": "Bekerja larut malam?\nBahkan Penjaga perlu istirahat.\nTanam benih besok sekarang.",
+
+  "guardianBodyNoTasks": "Tempat perlindungan Anda sepi sekarang. Tambahkan satu niat dan lihat apa yang berubah saat matahari terbenam.",
+  "guardianBodyStreak14": "{count} hari berjalan. Rantai ini bukan keberuntungan — itu adalah pilihan-pilihan kecil yang menumpuk. Terus tumpuk.",
+  "@guardianBodyStreak14": { "placeholders": { "count": { "type": "int" } } },
+  "guardianBodyStreak3": "Rantai {count} hari adalah momentum nyata. Selesaikan benih hari ini yang masih terbuka sebelum Anda menyudahi.",
+  "@guardianBodyStreak3": { "placeholders": { "count": { "type": "int" } } },
+  "guardianBodyNoHabits": "Anda telah menanam {count} tugas sejauh ini. Menambahkan satu tunas kebiasaan pun akan membuat pekerjaan berlipat ganda dari hari ke hari.",
+  "@guardianBodyNoHabits": { "placeholders": { "count": { "type": "int" } } },
+  "guardianBodyLowCompletion": "Anda menyelesaikan {pct}% dari yang Anda tanam. Benih yang lebih sedikit dan tajam cenderung tumbuh lebih tinggi dari sepuluh benih yang tersebar.",
+  "@guardianBodyLowCompletion": { "placeholders": { "pct": { "type": "int" } } },
+  "guardianBodyDefault": "Tempat perlindungan Anda hidup. {tasks} tugas selesai, {sprouts} tunas tumbuh — pekerjaan mulai terlihat.",
+  "@guardianBodyDefault": { "placeholders": { "tasks": { "type": "int" }, "sprouts": { "type": "int" } } },
+
+  "guardianInsightWaitingTitle": "Menunggu langkah pertama Anda",
+  "guardianInsightWaitingBody": "Tambahkan tugas atau kebiasaan dan saya akan mulai membaca pola di kebun Anda. Semakin banyak Anda tanam, semakin banyak yang bisa saya pelajari.",
+  "guardianInsightWaitingCta": "Tanam benih pertama Anda",
+  "guardianInsightChainSuperTitle": "Rantai adalah kekuatan super Anda",
+  "guardianInsightChainSuperBody": "Anda telah mempertahankan rantai {count} hari. Rantai selalu mengalahkan motivasi — pertahankan, bahkan di hari-hari yang lambat.",
+  "@guardianInsightChainSuperBody": { "placeholders": { "count": { "type": "int" } } },
+  "guardianInsightChainSuperCta": "Tanam benih besok",
+  "guardianInsightChainColdTitle": "Rantai dingin — mulai yang baru",
+  "guardianInsightChainColdBody": "Anda pernah menanam sebelumnya, yang berarti Anda bisa menanam lagi. Satu tugas kecil yang diselesaikan hari ini adalah rantai yang lebih panjang besok.",
+  "guardianInsightChainColdCta": "Tanam benih",
+  "guardianInsightLessIsMoreTitle": "Sedikit lebih banyak minggu ini",
+  "guardianInsightLessIsMoreBody": "Anda menyelesaikan sekitar {pct}% dari yang Anda tanam. Coba 3 niat tajam alih-alih 5 yang longgar — kualitas berlipat ganda.",
+  "@guardianInsightLessIsMoreBody": { "placeholders": { "pct": { "type": "int" } } },
+  "guardianInsightLessIsMoreCta": "Perjelas hari ini",
+  "guardianInsightNextMedalTitle": "Medali berikutnya: {title}",
+  "@guardianInsightNextMedalTitle": { "placeholders": { "title": { "type": "String" } } },
+  "guardianInsightNextMedalBody": "Anda sudah {value} dari {target} {unit}. Beberapa hari jujur lagi dan itu milik Anda.",
+  "@guardianInsightNextMedalBody": { "placeholders": { "value": { "type": "int" }, "target": { "type": "int" }, "unit": { "type": "String" } } },
+  "guardianInsightNextMedalCta": "Tunjukkan medali",
+  "guardianInsightSteadyTitle": "Anda di musim yang stabil",
+  "guardianInsightSteadyBody": "Tidak ada medali yang hampir diraih — tidak apa-apa. Rawat apa yang Anda miliki. Mekar berikutnya sedang dalam perjalanan.",
+  "guardianInsightSteadyCta": "Lihat progres",
+
+  "notificationTaskReminderBody": "{label}",
+  "@notificationTaskReminderBody": { "placeholders": { "label": { "type": "String" } } },
+  "notificationFinalCallBodyOne": "1 tugas tersisa di rantai Anda. Tengah malam akan tiba.",
+  "notificationFinalCallBodyMany": "{count} tugas tersisa di rantai Anda. Tengah malam akan tiba.",
+  "@notificationFinalCallBodyMany": { "placeholders": { "count": { "type": "int" } } },
+  "notificationEveningBodyOne": "Anda masih memiliki 1 tugas terbuka hari ini.",
+  "notificationEveningBodyMany": "Anda masih memiliki {count} tugas terbuka hari ini.",
+  "@notificationEveningBodyMany": { "placeholders": { "count": { "type": "int" } } },
+  "notificationTickerTaskReminder": "Pengingat tugas",
+  "notificationTickerTaskAlarm": "Alarm tugas",
+
+  "habitBloomSubtitleL10n": "Rantai {count} hari · {element}",
+  "@habitBloomSubtitleL10n": {
+    "placeholders": {
+      "count": { "type": "int" },
+      "element": { "type": "String" }
+    }
+  }
 }

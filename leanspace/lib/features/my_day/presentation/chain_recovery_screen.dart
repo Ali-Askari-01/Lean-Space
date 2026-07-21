@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../core/l10n/app_localizations.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/widgets/ambient_background.dart';
 import '../../../core/widgets/reveal_animations.dart';
@@ -15,6 +16,7 @@ class ChainRecoveryScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context);
     final theme = Theme.of(context);
     final insightsAsync = ref.watch(insightsProvider);
     final myDay = ref.watch(myDayProvider);
@@ -32,7 +34,7 @@ class ChainRecoveryScreen extends ConsumerWidget {
           icon: const Icon(Icons.close_rounded),
           color: AppColors.onSurfaceVariant,
         ),
-        title: const Text('A fresh start'),
+        title: Text(l10n.chainRecoveryFreshStart),
       ),
       body: AmbientBackground(
         child: SafeArea(
@@ -70,7 +72,7 @@ class ChainRecoveryScreen extends ConsumerWidget {
               FadeUp(
                 delay: const Duration(milliseconds: 60),
                 child: Text(
-                  'The chain broke. That\'s okay.',
+                  l10n.chainBrokenTitle,
                   textAlign: TextAlign.center,
                   style: theme.textTheme.headlineSmall?.copyWith(
                     fontWeight: FontWeight.w800,
@@ -83,8 +85,7 @@ class ChainRecoveryScreen extends ConsumerWidget {
               FadeUp(
                 delay: const Duration(milliseconds: 120),
                 child: Text(
-                  'Every long chain ends once. What matters is what you '
-                  'plant today. One perfect day starts the next one.',
+                  l10n.chainBrokenBody,
                   textAlign: TextAlign.center,
                   style: theme.textTheme.bodyLarge?.copyWith(
                     color: AppColors.onSurfaceVariant,
@@ -119,8 +120,8 @@ class ChainRecoveryScreen extends ConsumerWidget {
                     icon: const Icon(Icons.eco_rounded),
                     label: Text(
                       openToday == 0
-                          ? 'Plant today\'s first seed'
-                          : 'Get back to today',
+                          ? l10n.chainBrokenPlantFirst
+                          : l10n.chainBrokenCta,
                     ),
                   ),
                 ),
@@ -135,7 +136,7 @@ class ChainRecoveryScreen extends ConsumerWidget {
                       context.push('/left-behind');
                     },
                     icon: const Icon(Icons.history_rounded, size: 16),
-                    label: const Text('Check Left Behind first'),
+                    label: Text(l10n.chainBrokenCheck),
                   ),
                 ),
               ),
@@ -159,19 +160,20 @@ class _StatsRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
       decoration: BoxDecoration(
-        color: AppColors.surfaceContainerLow,
+        color: AppColors.elevatedCardSurface,
         borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: AppColors.outlineVariant, width: 0.5),
+        border: Border.all(color: AppColors.cardBorder, width: 0.5),
       ),
       child: Row(
         children: [
           Expanded(
             child: _Stat(
               value: '$bestStreak',
-              label: 'best chain',
+              label: l10n.chainBrokenBestChain,
               color: AppColors.secondary,
               icon: Icons.local_fire_department_rounded,
             ),
@@ -184,7 +186,7 @@ class _StatsRow extends StatelessWidget {
           Expanded(
             child: _Stat(
               value: '$totalDone',
-              label: 'tasks done',
+              label: l10n.chainBrokenTasksDone,
               color: AppColors.primary,
               icon: Icons.check_circle_outline_rounded,
             ),
@@ -197,7 +199,7 @@ class _StatsRow extends StatelessWidget {
           Expanded(
             child: _Stat(
               value: '$activeHabits',
-              label: 'sprouts',
+              label: l10n.chainBrokenSprouts,
               color: AppColors.tertiary,
               icon: Icons.spa_rounded,
             ),

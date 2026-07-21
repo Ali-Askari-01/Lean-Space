@@ -9,7 +9,7 @@ class AppLocalizationsId extends AppLocalizations {
   AppLocalizationsId([String locale = 'id']) : super(locale);
 
   @override
-  String get appTitle => 'Bloom Tracker';
+  String get appTitle => 'Daily Stitch';
 
   @override
   String get tabToday => 'Hari Ini';
@@ -27,7 +27,7 @@ class AppLocalizationsId extends AppLocalizations {
   String get navSettings => 'Pengaturan';
 
   @override
-  String get navHelp => 'Help & Support';
+  String get navHelp => 'Bantuan & Dukungan';
 
   @override
   String get navHistory => '7 Hari Terakhir';
@@ -36,19 +36,19 @@ class AppLocalizationsId extends AppLocalizations {
   String get navLeftBehind => 'Tertinggal';
 
   @override
-  String get navInsights => 'Your progress';
+  String get navInsights => 'Progres Anda';
 
   @override
   String get navMedals => 'Medali Saya';
 
   @override
-  String get navManagePro => 'Manage Pro subscription';
+  String get navManagePro => 'Kelola langganan Pro';
 
   @override
-  String get navPaywall => 'Bloom Tracker Pro';
+  String get navPaywall => 'Daily Stitch Pro';
 
   @override
-  String get greetingLateNight => 'Burning the midnight oil';
+  String get greetingLateNight => 'Bekerja larut malam';
 
   @override
   String get greetingMorning => 'Selamat pagi, matahari!';
@@ -69,48 +69,50 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String todayHabitsCount(String done, String total) {
-    return '$done of $total habits';
+    return '$done dari $total kebiasaan';
   }
 
   @override
-  String get todayChainGrows => 'CHAIN GROWS AS YOU FINISH';
+  String get todayChainGrows => 'RANTAI BERGROW SAAT ANDA MENYELESAIKAN';
 
   @override
-  String get todayChainComplete => 'CHAIN COMPLETE · TEND THE GARDEN TOMORROW';
+  String get todayChainComplete => 'RANTAI SELESAI · RAWAT KEBUN BESOK';
 
   @override
-  String get taskCapInfo => 'Why a 5-task cap?';
+  String get taskCapInfo => 'Mengapa ada batas 5 tugas?';
 
   @override
-  String get taskCapDiscipline => 'DISCIPLINE-FIRST BY DESIGN';
+  String get taskCapDiscipline => 'DISIPLIN-ORIENTED SEJAK AWAL';
 
   @override
-  String get taskCapTitle => 'We cap your day at 5 tasks on purpose.';
+  String get taskCapTitle =>
+      'Kami membatasi hari Anda hingga 5 tugas secara sengaja.';
 
   @override
   String get taskCapBody =>
-      'Small chains beat long ones. You\'re more likely to finish 3 of 5 and feel the win than to abandon 8 of 10 and feel the loss.';
+      'Rantai kecil lebih baik dari yang panjang. Anda lebih mungkin menyelesaikan 3 dari 5 dan merasakan kemenangan daripada meninggalkan 8 dari 10 dan merasakan kekalahan.';
 
   @override
-  String get taskCapBulletDone => 'Done tasks count toward your chain';
+  String get taskCapBulletDone => 'Tugas selesai dihitung ke dalam rantai Anda';
 
   @override
   String get taskCapBulletDoneBody =>
-      'A day where all 5 are done extends your streak by one.';
+      'Hari di mana semua 5 tugas selesai memperpanjang rantai Anda satu hari.';
 
   @override
-  String get taskCapBulletMissed => 'Missed tasks roll to Left Behind';
+  String get taskCapBulletMissed => 'Tugas yang terlewat masuk ke Tertinggal';
 
   @override
   String get taskCapBulletMissedBody =>
-      'At midnight, unfinished tasks surface in Left Behind. Re-add only what still matters.';
+      'Pada tengah malam, tugas yang belum selesai muncul di Tertinggal. Tambahkan kembali hanya yang masih penting.';
 
   @override
-  String get taskCapBulletFreeze => 'Streak freeze forgives a miss';
+  String get taskCapBulletFreeze =>
+      'Pembekuan rantai memaafkan satu hari terlewat';
 
   @override
   String get taskCapBulletFreezeBody =>
-      'Pro gives you 2 streak freezes a month — they cover a missed day so your chain survives.';
+      'Pro memberi Anda 2 pembekuan rantai per bulan — mereka menutupi hari yang terlewat sehingga rantai Anda bertahan.';
 
   @override
   String get tasksHeader => 'Tugas';
@@ -125,43 +127,53 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get tasksCapReached =>
-      '5/5 slots used — finish one to plant a new seed.';
+      '5/5 slot terpakai — selesaikan satu untuk menanam benih baru.';
 
   @override
-  String get tasksEmptyCta => 'Plant your first seed — what matters today?';
+  String get tasksEmptyCta =>
+      'Tanam benih pertama Anda — apa yang penting hari ini?';
 
   @override
   String get habitsHeader => 'Kebiasaan';
 
   @override
   String habitsGrowing(String count) {
-    return '$count growing';
+    return '$count sedang tumbuh';
   }
 
   @override
   String habitsBestStreak(String days) {
-    return 'Best $days d';
+    return 'Terbaik $days h';
   }
 
   @override
-  String get habitsPlantNew => 'Plant a new habit sprout';
+  String get habitsPlantNew => 'Tanam tunas kebiasaan baru';
 
   @override
   String get habitsPlantFirst => 'Tanam kebiasaan';
 
   @override
-  String get habitsLocked => 'Pro habit slot — unlock to plant more sprouts';
+  String get habitsLocked =>
+      'Slot kebiasaan Pro — buka kunci untuk menanam lebih banyak tunas';
+
+  @override
+  String get habitsSlotsFull => 'Semua slot kebiasaan sedang penuh.';
+
+  @override
+  String habitsStreakDays(String days) {
+    return '${days}h';
+  }
 
   @override
   String get habitsCadence => 'HARIAN';
 
   @override
   String leftBehindBanner(String count) {
-    return '$count missed — still in Left Behind';
+    return '$count terlewat — masih di Tertinggal';
   }
 
   @override
-  String get leftBehindTap => 'Tap to re-add or let go';
+  String get leftBehindTap => 'Ketuk untuk menambahkan kembali atau lepaskan';
 
   @override
   String get leftBehindDismiss => 'Abaikan';
@@ -170,74 +182,131 @@ class AppLocalizationsId extends AppLocalizations {
   String get leftBehindTitle => 'Tertinggal';
 
   @override
-  String get leftBehindEmpty => 'Nothing left behind';
+  String get leftBehindEmpty => 'Tidak ada yang tertinggal';
 
   @override
   String get leftBehindEmptyBody =>
-      'No missed tasks. Every seed you plant is being tended. The garden is clean.';
+      'Tidak ada tugas yang terlewat. Setiap benih yang Anda tanam sedang dirawat. Kebun bersih.';
 
   @override
   String get leftBehindClearAll => 'Hapus semua';
 
   @override
-  String get leftBehindClearAllConfirm => 'Clear all left-behind?';
+  String get leftBehindClearAllConfirm => 'Hapus semua yang tertinggal?';
 
   @override
   String leftBehindClearAllBody(String count) {
-    return 'This will permanently remove $count missed task(s). You can\'t undo this.';
+    return 'Ini akan menghapus $count tugas yang terlewat secara permanen. Anda tidak dapat membatalkan ini.';
   }
 
   @override
-  String get leftBehindReAdd => 'Re-add today';
+  String get leftBehindReAdd => 'Tambahkan kembali hari ini';
 
   @override
-  String get leftBehindLetGo => 'Lepas';
+  String get leftBehindReAddButton => 'Tambahkan kembali';
+
+  @override
+  String get leftBehindAddedToToday => 'Ditambahkan ke hari ini';
+
+  @override
+  String get leftBehindLetGo => 'Lepaskan';
+
+  @override
+  String get leftBehindHeader => 'TERTINGGAL';
+
+  @override
+  String get leftBehindMissedTasks => 'TUGAS YANG TERLEWAT';
+
+  @override
+  String get leftBehindWaitingOne => '1 tugas menunggu Anda.';
+
+  @override
+  String leftBehindWaitingMany(String count) {
+    return '$count tugas menunggu Anda.';
+  }
+
+  @override
+  String get leftBehindBody =>
+      'Tambahkan kembali tugas untuk membawanya ke hari ini, atau lepaskan. Menambahkan kembali menjaga rantai Anda tetap hidup.';
+
+  @override
+  String leftBehindReAddedSnack(String task) {
+    return '\"$task\" kembali ke hari Anda.';
+  }
+
+  @override
+  String leftBehindRemovedSnack(String task) {
+    return 'Menghapus \"$task\"';
+  }
+
+  @override
+  String get leftBehindClearedSnack => 'Yang tertinggal dihapus';
+
+  @override
+  String leftBehindYesterdayDate(String date) {
+    return 'Kemarin · $date';
+  }
 
   @override
   String streakAtRisk(String count) {
-    return '$count task(s) left for today';
+    return '$count tugas tersisa untuk hari ini';
   }
 
   @override
   String streakAtRiskLastCall(String count) {
-    return 'Last call — $count task(s) still open';
+    return 'Panggilan terakhir — $count tugas masih terbuka';
   }
 
   @override
   String get streakAtRiskBody =>
-      'Midnight is close. The chain depends on these.';
+      'Tengah malam sudah dekat. Rantai bergantung pada ini.';
 
   @override
   String get streakAtRiskBodyLow =>
-      'You still have time. A clean day extends your streak.';
+      'Anda masih punya waktu. Hari yang bersih memperpanjang rantai Anda.';
 
   @override
-  String get streakAtRiskFreeze => 'Yesterday missed — use a streak freeze?';
+  String get streakAtRiskFreeze =>
+      'Kemarin terlewat — gunakan pembekuan rantai?';
 
   @override
-  String get chainBrokenTitle => 'The chain broke. That\'s okay.';
+  String get streakFreezeUse => 'Gunakan pembekuan';
+
+  @override
+  String get streakFreezeUseForYesterday =>
+      'Gunakan pembekuan rantai bulanan untuk kemarin';
+
+  @override
+  String get streakFreezeAppliedYesterday =>
+      'Pembekuan rantai diterapkan untuk kemarin.';
+
+  @override
+  String get chainBrokenTitle => 'Rantai putus. Itu tidak apa-apa.';
 
   @override
   String get chainBrokenBody =>
-      'Every long chain ends once. What matters is what you plant today. One perfect day starts the next one.';
+      'Setiap rantai panjang berakhir sekali. Yang penting adalah apa yang Anda tanam hari ini. Satu hari sempurna memulai yang berikutnya.';
 
   @override
-  String get chainBrokenCta => 'Get back to today';
+  String get chainBrokenCta => 'Kembali ke hari ini';
 
   @override
-  String get chainBrokenCheck => 'Check Left Behind first';
+  String get chainBrokenPlantFirst => 'Tanam benih pertama hari ini';
 
   @override
-  String get chainBrokenBestChain => 'best chain';
+  String get chainBrokenCheck => 'Periksa Tertinggal terlebih dahulu';
 
   @override
-  String get chainBrokenTasksDone => 'tasks done';
+  String get chainBrokenBestChain => 'rantai terbaik';
 
   @override
-  String get chainBrokenSprouts => 'sprouts';
+  String get chainBrokenTasksDone => 'tugas selesai';
 
   @override
-  String get chainRecoveryFreshStart => 'A fresh start';
+  String get chainBrokenSprouts => 'tunas';
+
+  @override
+  String get chainRecoveryFreshStart => 'Mulai baru';
 
   @override
   String get medalsTitle => 'Medali Saya';
@@ -250,62 +319,64 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String medalsTrophyEarned(String earned, String total) {
-    return '$earned of $total medals earned';
+    return '$earned dari $total medali diraih';
   }
 
   @override
-  String get medalsTrophyEmpty => 'Your first badge is one task away';
+  String get medalsTrophyEmpty =>
+      'Lencana pertama Anda tinggal satu tugas lagi';
 
   @override
-  String get medalsTrophyFirst => 'You earned your first medal — keep going';
+  String get medalsTrophyFirst =>
+      'Anda meraih medali pertama — terus lanjutkan';
 
   @override
   String medalsTrophyMany(String earned) {
-    return '$earned medals in your trophy room';
+    return '$earned medali di ruang trofi Anda';
   }
 
   @override
   String medalsProgressLabel(String total) {
-    return 'Progress to all $total medals';
+    return 'Progres menuju $total medali';
   }
 
   @override
   String get medalsShareCta => 'Buat kartu yang bisa dibagikan';
 
   @override
-  String get medalsEmptyTitle => 'Nothing in this category yet';
+  String get medalsEmptyTitle => 'Belum ada di kategori ini';
 
   @override
   String get medalsEmptyBody =>
-      'Finish a task or tend a sprout to start your trophy room.';
+      'Selesaikan tugas atau rawat tunas untuk memulai ruang trofi Anda.';
 
   @override
   String get medalSheetLocked => 'MEDALI PRO';
 
   @override
   String medalSheetEarned(String tier) {
-    return 'EARNED · $tier';
+    return 'DIRAIH · $tier';
   }
 
   @override
   String get medalSheetUnlock => 'Buka dengan Pro';
 
   @override
-  String get medalSheetProgress => 'Progress';
+  String get medalSheetProgress => 'Progres';
 
   @override
   String medalSheetHint(String n, String unit) {
-    return 'Just $n more $unit to unlock.';
+    return 'Hanya $n $unit lagi untuk membuka.';
   }
 
   @override
-  String get medalSheetAlmost => 'One more step to unlock.';
+  String get medalSheetAlmost => 'Satu langkah lagi untuk membuka.';
 
   @override
-  String get medalCategory => 'Category';
+  String get medalCategory => 'Kategori';
 
   @override
-  String get medalShareOnSocials => 'Bagikan ke sosial';
+  String get medalShareOnSocials => 'Bagikan ke media sosial';
 
   @override
   String get medalShareLater => 'Nanti saja';
@@ -314,59 +385,75 @@ class AppLocalizationsId extends AppLocalizations {
   String get medalUnlocked => 'MEDALI TERBUKA';
 
   @override
-  String get medalProgressTitle => 'Progress';
+  String get medalProgressTitle => 'Progres';
 
   @override
   String get historyTitle => '7 Hari Terakhir';
 
   @override
+  String get historyFullTitle => 'Riwayat lengkap';
+
+  @override
+  String get historyLoadError => 'Tidak dapat memuat riwayat.';
+
+  @override
+  String get historyFullCalendar => 'Kalender lengkap';
+
+  @override
+  String historyCompletedPercent(String percent) {
+    return '$percent% selesai';
+  }
+
+  @override
   String historyThisWeek(String days) {
-    return 'LAST $days DAYS';
+    return '$days HARI TERAKHIR';
   }
 
   @override
   String get historyDayByDay => 'HARI PER HARI';
 
   @override
-  String get historyEmpty => 'Plant some seeds to see your week unfold.';
+  String get historyEmpty =>
+      'Tanam beberapa benih untuk melihat minggu Anda terungkap.';
 
   @override
   String historyDoneCount(String done, String total, String perfect) {
-    return 'You finished $done of $total tasks. $perfect perfect day(s).';
+    return 'Anda menyelesaikan $done dari $total tugas. $perfect hari sempurna.';
   }
 
   @override
   String get historyUpsellTitle => 'Lihat riwayat lengkap';
 
   @override
-  String get historyUpsellBody => 'Pro membuka 30 hari riwayat.';
+  String get historyUpsellBody =>
+      'Pro membuka 30 hari riwayat. Gratis menampilkan 7 hari.';
 
   @override
   String get historyPerfect => 'SEMPURNA';
 
   @override
-  String get historyFrozen => 'FROZEN';
+  String get historyFrozen => 'BEKU';
 
   @override
   String get historyToday => 'Hari Ini';
 
   @override
-  String get historyEmptyDay => 'No seeds planted that day';
+  String get historyEmptyDay => 'Tidak ada benih yang ditanam hari itu';
 
   @override
   String historyLeftBehindCount(String count) {
-    return '$count left behind';
+    return '$count tertinggal';
   }
 
   @override
   String get progressVitality => 'VITALITAS HARI INI';
 
   @override
-  String get progressVitalityEmpty => 'Plant a seed to begin your garden.';
+  String get progressVitalityEmpty => 'Tanam benih untuk memulai kebun Anda.';
 
   @override
   String progressVitalitySeeds(String done, String total) {
-    return '$done of $total seeds planted today.';
+    return '$done dari $total benih ditanam hari ini.';
   }
 
   @override
@@ -390,76 +477,78 @@ class AppLocalizationsId extends AppLocalizations {
   String get progressMetricHabits => 'Kebiasaan';
 
   @override
-  String get progressHabitBlooms => 'Habit blooms';
+  String get progressHabitBlooms => 'Mekar kebiasaan';
 
   @override
   String get progressHabitBloomsSub =>
-      'Streak milestones for the sprouts you water daily.';
+      'Tonggak rantai untuk tunas yang Anda sirami setiap hari.';
 
   @override
   String get progressNextBadge => 'Lencana berikutnya';
 
   @override
   String progressMedalCount(String earned, String total) {
-    return '$earned of $total';
+    return '$earned dari $total';
   }
 
   @override
-  String get progressPersonalActivity => 'Personal Activity';
+  String get progressPersonalActivity => 'Aktivitas Pribadi';
 
   @override
   String progressBrowseMonth(String month) {
-    return 'Browsing $month. Tap \"Today\" to jump back to your live activity.';
+    return 'Menjelajahi $month. Ketuk \"Hari Ini\" untuk kembali ke aktivitas terkini.';
   }
 
   @override
   String get progressJumpToToday => 'Hari Ini';
 
   @override
-  String get progressCalendarLegend => 'darker = more finished';
+  String get progressCalendarLegend => 'lebih gelap = lebih banyak selesai';
 
   @override
   String get progressCalendarBody =>
-      'Dark green means a perfect day. The shade fades as you skip.';
+      'Hijau tua berarti hari sempurna. Warna memudar saat Anda melewatkan hari.';
 
   @override
-  String get paywallTitle => 'Keep the chain unbroken.';
+  String get paywallTitle => 'Pertahankan rantai tetap utuh.';
 
   @override
   String get paywallSubtitle =>
-      'Bloom Tracker Pro gives you the full discipline system.';
+      'Daily Stitch Pro memberikan Anda sistem disiplin lengkap.';
 
   @override
   String get paywallFeatures =>
-      'All 5 habit slots, not just 3|Your full history, forever|The full medal set|Streak freeze every month|Weekly Receipt + share cards|Themes + more';
+      'Semua 5 slot kebiasaan, bukan hanya 3|Riwayat lengkap Anda, selamanya|Set medali lengkap|Pembekuan rantai setiap bulan|Resi mingguan + kartu bagikan|Tema + lainnya';
 
   @override
   String get paywallFeaturesBodies =>
-      'Free gives you 3. Pro unlocks all five so your full daily ritual can live here.|Browse every day you\'ve completed — not just the last 7. Look back years, not weeks.|Unlock Legendary tier medals. The rarest badges are for the people who go all in.|2 streak freezes a month so a single bad day doesn\'t end your chain.|Beautiful share cards of your week. Post your chain, inspire someone else to start.|Unlock new accent colors and themes as we add them. Always free updates.';
+      'Gratis memberi Anda 3. Pro membuka semua lima sehingga ritual harian Anda bisa hidup di sini.|Jelajahi setiap hari yang telah Anda selesaikan — bukan hanya 7 hari terakhir. Lihat ke belakang bertahun-tahun, bukan minggu.|Buka kunci medali tier Legendaris. Lencana paling langka adalah untuk orang-orang yang benar-benar berkommitmen.|2 pembekuan rantai per bulan sehingga satu hari buruk tidak mengakhiri rantai Anda.|Kartu bagikan mingguan yang indah. Posting rantai Anda, inspirasi orang lain untuk memulai.|Buka kunci warna aksen dan tema baru saat kami menambahkannya. Selalu pembaruan gratis.';
 
   @override
   String get paywallYearly => 'Tahunan';
 
   @override
-  String get paywallYearlyCaption => 'Best value · works out to ~2.50 USD/mo';
+  String get paywallYearlyCaption =>
+      'Nilai terbaik · setara dengan ~2.50 USD/bulan';
 
   @override
-  String get paywallYearlyBadge => 'SAVE 35%';
+  String get paywallYearlyBadge => 'HEMAT 35%';
 
   @override
   String get paywallMonthly => 'Bulanan';
 
   @override
-  String get paywallMonthlyCaption => 'Billed every month · cancel anytime';
+  String get paywallMonthlyCaption =>
+      'Ditagih setiap bulan · batalkan kapan saja';
 
   @override
   String paywallStartCta(String price) {
-    return 'Start Pro · $price/yr';
+    return 'Mulai Pro · $price/thn';
   }
 
   @override
   String paywallStartCtaMonthly(String price) {
-    return 'Start Pro · $price/mo';
+    return 'Mulai Pro · $price/bln';
   }
 
   @override
@@ -472,47 +561,49 @@ class AppLocalizationsId extends AppLocalizations {
   String get paywallPrivacy => 'Privasi';
 
   @override
-  String get paywallNoRestore => 'No previous purchase found on this account.';
+  String get paywallNoRestore =>
+      'Tidak ada pembelian sebelumnya yang ditemukan di akun ini.';
 
   @override
   String get paywallRestoreLater =>
-      'We\'ll restore your purchase on the next sync.';
+      'Kami akan memulihkan pembelian Anda pada sinkronisasi berikutnya.';
 
   @override
-  String get paywallAlreadyPro => 'You\'re on Pro. Thank you for the support.';
+  String get paywallAlreadyPro =>
+      'Anda sudah menggunakan Pro. Terima kasih atas dukungannya.';
 
   @override
   String get paywallHabitSlotHead =>
-      'You\'ve used all your free habit slots. Unlock the full set to plant every ritual you care about.';
+      'Anda telah menggunakan semua slot kebiasaan gratis Anda. Buka kunci set lengkap untuk menanam semua ritual yang Anda pedulikan.';
 
   @override
   String get paywallHistoryHead =>
-      'See your full history — every perfect day, every medal, every comeback.';
+      'Lihat riwayat lengkap Anda — setiap hari sempurna, setiap medali, setiap kebangkitan.';
 
   @override
   String get paywallMedalHead =>
-      'The rarest medals are Pro-only. Keep going — they\'re closer than you think.';
+      'Medali paling langka hanya untuk Pro. Terus lanjutkan — mereka lebih dekat dari yang Anda kira.';
 
   @override
-  String get settingsYourActivity => 'YOUR ACTIVITY';
+  String get settingsYourActivity => 'AKTIVITAS ANDA';
 
   @override
-  String get settingsHelpInfo => 'HELP & INFO';
+  String get settingsHelpInfo => 'BANTUAN & INFO';
 
   @override
-  String get settingsAccount => 'ACCOUNT';
+  String get settingsAccount => 'AKUN';
 
   @override
-  String get settingsNurturingTools => 'NURTURING TOOLS';
+  String get settingsNurturingTools => 'ALAT PEMELIHARAAN';
 
   @override
-  String get settingsReminders => 'REMINDERS';
+  String get settingsReminders => 'PENGINGAT';
 
   @override
-  String get settingsWidgetSanctuary => 'WIDGET SANCTUARY';
+  String get settingsWidgetSanctuary => 'SUCCI WIDGET';
 
   @override
-  String get settingsEcosystemSupport => 'ECOSYSTEM SUPPORT';
+  String get settingsEcosystemSupport => 'DUKUNGAN EKOSISTEM';
 
   @override
   String get settingsHowItWorks => 'Cara kerjanya';
@@ -521,10 +612,10 @@ class AppLocalizationsId extends AppLocalizations {
   String get settingsSignOut => 'Keluar';
 
   @override
-  String get settingsProActive => 'Active';
+  String get settingsProActive => 'Aktif';
 
   @override
-  String get settingsProFree => 'Free tier';
+  String get settingsProFree => 'Tier gratis';
 
   @override
   String get settingsLanguage => 'Bahasa';
@@ -533,430 +624,435 @@ class AppLocalizationsId extends AppLocalizations {
   String get settingsLanguageValue => 'Default sistem';
 
   @override
-  String get firstRunGreeting => '5 tasks. No more. Make them count.';
+  String get firstRunGreeting => '5 tugas. Tidak lebih. Buatlah berarti.';
 
   @override
-  String get firstRunBody => 'Plant your first seed — what matters most today?';
+  String get firstRunBody =>
+      'Tanam benih pertama Anda — apa yang paling penting hari ini?';
 
   @override
-  String get firstRunCta => 'Plant your first seed';
+  String get firstRunCta => 'Tanam benih pertama Anda';
 
   @override
-  String get emptyStateClearAll => 'Clear all';
+  String get emptyStateClearAll => 'Hapus semua';
 
   @override
   String get cancel => 'Batal';
 
   @override
-  String get intentionTitle1 => 'Let\'s plant a new intention!';
+  String get intentionTitle1 => 'Yuk tanam niat baru!';
 
   @override
   String get intentionBody1 =>
-      'Every mighty forest begins with a single tiny choice. Tell me what we\'re nurturing today?';
+      'Setiap hutan yang megah dimulai dari satu pilihan kecil. Ceritakan apa yang kita rawat hari ini?';
 
   @override
-  String get intentionTitle2 => 'What shall we grow today?';
+  String get intentionTitle2 => 'Apa yang ingin kita tumbuhkan hari ini?';
 
   @override
   String get intentionBody2 =>
-      'Tiny seeds, tended with care, become tall trees. Pick the one that matters most right now.';
+      'Benih kecil, dirawat dengan penuh kasih, menjadi pohon yang tinggi. Pilih yang paling penting saat ini.';
 
   @override
-  String get intentionTitle3 => 'One seed. One breath. Begin.';
+  String get intentionTitle3 => 'Satu benih. Satu tarikan napas. Mulai.';
 
   @override
   String get intentionBody3 =>
-      'You don\'t have to plant the whole forest at once — just the next right thing.';
+      'Anda tidak harus menanam seluruh hutan sekaligus — cukup hal yang benar berikutnya.';
 
   @override
-  String get intentionTitle4 => 'Nurture the next small step.';
+  String get intentionTitle4 => 'Rawat langkah kecil berikutnya.';
 
   @override
   String get intentionBody4 =>
-      'Future-you is built from the choices you make in the next five minutes. What\'s one kind one?';
+      'Diri Anda di masa depan dibangun dari pilihan yang Anda buat dalam lima menit ke depan. Apa satu kebaikan yang bisa Anda lakukan?';
 
   @override
-  String get intentionTitle5 => 'Choose what you want to become.';
+  String get intentionTitle5 => 'Pilih apa yang ingin Anda jadikan.';
 
   @override
   String get intentionBody5 =>
-      'Tasks are seeds, habits are sprouts. Together they form a forest you\'re proud of.';
+      'Tugas adalah benih, kebiasaan adalah tunas. Bersama-sama mereka membentuk hutan yang Anda banggakan.';
 
   @override
-  String get intentionTitle6 => 'Plant something worth remembering.';
+  String get intentionTitle6 => 'Tanam sesuatu yang layak dikenang.';
 
   @override
   String get intentionBody6 =>
-      'Not every day will feel huge. A watered seed still counts. Let\'s name one.';
+      'Tidak setiap hari akan terasa luar biasa. Benih yang disiram tetap dihitung. Yuk namai satu.';
 
   @override
-  String get intentionTitle7 => 'Make today a little braver.';
+  String get intentionTitle7 => 'Buat hari ini sedikit lebih berani.';
 
   @override
   String get intentionBody7 =>
-      'Courage compounds. Pick the seed you\'ve been postponing — even naming it moves it forward.';
+      'Keberanian berlipat ganda. Pilih benih yang telah Anda tunda — bahkan memberi nama sudah membuatnya maju.';
 
   @override
-  String get intentionTitle8 => 'Tend the soil before the seed.';
+  String get intentionTitle8 => 'Rawat tanah sebelum benih.';
 
   @override
   String get intentionBody8 =>
-      'What mindset, tool, or small ritual will make this task easier? Add it to the notes.';
+      'Pola pikir, alat, atau ritual kecil apa yang akan membuat tugas ini lebih mudah? Tambahkan ke catatan.';
 
   @override
   String get shareCardSnapshot => 'Sekilas tentang tempat perlindungan Anda';
 
   @override
   String get shareCardBody =>
-      'The card above is exported as a PNG and sent to your share sheet. Post it on your story, send it to a friend, or print it as a sticker.';
+      'Kartu di atas diekspor sebagai PNG dan dikirim ke lembar bagikan Anda. Posting di cerita Anda, kirim ke teman, atau cetak sebagai stiker.';
 
   @override
-  String get shareCardShareMyBloom => 'Share my bloom';
+  String get shareCardShareMyBloom => 'Bagikan mekaran saya';
 
   @override
-  String get shareCardCouldNotShare => 'Could not share right now';
+  String get shareCardCouldNotShare => 'Tidak dapat berbagi saat ini';
 
   @override
   String shareCardProgressText(String year) {
-    return 'My Bloom Tracker progress — $year on Bloom Tracker.';
+    return 'Progres Daily Stitch saya — $year di Daily Stitch.';
   }
 
   @override
   String shareCardMedalText(String title, String subtitle) {
-    return 'I just unlocked the \"$title\" medal on Bloom Tracker. $subtitle';
+    return 'Saya baru saja membuka medali \"$title\" di Daily Stitch. $subtitle';
   }
 
   @override
-  String get howItWorksTitle => 'How this works';
+  String get howItWorksTitle => 'Cara kerjanya';
 
   @override
   String get howItWorksBody =>
-      'Bloom Tracker helps you keep a small, unbroken chain of discipline. That\'s it.';
+      'Daily Stitch membantu Anda mempertahankan rantai disiplin yang kecil dan tak terputus. Itu saja.';
 
   @override
-  String get howItWorksToday => 'The Today tab';
+  String get howItWorksToday => 'Tab Hari Ini';
 
   @override
   String get howItWorksTodayBody =>
-      'This is your home. It shows the 5 tasks and the habits you set for today. Finish them by midnight, the chain extends.';
+      'Ini adalah rumah Anda. Menampilkan 5 tugas dan kebiasaan yang Anda tetapkan untuk hari ini. Selesaikan sebelum tengah malam, rantai akan memanjang.';
 
   @override
-  String get howItWorksCap => 'The 5-task cap is the feature';
+  String get howItWorksCap => 'Batas 5 tugas adalah fitur utama';
 
   @override
   String get howItWorksCapBody =>
-      'We don\'t let you add a 6th. That\'s the whole point. Small chains beat long ones. Tap the \"?\" on the home screen for the full reasoning.';
+      'Kami tidak membiarkan Anda menambahkan tugas ke-6. Itu intinya. Rantai kecil lebih baik dari yang panjang. Ketuk \"?\" di layar utama untuk penjelasan lengkap.';
 
   @override
-  String get howItWorksHabits => 'Habits are daily, the chain is forever';
+  String get howItWorksHabits =>
+      'Kebiasaan bersifat harian, rantai bersifat selamanya';
 
   @override
   String get howItWorksHabitsBody =>
-      'Habits (Morning yoga, Drink water) live forever. Tasks are one-shot. Both feed the same streak.';
+      'Kebiasaan (Yoga pagi, Minum air) hidup selamanya. Tugas bersifat satu kali. Keduanya memberi makan rantai yang sama.';
 
   @override
-  String get howItWorksLeftBehind => 'Missed tasks → Left Behind';
+  String get howItWorksLeftBehind => 'Tugas terlewat → Tertinggal';
 
   @override
   String get howItWorksLeftBehindBody =>
-      'At midnight, unfinished tasks move to Left Behind. Re-add only what still matters. The rest gets a quiet let-go.';
+      'Pada tengah malam, tugas yang belum selesai pindah ke Tertinggal. Tambahkan kembali hanya yang masih penting. Sisanya dilepaskan dengan tenang.';
 
   @override
-  String get howItWorksProgress => 'The Progress tab';
+  String get howItWorksProgress => 'Tab Progres';
 
   @override
   String get howItWorksProgressBody =>
-      'Streak, calendar, medals, history — everything about how you\'re doing over time. Nothing urgent lives here.';
+      'Rantai, kalender, medali, riwayat — semuanya tentang bagaimana Anda berkembang dari waktu ke waktu. Tidak ada yang mendesak di sini.';
 
   @override
-  String get howItWorksYou => 'The You tab';
+  String get howItWorksYou => 'Tab Anda';
 
   @override
-  String get howItWorksYouBody =>
-      'Your account, settings, sign out. That\'s all.';
+  String get howItWorksYouBody => 'Akun Anda, pengaturan, keluar. Itu saja.';
 
   @override
   String get howItWorksRule =>
-      'The rule: 5 small things, every day, no excuses.';
+      'Aturannya: 5 hal kecil, setiap hari, tanpa alasan.';
 
   @override
-  String get commonRetry => 'Retry';
+  String get commonRetry => 'Coba lagi';
 
   @override
-  String get commonBack => 'Back';
+  String get commonBack => 'Kembali';
 
   @override
-  String get commonDismiss => 'Dismiss';
+  String get commonDismiss => 'Abaikan';
 
   @override
-  String get commonCancel => 'Cancel';
+  String get commonCancel => 'Batal';
 
   @override
-  String get commonClose => 'Close';
+  String get commonClose => 'Tutup';
 
   @override
-  String get commonSend => 'Send';
+  String get commonSend => 'Kirim';
 
   @override
-  String get commonCopy => 'Copy';
+  String get commonCopy => 'Salin';
 
   @override
-  String get commonShowLess => 'Show less';
+  String get commonShowLess => 'Tampilkan lebih sedikit';
 
   @override
-  String get commonViewFull => 'View full notes';
+  String get commonViewFull => 'Lihat catatan lengkap';
 
   @override
   String get commonEdit => 'Edit';
 
   @override
-  String get commonDelete => 'Delete';
+  String get commonDelete => 'Hapus';
 
   @override
-  String get commonDone => 'Done';
+  String get commonDone => 'Selesai';
 
   @override
-  String get commonError => 'Something went wrong';
+  String get commonError => 'Terjadi kesalahan';
 
   @override
-  String get commonPageNotFound => 'Page Not Found';
+  String get commonPageNotFound => 'Halaman Tidak Ditemukan';
 
   @override
-  String get commonHome => 'Home';
+  String get commonHome => 'Beranda';
 
   @override
-  String get commonUnknownError => 'Unknown routing error';
+  String get commonUnknownError => 'Kesalahan routing tidak dikenal';
 
   @override
-  String get commonSettingsTooltip => 'Settings';
+  String get commonSettingsTooltip => 'Pengaturan';
 
   @override
-  String get commonHowThisWorks => 'How this works';
+  String get commonHowThisWorks => 'Cara kerjanya';
 
   @override
-  String get myDayReminderSet => 'Reminder set';
+  String get myDayReminderSet => 'Pengingat ditetapkan';
 
   @override
-  String get myDayPreparationNotes => 'PREPARATION NOTES';
+  String get myDayPreparationNotes => 'CATATAN PERSIAPAN';
 
   @override
-  String get onboardingSkip => 'SKIP';
+  String get onboardingSkip => 'LEWATI';
 
   @override
-  String get onboardingNext => 'Next';
+  String get onboardingNext => 'Berikutnya';
 
   @override
-  String get onboardingEnterSanctuary => 'Enter Sanctuary';
+  String get onboardingEnterSanctuary => 'Masuk ke Tempat Perlindungan';
 
   @override
-  String get onboardingIntroduction => 'INTRODUCTION';
+  String get onboardingIntroduction => 'PENDAHULUAN';
 
   @override
-  String get onboardingGrowYourForest => 'GROW YOUR FOREST';
+  String get onboardingGrowYourForest => 'TUMBUHKAN HUTAN ANDA';
 
   @override
-  String get onboardingPage1Title => 'Meet your Guardian.';
+  String get onboardingPage1Title => 'Kenali Penjaga Anda.';
 
   @override
   String get onboardingPage1Body =>
-      'Welcome to your Personal Sanctuary. Here, your growth is mirrored in the life of your forest.';
+      'Selamat datang di Tempat Perlindungan Pribadi Anda. Di sini, pertumbuhan Anda tercermin dalam kehidupan hutan Anda.';
 
   @override
-  String get onboardingPage2Title => 'Plant seeds. Watch them grow.';
+  String get onboardingPage2Title => 'Tanam benih. Saksikan mereka tumbuh.';
 
   @override
   String get onboardingPage2Body =>
-      'Each task is a tiny seed. Each habit is a sprout you tend daily. Together they form a forest of discipline.';
+      'Setiap tugas adalah benih kecil. Setiap kebiasaan adalah tunas yang Anda rawat setiap hari. Bersama-sama mereka membentuk hutan disiplin.';
 
   @override
-  String get onboardingPage3Title => 'Five tasks. One chain.';
+  String get onboardingPage3Title => 'Lima tugas. Satu rantai.';
 
   @override
   String get onboardingPage3Body =>
-      'You can only plant 5 seeds per day. That cap forces you to focus on what actually matters — and protect your chain.';
+      'Anda hanya bisa menanam 5 benih per hari. Batas itu memaksa Anda untuk fokus pada yang benar-benar penting — dan melindungi rantai Anda.';
 
   @override
-  String get onboardingPage4Title => 'Tend your sprouts daily.';
+  String get onboardingPage4Title => 'Rawat tunas Anda setiap hari.';
 
   @override
   String get onboardingPage4Body =>
-      'Tap habits to grow them. Skip a day and the chain doesn\'t extend. The Guardian grows with you.';
+      'Ketuk kebiasaan untuk menumbuhkannya. Lewati satu hari dan rantai tidak akan memanjang. Penjaga tumbuh bersama Anda.';
 
   @override
-  String get authBrand => 'BLOOM TRACKER';
+  String get authBrand => 'DAILY STITCH';
 
   @override
-  String get authPlantFirstSeed => 'Plant your first seed.';
+  String get authPlantFirstSeed => 'Tanam benih pertama Anda.';
 
   @override
-  String get authWelcomeBack => 'Welcome back, Guardian.';
+  String get authWelcomeBack => 'Selamat datang kembali, Penjaga.';
 
   @override
-  String get authFiveTasksDaily => 'Five tasks. Daily habits. No excuses.';
+  String get authFiveTasksDaily =>
+      'Lima tugas. Kebiasaan harian. Tanpa alasan.';
 
   @override
-  String get authSanctuaryWaiting => 'Your sanctuary is waiting.';
+  String get authSanctuaryWaiting => 'Tempat perlindungan Anda menunggu.';
 
   @override
-  String get authSignIn => 'Sign In';
+  String get authSignIn => 'Masuk';
 
   @override
-  String get authSignUp => 'Sign Up';
+  String get authSignUp => 'Daftar';
 
   @override
   String get authEmail => 'EMAIL';
 
   @override
-  String get authPassword => 'PASSWORD';
+  String get authPassword => 'KATA SANDI';
 
   @override
-  String get authEmailHint => 'you@email.com';
+  String get authEmailHint => 'anda@email.com';
 
   @override
-  String get authCreateAccount => 'Create account';
+  String get authCreateAccount => 'Buat akun';
 
   @override
-  String get authSignInCta => 'Sign in';
+  String get authSignInCta => 'Masuk';
 
   @override
-  String get authOrContinueWith => 'or continue with';
+  String get authOrContinueWith => 'atau lanjutkan dengan';
 
   @override
-  String get authContinueWithGoogle => 'Continue with Google';
+  String get authContinueWithGoogle => 'Lanjutkan dengan Google';
 
   @override
-  String get authEnterEmail => 'Enter your email';
+  String get authEnterEmail => 'Masukkan email Anda';
 
   @override
-  String get authEnterValidEmail => 'Enter a valid email address';
+  String get authEnterValidEmail => 'Masukkan alamat email yang valid';
 
   @override
-  String get authPasswordTooShort => 'Password must be at least 6 characters';
+  String get authPasswordTooShort => 'Kata sandi harus minimal 6 karakter';
 
   @override
   String get authAccountCreated =>
-      'Account created. Switch to Sign In and use your password.';
+      'Akun dibuat. Beralih ke Masuk dan gunakan kata sandi Anda.';
 
   @override
-  String get authSomethingWentWrong => 'Something went wrong. Try again.';
+  String get authSomethingWentWrong => 'Terjadi kesalahan. Coba lagi.';
 
   @override
-  String get authCouldNotStartGoogle => 'Could not start Google sign-in.';
+  String get authCouldNotStartGoogle => 'Tidak dapat memulai masuk Google.';
 
   @override
   String get authMidnightReset =>
-      'By signing in, you accept that your day resets at midnight.';
+      'Dengan masuk, Anda menerima bahwa hari Anda direset pada tengah malam.';
 
   @override
-  String get authSetupRequired => 'Setup required';
+  String get authSetupRequired => 'Pengaturan diperlukan';
 
   @override
-  String get settingsPersonalSanctuary => 'PERSONAL SANCTUARY';
+  String get settingsPersonalSanctuary => 'TEMPAT PERLINDUNGAN PRIBADI';
 
   @override
-  String get settingsHowThisWorks => 'How this works';
+  String get settingsHowThisWorks => 'Cara kerjanya';
 
   @override
   String get settingsHowThisWorksSubtitle =>
-      'What the app is, how the cap and streak work';
+      'Apa itu aplikasi, bagaimana batas dan rantai bekerja';
 
   @override
-  String get settingsStreakProtection => 'Streak Protection';
+  String get settingsStreakProtection => 'Perlindungan Rantai';
 
   @override
   String get settingsStreakProtectionAvailable =>
-      '1 freeze available this month';
+      '1 pembekuan tersedia bulan ini';
 
   @override
-  String get settingsStreakProtectionUsed => 'Used for this month';
+  String get settingsStreakProtectionUsed => 'Digunakan untuk bulan ini';
 
   @override
-  String get settingsProSubscription => 'Bloom Tracker Pro';
+  String get settingsProSubscription => 'Daily Stitch Pro';
 
   @override
-  String get settingsManageProSubscription => 'Manage Pro subscription';
+  String get settingsManageProSubscription => 'Kelola langganan Pro';
 
   @override
-  String get settingsProCancelPlay => 'Cancel or change plan in Google Play';
+  String get settingsProCancelPlay => 'Batalkan atau ubah paket di Google Play';
 
   @override
-  String get settingsProUnlock => 'Unlock all 5 habits, full history, more';
+  String get settingsProUnlock =>
+      'Buka semua 5 kebiasaan, riwayat lengkap, lainnya';
 
   @override
-  String get settingsTaskAlarms => 'Task alarms & Final Call';
+  String get settingsTaskAlarms => 'Alarm tugas & Panggilan Terakhir';
 
   @override
-  String get settingsTaskAlarmsSubtitle => 'Evening nudge and midnight warning';
+  String get settingsTaskAlarmsSubtitle =>
+      'Dorongan malam dan peringatan tengah malam';
 
   @override
-  String get settingsHomeScreenWidget => 'Home-screen widget';
+  String get settingsHomeScreenWidget => 'Widget layar beranda';
 
   @override
   String get settingsHomeScreenWidgetSubtitle =>
-      'Add your chain streak to the home screen';
+      'Tambahkan rantai Anda ke layar beranda';
 
   @override
-  String get settingsShareBloomTracker => 'Share Bloom Tracker';
+  String get settingsShareBloomTracker => 'Bagikan Daily Stitch';
 
   @override
   String get settingsShareBloomTrackerSubtitle =>
-      'Tell a friend about the chain';
+      'Ceritakan tentang rantai kepada teman';
 
   @override
-  String get settingsHelpSupport => 'Help & Support';
+  String get settingsHelpSupport => 'Bantuan & Dukungan';
 
   @override
-  String get settingsHelpSupportSubtitle => 'FAQ or report a problem';
+  String get settingsHelpSupportSubtitle => 'FAQ atau laporkan masalah';
 
   @override
-  String get settingsSignOutTile => 'Sign Out';
+  String get settingsSignOutTile => 'Keluar';
 
   @override
-  String get settingsAllFeaturesUnlocked => 'All features unlocked';
+  String get settingsAllFeaturesUnlocked => 'Semua fitur terbuka';
 
   @override
   String get settingsAllFeaturesUnlockedSubtitle =>
-      'Beta build — subscriptions paused while we test everything.';
+      'Versi beta — langganan dijeda saat kami menguji segalanya.';
 
   @override
   String settingsVersion(Object build, Object version) {
-    return 'Version $version ($build)';
+    return 'Versi $version ($build)';
   }
 
   @override
-  String get settingsVersionUnknown => 'Version 1.0.0';
+  String get settingsVersionUnknown => 'Versi 1.0.0';
 
   @override
-  String get settingsHabitMaster => 'Habit Master';
+  String get settingsHabitMaster => 'Master Kebiasaan';
 
   @override
   String settingsLevel(Object level) {
-    return 'Level $level · Habit Master';
+    return 'Level $level · Master Kebiasaan';
   }
 
   @override
-  String get languagePickerTitle => 'Language';
+  String get languagePickerTitle => 'Bahasa';
 
   @override
-  String get youLast7Days => 'Last 7 days';
+  String get youLast7Days => '7 hari terakhir';
 
   @override
-  String get youLast7DaysSubtitle => 'Day-by-day task history';
+  String get youLast7DaysSubtitle => 'Riwayat tugas hari demi hari';
 
   @override
-  String get youLeftBehindSubtitle => 'Missed tasks waiting to be re-added';
+  String get youLeftBehindSubtitle =>
+      'Tugas yang terlewat menunggu untuk ditambahkan kembali';
 
   @override
-  String get youProTier => 'Pro tier';
+  String get youProTier => 'Tier Pro';
 
   @override
-  String get youFreeTier => 'Free tier';
+  String get youFreeTier => 'Tier gratis';
 
   @override
   String get youPro => 'Pro';
 
   @override
-  String get youFree => 'Free';
+  String get youFree => 'Gratis';
 
   @override
   String youLevelLabel(Object level) {
@@ -965,70 +1061,71 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String youBestStreakLabel(Object days) {
-    return 'Best $days d';
+    return 'Terbaik $days h';
   }
 
   @override
-  String get youPlantHabit => 'Plant a habit to start a chain.';
+  String get youPlantHabit => 'Tanam kebiasaan untuk memulai rantai.';
 
   @override
   String get youProBadge => 'PRO';
 
   @override
-  String get youUnlockDiscipline => 'Unlock the full discipline system.';
+  String get youUnlockDiscipline => 'Buka kunci sistem disiplin lengkap.';
 
   @override
   String get youProFeatures =>
-      '5 habit slots, full history, legendary medals, monthly streak freezes, weekly share cards.';
+      '5 slot kebiasaan, riwayat lengkap, medali legendaris, pembekuan rantai bulanan, kartu bagikan mingguan.';
 
   @override
-  String get youSeePlans => 'See plans';
+  String get youSeePlans => 'Lihat paket';
 
   @override
   String youFromPrice(Object price) {
-    return 'from $price/mo';
+    return 'dari $price/bln';
   }
 
   @override
-  String get youBloomTrackerFooter => 'Bloom Tracker · Habit & To-Do';
+  String get youBloomTrackerFooter => 'Daily Stitch · Kebiasaan & To-Do';
 
   @override
-  String get progressMedals => 'Medals';
+  String get progressMedals => 'Medali';
 
   @override
-  String get progressLast7Days => 'Last 7 days';
+  String get progressLast7Days => '7 hari terakhir';
 
   @override
-  String get progressSeeAll => 'See all';
+  String get progressSeeAll => 'Lihat semua';
 
   @override
-  String get progressSeeDayByDayActivity => 'See your day-by-day activity';
+  String get progressSeeDayByDayActivity =>
+      'Lihat aktivitas hari demi hari Anda';
 
   @override
   String progressTasksFinishedPct(Object done, Object pct, Object total) {
-    return '$done of $total tasks finished · $pct%';
+    return '$done dari $total tugas selesai · $pct%';
   }
 
   @override
   String get progressNoMedalsYet =>
-      'No medals yet — finish a task or tend a sprout to get started.';
+      'Belum ada medali — selesaikan tugas atau rawat tunas untuk memulai.';
 
   @override
   String progressSeeAllMedals(Object earned, Object total) {
-    return 'See all medals · $earned of $total earned';
+    return 'Lihat semua medali · $earned dari $total diraih';
   }
 
   @override
-  String get progressGuardianInsight => 'Guardian insight';
+  String get progressGuardianInsight => 'Wawasan Penjaga';
 
   @override
   String progressNextBadgeTier(Object tier) {
-    return 'NEXT BADGE · $tier';
+    return 'LENCANA BERIKUTNYA · $tier';
   }
 
   @override
   String progressDaysTarget(Object days) {
-    return '$days day target';
+    return 'Target $days hari';
   }
 
   @override
@@ -1037,125 +1134,125 @@ class AppLocalizationsId extends AppLocalizations {
   }
 
   @override
-  String get helpTitle => 'Help & Support';
+  String get helpTitle => 'Bantuan & Dukungan';
 
   @override
   String get helpBody =>
-      'Most answers are below. If not, send us a note and we usually reply within 2–3 days.';
+      'Kebanyakan jawaban ada di bawah. Jika tidak, kirimkan catatan kepada kami dan kami biasanya membalas dalam 2–3 hari.';
 
   @override
-  String get helpSectionFAQ => 'FREQUENT QUESTIONS';
+  String get helpSectionFAQ => 'PERTANYAAN UMUM';
 
   @override
-  String get helpSectionContact => 'STILL STUCK?';
+  String get helpSectionContact => 'MASIH BINGUNG?';
 
   @override
-  String get helpAddMessage => 'Add a short message first.';
+  String get helpAddMessage => 'Tambahkan pesan singkat terlebih dahulu.';
 
   @override
-  String get helpOpening => 'Opening your mail app…';
+  String get helpOpening => 'Membuka aplikasi email Anda…';
 
   @override
-  String get helpEmailUs => 'Email us';
+  String get helpEmailUs => 'Email kami';
 
   @override
-  String get helpOpeningAction => 'Opening…';
+  String get helpOpeningAction => 'Membuka…';
 
   @override
-  String get helpCopyEmail => 'Copy support email';
+  String get helpCopyEmail => 'Salin email dukungan';
 
   @override
-  String get helpCopiedEmail => 'Copied support@bloomtracker.app';
+  String get helpCopiedEmail => 'Menyalin support@dailystitch.app';
 
   @override
   String get helpNoMailApp =>
-      'No mail app found. Email us at support@bloomtracker.app.';
+      'Tidak ditemukan aplikasi email. Email kami di support@dailystitch.app.';
 
   @override
-  String get helpTopicLabel => 'Topic';
+  String get helpTopicLabel => 'Topik';
 
   @override
-  String get helpWhatHappened => 'What happened?';
+  String get helpWhatHappened => 'Apa yang terjadi?';
 
   @override
-  String get helpHint => 'A short description goes a long way…';
+  String get helpHint => 'Deskripsi singkat sangat membantu…';
 
   @override
   String get helpDisclaimer =>
-      'Tapping \"Email us\" opens your mail app with a pre-filled message (no data leaves your device until you send).';
+      'Mengetuk \"Email kami\" membuka aplikasi email Anda dengan pesan yang sudah diisi (tidak ada data yang keluar dari perangkat Anda sampai Anda mengirim).';
 
   @override
-  String get helpFaqQ1 => 'What is the 5-task cap?';
+  String get helpFaqQ1 => 'Apa itu batas 5 tugas?';
 
   @override
   String get helpFaqA1 =>
-      'You can add up to 5 tasks per local day. The 6th is blocked on purpose — discipline beats overload. The cap is the feature, not a limitation.';
+      'Anda dapat menambahkan hingga 5 tugas per hari lokal. Tugas ke-6 diblokir secara sengaja — disiplin mengalahkan beban berlebih. Batas itu adalah fitur, bukan keterbatasan.';
 
   @override
-  String get helpFaqQ2 => 'What happens at midnight?';
+  String get helpFaqQ2 => 'Apa yang terjadi pada tengah malam?';
 
   @override
   String get helpFaqA2 =>
-      'At your local midnight, any task still marked open is stamped \"missed\" and moves to Left Behind. Habit streaks reset if the habit was not completed the day before.';
+      'Pada tengah malam lokal Anda, setiap tugas yang masih ditandai terbuka diberi cap \"terlewat\" dan pindah ke Tertinggal. Rantai kebiasaan direset jika kebiasaan tidak diselesaikan hari sebelumnya.';
 
   @override
-  String get helpFaqQ3 => 'What is Left Behind?';
+  String get helpFaqQ3 => 'Apa itu Tertinggal?';
 
   @override
   String get helpFaqA3 =>
-      'A gentle, dismissible list of tasks you didn\'t finish. Open it, re-add only what still matters, and let the rest go. Free tier sees the last 7 days; Pro sees full history.';
+      'Daftar yang lembut dan dapat ditutup dari tugas yang tidak Anda selesaikan. Buka, tambahkan kembali hanya yang masih penting, dan lepaskan sisanya. Tier gratis melihat 7 hari terakhir; Pro melihat riwayat lengkap.';
 
   @override
-  String get helpFaqQ4 => 'How do streaks work?';
+  String get helpFaqQ4 => 'Bagaimana rantai bekerja?';
 
   @override
   String get helpFaqA4 =>
-      'A day extends the chain when you had at least 1 task and 0 were missed. Days with zero tasks neither extend nor break the chain. A streak freeze forgives one missed day per month.';
+      'Satu hari memperpanjang rantai ketika Anda memiliki setidaknya 1 tugas dan 0 yang terlewat. Hari dengan nol tugas tidak memperpanjang atau memutus rantai. Pembekuan rantai memaafkan satu hari terlewat per bulan.';
 
   @override
-  String get helpFaqQ5 => 'What is the streak freeze?';
+  String get helpFaqQ5 => 'Apa itu pembekuan rantai?';
 
   @override
   String get helpFaqA5 =>
-      'One \"freeze\" per calendar month, Pro only. Spend it on a day you missed to keep your chain alive. Find it on the Progress tab.';
+      'Satu \"pembekuan\" per bulan kalender, hanya untuk Pro. Gunakan pada hari yang Anda lewatkan untuk menjaga rantai Anda tetap hidup. Temukan di tab Progres.';
 
   @override
-  String get helpFaqQ6 => 'Where is my data stored?';
+  String get helpFaqQ6 => 'Di mana data saya disimpan?';
 
   @override
   String get helpFaqA6 =>
-      'All data lives in Supabase (Postgres) under the account that signed in. We never sell or share it. See the privacy policy linked in the Play Store listing for the full details.';
+      'Semua data tersimpan di Supabase (Postgres) di bawah akun yang masuk. Kami tidak pernah menjual atau membaginya. Lihat kebijakan privasi yang tertaut di daftar Play Store untuk detail lengkap.';
 
   @override
-  String get helpFaqQ7 => 'How do I delete my account?';
+  String get helpFaqQ7 => 'Bagaimana cara menghapus akun saya?';
 
   @override
   String get helpFaqA7 =>
-      'Account deletion is coming to Settings in the next release. For now, email support@bloomtracker.app and we\'ll handle it within a day.';
+      'Buka Pengaturan → Akun → Hapus akun. Ini menghapus profil, tugas, kebiasaan, dan data langganan Anda secara permanen. Langganan Play yang aktif harus dibatalkan secara terpisah di Google Play.';
 
   @override
-  String get helpTopicsGeneral => 'General question';
+  String get helpTopicsGeneral => 'Pertanyaan umum';
 
   @override
-  String get helpTopicsBug => 'Bug report';
+  String get helpTopicsBug => 'Laporan bug';
 
   @override
-  String get helpTopicsStreak => 'Streak / rollover issue';
+  String get helpTopicsStreak => 'Masalah rantai / bergulir';
 
   @override
-  String get helpTopicsBilling => 'Billing or Pro tier';
+  String get helpTopicsBilling => 'Penagihan atau tier Pro';
 
   @override
-  String get helpTopicsAccount => 'Account & data';
+  String get helpTopicsAccount => 'Akun & data';
 
   @override
-  String get helpTopicsFeature => 'Feature request';
+  String get helpTopicsFeature => 'Permintaan fitur';
 
   @override
-  String get helpAccountAnon => '(not signed in)';
+  String get helpAccountAnon => '(belum masuk)';
 
   @override
-  String get splashTagline => 'Nurture small seeds. Grow a forest.';
+  String get splashTagline => 'Rawat benih kecil. Tumbuhkan hutan.';
 
   @override
   String get priorityStandard => 'STANDARD';
@@ -1165,4 +1262,1288 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get prioritySpark => 'SPARK';
+
+  @override
+  String get settingsDeleteAccount => 'Hapus akun';
+
+  @override
+  String get settingsDeleteAccountSubtitle => 'Hapus data Anda secara permanen';
+
+  @override
+  String get settingsDeleteAccountConfirmTitle => 'Hapus akun Anda?';
+
+  @override
+  String get settingsDeleteAccountConfirmBody =>
+      'Ini menghapus profil, tugas, kebiasaan, dan progres Anda secara permanen. Langganan aktif harus dibatalkan di Google Play secara terpisah. Tindakan ini tidak dapat dibatalkan.';
+
+  @override
+  String get settingsDeleteAccountConfirmButton => 'Hapus selamanya';
+
+  @override
+  String get settingsDeleteAccountSuccess => 'Akun Anda telah dihapus.';
+
+  @override
+  String get settingsDeleteAccountFailed =>
+      'Tidak dapat menghapus akun. Coba lagi atau email support@dailystitch.app.';
+
+  @override
+  String get referralYouTitle => 'Undang teman · dapatkan Pro gratis';
+
+  @override
+  String referralYouSubtitle(int progress, int milestone) {
+    return '$progress dari $milestone teman bergabung';
+  }
+
+  @override
+  String get referralYouShare => 'Bagikan undangan';
+
+  @override
+  String get referralYouDetails => 'Lihat detail';
+
+  @override
+  String get referralPaywallTitle => 'Bulan Pro gratis';
+
+  @override
+  String get referralPaywallBody =>
+      'Undang 5 teman yang mendaftar → 1 bulan Pro gratis';
+
+  @override
+  String get referralPaywallProBody =>
+      'Terus mengundang — kumpulkan bulan Pro gratis';
+
+  @override
+  String referralPaywallProgress(Object count, Object milestone) {
+    return '$count / $milestone';
+  }
+
+  @override
+  String get insightsLoadError =>
+      'Tidak dapat memuat progres Anda. Coba lagi nanti.';
+
+  @override
+  String get insightsMetricCurrentChain => 'RANTAI SAAT INI';
+
+  @override
+  String get insightsMetricBestEver => 'TERBAIK SEPANJANG MASA';
+
+  @override
+  String get insightsMetricTasksDone => 'TUGAS SELESAI';
+
+  @override
+  String get insightsMetricPerfectDays => 'HARI SEMPURNA';
+
+  @override
+  String get insightsMetricHabits => 'KEBIASAAN';
+
+  @override
+  String get insightsDay => 'hari';
+
+  @override
+  String get insightsDays => 'hari';
+
+  @override
+  String get insightsSectionThisWeek => 'Minggu ini';
+
+  @override
+  String get insightsShareMyWeek => 'Bagikan minggu saya';
+
+  @override
+  String get insightsShareMyWeekPro => 'Bagikan minggu saya · Pro';
+
+  @override
+  String get insightsShareReceiptText =>
+      'Minggu saya di Daily Stitch. Jangan putus rantainya.';
+
+  @override
+  String insightsHistoryWindowTitle(int days) {
+    return 'Menampilkan $days hari terakhir';
+  }
+
+  @override
+  String get insightsHistoryUpsell => 'Buka riwayat lengkap dengan Pro';
+
+  @override
+  String get referralScreenTitle => 'Undang teman';
+
+  @override
+  String get referralLaunchGift => 'Hadiah bulan peluncuran';
+
+  @override
+  String get referralRewardTitle => 'Dapatkan 1 bulan Pro gratis';
+
+  @override
+  String get referralRewardBody =>
+      'Bagikan kode Anda kepada teman. Ketika 5 orang mendaftar menggunakan kode Anda, Anda membuka Daily Stitch Pro selama satu bulan penuh.';
+
+  @override
+  String get referralYourCode => 'Kode referral Anda';
+
+  @override
+  String get referralCopyCodeTooltip => 'Salin kode';
+
+  @override
+  String get referralCodeCopied => 'Kode referral disalin';
+
+  @override
+  String get referralShareWithFriends => 'Bagikan dengan teman';
+
+  @override
+  String get referralFooterHint =>
+      'Teman memasukkan kode Anda saat membuat akun. Setiap teman dihitung satu kali untuk hadiah Anda.';
+
+  @override
+  String referralFriendsJoinedOne(int count) {
+    return '$count teman bergabung';
+  }
+
+  @override
+  String referralFriendsJoinedMany(int count) {
+    return '$count teman bergabung';
+  }
+
+  @override
+  String referralRewardsEarnedOne(int count) {
+    return 'Anda telah mendapatkan $count bulan Pro gratis.';
+  }
+
+  @override
+  String referralRewardsEarnedMany(int count) {
+    return 'Anda telah mendapatkan $count bulan Pro gratis.';
+  }
+
+  @override
+  String get referralRewardUnlocked =>
+      'Hadiah terbuka — nikmati bulan Pro gratis Anda!';
+
+  @override
+  String referralRemainingToUnlock(int remaining) {
+    return '$remaining lagi untuk membuka bulan gratis Anda';
+  }
+
+  @override
+  String youProMemberSince(String month) {
+    return 'Anggota Pro sejak $month';
+  }
+
+  @override
+  String get youProPerksTitle => 'Keistimewaan Pro Anda';
+
+  @override
+  String get manageProThankYou => 'Terima kasih telah mendukung Bloom';
+
+  @override
+  String get manageProReferralHint =>
+      'Undang lebih banyak teman untuk memperpanjang Pro Anda';
+
+  @override
+  String bootstrapConfigErrorBody(String detail) {
+    return '$detail\n\nTambahkan SUPABASE_URL dan SUPABASE_PUBLISHABLE_KEY (atau SUPABASE_ANON_KEY lama) ke leanspace/.env, lalu bangun ulang:\n\nflutter build apk --debug';
+  }
+
+  @override
+  String get languageSystemDefault => 'Default sistem';
+
+  @override
+  String get languageNameEn => 'English';
+
+  @override
+  String get languageNameUr => 'اردو (Urdu)';
+
+  @override
+  String get languageNameEs => 'Español';
+
+  @override
+  String get languageNamePt => 'Português';
+
+  @override
+  String get languageNameFr => 'Français';
+
+  @override
+  String get languageNameDe => 'Deutsch';
+
+  @override
+  String get languageNameIt => 'Italiano';
+
+  @override
+  String get languageNameAr => 'العربية';
+
+  @override
+  String get languageNameTr => 'Türkçe';
+
+  @override
+  String get languageNameId => 'Bahasa Indonesia';
+
+  @override
+  String get onboardingLanguageTitle => 'Pilih bahasa Anda';
+
+  @override
+  String get onboardingLanguageBody =>
+      'Pilih bahasa yang ingin Anda gunakan di Daily Stitch. Anda dapat mengubahnya kapan saja di Pengaturan.';
+
+  @override
+  String get onboardingLanguageContinue => 'Lanjutkan';
+
+  @override
+  String get commonPro => 'PRO';
+
+  @override
+  String get commonFriend => 'Teman';
+
+  @override
+  String get settingsAppTheme => 'Tema Aplikasi';
+
+  @override
+  String get settingsAppThemeSubtitle =>
+      'Pilih warna tempat perlindungan pribadi Anda';
+
+  @override
+  String get settingsInviteFriendsTitle => 'Undang teman · Pro Gratis';
+
+  @override
+  String get settingsInviteFriendsSubtitle =>
+      'Dapatkan 1 bulan gratis saat 5 teman bergabung';
+
+  @override
+  String get themePickerTitle => 'Tempat Perlindungan Pribadi';
+
+  @override
+  String get themePickerSubtitle => 'Pilih palet warna yang membawa kedamaian.';
+
+  @override
+  String get themeNameClassicBloom => 'Bloom Klasik';
+
+  @override
+  String get themeNameSolarTerracotta => 'Terracotta Surya';
+
+  @override
+  String get themeNameMidnightOasis => 'Oasis Tengah Malam';
+
+  @override
+  String get themeNameLavenderDream => 'Impian Lavender';
+
+  @override
+  String get themeNameNordicFrost => 'Embun Nordik';
+
+  @override
+  String get themeNameCyberpunkNeon => 'Neon Cyberpunk';
+
+  @override
+  String get reminderTitle => 'Pengingat';
+
+  @override
+  String get reminderBody =>
+      'Panggilan Terakhir memberi tahu Anda sebelum tengah malam jika tugas masih terbuka.';
+
+  @override
+  String get reminderFinalCall => 'Panggilan Terakhir';
+
+  @override
+  String get reminderEveningNudge => 'Dorongan malam';
+
+  @override
+  String get reminderChangeTime => 'Ubah waktu';
+
+  @override
+  String get reminderSave => 'Simpan pengingat';
+
+  @override
+  String get notificationChannelReminders => 'Pengingat Daily Stitch';
+
+  @override
+  String get notificationChannelRemindersDesc =>
+      'Dorongan malam dan pengingat Panggilan Terakhir';
+
+  @override
+  String get notificationChannelAlarms => 'Alarm tugas Daily Stitch';
+
+  @override
+  String get notificationChannelAlarmsDesc =>
+      'Alarm keras untuk pengingat tugas';
+
+  @override
+  String get notificationTaskReminderTitle => 'Pengingat tugas';
+
+  @override
+  String get notificationFinalCallTitle => 'Panggilan Terakhir';
+
+  @override
+  String notificationFinalCallBody(int count) {
+    return 'Anda masih memiliki $count tugas terbuka hari ini.';
+  }
+
+  @override
+  String get notificationEveningTitle => 'Cek malam';
+
+  @override
+  String get notificationEveningBody => 'Bagaimana kebun Anda tumbuh hari ini?';
+
+  @override
+  String get widgetSetupTitle => 'Tambahkan widget rantai';
+
+  @override
+  String get widgetSetupBody =>
+      'Pertahankan rantai di layar beranda Anda — tidak perlu membuka aplikasi.';
+
+  @override
+  String get widgetSetupAdd => 'Tambahkan ke layar beranda';
+
+  @override
+  String get widgetSetupStep1 => 'Tekan lama layar beranda Anda';
+
+  @override
+  String get widgetSetupStep2 => 'Ketuk Widget';
+
+  @override
+  String get widgetSetupStep3 => 'Temukan Daily Stitch dan seret ke atas';
+
+  @override
+  String get widgetSetupPinSuccess =>
+      'Periksa layar beranda Anda untuk menempatkan widget.';
+
+  @override
+  String get widgetSetupPinFallback =>
+      'Peluncur Anda mungkin tidak mendukung penambahan sekali ketuk. Gunakan langkah manual di bawah ini.';
+
+  @override
+  String get paywallWelcomePro => 'Selamat datang di Daily Stitch Pro';
+
+  @override
+  String get paywallSavePercent => 'HEMAT ~16%';
+
+  @override
+  String get paywallTermsTitle => 'Ketentuan langganan';
+
+  @override
+  String get paywallTermsBody =>
+      'Penagihan ditangani oleh Google Play. Langganan memperbarui secara otomatis sampai Anda membatalkan di Play Store → Langganan setidaknya 24 jam sebelum akhir periode berjalan. Anda dapat mengelola atau membatalkan langganan kapan saja dari akun Google Play Anda.\n\nMenghapus aplikasi tidak membatalkan langganan Anda.\n\nHarga yang ditampilkan dalam mata uang lokal Anda dan dapat berbeda per wilayah. Pajak mungkin berlaku.';
+
+  @override
+  String get paywallPrivacyTitle => 'Privasi';
+
+  @override
+  String get paywallPrivacyBody =>
+      'Daily Stitch menyimpan tugas, kebiasaan, dan data rantai Anda di backend Supabase kami, terkait dengan akun Anda. Kami tidak pernah menjual data Anda.\n\nPembelian langganan diproses oleh Google Play. Kami menerima token pembelian terverifikasi dari Google untuk mengonfirmasi status Pro Anda. Kami tidak melihat atau menyimpan detail pembayaran Anda.\n\nAnda dapat meminta ekspor data lengkap atau penghapusan akun dari Pengaturan → Penghapusan akun.';
+
+  @override
+  String get paywallCloseTooltip => 'Tutup';
+
+  @override
+  String get paywallFooterLinks => 'Pulihkan · Ketentuan · Privasi';
+
+  @override
+  String get manageProTitle => 'Langganan Pro';
+
+  @override
+  String get manageProActive => 'Aktif';
+
+  @override
+  String get manageProNotSubscribed => 'Belum berlangganan';
+
+  @override
+  String get manageProFreeTier => 'Tier gratis';
+
+  @override
+  String manageProRenewsOn(String date) {
+    return 'Memperbarui atau berakhir pada $date.';
+  }
+
+  @override
+  String get manageProFreeBody =>
+      'Anda menggunakan Daily Stitch Gratis. Tingkatkan untuk membuka sistem lengkap.';
+
+  @override
+  String get manageProSectionManage => 'KELOLA';
+
+  @override
+  String get manageProOpenPlay => 'Buka langganan Google Play';
+
+  @override
+  String get manageProOpenPlaySubtitlePro =>
+      'Batalkan, ubah paket, atau perbarui metode pembayaran';
+
+  @override
+  String get manageProOpenPlaySubtitleFree =>
+      'Temukan langganan Anda yang ada (jika ada) di sini';
+
+  @override
+  String get manageProShareApp => 'Bagikan Daily Stitch';
+
+  @override
+  String get manageProShareSubtitle => 'Ceritakan tentang rantai kepada teman';
+
+  @override
+  String get manageProSectionHelp => 'BUTUH BANTUAN?';
+
+  @override
+  String get manageProHelpTitle => 'Bantuan & Dukungan';
+
+  @override
+  String get manageProHelpSubtitle => 'FAQ langganan, kontak, laporan bug';
+
+  @override
+  String manageProBillingFooter(String version) {
+    return 'Penagihan ditangani oleh Google Play · $version';
+  }
+
+  @override
+  String get manageProPlayInstructions =>
+      'Buka aplikasi Google Play Store → ketuk profil Anda → Pembayaran & langganan → Langganan.';
+
+  @override
+  String get addTaskGrowSomething => 'Tumbuhkan Sesuatu';
+
+  @override
+  String get addTaskPlantSprout => 'Tanam Tunas';
+
+  @override
+  String get addTaskIntentionName => 'NAMA NIAT';
+
+  @override
+  String get addTaskSproutName => 'NAMA TUNAS';
+
+  @override
+  String get addTaskHintTask => 'contoh, Salam Matahari Pagi';
+
+  @override
+  String get addTaskHintHabit => 'contoh Yoga Pagi';
+
+  @override
+  String get addTaskWhen => 'KAPAN?';
+
+  @override
+  String get addTaskPriority => 'PRIORITAS';
+
+  @override
+  String get addTaskNotes => 'CATATAN';
+
+  @override
+  String get addTaskCadenceDaily => 'Harian';
+
+  @override
+  String get addTaskCadenceWeekdays => 'Hari kerja';
+
+  @override
+  String get addTaskCadence3x => '3x/minggu';
+
+  @override
+  String get addTaskCadenceWeekly => 'Mingguan';
+
+  @override
+  String get addTaskPlantIntention => 'Tanam Niat';
+
+  @override
+  String get addTaskPlantSproutCta => 'Tanam Tunas';
+
+  @override
+  String get addTaskPlanting => 'Menanam…';
+
+  @override
+  String get addTaskNameIntentionError => 'Namai niat Anda';
+
+  @override
+  String get addTaskNameSproutError => 'Namai tunas Anda';
+
+  @override
+  String get addTaskNotesMigrationWarning =>
+      'Tugas tersimpan. Catatan & prioritas memerlukan migrasi Supabase terbaru — jalankan supabase/migrations/20260701000000_todos_notes_priority.sql.';
+
+  @override
+  String get addTaskNoSproutSlots =>
+      'Tidak ada slot tunas kosong — rawat satu terlebih dahulu.';
+
+  @override
+  String get addTaskSaveSproutError =>
+      'Tidak dapat menyimpan tunas — coba lagi.';
+
+  @override
+  String get addTaskElementWater => 'AIR';
+
+  @override
+  String get addTaskElementLight => 'CAHAYA';
+
+  @override
+  String get addTaskElementSoil => 'TANAH';
+
+  @override
+  String get addTaskElementBreeze => 'ANGIN';
+
+  @override
+  String get addTaskCadenceLabel => 'KADENSI';
+
+  @override
+  String get addTaskPreparationNotes => 'CATATAN PERSIAPAN';
+
+  @override
+  String get addTaskTendingNotes => 'CATATAN PERAWATAN';
+
+  @override
+  String get addTaskNotesHintTask =>
+      'Alat atau tips pola pikir untuk tugas ini?';
+
+  @override
+  String get addTaskNotesHintHabit => 'Seperti apa merawat tunas ini?';
+
+  @override
+  String get addTaskChooseElement => 'PILIH ELEMEN';
+
+  @override
+  String get addTaskElementsTooltip => 'Apa arti elemen-elemen ini?';
+
+  @override
+  String get addTaskTaskSeed => 'Benih Tugas';
+
+  @override
+  String get addTaskHabitSprout => 'Tunas Kebiasaan';
+
+  @override
+  String get addTaskPickElement => 'Pilih elemen yang tepat';
+
+  @override
+  String get addTaskPickElementBody =>
+      'Setiap elemen mewakili jenis usaha yang berbeda. Penjaga menjadi lebih kuat saat Anda menyiram yang benar.';
+
+  @override
+  String get addTaskClearForm => 'Bersihkan formulir';
+
+  @override
+  String get shareCouldNotShare => 'Tidak dapat berbagi saat ini';
+
+  @override
+  String get authReferralCodeLabel => 'Kode referral (opsional)';
+
+  @override
+  String get authReferralCodeHint => 'Kode teman';
+
+  @override
+  String get youPerkHabitSlots => '5 slot kebiasaan';
+
+  @override
+  String get youPerkFullHistory => 'Riwayat lengkap';
+
+  @override
+  String get youPerkAllThemes => 'Semua tema';
+
+  @override
+  String get youPerkStreakFreezes => '2 pembekuan rantai / bulan';
+
+  @override
+  String get youPerkLegendaryMedals => 'Medali legendaris';
+
+  @override
+  String get subscriptionPurchaseFailed => 'Pembelian gagal. Coba lagi.';
+
+  @override
+  String get subscriptionUnavailable =>
+      'Pembelian dalam aplikasi tidak tersedia di perangkat ini.';
+
+  @override
+  String get subscriptionLoadFailed => 'Tidak dapat memuat opsi langganan.';
+
+  @override
+  String get subscriptionVerifyFailed =>
+      'Tidak dapat memverifikasi pembelian. Coba Pulihkan pembelian.';
+
+  @override
+  String get streakFreezeFailed => 'Tidak dapat menggunakan pembekuan rantai.';
+
+  @override
+  String get streakFreezeAlreadyUsed =>
+      'Anda sudah menggunakan pembekuan bulan ini.';
+
+  @override
+  String get streakFreezeNoMissed =>
+      'Tidak ada tugas yang terlewat hari itu untuk dibekukan.';
+
+  @override
+  String get streakFreezeNotPastDay =>
+      'Anda hanya dapat membekukan hari yang sudah lewat.';
+
+  @override
+  String get myDayLoadError =>
+      'Tidak dapat memuat Hari Saya. Tarik untuk menyegarkan.';
+
+  @override
+  String get myDayCapReached => 'Anda telah mencapai batas 5 tugas hari ini.';
+
+  @override
+  String get myDayRemoveTaskError => 'Tidak dapat menghapus tugas.';
+
+  @override
+  String get shareCardTitle => 'Bagikan minggu Anda';
+
+  @override
+  String get shareCardCta => 'Bagikan gambar';
+
+  @override
+  String get medalTierSprout => 'Tunas';
+
+  @override
+  String get medalTierCommon => 'Biasa';
+
+  @override
+  String get medalTierRare => 'Langka';
+
+  @override
+  String get medalTierEpic => 'Epik';
+
+  @override
+  String get medalTierLegendary => 'Legendaris';
+
+  @override
+  String get medalCategoryTasks => 'Tugas';
+
+  @override
+  String get medalCategoryHabits => 'Kebiasaan';
+
+  @override
+  String get medalCategoryStreaks => 'Rantai';
+
+  @override
+  String get medalCategoryMastery => 'Penguasaan';
+
+  @override
+  String get medalsShareTooltip => 'Bagikan pencapaian';
+
+  @override
+  String get medalsFilterAll => 'Semua';
+
+  @override
+  String get addHabitTitleNew => 'Tanam tunas baru';
+
+  @override
+  String get addHabitTitleEdit => 'Rawat tunas Anda';
+
+  @override
+  String get addHabitLabelSproutName => 'NAMA TUNAS';
+
+  @override
+  String get shareCardAppBarTitle => 'Kartu Bagikan';
+
+  @override
+  String get shareCardAppBarTitleMedal => 'Bagikan medali Anda';
+
+  @override
+  String shareCardDescMedal(Object title) {
+    return 'Pamerkan lencana $title baru Anda';
+  }
+
+  @override
+  String get shareCardBodyMedal =>
+      'Bagikan kemenangan dengan lingkaran Anda. Kartu diekspor sebagai PNG dan siap untuk aplikasi sosial apa pun.';
+
+  @override
+  String get shareCardCtaPreparing => 'Mempersiapkan…';
+
+  @override
+  String get shareCardMilestone => 'TONGGAK BARU TERBUKA';
+
+  @override
+  String get shareCardStatChain => 'hari rantai';
+
+  @override
+  String get shareCardStatSprouts => 'tunas';
+
+  @override
+  String get shareCardStatMedals => 'medali';
+
+  @override
+  String shareCardHeadlineStreak(int days) {
+    return 'Rantai $days Hari';
+  }
+
+  @override
+  String shareCardHeadlineMedals(int count) {
+    return '$count Medali Diraih';
+  }
+
+  @override
+  String get shareCardHeadlineSproutGuardian => 'Penjaga Tunas';
+
+  @override
+  String get shareCardHeadlineFirstSeeds => 'Benih Pertama Ditanam';
+
+  @override
+  String get shareCardHeadlineGardenBegins => 'Sebuah Kebun Dimulai';
+
+  @override
+  String get shareCardSubheadMonth =>
+      'Anda telah berhasil merawat kebiasaan Anda selama satu bulan penuh.';
+
+  @override
+  String get shareCardSubheadWeek =>
+      'Satu minggu penuh pertumbuhan — hutan Anda semakin lebat.';
+
+  @override
+  String get shareCardSubheadProgress =>
+      'Tempat perlindungan Anda menunjukkan kemajuan nyata. Terus rawat.';
+
+  @override
+  String get shareCardSubheadSprouts =>
+      'Tunas pertama Anda mulai berakar. Sirami setiap hari.';
+
+  @override
+  String get shareCardSubheadFirstSeeds =>
+      'Benih pertama Anda sudah di tanah. Saksikan mereka terbuka.';
+
+  @override
+  String get shareCardSubheadFallback =>
+      'Setiap hutan dimulai dari satu pilihan kecil.';
+
+  @override
+  String shareAppText(String url) {
+    return 'Daily Stitch — lima benih kecil sehari, satu rantai tak terputus. Tanam milik Anda.\n\n$url';
+  }
+
+  @override
+  String get shareAppSubject => 'Coba Daily Stitch';
+
+  @override
+  String shareAppReferralText(String code, String url) {
+    return 'Saya membangun rantai harian saya di Daily Stitch — gabung dengan saya menggunakan kode referral saya $code dan kita berdua tumbuh.\n\n$url';
+  }
+
+  @override
+  String get shareAppReferralSubject => 'Gabung dengan saya di Daily Stitch';
+
+  @override
+  String shareCardShareTextProgress(String year) {
+    return 'Progres Daily Stitch saya — $year di Daily Stitch.';
+  }
+
+  @override
+  String shareCardShareTextMedal(String title, String subtitle) {
+    return 'Saya baru saja membuka medali \"$title\" di Daily Stitch. $subtitle';
+  }
+
+  @override
+  String get insightsReceiptTasksDone => 'Tugas selesai';
+
+  @override
+  String get insightsReceiptPerfectDays => 'Hari sempurna';
+
+  @override
+  String get insightsReceiptCompletion => 'Penyelesaian';
+
+  @override
+  String insightsReceiptDate(String date) {
+    return 'Minggu tanggal $date';
+  }
+
+  @override
+  String get insightsReceiptFooter => 'Jangan putus rantainya.';
+
+  @override
+  String get elementLabelWater => 'Air';
+
+  @override
+  String get elementLabelLight => 'Cahaya';
+
+  @override
+  String get elementLabelSoil => 'Tanah';
+
+  @override
+  String get elementLabelBreeze => 'Angin';
+
+  @override
+  String get elementTaglineWater =>
+      'Pulihkan. Hidrasi, istirahat, perawatan emosional — apa pun yang mengisi kembali.';
+
+  @override
+  String get elementTaglineLight =>
+      'Bangunkan. Cahaya pagi, blok fokus, belajar, meditasi — energi dan kejernihan.';
+
+  @override
+  String get elementTaglineSoil =>
+      'Pendalaman. Membaca, menulis jurnal, pekerjaan mendalam — akar kuat yang membangun kekuatan jangka panjang.';
+
+  @override
+  String get elementTaglineBreeze =>
+      'Gerak. Berjalan, berlari, latihan pernapasan — energi ringan dan gerak yang membersihkan pikiran.';
+
+  @override
+  String get elementWhenWater =>
+      'Saat Anda merasa lelah atau kehabisan energi.';
+
+  @override
+  String get elementWhenLight =>
+      'Saat Anda butuh awal yang jelas untuk hari Anda.';
+
+  @override
+  String get elementWhenSoil =>
+      'Saat pekerjaannya lambat tetapi sepadan (belajar, kerajinan, perawatan).';
+
+  @override
+  String get elementWhenBreeze =>
+      'Saat tubuh (atau pikiran) Anda perlu bergerak dan bernapas.';
+
+  @override
+  String get bloomTierMastery => 'Penguasaan';
+
+  @override
+  String get bloomTierStrong => 'Kuat';
+
+  @override
+  String get bloomTierGrowing => 'Tumbuh';
+
+  @override
+  String get bloomTierSprouting => 'Bertunas';
+
+  @override
+  String get bloomTierLocked => 'Terkunci';
+
+  @override
+  String habitBloomSubtitle(int count, String element) {
+    return 'Rantai $count hari · $element';
+  }
+
+  @override
+  String get medal_id_first_spark => 'Percikan Pertama';
+
+  @override
+  String get medal_sub_first_spark => 'Anda menyalakan korek api.';
+
+  @override
+  String get medal_desc_first_spark =>
+      'Selesaikan tugas pertama Anda. Setiap rantai dimulai dari sini.';
+
+  @override
+  String get medal_id_triple_seed => 'Triple Benih';
+
+  @override
+  String get medal_sub_triple_seed => 'Tiga ke dalam tanah.';
+
+  @override
+  String get medal_desc_triple_seed => 'Selesaikan 3 tugas secara total.';
+
+  @override
+  String get medal_id_dozen_sower => 'Penabur Sebelas';
+
+  @override
+  String get medal_sub_dozen_sower => 'Sebuah ladang dua belas.';
+
+  @override
+  String get medal_desc_dozen_sower => 'Selesaikan 12 tugas secara total.';
+
+  @override
+  String get medal_id_quarter_century => 'Seperempat Abad';
+
+  @override
+  String get medal_sub_quarter_century => 'Satu musim berkata ya.';
+
+  @override
+  String get medal_desc_quarter_century => 'Selesaikan 25 tugas secara total.';
+
+  @override
+  String get medal_id_productivity_titan => 'Titan Produktivitas';
+
+  @override
+  String get medal_sub_productivity_titan => 'Konsistensi berlipat ganda.';
+
+  @override
+  String get medal_desc_productivity_titan =>
+      'Selesaikan 50 tugas — Anda telah membangun momentum nyata.';
+
+  @override
+  String get medal_id_century_planter => 'Penanam Abad';
+
+  @override
+  String get medal_sub_century_planter => 'Hutan milik Anda sendiri.';
+
+  @override
+  String get medal_desc_century_planter =>
+      'Selesaikan 100 tugas. Anda termasuk 5% pengguna teratas.';
+
+  @override
+  String get medal_id_clean_day => 'Lembaran Bersih';
+
+  @override
+  String get medal_sub_clean_day => 'Tak ada satu pun gulma.';
+
+  @override
+  String get medal_desc_clean_day =>
+      'Selesaikan setiap tugas yang Anda tanam dalam satu hari.';
+
+  @override
+  String get medal_id_triple_perfect => 'Triple Sempurna';
+
+  @override
+  String get medal_sub_triple_perfect => 'Tiga lari tanpa cela.';
+
+  @override
+  String get medal_desc_triple_perfect => 'Capai 3 hari sempurna.';
+
+  @override
+  String get medal_id_perfect_week => 'Minggu Sempurna';
+
+  @override
+  String get medal_sub_perfect_week => 'Tujuh hari tanpa putus.';
+
+  @override
+  String get medal_desc_perfect_week => '7 hari sempurna berturut-turut.';
+
+  @override
+  String get medal_id_two_week_chain => 'Kekuatan Dua Minggu';
+
+  @override
+  String get medal_sub_two_week_chain => 'Dua minggu menyala.';
+
+  @override
+  String get medal_desc_two_week_chain => 'Pertahankan rantai 14 hari.';
+
+  @override
+  String get medal_id_iron_chain => 'Rantai Besi';
+
+  @override
+  String get medal_sub_iron_chain => '30 tautan ditempa.';
+
+  @override
+  String get medal_desc_iron_chain => 'Rantai 30 hari. Medali tugas tersulit.';
+
+  @override
+  String get medal_id_quarterly_chain => 'Rantai Kuartalan';
+
+  @override
+  String get medal_sub_quarterly_chain => 'Satu musim, tanpa putus.';
+
+  @override
+  String get medal_desc_quarterly_chain => 'Rantai 90 hari. Status legendaris.';
+
+  @override
+  String get medal_id_vital_priority => 'Percikan Vital';
+
+  @override
+  String get medal_sub_vital_priority => 'Anda memilih yang sulit.';
+
+  @override
+  String get medal_desc_vital_priority =>
+      'Selesaikan 5 tugas yang ditandai prioritas Vital.';
+
+  @override
+  String get medal_id_spark_priority => 'Penjinak Percikan';
+
+  @override
+  String get medal_sub_spark_priority => 'Kemenangan cepat bertambah.';
+
+  @override
+  String get medal_desc_spark_priority =>
+      'Selesaikan 5 tugas yang ditandai prioritas Spark.';
+
+  @override
+  String get medal_id_note_taker => 'Pencatat';
+
+  @override
+  String get medal_sub_note_taker =>
+      'Rencana di atas kertas lebih baik dari rencana di kepala.';
+
+  @override
+  String get medal_desc_note_taker =>
+      'Tambahkan catatan persiapan ke 5 tugas berbeda.';
+
+  @override
+  String get medal_id_left_behind_rescuer => 'Penyelamat Tertinggal';
+
+  @override
+  String get medal_sub_left_behind_rescuer =>
+      'Tidak ada tugas yang tertinggal.';
+
+  @override
+  String get medal_desc_left_behind_rescuer =>
+      'Tambahkan kembali 3 tugas yang terlewat keesokan harinya.';
+
+  @override
+  String get medal_id_first_sprout => 'Tunas Pertama';
+
+  @override
+  String get medal_sub_first_sprout => 'Ritual harian baru.';
+
+  @override
+  String get medal_desc_first_sprout => 'Tanam kebiasaan pertama Anda.';
+
+  @override
+  String get medal_id_trio_sprout => 'Trio Tunas';
+
+  @override
+  String get medal_sub_trio_sprout => 'Ekosistem kecil.';
+
+  @override
+  String get medal_desc_trio_sprout => 'Tanam 3 kebiasaan berbeda.';
+
+  @override
+  String get medal_id_week_of_growth => 'Minggu Pertumbuhan';
+
+  @override
+  String get medal_sub_week_of_growth => 'Akar mulai bertahan.';
+
+  @override
+  String get medal_desc_week_of_growth =>
+      'Rawat kebiasaan setiap hari selama 7 hari.';
+
+  @override
+  String get medal_id_fortnight_floret => 'Floret Dua Minggu';
+
+  @override
+  String get medal_sub_fortnight_floret => 'Mekar penuh.';
+
+  @override
+  String get medal_desc_fortnight_floret => 'Rantai kebiasaan 14 hari.';
+
+  @override
+  String get medal_id_rooted_master => 'Master Berakar';
+
+  @override
+  String get medal_sub_rooted_master => 'Akar dalam, kekuatan dalam.';
+
+  @override
+  String get medal_desc_rooted_master => 'Rantai kebiasaan 30 hari.';
+
+  @override
+  String get medal_id_half_year_bloom => 'Mekar Setengah Tahun';
+
+  @override
+  String get medal_sub_half_year_bloom => 'Kebun permanen sekarang.';
+
+  @override
+  String get medal_desc_half_year_bloom =>
+      'Pertahankan satu kebiasaan selama 180 hari.';
+
+  @override
+  String get medal_id_garden_keeper => 'Penjaga Kebun';
+
+  @override
+  String get medal_sub_garden_keeper => 'Variasi, bersama-sama.';
+
+  @override
+  String get medal_desc_garden_keeper =>
+      'Tumbuhkan 4 kebiasaan berbeda secara bersamaan.';
+
+  @override
+  String get medal_id_hydration_hero => 'Pahlawan Hidrasi';
+
+  @override
+  String get medal_sub_hydration_hero => 'Anda mengisi kembali.';
+
+  @override
+  String get medal_desc_hydration_hero =>
+      'Tanam kebiasaan hidrasi (air/minum).';
+
+  @override
+  String get medal_id_mindful_mover => 'Pemindah Sadar';
+
+  @override
+  String get medal_sub_mindful_mover => 'Tubuh mengingat.';
+
+  @override
+  String get medal_desc_mindful_mover =>
+      'Tanam kebiasaan bergerak (yoga/jalan/lari).';
+
+  @override
+  String get medal_id_devoted_keeper => 'Penjaga Setia';
+
+  @override
+  String get medal_sub_devoted_keeper => 'Enam puluh hari, satu latihan.';
+
+  @override
+  String get medal_desc_devoted_keeper =>
+      'Rawat satu kebiasaan selama 60 hari berturut-turut.';
+
+  @override
+  String get medal_id_tending_notes => 'Catatan Perawatan';
+
+  @override
+  String get medal_sub_tending_notes => 'Renungkan saat melangkah.';
+
+  @override
+  String get medal_desc_tending_notes =>
+      'Tambahkan catatan perawatan ke 3 kebiasaan.';
+
+  @override
+  String get medalTierTaglineSprout => 'Tanam benih pertama';
+
+  @override
+  String get medalTierTaglineCommon => 'Membangun kebiasaan';
+
+  @override
+  String get medalTierTaglineRare => 'Menunjukkan momentum nyata';
+
+  @override
+  String get medalTierTaglineEpic => 'Anda adalah kekuatan alam';
+
+  @override
+  String get medalTierTaglineLegendary =>
+      'Mitosis, hampir tidak ada yang sampai di sini';
+
+  @override
+  String get guardianHeadlineNoTasks =>
+      'Tanah hari ini segar.\nTanam benih pertama\ndan saksikan ia tumbuh.';
+
+  @override
+  String get guardianHeadlineAllDone =>
+      'Setiap benih yang Anda tanam\nsedang mekar.\nIstirahatlah, Penjaga — Anda sudah mendapatkannya.';
+
+  @override
+  String guardianHeadlineStreak14(int count) {
+    return '$count hari\npertumbuhan tanpa putus.\nHutan Anda dipenuhi kehidupan.';
+  }
+
+  @override
+  String get guardianHeadlineStreak7 =>
+      'Satu minggu penuh mekar,\nPenjaga.\nSatu hari sempurna lagi\nmemperpanjang rantai.';
+
+  @override
+  String get guardianHeadlineStreak3 =>
+      'Rantai Anda bertahan.\nRawat benih\nyang masih menunggu untuk terbuka.';
+
+  @override
+  String get guardianHeadlineNoHabitsDone =>
+      'Anda merawat tugas dengan baik.\nTanam tunas —\nkebiasaan adalah cara hutan tumbuh.';
+
+  @override
+  String get guardianHeadlineSomeDone =>
+      'Beberapa benih terbuka,\nbeberapa tidak. Itu tidak apa-apa.\nBesok adalah hari penanaman lagi.';
+
+  @override
+  String get guardianHeadlineMorning =>
+      'Selamat pagi, Penjaga.\nHari ini masih muda\ndan tanah siap.';
+
+  @override
+  String get guardianHeadlineAfternoon =>
+      'Selamat siang, Penjaga.\nSetengah cahaya tersisa —\nterus rawat.';
+
+  @override
+  String get guardianHeadlineEvening =>
+      'Selamat sore, Penjaga.\nSatu sapuan terakhir\nsebelum matahari terbenam.';
+
+  @override
+  String get guardianHeadlineNight =>
+      'Bekerja larut malam?\nBahkan Penjaga perlu istirahat.\nTanam benih besok sekarang.';
+
+  @override
+  String get guardianBodyNoTasks =>
+      'Tempat perlindungan Anda sepi sekarang. Tambahkan satu niat dan lihat apa yang berubah saat matahari terbenam.';
+
+  @override
+  String guardianBodyStreak14(int count) {
+    return '$count hari berjalan. Rantai ini bukan keberuntungan — itu adalah pilihan-pilihan kecil yang menumpuk. Terus tumpuk.';
+  }
+
+  @override
+  String guardianBodyStreak3(int count) {
+    return 'Rantai $count hari adalah momentum nyata. Selesaikan benih hari ini yang masih terbuka sebelum Anda menyudahi.';
+  }
+
+  @override
+  String guardianBodyNoHabits(int count) {
+    return 'Anda telah menanam $count tugas sejauh ini. Menambahkan satu tunas kebiasaan pun akan membuat pekerjaan berlipat ganda dari hari ke hari.';
+  }
+
+  @override
+  String guardianBodyLowCompletion(int pct) {
+    return 'Anda menyelesaikan $pct% dari yang Anda tanam. Benih yang lebih sedikit dan tajam cenderung tumbuh lebih tinggi dari sepuluh benih yang tersebar.';
+  }
+
+  @override
+  String guardianBodyDefault(int tasks, int sprouts) {
+    return 'Tempat perlindungan Anda hidup. $tasks tugas selesai, $sprouts tunas tumbuh — pekerjaan mulai terlihat.';
+  }
+
+  @override
+  String get guardianInsightWaitingTitle => 'Menunggu langkah pertama Anda';
+
+  @override
+  String get guardianInsightWaitingBody =>
+      'Tambahkan tugas atau kebiasaan dan saya akan mulai membaca pola di kebun Anda. Semakin banyak Anda tanam, semakin banyak yang bisa saya pelajari.';
+
+  @override
+  String get guardianInsightWaitingCta => 'Tanam benih pertama Anda';
+
+  @override
+  String get guardianInsightChainSuperTitle =>
+      'Rantai adalah kekuatan super Anda';
+
+  @override
+  String guardianInsightChainSuperBody(int count) {
+    return 'Anda telah mempertahankan rantai $count hari. Rantai selalu mengalahkan motivasi — pertahankan, bahkan di hari-hari yang lambat.';
+  }
+
+  @override
+  String get guardianInsightChainSuperCta => 'Tanam benih besok';
+
+  @override
+  String get guardianInsightChainColdTitle => 'Rantai dingin — mulai yang baru';
+
+  @override
+  String get guardianInsightChainColdBody =>
+      'Anda pernah menanam sebelumnya, yang berarti Anda bisa menanam lagi. Satu tugas kecil yang diselesaikan hari ini adalah rantai yang lebih panjang besok.';
+
+  @override
+  String get guardianInsightChainColdCta => 'Tanam benih';
+
+  @override
+  String get guardianInsightLessIsMoreTitle =>
+      'Sedikit lebih banyak minggu ini';
+
+  @override
+  String guardianInsightLessIsMoreBody(int pct) {
+    return 'Anda menyelesaikan sekitar $pct% dari yang Anda tanam. Coba 3 niat tajam alih-alih 5 yang longgar — kualitas berlipat ganda.';
+  }
+
+  @override
+  String get guardianInsightLessIsMoreCta => 'Perjelas hari ini';
+
+  @override
+  String guardianInsightNextMedalTitle(String title) {
+    return 'Medali berikutnya: $title';
+  }
+
+  @override
+  String guardianInsightNextMedalBody(int value, int target, String unit) {
+    return 'Anda sudah $value dari $target $unit. Beberapa hari jujur lagi dan itu milik Anda.';
+  }
+
+  @override
+  String get guardianInsightNextMedalCta => 'Tunjukkan medali';
+
+  @override
+  String get guardianInsightSteadyTitle => 'Anda di musim yang stabil';
+
+  @override
+  String get guardianInsightSteadyBody =>
+      'Tidak ada medali yang hampir diraih — tidak apa-apa. Rawat apa yang Anda miliki. Mekar berikutnya sedang dalam perjalanan.';
+
+  @override
+  String get guardianInsightSteadyCta => 'Lihat progres';
+
+  @override
+  String notificationTaskReminderBody(String label) {
+    return '$label';
+  }
+
+  @override
+  String get notificationFinalCallBodyOne =>
+      '1 tugas tersisa di rantai Anda. Tengah malam akan tiba.';
+
+  @override
+  String notificationFinalCallBodyMany(int count) {
+    return '$count tugas tersisa di rantai Anda. Tengah malam akan tiba.';
+  }
+
+  @override
+  String get notificationEveningBodyOne =>
+      'Anda masih memiliki 1 tugas terbuka hari ini.';
+
+  @override
+  String notificationEveningBodyMany(int count) {
+    return 'Anda masih memiliki $count tugas terbuka hari ini.';
+  }
+
+  @override
+  String get notificationTickerTaskReminder => 'Pengingat tugas';
+
+  @override
+  String get notificationTickerTaskAlarm => 'Alarm tugas';
+
+  @override
+  String habitBloomSubtitleL10n(int count, String element) {
+    return 'Rantai $count hari · $element';
+  }
 }

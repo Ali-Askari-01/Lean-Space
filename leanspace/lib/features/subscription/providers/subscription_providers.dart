@@ -156,7 +156,8 @@ class SubscriptionController extends Notifier<SubscriptionState> {
             purchasePending: false,
             error: purchase.error?.message ?? 'Purchase failed.',
           );
-          await _service.complete(purchase);
+          // Don't complete purchases in error state per Google Play guidelines
+          break;
         case PurchaseStatus.canceled:
           state = state.copyWith(purchasePending: false);
           await _service.complete(purchase);
@@ -169,20 +170,39 @@ class SubscriptionController extends Notifier<SubscriptionState> {
     }
   }
 
-  /// Records the purchase so the backend can reconcile, and optimistically
-  /// unlocks Pro locally. The Play webhook (server) remains the source of truth.
+  /// Verifies the purchase server-side via Edge Function, then refreshes tier.
   Future<void> _deliver(PurchaseDetails purchase) async {
     final client = ref.read(supabaseClientProvider);
     try {
-      await client.rpc('record_pro_purchase', params: {
-        'p_product_id': purchase.productID,
-        'p_purchase_token':
-            purchase.verificationData.serverVerificationData,
-      });
+      final response = await client.functions.invoke(
+        'verify-play-purchase',
+        body: {
+          'product_id': purchase.productID,
+          'purchase_token':
+              purchase.verificationData.serverVerificationData,
+        },
+      );
+      if (response.status != 200) {
+        debugPrint(
+          'subscription: verify-play-purchase failed: ${response.status} ${response.data}',
+        );
+        state = state.copyWith(
+          error: 'Purchase verification failed. Try Restore purchases.',
+        );
+        return;
+      }
+      final data = response.data;
+      if (data is Map && data['pro_until'] != null) {
+        final until = DateTime.tryParse(data['pro_until'] as String);
+        ref.read(entitlementProvider.notifier).setProOptimistic(until: until);
+      }
     } catch (e) {
-      debugPrint('subscription: record_pro_purchase failed: $e');
+      debugPrint('subscription: verify-play-purchase failed: $e');
+      state = state.copyWith(
+        error: 'Could not verify purchase. Try Restore purchases.',
+      );
+      return;
     }
-    ref.read(entitlementProvider.notifier).setProOptimistic();
     await ref.read(entitlementProvider.notifier).refresh();
   }
 }

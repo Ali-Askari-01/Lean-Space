@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../../core/l10n/app_localizations.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/widgets/growth_widgets.dart';
 import '../../../../core/widgets/guardian_mascot.dart';
@@ -16,6 +17,7 @@ class ProgressStreakHero extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context);
     final myDay = ref.watch(myDayProvider);
     final insightsAsync = ref.watch(insightsProvider);
     final insights = insightsAsync.asData?.value;
@@ -45,7 +47,7 @@ class ProgressStreakHero extends ConsumerWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   BlueprintLabel(
-                    "TODAY'S VITALITY",
+                    l10n.progressVitality,
                     color: AppColors.primary,
                     icon: Icons.bolt_rounded,
                   ),
@@ -62,8 +64,8 @@ class ProgressStreakHero extends ConsumerWidget {
                   const SizedBox(height: 6),
                   Text(
                     total == 0
-                        ? 'Plant a seed to begin your garden.'
-                        : '$completed of $total seeds planted today.',
+                        ? l10n.progressVitalityEmpty
+                        : l10n.progressVitalitySeeds('$completed', '$total'),
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     style: theme.textTheme.bodySmall?.copyWith(
@@ -78,13 +80,13 @@ class ProgressStreakHero extends ConsumerWidget {
                     children: [
                       _Pill(
                         icon: Icons.local_fire_department_rounded,
-                        label: '${insights?.currentStreak ?? myDay.taskStreak}d chain',
+                        label: l10n.progressChainPill('${insights?.currentStreak ?? myDay.taskStreak}'),
                         color: AppColors.secondary,
                       ),
                       if (myDay.habits.isNotEmpty)
                         _Pill(
                           icon: Icons.spa_rounded,
-                          label: 'Best $bestHabitStreak d',
+                          label: l10n.habitsBestStreak('$bestHabitStreak'),
                           color: AppColors.tertiary,
                         ),
                     ],
