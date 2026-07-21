@@ -1,4 +1,5 @@
 -- Fix TOCTOU in accept_buddy_invite: add advisory lock
+DROP FUNCTION IF EXISTS public.accept_buddy_invite(TEXT);
 CREATE OR REPLACE FUNCTION public.accept_buddy_invite(p_token TEXT)
 RETURNS JSONB
 LANGUAGE plpgsql
@@ -68,6 +69,7 @@ $$;
 
 -- Fix TOCTOU in send_buddy_nudge: use advisory lock inside the function
 -- (expression-based UNIQUE constraints are not supported on all PG versions)
+DROP FUNCTION IF EXISTS public.send_buddy_nudge();
 CREATE OR REPLACE FUNCTION public.send_buddy_nudge(p_pair_id UUID)
 RETURNS JSONB
 LANGUAGE plpgsql
@@ -117,6 +119,7 @@ END;
 $$;
 
 -- Fix TOCTOU in use_streak_freeze: add advisory lock
+DROP FUNCTION IF EXISTS public.use_streak_freeze(DATE);
 CREATE OR REPLACE FUNCTION public.use_streak_freeze(p_frozen_date DATE)
 RETURNS JSONB
 LANGUAGE plpgsql
