@@ -1,4 +1,4 @@
-# Bloom Tracker — R8 / ProGuard rules for release builds.
+# Daily Stitch — R8 / ProGuard rules for release builds.
 #
 # We rely on R8 with full mode to strip and rename. The keep rules below
 # cover the plugins that use reflection, JNI, or Parcelable.

@@ -102,7 +102,7 @@ Each item has: **What it is → Why it matters → Recommended resolution / next
 | B.2 | Free-tier uptime mitigation | Ali | Phase 0 (low effort) |
 | B.3 | Timeline / scope discipline | Ali | Ongoing |
 | B.4 | Billing webhook fallback UX | Ali | Phase 2 |
-| B.5 | Invite-link sharing UX | Ali | Phase 3 (ship-as-is acceptable) |
+| B.5 | Invite-link sharing UX | Ali | **Deferred to v1.1** (ship-as-is acceptable for v1) |
 | B.6 | iOS waitlist tracking | Ali | Phase 0 (capture emails) |
 | B.7 | Streak edge-case decisions | Ali | Phase 1 (before P1-12) |
 | B.8 | Crash reporting | Ali | Phase 4 |

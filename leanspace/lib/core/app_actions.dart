@@ -74,7 +74,7 @@ abstract final class AppActions {
     );
   }
 
-  /// Opens the system mail app pre-filled for a Bloom Tracker support /
+  /// Opens the system mail app pre-filled for a Daily Stitch support /
   /// bug report email. Falls back gracefully if no mail app is installed.
   static Future<bool> openSupportEmail({
     required String subject,

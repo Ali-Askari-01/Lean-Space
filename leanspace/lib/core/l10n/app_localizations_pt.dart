@@ -612,6 +612,9 @@ class AppLocalizationsPt extends AppLocalizations {
   String get settingsSignOut => 'Sair';
 
   @override
+  String get settingsSignOutConfirm => 'Are you sure you want to sign out?';
+
+  @override
   String get settingsProActive => 'Ativo';
 
   @override

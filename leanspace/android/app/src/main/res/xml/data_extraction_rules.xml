@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <data-extraction-rules>
     <!--
-        Bloom Tracker backup / transfer rules.
+        Daily Stitch backup / transfer rules.
 
         We do NOT include auth tokens, subscription state, or shared
         preferences in cloud or device-to-device backups. Tasks and

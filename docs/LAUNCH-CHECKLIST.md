@@ -42,7 +42,7 @@ Google Play Store. Walk through every item and tick the box.
 - [ ] App created with package name `com.leanspace.leanspace`
 - [ ] Default language English (United States)
 - [ ] Store listing:
-  - [ ] App name: "Habit & To-Do: Bloom Tracker"
+  - [ ] App name: "Daily Stitch"
   - [ ] Short description: 80 chars
   - [ ] Full description: 4000 chars
   - [ ] 8 screenshots (1080×1920 minimum) covering: Today, Progress,
@@ -105,7 +105,7 @@ Google Play Store. Walk through every item and tick the box.
 - [ ] Privacy policy live at a public URL; linked from the auth
       screen and the Play Store listing
 - [ ] Terms of service live at a public URL; linked from the paywall
-- [ ] Support email `support@bloomtracker.app` is monitored
+- [ ] Support email `support@leanspace.app` is monitored
 - [ ] The settings page exposes a way to: export all data, request
       account deletion, and view subscription status
 

@@ -4,7 +4,6 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import 'package:sentry_flutter/sentry_flutter.dart';
 import 'app.dart';
 import 'core/env.dart';
 import 'core/l10n/app_localizations.dart';
@@ -12,6 +11,7 @@ import 'core/onboarding/onboarding_store.dart';
 import 'core/theme/app_colors.dart';
 import 'core/theme/theme_provider.dart';
 import 'core/l10n/locale_resolution.dart';
+import 'core/app_constants.dart';
 import 'core/widgets/bloom_splash.dart';
 import 'core/widgets/locale_provider.dart';
 import 'features/reminders/data/notification_service.dart';
@@ -29,19 +29,12 @@ Future<void> main() async {
     debugPrint('shared_preferences warmup failed: $e');
   }
 
-  await SentryFlutter.init(
-    (options) {
-      options.dsn = const String.fromEnvironment('SENTRY_DSN', defaultValue: '');
-      options.tracesSampleRate = 0.1;
-      options.debug = false;
-    },
-    appRunner: () => runApp(
-      ProviderScope(
-        overrides: [
-          if (prefs != null) sharedPreferencesProvider.overrideWithValue(prefs),
-        ],
-        child: const BloomTrackerApp(),
-      ),
+  runApp(
+    ProviderScope(
+      overrides: [
+        if (prefs != null) sharedPreferencesProvider.overrideWithValue(prefs),
+      ],
+      child: const BloomTrackerApp(),
     ),
   );
 }
@@ -206,7 +199,7 @@ class _ScaffoldOnly extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Daily Stitch',
+      title: AppConstants.appName,
       debugShowCheckedModeBanner: false,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,

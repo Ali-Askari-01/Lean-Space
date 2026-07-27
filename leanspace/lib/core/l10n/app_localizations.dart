@@ -1134,6 +1134,12 @@ abstract class AppLocalizations {
   /// **'Sign out'**
   String get settingsSignOut;
 
+  /// No description provided for @settingsSignOutConfirm.
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to sign out?'**
+  String get settingsSignOutConfirm;
+
   /// No description provided for @settingsProActive.
   ///
   /// In en, this message translates to:

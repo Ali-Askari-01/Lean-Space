@@ -602,6 +602,9 @@ class AppLocalizationsUr extends AppLocalizations {
   String get settingsSignOut => 'سائن آؤٹ';
 
   @override
+  String get settingsSignOutConfirm => 'Are you sure you want to sign out?';
+
+  @override
   String get settingsProActive => 'فعال';
 
   @override

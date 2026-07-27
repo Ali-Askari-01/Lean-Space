@@ -5,7 +5,7 @@ import 'package:leanspace/core/l10n/app_localizations.dart';
 void main() {
   test('all locale ARB files have same keys as English template', () {
     // Smoke test: supported locales are registered.
-    expect(AppLocalizations.supportedLocales.length, 15);
+    expect(AppLocalizations.supportedLocales.length, 10);
     expect(AppLocalizations.supportedLocales.map((l) => l.languageCode),
         contains('ur'));
     expect(AppLocalizations.supportedLocales.map((l) => l.languageCode),

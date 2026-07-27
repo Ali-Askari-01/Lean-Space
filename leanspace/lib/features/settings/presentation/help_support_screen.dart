@@ -8,6 +8,7 @@ import 'package:package_info_plus/package_info_plus.dart' show PackageInfo;
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 import '../../../core/app_actions.dart';
+import '../../../core/app_constants.dart';
 import '../../../core/l10n/app_localizations.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/widgets/ambient_background.dart';
@@ -89,11 +90,11 @@ class _HelpSupportScreenState extends ConsumerState<HelpSupportScreen> {
       ..writeln('---')
       ..writeln(
           'Account: ${email.isEmpty ? l10n.helpAccountAnon : email}')
-      ..writeln('App: LeanSpace $_appVersion')
+      ..writeln(        'App: ${AppConstants.appName} $_appVersion')
       ..writeln('Device: $_deviceLine')
       ..writeln('Topic: $_topic');
     final ok = await AppActions.openSupportEmail(
-      subject: 'LeanSpace · $_topic',
+      subject: '${AppConstants.appName} · $_topic',
       body: body.toString(),
     );
     if (!mounted) return;
@@ -171,7 +172,7 @@ class _HelpSupportScreenState extends ConsumerState<HelpSupportScreen> {
                     const SizedBox(height: 18),
                     Center(
                       child: Text(
-                        'LeanSpace · ${_appVersion ?? '…'}',
+                        '${AppConstants.appName} · ${_appVersion ?? '…'}',
                         style: theme.textTheme.labelSmall?.copyWith(
                           color: AppColors.onSurfaceVariant,
                           fontWeight: FontWeight.w700,

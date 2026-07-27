@@ -14,9 +14,9 @@ class NotificationService {
   final FlutterLocalNotificationsPlugin _plugin;
 
   static const _reminderChannelId = 'leanspace_reminders';
-  static const _reminderChannelName = 'LeanSpace reminders';
+  static const _reminderChannelName = 'Daily Stitch reminders';
   static const _alarmChannelId = 'leanspace_alarms';
-  static const _alarmChannelName = 'LeanSpace task alarms';
+  static const _alarmChannelName = 'Daily Stitch task alarms';
   static const _alarmSound =
       RawResourceAndroidNotificationSound('alarm_tone');
 

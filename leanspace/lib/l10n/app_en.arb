@@ -338,6 +338,7 @@
   "settingsEcosystemSupport": "ECOSYSTEM SUPPORT",
   "settingsHowItWorks": "How this works",
   "settingsSignOut": "Sign out",
+  "settingsSignOutConfirm": "Are you sure you want to sign out?",
   "settingsProActive": "Active",
   "settingsProFree": "Free tier",
   "settingsLanguage": "Language",

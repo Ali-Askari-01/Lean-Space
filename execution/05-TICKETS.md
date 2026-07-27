@@ -71,6 +71,9 @@
 
 ## Phase 3 — Our Space
 
+> **DEFERRED to v1.1.** Phase 3 (Our Space) is not part of the v1.0 launch.
+> All P3 tickets below will be scheduled for a post-launch release.
+
 | ID | Title | Description | Acceptance Criteria | Size | Depends on |
 |---|---|---|---|---|---|
 | P3-01 | Our Space empty state | Per FRONTEND §2.3 | Renders for users in zero projects | S | P1-06 |

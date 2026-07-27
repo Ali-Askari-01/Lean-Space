@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:home_widget/home_widget.dart';
@@ -5,6 +7,7 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 
 import 'core/app_bootstrap.dart';
 import 'core/app_actions.dart';
+import 'core/app_constants.dart';
 import 'core/l10n/app_localizations.dart';
 import 'core/deep_link.dart';
 import 'core/deep_link_handlers.dart';
@@ -151,7 +154,7 @@ class _LeanSpaceAppState extends ConsumerState<LeanSpaceApp> {
     final userLocale = ref.watch(localeProvider);
 
     return MaterialApp.router(
-      title: 'Daily Stitch',
+      title: AppConstants.appName,
       debugShowCheckedModeBanner: false,
       theme: AppTheme.light,
       routerConfig: router,

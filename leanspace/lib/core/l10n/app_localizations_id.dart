@@ -612,6 +612,9 @@ class AppLocalizationsId extends AppLocalizations {
   String get settingsSignOut => 'Keluar';
 
   @override
+  String get settingsSignOutConfirm => 'Are you sure you want to sign out?';
+
+  @override
   String get settingsProActive => 'Aktif';
 
   @override

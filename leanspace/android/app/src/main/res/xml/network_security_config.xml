@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <network-security-config>
     <!--
-        Bloom Tracker network security policy.
+        Daily Stitch network security policy.
 
         We pin to the exact HTTPS endpoints we use so we don't allow
         arbitrary cleartext traffic. Play Billing's verify endpoint is

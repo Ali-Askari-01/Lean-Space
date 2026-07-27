@@ -6,7 +6,7 @@
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
     <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
     <application
-        android:label="Habit &amp; To-Do: Bloom Tracker"
+        android:label="Daily Stitch"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
         android:networkSecurityConfig="@xml/network_security_config"
@@ -66,7 +66,7 @@
         <receiver
             android:name="com.leanspace.leanspace.LeanSpaceWidgetProvider"
             android:exported="true"
-            android:label="Bloom Tracker Chain"
+            android:label="Daily Stitch Chain"
             android:icon="@mipmap/ic_launcher">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />

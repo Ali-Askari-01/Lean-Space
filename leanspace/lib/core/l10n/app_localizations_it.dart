@@ -610,6 +610,9 @@ class AppLocalizationsIt extends AppLocalizations {
   String get settingsSignOut => 'Disconnetti';
 
   @override
+  String get settingsSignOutConfirm => 'Are you sure you want to sign out?';
+
+  @override
   String get settingsProActive => 'Attivo';
 
   @override
@@ -1165,11 +1168,11 @@ class AppLocalizationsIt extends AppLocalizations {
   String get helpCopyEmail => 'Copia email di supporto';
 
   @override
-  String get helpCopiedEmail => 'Copiato support@bloomtracker.app';
+  String get helpCopiedEmail => 'Copiato support@leanspace.app';
 
   @override
   String get helpNoMailApp =>
-      'Nessuna app di posta trovata. Scrivici a support@bloomtracker.app.';
+      'Nessuna app di posta trovata. Scrivici a support@leanspace.app.';
 
   @override
   String get helpTopicLabel => 'Argomento';
@@ -1289,7 +1292,7 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get settingsDeleteAccountFailed =>
-      'Impossibile eliminare l\'account. Riprova o scrivi a support@bloomtracker.app.';
+      'Impossibile eliminare l\'account. Riprova o scrivi a support@leanspace.app.';
 
   @override
   String get referralYouTitle => 'Invita amici · ottieni Pro gratuito';

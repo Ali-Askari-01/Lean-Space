@@ -603,6 +603,9 @@ class AppLocalizationsTr extends AppLocalizations {
   String get settingsSignOut => 'Çıkış yap';
 
   @override
+  String get settingsSignOutConfirm => 'Are you sure you want to sign out?';
+
+  @override
   String get settingsProActive => 'Aktif';
 
   @override
