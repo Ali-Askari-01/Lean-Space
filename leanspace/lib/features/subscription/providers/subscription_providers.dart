@@ -184,7 +184,7 @@ class SubscriptionController extends Notifier<SubscriptionState> {
       );
       if (response.status != 200) {
         debugPrint(
-          'subscription: verify-play-purchase failed: ${response.status} ${response.data}',
+          'subscription: verify-play-purchase failed: ${response.status}',
         );
         state = state.copyWith(
           error: 'Purchase verification failed. Try Restore purchases.',

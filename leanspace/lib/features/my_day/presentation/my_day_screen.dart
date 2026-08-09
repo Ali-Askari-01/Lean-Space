@@ -8,7 +8,6 @@ import '../../../core/l10n/app_localizations.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/widgets/ambient_background.dart';
 import '../../../core/widgets/growth_widgets.dart';
-import '../../../core/widgets/guardian_mascot.dart';
 import '../../../core/widgets/intention_quotes.dart';
 import '../../../core/widgets/reveal_animations.dart';
 import '../../../core/widgets/widget_setup_sheet.dart';
@@ -269,12 +268,11 @@ class _GreetingBar extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(20, 12, 12, 0),
       child: Row(
         children: [
-          const GuardianMascot(
-            size: 36,
-            expression: GuardianExpression.happy,
-            variant: GuardianMascotVariant.koalaBasic,
+          Text(
+            '🌱',
+            style: const TextStyle(fontSize: 20),
           ),
-          const SizedBox(width: 10),
+          const SizedBox(width: 8),
           Expanded(
             child: Text(
               greeting,
@@ -307,20 +305,20 @@ class _DailyIntentionCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.fromLTRB(20, 12, 20, 0),
       child: Container(
-        padding: const EdgeInsets.fromLTRB(16, 12, 16, 12),
+        padding: const EdgeInsets.fromLTRB(16, 14, 16, 14),
         decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [
-              AppColors.primary.withValues(alpha: 0.08),
-              AppColors.primary.withValues(alpha: 0.03),
-            ],
-          ),
-          borderRadius: BorderRadius.circular(18),
+          color: AppColors.glassFill,
+          borderRadius: BorderRadius.circular(20),
           border: Border.all(
-            color: AppColors.primary.withValues(alpha: 0.20),
+            color: AppColors.glassBorder,
           ),
+          boxShadow: [
+            BoxShadow(
+              color: AppColors.glassShadow,
+              blurRadius: 12,
+              offset: const Offset(0, 2),
+            ),
+          ],
         ),
         child: Row(
           children: [
@@ -331,8 +329,8 @@ class _DailyIntentionCard extends StatelessWidget {
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
-                    AppColors.primary.withValues(alpha: 0.22),
-                    AppColors.primary.withValues(alpha: 0.10),
+                    AppColors.primary.withValues(alpha: 0.15),
+                    AppColors.primary.withValues(alpha: 0.08),
                   ],
                 ),
                 shape: BoxShape.circle,
@@ -352,7 +350,7 @@ class _DailyIntentionCard extends StatelessWidget {
                     quote.title,
                     style: theme.textTheme.titleSmall?.copyWith(
                       color: AppColors.onSurface,
-                      fontWeight: FontWeight.w800,
+                      fontWeight: FontWeight.w700,
                       letterSpacing: -0.2,
                     ),
                   ),
@@ -361,6 +359,7 @@ class _DailyIntentionCard extends StatelessWidget {
                     quote.body,
                     style: theme.textTheme.bodySmall?.copyWith(
                       color: AppColors.onSurfaceVariant,
+                      fontStyle: FontStyle.italic,
                       height: 1.4,
                     ),
                   ),

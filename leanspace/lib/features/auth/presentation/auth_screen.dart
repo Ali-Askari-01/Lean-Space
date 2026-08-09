@@ -79,7 +79,7 @@ class _AuthScreenState extends ConsumerState<AuthScreen>
       r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$',
     );
     if (!emailRegex.hasMatch(email)) return l10n.authEnterValidEmail;
-    if (password.length < 6) {
+    if (password.length < 8) {
       return l10n.authPasswordTooShort;
     }
     return null;

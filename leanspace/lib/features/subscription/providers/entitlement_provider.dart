@@ -84,6 +84,9 @@ class EntitlementNotifier extends Notifier<Entitlement> {
   /// Optimistically flips local tier after a verified purchase. The server
   /// webhook remains the source of truth and will reconcile on next refresh.
   void setProOptimistic({DateTime? until}) {
+    if (until == null || until.isBefore(DateTime.now())) {
+      return; // Don't set Pro without valid expiry
+    }
     state = state.copyWith(tier: Tier.pro, isLoading: false, proUntil: until);
   }
 }

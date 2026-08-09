@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
@@ -8,6 +10,7 @@ import 'app.dart';
 import 'core/env.dart';
 import 'core/l10n/app_localizations.dart';
 import 'core/onboarding/onboarding_store.dart';
+import 'core/supabase_ready.dart';
 import 'core/theme/app_colors.dart';
 import 'core/theme/theme_provider.dart';
 import 'core/l10n/locale_resolution.dart';
@@ -16,17 +19,20 @@ import 'core/widgets/bloom_splash.dart';
 import 'core/widgets/locale_provider.dart';
 import 'features/reminders/data/notification_service.dart';
 import 'features/reminders/providers/reminder_providers.dart';
+import 'router/app_router.dart';
 
 enum _AppPhase { splash, configError, ready }
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
+  // SharedPreferences is required by ThemeNotifier (sharedPreferencesProvider
+  // throws UnimplementedError without an override).
   SharedPreferences? prefs;
   try {
     prefs = await SharedPreferences.getInstance();
   } catch (e) {
-    debugPrint('shared_preferences warmup failed: $e');
+    debugPrint('shared_preferences init failed: $e');
   }
 
   runApp(
@@ -59,7 +65,7 @@ class _BloomTrackerAppState extends ConsumerState<BloomTrackerApp> {
   }
 
   Future<void> _bootstrap() async {
-    // Parallelize independent init tasks
+    // Step 1: Parallelize fast, independent init tasks
     await Future.wait([
       dotenv.load(fileName: '.env', isOptional: true).catchError((_) {}),
       ref.read(localeProvider.notifier).ensureHydrated(),
@@ -77,35 +83,59 @@ class _BloomTrackerAppState extends ConsumerState<BloomTrackerApp> {
       return;
     }
 
-    // Supabase init is the main bottleneck - run it as fast as possible
-    await Supabase.initialize(
-      url: Env.supabaseUrl,
-      publishableKey: Env.supabaseKey,
-      authOptions: const FlutterAuthClientOptions(
-        authFlowType: AuthFlowType.pkce,
-      ),
-    );
-
-    // Read onboarding gate in parallel with mounting
-    bool gate = false;
-    try {
-      gate = await OnboardingStore.isComplete();
-    } catch (e) {
-      debugPrint('onboarding gate hydrate failed: $e');
-    }
-
-    if (!mounted) return;
-    ref.read(onboardingGateProvider.notifier).seed(gate);
+    // Step 2: Show the app immediately — don't block on Supabase.
+    // Supabase.initialize() calls recoverSession() which makes a network
+    // call (2-5 sec). By deferring it, the splash renders instantly and
+    // Supabase initializes in the background.
     setState(() {
       _gateHydrated = true;
       _phase = _AppPhase.ready;
     });
+
+    // Step 3: Initialize Supabase in the background (non-blocking).
+    unawaited(_initSupabase());
+  }
+
+  Future<void> _initSupabase() async {
+    try {
+      await Supabase.initialize(
+        url: Env.supabaseUrl,
+        publishableKey: Env.supabaseKey,
+        authOptions: const FlutterAuthClientOptions(
+          authFlowType: AuthFlowType.pkce,
+        ),
+      );
+
+      // Signal that Supabase is ready
+      ref.read(supabaseReadyProvider).markReady();
+
+      // Check onboarding gate (SharedPreferences is cached — instant)
+      bool gate = false;
+      try {
+        gate = await OnboardingStore.isComplete();
+      } catch (e) {
+        debugPrint('onboarding gate hydrate failed: $e');
+      }
+
+      if (!mounted) return;
+      ref.read(onboardingGateProvider.notifier).seed(gate);
+      setState(() => _gateHydrated = true);
+
+      // Trigger router refresh so the redirect re-evaluates
+      // with Supabase now available
+      ref.read(appRouterProvider).refresh();
+    } catch (e) {
+      debugPrint('Supabase init failed: $e');
+      // App still works — user will need to sign in again
+      ref.read(supabaseReadyProvider).markReady();
+      ref.read(appRouterProvider).refresh();
+    }
   }
 
   @override
   Widget build(BuildContext context) {
     return AnimatedSwitcher(
-      duration: const Duration(milliseconds: 320),
+      duration: const Duration(milliseconds: 250),
       switchInCurve: Curves.easeOutCubic,
       switchOutCurve: Curves.easeInCubic,
       child: _buildPhase(),

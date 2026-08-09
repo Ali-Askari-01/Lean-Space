@@ -60,6 +60,7 @@
   "paywallPrivacy": "Privacidade",
   "settingsHowItWorks": "Como funciona",
   "settingsSignOut": "Sair",
+  "settingsSignOutConfirm": "Tem certeza de que deseja sair?",
   "settingsLanguage": "Idioma",
   "settingsLanguageValue": "Padrão do sistema",
   "cancel": "Cancelar",

@@ -47,13 +47,14 @@ class _LeanSpaceAppState extends ConsumerState<LeanSpaceApp> {
       },
     );
     WidgetsBinding.instance.addPostFrameCallback((_) {
+      // Fire-and-forget: don't block UI on heavy init
       _bootstrapIfNeeded();
       _initHomeWidget();
       _handlePendingIntents();
       _initReminders();
       if (FeatureFlags.enableSubscriptions) {
-        // Load subscriptions immediately, no delay
-        ref.read(subscriptionControllerProvider);
+        // Defer subscription loading to after first frame
+        Future.microtask(() => ref.read(subscriptionControllerProvider));
       }
     });
     _authSub = Supabase.instance.client.auth.onAuthStateChange.listen((event) {
@@ -136,8 +137,9 @@ class _LeanSpaceAppState extends ConsumerState<LeanSpaceApp> {
     });
   }
 
-  Future<void> _bootstrapIfNeeded() async {
-    await bootstrapAuthenticatedUser(
+  void _bootstrapIfNeeded() {
+    // Fire-and-forget: run heavy network work in background
+    bootstrapAuthenticatedUser(
       Supabase.instance.client,
       onReady: () async {
         await ref.read(entitlementProvider.notifier).refresh();
@@ -165,7 +167,7 @@ class _LeanSpaceAppState extends ConsumerState<LeanSpaceApp> {
           resolveAppLocale(userLocale, deviceLocale),
       builder: (context, child) {
         return AnimatedTheme(
-          duration: const Duration(milliseconds: 500),
+          duration: const Duration(milliseconds: 250),
           curve: Curves.easeOutCubic,
           data: AppTheme.light,
           child: child ?? const SizedBox.shrink(),

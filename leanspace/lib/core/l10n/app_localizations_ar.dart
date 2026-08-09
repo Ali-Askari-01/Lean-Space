@@ -595,7 +595,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get settingsSignOut => 'تسجيل الخروج';
 
   @override
-  String get settingsSignOutConfirm => 'Are you sure you want to sign out?';
+  String get settingsSignOutConfirm => 'هل تريد بالتأكيد تسجيل الخروج؟';
 
   @override
   String get settingsProActive => 'نشط';

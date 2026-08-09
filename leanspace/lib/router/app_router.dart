@@ -68,6 +68,15 @@ final appRouterProvider = Provider<GoRouter>((ref) {
     initialLocation: '/my-day',
     refreshListenable: refresh,
     redirect: (context, state) {
+      // Gate on Supabase readiness — don't access auth state before init.
+      // When not ready, default to /auth so unauthenticated users don't
+      // briefly see a protected screen.
+      final supabaseReady = Supabase.instance.isInitialized;
+      if (!supabaseReady) {
+        final isAuthRoute = state.matchedLocation == '/auth';
+        return isAuthRoute ? null : '/auth';
+      }
+
       final action = parseDeepLink(state.uri);
       if (action != null) {
         scheduleDeepLinkAction(ref, action);

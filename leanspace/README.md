@@ -7,7 +7,7 @@ Android-first Flutter app for LeanSpace. Run from this directory.
 1. Flutter SDK (stable) — `flutter doctor`
 2. Android SDK (command-line, no Android Studio required)
 3. Physical Android phone with **USB debugging** enabled
-4. Supabase project — copy keys into `.env`
+4. Supabase project — copy keys into `env.json`
 
 See `../execution/11-DEV-SETUP.md` and `../execution/00-IMPLEMENTATION-READINESS.md`.
 
@@ -15,8 +15,8 @@ See `../execution/11-DEV-SETUP.md` and `../execution/00-IMPLEMENTATION-READINESS
 
 ```powershell
 # 1. Configure Supabase
-copy .env.example .env
-# Edit .env with your SUPABASE_URL and SUPABASE_ANON_KEY
+copy env.json.example env.json
+# Edit env.json with your SUPABASE_URL and SUPABASE_ANON_KEY
 
 # 2. Install dependencies
 flutter pub get
@@ -25,7 +25,7 @@ flutter pub get
 adb devices
 
 # 4. Run on device
-flutter run
+flutter run --dart-define-from-file=env.json
 ```
 
 ## Languages
@@ -106,15 +106,21 @@ lib/
 ## Daily dev loop
 
 ```powershell
-flutter run          # hot reload on save
-flutter analyze      # static checks
-flutter test         # unit/widget tests
+flutter run --dart-define-from-file=env.json   # hot reload on save
+flutter analyze                                 # static checks
+flutter test                                    # unit/widget tests
 ```
 
-## Build release APK (later)
+## Build release AAB (Play Store)
 
 ```powershell
-flutter build apk --release
+flutter clean
+flutter pub get
+flutter build appbundle --release --dart-define-from-file=env.json
 ```
 
-Package ID: `com.leanspace` · Min SDK: 26
+Output: `build/app/outputs/bundle/release/app-release.aab`
+
+Upload this `.aab` file to **Google Play Console → Release → Production**.
+
+Package ID: `com.leanspace.leanspace` · Min SDK: 26

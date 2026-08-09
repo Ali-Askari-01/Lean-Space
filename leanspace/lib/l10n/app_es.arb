@@ -338,6 +338,7 @@
   "settingsEcosystemSupport": "SOPORTE",
   "settingsHowItWorks": "Cómo funciona",
   "settingsSignOut": "Cerrar sesión",
+  "settingsSignOutConfirm": "¿Estás seguro de que quieres cerrar sesión?",
   "settingsProActive": "Activo",
   "settingsProFree": "Nivel gratis",
   "settingsLanguage": "Idioma",

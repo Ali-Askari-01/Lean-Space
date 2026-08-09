@@ -32,21 +32,30 @@ class _HelpSupportScreenState extends ConsumerState<HelpSupportScreen> {
   String? _deviceLine;
 
   late final List<String> _topics;
+  bool _initialized = false;
 
   @override
   void initState() {
     super.initState();
-    final l10n = AppLocalizations.of(context);
-    _topics = <String>[
-      l10n.helpTopicsGeneral,
-      l10n.helpTopicsBug,
-      l10n.helpTopicsStreak,
-      l10n.helpTopicsBilling,
-      l10n.helpTopicsAccount,
-      l10n.helpTopicsFeature,
-    ];
-    _topic = _topics.first;
     _loadDiagnostics();
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (!_initialized) {
+      _initialized = true;
+      final l10n = AppLocalizations.of(context);
+      _topics = <String>[
+        l10n.helpTopicsGeneral,
+        l10n.helpTopicsBug,
+        l10n.helpTopicsStreak,
+        l10n.helpTopicsBilling,
+        l10n.helpTopicsAccount,
+        l10n.helpTopicsFeature,
+      ];
+      _topic = _topics.first;
+    }
   }
 
   Future<void> _loadDiagnostics() async {

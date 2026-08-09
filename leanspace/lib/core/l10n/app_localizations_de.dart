@@ -610,7 +610,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get settingsSignOut => 'Abmelden';
 
   @override
-  String get settingsSignOutConfirm => 'Are you sure you want to sign out?';
+  String get settingsSignOutConfirm => 'Möchtest du dich wirklich abmelden?';
 
   @override
   String get settingsProActive => 'Aktiv';

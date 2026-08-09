@@ -607,7 +607,8 @@ class AppLocalizationsFr extends AppLocalizations {
   String get settingsSignOut => 'Déconnexion';
 
   @override
-  String get settingsSignOutConfirm => 'Are you sure you want to sign out?';
+  String get settingsSignOutConfirm =>
+      'Êtes-vous sûr de vouloir vous déconnecter ?';
 
   @override
   String get settingsProActive => 'Actif';

@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import '../../../../core/l10n/app_localizations.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/widgets/growth_widgets.dart';
-import 'task_cap_info_sheet.dart';
 
 class TodayHeroStrip extends StatelessWidget {
   const TodayHeroStrip({
@@ -31,13 +30,13 @@ class TodayHeroStrip extends StatelessWidget {
 
     return Padding(
       padding: const EdgeInsets.fromLTRB(20, 12, 20, 8),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      child: Row(
         children: [
-          Row(
-            children: [
-              Expanded(
-                child: Text(
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
                   '${l10n.todayTasksCount('$tasksDone', '$taskCap')} · '
                   '${l10n.todayHabitsCount('$habitsDone', '$habitsTotal')}',
                   style: theme.textTheme.titleMedium?.copyWith(
@@ -46,43 +45,46 @@ class TodayHeroStrip extends StatelessWidget {
                     letterSpacing: -0.2,
                   ),
                 ),
-              ),
-              InkWell(
-                onTap: () => showTaskCapInfoSheet(context),
-                customBorder: const CircleBorder(),
-                child: Tooltip(
-                  message: l10n.taskCapInfo,
-                  child: Container(
-                    width: 28,
-                    height: 28,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      gradient: LinearGradient(
-                        colors: [
-                          AppColors.primaryContainer.withValues(alpha: 0.5),
-                          AppColors.primaryContainer.withValues(alpha: 0.2),
-                        ],
-                      ),
-                    ),
-                    child: Icon(
-                      Icons.help_outline_rounded,
-                      size: 16,
-                      color: AppColors.primary,
-                    ),
+                const SizedBox(height: 8),
+                LiquidProgressBar(value: ratio, height: 8, color: AppColors.primary),
+                const SizedBox(height: 6),
+                BlueprintLabel(
+                  tasksDone >= taskCap && habitsDone >= habitsTotal && habitsTotal > 0
+                      ? l10n.todayChainComplete
+                      : l10n.todayChainGrows,
+                  color: AppColors.onSurfaceVariant,
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(width: 16),
+          SizedBox(
+            width: 56,
+            height: 56,
+            child: Stack(
+              alignment: Alignment.center,
+              children: [
+                SizedBox(
+                  width: 56,
+                  height: 56,
+                  child: CircularProgressIndicator(
+                    value: ratio,
+                    strokeWidth: 5,
+                    backgroundColor: AppColors.progressTrack,
+                    valueColor: AlwaysStoppedAnimation<Color>(AppColors.primary),
+                    strokeCap: StrokeCap.round,
                   ),
                 ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 8),
-          LiquidProgressBar(value: ratio, height: 8, color: AppColors.primary),
-          const SizedBox(height: 6),
-          BlueprintLabel(
-            tasksDone >= taskCap && habitsDone >= habitsTotal && habitsTotal > 0
-                ? l10n.todayChainComplete
-                : l10n.todayChainGrows,
-            color: AppColors.onSurfaceVariant,
+                Text(
+                  '${(ratio * 100).toInt()}%',
+                  style: theme.textTheme.labelSmall?.copyWith(
+                    color: AppColors.primary,
+                    fontWeight: FontWeight.w800,
+                    fontSize: 12,
+                  ),
+                ),
+              ],
+            ),
           ),
         ],
       ),

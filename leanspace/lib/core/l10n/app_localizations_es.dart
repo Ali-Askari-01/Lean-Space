@@ -609,7 +609,8 @@ class AppLocalizationsEs extends AppLocalizations {
   String get settingsSignOut => 'Cerrar sesión';
 
   @override
-  String get settingsSignOutConfirm => 'Are you sure you want to sign out?';
+  String get settingsSignOutConfirm =>
+      '¿Estás seguro de que quieres cerrar sesión?';
 
   @override
   String get settingsProActive => 'Activo';

@@ -345,6 +345,7 @@
   "settingsEcosystemSupport": "SUPPORT ÉCOSYSTÈME",
   "settingsHowItWorks": "Comment ça marche",
   "settingsSignOut": "Déconnexion",
+  "settingsSignOutConfirm": "Êtes-vous sûr de vouloir vous déconnecter ?",
   "settingsProActive": "Actif",
   "settingsProFree": "Niveau gratuit",
   "settingsLanguage": "Langue",

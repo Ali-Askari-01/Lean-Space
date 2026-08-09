@@ -13,6 +13,23 @@ Future<void> bootstrapAuthenticatedUser(
   final user = client.auth.currentUser;
   if (user == null) return;
 
+  // Run all independent network calls in parallel
+  await Future.wait([
+    _syncProfile(client, user),
+    _performRollover(client, user),
+    _logAppOpen(client, user),
+  ]);
+
+  if (onReady != null) {
+    try {
+      await onReady();
+    } catch (e) {
+      debugPrint('bootstrap: onReady failed: $e');
+    }
+  }
+}
+
+Future<void> _syncProfile(SupabaseClient client, User user) async {
   try {
     final timezone = await FlutterTimezone.getLocalTimezone();
     final email = user.email ?? '';
@@ -37,25 +54,21 @@ Future<void> bootstrapAuthenticatedUser(
       debugPrint('bootstrap: timezone update failed: $e2');
     }
   }
+}
 
+Future<void> _performRollover(SupabaseClient client, User user) async {
   try {
     await client.rpc('perform_rollover_for_user', params: {'p_user_id': user.id})
-        .timeout(const Duration(seconds: 15));
+        .timeout(const Duration(seconds: 10));
   } catch (e) {
     debugPrint('bootstrap: rollover failed: $e');
   }
+}
 
+Future<void> _logAppOpen(SupabaseClient client, User user) async {
   try {
     await client.from('app_opens').insert({'user_id': user.id});
   } catch (e) {
     debugPrint('bootstrap: app_opens insert failed: $e');
-  }
-
-  if (onReady != null) {
-    try {
-      await onReady();
-    } catch (e) {
-      debugPrint('bootstrap: onReady failed: $e');
-    }
   }
 }

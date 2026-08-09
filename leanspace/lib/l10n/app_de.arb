@@ -122,6 +122,7 @@
   "settingsEcosystemSupport": "ÖKOSYSTEM-UNTERSTÜTZUNG",
   "settingsHowItWorks": "Wie es funktioniert",
   "settingsSignOut": "Abmelden",
+  "settingsSignOutConfirm": "Möchtest du dich wirklich abmelden?",
   "settingsProActive": "Aktiv",
   "settingsProFree": "Kostenloses Kontingent",
   "settingsLanguage": "Sprache",

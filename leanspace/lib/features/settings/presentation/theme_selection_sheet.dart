@@ -107,6 +107,8 @@ class _ThemePreviewCard extends StatelessWidget {
     switch (preset) {
       case ThemePreset.classicBloom:
         return l10n.themeNameClassicBloom;
+      case ThemePreset.botanicalSage:
+        return 'Botanical Sage';
       case ThemePreset.solarTerracotta:
         return l10n.themeNameSolarTerracotta;
       case ThemePreset.midnightOasis:
@@ -124,6 +126,8 @@ class _ThemePreviewCard extends StatelessWidget {
     switch (preset) {
       case ThemePreset.classicBloom:
         return 'Lush garden greens, organic warmth';
+      case ThemePreset.botanicalSage:
+        return 'Muted sage, sophisticated calm';
       case ThemePreset.solarTerracotta:
         return 'Sunset clay tones, amber warmth';
       case ThemePreset.midnightOasis:
@@ -141,6 +145,8 @@ class _ThemePreviewCard extends StatelessWidget {
     switch (preset) {
       case ThemePreset.classicBloom:
         return const Color(0xFF2E7D4F);
+      case ThemePreset.botanicalSage:
+        return const Color(0xFF5B8C5E);
       case ThemePreset.solarTerracotta:
         return const Color(0xFFC2601A);
       case ThemePreset.midnightOasis:
@@ -157,7 +163,9 @@ class _ThemePreviewCard extends StatelessWidget {
   Color _getSurface() {
     switch (preset) {
       case ThemePreset.classicBloom:
-        return const Color(0xFFF8FAF3);
+        return const Color(0xFFFFFFFF);
+      case ThemePreset.botanicalSage:
+        return const Color(0xFFFFFFFF);
       case ThemePreset.solarTerracotta:
         return const Color(0xFFFFF8F3);
       case ThemePreset.midnightOasis:
@@ -174,7 +182,9 @@ class _ThemePreviewCard extends StatelessWidget {
   Color _getAccent() {
     switch (preset) {
       case ThemePreset.classicBloom:
-        return const Color(0xFFB94A1F);
+        return const Color(0xFF66BB6A);
+      case ThemePreset.botanicalSage:
+        return const Color(0xFF8CC48E);
       case ThemePreset.solarTerracotta:
         return const Color(0xFFE89050);
       case ThemePreset.midnightOasis:
