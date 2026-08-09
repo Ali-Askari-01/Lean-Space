@@ -79,7 +79,7 @@ abstract final class AppActions {
   static Future<bool> openSupportEmail({
     required String subject,
     required String body,
-    String to = 'support@leanspace.app',
+    String to = 'dailystitch79315@gmail.com',
   }) async {
     if (!Platform.isAndroid) return false;
     try {

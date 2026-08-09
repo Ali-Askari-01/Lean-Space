@@ -526,7 +526,7 @@ if (_attempts >= 5) {
 Create `leanspace/lib/core/app_constants.dart`:
 ```dart
 abstract final class AppConstants {
-  static const supportEmail = 'support@leanspace.app';
+  static const supportEmail = 'dailystitch79315@gmail.com';
   static const appName = 'LeanSpace';
 }
 ```

@@ -123,7 +123,7 @@ class _HelpSupportScreenState extends ConsumerState<HelpSupportScreen> {
   void _copyEmail() {
     final l10n = AppLocalizations.of(context);
     Clipboard.setData(
-      const ClipboardData(text: 'support@leanspace.app'),
+      const ClipboardData(text: 'dailystitch79315@gmail.com'),
     );
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(content: Text(l10n.helpCopiedEmail)),

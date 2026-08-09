@@ -1168,11 +1168,11 @@ class AppLocalizationsIt extends AppLocalizations {
   String get helpCopyEmail => 'Copia email di supporto';
 
   @override
-  String get helpCopiedEmail => 'Copiato support@leanspace.app';
+  String get helpCopiedEmail => 'Copiato dailystitch79315@gmail.com';
 
   @override
   String get helpNoMailApp =>
-      'Nessuna app di posta trovata. Scrivici a support@leanspace.app.';
+      'Nessuna app di posta trovata. Scrivici a dailystitch79315@gmail.com.';
 
   @override
   String get helpTopicLabel => 'Argomento';
@@ -1292,7 +1292,7 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get settingsDeleteAccountFailed =>
-      'Impossibile eliminare l\'account. Riprova o scrivi a support@leanspace.app.';
+      'Impossibile eliminare l\'account. Riprova o scrivi a dailystitch79315@gmail.com.';
 
   @override
   String get referralYouTitle => 'Invita amici · ottieni Pro gratuito';

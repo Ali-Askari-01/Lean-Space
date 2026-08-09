@@ -105,7 +105,7 @@ Google Play Store. Walk through every item and tick the box.
 - [ ] Privacy policy live at a public URL; linked from the auth
       screen and the Play Store listing
 - [ ] Terms of service live at a public URL; linked from the paywall
-- [ ] Support email `support@leanspace.app` is monitored
+- [ ] Support email `dailystitch79315@gmail.com` is monitored
 - [ ] The settings page exposes a way to: export all data, request
       account deletion, and view subscription status
 
