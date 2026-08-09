@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1024">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1024px;
+    height: 500px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #f0f7f4 0%, #e8f5e9 50%, #f0f7f4 100%);
+    display: flex;
+    align-items: center;
+    padding: 0 80px;
+    overflow: hidden;
+    position: relative;
+  }
+  .left {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    z-index: 2;
+  }
+  .icon-wrapper {
+    width: 160px;
+    height: 160px;
+    border-radius: 36px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(45, 106, 79, 0.2);
+    flex-shrink: 0;
+    background: #fff;
+  }
+  .icon-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .app-name {
+    font-size: 64px;
+    font-weight: 800;
+    color: #2d6a4f;
+    line-height: 1.1;
+    letter-spacing: -1px;
+  }
+  .tagline {
+    font-size: 26px;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 8px;
+  }
+  .features {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 4px;
+  }
+  .feature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 22px;
+    color: #333;
+    font-weight: 500;
+  }
+  .check {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #2d6a4f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .check svg {
+    width: 16px;
+    height: 16px;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  /* Decorative circles - positioned away from content */
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid rgba(45, 106, 79, 0.15);
+    background: rgba(45, 106, 79, 0.03);
+  }
+  .c1 { width: 120px; height: 120px; top: -30px; right: 60px; }
+  .c2 { width: 80px; height: 80px; bottom: 40px; right: 200px; }
+  .c3 { width: 60px; height: 60px; top: 60px; right: 350px; }
+  .c4 { width: 100px; height: 100px; bottom: -20px; right: 80px; }
+  .c5 { width: 40px; height: 40px; top: 30px; right: 500px; }
+</style>
+</head>
+<body>
+  <div class="circle c1"></div>
+  <div class="circle c2"></div>
+  <div class="circle c3"></div>
+  <div class="circle c4"></div>
+  <div class="circle c5"></div>
+
+  <div class="left">
+    <div class="icon-wrapper">
+      <img src="app_icon.png" alt="Daily Stitch Icon">
+    </div>
+    <div class="text">
+      <div class="app-name">Daily Stitch</div>
+      <div class="tagline">Habit & Task Tracker</div>
+      <div class="features">
+        <div class="feature">
+          <div class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+          Track Habits
+        </div>
+        <div class="feature">
+          <div class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+          Build Streaks
+        </div>
+        <div class="feature">
+          <div class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+          Earn Medals
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
