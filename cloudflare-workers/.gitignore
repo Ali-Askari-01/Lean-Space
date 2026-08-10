@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.wrangler/
+.dev.vars
+*.log
+supabase-export.json
+import-to-d1.sql
+daily-stitch-local.db

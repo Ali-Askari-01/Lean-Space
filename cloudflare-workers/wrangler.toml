@@ -1,0 +1,27 @@
+name = "daily-stitch-api"
+main = "src/index.ts"
+compatibility_date = "2025-01-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "daily-stitch-db"
+database_id = "21bc1aca-73dd-412f-9b14-0f8b3fc56346"
+
+[vars]
+APP_NAME = "Daily Stitch"
+GOOGLE_CLIENT_ID = "725587084001-c8e06tl9c5g41nbmcrhioc31rnk5k16j.apps.googleusercontent.com"
+ALLOWED_ORIGINS = "http://localhost:8787,http://localhost:3000"
+PLAY_PACKAGE_NAME = "com.leanspace.leanspace"
+
+# Production overrides
+[env.production]
+vars = { ALLOWED_ORIGINS = "https://leanspace.app" }
+
+# Required secrets (set via: wrangler secret put <NAME>)
+# GOOGLE_SERVICE_ACCOUNT_JSON - Google Play service account credentials (JSON string)
+# JWT_SIGNING_KEY - 64+ random bytes hex string for session signing
+# PLAY_PUBSUB_TOKEN - shared token with Google Pub/Sub push subscription
+
+# Cron triggers for hourly rollover
+[triggers]
+crons = []

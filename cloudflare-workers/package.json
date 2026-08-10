@@ -1,0 +1,27 @@
+{
+  "name": "daily-stitch-api",
+  "version": "1.0.0",
+  "description": "Daily Stitch API - Cloudflare Workers backend",
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:create": "wrangler d1 create daily-stitch-db",
+    "db:migrate:local": "wrangler d1 migrations apply daily-stitch-db --local",
+    "db:migrate:prod": "wrangler d1 migrations apply daily-stitch-db --remote",
+    "db:tables": "wrangler d1 execute daily-stitch-db --local --command=\"SELECT name FROM sqlite_master WHERE type='table';\"",
+    "db:seed": "wrangler d1 execute daily-stitch-db --local --file=seed.sql"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260810.1",
+    "typescript": "^7.0.2",
+    "wrangler": "^4.120.1"
+  },
+  "dependencies": {
+    "hono": "^4.8.3"
+  }
+}

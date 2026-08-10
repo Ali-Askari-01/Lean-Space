@@ -1,7 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
 
-import '../../../router/app_router.dart';
+import '../../../providers/service_providers.dart';
 import '../data/streak_freeze_repository.dart';
 
 final streakFreezeRepositoryProvider = Provider<StreakFreezeRepository>((ref) {
@@ -67,24 +66,13 @@ class StreakFreezeController extends Notifier<StreakFreezeState> {
       await _repo.useFreeze(date);
       await refresh();
       return null;
-    } on PostgrestException catch (e) {
-      return _mapError(e.message);
-    } catch (_) {
+    } catch (e) {
+      final msg = e.toString();
+      if (msg.contains('freeze_limit_reached')) {
+        return 'You already used your freeze this month.';
+      }
       return 'Could not use streak freeze.';
     }
-  }
-
-  String _mapError(String message) {
-    if (message.contains('freeze_limit_reached')) {
-      return 'You already used your freeze this month.';
-    }
-    if (message.contains('no_missed_tasks')) {
-      return 'No missed tasks on that day to freeze.';
-    }
-    if (message.contains('freeze_future_date')) {
-      return 'You can only freeze a past day.';
-    }
-    return 'Could not use streak freeze.';
   }
 }
 

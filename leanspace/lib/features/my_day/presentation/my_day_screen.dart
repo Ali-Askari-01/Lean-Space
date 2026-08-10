@@ -6,6 +6,7 @@ import '../../../core/deep_link_handlers.dart';
 import '../../../core/l10n/app_localizations.dart';
 
 import '../../../core/theme/app_colors.dart';
+import '../../../core/widgets/ad_banner.dart';
 import '../../../core/widgets/ambient_background.dart';
 import '../../../core/widgets/growth_widgets.dart';
 import '../../../core/widgets/intention_quotes.dart';
@@ -220,6 +221,13 @@ class _MyDayScreenState extends ConsumerState<MyDayScreen> {
           const FadeUp(
             delay: Duration(milliseconds: 300),
             child: HabitRow(),
+          ),
+          const SizedBox(height: 16),
+          const Center(
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: AdBanner(),
+            ),
           ),
           const SizedBox(height: 24),
         ],

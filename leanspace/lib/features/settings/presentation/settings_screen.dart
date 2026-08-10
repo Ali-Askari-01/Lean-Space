@@ -2,18 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:package_info_plus/package_info_plus.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
 
 import '../../../core/app_actions.dart';
 import '../../../core/feature_flags.dart';
 import '../../../core/l10n/app_localizations.dart';
 import '../../../core/theme/app_colors.dart';
+import '../../../core/widgets/ad_banner.dart';
 import '../../../core/widgets/ambient_background.dart';
 import '../../../core/widgets/growth_widgets.dart';
 import '../../../core/widgets/guardian_mascot.dart';
 import '../../../core/widgets/language_picker_sheet.dart';
 import '../../../core/widgets/locale_provider.dart';
 import '../../../core/widgets/widget_setup_sheet.dart';
+import '../../../providers/service_providers.dart';
 import '../../reminders/presentation/reminder_settings_sheet.dart';
 import '../../streak_freeze/providers/streak_freeze_providers.dart';
 import '../../subscription/providers/entitlement_provider.dart';
@@ -59,7 +60,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
       ),
     );
     if (confirmed != true) return;
-    await Supabase.instance.client.auth.signOut();
+    await ref.read(apiClientProvider).signOut();
     if (context.mounted) context.go('/auth');
   }
 
@@ -88,12 +89,9 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
     if (confirmed != true || !context.mounted) return;
 
     try {
-      final response =
-          await Supabase.instance.client.functions.invoke('delete-account');
-      if (response.status != 200) {
-        throw Exception('delete failed');
-      }
-      await Supabase.instance.client.auth.signOut();
+      final api = ref.read(apiClientProvider);
+      await api.delete('/api/account');
+      await api.signOut();
       if (context.mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text(l10n.settingsDeleteAccountSuccess)),
@@ -116,11 +114,11 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
-    final user = Supabase.instance.client.auth.currentUser;
+    final user = ref.watch(apiClientProvider).currentUser;
     final freeze = ref.watch(streakFreezeProvider);
     final theme = Theme.of(context);
-    final displayName = user?.userMetadata?['display_name'] as String? ??
-        user?.email?.split('@').first ??
+    final displayName = user?['display_name'] as String? ??
+        (user?['email'] as String?)?.split('@').first ??
         l10n.commonFriend;
     final isPro = ref.watch(entitlementProvider).isPro;
     final level = isPro ? 12 : 3;
@@ -384,6 +382,10 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
             ),
             const SizedBox(height: 24),
             if (FeatureFlags.unlockAllFeatures) _BetaCard(l10n: l10n),
+            const SizedBox(height: 24),
+            const Center(
+              child: AdBanner(),
+            ),
             const SizedBox(height: 24),
             Center(
               child: Column(

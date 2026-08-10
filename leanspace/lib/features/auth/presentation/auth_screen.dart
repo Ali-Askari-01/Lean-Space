@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
 
-import '../../../core/auth_constants.dart';
 import '../../../core/auth_errors.dart';
 import '../../../core/l10n/app_localizations.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/widgets/ambient_background.dart';
 import '../../../core/widgets/growth_widgets.dart';
 import '../../../core/widgets/guardian_mascot.dart';
+import '../../../providers/service_providers.dart';
 import '../../referral/data/referral_store.dart';
 
 class AuthScreen extends ConsumerStatefulWidget {
@@ -87,8 +86,8 @@ class _AuthScreenState extends ConsumerState<AuthScreen>
 
   Future<void> _submitEmail() async {
     final l10n = AppLocalizations.of(context);
+    final authService = ref.read(authServiceProvider);
 
-    // Rate limiting: lock after 5 failed attempts
     if (_lockedUntil != null && DateTime.now().isBefore(_lockedUntil!)) {
       final seconds = _lockedUntil!.difference(DateTime.now()).inSeconds + 1;
       setState(() => _error = 'Too many attempts. Try again in ${seconds}s.');
@@ -113,39 +112,30 @@ class _AuthScreenState extends ConsumerState<AuthScreen>
     try {
       final email = _emailController.text.trim();
       final password = _passwordController.text;
-      final client = Supabase.instance.client;
 
       if (_isSignUp) {
         await _stashReferralCode();
-        final response = await client.auth.signUp(
+        final referralCode = _referralController.text.trim();
+        
+        await authService.signUpWithEmail(
+          email: email,
+          password: password,
+          referralCode: referralCode.isNotEmpty ? referralCode : null,
+        );
+
+        if (!mounted) return;
+        context.go('/my-day');
+      } else {
+        await authService.signInWithEmail(
           email: email,
           password: password,
         );
 
-        if (!mounted) return;
-
-        if (response.session != null) {
-          context.go('/my-day');
-          return;
-        }
-
-        setState(() {
-          _info = l10n.authAccountCreated;
-          _passwordController.clear();
-        });
-        _tabController.animateTo(0);
-        return;
+        if (mounted) context.go('/my-day');
+        _attempts = 0;
       }
-
-      await client.auth.signInWithPassword(
-        email: email,
-        password: password,
-      );
-
-      if (mounted) context.go('/my-day');
-      _attempts = 0; // Reset on success
-    } on AuthException catch (e) {
-      setState(() => _error = friendlyAuthError(e.message));
+    } on Exception catch (e) {
+      setState(() => _error = friendlyAuthError(e.toString()));
       _attempts++;
       if (_attempts >= 5) {
         _lockedUntil = DateTime.now().add(const Duration(seconds: 30));
@@ -160,6 +150,8 @@ class _AuthScreenState extends ConsumerState<AuthScreen>
 
   Future<void> _signInWithGoogle() async {
     final l10n = AppLocalizations.of(context);
+    final authService = ref.read(authServiceProvider);
+    
     setState(() {
       _loading = true;
       _error = null;
@@ -168,13 +160,15 @@ class _AuthScreenState extends ConsumerState<AuthScreen>
 
     try {
       await _stashReferralCode();
-      await Supabase.instance.client.auth.signInWithOAuth(
-        OAuthProvider.google,
-        redirectTo: authRedirectUri,
-        authScreenLaunchMode: LaunchMode.externalApplication,
+      final referralCode = _referralController.text.trim();
+      
+      await authService.signInWithGoogle(
+        referralCode: referralCode.isNotEmpty ? referralCode : null,
       );
-    } on AuthException catch (e) {
-      setState(() => _error = friendlyAuthError(e.message));
+      
+      if (mounted) context.go('/my-day');
+    } on Exception catch (e) {
+      setState(() => _error = friendlyAuthError(e.toString()));
     } catch (e) {
       setState(() => _error = l10n.authCouldNotStartGoogle);
     } finally {

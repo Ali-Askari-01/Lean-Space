@@ -4,7 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
 
-import '../../../router/app_router.dart';
+import '../../../providers/service_providers.dart';
 import '../data/subscription_service.dart';
 import 'entitlement_provider.dart';
 
@@ -170,28 +170,14 @@ class SubscriptionController extends Notifier<SubscriptionState> {
     }
   }
 
-  /// Verifies the purchase server-side via Edge Function, then refreshes tier.
+  /// Verifies the purchase server-side, then refreshes tier.
   Future<void> _deliver(PurchaseDetails purchase) async {
-    final client = ref.read(supabaseClientProvider);
+    final api = ref.read(supabaseClientProvider);
     try {
-      final response = await client.functions.invoke(
-        'verify-play-purchase',
-        body: {
-          'product_id': purchase.productID,
-          'purchase_token':
-              purchase.verificationData.serverVerificationData,
-        },
-      );
-      if (response.status != 200) {
-        debugPrint(
-          'subscription: verify-play-purchase failed: ${response.status}',
-        );
-        state = state.copyWith(
-          error: 'Purchase verification failed. Try Restore purchases.',
-        );
-        return;
-      }
-      final data = response.data;
+      final data = await api.post('/api/subscription/verify-play-purchase', {
+        'product_id': purchase.productID,
+        'purchase_token': purchase.verificationData.serverVerificationData,
+      });
       if (data is Map && data['pro_until'] != null) {
         final until = DateTime.tryParse(data['pro_until'] as String);
         ref.read(entitlementProvider.notifier).setProOptimistic(until: until);

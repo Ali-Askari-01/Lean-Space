@@ -5,7 +5,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:package_info_plus/package_info_plus.dart' show PackageInfo;
-import 'package:supabase_flutter/supabase_flutter.dart';
 
 import '../../../core/app_actions.dart';
 import '../../../core/app_constants.dart';
@@ -13,6 +12,7 @@ import '../../../core/l10n/app_localizations.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/widgets/ambient_background.dart';
 import '../../../core/widgets/growth_widgets.dart';
+import '../../../providers/service_providers.dart';
 
 /// Help & Support screen — FAQ + a contact form that opens the system
 /// mail app via [AppActions.openSupportEmail]. Reached from Settings →
@@ -92,7 +92,7 @@ class _HelpSupportScreenState extends ConsumerState<HelpSupportScreen> {
       return;
     }
     setState(() => _sending = true);
-    final email = Supabase.instance.client.auth.currentUser?.email ?? '';
+    final email = ref.read(apiClientProvider).currentUserEmail ?? '';
     final body = StringBuffer()
       ..writeln(text)
       ..writeln()

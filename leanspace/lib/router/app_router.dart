@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
 
 import '../core/deep_link.dart';
 import '../core/deep_link_handlers.dart';
@@ -27,15 +26,11 @@ import '../features/medals/presentation/medal_share_screen.dart';
 import '../features/subscription/presentation/manage_pro_screen.dart';
 import '../features/subscription/presentation/paywall_screen.dart';
 import '../features/you/presentation/you_screen.dart';
-
-final supabaseClientProvider = Provider<SupabaseClient>(
-  (ref) => Supabase.instance.client,
-);
+import '../providers/service_providers.dart';
 
 final _routerRefreshProvider = Provider<RouterRefreshNotifier>((ref) {
-  final notifier = RouterRefreshNotifier(
-    Supabase.instance.client.auth.onAuthStateChange,
-  );
+  final api = ref.watch(apiClientProvider);
+  final notifier = RouterRefreshNotifier(api.onAuthStateChange);
   ref.onDispose(notifier.dispose);
   return notifier;
 });
@@ -68,46 +63,31 @@ final appRouterProvider = Provider<GoRouter>((ref) {
     initialLocation: '/my-day',
     refreshListenable: refresh,
     redirect: (context, state) {
-      // Gate on Supabase readiness — don't access auth state before init.
-      // When not ready, default to /auth so unauthenticated users don't
-      // briefly see a protected screen.
-      final supabaseReady = Supabase.instance.isInitialized;
-      if (!supabaseReady) {
-        final isAuthRoute = state.matchedLocation == '/auth';
-        return isAuthRoute ? null : '/auth';
-      }
+      final api = ref.read(apiClientProvider);
 
       final action = parseDeepLink(state.uri);
       if (action != null) {
         scheduleDeepLinkAction(ref, action);
-        final session = Supabase.instance.client.auth.currentSession;
-        if (session == null) return '/onboarding';
+        if (!api.isAuthenticated) return '/onboarding';
         return action.path;
       }
       if (state.uri.path == '/' || state.matchedLocation == '/') {
         return '/my-day';
       }
 
-      // Onboarding gate runs first so the very first launch is:
-      //   Splash → Onboarding → Auth → My Day
-      // And after the user finishes onboarding but hasn't signed in:
-      //   Splash → Auth (no auto-bounce to onboarding).
       final onboardingDone = ref.read(onboardingGateProvider);
       final isOnboardingRoute = state.matchedLocation == '/onboarding';
       if (!onboardingDone) {
         return isOnboardingRoute ? null : '/onboarding';
       }
       if (isOnboardingRoute) {
-        // User already completed onboarding — don't let them re-trigger it
-        // by navigating here from a deep link.
         return '/auth';
       }
 
-      final session = Supabase.instance.client.auth.currentSession;
       final isAuthRoute = state.matchedLocation == '/auth';
 
-      if (session == null && !isAuthRoute) return '/auth';
-      if (session != null && isAuthRoute) return '/my-day';
+      if (!api.isAuthenticated && !isAuthRoute) return '/auth';
+      if (api.isAuthenticated && isAuthRoute) return '/my-day';
       return null;
     },
     errorBuilder: (context, state) {

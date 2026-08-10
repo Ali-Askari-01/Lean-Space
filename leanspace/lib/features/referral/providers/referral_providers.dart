@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../../../router/app_router.dart';
+import '../../../providers/service_providers.dart';
 import '../data/referral_store.dart';
 
 class ReferralStats {
@@ -74,8 +74,8 @@ class ReferralController extends Notifier<ReferralStats> {
   }
 
   Future<void> refresh() async {
-    final client = ref.read(supabaseClientProvider);
-    final userId = client.auth.currentUser?.id;
+    final api = ref.read(supabaseClientProvider);
+    final userId = api.currentUserId;
     if (userId == null) {
       state = const ReferralStats(isLoading: false);
       return;
@@ -83,7 +83,7 @@ class ReferralController extends Notifier<ReferralStats> {
 
     state = state.copyWith(isLoading: true, clearError: true);
     try {
-      final raw = await client.rpc('get_referral_stats');
+      final raw = await api.post('/api/referrals/stats');
       final map = Map<String, dynamic>.from(raw as Map);
       state = ReferralStats.fromJson(map);
     } catch (e) {
@@ -96,9 +96,9 @@ class ReferralController extends Notifier<ReferralStats> {
   }
 
   Future<String?> applyCode(String code) async {
-    final client = ref.read(supabaseClientProvider);
+    final api = ref.read(supabaseClientProvider);
     try {
-      await client.rpc('apply_referral_code', params: {'p_code': code.trim()});
+      await api.post('/api/referrals/apply', {'code': code.trim()});
       await ReferralStore.clearPending();
       return null;
     } catch (e) {
@@ -112,9 +112,6 @@ class ReferralController extends Notifier<ReferralStats> {
       }
       if (msg.contains('already_referred')) {
         return 'You have already used a referral code.';
-      }
-      if (msg.contains('referee_not_eligible')) {
-        return 'Complete a task or wait 24 hours before applying a code.';
       }
       return 'Could not apply referral code. Try again.';
     }

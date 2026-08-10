@@ -1,9 +1,9 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
 
 import '../../../core/feature_flags.dart';
-import '../../../router/app_router.dart';
+import '../../../providers/service_providers.dart';
+import '../../../services/api_client.dart';
 
 enum Tier { free, pro }
 
@@ -43,7 +43,7 @@ class EntitlementNotifier extends Notifier<Entitlement> {
     return const Entitlement();
   }
 
-  SupabaseClient get _client => ref.read(supabaseClientProvider);
+  ApiClient get _client => ref.read(supabaseClientProvider);
 
   Future<void> refresh() async {
     if (FeatureFlags.unlockAllFeatures) {
@@ -51,21 +51,17 @@ class EntitlementNotifier extends Notifier<Entitlement> {
       return;
     }
 
-    final userId = _client.auth.currentUser?.id;
+    final userId = _client.currentUserId;
     if (userId == null) {
       state = const Entitlement(tier: Tier.free, isLoading: false);
       return;
     }
 
     try {
-      final row = await _client
-          .from('users')
-          .select('tier, pro_until')
-          .eq('id', userId)
-          .maybeSingle();
+      final row = await _client.get('/api/entitlements');
 
-      final tierStr = row?['tier'] as String? ?? 'free';
-      final proUntilStr = row?['pro_until'] as String?;
+      final tierStr = row['tier'] as String? ?? 'free';
+      final proUntilStr = row['pro_until'] as String?;
       final proUntil =
           proUntilStr != null ? DateTime.tryParse(proUntilStr) : null;
       final activeByDate =

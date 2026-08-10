@@ -1,22 +1,16 @@
-import 'package:supabase_flutter/supabase_flutter.dart';
-
 import '../../../core/local_date.dart';
+import '../../../services/api_client.dart';
 
 class StreakFreezeRepository {
-  StreakFreezeRepository(this._client);
+  StreakFreezeRepository(this._api);
 
-  final SupabaseClient _client;
+  final ApiClient _api;
 
   Future<List<DateTime>> fetchFrozenDates() async {
-    final userId = _client.auth.currentUser?.id;
-    if (userId == null) return [];
+    final data = await _api.get('/api/streak-freezes');
+    final list = data['results'] as List? ?? data.values.first as List? ?? [];
 
-    final data = await _client
-        .from('streak_freeze_uses')
-        .select('frozen_date')
-        .eq('user_id', userId);
-
-    return (data as List)
+    return (list as List)
         .map((row) =>
             LocalDate.parseIsoDate(row['frozen_date'] as String?))
         .where((date) => date != null)
@@ -25,25 +19,23 @@ class StreakFreezeRepository {
   }
 
   Future<int> freezesUsedThisMonth() async {
-    final userId = _client.auth.currentUser?.id;
-    if (userId == null) return 0;
-
     final today = LocalDate.today;
     final monthStart = DateTime(today.year, today.month, 1);
+    final monthStartStr = LocalDate.toIsoDate(monthStart);
 
-    final data = await _client
-        .from('streak_freeze_uses')
-        .select('id')
-        .eq('user_id', userId)
-        .gte('frozen_date', LocalDate.toIsoDate(monthStart));
-
-    return (data as List).length;
+    final data = await _api.get('/api/streak-freezes');
+    final list = data['results'] as List? ?? data.values.first as List? ?? [];
+    int count = 0;
+    for (final row in list as List) {
+      final date = row['frozen_date'] as String?;
+      if (date != null && date.compareTo(monthStartStr) >= 0) count++;
+    }
+    return count;
   }
 
   Future<void> useFreeze(DateTime date) async {
-    await _client.rpc(
-      'use_streak_freeze',
-      params: {'p_date': LocalDate.toIsoDate(date)},
-    );
+    await _api.post('/api/streak-freezes/use', {
+      'frozen_date': LocalDate.toIsoDate(date),
+    });
   }
 }

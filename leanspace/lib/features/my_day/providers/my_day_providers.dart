@@ -1,9 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod/legacy.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
 
-import '../../../router/app_router.dart';
+import '../../../providers/service_providers.dart';
 import '../data/my_day_repository.dart';
 import '../domain/habit.dart';
 import '../domain/todo_item.dart';
@@ -295,22 +294,8 @@ class MyDayNotifier extends Notifier<MyDayState> {
       );
       await refresh();
       return true;
-    } on PostgrestException catch (e) {
-      // Surface the most common failure clearly; otherwise fall through.
-      if (e.message.toLowerCase().contains('schema cache') ||
-          e.message.toLowerCase().contains('could not find')) {
-        try {
-          await _repo.upsertHabit(
-            name: name,
-            slotIndex: slotIndex,
-            existingId: existingId,
-          );
-          await refresh();
-          return true;
-        } catch (_) {
-          rethrow;
-        }
-      }
+    } catch (e) {
+      debugPrint('saveHabit failed: $e');
       rethrow;
     }
   }
@@ -384,13 +369,12 @@ class MyDayNotifier extends Notifier<MyDayState> {
       return AddTaskResult(
         notesDropped: outcome.notesDropped,
       );
-    } on PostgrestException catch (e) {
-      if (e.message.contains('daily_task_cap_exceeded')) {
+    } catch (e) {
+      final msg = e.toString();
+      if (msg.contains('daily_task_cap')) {
         return AddTaskResult.failure("You've hit today's 5-task cap.");
       }
-      return AddTaskResult.failure(e.message);
-    } catch (e) {
-      return AddTaskResult.failure(e.toString());
+      return AddTaskResult.failure(msg);
     }
   }
 
@@ -439,11 +423,12 @@ class MyDayNotifier extends Notifier<MyDayState> {
       await _repo.reAddTask(missed.text);
       await refresh();
       return null;
-    } on PostgrestException catch (e) {
-      if (e.message.contains('daily_task_cap_exceeded')) {
+    } catch (e) {
+      final msg = e.toString();
+      if (msg.contains('daily_task_cap')) {
         return "You've hit today's 5-task cap.";
       }
-      return e.message;
+      return msg;
     }
   }
 

@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
 
 import '../../../core/app_actions.dart';
 import '../../../core/l10n/app_localizations.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/widgets/ambient_background.dart';
 import '../../../core/widgets/reveal_animations.dart';
+import '../../../providers/service_providers.dart';
 import '../../my_day/providers/my_day_providers.dart';
 import '../../progress/presentation/how_this_works_sheet.dart';
 import '../../referral/providers/referral_providers.dart';
@@ -31,18 +31,18 @@ class _YouScreenState extends ConsumerState<YouScreen> {
   }
 
   Future<void> _signOut(BuildContext context) async {
-    await Supabase.instance.client.auth.signOut();
+    await ref.read(apiClientProvider).signOut();
     if (context.mounted) context.go('/auth');
   }
 
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
-    final user = Supabase.instance.client.auth.currentUser;
+    final user = ref.watch(apiClientProvider).currentUser;
     final myDay = ref.watch(myDayProvider);
     final theme = Theme.of(context);
-    final displayName = user?.userMetadata?['display_name'] as String? ??
-        user?.email?.split('@').first ??
+    final displayName = user?['display_name'] as String? ??
+        (user?['email'] as String?)?.split('@').first ??
         l10n.commonFriend;
     final initials = displayName.isNotEmpty
         ? displayName[0].toUpperCase()
@@ -74,7 +74,7 @@ class _YouScreenState extends ConsumerState<YouScreen> {
               _IdentityCard(
                 initials: initials,
                 displayName: displayName,
-                email: user?.email ?? '',
+                email: user?['email'] as String? ?? '',
                 level: level,
                 isPro: isPro,
                 bestHabitStreak: bestHabitStreak,
@@ -138,12 +138,12 @@ class _YouScreenState extends ConsumerState<YouScreen> {
               _SectionLabel(l10n.settingsAccount),
               _SettingsCard(
                 children: [
-                  if (user?.email != null) ...[
+                  if (user?['email'] != null) ...[
                     _SettingsTile(
                       icon: Icons.alternate_email_rounded,
                       iconBg: AppColors.primaryContainer.withValues(alpha: 0.3),
                       iconColor: AppColors.primary,
-                      title: user!.email!,
+                      title: user!['email'] as String,
                       subtitle: isPro ? l10n.youProTier : l10n.youFreeTier,
                       onTap: null,
                     ),

@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:home_widget/home_widget.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
 
 import 'core/app_bootstrap.dart';
 import 'core/app_actions.dart';
@@ -21,6 +20,8 @@ import 'features/referral/providers/referral_providers.dart';
 import 'features/reminders/providers/reminder_providers.dart';
 import 'features/subscription/providers/entitlement_provider.dart';
 import 'features/subscription/providers/subscription_providers.dart';
+import 'providers/service_providers.dart';
+import 'services/api_client.dart';
 import 'router/app_router.dart';
 
 class LeanSpaceApp extends ConsumerStatefulWidget {
@@ -32,7 +33,7 @@ class LeanSpaceApp extends ConsumerStatefulWidget {
 
 class _LeanSpaceAppState extends ConsumerState<LeanSpaceApp> {
   ProviderSubscription<MyDayState>? _myDaySub;
-  StreamSubscription<AuthState>? _authSub;
+  StreamSubscription<AuthEvent>? _authSub;
   StreamSubscription<Uri?>? _widgetClickSub;
 
   @override
@@ -57,8 +58,8 @@ class _LeanSpaceAppState extends ConsumerState<LeanSpaceApp> {
         Future.microtask(() => ref.read(subscriptionControllerProvider));
       }
     });
-    _authSub = Supabase.instance.client.auth.onAuthStateChange.listen((event) {
-      if (event.session != null) {
+    _authSub = ref.read(apiClientProvider).onAuthStateChange.listen((event) {
+      if (event == AuthEvent.signedIn) {
         _bootstrapIfNeeded();
       }
     });
@@ -138,9 +139,10 @@ class _LeanSpaceAppState extends ConsumerState<LeanSpaceApp> {
   }
 
   void _bootstrapIfNeeded() {
-    // Fire-and-forget: run heavy network work in background
+    final api = ref.read(apiClientProvider);
+    if (!api.isAuthenticated) return;
     bootstrapAuthenticatedUser(
-      Supabase.instance.client,
+      api,
       onReady: () async {
         await ref.read(entitlementProvider.notifier).refresh();
         await ref.read(referralControllerProvider.notifier).applyPendingIfAny();

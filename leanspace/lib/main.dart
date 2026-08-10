@@ -4,30 +4,29 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
 import 'app.dart';
 import 'core/env.dart';
 import 'core/l10n/app_localizations.dart';
 import 'core/onboarding/onboarding_store.dart';
-import 'core/supabase_ready.dart';
 import 'core/theme/app_colors.dart';
-import 'core/theme/theme_provider.dart';
 import 'core/l10n/locale_resolution.dart';
 import 'core/app_constants.dart';
 import 'core/widgets/bloom_splash.dart';
 import 'core/widgets/locale_provider.dart';
 import 'features/reminders/data/notification_service.dart';
 import 'features/reminders/providers/reminder_providers.dart';
+import 'core/theme/theme_provider.dart';
 import 'router/app_router.dart';
+import 'providers/service_providers.dart';
 
 enum _AppPhase { splash, configError, ready }
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await MobileAds.instance.initialize();
 
-  // SharedPreferences is required by ThemeNotifier (sharedPreferencesProvider
-  // throws UnimplementedError without an override).
   SharedPreferences? prefs;
   try {
     prefs = await SharedPreferences.getInstance();
@@ -40,19 +39,19 @@ Future<void> main() async {
       overrides: [
         if (prefs != null) sharedPreferencesProvider.overrideWithValue(prefs),
       ],
-      child: const BloomTrackerApp(),
+      child: const DailyStitchApp(),
     ),
   );
 }
 
-class BloomTrackerApp extends ConsumerStatefulWidget {
-  const BloomTrackerApp({super.key});
+class DailyStitchApp extends ConsumerStatefulWidget {
+  const DailyStitchApp({super.key});
 
   @override
-  ConsumerState<BloomTrackerApp> createState() => _BloomTrackerAppState();
+  ConsumerState<DailyStitchApp> createState() => _DailyStitchAppState();
 }
 
-class _BloomTrackerAppState extends ConsumerState<BloomTrackerApp> {
+class _DailyStitchAppState extends ConsumerState<DailyStitchApp> {
   _AppPhase _phase = _AppPhase.splash;
   String? _configDetail;
   bool _gateHydrated = false;
@@ -65,7 +64,6 @@ class _BloomTrackerAppState extends ConsumerState<BloomTrackerApp> {
   }
 
   Future<void> _bootstrap() async {
-    // Step 1: Parallelize fast, independent init tasks
     await Future.wait([
       dotenv.load(fileName: '.env', isOptional: true).catchError((_) {}),
       ref.read(localeProvider.notifier).ensureHydrated(),
@@ -83,53 +81,26 @@ class _BloomTrackerAppState extends ConsumerState<BloomTrackerApp> {
       return;
     }
 
-    // Step 2: Show the app immediately — don't block on Supabase.
-    // Supabase.initialize() calls recoverSession() which makes a network
-    // call (2-5 sec). By deferring it, the splash renders instantly and
-    // Supabase initializes in the background.
+    // Initialize API client
+    await ref.read(apiClientProvider).init();
+
+    // Check onboarding gate
+    bool gate = false;
+    try {
+      gate = await OnboardingStore.isComplete();
+    } catch (e) {
+      debugPrint('onboarding gate hydrate failed: $e');
+    }
+
+    if (!mounted) return;
+    ref.read(onboardingGateProvider.notifier).seed(gate);
+    
     setState(() {
       _gateHydrated = true;
       _phase = _AppPhase.ready;
     });
 
-    // Step 3: Initialize Supabase in the background (non-blocking).
-    unawaited(_initSupabase());
-  }
-
-  Future<void> _initSupabase() async {
-    try {
-      await Supabase.initialize(
-        url: Env.supabaseUrl,
-        publishableKey: Env.supabaseKey,
-        authOptions: const FlutterAuthClientOptions(
-          authFlowType: AuthFlowType.pkce,
-        ),
-      );
-
-      // Signal that Supabase is ready
-      ref.read(supabaseReadyProvider).markReady();
-
-      // Check onboarding gate (SharedPreferences is cached — instant)
-      bool gate = false;
-      try {
-        gate = await OnboardingStore.isComplete();
-      } catch (e) {
-        debugPrint('onboarding gate hydrate failed: $e');
-      }
-
-      if (!mounted) return;
-      ref.read(onboardingGateProvider.notifier).seed(gate);
-      setState(() => _gateHydrated = true);
-
-      // Trigger router refresh so the redirect re-evaluates
-      // with Supabase now available
-      ref.read(appRouterProvider).refresh();
-    } catch (e) {
-      debugPrint('Supabase init failed: $e');
-      // App still works — user will need to sign in again
-      ref.read(supabaseReadyProvider).markReady();
-      ref.read(appRouterProvider).refresh();
-    }
+    ref.read(appRouterProvider).refresh();
   }
 
   @override
@@ -152,6 +123,7 @@ class _BloomTrackerAppState extends ConsumerState<BloomTrackerApp> {
         child: _ScaffoldOnly(locale: userLocale, child: const BloomSplash()),
       );
     }
+    
     if (_phase == _AppPhase.configError) {
       return KeyedSubtree(
         key: const ValueKey('config'),
@@ -172,6 +144,7 @@ class _BloomTrackerAppState extends ConsumerState<BloomTrackerApp> {
         ),
       );
     }
+    
     return KeyedSubtree(
       key: const ValueKey('app'),
       child: _ReadyScope(
@@ -216,7 +189,7 @@ class _ReadyScope extends StatelessWidget {
       overrides: [
         notificationServiceProvider.overrideWithValue(notifications),
       ],
-      child: const LeanSpaceApp(),
+      child: const DailyStitchApp(),
     );
   }
 }
