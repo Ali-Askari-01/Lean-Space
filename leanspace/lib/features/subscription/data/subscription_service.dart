@@ -6,8 +6,9 @@ import 'package:in_app_purchase/in_app_purchase.dart';
 abstract final class ProProducts {
   static const monthly = 'leanspace_pro_monthly';
   static const yearly = 'leanspace_pro_yearly';
+  static const lifetime = 'leanspace_pro_lifetime';
 
-  static const all = <String>{monthly, yearly};
+  static const all = <String>{monthly, yearly, lifetime};
 }
 
 class ProductQueryResult {
@@ -25,11 +26,13 @@ class ProductQueryResult {
       products.any((p) => p.id == ProProducts.monthly);
   bool get hasYearly =>
       products.any((p) => p.id == ProProducts.yearly);
+  bool get hasLifetime =>
+      products.any((p) => p.id == ProProducts.lifetime);
 }
 
 /// Thin wrapper around [InAppPurchase] so the rest of the app never touches
 /// the plugin directly. Verification of receipts is intentionally left to the
-/// server-side webhook (see supabase/functions/play-rtdn).
+/// server-side webhook.
 class SubscriptionService {
   SubscriptionService([InAppPurchase? iap])
       : _iap = iap ?? InAppPurchase.instance;

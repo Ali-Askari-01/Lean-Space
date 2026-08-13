@@ -7,7 +7,8 @@ This guide walks you through generating the release AAB and preparing all store 
 - [ ] Flutter SDK installed (`flutter --version`)
 - [ ] Android SDK / Android Studio installed
 - [ ] JDK 17 installed (required for Android Gradle Plugin 8.9.1)
-- [ ] Supabase project configured with production keys
+- [ ] Cloudflare Worker deployed with production D1 binding and secrets
+- [ ] Google OAuth client ID configured
 
 ## Step 1: Create Environment Configuration
 
@@ -16,13 +17,12 @@ cd leanspace
 cp env.json.example env.json
 ```
 
-Edit `env.json` with your Supabase credentials:
+Edit `env.json` with your Cloudflare Worker URL and Google OAuth client ID:
 
 ```json
 {
-  "SUPABASE_URL": "https://your-project-ref.supabase.co",
-  "SUPABASE_PUBLISHABLE_KEY": "sb_publishable_xxx",
-  "SUPABASE_ANON_KEY": "your-jwt-anon-key-here"
+  "API_BASE_URL": "https://daily-stitch-api.your-subdomain.workers.dev",
+  "GOOGLE_CLIENT_ID": "your-google-client-id.apps.googleusercontent.com"
 }
 ```
 
@@ -160,7 +160,7 @@ Verify your keystore path and passwords in `key.properties`.
 
 | File | Purpose |
 |------|---------|
-| `leanspace/env.json` | Supabase credentials (gitignored) |
+| `leanspace/env.json` | Cloudflare API URL and Google client ID (gitignored) |
 | `leanspace/android/key.properties` | Keystore config (gitignored) |
 | `leanspace/android/app/build.gradle.kts` | Build configuration |
 | `docs/store-assets/` | Play Store assets |

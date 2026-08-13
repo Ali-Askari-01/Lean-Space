@@ -4,7 +4,7 @@ import '../../../providers/service_providers.dart';
 import '../data/streak_freeze_repository.dart';
 
 final streakFreezeRepositoryProvider = Provider<StreakFreezeRepository>((ref) {
-  return StreakFreezeRepository(ref.watch(supabaseClientProvider));
+  return StreakFreezeRepository(ref.watch(apiClientProvider));
 });
 
 class StreakFreezeState {

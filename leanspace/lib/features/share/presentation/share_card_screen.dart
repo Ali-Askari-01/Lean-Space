@@ -62,6 +62,7 @@ class _ShareCardScreenState extends ConsumerState<ShareCardScreen> {
         }
       }
       AppHaptics.light();
+      if (!mounted) return;
       final l10n = AppLocalizations.of(context);
       await SharePlus.instance.share(
         ShareParams(

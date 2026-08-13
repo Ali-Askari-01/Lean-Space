@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:leanspace/core/local_date.dart';
-import 'package:leanspace/features/my_day/domain/habit.dart';
+import 'package:daily_stitch/core/local_date.dart';
+import 'package:daily_stitch/features/my_day/domain/habit.dart';
 
 void main() {
   group('computeHabitToggle', () {

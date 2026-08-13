@@ -463,7 +463,7 @@
   "authContinueWithGoogle": "المتابعة مع Google",
   "authEnterEmail": "أدخل بريدك الإلكتروني",
   "authEnterValidEmail": "أدخل عنوان بريد إلكتروني صالح",
-  "authPasswordTooShort": "يجب أن تكون كلمة المرور 6 أحرف على الأقل",
+  "authPasswordTooShort": "يجب أن تكون كلمة المرور 8 أحرف على الأقل",
   "authAccountCreated": "تم إنشاء الحساب. انتقل إلى تسجيل الدخول واستخدم كلمة المرور.",
   "authSomethingWentWrong": "حدث خطأ ما. حاول مرة أخرى.",
   "authCouldNotStartGoogle": "تعذر بدء تسجيل الدخول عبر Google.",

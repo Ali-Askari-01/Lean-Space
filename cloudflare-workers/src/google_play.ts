@@ -1,32 +1,46 @@
-// Google Play Developer API v2 verification
-// Uses service account to verify subscriptions
-
 interface GooglePlayConfig {
   serviceAccountJson: string;
   packageName: string;
 }
 
-interface VerificationResult {
+export interface VerificationResult {
   isValid: boolean;
   expiryTime?: string;
+  isLifetime?: boolean;
   cancelReason?: string;
   error?: string;
 }
 
-// Cache for access tokens (valid for 1 hour)
 let cachedAccessToken: string | null = null;
-let tokenExpiresAt: number = 0;
+let tokenExpiresAt = 0;
+
+function base64Url(input: string | ArrayBuffer): string {
+  const bytes = typeof input === 'string'
+    ? new TextEncoder().encode(input)
+    : new Uint8Array(input);
+  let binary = '';
+  for (const byte of bytes) binary += String.fromCharCode(byte);
+  return btoa(binary).replace(/=/g, '').replace(/\+/g, '-').replace(/\//g, '_');
+}
+
+function pemToArrayBuffer(pem: string): ArrayBuffer {
+  const base64 = pem
+    .replace(/-----BEGIN PRIVATE KEY-----/g, '')
+    .replace(/-----END PRIVATE KEY-----/g, '')
+    .replace(/\s/g, '');
+  const binary = atob(base64);
+  const bytes = new Uint8Array(binary.length);
+  for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+  return bytes.buffer;
+}
 
 async function getAccessToken(config: GooglePlayConfig): Promise<string | null> {
-  // Return cached token if still valid
   if (cachedAccessToken && Date.now() < tokenExpiresAt - 60000) {
     return cachedAccessToken;
   }
 
   try {
     const serviceAccount = JSON.parse(config.serviceAccountJson);
-
-    // Create JWT for OAuth2
     const now = Math.floor(Date.now() / 1000);
     const header = { alg: 'RS256', typ: 'JWT' };
     const payload = {
@@ -37,30 +51,22 @@ async function getAccessToken(config: GooglePlayConfig): Promise<string | null> 
       exp: now + 3600,
     };
 
-    // Sign JWT (simplified - in production use proper JWT library)
-    const encoder = new TextEncoder();
-    const headerBase64 = btoa(JSON.stringify(header)).replace(/=/g, '').replace(/\+/g, '-').replace(/\//g, '_');
-    const payloadBase64 = btoa(JSON.stringify(payload)).replace(/=/g, '').replace(/\+/g, '-').replace(/\//g, '_');
-    const message = `${headerBase64}.${payloadBase64}`;
-
-    // Import private key for signing
+    const message = `${base64Url(JSON.stringify(header))}.${base64Url(JSON.stringify(payload))}`;
     const privateKey = await crypto.subtle.importKey(
       'pkcs8',
-      encoder.encode(serviceAccount.private_key),
+      pemToArrayBuffer(serviceAccount.private_key),
       { name: 'RSASSA-PKCS1-v1_5', hash: 'SHA-256' },
       false,
       ['sign']
     );
 
-    const signature = await crypto.subtle.sign('RSASSA-PKCS1-v1_5', privateKey, encoder.encode(message));
-    const signatureBase64 = btoa(String.fromCharCode(...new Uint8Array(signature)))
-      .replace(/=/g, '')
-      .replace(/\+/g, '-')
-      .replace(/\//g, '_');
+    const signature = await crypto.subtle.sign(
+      'RSASSA-PKCS1-v1_5',
+      privateKey,
+      new TextEncoder().encode(message)
+    );
+    const jwt = `${message}.${base64Url(signature)}`;
 
-    const jwt = `${message}.${signatureBase64}`;
-
-    // Exchange JWT for access token
     const tokenResponse = await fetch('https://oauth2.googleapis.com/token', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -71,88 +77,87 @@ async function getAccessToken(config: GooglePlayConfig): Promise<string | null> 
     });
 
     if (!tokenResponse.ok) {
-      console.error('Failed to get access token:', await tokenResponse.text());
+      console.error('Failed to get Google Play access token:', tokenResponse.status);
       return null;
     }
 
-    const tokenData = await tokenResponse.json() as any;
-    cachedAccessToken = tokenData.access_token;
-    tokenExpiresAt = Date.now() + (tokenData.expires_in * 1000);
+    const tokenData = await tokenResponse.json() as { access_token?: string; expires_in?: number };
+    if (!tokenData.access_token || !tokenData.expires_in) return null;
 
+    cachedAccessToken = tokenData.access_token;
+    tokenExpiresAt = Date.now() + tokenData.expires_in * 1000;
     return cachedAccessToken;
   } catch (e) {
-    console.error('Error getting access token:', e);
+    console.error('Error getting Google Play access token:', e instanceof Error ? e.message : String(e));
     return null;
   }
 }
 
+const isLifetimeProduct = (productId: string) => productId.endsWith('_lifetime');
+
 export async function verifyPurchase(
-  env: GooglePlayConfig,
+  config: GooglePlayConfig,
   productId: string,
   purchaseToken: string
 ): Promise<VerificationResult> {
-  if (!env.serviceAccountJson) {
+  if (!config.serviceAccountJson) {
     return { isValid: false, error: 'service_account_not_configured' };
   }
 
-  try {
-    const accessToken = await getAccessToken(env);
-    if (!accessToken) {
-      return { isValid: false, error: 'failed_to_get_access_token' };
-    }
-
-    // Map product ID to subscription ID
-    const subscriptionId = productId;
-
-    // Call Google Play Developer API v3
-    const url = `https://androidpublisher.googleapis.com/androidpublisher/v3/applications/${env.packageName}/purchases/subscriptions/${subscriptionId}/tokens/${purchaseToken}`;
-
-    const response = await fetch(url, {
-      headers: { Authorization: `Bearer ${accessToken}` },
-    });
-
-    if (!response.ok) {
-      const errorText = await response.text();
-      console.error('Google Play API error:', response.status, errorText);
-      return { isValid: false, error: `api_error_${response.status}` };
-    }
-
-    const data = await response.json() as any;
-
-    // Check if subscription is active
-    const expiryTime = new Date(parseInt(data.expiryTimeMillis));
-    const now = new Date();
-    const isValid = expiryTime > now;
-
-    return {
-      isValid,
-      expiryTime: expiryTime.toISOString(),
-      cancelReason: data.cancelReason || undefined,
-    };
-  } catch (e) {
-    console.error('Verification error:', e);
-    return { isValid: false, error: 'verification_failed' };
+  const accessToken = await getAccessToken(config);
+  if (!accessToken) {
+    return { isValid: false, error: 'failed_to_get_access_token' };
   }
+
+  const encodedPackage = encodeURIComponent(config.packageName);
+  const encodedProduct = encodeURIComponent(productId);
+  const encodedToken = encodeURIComponent(purchaseToken);
+  const url = isLifetimeProduct(productId)
+    ? `https://androidpublisher.googleapis.com/androidpublisher/v3/applications/${encodedPackage}/purchases/products/${encodedProduct}/tokens/${encodedToken}`
+    : `https://androidpublisher.googleapis.com/androidpublisher/v3/applications/${encodedPackage}/purchases/subscriptions/${encodedProduct}/tokens/${encodedToken}`;
+
+  const response = await fetch(url, {
+    headers: { Authorization: `Bearer ${accessToken}` },
+  });
+
+  if (!response.ok) {
+    console.error('Google Play API error:', response.status);
+    return { isValid: false, error: `api_error_${response.status}` };
+  }
+
+  const data = await response.json() as any;
+
+  if (isLifetimeProduct(productId)) {
+    return {
+      isValid: data.purchaseState === 0,
+      isLifetime: data.purchaseState === 0,
+    };
+  }
+
+  const expiryTime = new Date(Number(data.expiryTimeMillis));
+  return {
+    isValid: Number.isFinite(expiryTime.getTime()) && expiryTime > new Date(),
+    expiryTime: expiryTime.toISOString(),
+    cancelReason: data.cancelReason || undefined,
+  };
 }
 
 export async function acknowledgePurchase(
-  env: GooglePlayConfig,
+  config: GooglePlayConfig,
   productId: string,
   purchaseToken: string
 ): Promise<boolean> {
-  if (!env.serviceAccountJson) {
-    return false;
-  }
+  const accessToken = await getAccessToken(config);
+  if (!accessToken) return false;
+
+  const encodedPackage = encodeURIComponent(config.packageName);
+  const encodedProduct = encodeURIComponent(productId);
+  const encodedToken = encodeURIComponent(purchaseToken);
+  const url = isLifetimeProduct(productId)
+    ? `https://androidpublisher.googleapis.com/androidpublisher/v3/applications/${encodedPackage}/purchases/products/${encodedProduct}/tokens/${encodedToken}:acknowledge`
+    : `https://androidpublisher.googleapis.com/androidpublisher/v3/applications/${encodedPackage}/purchases/subscriptions/${encodedProduct}/tokens/${encodedToken}:acknowledge`;
 
   try {
-    const accessToken = await getAccessToken(env);
-    if (!accessToken) {
-      return false;
-    }
-
-    const subscriptionId = productId;
-    const url = `https://androidpublisher.googleapis.com/androidpublisher/v3/applications/${env.packageName}/purchases/subscriptions/${subscriptionId}/tokens/${purchaseToken}:acknowledge`;
-
     const response = await fetch(url, {
       method: 'POST',
       headers: {
@@ -161,10 +166,9 @@ export async function acknowledgePurchase(
       },
       body: JSON.stringify({ developerPayload: '' }),
     });
-
     return response.ok;
   } catch (e) {
-    console.error('Acknowledge error:', e);
+    console.error('Google Play acknowledge error:', e instanceof Error ? e.message : String(e));
     return false;
   }
 }

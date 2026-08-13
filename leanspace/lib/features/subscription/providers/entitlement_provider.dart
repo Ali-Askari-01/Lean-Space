@@ -38,12 +38,12 @@ class Entitlement {
 class EntitlementNotifier extends Notifier<Entitlement> {
   @override
   Entitlement build() {
-    ref.watch(supabaseClientProvider);
+    ref.watch(apiClientProvider);
     Future.microtask(refresh);
     return const Entitlement();
   }
 
-  ApiClient get _client => ref.read(supabaseClientProvider);
+  ApiClient get _client => ref.read(apiClientProvider);
 
   Future<void> refresh() async {
     if (FeatureFlags.unlockAllFeatures) {
@@ -58,7 +58,7 @@ class EntitlementNotifier extends Notifier<Entitlement> {
     }
 
     try {
-      final row = await _client.get('/api/entitlements');
+      final row = await _client.get('/api/subscription/entitlements');
 
       final tierStr = row['tier'] as String? ?? 'free';
       final proUntilStr = row['pro_until'] as String?;

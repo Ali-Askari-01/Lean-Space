@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:leanspace/core/local_date.dart';
+import 'package:daily_stitch/core/local_date.dart';
 
 void main() {
   group('LocalDate.parseIsoDate', () {

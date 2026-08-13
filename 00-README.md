@@ -1,6 +1,6 @@
 # LeanSpace — Pre-Build Planning Package
 
-This folder is the complete pre-build planning package for **LeanSpace**, a Flutter Android app combining personal habit/task tracking with lightweight async team check-ins, backed by Supabase.
+This folder is the complete pre-build planning package for **LeanSpace**, a Flutter Android app combining personal habit/task tracking with lightweight async team check-ins, backed by Cloudflare Workers + D1.
 
 **Author:** Senior product + engineering lead, on behalf of Ali Askari (solo dev)
 **Source:** `source/LeanSpace_Product_Engineering_Doc.docx` (single source of truth)
@@ -14,11 +14,11 @@ This folder is the complete pre-build planning package for **LeanSpace**, a Flut
 |---|---|---|
 | `source/` | Original Word spec — the contract everything else derives from | When you need the raw source; otherwise use the markdown docs |
 | `product/` | Product requirements — what we're building and why | First; before any code |
-| `engineering/` | Technical specs — architecture, security, UI | Before writing Flutter or Supabase code |
+| `engineering/` | Technical specs — architecture, security, UI | Before writing Flutter or Worker code |
 | `execution/` | Work planning — tickets, risks, dev setup, batch order | When you're ready to build |
 | `operations/` | Quality & launch — testing, rollout, analytics, support | Before each milestone gate and post-launch |
 | `leanspace/` | **Flutter app** — run `flutter run` from here | Daily during implementation |
-| `supabase/` | DB migrations + Edge Functions | Batch 1.2 onward |
+| `cloudflare-workers/` | **Worker API** — deploy with `npx wrangler deploy` | Batch 1.2 onward |
 | `docs/wireframes/` | Sketches + branding notes | Phase 0 wireframing |
 | `scripts/` | Dev helpers (seed SQL, etc.) | RLS / rollover testing |
 
@@ -69,13 +69,13 @@ You asked for 6 docs. Here are 4 more I would write **before scaling beyond laun
 
 ### 9. **Analytics & KPI Tracking Plan** → `operations/09-ANALYTICS-PLAN.md`
 - Source doc already names the four KPIs: D1 retention, D7 retention, free→Pro conversion, Left Behind re-add rate.
-- The Plan needs to spell out: how each is computed in SQL, the dashboard format (SQL views in Supabase + a single Notion page is sufficient for v1), and the review cadence (weekly).
+- The Plan needs to spell out: how each is computed in SQL, the dashboard format (D1 queries + a single Notion page is sufficient for v1), and the review cadence (weekly).
 - Define decision thresholds: e.g. "if D7 retention < 15% after 30 days live, pause new features and run interviews."
 
 ### 10. **Support & Operations Runbook** → `operations/10-SUPPORT-RUNBOOK.md`
 - A one-page document for **you, post-launch**.
 - Common user issues + how to resolve (e.g. "I paid but I'm Free" → reconcile via Play Console + manual `UPDATE users SET tier='pro'`).
-- Where to find what: Sentry dashboard, Supabase logs, Play Console RTDN, AdMob console.
+- Where to find what: Sentry dashboard, Cloudflare Workers logs, Play Console RTDN, AdMob console.
 - Personal cadence: 15 min/day check for the first 2 weeks post-launch.
 
 ### Also added during planning review:
@@ -86,22 +86,22 @@ You asked for 6 docs. Here are 4 more I would write **before scaling beyond laun
 - **Branding kit** — colors, icon variations, store assets. Phase 4 work.
 - **Legal pages hosting** — Privacy Policy + ToS need a public URL. Use a free GitHub Pages site.
 - **Domain `leanspace.app`** — needed for the invite deeplink. Buy in Phase 0; cheap.
-- **Backup strategy** — Supabase has automatic point-in-time recovery on paid tiers. For free tier, schedule a weekly `pg_dump` to your own storage. Not critical at zero users but get it in place before you have meaningful production data.
+- **Backup strategy** — D1 databases can be exported via `wrangler d1 export`. Schedule a regular export before you have meaningful production data.
 
 ---
 
 ## How to start building, today
 
-This is the order. Don't deviate. **Don't write Flutter code before you have a Supabase project and one RLS policy verified.**
+This is the order. Don't deviate. **Don't write Flutter code before you have a Cloudflare Worker deployed and one D1 migration verified.**
 
 ### Day 1–2 (Phase 0 kickoff — admin)
 1. Read all core docs end-to-end (`product/`, `engineering/`, `execution/05-TICKETS.md`, `execution/06-RISKS.md`). Push back on anything that feels wrong **now**.
 2. **Decide:** collaborator cap (A.1), final pricing (A.2). Don't ship without these.
 3. Buy `leanspace.app` domain (~$15/yr).
 4. Pay the $25 Google Play Developer fee.
-5. Create the Supabase project. Save the URL + anon key into a local `.env`.
+5. Deploy the Cloudflare Worker. Save the Worker URL + Google Client ID into `leanspace/env.json`.
 6. Create the Flutter project skeleton: `flutter create leanspace --org com.leanspace`.
-7. Push the empty repo to GitHub. Commit `.env.example`, NOT `.env`.
+7. Push the empty repo to GitHub. Commit `env.json.example`, NOT `env.json`.
 
 ### Day 3–7 (Phase 0 — validation, not code)
 8. **Talk to 5–10 real indie devs / freelancers.** Show them the wireframes (paper is fine). Ask: "Would you pay $3.99/mo for this?" and "Is 8 collaborators enough?" Capture verbatim quotes.
@@ -109,9 +109,9 @@ This is the order. Don't deviate. **Don't write Flutter code before you have a S
 10. Update `execution/06-RISKS.md` with the decisions. Lock the PRD.
 
 ### Week 2–5 (Phase 1)
-11. Follow `execution/12-BATCH-EXECUTION-PLAN.md` batches 1.1–1.7. Start with **DDL + RLS + auth** (Tickets P1-01, P1-02, P1-03, P1-04) — this is the foundation. Don't skip RLS testing.
+11. Follow `execution/12-BATCH-EXECUTION-PLAN.md` batches 1.1–1.7. Start with **D1 schema + auth + API routes** — this is the foundation. Don't skip integration testing.
 12. Then **habits, then todos**. Dogfood from week 3 onwards.
-13. Build the **rollover Edge Function (P1-11) early enough** that you can test it for at least 3 days of real day-changes.
+13. Build the **rollover cron handler (P1-11) early enough** that you can test it for at least 3 days of real day-changes.
 
 ### Week 6–8 (Phase 2)
 14. Play Billing first, paywall second, AdMob last. Each one is a half-week.
@@ -131,7 +131,7 @@ This is the order. Don't deviate. **Don't write Flutter code before you have a S
 ## Build philosophy (read once, then ignore at your peril)
 
 1. **The source doc is the contract. Don't deviate without updating the docs first.** If you change something while coding, update the markdown in the same PR.
-2. **Server-side correctness > client-side correctness.** Every rule that matters (cap, tier, ownership) is enforced by RLS or a trigger. Client UI is *just* the friendly face.
+2. **Server-side correctness > client-side correctness.** Every rule that matters (cap, tier, ownership) is enforced by the Worker. Client UI is *just* the friendly face.
 3. **Defer ruthlessly.** Source doc §2.3 already lists what's deferred. If a Phase 1 feature feels tempting that's not in the PRD, write it down for v1.1 and move on.
 4. **Dogfood from week 3.** Use your own broken app daily. You'll find more bugs in your first week of real use than any test suite will.
 5. **Ship internal testing track by week 10. Hard deadline.** If you're behind, cut polish (Phase 4), not features.

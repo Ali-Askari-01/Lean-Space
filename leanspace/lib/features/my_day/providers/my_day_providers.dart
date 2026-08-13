@@ -41,7 +41,7 @@ class AddTaskResult {
 }
 
 final myDayRepositoryProvider = Provider<MyDayRepository>((ref) {
-  return MyDayRepository(ref.watch(supabaseClientProvider));
+  return MyDayRepository(ref.watch(apiClientProvider));
 });
 
 class MyDayState {

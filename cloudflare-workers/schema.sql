@@ -117,7 +117,7 @@ CREATE TABLE IF NOT EXISTS subscriptions (
   id TEXT PRIMARY KEY,
   user_id TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
   platform TEXT NOT NULL DEFAULT 'google_play' CHECK (platform IN ('google_play', 'app_store')),
-  product_id TEXT NOT NULL CHECK (product_id IN ('daily_stitch_pro_monthly', 'daily_stitch_pro_yearly')),
+  product_id TEXT NOT NULL CHECK (product_id IN ('leanspace_pro_monthly', 'leanspace_pro_yearly', 'leanspace_pro_lifetime')),
   purchase_token TEXT,
   status TEXT NOT NULL DEFAULT 'active' CHECK (status IN ('active', 'canceled', 'expired', 'grace', 'paused')),
   current_period_end TEXT,
@@ -128,6 +128,19 @@ CREATE TABLE IF NOT EXISTS subscriptions (
 CREATE INDEX IF NOT EXISTS idx_subscriptions_user ON subscriptions(user_id);
 CREATE INDEX IF NOT EXISTS idx_subscriptions_token ON subscriptions(purchase_token);
 CREATE UNIQUE INDEX IF NOT EXISTS idx_subscriptions_token_unique ON subscriptions(purchase_token) WHERE purchase_token IS NOT NULL;
+
+CREATE TRIGGER IF NOT EXISTS trg_daily_task_cap_insert
+  BEFORE INSERT ON todos
+  FOR EACH ROW
+  WHEN (
+    SELECT COUNT(*)
+    FROM todos
+    WHERE user_id = NEW.user_id
+      AND original_date = NEW.original_date
+  ) >= 5
+  BEGIN
+    SELECT RAISE(ABORT, 'daily_task_cap');
+  END;
 
 -- STREAK_FREEZE_USES TABLE
 CREATE TABLE IF NOT EXISTS streak_freeze_uses (
@@ -188,3 +201,13 @@ CREATE TABLE IF NOT EXISTS referral_rewards (
   granted_at TEXT NOT NULL DEFAULT (datetime('now')),
   UNIQUE (user_id, referrals_count)
 );
+
+-- RATE_LIMITS TABLE (for server-side rate limiting)
+CREATE TABLE IF NOT EXISTS rate_limits (
+  id TEXT PRIMARY KEY,
+  key TEXT NOT NULL,
+  identifier TEXT NOT NULL,
+  created_at TEXT NOT NULL DEFAULT (datetime('now'))
+);
+CREATE INDEX IF NOT EXISTS idx_rate_limits_lookup ON rate_limits(key, identifier, created_at);
+CREATE INDEX IF NOT EXISTS idx_rate_limits_cleanup ON rate_limits(created_at);

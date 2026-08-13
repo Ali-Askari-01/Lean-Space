@@ -10,11 +10,10 @@ class StreakFreezeRepository {
     final data = await _api.get('/api/streak-freezes');
     final list = data['results'] as List? ?? data.values.first as List? ?? [];
 
-    return (list as List)
+    return list
         .map((row) =>
             LocalDate.parseIsoDate(row['frozen_date'] as String?))
-        .where((date) => date != null)
-        .cast<DateTime>()
+        .whereType<DateTime>()
         .toList();
   }
 
@@ -26,7 +25,7 @@ class StreakFreezeRepository {
     final data = await _api.get('/api/streak-freezes');
     final list = data['results'] as List? ?? data.values.first as List? ?? [];
     int count = 0;
-    for (final row in list as List) {
+    for (final row in list) {
       final date = row['frozen_date'] as String?;
       if (date != null && date.compareTo(monthStartStr) >= 0) count++;
     }

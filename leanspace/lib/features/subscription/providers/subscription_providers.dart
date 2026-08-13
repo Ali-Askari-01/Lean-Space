@@ -29,6 +29,7 @@ class SubscriptionState {
 
   ProductDetails? get monthly => _byId(ProProducts.monthly);
   ProductDetails? get yearly => _byId(ProProducts.yearly);
+  ProductDetails? get lifetime => _byId(ProProducts.lifetime);
 
   ProductDetails? _byId(String id) {
     for (final p in products) {
@@ -102,10 +103,11 @@ class SubscriptionController extends Notifier<SubscriptionState> {
             ? 'Could not load subscription options.'
             : 'Subscriptions are not available yet. '
                 'Missing: ${result.notFoundIds.join(', ')}';
-      } else if (!result.hasMonthly || !result.hasYearly) {
+      } else if (!result.hasMonthly || !result.hasYearly || !result.hasLifetime) {
         final missing = <String>[];
         if (!result.hasMonthly) missing.add(ProProducts.monthly);
         if (!result.hasYearly) missing.add(ProProducts.yearly);
+        if (!result.hasLifetime) missing.add(ProProducts.lifetime);
         debugPrint('subscription: partial catalog, missing ${missing.join(', ')}');
       }
 
@@ -172,13 +174,13 @@ class SubscriptionController extends Notifier<SubscriptionState> {
 
   /// Verifies the purchase server-side, then refreshes tier.
   Future<void> _deliver(PurchaseDetails purchase) async {
-    final api = ref.read(supabaseClientProvider);
+    final api = ref.read(apiClientProvider);
     try {
       final data = await api.post('/api/subscription/verify-play-purchase', {
         'product_id': purchase.productID,
         'purchase_token': purchase.verificationData.serverVerificationData,
       });
-      if (data is Map && data['pro_until'] != null) {
+      if (data['pro_until'] != null) {
         final until = DateTime.tryParse(data['pro_until'] as String);
         ref.read(entitlementProvider.notifier).setProOptimistic(until: until);
       }

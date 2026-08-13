@@ -1,3 +1,3 @@
-/// Deep link Supabase OAuth returns to after Google sign-in.
-/// Must match AndroidManifest intent-filter and Supabase Auth → URL Configuration.
+/// Deep link for OAuth returns after Google sign-in.
+/// Must match AndroidManifest intent-filter.
 const String authRedirectUri = 'com.leanspace://login-callback';

@@ -1,6 +1,7 @@
 import { Hono } from 'hono';
 import type { Env } from '../index';
 import type { AppEnv } from '../types';
+import { checkRateLimit, getRateLimitConfig, getClientIdentifier } from '../rate_limit';
 
 const referrals = new Hono<AppEnv>();
 
@@ -35,11 +36,22 @@ referrals.get('/code', async (c) => {
 
 referrals.post('/apply', async (c) => {
   const userId = c.get('userId');
-  const { code } = await c.req.json();
 
-  if (!code || code.trim().length < 4) return c.json({ error: 'invalid_code' }, 400);
+  // Rate limit check
+  const clientIp = getClientIdentifier(c);
+  const rlConfig = getRateLimitConfig('referral:apply')!;
+  const rl = await checkRateLimit(c.env.DB, 'referral:apply', clientIp, rlConfig);
+  if (!rl.allowed) {
+    return c.json({ error: 'rate_limited', retry_after_ms: rl.retryAfterMs }, 429);
+  }
 
-  const referrer = await c.env.DB.prepare('SELECT id FROM users WHERE referral_code = ?').bind(code.trim().toUpperCase()).first();
+  const body = await c.req.json<{ code?: unknown }>();
+
+  if (!body.code || typeof body.code !== 'string' || body.code.trim().length < 4 || body.code.trim().length > 20) {
+    return c.json({ error: 'invalid_code' }, 400);
+  }
+
+  const referrer = await c.env.DB.prepare('SELECT id FROM users WHERE referral_code = ?').bind(body.code.trim().toUpperCase()).first();
   if (!referrer) return c.json({ error: 'invalid_code' }, 400);
   if (referrer.id === userId) return c.json({ error: 'self_referral' }, 400);
 

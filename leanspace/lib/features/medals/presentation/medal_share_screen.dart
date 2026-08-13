@@ -65,6 +65,7 @@ class _MedalShareScreenState extends ConsumerState<MedalShareScreen>
       await file.writeAsBytes(bytes);
 
       AppHaptics.light();
+      if (!mounted) return;
       final medal = _findMedal();
       final l10n = AppLocalizations.of(context);
       await SharePlus.instance.share(

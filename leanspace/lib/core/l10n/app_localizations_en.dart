@@ -520,7 +520,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get paywallYearly => 'Yearly';
 
   @override
-  String get paywallYearlyCaption => 'Best value · works out to ~2.50 USD/mo';
+  String get paywallYearlyCaption => 'Best value · works out to ~\$0.67/mo';
 
   @override
   String get paywallYearlyBadge => 'SAVE 35%';
@@ -539,6 +539,20 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String paywallStartCtaMonthly(String price) {
     return 'Start Pro · $price/mo';
+  }
+
+  @override
+  String get paywallLifetime => 'Lifetime';
+
+  @override
+  String get paywallLifetimeCaption => 'One-time payment · yours forever';
+
+  @override
+  String get paywallLifetimeBadge => 'BEST DEAL';
+
+  @override
+  String paywallStartCtaLifetime(String price) {
+    return 'Start Pro · $price forever';
   }
 
   @override
@@ -737,7 +751,7 @@ class AppLocalizationsEn extends AppLocalizations {
       'Habits (Morning yoga, Drink water) live forever. Tasks are one-shot. Both feed the same streak.';
 
   @override
-  String get howItWorksLeftBehind => 'Missed tasks → Left Behind';
+  String get howItWorksLeftBehind => 'Missed tasks ? Left Behind';
 
   @override
   String get howItWorksLeftBehindBody =>
@@ -913,7 +927,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get authEnterValidEmail => 'Enter a valid email address';
 
   @override
-  String get authPasswordTooShort => 'Password must be at least 6 characters';
+  String get authPasswordTooShort => 'Password must be at least 8 characters';
 
   @override
   String get authAccountCreated =>
@@ -1206,14 +1220,14 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get helpFaqA6 =>
-      'All data lives in Supabase (Postgres) under the account that signed in. We never sell or share it. See the privacy policy linked in the Play Store listing for the full details.';
+      'All data lives in our secure cloud backend under the account that signed in. We never sell or share it. See the privacy policy linked in the Play Store listing for the full details.';
 
   @override
   String get helpFaqQ7 => 'How do I delete my account?';
 
   @override
   String get helpFaqA7 =>
-      'Go to Settings → Account → Delete account. This permanently removes your profile, tasks, habits, and subscription data. Active Play subscriptions must be cancelled separately in Google Play.';
+      'Go to Settings ? Account ? Delete account. This permanently removes your profile, tasks, habits, and subscription data. Active Play subscriptions must be cancelled separately in Google Play.';
 
   @override
   String get helpTopicsGeneral => 'General question';
@@ -1290,7 +1304,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get referralPaywallBody =>
-      'Invite 5 friends who sign up → 1 month Pro free';
+      'Invite 5 friends who sign up ? 1 month Pro free';
 
   @override
   String get referralPaywallProBody => 'Keep inviting — stack free Pro months';
@@ -1420,7 +1434,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String bootstrapConfigErrorBody(String detail) {
-    return '$detail\n\nAdd SUPABASE_URL and SUPABASE_PUBLISHABLE_KEY (or legacy SUPABASE_ANON_KEY) to leanspace/.env, then rebuild:\n\nflutter build apk --debug';
+    return '$detail\n\nAdd API_BASE_URL and GOOGLE_CLIENT_ID to leanspace/.env, then rebuild:\n\nflutter build apk --debug';
   }
 
   @override
@@ -1430,7 +1444,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get languageNameEn => 'English';
 
   @override
-  String get languageNameUr => 'اردو (Urdu)';
+  String get languageNameUr => '???? (Urdu)';
 
   @override
   String get languageNameEs => 'Español';
@@ -1448,7 +1462,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get languageNameIt => 'Italiano';
 
   @override
-  String get languageNameAr => 'العربية';
+  String get languageNameAr => '???????';
 
   @override
   String get languageNameTr => 'Türkçe';
@@ -1598,14 +1612,14 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get paywallTermsBody =>
-      'Billing is handled by Google Play. Subscriptions renew automatically until you cancel in Play Store → Subscriptions at least 24 hours before the end of the current period. You can manage or cancel your subscription at any time from your Google Play account.\n\nUninstalling the app does not cancel your subscription.\n\nPrices shown are in your local currency and may vary by region. Taxes may apply.';
+      'Billing is handled by Google Play. Subscriptions renew automatically until you cancel in Play Store ? Subscriptions at least 24 hours before the end of the current period. You can manage or cancel your subscription at any time from your Google Play account.\n\nUninstalling the app does not cancel your subscription.\n\nPrices shown are in your local currency and may vary by region. Taxes may apply.';
 
   @override
   String get paywallPrivacyTitle => 'Privacy';
 
   @override
   String get paywallPrivacyBody =>
-      'LeanSpace stores your tasks, habits, and streak data on our Supabase backend, tied to your account. We never sell your data.\n\nSubscription purchases are processed by Google Play. We receive a verified purchase token from Google to confirm your Pro status. We do not see or store your payment details.\n\nYou can request full data export or account deletion from Settings → Account deletion.';
+      'Daily Stitch stores your tasks, habits, and streak data on our secure backend, tied to your account. We never sell your data.\n\nSubscription purchases are processed by Google Play. We receive a verified purchase token from Google to confirm your Pro status. We do not see or store your payment details.\n\nYou can request full data export or account deletion from Settings ? Account deletion.';
 
   @override
   String get paywallCloseTooltip => 'Close';
@@ -1670,7 +1684,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get manageProPlayInstructions =>
-      'Open the Google Play Store app → tap your profile → Payments & subscriptions → Subscriptions.';
+      'Open the Google Play Store app ? tap your profile ? Payments & subscriptions ? Subscriptions.';
 
   @override
   String get addTaskGrowSomething => 'Grow Something';
@@ -1728,7 +1742,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get addTaskNotesMigrationWarning =>
-      'Task saved. Notes & priority need the latest Supabase migration — run supabase/migrations/20260701000000_todos_notes_priority.sql.';
+      'Task saved. Notes & priority require the latest backend migration.';
 
   @override
   String get addTaskNoSproutSlots => 'No empty sprout slots — tend one first.';

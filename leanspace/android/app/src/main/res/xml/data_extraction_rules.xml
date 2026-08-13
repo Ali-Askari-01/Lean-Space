@@ -5,7 +5,7 @@
 
         We do NOT include auth tokens, subscription state, or shared
         preferences in cloud or device-to-device backups. Tasks and
-        habits are server-side so they re-sync from Supabase.
+        habits are server-side so they re-sync from the Cloudflare API.
     -->
     <cloud-backup>
         <exclude domain="sharedpref" path="." />

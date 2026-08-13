@@ -55,19 +55,24 @@ class ApiClient {
         request.body = jsonEncode(body);
       }
 
-      final streamedResponse = await client.send(request);
-      final responseBody = await streamedResponse.stream.bytesToString();
-
-      if (streamedResponse.statusCode == 401) {
-        await signOut();
-        throw ApiException('unauthorized', 401);
-      }
+      final streamedResponse =
+          await client.send(request).timeout(const Duration(seconds: 20));
+      final responseBody = await streamedResponse.stream
+          .bytesToString()
+          .timeout(const Duration(seconds: 20));
 
       if (streamedResponse.statusCode >= 400) {
-        final error = jsonDecode(responseBody);
-        throw ApiException(
-            error['error'] ?? error['message'] ?? 'unknown',
-            streamedResponse.statusCode);
+        final error = responseBody.isNotEmpty
+            ? jsonDecode(responseBody) as Map<String, dynamic>
+            : <String, dynamic>{};
+
+        final errorMsg = error['error'] ?? error['message'] ?? 'unknown';
+
+        if (streamedResponse.statusCode == 401) {
+          await _clearLocalSession();
+        }
+
+        throw ApiException(errorMsg, streamedResponse.statusCode);
       }
 
       return responseBody.isNotEmpty
@@ -111,6 +116,10 @@ class ApiClient {
     try {
       await post('/api/auth/signout');
     } catch (_) {}
+    await _clearLocalSession();
+  }
+
+  Future<void> _clearLocalSession() async {
     _sessionToken = null;
     _currentUser = null;
     await _storage.delete(key: _tokenKey);

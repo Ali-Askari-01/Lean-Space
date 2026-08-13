@@ -1,5 +1,5 @@
-# Build LeanSpace debug APK with Supabase config compiled in.
-# Copy env.json.example to env.json and fill in your keys first.
+# Build LeanSpace debug APK with Cloudflare API config compiled in.
+# Copy env.json.example to env.json and fill in API_BASE_URL and GOOGLE_CLIENT_ID first.
 
 $ErrorActionPreference = "Stop"
 
@@ -41,7 +41,7 @@ if ($args -contains "-Clean") {
 }
 
 if (-not (Test-Path env.json)) {
-  Write-Error "Missing env.json - copy env.json.example to env.json and add your Supabase keys."
+  Write-Error "Missing env.json - copy env.json.example to env.json and add API_BASE_URL and GOOGLE_CLIENT_ID."
 }
 
 flutter pub get

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <network-security-config>
     <!--
-        Daily Stitch network security policy.
+        Lean Space network security policy.
 
         We pin to the exact HTTPS endpoints we use so we don't allow
         arbitrary cleartext traffic. Play Billing's verify endpoint is
@@ -14,7 +14,8 @@
     </base-config>
 
     <domain-config cleartextTrafficPermitted="false">
-        <domain includeSubdomains="true">supabase.co</domain>
+        <domain includeSubdomains="true">workers.dev</domain>
+        <domain includeSubdomains="true">leanspace.app</domain>
         <domain includeSubdomains="true">googleapis.com</domain>
         <domain includeSubdomains="true">google.com</domain>
     </domain-config>

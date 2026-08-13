@@ -18,19 +18,19 @@ class AppLocalizationsPt extends AppLocalizations {
   String get tabProgress => 'Progresso';
 
   @override
-  String get tabYou => 'Você';
+  String get tabYou => 'VocÃª';
 
   @override
   String get navMyDay => 'Meu dia';
 
   @override
-  String get navSettings => 'Configurações';
+  String get navSettings => 'ConfiguraÃ§Ãµes';
 
   @override
   String get navHelp => 'Ajuda & Suporte';
 
   @override
-  String get navHistory => 'Últimos 7 dias';
+  String get navHistory => 'Ãšltimos 7 dias';
 
   @override
   String get navLeftBehind => 'Pendentes';
@@ -57,39 +57,40 @@ class AppLocalizationsPt extends AppLocalizations {
   String get greetingAfternoon => 'Boa tarde, amigo';
 
   @override
-  String get greetingEvening => 'Boa noite, campeão';
+  String get greetingEvening => 'Boa noite, campeÃ£o';
 
   @override
-  String get greetingNight => 'Descansando bem, guardião?';
+  String get greetingNight => 'Descansando bem, guardiÃ£o?';
 
   @override
   String todayTasksCount(String done, String total) {
-    return 'Hoje · $done de $total tarefas';
+    return 'Hoje Â· $done de $total tarefas';
   }
 
   @override
   String todayHabitsCount(String done, String total) {
-    return '$done de $total hábitos';
+    return '$done de $total hÃ¡bitos';
   }
 
   @override
   String get todayChainGrows => 'A CORRENTE CRECE AO FINALIZAR';
 
   @override
-  String get todayChainComplete => 'CORRENTE COMPLETA · CUIDE DO JARDIM AMANHÃ';
+  String get todayChainComplete =>
+      'CORRENTE COMPLETA Â· CUIDE DO JARDIM AMANHÃƒ';
 
   @override
-  String get taskCapInfo => 'Por que a restrição de 5 tarefas?';
+  String get taskCapInfo => 'Por que a restriÃ§Ã£o de 5 tarefas?';
 
   @override
   String get taskCapDiscipline => 'DISCIPLINA EM PRIMEIRO LUGAR POR CONCEITO';
 
   @override
-  String get taskCapTitle => 'Limitamos seu dia a 5 tarefas de propósito.';
+  String get taskCapTitle => 'Limitamos seu dia a 5 tarefas de propÃ³sito.';
 
   @override
   String get taskCapBody =>
-      'Correntes pequenas vencem as longas. Você tem mais chance de finalizar 3 de 5 e sentir a vitória do que abandonar 8 de 10 e sentir a derrota.';
+      'Correntes pequenas vencem as longas. VocÃª tem mais chance de finalizar 3 de 5 e sentir a vitÃ³ria do que abandonar 8 de 10 e sentir a derrota.';
 
   @override
   String get taskCapBulletDone =>
@@ -97,22 +98,22 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get taskCapBulletDoneBody =>
-      'Um dia em que as 5 são finalizadas estende sua sequência em um.';
+      'Um dia em que as 5 sÃ£o finalizadas estende sua sequÃªncia em um.';
 
   @override
-  String get taskCapBulletMissed => 'Tarefas perdidas vão para Pendentes';
+  String get taskCapBulletMissed => 'Tarefas perdidas vÃ£o para Pendentes';
 
   @override
   String get taskCapBulletMissedBody =>
-      'À meia-noite, tarefas não finalizadas aparecem em Pendentes. Re-adicione apenas o que ainda importa.';
+      'Ã€ meia-noite, tarefas nÃ£o finalizadas aparecem em Pendentes. Re-adicione apenas o que ainda importa.';
 
   @override
   String get taskCapBulletFreeze =>
-      'Congelamento de sequência perdoa uma perda';
+      'Congelamento de sequÃªncia perdoa uma perda';
 
   @override
   String get taskCapBulletFreezeBody =>
-      'O Pro dá 2 congelamentos de sequência por mês — eles cobrem um dia perdido para sua corrente sobreviver.';
+      'O Pro dÃ¡ 2 congelamentos de sequÃªncia por mÃªs â€” eles cobrem um dia perdido para sua corrente sobreviver.';
 
   @override
   String get tasksHeader => 'Tarefas';
@@ -127,14 +128,14 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get tasksCapReached =>
-      '5/5 espaços usados — finalize um para plantar uma nova semente.';
+      '5/5 espaÃ§os usados â€” finalize um para plantar uma nova semente.';
 
   @override
   String get tasksEmptyCta =>
-      'Plante sua primeira semente — o que importa hoje?';
+      'Plante sua primeira semente â€” o que importa hoje?';
 
   @override
-  String get habitsHeader => 'Hábitos';
+  String get habitsHeader => 'HÃ¡bitos';
 
   @override
   String habitsGrowing(String count) {
@@ -147,18 +148,18 @@ class AppLocalizationsPt extends AppLocalizations {
   }
 
   @override
-  String get habitsPlantNew => 'Plantar um novo broto de hábito';
+  String get habitsPlantNew => 'Plantar um novo broto de hÃ¡bito';
 
   @override
-  String get habitsPlantFirst => 'Plantar um hábito';
+  String get habitsPlantFirst => 'Plantar um hÃ¡bito';
 
   @override
   String get habitsLocked =>
-      'Espaço de hábito Pro — desbloqueie para plantar mais brotos';
+      'EspaÃ§o de hÃ¡bito Pro â€” desbloqueie para plantar mais brotos';
 
   @override
   String get habitsSlotsFull =>
-      'Todos os espaços de hábitos estão atualmente ocupados.';
+      'Todos os espaÃ§os de hÃ¡bitos estÃ£o atualmente ocupados.';
 
   @override
   String habitsStreakDays(String days) {
@@ -166,11 +167,11 @@ class AppLocalizationsPt extends AppLocalizations {
   }
 
   @override
-  String get habitsCadence => 'DIÁRIO';
+  String get habitsCadence => 'DIÃRIO';
 
   @override
   String leftBehindBanner(String count) {
-    return '$count perdidos — ainda em Pendentes';
+    return '$count perdidos â€” ainda em Pendentes';
   }
 
   @override
@@ -187,7 +188,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get leftBehindEmptyBody =>
-      'Nenhuma tarefa perdida. Toda semente que você planta está sendo cuidada. O jardim está limpo.';
+      'Nenhuma tarefa perdida. Toda semente que vocÃª planta estÃ¡ sendo cuidada. O jardim estÃ¡ limpo.';
 
   @override
   String get leftBehindClearAll => 'Limpar tudo';
@@ -197,7 +198,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String leftBehindClearAllBody(String count) {
-    return 'Isso removerá permanentemente $count tarefa(s) perdida(s). Isso não pode ser desfeito.';
+    return 'Isso removerÃ¡ permanentemente $count tarefa(s) perdida(s). Isso nÃ£o pode ser desfeito.';
   }
 
   @override
@@ -219,20 +220,20 @@ class AppLocalizationsPt extends AppLocalizations {
   String get leftBehindMissedTasks => 'TAREFAS PERDIDAS';
 
   @override
-  String get leftBehindWaitingOne => '1 tarefa está esperando por você.';
+  String get leftBehindWaitingOne => '1 tarefa estÃ¡ esperando por vocÃª.';
 
   @override
   String leftBehindWaitingMany(String count) {
-    return '$count tarefas estão esperando por você.';
+    return '$count tarefas estÃ£o esperando por vocÃª.';
   }
 
   @override
   String get leftBehindBody =>
-      'Re-adicione uma tarefa para trazê-la de volta ao hoje, ou deixe-a ir. Re-adicionar mantém sua corrente viva.';
+      'Re-adicione uma tarefa para trazÃª-la de volta ao hoje, ou deixe-a ir. Re-adicionar mantÃ©m sua corrente viva.';
 
   @override
   String leftBehindReAddedSnack(String task) {
-    return '\"$task\" está de volta no seu dia.';
+    return '\"$task\" estÃ¡ de volta no seu dia.';
   }
 
   @override
@@ -245,7 +246,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String leftBehindYesterdayDate(String date) {
-    return 'Ontem · $date';
+    return 'Ontem Â· $date';
   }
 
   @override
@@ -255,20 +256,20 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String streakAtRiskLastCall(String count) {
-    return 'Último chamado — $count tarefa(s) ainda aberta(s)';
+    return 'Ãšltimo chamado â€” $count tarefa(s) ainda aberta(s)';
   }
 
   @override
   String get streakAtRiskBody =>
-      'A meia-noite está próxima. A corrente depende disso.';
+      'A meia-noite estÃ¡ prÃ³xima. A corrente depende disso.';
 
   @override
   String get streakAtRiskBodyLow =>
-      'Você ainda tem tempo. Um dia limpo estende sua sequência.';
+      'VocÃª ainda tem tempo. Um dia limpo estende sua sequÃªncia.';
 
   @override
   String get streakAtRiskFreeze =>
-      'Ontem perdido — usar congelamento de sequência?';
+      'Ontem perdido â€” usar congelamento de sequÃªncia?';
 
   @override
   String get streakFreezeUse => 'Usar congelamento';
@@ -279,14 +280,14 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get streakFreezeAppliedYesterday =>
-      'Congelamento de sequência aplicado para ontem.';
+      'Congelamento de sequÃªncia aplicado para ontem.';
 
   @override
   String get chainBrokenTitle => 'A corrente quebrou. Tudo bem.';
 
   @override
   String get chainBrokenBody =>
-      'Toda corrente longa termina uma vez. O que importa é o que você planta hoje. Um dia perfeito começa o próximo.';
+      'Toda corrente longa termina uma vez. O que importa Ã© o que vocÃª planta hoje. Um dia perfeito comeÃ§a o prÃ³ximo.';
 
   @override
   String get chainBrokenCta => 'Voltar para hoje';
@@ -307,13 +308,13 @@ class AppLocalizationsPt extends AppLocalizations {
   String get chainBrokenSprouts => 'brotos';
 
   @override
-  String get chainRecoveryFreshStart => 'Um novo começo';
+  String get chainRecoveryFreshStart => 'Um novo comeÃ§o';
 
   @override
   String get medalsTitle => 'Minhas medalhas';
 
   @override
-  String get medalsTrophyRoom => 'Sala de troféus';
+  String get medalsTrophyRoom => 'Sala de trofÃ©us';
 
   @override
   String get medalsAllMedals => 'Todas as medalhas';
@@ -325,15 +326,15 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get medalsTrophyEmpty =>
-      'Seu primeiro emblema está a uma tarefa de distância';
+      'Seu primeiro emblema estÃ¡ a uma tarefa de distÃ¢ncia';
 
   @override
   String get medalsTrophyFirst =>
-      'Você conquistou sua primeira medalha — continue';
+      'VocÃª conquistou sua primeira medalha â€” continue';
 
   @override
   String medalsTrophyMany(String earned) {
-    return '$earned medalhas na sua sala de troféus';
+    return '$earned medalhas na sua sala de trofÃ©us';
   }
 
   @override
@@ -342,21 +343,21 @@ class AppLocalizationsPt extends AppLocalizations {
   }
 
   @override
-  String get medalsShareCta => 'Criar um cartão compartilhável';
+  String get medalsShareCta => 'Criar um cartÃ£o compartilhÃ¡vel';
 
   @override
   String get medalsEmptyTitle => 'Nada nesta categoria ainda';
 
   @override
   String get medalsEmptyBody =>
-      'Finalize uma tarefa ou cuide de um broto para começar sua sala de troféus.';
+      'Finalize uma tarefa ou cuide de um broto para comeÃ§ar sua sala de trofÃ©us.';
 
   @override
   String get medalSheetLocked => 'MEDALHA PRO';
 
   @override
   String medalSheetEarned(String tier) {
-    return 'CONQUISTADA · $tier';
+    return 'CONQUISTADA Â· $tier';
   }
 
   @override
@@ -389,25 +390,25 @@ class AppLocalizationsPt extends AppLocalizations {
   String get medalProgressTitle => 'Progresso';
 
   @override
-  String get historyTitle => 'Últimos 7 dias';
+  String get historyTitle => 'Ãšltimos 7 dias';
 
   @override
-  String get historyFullTitle => 'Histórico completo';
+  String get historyFullTitle => 'HistÃ³rico completo';
 
   @override
-  String get historyLoadError => 'Não foi possível carregar o histórico.';
+  String get historyLoadError => 'NÃ£o foi possÃ­vel carregar o histÃ³rico.';
 
   @override
-  String get historyFullCalendar => 'Calendário completo';
+  String get historyFullCalendar => 'CalendÃ¡rio completo';
 
   @override
   String historyCompletedPercent(String percent) {
-    return '$percent% concluído';
+    return '$percent% concluÃ­do';
   }
 
   @override
   String historyThisWeek(String days) {
-    return 'ÚLTIMOS $days DIAS';
+    return 'ÃšLTIMOS $days DIAS';
   }
 
   @override
@@ -419,15 +420,15 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String historyDoneCount(String done, String total, String perfect) {
-    return 'Você finalizou $done de $total tarefas. $perfect dia(s) perfeito(s).';
+    return 'VocÃª finalizou $done de $total tarefas. $perfect dia(s) perfeito(s).';
   }
 
   @override
-  String get historyUpsellTitle => 'Veja seu histórico completo';
+  String get historyUpsellTitle => 'Veja seu histÃ³rico completo';
 
   @override
   String get historyUpsellBody =>
-      'O Pro desbloqueia 30 dias de histórico. O Gratuito mostra 7.';
+      'O Pro desbloqueia 30 dias de histÃ³rico. O Gratuito mostra 7.';
 
   @override
   String get historyPerfect => 'PERFEITO';
@@ -451,7 +452,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get progressVitalityEmpty =>
-      'Plante uma semente para começar seu jardim.';
+      'Plante uma semente para comeÃ§ar seu jardim.';
 
   @override
   String progressVitalitySeeds(String done, String total) {
@@ -476,17 +477,17 @@ class AppLocalizationsPt extends AppLocalizations {
   String get progressMetricPerfect => 'Perfeito';
 
   @override
-  String get progressMetricHabits => 'Hábitos';
+  String get progressMetricHabits => 'HÃ¡bitos';
 
   @override
-  String get progressHabitBlooms => 'Florações de hábitos';
+  String get progressHabitBlooms => 'FloraÃ§Ãµes de hÃ¡bitos';
 
   @override
   String get progressHabitBloomsSub =>
-      'Marcos de sequência para os brotos que você rega diariamente.';
+      'Marcos de sequÃªncia para os brotos que vocÃª rega diariamente.';
 
   @override
-  String get progressNextBadge => 'Próximo emblema';
+  String get progressNextBadge => 'PrÃ³ximo emblema';
 
   @override
   String progressMedalCount(String earned, String total) {
@@ -498,7 +499,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String progressBrowseMonth(String month) {
-    return 'Navegando $month. Toque em \"Hoje\" para voltar à sua atividade atual.';
+    return 'Navegando $month. Toque em \"Hoje\" para voltar Ã  sua atividade atual.';
   }
 
   @override
@@ -509,28 +510,28 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get progressCalendarBody =>
-      'Verde escuro significa um dia perfeito. A tonalidade desvance conforme você pula.';
+      'Verde escuro significa um dia perfeito. A tonalidade desvance conforme vocÃª pula.';
 
   @override
-  String get paywallTitle => 'Mantenha a corrente inquebrável.';
+  String get paywallTitle => 'Mantenha a corrente inquebrÃ¡vel.';
 
   @override
   String get paywallSubtitle =>
-      'O Daily Stitch Pro dá a você o sistema completo de disciplina.';
+      'O Daily Stitch Pro dÃ¡ a vocÃª o sistema completo de disciplina.';
 
   @override
   String get paywallFeatures =>
-      'Todos os 5 espaços de hábitos, não apenas 3|Seu histórico completo, para sempre|O conjunto completo de medalhas|Congelamento de sequência todo mês|Recibo semanal + cartões de compartilhamento|Temas + mais';
+      'Todos os 5 espaÃ§os de hÃ¡bitos, nÃ£o apenas 3|Seu histÃ³rico completo, para sempre|O conjunto completo de medalhas|Congelamento de sequÃªncia todo mÃªs|Recibo semanal + cartÃµes de compartilhamento|Temas + mais';
 
   @override
   String get paywallFeaturesBodies =>
-      'O Gratuito dá 3. O Pro desbloqueia todos os cinco para que seu ritual diário completo possa viver aqui.|Navegue por cada dia que você completou — não apenas os últimos 7. Olhe para trás anos, não semanas.|Desbloqueie medalhas de nível Lendário. Os emblemas mais raros são para quem vai até o final.|2 congelamentos de sequência por mês para que um único dia ruim não encerre sua corrente.|Belos cartões de compartilhamento da sua semana. Poste sua corrente, inspire alguém mais a começar.|Desbloqueie novas cores de destaque e temas à medida que os adicionamos. Sempre atualizações gratuitas.';
+      'O Gratuito dÃ¡ 3. O Pro desbloqueia todos os cinco para que seu ritual diÃ¡rio completo possa viver aqui.|Navegue por cada dia que vocÃª completou â€” nÃ£o apenas os Ãºltimos 7. Olhe para trÃ¡s anos, nÃ£o semanas.|Desbloqueie medalhas de nÃ­vel LendÃ¡rio. Os emblemas mais raros sÃ£o para quem vai atÃ© o final.|2 congelamentos de sequÃªncia por mÃªs para que um Ãºnico dia ruim nÃ£o encerre sua corrente.|Belos cartÃµes de compartilhamento da sua semana. Poste sua corrente, inspire alguÃ©m mais a comeÃ§ar.|Desbloqueie novas cores de destaque e temas Ã  medida que os adicionamos. Sempre atualizaÃ§Ãµes gratuitas.';
 
   @override
   String get paywallYearly => 'Anual';
 
   @override
-  String get paywallYearlyCaption => 'Melhor valor · fica ~2,50 USD/mês';
+  String get paywallYearlyCaption => 'Melhor valor Â· fica ~2,50 USD/mÃªs';
 
   @override
   String get paywallYearlyBadge => 'ECONOMIZE 35%';
@@ -540,16 +541,30 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get paywallMonthlyCaption =>
-      'Cobrado todo mês · cancele quando quiser';
+      'Cobrado todo mÃªs Â· cancele quando quiser';
 
   @override
   String paywallStartCta(String price) {
-    return 'Iniciar Pro · $price/ano';
+    return 'Iniciar Pro Â· $price/ano';
   }
 
   @override
   String paywallStartCtaMonthly(String price) {
-    return 'Iniciar Pro · $price/mês';
+    return 'Iniciar Pro Â· $price/mÃªs';
+  }
+
+  @override
+  String get paywallLifetime => 'Lifetime';
+
+  @override
+  String get paywallLifetimeCaption => 'One-time payment · yours forever';
+
+  @override
+  String get paywallLifetimeBadge => 'BEST DEAL';
+
+  @override
+  String paywallStartCtaLifetime(String price) {
+    return 'Start Pro · $price forever';
   }
 
   @override
@@ -567,28 +582,29 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get paywallRestoreLater =>
-      'Restauraremos sua compra na próxima sincronização.';
+      'Restauraremos sua compra na prÃ³xima sincronizaÃ§Ã£o.';
 
   @override
-  String get paywallAlreadyPro => 'Você já está no Pro. Obrigado pelo apoio.';
+  String get paywallAlreadyPro =>
+      'VocÃª jÃ¡ estÃ¡ no Pro. Obrigado pelo apoio.';
 
   @override
   String get paywallHabitSlotHead =>
-      'Você usou todos os seus espaços de hábitos gratuitos. Desbloqueie o conjunto completo para plantar todos os rituais que importam para você.';
+      'VocÃª usou todos os seus espaÃ§os de hÃ¡bitos gratuitos. Desbloqueie o conjunto completo para plantar todos os rituais que importam para vocÃª.';
 
   @override
   String get paywallHistoryHead =>
-      'Veja seu histórico completo — cada dia perfeito, cada medalha, cada retorno.';
+      'Veja seu histÃ³rico completo â€” cada dia perfeito, cada medalha, cada retorno.';
 
   @override
   String get paywallMedalHead =>
-      'As medalhas mais raras são exclusivas do Pro. Continue — elas estão mais perto do que você pensa.';
+      'As medalhas mais raras sÃ£o exclusivas do Pro. Continue â€” elas estÃ£o mais perto do que vocÃª pensa.';
 
   @override
   String get settingsYourActivity => 'SUA ATIVIDADE';
 
   @override
-  String get settingsHelpInfo => 'AJUDA & INFORMAÇÕES';
+  String get settingsHelpInfo => 'AJUDA & INFORMAÃ‡Ã•ES';
 
   @override
   String get settingsAccount => 'CONTA';
@@ -600,7 +616,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get settingsReminders => 'LEMBRETES';
 
   @override
-  String get settingsWidgetSanctuary => 'SANTUÁRIO DO WIDGET';
+  String get settingsWidgetSanctuary => 'SANTUÃRIO DO WIDGET';
 
   @override
   String get settingsEcosystemSupport => 'SUPORTE DO ECOSSISTEMA';
@@ -618,20 +634,20 @@ class AppLocalizationsPt extends AppLocalizations {
   String get settingsProActive => 'Ativo';
 
   @override
-  String get settingsProFree => 'Nível Gratuito';
+  String get settingsProFree => 'NÃ­vel Gratuito';
 
   @override
   String get settingsLanguage => 'Idioma';
 
   @override
-  String get settingsLanguageValue => 'Padrão do sistema';
+  String get settingsLanguageValue => 'PadrÃ£o do sistema';
 
   @override
-  String get firstRunGreeting => '5 tarefas. Não mais. Faça-as valer.';
+  String get firstRunGreeting => '5 tarefas. NÃ£o mais. FaÃ§a-as valer.';
 
   @override
   String get firstRunBody =>
-      'Plante sua primeira semente — o que mais importa hoje?';
+      'Plante sua primeira semente â€” o que mais importa hoje?';
 
   @override
   String get firstRunCta => 'Plante sua primeira semente';
@@ -643,39 +659,39 @@ class AppLocalizationsPt extends AppLocalizations {
   String get cancel => 'Cancelar';
 
   @override
-  String get intentionTitle1 => 'Vamos plantar uma nova intenção!';
+  String get intentionTitle1 => 'Vamos plantar uma nova intenÃ§Ã£o!';
 
   @override
   String get intentionBody1 =>
-      'Toda floresta poderosa começa com uma única escolha pequena. Me diga o que estamos cuidando hoje?';
+      'Toda floresta poderosa comeÃ§a com uma Ãºnica escolha pequena. Me diga o que estamos cuidando hoje?';
 
   @override
   String get intentionTitle2 => 'O que vamos cultivar hoje?';
 
   @override
   String get intentionBody2 =>
-      'Sementinhas, cuidadas com carinho, se tornam árvores altas. Escolha a que mais importa agora.';
+      'Sementinhas, cuidadas com carinho, se tornam Ã¡rvores altas. Escolha a que mais importa agora.';
 
   @override
-  String get intentionTitle3 => 'Uma semente. Uma respiração. Comece.';
+  String get intentionTitle3 => 'Uma semente. Uma respiraÃ§Ã£o. Comece.';
 
   @override
   String get intentionBody3 =>
-      'Você não precisa plantar a floresta inteira de uma vez — apenas a próxima coisa certa.';
+      'VocÃª nÃ£o precisa plantar a floresta inteira de uma vez â€” apenas a prÃ³xima coisa certa.';
 
   @override
-  String get intentionTitle4 => 'Cuide do próximo pequeno passo.';
+  String get intentionTitle4 => 'Cuide do prÃ³ximo pequeno passo.';
 
   @override
   String get intentionBody4 =>
-      'Seu eu do futuro é construído pelas escolhas que você faz nos próximos cinco minutos. Qual é uma gentil?';
+      'Seu eu do futuro Ã© construÃ­do pelas escolhas que vocÃª faz nos prÃ³ximos cinco minutos. Qual Ã© uma gentil?';
 
   @override
-  String get intentionTitle5 => 'Escolha o que você quer se tornar.';
+  String get intentionTitle5 => 'Escolha o que vocÃª quer se tornar.';
 
   @override
   String get intentionBody5 =>
-      'Tarefas são sementes, hábitos são brotos. Juntos, eles formam uma floresta da qual você tem orgulho.';
+      'Tarefas sÃ£o sementes, hÃ¡bitos sÃ£o brotos. Juntos, eles formam uma floresta da qual vocÃª tem orgulho.';
 
   @override
   String get intentionTitle6 => 'Plante algo que vale a pena lembrar.';
@@ -689,31 +705,31 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get intentionBody7 =>
-      'A coragem se acumula. Escolha a semente que você vem adiando — mesmo nomeá-la a faz avançar.';
+      'A coragem se acumula. Escolha a semente que vocÃª vem adiando â€” mesmo nomeÃ¡-la a faz avanÃ§ar.';
 
   @override
   String get intentionTitle8 => 'Cuide do solo antes da semente.';
 
   @override
   String get intentionBody8 =>
-      'Qual mentalidade, ferramenta ou pequeno ritual tornará esta tarefa mais fácil? Adicione às notas.';
+      'Qual mentalidade, ferramenta ou pequeno ritual tornarÃ¡ esta tarefa mais fÃ¡cil? Adicione Ã s notas.';
 
   @override
-  String get shareCardSnapshot => 'Um instantâneo do seu santuário';
+  String get shareCardSnapshot => 'Um instantÃ¢neo do seu santuÃ¡rio';
 
   @override
   String get shareCardBody =>
-      'O cartão acima é exportado como PNG e enviado para sua aba de compartilhamento. Poste na sua história, envie a um amigo ou imprima como adesivo.';
+      'O cartÃ£o acima Ã© exportado como PNG e enviado para sua aba de compartilhamento. Poste na sua histÃ³ria, envie a um amigo ou imprima como adesivo.';
 
   @override
-  String get shareCardShareMyBloom => 'Compartilhar minha floração';
+  String get shareCardShareMyBloom => 'Compartilhar minha floraÃ§Ã£o';
 
   @override
-  String get shareCardCouldNotShare => 'Não foi possível compartilhar agora';
+  String get shareCardCouldNotShare => 'NÃ£o foi possÃ­vel compartilhar agora';
 
   @override
   String shareCardProgressText(String year) {
-    return 'Meu progresso no Daily Stitch — $year no Daily Stitch.';
+    return 'Meu progresso no Daily Stitch â€” $year no Daily Stitch.';
   }
 
   @override
@@ -726,49 +742,49 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get howItWorksBody =>
-      'O Daily Stitch ajuda você a manter uma corrente pequena e inquebrável de disciplina. É isso.';
+      'O Daily Stitch ajuda vocÃª a manter uma corrente pequena e inquebrÃ¡vel de disciplina. Ã‰ isso.';
 
   @override
   String get howItWorksToday => 'A aba Hoje';
 
   @override
   String get howItWorksTodayBody =>
-      'Este é o seu lar. Mostra as 5 tarefas e os hábitos que você definiu para hoje. Finalize-os até a meia-noite, a corrente se estende.';
+      'Este Ã© o seu lar. Mostra as 5 tarefas e os hÃ¡bitos que vocÃª definiu para hoje. Finalize-os atÃ© a meia-noite, a corrente se estende.';
 
   @override
-  String get howItWorksCap => 'A restrição de 5 tarefas é o recurso';
+  String get howItWorksCap => 'A restriÃ§Ã£o de 5 tarefas Ã© o recurso';
 
   @override
   String get howItWorksCapBody =>
-      'Nós não deixamos você adicionar uma 6ª. Esse é o ponto todo. Correntes pequenas vencem as longas. Toque no \"?\" na tela inicial para o raciocínio completo.';
+      'NÃ³s nÃ£o deixamos vocÃª adicionar uma 6Âª. Esse Ã© o ponto todo. Correntes pequenas vencem as longas. Toque no \"?\" na tela inicial para o raciocÃ­nio completo.';
 
   @override
   String get howItWorksHabits =>
-      'Hábitos são diários, a corrente é para sempre';
+      'HÃ¡bitos sÃ£o diÃ¡rios, a corrente Ã© para sempre';
 
   @override
   String get howItWorksHabitsBody =>
-      'Hábitos (Yoga matinal, Beber água) vivem para sempre. Tarefas são únicas. Ambos alimentam a mesma sequência.';
+      'HÃ¡bitos (Yoga matinal, Beber Ã¡gua) vivem para sempre. Tarefas sÃ£o Ãºnicas. Ambos alimentam a mesma sequÃªncia.';
 
   @override
-  String get howItWorksLeftBehind => 'Tarefas perdidas → Pendentes';
+  String get howItWorksLeftBehind => 'Tarefas perdidas â†’ Pendentes';
 
   @override
   String get howItWorksLeftBehindBody =>
-      'À meia-noite, tarefas não finalizadas vão para Pendentes. Re-adicione apenas o que ainda importa. O resto recebe um afastamento silencioso.';
+      'Ã€ meia-noite, tarefas nÃ£o finalizadas vÃ£o para Pendentes. Re-adicione apenas o que ainda importa. O resto recebe um afastamento silencioso.';
 
   @override
   String get howItWorksProgress => 'A aba Progresso';
 
   @override
   String get howItWorksProgressBody =>
-      'Sequência, calendário, medalhas, histórico — tudo sobre como você está indo ao longo do tempo. Nada urgente vive aqui.';
+      'SequÃªncia, calendÃ¡rio, medalhas, histÃ³rico â€” tudo sobre como vocÃª estÃ¡ indo ao longo do tempo. Nada urgente vive aqui.';
 
   @override
-  String get howItWorksYou => 'A aba Você';
+  String get howItWorksYou => 'A aba VocÃª';
 
   @override
-  String get howItWorksYouBody => 'Sua conta, configurações, sair. É tudo.';
+  String get howItWorksYouBody => 'Sua conta, configuraÃ§Ãµes, sair. Ã‰ tudo.';
 
   @override
   String get howItWorksRule =>
@@ -814,16 +830,16 @@ class AppLocalizationsPt extends AppLocalizations {
   String get commonError => 'Algo deu errado';
 
   @override
-  String get commonPageNotFound => 'Página não encontrada';
+  String get commonPageNotFound => 'PÃ¡gina nÃ£o encontrada';
 
   @override
-  String get commonHome => 'Início';
+  String get commonHome => 'InÃ­cio';
 
   @override
   String get commonUnknownError => 'Erro de roteamento desconhecido';
 
   @override
-  String get commonSettingsTooltip => 'Configurações';
+  String get commonSettingsTooltip => 'ConfiguraÃ§Ãµes';
 
   @override
   String get commonHowThisWorks => 'Como funciona';
@@ -832,50 +848,50 @@ class AppLocalizationsPt extends AppLocalizations {
   String get myDayReminderSet => 'Lembrete definido';
 
   @override
-  String get myDayPreparationNotes => 'NOTAS DE PREPARAÇÃO';
+  String get myDayPreparationNotes => 'NOTAS DE PREPARAÃ‡ÃƒO';
 
   @override
   String get onboardingSkip => 'PULAR';
 
   @override
-  String get onboardingNext => 'Próximo';
+  String get onboardingNext => 'PrÃ³ximo';
 
   @override
-  String get onboardingEnterSanctuary => 'Entrar no Santuário';
+  String get onboardingEnterSanctuary => 'Entrar no SantuÃ¡rio';
 
   @override
-  String get onboardingIntroduction => 'INTRODUÇÃO';
+  String get onboardingIntroduction => 'INTRODUÃ‡ÃƒO';
 
   @override
   String get onboardingGrowYourForest => 'CRESCA SUA FLORESTA';
 
   @override
-  String get onboardingPage1Title => 'Conheça seu Guardião.';
+  String get onboardingPage1Title => 'ConheÃ§a seu GuardiÃ£o.';
 
   @override
   String get onboardingPage1Body =>
-      'Bem-vindo ao seu Santuário Pessoal. Aqui, seu crescimento se reflete na vida da sua floresta.';
+      'Bem-vindo ao seu SantuÃ¡rio Pessoal. Aqui, seu crescimento se reflete na vida da sua floresta.';
 
   @override
   String get onboardingPage2Title => 'Plante sementes. Veja crescer.';
 
   @override
   String get onboardingPage2Body =>
-      'Cada tarefa é uma sementinha. Cada hábito é um broto que você cuida todos os dias. Juntos, eles formam uma floresta de disciplina.';
+      'Cada tarefa Ã© uma sementinha. Cada hÃ¡bito Ã© um broto que vocÃª cuida todos os dias. Juntos, eles formam uma floresta de disciplina.';
 
   @override
   String get onboardingPage3Title => 'Cinco tarefas. Uma corrente.';
 
   @override
   String get onboardingPage3Body =>
-      'Você só pode plantar 5 sementes por dia. Essa restrição força você a se concentrar no que realmente importa — e proteger sua corrente.';
+      'VocÃª sÃ³ pode plantar 5 sementes por dia. Essa restriÃ§Ã£o forÃ§a vocÃª a se concentrar no que realmente importa â€” e proteger sua corrente.';
 
   @override
   String get onboardingPage4Title => 'Cuide dos brotos diariamente.';
 
   @override
   String get onboardingPage4Body =>
-      'Toque nos hábitos para fazê-los crescer. Pule um dia e a corrente não se estende. O Guardião cresce com você.';
+      'Toque nos hÃ¡bitos para fazÃª-los crescer. Pule um dia e a corrente nÃ£o se estende. O GuardiÃ£o cresce com vocÃª.';
 
   @override
   String get authBrand => 'DAILY STITCH';
@@ -884,14 +900,14 @@ class AppLocalizationsPt extends AppLocalizations {
   String get authPlantFirstSeed => 'Plante sua primeira semente.';
 
   @override
-  String get authWelcomeBack => 'Bem-vindo de volta, Guardião.';
+  String get authWelcomeBack => 'Bem-vindo de volta, GuardiÃ£o.';
 
   @override
   String get authFiveTasksDaily =>
-      'Cinco tarefas. Hábitos diários. Sem desculpas.';
+      'Cinco tarefas. HÃ¡bitos diÃ¡rios. Sem desculpas.';
 
   @override
-  String get authSanctuaryWaiting => 'Seu santuário está esperando.';
+  String get authSanctuaryWaiting => 'Seu santuÃ¡rio estÃ¡ esperando.';
 
   @override
   String get authSignIn => 'Entrar';
@@ -924,10 +940,10 @@ class AppLocalizationsPt extends AppLocalizations {
   String get authEnterEmail => 'Digite seu e-mail';
 
   @override
-  String get authEnterValidEmail => 'Digite um endereço de e-mail válido';
+  String get authEnterValidEmail => 'Digite um endereÃ§o de e-mail vÃ¡lido';
 
   @override
-  String get authPasswordTooShort => 'A senha deve ter pelo menos 6 caracteres';
+  String get authPasswordTooShort => 'A senha deve ter pelo menos 8 caracteres';
 
   @override
   String get authAccountCreated =>
@@ -938,34 +954,34 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get authCouldNotStartGoogle =>
-      'Não foi possível iniciar o login com Google.';
+      'NÃ£o foi possÃ­vel iniciar o login com Google.';
 
   @override
   String get authMidnightReset =>
-      'Ao entrar, você aceita que seu dia reinicia à meia-noite.';
+      'Ao entrar, vocÃª aceita que seu dia reinicia Ã  meia-noite.';
 
   @override
-  String get authSetupRequired => 'Configuração necessária';
+  String get authSetupRequired => 'ConfiguraÃ§Ã£o necessÃ¡ria';
 
   @override
-  String get settingsPersonalSanctuary => 'SANTUÁRIO PESSOAL';
+  String get settingsPersonalSanctuary => 'SANTUÃRIO PESSOAL';
 
   @override
   String get settingsHowThisWorks => 'Como funciona';
 
   @override
   String get settingsHowThisWorksSubtitle =>
-      'O que o app faz, como a restrição e a sequência funcionam';
+      'O que o app faz, como a restriÃ§Ã£o e a sequÃªncia funcionam';
 
   @override
-  String get settingsStreakProtection => 'Proteção de sequência';
+  String get settingsStreakProtection => 'ProteÃ§Ã£o de sequÃªncia';
 
   @override
   String get settingsStreakProtectionAvailable =>
-      '1 congelamento disponível este mês';
+      '1 congelamento disponÃ­vel este mÃªs';
 
   @override
-  String get settingsStreakProtectionUsed => 'Usado para este mês';
+  String get settingsStreakProtectionUsed => 'Usado para este mÃªs';
 
   @override
   String get settingsProSubscription => 'Daily Stitch Pro';
@@ -978,7 +994,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get settingsProUnlock =>
-      'Desbloquear todos os 5 hábitos, histórico completo e mais';
+      'Desbloquear todos os 5 hÃ¡bitos, histÃ³rico completo e mais';
 
   @override
   String get settingsTaskAlarms => 'Alarmes de tarefa & Chamado Final';
@@ -992,7 +1008,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get settingsHomeScreenWidgetSubtitle =>
-      'Adicione sua sequência de corrente à tela inicial';
+      'Adicione sua sequÃªncia de corrente Ã  tela inicial';
 
   @override
   String get settingsShareBloomTracker => 'Compartilhar Daily Stitch';
@@ -1016,52 +1032,52 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get settingsAllFeaturesUnlockedSubtitle =>
-      'Versão beta — assinaturas pausadas enquanto testamos tudo.';
+      'VersÃ£o beta â€” assinaturas pausadas enquanto testamos tudo.';
 
   @override
   String settingsVersion(Object build, Object version) {
-    return 'Versão $version ($build)';
+    return 'VersÃ£o $version ($build)';
   }
 
   @override
-  String get settingsVersionUnknown => 'Versão 1.0.0';
+  String get settingsVersionUnknown => 'VersÃ£o 1.0.0';
 
   @override
-  String get settingsHabitMaster => 'Mestre dos Hábitos';
+  String get settingsHabitMaster => 'Mestre dos HÃ¡bitos';
 
   @override
   String settingsLevel(Object level) {
-    return 'Nível $level · Mestre dos Hábitos';
+    return 'NÃ­vel $level Â· Mestre dos HÃ¡bitos';
   }
 
   @override
   String get languagePickerTitle => 'Idioma';
 
   @override
-  String get youLast7Days => 'Últimos 7 dias';
+  String get youLast7Days => 'Ãšltimos 7 dias';
 
   @override
-  String get youLast7DaysSubtitle => 'Histórico de tarefas dia a dia';
+  String get youLast7DaysSubtitle => 'HistÃ³rico de tarefas dia a dia';
 
   @override
   String get youLeftBehindSubtitle =>
       'Tarefas perdidas esperando para serem re-adicionadas';
 
   @override
-  String get youProTier => 'Nível Pro';
+  String get youProTier => 'NÃ­vel Pro';
 
   @override
-  String get youFreeTier => 'Nível Gratuito';
+  String get youFreeTier => 'NÃ­vel Gratuito';
 
   @override
   String get youPro => 'Pro';
 
   @override
-  String get youFree => 'Grátis';
+  String get youFree => 'GrÃ¡tis';
 
   @override
   String youLevelLabel(Object level) {
-    return 'Nível $level';
+    return 'NÃ­vel $level';
   }
 
   @override
@@ -1070,7 +1086,7 @@ class AppLocalizationsPt extends AppLocalizations {
   }
 
   @override
-  String get youPlantHabit => 'Plante um hábito para iniciar uma corrente.';
+  String get youPlantHabit => 'Plante um hÃ¡bito para iniciar uma corrente.';
 
   @override
   String get youProBadge => 'PRO';
@@ -1081,24 +1097,24 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get youProFeatures =>
-      '5 espaços de hábitos, histórico completo, medalhas lendárias, congelamentos mensais de sequência, cartões de compartilhamento semanais.';
+      '5 espaÃ§os de hÃ¡bitos, histÃ³rico completo, medalhas lendÃ¡rias, congelamentos mensais de sequÃªncia, cartÃµes de compartilhamento semanais.';
 
   @override
   String get youSeePlans => 'Ver planos';
 
   @override
   String youFromPrice(Object price) {
-    return 'a partir de $price/mês';
+    return 'a partir de $price/mÃªs';
   }
 
   @override
-  String get youBloomTrackerFooter => 'Daily Stitch · Hábitos & Tarefas';
+  String get youBloomTrackerFooter => 'Daily Stitch Â· HÃ¡bitos & Tarefas';
 
   @override
   String get progressMedals => 'Medalhas';
 
   @override
-  String get progressLast7Days => 'Últimos 7 dias';
+  String get progressLast7Days => 'Ãšltimos 7 dias';
 
   @override
   String get progressSeeAll => 'Ver todas';
@@ -1108,24 +1124,24 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String progressTasksFinishedPct(Object done, Object pct, Object total) {
-    return '$done de $total tarefas finalizadas · $pct%';
+    return '$done de $total tarefas finalizadas Â· $pct%';
   }
 
   @override
   String get progressNoMedalsYet =>
-      'Nenhuma medalha ainda — finalize uma tarefa ou cuide de um broto para começar.';
+      'Nenhuma medalha ainda â€” finalize uma tarefa ou cuide de um broto para comeÃ§ar.';
 
   @override
   String progressSeeAllMedals(Object earned, Object total) {
-    return 'Ver todas as medalhas · $earned de $total conquistadas';
+    return 'Ver todas as medalhas Â· $earned de $total conquistadas';
   }
 
   @override
-  String get progressGuardianInsight => 'Insight do Guardião';
+  String get progressGuardianInsight => 'Insight do GuardiÃ£o';
 
   @override
   String progressNextBadgeTier(Object tier) {
-    return 'PRÓXIMO EMBLEMA · $tier';
+    return 'PRÃ“XIMO EMBLEMA Â· $tier';
   }
 
   @override
@@ -1143,25 +1159,25 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get helpBody =>
-      'A maioria das respostas está abaixo. Se não encontrar, nos envie uma mensagem e geralmente respondemos em 2–3 dias.';
+      'A maioria das respostas estÃ¡ abaixo. Se nÃ£o encontrar, nos envie uma mensagem e geralmente respondemos em 2â€“3 dias.';
 
   @override
   String get helpSectionFAQ => 'PERGUNTAS FREQUENTES';
 
   @override
-  String get helpSectionContact => 'AINDA COM DÚVIDAS?';
+  String get helpSectionContact => 'AINDA COM DÃšVIDAS?';
 
   @override
   String get helpAddMessage => 'Adicione uma mensagem curta primeiro.';
 
   @override
-  String get helpOpening => 'Abrindo seu app de e-mail…';
+  String get helpOpening => 'Abrindo seu app de e-mailâ€¦';
 
   @override
   String get helpEmailUs => 'Envie-nos um e-mail';
 
   @override
-  String get helpOpeningAction => 'Abrindo…';
+  String get helpOpeningAction => 'Abrindoâ€¦';
 
   @override
   String get helpCopyEmail => 'Copiar e-mail de suporte';
@@ -1180,94 +1196,94 @@ class AppLocalizationsPt extends AppLocalizations {
   String get helpWhatHappened => 'O que aconteceu?';
 
   @override
-  String get helpHint => 'Uma descrição curta ajuda muito…';
+  String get helpHint => 'Uma descriÃ§Ã£o curta ajuda muitoâ€¦';
 
   @override
   String get helpDisclaimer =>
-      'Ao tocar em \"Envie-nos um e-mail\", seu app de e-mail abre com uma mensagem pré-preenchida (nenhum dado sai do seu dispositivo até você enviar).';
+      'Ao tocar em \"Envie-nos um e-mail\", seu app de e-mail abre com uma mensagem prÃ©-preenchida (nenhum dado sai do seu dispositivo atÃ© vocÃª enviar).';
 
   @override
-  String get helpFaqQ1 => 'O que é a restrição de 5 tarefas?';
+  String get helpFaqQ1 => 'O que Ã© a restriÃ§Ã£o de 5 tarefas?';
 
   @override
   String get helpFaqA1 =>
-      'Você pode adicionar até 5 tarefas por dia local. A 6ª é bloqueada de propósito — disciplina vence sobrecarga. A restrição é o recurso, não uma limitação.';
+      'VocÃª pode adicionar atÃ© 5 tarefas por dia local. A 6Âª Ã© bloqueada de propÃ³sito â€” disciplina vence sobrecarga. A restriÃ§Ã£o Ã© o recurso, nÃ£o uma limitaÃ§Ã£o.';
 
   @override
-  String get helpFaqQ2 => 'O que acontece à meia-noite?';
+  String get helpFaqQ2 => 'O que acontece Ã  meia-noite?';
 
   @override
   String get helpFaqA2 =>
-      'Na meia-noite do seu horário local, qualquer tarefa ainda marcada como aberta recebe o selo \"perdida\" e vai para Pendentes. Sequências de hábitos são redefinidas se o hábito não foi concluído no dia anterior.';
+      'Na meia-noite do seu horÃ¡rio local, qualquer tarefa ainda marcada como aberta recebe o selo \"perdida\" e vai para Pendentes. SequÃªncias de hÃ¡bitos sÃ£o redefinidas se o hÃ¡bito nÃ£o foi concluÃ­do no dia anterior.';
 
   @override
-  String get helpFaqQ3 => 'O que são Pendentes?';
+  String get helpFaqQ3 => 'O que sÃ£o Pendentes?';
 
   @override
   String get helpFaqA3 =>
-      'Uma lista gentil e dispensável de tarefas que você não finalizou. Abra-a, re-adicione apenas o que ainda importa e deixe o resto ir. O nível Gratuito mostra os últimos 7 dias; o Pro mostra o histórico completo.';
+      'Uma lista gentil e dispensÃ¡vel de tarefas que vocÃª nÃ£o finalizou. Abra-a, re-adicione apenas o que ainda importa e deixe o resto ir. O nÃ­vel Gratuito mostra os Ãºltimos 7 dias; o Pro mostra o histÃ³rico completo.';
 
   @override
-  String get helpFaqQ4 => 'Como as sequências funcionam?';
+  String get helpFaqQ4 => 'Como as sequÃªncias funcionam?';
 
   @override
   String get helpFaqA4 =>
-      'Um dia estende a corrente quando você teve pelo menos 1 tarefa e 0 foram perdidas. Dias com zero tarefas não estendem nem quebram a corrente. Um congelamento de sequência perdoa um dia perdido por mês.';
+      'Um dia estende a corrente quando vocÃª teve pelo menos 1 tarefa e 0 foram perdidas. Dias com zero tarefas nÃ£o estendem nem quebram a corrente. Um congelamento de sequÃªncia perdoa um dia perdido por mÃªs.';
 
   @override
-  String get helpFaqQ5 => 'O que é o congelamento de sequência?';
+  String get helpFaqQ5 => 'O que Ã© o congelamento de sequÃªncia?';
 
   @override
   String get helpFaqA5 =>
-      'Um \"congelamento\" por mês calendário, apenas para o Pro. Use-o em um dia que você perdeu para manter sua corrente viva. Encontre-o na aba Progresso.';
+      'Um \"congelamento\" por mÃªs calendÃ¡rio, apenas para o Pro. Use-o em um dia que vocÃª perdeu para manter sua corrente viva. Encontre-o na aba Progresso.';
 
   @override
-  String get helpFaqQ6 => 'Onde meus dados são armazenados?';
+  String get helpFaqQ6 => 'Onde meus dados sÃ£o armazenados?';
 
   @override
   String get helpFaqA6 =>
-      'Todos os dados ficam no Supabase (Postgres) vinculados à conta que fez login. Nunca vendemos ou compartilhamos. Veja a política de privacidade no link da listagem na Play Store para detalhes completos.';
+      'Todos os dados ficam em nosso backend cloud seguro, vinculados Ã  conta que fez login. Nunca vendemos ou compartilhamos. Veja a polÃ­tica de privacidade no link da listagem na Play Store para detalhes completos.';
 
   @override
   String get helpFaqQ7 => 'Como excluo minha conta?';
 
   @override
   String get helpFaqA7 =>
-      'Vá para Configurações → Conta → Excluir conta. Isso remove permanentemente seu perfil, tarefas, hábitos e dados de assinatura. Assinaturas ativas do Play devem ser canceladas separadamente no Google Play.';
+      'VÃ¡ para ConfiguraÃ§Ãµes â†’ Conta â†’ Excluir conta. Isso remove permanentemente seu perfil, tarefas, hÃ¡bitos e dados de assinatura. Assinaturas ativas do Play devem ser canceladas separadamente no Google Play.';
 
   @override
   String get helpTopicsGeneral => 'Pergunta geral';
 
   @override
-  String get helpTopicsBug => 'Relatório de bug';
+  String get helpTopicsBug => 'RelatÃ³rio de bug';
 
   @override
-  String get helpTopicsStreak => 'Problema de sequência';
+  String get helpTopicsStreak => 'Problema de sequÃªncia';
 
   @override
-  String get helpTopicsBilling => 'Cobrança ou nível Pro';
+  String get helpTopicsBilling => 'CobranÃ§a ou nÃ­vel Pro';
 
   @override
   String get helpTopicsAccount => 'Conta & dados';
 
   @override
-  String get helpTopicsFeature => 'Solicitação de recurso';
+  String get helpTopicsFeature => 'SolicitaÃ§Ã£o de recurso';
 
   @override
-  String get helpAccountAnon => '(não conectado)';
+  String get helpAccountAnon => '(nÃ£o conectado)';
 
   @override
   String get splashTagline =>
-      'Cuide de pequenas sementes. Cresça uma floresta.';
+      'Cuide de pequenas sementes. CresÃ§a uma floresta.';
 
   @override
-  String get priorityStandard => 'PADRÃO';
+  String get priorityStandard => 'PADRÃƒO';
 
   @override
   String get priorityVital => 'VITAL';
 
   @override
-  String get prioritySpark => 'FAÍSCA';
+  String get prioritySpark => 'FAÃSCA';
 
   @override
   String get settingsDeleteAccount => 'Excluir conta';
@@ -1281,20 +1297,20 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get settingsDeleteAccountConfirmBody =>
-      'Isso exclui permanentemente seu perfil, tarefas, hábitos e progresso. Assinaturas ativas devem ser canceladas separadamente no Google Play. Isso não pode ser desfeito.';
+      'Isso exclui permanentemente seu perfil, tarefas, hÃ¡bitos e progresso. Assinaturas ativas devem ser canceladas separadamente no Google Play. Isso nÃ£o pode ser desfeito.';
 
   @override
   String get settingsDeleteAccountConfirmButton => 'Excluir para sempre';
 
   @override
-  String get settingsDeleteAccountSuccess => 'Sua conta foi excluída.';
+  String get settingsDeleteAccountSuccess => 'Sua conta foi excluÃ­da.';
 
   @override
   String get settingsDeleteAccountFailed =>
-      'Não foi possível excluir a conta. Tente novamente ou envie um e-mail para support@dailystitch.app.';
+      'NÃ£o foi possÃ­vel excluir a conta. Tente novamente ou envie um e-mail para support@dailystitch.app.';
 
   @override
-  String get referralYouTitle => 'Convide amigos · ganhe Pro grátis';
+  String get referralYouTitle => 'Convide amigos Â· ganhe Pro grÃ¡tis';
 
   @override
   String referralYouSubtitle(int progress, int milestone) {
@@ -1308,15 +1324,15 @@ class AppLocalizationsPt extends AppLocalizations {
   String get referralYouDetails => 'Ver detalhes';
 
   @override
-  String get referralPaywallTitle => 'Mês grátis de Pro';
+  String get referralPaywallTitle => 'MÃªs grÃ¡tis de Pro';
 
   @override
   String get referralPaywallBody =>
-      'Convide 5 amigos que se inscreverem → 1 mês de Pro grátis';
+      'Convide 5 amigos que se inscreverem â†’ 1 mÃªs de Pro grÃ¡tis';
 
   @override
   String get referralPaywallProBody =>
-      'Continue convidando — acumule meses grátis de Pro';
+      'Continue convidando â€” acumule meses grÃ¡tis de Pro';
 
   @override
   String referralPaywallProgress(Object count, Object milestone) {
@@ -1325,7 +1341,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get insightsLoadError =>
-      'Não foi possível carregar seu progresso. Tente novamente mais tarde.';
+      'NÃ£o foi possÃ­vel carregar seu progresso. Tente novamente mais tarde.';
 
   @override
   String get insightsMetricCurrentChain => 'CORRENTE ATUAL';
@@ -1340,7 +1356,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get insightsMetricPerfectDays => 'DIAS PERFEITOS';
 
   @override
-  String get insightsMetricHabits => 'HÁBITOS';
+  String get insightsMetricHabits => 'HÃBITOS';
 
   @override
   String get insightsDay => 'dia';
@@ -1355,49 +1371,49 @@ class AppLocalizationsPt extends AppLocalizations {
   String get insightsShareMyWeek => 'Compartilhar minha semana';
 
   @override
-  String get insightsShareMyWeekPro => 'Compartilhar minha semana · Pro';
+  String get insightsShareMyWeekPro => 'Compartilhar minha semana Â· Pro';
 
   @override
   String get insightsShareReceiptText =>
-      'Minha semana no Daily Stitch. Não quebre a corrente.';
+      'Minha semana no Daily Stitch. NÃ£o quebre a corrente.';
 
   @override
   String insightsHistoryWindowTitle(int days) {
-    return 'Mostrando os últimos $days dias';
+    return 'Mostrando os Ãºltimos $days dias';
   }
 
   @override
   String get insightsHistoryUpsell =>
-      'Desbloqueie seu histórico completo com Pro';
+      'Desbloqueie seu histÃ³rico completo com Pro';
 
   @override
   String get referralScreenTitle => 'Convidar amigos';
 
   @override
-  String get referralLaunchGift => 'Presente do mês de lançamento';
+  String get referralLaunchGift => 'Presente do mÃªs de lanÃ§amento';
 
   @override
-  String get referralRewardTitle => 'Ganhe 1 mês de Pro grátis';
+  String get referralRewardTitle => 'Ganhe 1 mÃªs de Pro grÃ¡tis';
 
   @override
   String get referralRewardBody =>
-      'Compartilhe seu código com amigos. Quando 5 pessoas se inscreverem usando ele, você desbloqueia o Daily Stitch Pro por um mês completo.';
+      'Compartilhe seu cÃ³digo com amigos. Quando 5 pessoas se inscreverem usando ele, vocÃª desbloqueia o Daily Stitch Pro por um mÃªs completo.';
 
   @override
-  String get referralYourCode => 'Seu código de indicação';
+  String get referralYourCode => 'Seu cÃ³digo de indicaÃ§Ã£o';
 
   @override
-  String get referralCopyCodeTooltip => 'Copiar código';
+  String get referralCopyCodeTooltip => 'Copiar cÃ³digo';
 
   @override
-  String get referralCodeCopied => 'Código de indicação copiado';
+  String get referralCodeCopied => 'CÃ³digo de indicaÃ§Ã£o copiado';
 
   @override
   String get referralShareWithFriends => 'Compartilhar com amigos';
 
   @override
   String get referralFooterHint =>
-      'Os amigos inserem seu código ao criar uma conta. Cada amigo conta uma vez para sua recompensa.';
+      'Os amigos inserem seu cÃ³digo ao criar uma conta. Cada amigo conta uma vez para sua recompensa.';
 
   @override
   String referralFriendsJoinedOne(int count) {
@@ -1411,21 +1427,21 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String referralRewardsEarnedOne(int count) {
-    return 'Você ganhou $count mês grátis de Pro.';
+    return 'VocÃª ganhou $count mÃªs grÃ¡tis de Pro.';
   }
 
   @override
   String referralRewardsEarnedMany(int count) {
-    return 'Você ganhou $count meses grátis de Pro.';
+    return 'VocÃª ganhou $count meses grÃ¡tis de Pro.';
   }
 
   @override
   String get referralRewardUnlocked =>
-      'Recompensa desbloqueada — aproveite seu mês grátis de Pro!';
+      'Recompensa desbloqueada â€” aproveite seu mÃªs grÃ¡tis de Pro!';
 
   @override
   String referralRemainingToUnlock(int remaining) {
-    return '$remaining mais para desbloquear seu mês grátis';
+    return '$remaining mais para desbloquear seu mÃªs grÃ¡tis';
   }
 
   @override
@@ -1434,7 +1450,7 @@ class AppLocalizationsPt extends AppLocalizations {
   }
 
   @override
-  String get youProPerksTitle => 'Seus benefícios Pro';
+  String get youProPerksTitle => 'Seus benefÃ­cios Pro';
 
   @override
   String get manageProThankYou => 'Obrigado por apoiar o Bloom';
@@ -1445,26 +1461,26 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String bootstrapConfigErrorBody(String detail) {
-    return '$detail\n\nAdicione SUPABASE_URL e SUPABASE_PUBLISHABLE_KEY (ou o legado SUPABASE_ANON_KEY) ao arquivo leanspace/.env, depois reconstrua:\n\nflutter build apk --debug';
+    return '$detail\n\nAdicione API_BASE_URL e GOOGLE_CLIENT_ID (ou o legado GOOGLE_CLIENT_ID) ao arquivo leanspace/.env, depois reconstrua:\n\nflutter build apk --debug';
   }
 
   @override
-  String get languageSystemDefault => 'Padrão do sistema';
+  String get languageSystemDefault => 'PadrÃ£o do sistema';
 
   @override
   String get languageNameEn => 'English';
 
   @override
-  String get languageNameUr => 'اردو (Urdu)';
+  String get languageNameUr => 'Ø§Ø±Ø¯Ùˆ (Urdu)';
 
   @override
-  String get languageNameEs => 'Español';
+  String get languageNameEs => 'EspaÃ±ol';
 
   @override
-  String get languageNamePt => 'Português';
+  String get languageNamePt => 'PortuguÃªs';
 
   @override
-  String get languageNameFr => 'Français';
+  String get languageNameFr => 'FranÃ§ais';
 
   @override
   String get languageNameDe => 'Deutsch';
@@ -1473,10 +1489,10 @@ class AppLocalizationsPt extends AppLocalizations {
   String get languageNameIt => 'Italiano';
 
   @override
-  String get languageNameAr => 'العربية';
+  String get languageNameAr => 'Ø§Ù„Ø¹Ø±Ø¨ÙŠØ©';
 
   @override
-  String get languageNameTr => 'Türkçe';
+  String get languageNameTr => 'TÃ¼rkÃ§e';
 
   @override
   String get languageNameId => 'Bahasa Indonesia';
@@ -1486,7 +1502,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get onboardingLanguageBody =>
-      'Escolha o idioma que você gostaria de usar no Daily Stitch. Você pode alterá-lo a qualquer momento nas Configurações.';
+      'Escolha o idioma que vocÃª gostaria de usar no Daily Stitch. VocÃª pode alterÃ¡-lo a qualquer momento nas ConfiguraÃ§Ãµes.';
 
   @override
   String get onboardingLanguageContinue => 'Continuar';
@@ -1502,36 +1518,36 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get settingsAppThemeSubtitle =>
-      'Escolha as cores do seu santuário pessoal';
+      'Escolha as cores do seu santuÃ¡rio pessoal';
 
   @override
-  String get settingsInviteFriendsTitle => 'Convidar amigos · Pro grátis';
+  String get settingsInviteFriendsTitle => 'Convidar amigos Â· Pro grÃ¡tis';
 
   @override
   String get settingsInviteFriendsSubtitle =>
-      'Ganhe 1 mês grátis quando 5 amigos participarem';
+      'Ganhe 1 mÃªs grÃ¡tis quando 5 amigos participarem';
 
   @override
-  String get themePickerTitle => 'Santuário Pessoal';
+  String get themePickerTitle => 'SantuÃ¡rio Pessoal';
 
   @override
   String get themePickerSubtitle =>
       'Escolha uma paleta de cores que traga paz.';
 
   @override
-  String get themeNameClassicBloom => 'Floração Clássica';
+  String get themeNameClassicBloom => 'FloraÃ§Ã£o ClÃ¡ssica';
 
   @override
   String get themeNameSolarTerracotta => 'Terracota Solar';
 
   @override
-  String get themeNameMidnightOasis => 'Oásis da Meia-Noite';
+  String get themeNameMidnightOasis => 'OÃ¡sis da Meia-Noite';
 
   @override
   String get themeNameLavenderDream => 'Sonho de Lavanda';
 
   @override
-  String get themeNameNordicFrost => 'Geada Nórdica';
+  String get themeNameNordicFrost => 'Geada NÃ³rdica';
 
   @override
   String get themeNameCyberpunkNeon => 'Neon Cyberpunk';
@@ -1541,7 +1557,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get reminderBody =>
-      'O Chamado Final avisa você antes da meia-noite se houver tarefas ainda abertas.';
+      'O Chamado Final avisa vocÃª antes da meia-noite se houver tarefas ainda abertas.';
 
   @override
   String get reminderFinalCall => 'Chamado Final';
@@ -1550,7 +1566,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get reminderEveningNudge => 'Toque noturno';
 
   @override
-  String get reminderChangeTime => 'Alterar horário';
+  String get reminderChangeTime => 'Alterar horÃ¡rio';
 
   @override
   String get reminderSave => 'Salvar lembretes';
@@ -1577,11 +1593,11 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String notificationFinalCallBody(int count) {
-    return 'Você ainda tem $count tarefa(s) aberta(s) hoje.';
+    return 'VocÃª ainda tem $count tarefa(s) aberta(s) hoje.';
   }
 
   @override
-  String get notificationEveningTitle => 'Verificação noturna';
+  String get notificationEveningTitle => 'VerificaÃ§Ã£o noturna';
 
   @override
   String get notificationEveningBody => 'Como seu jardim cresceu hoje?';
@@ -1591,10 +1607,10 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get widgetSetupBody =>
-      'Mantenha sua sequência na tela inicial — sem precisar abrir o app.';
+      'Mantenha sua sequÃªncia na tela inicial â€” sem precisar abrir o app.';
 
   @override
-  String get widgetSetupAdd => 'Adicionar à tela inicial';
+  String get widgetSetupAdd => 'Adicionar Ã  tela inicial';
 
   @override
   String get widgetSetupStep1 => 'Pressione longamente na tela inicial';
@@ -1611,7 +1627,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get widgetSetupPinFallback =>
-      'Seu launcher pode não suportar adição com um toque. Use os passos manuais abaixo.';
+      'Seu launcher pode nÃ£o suportar adiÃ§Ã£o com um toque. Use os passos manuais abaixo.';
 
   @override
   String get paywallWelcomePro => 'Bem-vindo ao Daily Stitch Pro';
@@ -1624,20 +1640,20 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get paywallTermsBody =>
-      'A cobrança é tratada pelo Google Play. As assinaturas renovam automaticamente até que você cancele na Play Store → Assinaturas pelo menos 24 horas antes do término do período atual. Você pode gerenciar ou cancelar sua assinatura a qualquer momento na sua conta do Google Play.\n\nDesinstalar o app não cancela sua assinatura.\n\nOs preços exibidos estão na sua moeda local e podem variar por região. Impostos podem ser aplicados.';
+      'A cobranÃ§a Ã© tratada pelo Google Play. As assinaturas renovam automaticamente atÃ© que vocÃª cancele na Play Store â†’ Assinaturas pelo menos 24 horas antes do tÃ©rmino do perÃ­odo atual. VocÃª pode gerenciar ou cancelar sua assinatura a qualquer momento na sua conta do Google Play.\n\nDesinstalar o app nÃ£o cancela sua assinatura.\n\nOs preÃ§os exibidos estÃ£o na sua moeda local e podem variar por regiÃ£o. Impostos podem ser aplicados.';
 
   @override
   String get paywallPrivacyTitle => 'Privacidade';
 
   @override
   String get paywallPrivacyBody =>
-      'O Daily Stitch armazena suas tarefas, hábitos e dados de sequência em nosso backend Supabase, vinculados à sua conta. Nunca vendemos seus dados.\n\nAs compras de assinatura são processadas pelo Google Play. Recebemos um token de compra verificado do Google para confirmar seu status Pro. Não vemos nem armazenamos seus dados de pagamento.\n\nVocê pode solicitar exportação completa de dados ou exclusão de conta em Configurações → Exclusão de conta.';
+      'O Daily Stitch armazena suas tarefas, hÃ¡bitos e dados de sequÃªncia em nosso backend seguro, vinculados Ã  sua conta. Nunca vendemos seus dados.\n\nAs compras de assinatura sÃ£o processadas pelo Google Play. Recebemos um token de compra verificado do Google para confirmar seu status Pro. NÃ£o vemos nem armazenamos seus dados de pagamento.\n\nVocÃª pode solicitar exportaÃ§Ã£o completa de dados ou exclusÃ£o de conta em ConfiguraÃ§Ãµes â†’ ExclusÃ£o de conta.';
 
   @override
   String get paywallCloseTooltip => 'Fechar';
 
   @override
-  String get paywallFooterLinks => 'Restaurar · Termos · Privacidade';
+  String get paywallFooterLinks => 'Restaurar Â· Termos Â· Privacidade';
 
   @override
   String get manageProTitle => 'Assinatura Pro';
@@ -1646,10 +1662,10 @@ class AppLocalizationsPt extends AppLocalizations {
   String get manageProActive => 'Ativa';
 
   @override
-  String get manageProNotSubscribed => 'Não assinado';
+  String get manageProNotSubscribed => 'NÃ£o assinado';
 
   @override
-  String get manageProFreeTier => 'Nível Gratuito';
+  String get manageProFreeTier => 'NÃ­vel Gratuito';
 
   @override
   String manageProRenewsOn(String date) {
@@ -1658,7 +1674,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get manageProFreeBody =>
-      'Você está usando o Daily Stitch Gratuito. Faça upgrade para desbloquear o sistema completo.';
+      'VocÃª estÃ¡ usando o Daily Stitch Gratuito. FaÃ§a upgrade para desbloquear o sistema completo.';
 
   @override
   String get manageProSectionManage => 'GERENCIAR';
@@ -1668,7 +1684,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get manageProOpenPlaySubtitlePro =>
-      'Cancelar, mudar plano ou atualizar método de pagamento';
+      'Cancelar, mudar plano ou atualizar mÃ©todo de pagamento';
 
   @override
   String get manageProOpenPlaySubtitleFree =>
@@ -1688,16 +1704,16 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get manageProHelpSubtitle =>
-      'FAQ de assinatura, contato, relatórios de bugs';
+      'FAQ de assinatura, contato, relatÃ³rios de bugs';
 
   @override
   String manageProBillingFooter(String version) {
-    return 'Cobrança tratada pelo Google Play · $version';
+    return 'CobranÃ§a tratada pelo Google Play Â· $version';
   }
 
   @override
   String get manageProPlayInstructions =>
-      'Abra o app Google Play Store → toque no seu perfil → Pagamentos & assinaturas → Assinaturas.';
+      'Abra o app Google Play Store â†’ toque no seu perfil â†’ Pagamentos & assinaturas â†’ Assinaturas.';
 
   @override
   String get addTaskGrowSomething => 'Cultivar Algo';
@@ -1706,13 +1722,13 @@ class AppLocalizationsPt extends AppLocalizations {
   String get addTaskPlantSprout => 'Plantar um BROTO';
 
   @override
-  String get addTaskIntentionName => 'NOME DA INTENÇÃO';
+  String get addTaskIntentionName => 'NOME DA INTENÃ‡ÃƒO';
 
   @override
   String get addTaskSproutName => 'NOME DO BROTO';
 
   @override
-  String get addTaskHintTask => 'ex., Saudação ao Sol da Manhã';
+  String get addTaskHintTask => 'ex., SaudaÃ§Ã£o ao Sol da ManhÃ£';
 
   @override
   String get addTaskHintHabit => 'ex. Yoga Matinal';
@@ -1727,10 +1743,10 @@ class AppLocalizationsPt extends AppLocalizations {
   String get addTaskNotes => 'NOTAS';
 
   @override
-  String get addTaskCadenceDaily => 'Diário';
+  String get addTaskCadenceDaily => 'DiÃ¡rio';
 
   @override
-  String get addTaskCadenceWeekdays => 'Dias úteis';
+  String get addTaskCadenceWeekdays => 'Dias Ãºteis';
 
   @override
   String get addTaskCadence3x => '3x/semana';
@@ -1739,34 +1755,34 @@ class AppLocalizationsPt extends AppLocalizations {
   String get addTaskCadenceWeekly => 'Semanal';
 
   @override
-  String get addTaskPlantIntention => 'Plantar Intenção';
+  String get addTaskPlantIntention => 'Plantar IntenÃ§Ã£o';
 
   @override
   String get addTaskPlantSproutCta => 'Plantar Broto';
 
   @override
-  String get addTaskPlanting => 'Plantando…';
+  String get addTaskPlanting => 'Plantandoâ€¦';
 
   @override
-  String get addTaskNameIntentionError => 'Dê um nome à sua intenção';
+  String get addTaskNameIntentionError => 'DÃª um nome Ã  sua intenÃ§Ã£o';
 
   @override
-  String get addTaskNameSproutError => 'Dê um nome ao seu broto';
+  String get addTaskNameSproutError => 'DÃª um nome ao seu broto';
 
   @override
   String get addTaskNotesMigrationWarning =>
-      'Tarefa salva. Notas e prioridade precisam da migração mais recente do Supabase — execute supabase/migrations/20260701000000_todos_notes_priority.sql.';
+      'Tarefa salva. Notas e prioridade precisam da migraÃ§Ã£o mais recente do backend.';
 
   @override
   String get addTaskNoSproutSlots =>
-      'Nenhum espaço de broto vazio — cuide de um primeiro.';
+      'Nenhum espaÃ§o de broto vazio â€” cuide de um primeiro.';
 
   @override
   String get addTaskSaveSproutError =>
-      'Não foi possível salvar o broto — tente novamente.';
+      'NÃ£o foi possÃ­vel salvar o broto â€” tente novamente.';
 
   @override
-  String get addTaskElementWater => 'ÁGUA';
+  String get addTaskElementWater => 'ÃGUA';
 
   @override
   String get addTaskElementLight => 'LUZ';
@@ -1778,10 +1794,10 @@ class AppLocalizationsPt extends AppLocalizations {
   String get addTaskElementBreeze => 'BRIOSA';
 
   @override
-  String get addTaskCadenceLabel => 'CADÊNCIA';
+  String get addTaskCadenceLabel => 'CADÃŠNCIA';
 
   @override
-  String get addTaskPreparationNotes => 'NOTAS DE PREPARAÇÃO';
+  String get addTaskPreparationNotes => 'NOTAS DE PREPARAÃ‡ÃƒO';
 
   @override
   String get addTaskTendingNotes => 'NOTAS DE CUIDADO';
@@ -1791,7 +1807,7 @@ class AppLocalizationsPt extends AppLocalizations {
       'Algumas ferramentas ou dicas de mentalidade para esta tarefa?';
 
   @override
-  String get addTaskNotesHintHabit => 'Como é cuidar deste broto?';
+  String get addTaskNotesHintHabit => 'Como Ã© cuidar deste broto?';
 
   @override
   String get addTaskChooseElement => 'ESCOLHA O ELEMENTO';
@@ -1803,82 +1819,83 @@ class AppLocalizationsPt extends AppLocalizations {
   String get addTaskTaskSeed => 'Semente de Tarefa';
 
   @override
-  String get addTaskHabitSprout => 'Broto de Hábito';
+  String get addTaskHabitSprout => 'Broto de HÃ¡bito';
 
   @override
   String get addTaskPickElement => 'Escolha o elemento certo';
 
   @override
   String get addTaskPickElementBody =>
-      'Cada elemento corresponde a um tipo diferente de esforço. O Guardião cresce mais forte quando você rega o elemento certo.';
+      'Cada elemento corresponde a um tipo diferente de esforÃ§o. O GuardiÃ£o cresce mais forte quando vocÃª rega o elemento certo.';
 
   @override
-  String get addTaskClearForm => 'Limpar formulário';
+  String get addTaskClearForm => 'Limpar formulÃ¡rio';
 
   @override
-  String get shareCouldNotShare => 'Não foi possível compartilhar agora';
+  String get shareCouldNotShare => 'NÃ£o foi possÃ­vel compartilhar agora';
 
   @override
-  String get authReferralCodeLabel => 'Código de indicação (opcional)';
+  String get authReferralCodeLabel => 'CÃ³digo de indicaÃ§Ã£o (opcional)';
 
   @override
-  String get authReferralCodeHint => 'Código do amigo';
+  String get authReferralCodeHint => 'CÃ³digo do amigo';
 
   @override
-  String get youPerkHabitSlots => '5 espaços de hábitos';
+  String get youPerkHabitSlots => '5 espaÃ§os de hÃ¡bitos';
 
   @override
-  String get youPerkFullHistory => 'Histórico completo';
+  String get youPerkFullHistory => 'HistÃ³rico completo';
 
   @override
   String get youPerkAllThemes => 'Todos os temas';
 
   @override
-  String get youPerkStreakFreezes => '2 congelamentos de sequência / mês';
+  String get youPerkStreakFreezes => '2 congelamentos de sequÃªncia / mÃªs';
 
   @override
-  String get youPerkLegendaryMedals => 'Medalhas lendárias';
+  String get youPerkLegendaryMedals => 'Medalhas lendÃ¡rias';
 
   @override
   String get subscriptionPurchaseFailed => 'Compra falhou. Tente novamente.';
 
   @override
   String get subscriptionUnavailable =>
-      'Compras in-app estão indisponíveis neste dispositivo.';
+      'Compras in-app estÃ£o indisponÃ­veis neste dispositivo.';
 
   @override
   String get subscriptionLoadFailed =>
-      'Não foi possível carregar as opções de assinatura.';
+      'NÃ£o foi possÃ­vel carregar as opÃ§Ãµes de assinatura.';
 
   @override
   String get subscriptionVerifyFailed =>
-      'Não foi possível verificar a compra. Tente Restaurar compra.';
+      'NÃ£o foi possÃ­vel verificar a compra. Tente Restaurar compra.';
 
   @override
   String get streakFreezeFailed =>
-      'Não foi possível usar o congelamento de sequência.';
+      'NÃ£o foi possÃ­vel usar o congelamento de sequÃªncia.';
 
   @override
   String get streakFreezeAlreadyUsed =>
-      'Você já usou seu congelamento este mês.';
+      'VocÃª jÃ¡ usou seu congelamento este mÃªs.';
 
   @override
   String get streakFreezeNoMissed =>
       'Nenhuma tarefa perdida nesse dia para congelar.';
 
   @override
-  String get streakFreezeNotPastDay => 'Você só pode congelar um dia passado.';
+  String get streakFreezeNotPastDay =>
+      'VocÃª sÃ³ pode congelar um dia passado.';
 
   @override
   String get myDayLoadError =>
-      'Não foi possível carregar Meu Dia. Puxe para atualizar.';
+      'NÃ£o foi possÃ­vel carregar Meu Dia. Puxe para atualizar.';
 
   @override
   String get myDayCapReached =>
-      'Você atingiu a restrição de 5 tarefas de hoje.';
+      'VocÃª atingiu a restriÃ§Ã£o de 5 tarefas de hoje.';
 
   @override
-  String get myDayRemoveTaskError => 'Não foi possível remover a tarefa.';
+  String get myDayRemoveTaskError => 'NÃ£o foi possÃ­vel remover a tarefa.';
 
   @override
   String get shareCardTitle => 'Compartilhe sua semana';
@@ -1896,19 +1913,19 @@ class AppLocalizationsPt extends AppLocalizations {
   String get medalTierRare => 'Raro';
 
   @override
-  String get medalTierEpic => 'Épico';
+  String get medalTierEpic => 'Ã‰pico';
 
   @override
-  String get medalTierLegendary => 'Lendário';
+  String get medalTierLegendary => 'LendÃ¡rio';
 
   @override
   String get medalCategoryTasks => 'Tarefas';
 
   @override
-  String get medalCategoryHabits => 'Hábitos';
+  String get medalCategoryHabits => 'HÃ¡bitos';
 
   @override
-  String get medalCategoryStreaks => 'Sequências';
+  String get medalCategoryStreaks => 'SequÃªncias';
 
   @override
   String get medalCategoryMastery => 'Maestria';
@@ -1929,7 +1946,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get addHabitLabelSproutName => 'NOME DO BROTO';
 
   @override
-  String get shareCardAppBarTitle => 'Cartão de compartilhamento';
+  String get shareCardAppBarTitle => 'CartÃ£o de compartilhamento';
 
   @override
   String get shareCardAppBarTitleMedal => 'Compartilhe sua medalha';
@@ -1941,10 +1958,10 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get shareCardBodyMedal =>
-      'Compartilhe a vitória com seu círculo. O cartão é exportado como PNG e está pronto para qualquer app de rede social.';
+      'Compartilhe a vitÃ³ria com seu cÃ­rculo. O cartÃ£o Ã© exportado como PNG e estÃ¡ pronto para qualquer app de rede social.';
 
   @override
-  String get shareCardCtaPreparing => 'Preparando…';
+  String get shareCardCtaPreparing => 'Preparandoâ€¦';
 
   @override
   String get shareCardMilestone => 'NOVO MARCO DESBLOQUEADO';
@@ -1960,7 +1977,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String shareCardHeadlineStreak(int days) {
-    return 'Sequência de $days Dias';
+    return 'SequÃªncia de $days Dias';
   }
 
   @override
@@ -1969,41 +1986,41 @@ class AppLocalizationsPt extends AppLocalizations {
   }
 
   @override
-  String get shareCardHeadlineSproutGuardian => 'Guardião de Brotos';
+  String get shareCardHeadlineSproutGuardian => 'GuardiÃ£o de Brotos';
 
   @override
   String get shareCardHeadlineFirstSeeds => 'Primeiras Sementes Plantadas';
 
   @override
-  String get shareCardHeadlineGardenBegins => 'Um Jardim Começa';
+  String get shareCardHeadlineGardenBegins => 'Um Jardim ComeÃ§a';
 
   @override
   String get shareCardSubheadMonth =>
-      'Você cuidou dos seus hábitos com sucesso por um mês completo.';
+      'VocÃª cuidou dos seus hÃ¡bitos com sucesso por um mÃªs completo.';
 
   @override
   String get shareCardSubheadWeek =>
-      'Uma semana completa de crescimento — sua floresta está engrossando.';
+      'Uma semana completa de crescimento â€” sua floresta estÃ¡ engrossando.';
 
   @override
   String get shareCardSubheadProgress =>
-      'Seu santuário está mostrando progresso real. Continue cuidando.';
+      'Seu santuÃ¡rio estÃ¡ mostrando progresso real. Continue cuidando.';
 
   @override
   String get shareCardSubheadSprouts =>
-      'Seus primeiros brotos estão enraizando. Regue-os diariamente.';
+      'Seus primeiros brotos estÃ£o enraizando. Regue-os diariamente.';
 
   @override
   String get shareCardSubheadFirstSeeds =>
-      'Suas primeiras sementes estão no solo. Veja abrir.';
+      'Suas primeiras sementes estÃ£o no solo. Veja abrir.';
 
   @override
   String get shareCardSubheadFallback =>
-      'Toda floresta começa com uma única escolha pequena.';
+      'Toda floresta comeÃ§a com uma Ãºnica escolha pequena.';
 
   @override
   String shareAppText(String url) {
-    return 'Daily Stitch — cinco sementinhas por dia, uma corrente inquebrável. Plante a sua.\n\n$url';
+    return 'Daily Stitch â€” cinco sementinhas por dia, uma corrente inquebrÃ¡vel. Plante a sua.\n\n$url';
   }
 
   @override
@@ -2011,7 +2028,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String shareAppReferralText(String code, String url) {
-    return 'Estou construindo minha corrente diária no Daily Stitch — junte-se a mim com meu código de indicação $code e ambos crescemos.\n\n$url';
+    return 'Estou construindo minha corrente diÃ¡ria no Daily Stitch â€” junte-se a mim com meu cÃ³digo de indicaÃ§Ã£o $code e ambos crescemos.\n\n$url';
   }
 
   @override
@@ -2019,7 +2036,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String shareCardShareTextProgress(String year) {
-    return 'Meu progresso no Daily Stitch — $year no Daily Stitch.';
+    return 'Meu progresso no Daily Stitch â€” $year no Daily Stitch.';
   }
 
   @override
@@ -2034,7 +2051,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get insightsReceiptPerfectDays => 'Dias perfeitos';
 
   @override
-  String get insightsReceiptCompletion => 'Conclusão';
+  String get insightsReceiptCompletion => 'ConclusÃ£o';
 
   @override
   String insightsReceiptDate(String date) {
@@ -2042,10 +2059,10 @@ class AppLocalizationsPt extends AppLocalizations {
   }
 
   @override
-  String get insightsReceiptFooter => 'Não quebre a corrente.';
+  String get insightsReceiptFooter => 'NÃ£o quebre a corrente.';
 
   @override
-  String get elementLabelWater => 'Água';
+  String get elementLabelWater => 'Ãgua';
 
   @override
   String get elementLabelLight => 'Luz';
@@ -2058,30 +2075,30 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get elementTaglineWater =>
-      'Restaurar. Hidratação, descanso, cuidado emocional — qualquer coisa que encha o poço.';
+      'Restaurar. HidrataÃ§Ã£o, descanso, cuidado emocional â€” qualquer coisa que encha o poÃ§o.';
 
   @override
   String get elementTaglineLight =>
-      'Despertar. Luz da manhã, blocos de foco, estudo, meditação — energia e clareza.';
+      'Despertar. Luz da manhÃ£, blocos de foco, estudo, meditaÃ§Ã£o â€” energia e clareza.';
 
   @override
   String get elementTaglineSoil =>
-      'Enraizar. Leitura, diário, trabalho profundo — raízes lentas que constroem força a longo prazo.';
+      'Enraizar. Leitura, diÃ¡rio, trabalho profundo â€” raÃ­zes lentas que constroem forÃ§a a longo prazo.';
 
   @override
   String get elementTaglineBreeze =>
-      'Mover. Caminhadas, corridas, respiração — energia leve e móvel que limpa a cabeça.';
+      'Mover. Caminhadas, corridas, respiraÃ§Ã£o â€” energia leve e mÃ³vel que limpa a cabeÃ§a.';
 
   @override
-  String get elementWhenWater => 'Quando você se sentir esgotado ou vazio.';
+  String get elementWhenWater => 'Quando vocÃª se sentir esgotado ou vazio.';
 
   @override
   String get elementWhenLight =>
-      'Quando precisar de um início claro para seu dia.';
+      'Quando precisar de um inÃ­cio claro para seu dia.';
 
   @override
   String get elementWhenSoil =>
-      'Quando o trabalho é lento mas vale a pena (estudo, ofício, cuidado).';
+      'Quando o trabalho Ã© lento mas vale a pena (estudo, ofÃ­cio, cuidado).';
 
   @override
   String get elementWhenBreeze =>
@@ -2104,30 +2121,30 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String habitBloomSubtitle(int count, String element) {
-    return '$count dias de sequência · $element';
+    return '$count dias de sequÃªncia Â· $element';
   }
 
   @override
-  String get medal_id_first_spark => 'Primeira Faísca';
+  String get medal_id_first_spark => 'Primeira FaÃ­sca';
 
   @override
   String get medal_sub_first_spark => 'Acendeu a chama.';
 
   @override
   String get medal_desc_first_spark =>
-      'Termine sua primeira tarefa. Toda corrente começa aqui.';
+      'Termine sua primeira tarefa. Toda corrente comeÃ§a aqui.';
 
   @override
-  String get medal_id_triple_seed => 'Tríplice Semente';
+  String get medal_id_triple_seed => 'TrÃ­plice Semente';
 
   @override
-  String get medal_sub_triple_seed => 'Três no solo.';
+  String get medal_sub_triple_seed => 'TrÃªs no solo.';
 
   @override
   String get medal_desc_triple_seed => 'Termine 3 tarefas no total.';
 
   @override
-  String get medal_id_dozen_sower => 'Semeador de Dúzia';
+  String get medal_id_dozen_sower => 'Semeador de DÃºzia';
 
   @override
   String get medal_sub_dozen_sower => 'Um campo de doze.';
@@ -2136,7 +2153,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get medal_desc_dozen_sower => 'Termine 12 tarefas no total.';
 
   @override
-  String get medal_id_quarter_century => 'Quarto de Século';
+  String get medal_id_quarter_century => 'Quarto de SÃ©culo';
 
   @override
   String get medal_sub_quarter_century => 'Uma temporada de sim.';
@@ -2145,24 +2162,24 @@ class AppLocalizationsPt extends AppLocalizations {
   String get medal_desc_quarter_century => 'Termine 25 tarefas no total.';
 
   @override
-  String get medal_id_productivity_titan => 'Titã da Produtividade';
+  String get medal_id_productivity_titan => 'TitÃ£ da Produtividade';
 
   @override
-  String get medal_sub_productivity_titan => 'Consistência se acumula.';
+  String get medal_sub_productivity_titan => 'ConsistÃªncia se acumula.';
 
   @override
   String get medal_desc_productivity_titan =>
-      'Termine 50 tarefas — você construiu momentum real.';
+      'Termine 50 tarefas â€” vocÃª construiu momentum real.';
 
   @override
-  String get medal_id_century_planter => 'Plantador do Século';
+  String get medal_id_century_planter => 'Plantador do SÃ©culo';
 
   @override
   String get medal_sub_century_planter => 'Uma floresta sua.';
 
   @override
   String get medal_desc_century_planter =>
-      'Termine 100 tarefas. Você está no top 5% dos usuários.';
+      'Termine 100 tarefas. VocÃª estÃ¡ no top 5% dos usuÃ¡rios.';
 
   @override
   String get medal_id_clean_day => 'Dia Limpo';
@@ -2172,13 +2189,13 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get medal_desc_clean_day =>
-      'Termine cada tarefa que planta em um único dia.';
+      'Termine cada tarefa que planta em um Ãºnico dia.';
 
   @override
-  String get medal_id_triple_perfect => 'Tríplice Perfeito';
+  String get medal_id_triple_perfect => 'TrÃ­plice Perfeito';
 
   @override
-  String get medal_sub_triple_perfect => 'Três execuções impecáveis.';
+  String get medal_sub_triple_perfect => 'TrÃªs execuÃ§Ãµes impecÃ¡veis.';
 
   @override
   String get medal_desc_triple_perfect => 'Alcance 3 dias perfeitos.';
@@ -2193,7 +2210,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get medal_desc_perfect_week => '7 dias perfeitos seguidos.';
 
   @override
-  String get medal_id_two_week_chain => 'Força do Fortnight';
+  String get medal_id_two_week_chain => 'ForÃ§a do Fortnight';
 
   @override
   String get medal_sub_two_week_chain => 'Duas semanas em chamas.';
@@ -2209,7 +2226,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get medal_desc_iron_chain =>
-      'Uma corrente de 30 dias. A medalha mais difícil.';
+      'Uma corrente de 30 dias. A medalha mais difÃ­cil.';
 
   @override
   String get medal_id_quarterly_chain => 'Corrente Trimestral';
@@ -2219,45 +2236,45 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get medal_desc_quarterly_chain =>
-      'Uma corrente de 90 dias. Status lendário.';
+      'Uma corrente de 90 dias. Status lendÃ¡rio.';
 
   @override
-  String get medal_id_vital_priority => 'Faísca Vital';
+  String get medal_id_vital_priority => 'FaÃ­sca Vital';
 
   @override
-  String get medal_sub_vital_priority => 'Você escolheu as difíceis.';
+  String get medal_sub_vital_priority => 'VocÃª escolheu as difÃ­ceis.';
 
   @override
   String get medal_desc_vital_priority =>
       'Termine 5 tarefas marcadas como Prioridade Vital.';
 
   @override
-  String get medal_id_spark_priority => 'Domador de Faíscas';
+  String get medal_id_spark_priority => 'Domador de FaÃ­scas';
 
   @override
-  String get medal_sub_spark_priority => 'Vitórias rápidas se acumulam.';
+  String get medal_sub_spark_priority => 'VitÃ³rias rÃ¡pidas se acumulam.';
 
   @override
   String get medal_desc_spark_priority =>
-      'Termine 5 tarefas marcadas como Prioridade Faísca.';
+      'Termine 5 tarefas marcadas como Prioridade FaÃ­sca.';
 
   @override
   String get medal_id_note_taker => 'Anotador';
 
   @override
   String get medal_sub_note_taker =>
-      'Planos no papel superam planos na cabeça.';
+      'Planos no papel superam planos na cabeÃ§a.';
 
   @override
   String get medal_desc_note_taker =>
-      'Adicione notas de preparação a 5 tarefas diferentes.';
+      'Adicione notas de preparaÃ§Ã£o a 5 tarefas diferentes.';
 
   @override
   String get medal_id_left_behind_rescuer => 'Resgatador de Deixados';
 
   @override
   String get medal_sub_left_behind_rescuer =>
-      'Nenhuma tarefa deixada para trás.';
+      'Nenhuma tarefa deixada para trÃ¡s.';
 
   @override
   String get medal_desc_left_behind_rescuer =>
@@ -2267,78 +2284,79 @@ class AppLocalizationsPt extends AppLocalizations {
   String get medal_id_first_sprout => 'Primeira Broto';
 
   @override
-  String get medal_sub_first_sprout => 'Um novo ritual diário.';
+  String get medal_sub_first_sprout => 'Um novo ritual diÃ¡rio.';
 
   @override
-  String get medal_desc_first_sprout => 'Plante seu primeiro hábito.';
+  String get medal_desc_first_sprout => 'Plante seu primeiro hÃ¡bito.';
 
   @override
-  String get medal_id_trio_sprout => 'Tríplice Broto';
+  String get medal_id_trio_sprout => 'TrÃ­plice Broto';
 
   @override
   String get medal_sub_trio_sprout => 'Um pequeno ecossistema.';
 
   @override
-  String get medal_desc_trio_sprout => 'Plante 3 hábitos diferentes.';
+  String get medal_desc_trio_sprout => 'Plante 3 hÃ¡bitos diferentes.';
 
   @override
   String get medal_id_week_of_growth => 'Semana de Crescimento';
 
   @override
-  String get medal_sub_week_of_growth => 'As raízes começam a segurar.';
+  String get medal_sub_week_of_growth => 'As raÃ­zes comeÃ§am a segurar.';
 
   @override
   String get medal_desc_week_of_growth =>
-      'Cuide de um hábito todos os dias por 7 dias.';
+      'Cuide de um hÃ¡bito todos os dias por 7 dias.';
 
   @override
   String get medal_id_fortnight_floret => 'Flor do Fortnight';
 
   @override
-  String get medal_sub_fortnight_floret => 'Uma floração completa.';
+  String get medal_sub_fortnight_floret => 'Uma floraÃ§Ã£o completa.';
 
   @override
   String get medal_desc_fortnight_floret =>
-      'Uma sequência de hábitos de 14 dias.';
+      'Uma sequÃªncia de hÃ¡bitos de 14 dias.';
 
   @override
   String get medal_id_rooted_master => 'Mestre Enraizado';
 
   @override
-  String get medal_sub_rooted_master => 'Raízes profundas, força profunda.';
+  String get medal_sub_rooted_master => 'RaÃ­zes profundas, forÃ§a profunda.';
 
   @override
-  String get medal_desc_rooted_master => 'Uma sequência de hábitos de 30 dias.';
+  String get medal_desc_rooted_master =>
+      'Uma sequÃªncia de hÃ¡bitos de 30 dias.';
 
   @override
-  String get medal_id_half_year_bloom => 'Floração Semestral';
+  String get medal_id_half_year_bloom => 'FloraÃ§Ã£o Semestral';
 
   @override
-  String get medal_sub_half_year_bloom => 'O jardim é permanente agora.';
+  String get medal_sub_half_year_bloom => 'O jardim Ã© permanente agora.';
 
   @override
   String get medal_desc_half_year_bloom =>
-      'Mantenha um único hábito por 180 dias.';
+      'Mantenha um Ãºnico hÃ¡bito por 180 dias.';
 
   @override
-  String get medal_id_garden_keeper => 'Guardião do Jardim';
+  String get medal_id_garden_keeper => 'GuardiÃ£o do Jardim';
 
   @override
   String get medal_sub_garden_keeper => 'Variedade, juntos.';
 
   @override
   String get medal_desc_garden_keeper =>
-      'Cultive 4 hábitos diferentes ao mesmo tempo.';
+      'Cultive 4 hÃ¡bitos diferentes ao mesmo tempo.';
 
   @override
-  String get medal_id_hydration_hero => 'Herói da Hidratação';
+  String get medal_id_hydration_hero => 'HerÃ³i da HidrataÃ§Ã£o';
 
   @override
-  String get medal_sub_hydration_hero => 'Enche o poço.';
+  String get medal_sub_hydration_hero => 'Enche o poÃ§o.';
 
   @override
   String get medal_desc_hydration_hero =>
-      'Plante um hábito de hidratação (água/bebida).';
+      'Plante um hÃ¡bito de hidrataÃ§Ã£o (Ã¡gua/bebida).';
 
   @override
   String get medal_id_mindful_mover => 'Movimento Consciente';
@@ -2348,17 +2366,17 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get medal_desc_mindful_mover =>
-      'Plante um hábito de movimento (yoga/correr/caminhar).';
+      'Plante um hÃ¡bito de movimento (yoga/correr/caminhar).';
 
   @override
-  String get medal_id_devoted_keeper => 'Guardião Devotado';
+  String get medal_id_devoted_keeper => 'GuardiÃ£o Devotado';
 
   @override
-  String get medal_sub_devoted_keeper => 'Sessenta dias, uma prática.';
+  String get medal_sub_devoted_keeper => 'Sessenta dias, uma prÃ¡tica.';
 
   @override
   String get medal_desc_devoted_keeper =>
-      'Cuide de um único hábito por 60 dias seguidos.';
+      'Cuide de um Ãºnico hÃ¡bito por 60 dias seguidos.';
 
   @override
   String get medal_id_tending_notes => 'Notas de Cuidado';
@@ -2368,95 +2386,95 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get medal_desc_tending_notes =>
-      'Adicione notas de cuidado a 3 hábitos.';
+      'Adicione notas de cuidado a 3 hÃ¡bitos.';
 
   @override
   String get medalTierTaglineSprout => 'Plante a primeira semente';
 
   @override
-  String get medalTierTaglineCommon => 'Construir o hábito';
+  String get medalTierTaglineCommon => 'Construir o hÃ¡bito';
 
   @override
   String get medalTierTaglineRare => 'Mostrando momentum real';
 
   @override
-  String get medalTierTaglineEpic => 'Você é uma força da natureza';
+  String get medalTierTaglineEpic => 'VocÃª Ã© uma forÃ§a da natureza';
 
   @override
-  String get medalTierTaglineLegendary => 'Mítico, quase ninguém chega aqui';
+  String get medalTierTaglineLegendary => 'MÃ­tico, quase ninguÃ©m chega aqui';
 
   @override
   String get guardianHeadlineNoTasks =>
-      'O solo de hoje está fresco.\nPlante sua primeira semente\ne veja crescer.';
+      'O solo de hoje estÃ¡ fresco.\nPlante sua primeira semente\ne veja crescer.';
 
   @override
   String get guardianHeadlineAllDone =>
-      'Cada semente que você plantou\nestá em floração.\nDescanse, Guardião — você mereceu.';
+      'Cada semente que vocÃª plantou\nestÃ¡ em floraÃ§Ã£o.\nDescanse, GuardiÃ£o â€” vocÃª mereceu.';
 
   @override
   String guardianHeadlineStreak14(int count) {
-    return '$count dias\nde crescimento ininterrupto.\nSua floresta está cheia de vida.';
+    return '$count dias\nde crescimento ininterrupto.\nSua floresta estÃ¡ cheia de vida.';
   }
 
   @override
   String get guardianHeadlineStreak7 =>
-      'Uma semana completa em floração,\nGuardião.\nMais um dia perfeito\nestende a corrente.';
+      'Uma semana completa em floraÃ§Ã£o,\nGuardiÃ£o.\nMais um dia perfeito\nestende a corrente.';
 
   @override
   String get guardianHeadlineStreak3 =>
-      'Sua corrente está segurando.\nCuide das sementes\nque esperam abrir.';
+      'Sua corrente estÃ¡ segurando.\nCuide das sementes\nque esperam abrir.';
 
   @override
   String get guardianHeadlineNoHabitsDone =>
-      'Você está cuidando bem das tarefas.\nPlante um broto —\nhábitos fazem florestas crescerem.';
+      'VocÃª estÃ¡ cuidando bem das tarefas.\nPlante um broto â€”\nhÃ¡bitos fazem florestas crescerem.';
 
   @override
   String get guardianHeadlineSomeDone =>
-      'Algumas sementes abriram,\noutras não. Tudo bem.\nAmanhã é outra plantação.';
+      'Algumas sementes abriram,\noutras nÃ£o. Tudo bem.\nAmanhÃ£ Ã© outra plantaÃ§Ã£o.';
 
   @override
   String get guardianHeadlineMorning =>
-      'Bom dia, Guardião.\nO dia é jovem\ne o solo está pronto.';
+      'Bom dia, GuardiÃ£o.\nO dia Ã© jovem\ne o solo estÃ¡ pronto.';
 
   @override
   String get guardianHeadlineAfternoon =>
-      'Boa tarde, Guardião.\nMetade da luz permanece —\ncontinue cuidando.';
+      'Boa tarde, GuardiÃ£o.\nMetade da luz permanece â€”\ncontinue cuidando.';
 
   @override
   String get guardianHeadlineEvening =>
-      'Boa noite, Guardião.\nUma última verificação\nantes do sol se pôr.';
+      'Boa noite, GuardiÃ£o.\nUma Ãºltima verificaÃ§Ã£o\nantes do sol se pÃ´r.';
 
   @override
   String get guardianHeadlineNight =>
-      'Queimando o azeite da meia-noite?\nAté Guardiões descansam.\nPlante a semente de amanhã.';
+      'Queimando o azeite da meia-noite?\nAtÃ© GuardiÃµes descansam.\nPlante a semente de amanhÃ£.';
 
   @override
   String get guardianBodyNoTasks =>
-      'Seu santuário está silencioso agora. Adicione uma intenção e veja o que muda ao anoitecer.';
+      'Seu santuÃ¡rio estÃ¡ silencioso agora. Adicione uma intenÃ§Ã£o e veja o que muda ao anoitecer.';
 
   @override
   String guardianBodyStreak14(int count) {
-    return '$count dias rodando. A corrente não é sorte — são as pequenas escolhas se acumulando. Continue acumulando.';
+    return '$count dias rodando. A corrente nÃ£o Ã© sorte â€” sÃ£o as pequenas escolhas se acumulando. Continue acumulando.';
   }
 
   @override
   String guardianBodyStreak3(int count) {
-    return 'Uma corrente de $count dias é momentum real. Termine as sementes abertas de hoje antes de dizer que terminou.';
+    return 'Uma corrente de $count dias Ã© momentum real. Termine as sementes abertas de hoje antes de dizer que terminou.';
   }
 
   @override
   String guardianBodyNoHabits(int count) {
-    return 'Você plantou $count tarefas até agora. Adicionar até um único broto de hábito faria o trabalho crescer dia após dia.';
+    return 'VocÃª plantou $count tarefas atÃ© agora. Adicionar atÃ© um Ãºnico broto de hÃ¡bito faria o trabalho crescer dia apÃ³s dia.';
   }
 
   @override
   String guardianBodyLowCompletion(int pct) {
-    return 'Você está terminando $pct% do que planta. Menos, mais afiadas sementes tendem a crescer mais altas que dez espalhadas.';
+    return 'VocÃª estÃ¡ terminando $pct% do que planta. Menos, mais afiadas sementes tendem a crescer mais altas que dez espalhadas.';
   }
 
   @override
   String guardianBodyDefault(int tasks, int sprouts) {
-    return 'Seu santuário está vivo. $tasks tarefas feitas, $sprouts brotos crescendo — o trabalho está se mostrando.';
+    return 'Seu santuÃ¡rio estÃ¡ vivo. $tasks tarefas feitas, $sprouts brotos crescendo â€” o trabalho estÃ¡ se mostrando.';
   }
 
   @override
@@ -2464,39 +2482,39 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get guardianInsightWaitingBody =>
-      'Adicione uma tarefa ou hábito e começarei a ler os padrões no seu jardim. Quanto mais você plantar, mais tenho para aprender.';
+      'Adicione uma tarefa ou hÃ¡bito e comeÃ§arei a ler os padrÃµes no seu jardim. Quanto mais vocÃª plantar, mais tenho para aprender.';
 
   @override
   String get guardianInsightWaitingCta => 'Plante sua primeira semente';
 
   @override
-  String get guardianInsightChainSuperTitle => 'A corrente é seu superpoder';
+  String get guardianInsightChainSuperTitle => 'A corrente Ã© seu superpoder';
 
   @override
   String guardianInsightChainSuperBody(int count) {
-    return 'Você manteve uma corrente de $count dias. Sequências vencem a motivação sempre — mantenha-a quente, mesmo nos dias lentos.';
+    return 'VocÃª manteve uma corrente de $count dias. SequÃªncias vencem a motivaÃ§Ã£o sempre â€” mantenha-a quente, mesmo nos dias lentos.';
   }
 
   @override
-  String get guardianInsightChainSuperCta => 'Adicione a semente de amanhã';
+  String get guardianInsightChainSuperCta => 'Adicione a semente de amanhÃ£';
 
   @override
   String get guardianInsightChainColdTitle =>
-      'A corrente está fria — comece uma nova';
+      'A corrente estÃ¡ fria â€” comece uma nova';
 
   @override
   String get guardianInsightChainColdBody =>
-      'Você plantou antes, o que significa que pode plantar de novo. Uma pequena tarefa feita hoje é uma corrente mais longa amanhã.';
+      'VocÃª plantou antes, o que significa que pode plantar de novo. Uma pequena tarefa feita hoje Ã© uma corrente mais longa amanhÃ£.';
 
   @override
   String get guardianInsightChainColdCta => 'Plante uma semente';
 
   @override
-  String get guardianInsightLessIsMoreTitle => 'Menos é mais esta semana';
+  String get guardianInsightLessIsMoreTitle => 'Menos Ã© mais esta semana';
 
   @override
   String guardianInsightLessIsMoreBody(int pct) {
-    return 'Você termina cerca de $pct% do que planta. Tente 3 intenções afiadas em vez de 5 soltas — qualidade se acumula.';
+    return 'VocÃª termina cerca de $pct% do que planta. Tente 3 intenÃ§Ãµes afiadas em vez de 5 soltas â€” qualidade se acumula.';
   }
 
   @override
@@ -2504,23 +2522,24 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String guardianInsightNextMedalTitle(String title) {
-    return 'Próxima medalha: $title';
+    return 'PrÃ³xima medalha: $title';
   }
 
   @override
   String guardianInsightNextMedalBody(int value, int target, String unit) {
-    return 'Você está em $value de $target $unit. Alguns dias mais honestos e é sua.';
+    return 'VocÃª estÃ¡ em $value de $target $unit. Alguns dias mais honestos e Ã© sua.';
   }
 
   @override
   String get guardianInsightNextMedalCta => 'Mostrar medalha';
 
   @override
-  String get guardianInsightSteadyTitle => 'Você está em uma temporada estável';
+  String get guardianInsightSteadyTitle =>
+      'VocÃª estÃ¡ em uma temporada estÃ¡vel';
 
   @override
   String get guardianInsightSteadyBody =>
-      'Nenhuma medalha à vista — tudo bem. Cuide do que tem. A próxima floração está a caminho.';
+      'Nenhuma medalha Ã  vista â€” tudo bem. Cuide do que tem. A prÃ³xima floraÃ§Ã£o estÃ¡ a caminho.';
 
   @override
   String get guardianInsightSteadyCta => 'Ver progresso';
@@ -2541,11 +2560,11 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get notificationEveningBodyOne =>
-      'Você ainda tem 1 tarefa aberta hoje.';
+      'VocÃª ainda tem 1 tarefa aberta hoje.';
 
   @override
   String notificationEveningBodyMany(int count) {
-    return 'Você ainda tem $count tarefas abertas hoje.';
+    return 'VocÃª ainda tem $count tarefas abertas hoje.';
   }
 
   @override
@@ -2556,6 +2575,6 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String habitBloomSubtitleL10n(int count, String element) {
-    return '$count dias de sequência · $element';
+    return '$count dias de sequÃªncia Â· $element';
   }
 }

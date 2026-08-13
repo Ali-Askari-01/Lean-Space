@@ -29,15 +29,25 @@ streakFreezes.get('/count', async (c) => {
 
 streakFreezes.post('/use', async (c) => {
   const userId = c.get('userId');
-  const { frozen_date } = await c.req.json();
+  const body = await c.req.json<{ frozen_date?: unknown }>();
 
-  if (!frozen_date) return c.json({ error: 'missing_frozen_date' }, 400);
+  if (!body.frozen_date || typeof body.frozen_date !== 'string') {
+    return c.json({ error: 'missing_frozen_date' }, 400);
+  }
+
+  // Validate date format (YYYY-MM-DD)
+  const frozen_date = body.frozen_date;
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(frozen_date)) {
+    return c.json({ error: 'invalid_date_format' }, 400);
+  }
 
   // Validate the date is in the past
-  const freezeDate = new Date(frozen_date);
+  const freezeDate = new Date(frozen_date + 'T00:00:00.000Z');
   const today = new Date();
   today.setHours(0, 0, 0, 0);
-  if (freezeDate >= today) return c.json({ error: 'freeze_future_date' }, 400);
+  if (isNaN(freezeDate.getTime()) || freezeDate >= today) {
+    return c.json({ error: 'freeze_future_date' }, 400);
+  }
 
   // Check user hasn't exceeded monthly limit
   const monthStart = new Date();

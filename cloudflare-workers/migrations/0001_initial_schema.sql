@@ -70,7 +70,7 @@ CREATE INDEX IF NOT EXISTS idx_todos_user_priority ON todos(user_id, priority) W
 CREATE TABLE IF NOT EXISTS subscriptions (
   id                   TEXT PRIMARY KEY,
   user_id              TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
-  product_id           TEXT NOT NULL CHECK (product_id IN ('leanspace_pro_monthly', 'leanspace_pro_yearly')),
+  product_id           TEXT NOT NULL CHECK (product_id IN ('leanspace_pro_monthly', 'leanspace_pro_yearly', 'leanspace_pro_lifetime')),
   purchase_token       TEXT,
   status               TEXT NOT NULL DEFAULT 'active' CHECK (status IN ('active', 'canceled', 'expired', 'grace', 'paused')),
   current_period_end   TEXT,

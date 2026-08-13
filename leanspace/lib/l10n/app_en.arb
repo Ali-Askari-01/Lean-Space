@@ -303,7 +303,7 @@
   "paywallFeatures": "All 5 habit slots, not just 3|Your full history, forever|The full medal set|Streak freeze every month|Weekly Receipt + share cards|Themes + more",
   "paywallFeaturesBodies": "Free gives you 3. Pro unlocks all five so your full daily ritual can live here.|Browse every day you've completed — not just the last 7. Look back years, not weeks.|Unlock Legendary tier medals. The rarest badges are for the people who go all in.|2 streak freezes a month so a single bad day doesn't end your chain.|Beautiful share cards of your week. Post your chain, inspire someone else to start.|Unlock new accent colors and themes as we add them. Always free updates.",
   "paywallYearly": "Yearly",
-  "paywallYearlyCaption": "Best value · works out to ~2.50 USD/mo",
+  "paywallYearlyCaption": "Best value · works out to ~$0.67/mo",
   "paywallYearlyBadge": "SAVE 35%",
   "paywallMonthly": "Monthly",
   "paywallMonthlyCaption": "Billed every month · cancel anytime",
@@ -315,6 +315,15 @@
   },
   "paywallStartCtaMonthly": "Start Pro · {price}/mo",
   "@paywallStartCtaMonthly": {
+    "placeholders": {
+      "price": { "type": "String" }
+    }
+  },
+  "paywallLifetime": "Lifetime",
+  "paywallLifetimeCaption": "One-time payment · yours forever",
+  "paywallLifetimeBadge": "BEST DEAL",
+  "paywallStartCtaLifetime": "Start Pro · {price} forever",
+  "@paywallStartCtaLifetime": {
     "placeholders": {
       "price": { "type": "String" }
     }
@@ -394,7 +403,7 @@
   "howItWorksCapBody": "We don't let you add a 6th. That's the whole point. Small chains beat long ones. Tap the \"?\" on the home screen for the full reasoning.",
   "howItWorksHabits": "Habits are daily, the chain is forever",
   "howItWorksHabitsBody": "Habits (Morning yoga, Drink water) live forever. Tasks are one-shot. Both feed the same streak.",
-  "howItWorksLeftBehind": "Missed tasks → Left Behind",
+  "howItWorksLeftBehind": "Missed tasks ? Left Behind",
   "howItWorksLeftBehindBody": "At midnight, unfinished tasks move to Left Behind. Re-add only what still matters. The rest gets a quiet let-go.",
   "howItWorksProgress": "The Progress tab",
   "howItWorksProgressBody": "Streak, calendar, medals, history — everything about how you're doing over time. Nothing urgent lives here.",
@@ -454,7 +463,7 @@
   "authContinueWithGoogle": "Continue with Google",
   "authEnterEmail": "Enter your email",
   "authEnterValidEmail": "Enter a valid email address",
-  "authPasswordTooShort": "Password must be at least 6 characters",
+  "authPasswordTooShort": "Password must be at least 8 characters",
   "authAccountCreated": "Account created. Switch to Sign In and use your password.",
   "authSomethingWentWrong": "Something went wrong. Try again.",
   "authCouldNotStartGoogle": "Could not start Google sign-in.",
@@ -544,9 +553,9 @@
   "helpFaqQ5": "What is the streak freeze?",
   "helpFaqA5": "One \"freeze\" per calendar month, Pro only. Spend it on a day you missed to keep your chain alive. Find it on the Progress tab.",
   "helpFaqQ6": "Where is my data stored?",
-  "helpFaqA6": "All data lives in Supabase (Postgres) under the account that signed in. We never sell or share it. See the privacy policy linked in the Play Store listing for the full details.",
+  "helpFaqA6": "All data lives in our secure cloud backend under the account that signed in. We never sell or share it. See the privacy policy linked in the Play Store listing for the full details.",
   "helpFaqQ7": "How do I delete my account?",
-  "helpFaqA7": "Go to Settings → Account → Delete account. This permanently removes your profile, tasks, habits, and subscription data. Active Play subscriptions must be cancelled separately in Google Play.",
+  "helpFaqA7": "Go to Settings ? Account ? Delete account. This permanently removes your profile, tasks, habits, and subscription data. Active Play subscriptions must be cancelled separately in Google Play.",
   "helpTopicsGeneral": "General question",
   "helpTopicsBug": "Bug report",
   "helpTopicsStreak": "Streak / rollover issue",
@@ -580,7 +589,7 @@
   "referralYouShare": "Share invite",
   "referralYouDetails": "View details",
   "referralPaywallTitle": "Free Pro month",
-  "referralPaywallBody": "Invite 5 friends who sign up → 1 month Pro free",
+  "referralPaywallBody": "Invite 5 friends who sign up ? 1 month Pro free",
   "referralPaywallProBody": "Keep inviting — stack free Pro months",
   "referralPaywallProgress": "{count} / {milestone}",
 
@@ -655,7 +664,7 @@
   "manageProThankYou": "Thank you for supporting Bloom",
   "manageProReferralHint": "Invite more friends to extend your Pro",
 
-  "bootstrapConfigErrorBody": "{detail}\n\nAdd SUPABASE_URL and SUPABASE_PUBLISHABLE_KEY (or legacy SUPABASE_ANON_KEY) to leanspace/.env, then rebuild:\n\nflutter build apk --debug",
+  "bootstrapConfigErrorBody": "{detail}\n\nAdd API_BASE_URL and GOOGLE_CLIENT_ID to leanspace/.env, then rebuild:\n\nflutter build apk --debug",
   "@bootstrapConfigErrorBody": {
     "placeholders": {
       "detail": { "type": "String" }
@@ -664,13 +673,13 @@
 
   "languageSystemDefault": "System default",
   "languageNameEn": "English",
-  "languageNameUr": "اردو (Urdu)",
+  "languageNameUr": "???? (Urdu)",
   "languageNameEs": "Español",
   "languageNamePt": "Português",
   "languageNameFr": "Français",
   "languageNameDe": "Deutsch",
   "languageNameIt": "Italiano",
-  "languageNameAr": "العربية",
+  "languageNameAr": "???????",
   "languageNameTr": "Türkçe",
   "languageNameId": "Bahasa Indonesia",
 
@@ -727,9 +736,9 @@
   "paywallWelcomePro": "Welcome to Daily Stitch Pro",
   "paywallSavePercent": "SAVE ~16%",
   "paywallTermsTitle": "Subscription terms",
-  "paywallTermsBody": "Billing is handled by Google Play. Subscriptions renew automatically until you cancel in Play Store → Subscriptions at least 24 hours before the end of the current period. You can manage or cancel your subscription at any time from your Google Play account.\n\nUninstalling the app does not cancel your subscription.\n\nPrices shown are in your local currency and may vary by region. Taxes may apply.",
+  "paywallTermsBody": "Billing is handled by Google Play. Subscriptions renew automatically until you cancel in Play Store ? Subscriptions at least 24 hours before the end of the current period. You can manage or cancel your subscription at any time from your Google Play account.\n\nUninstalling the app does not cancel your subscription.\n\nPrices shown are in your local currency and may vary by region. Taxes may apply.",
   "paywallPrivacyTitle": "Privacy",
-  "paywallPrivacyBody": "LeanSpace stores your tasks, habits, and streak data on our Supabase backend, tied to your account. We never sell your data.\n\nSubscription purchases are processed by Google Play. We receive a verified purchase token from Google to confirm your Pro status. We do not see or store your payment details.\n\nYou can request full data export or account deletion from Settings → Account deletion.",
+  "paywallPrivacyBody": "Daily Stitch stores your tasks, habits, and streak data on our secure backend, tied to your account. We never sell your data.\n\nSubscription purchases are processed by Google Play. We receive a verified purchase token from Google to confirm your Pro status. We do not see or store your payment details.\n\nYou can request full data export or account deletion from Settings ? Account deletion.",
   "paywallCloseTooltip": "Close",
   "paywallFooterLinks": "Restore · Terms · Privacy",
 
@@ -751,7 +760,7 @@
   "manageProHelpSubtitle": "Subscription FAQ, contact, bug reports",
   "manageProBillingFooter": "Billing handled by Google Play · {version}",
   "@manageProBillingFooter": { "placeholders": { "version": { "type": "String" } } },
-  "manageProPlayInstructions": "Open the Google Play Store app → tap your profile → Payments & subscriptions → Subscriptions.",
+  "manageProPlayInstructions": "Open the Google Play Store app ? tap your profile ? Payments & subscriptions ? Subscriptions.",
 
   "addTaskGrowSomething": "Grow Something",
   "addTaskPlantSprout": "Plant a Sprout",
@@ -771,7 +780,7 @@
   "addTaskPlanting": "Planting…",
   "addTaskNameIntentionError": "Name your intention",
   "addTaskNameSproutError": "Name your sprout",
-  "addTaskNotesMigrationWarning": "Task saved. Notes & priority need the latest Supabase migration — run supabase/migrations/20260701000000_todos_notes_priority.sql.",
+  "addTaskNotesMigrationWarning": "Task saved. Notes & priority require the latest backend migration.",
   "addTaskNoSproutSlots": "No empty sprout slots — tend one first.",
   "addTaskSaveSproutError": "Could not save sprout — try again.",
   "addTaskElementWater": "WATER",

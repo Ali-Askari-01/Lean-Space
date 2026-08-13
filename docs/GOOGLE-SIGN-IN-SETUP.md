@@ -1,13 +1,13 @@
-# Google Sign-In Setup (LeanSpace + Supabase)
+# Google Sign-In Setup (LeanSpace + Cloudflare Worker)
 
-Your **Web** client credentials go in **Supabase** (not in the Flutter app).
+Your **Web** client ID goes in both the **Cloudflare Worker** environment and the **Flutter** `env.json`.
 
 | Client | Where it goes |
 |--------|----------------|
-| Web `YOUR_WEB_CLIENT_ID` + secret | Supabase → Auth → Google provider |
+| Web `YOUR_WEB_CLIENT_ID` | Worker `wrangler.toml` → `GOOGLE_CLIENT_ID` var + Flutter `env.json` |
 | Android `YOUR_ANDROID_CLIENT_ID` | Google Cloud only (package + SHA-1) |
 
-**Never commit the Client Secret to git.** Paste it only in the Supabase dashboard.
+**Never commit secrets to git.** Use Wrangler secrets for sensitive values.
 
 ---
 
@@ -21,20 +21,16 @@ Your **Web** client credentials go in **Supabase** (not in the Flutter app).
 Add:
 
 ```
-https://qjtdoedjjqlxfasnpspj.supabase.co
+https://daily-stitch-api.your-subdomain.workers.dev
 ```
 
-(Optional for local web testing later: `http://localhost`)
+(Optional for local web testing later: `http://localhost:8787`)
 
 > JavaScript origins are **only for the Web client**. The Android client form does **not** use them.
 
 ### Authorized redirect URIs
 
-Add **exactly**:
-
-```
-https://qjtdoedjjqlxfasnpspj.supabase.co/auth/v1/callback
-```
+No redirect URIs needed — the Worker verifies ID tokens directly via Google's tokeninfo endpoint.
 
 ---
 
@@ -45,27 +41,27 @@ https://qjtdoedjjqlxfasnpspj.supabase.co/auth/v1/callback
 
 ---
 
-## C. Supabase Dashboard
+## C. Cloudflare Worker Configuration
 
-1. **Authentication → Providers → Google** → Enable  
-   - Client ID: Web client (`YOUR_WEB_CLIENT_ID`)
-   - Client Secret: Web client secret (`YOUR_CLIENT_SECRET`)
-2. **Authentication → URL Configuration → Redirect URLs** → add:  
-   `com.leanspace://login-callback`
+1. Set the `GOOGLE_CLIENT_ID` variable in `wrangler.toml`:
+   ```toml
+   [vars]
+   GOOGLE_CLIENT_ID = "YOUR_WEB_CLIENT_ID.apps.googleusercontent.com"
+   ```
 
-### Fix email sign-up rate limit
+2. Deploy the Worker:
+   ```bash
+   cd cloudflare-workers
+   npx wrangler deploy
+   ```
 
-If you see **"email rate limit exceeded"**:
-
-1. **Authentication → Providers → Email** → turn **off** “Confirm email” (instant sign-up while testing)  
-2. Wait ~1 hour for Supabase’s email rate limit to reset, **or** use **Continue with Google**  
-3. Optional: **Authentication → Rate Limits** — increase limits on paid plans
-
-### Run profile fix migration (once)
-
-In SQL Editor, run:
-
-`supabase/migrations/20250622100000_users_self_insert.sql`
+3. Create `leanspace/env.json` with your Worker URL and client ID:
+   ```json
+   {
+     "API_BASE_URL": "https://daily-stitch-api.your-subdomain.workers.dev",
+     "GOOGLE_CLIENT_ID": "YOUR_WEB_CLIENT_ID.apps.googleusercontent.com"
+   }
+   ```
 
 ---
 
@@ -83,7 +79,7 @@ adb install -r build\app\outputs\flutter-apk\app-debug.apk
 
 | Problem | Fix |
 |--------|-----|
-| `email rate limit exceeded` | Wait 1h, disable confirm email, or use Google |
-| Google works, email doesn't | Rate limit or email confirmation — see above |
-| `redirect_uri_mismatch` | Check Web redirect URI + Supabase redirect URLs |
-| Wrong credentials in Supabase | Use **Web** ID/secret, not Android client ID |
+| `invalid_google_token` in app | Verify `GOOGLE_CLIENT_ID` in `wrangler.toml` matches your Web client ID |
+| `missing_id_token` error | Ensure Google Sign-In `serverClientId` matches the Web client ID |
+| `redirect_uri_mismatch` | Not applicable — Worker verifies tokens directly |
+| Wrong credentials in Worker | Use **Web** client ID, not Android client ID |

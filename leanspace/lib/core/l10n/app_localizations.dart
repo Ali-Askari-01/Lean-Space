@@ -993,7 +993,7 @@ abstract class AppLocalizations {
   /// No description provided for @paywallYearlyCaption.
   ///
   /// In en, this message translates to:
-  /// **'Best value · works out to ~2.50 USD/mo'**
+  /// **'Best value · works out to ~\$0.67/mo'**
   String get paywallYearlyCaption;
 
   /// No description provided for @paywallYearlyBadge.
@@ -1025,6 +1025,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Start Pro · {price}/mo'**
   String paywallStartCtaMonthly(String price);
+
+  /// No description provided for @paywallLifetime.
+  ///
+  /// In en, this message translates to:
+  /// **'Lifetime'**
+  String get paywallLifetime;
+
+  /// No description provided for @paywallLifetimeCaption.
+  ///
+  /// In en, this message translates to:
+  /// **'One-time payment · yours forever'**
+  String get paywallLifetimeCaption;
+
+  /// No description provided for @paywallLifetimeBadge.
+  ///
+  /// In en, this message translates to:
+  /// **'BEST DEAL'**
+  String get paywallLifetimeBadge;
+
+  /// No description provided for @paywallStartCtaLifetime.
+  ///
+  /// In en, this message translates to:
+  /// **'Start Pro · {price} forever'**
+  String paywallStartCtaLifetime(String price);
 
   /// No description provided for @paywallRestore.
   ///
@@ -1377,7 +1401,7 @@ abstract class AppLocalizations {
   /// No description provided for @howItWorksLeftBehind.
   ///
   /// In en, this message translates to:
-  /// **'Missed tasks → Left Behind'**
+  /// **'Missed tasks ? Left Behind'**
   String get howItWorksLeftBehind;
 
   /// No description provided for @howItWorksLeftBehindBody.
@@ -1713,7 +1737,7 @@ abstract class AppLocalizations {
   /// No description provided for @authPasswordTooShort.
   ///
   /// In en, this message translates to:
-  /// **'Password must be at least 6 characters'**
+  /// **'Password must be at least 8 characters'**
   String get authPasswordTooShort;
 
   /// No description provided for @authAccountCreated.
@@ -2223,7 +2247,7 @@ abstract class AppLocalizations {
   /// No description provided for @helpFaqA6.
   ///
   /// In en, this message translates to:
-  /// **'All data lives in Supabase (Postgres) under the account that signed in. We never sell or share it. See the privacy policy linked in the Play Store listing for the full details.'**
+  /// **'All data lives in our secure cloud backend under the account that signed in. We never sell or share it. See the privacy policy linked in the Play Store listing for the full details.'**
   String get helpFaqA6;
 
   /// No description provided for @helpFaqQ7.
@@ -2235,7 +2259,7 @@ abstract class AppLocalizations {
   /// No description provided for @helpFaqA7.
   ///
   /// In en, this message translates to:
-  /// **'Go to Settings → Account → Delete account. This permanently removes your profile, tasks, habits, and subscription data. Active Play subscriptions must be cancelled separately in Google Play.'**
+  /// **'Go to Settings ? Account ? Delete account. This permanently removes your profile, tasks, habits, and subscription data. Active Play subscriptions must be cancelled separately in Google Play.'**
   String get helpFaqA7;
 
   /// No description provided for @helpTopicsGeneral.
@@ -2379,7 +2403,7 @@ abstract class AppLocalizations {
   /// No description provided for @referralPaywallBody.
   ///
   /// In en, this message translates to:
-  /// **'Invite 5 friends who sign up → 1 month Pro free'**
+  /// **'Invite 5 friends who sign up ? 1 month Pro free'**
   String get referralPaywallBody;
 
   /// No description provided for @referralPaywallProBody.
@@ -2595,7 +2619,7 @@ abstract class AppLocalizations {
   /// No description provided for @bootstrapConfigErrorBody.
   ///
   /// In en, this message translates to:
-  /// **'{detail}\n\nAdd SUPABASE_URL and SUPABASE_PUBLISHABLE_KEY (or legacy SUPABASE_ANON_KEY) to leanspace/.env, then rebuild:\n\nflutter build apk --debug'**
+  /// **'{detail}\n\nAdd API_BASE_URL and GOOGLE_CLIENT_ID to leanspace/.env, then rebuild:\n\nflutter build apk --debug'**
   String bootstrapConfigErrorBody(String detail);
 
   /// No description provided for @languageSystemDefault.
@@ -2613,7 +2637,7 @@ abstract class AppLocalizations {
   /// No description provided for @languageNameUr.
   ///
   /// In en, this message translates to:
-  /// **'اردو (Urdu)'**
+  /// **'???? (Urdu)'**
   String get languageNameUr;
 
   /// No description provided for @languageNameEs.
@@ -2649,7 +2673,7 @@ abstract class AppLocalizations {
   /// No description provided for @languageNameAr.
   ///
   /// In en, this message translates to:
-  /// **'العربية'**
+  /// **'???????'**
   String get languageNameAr;
 
   /// No description provided for @languageNameTr.
@@ -2925,7 +2949,7 @@ abstract class AppLocalizations {
   /// No description provided for @paywallTermsBody.
   ///
   /// In en, this message translates to:
-  /// **'Billing is handled by Google Play. Subscriptions renew automatically until you cancel in Play Store → Subscriptions at least 24 hours before the end of the current period. You can manage or cancel your subscription at any time from your Google Play account.\n\nUninstalling the app does not cancel your subscription.\n\nPrices shown are in your local currency and may vary by region. Taxes may apply.'**
+  /// **'Billing is handled by Google Play. Subscriptions renew automatically until you cancel in Play Store ? Subscriptions at least 24 hours before the end of the current period. You can manage or cancel your subscription at any time from your Google Play account.\n\nUninstalling the app does not cancel your subscription.\n\nPrices shown are in your local currency and may vary by region. Taxes may apply.'**
   String get paywallTermsBody;
 
   /// No description provided for @paywallPrivacyTitle.
@@ -2937,7 +2961,7 @@ abstract class AppLocalizations {
   /// No description provided for @paywallPrivacyBody.
   ///
   /// In en, this message translates to:
-  /// **'LeanSpace stores your tasks, habits, and streak data on our Supabase backend, tied to your account. We never sell your data.\n\nSubscription purchases are processed by Google Play. We receive a verified purchase token from Google to confirm your Pro status. We do not see or store your payment details.\n\nYou can request full data export or account deletion from Settings → Account deletion.'**
+  /// **'Daily Stitch stores your tasks, habits, and streak data on our secure backend, tied to your account. We never sell your data.\n\nSubscription purchases are processed by Google Play. We receive a verified purchase token from Google to confirm your Pro status. We do not see or store your payment details.\n\nYou can request full data export or account deletion from Settings ? Account deletion.'**
   String get paywallPrivacyBody;
 
   /// No description provided for @paywallCloseTooltip.
@@ -3051,7 +3075,7 @@ abstract class AppLocalizations {
   /// No description provided for @manageProPlayInstructions.
   ///
   /// In en, this message translates to:
-  /// **'Open the Google Play Store app → tap your profile → Payments & subscriptions → Subscriptions.'**
+  /// **'Open the Google Play Store app ? tap your profile ? Payments & subscriptions ? Subscriptions.'**
   String get manageProPlayInstructions;
 
   /// No description provided for @addTaskGrowSomething.
@@ -3165,7 +3189,7 @@ abstract class AppLocalizations {
   /// No description provided for @addTaskNotesMigrationWarning.
   ///
   /// In en, this message translates to:
-  /// **'Task saved. Notes & priority need the latest Supabase migration — run supabase/migrations/20260701000000_todos_notes_priority.sql.'**
+  /// **'Task saved. Notes & priority require the latest backend migration.'**
   String get addTaskNotesMigrationWarning;
 
   /// No description provided for @addTaskNoSproutSlots.

@@ -1,21 +1,29 @@
 name = "daily-stitch-api"
 main = "src/index.ts"
-compatibility_date = "2025-01-01"
+compatibility_date = "2026-08-11"
+compatibility_flags = ["nodejs_compat"]
 
 [[d1_databases]]
 binding = "DB"
 database_name = "daily-stitch-db"
 database_id = "21bc1aca-73dd-412f-9b14-0f8b3fc56346"
+migrations_dir = "migrations"
 
 [vars]
 APP_NAME = "Daily Stitch"
 GOOGLE_CLIENT_ID = "725587084001-c8e06tl9c5g41nbmcrhioc31rnk5k16j.apps.googleusercontent.com"
-ALLOWED_ORIGINS = "http://localhost:8787,http://localhost:3000"
+ALLOWED_ORIGINS = "http://localhost:8787,http://localhost:3000,https://daily-stitch-api.daily-stitch-api.workers.dev"
 PLAY_PACKAGE_NAME = "com.leanspace.leanspace"
 
 # Production overrides
 [env.production]
-vars = { ALLOWED_ORIGINS = "https://leanspace.app" }
+vars = { APP_NAME = "Lean Space", GOOGLE_CLIENT_ID = "725587084001-c8e06tl9c5g41nbmcrhioc31rnk5k16j.apps.googleusercontent.com", ALLOWED_ORIGINS = "https://leanspace.app", PLAY_PACKAGE_NAME = "com.leanspace.leanspace" }
+
+[[env.production.d1_databases]]
+binding = "DB"
+database_name = "daily-stitch-db"
+database_id = "21bc1aca-73dd-412f-9b14-0f8b3fc56346"
+migrations_dir = "migrations"
 
 # Required secrets (set via: wrangler secret put <NAME>)
 # GOOGLE_SERVICE_ACCOUNT_JSON - Google Play service account credentials (JSON string)
@@ -24,4 +32,8 @@ vars = { ALLOWED_ORIGINS = "https://leanspace.app" }
 
 # Cron triggers for hourly rollover
 [triggers]
-crons = []
+crons = ["0 * * * *"]
+
+[observability]
+enabled = true
+head_sampling_rate = 1

@@ -12,110 +12,116 @@ class AppLocalizationsUr extends AppLocalizations {
   String get appTitle => 'Daily Stitch';
 
   @override
-  String get tabToday => 'آج';
+  String get tabToday => 'Ø¢Ø¬';
 
   @override
-  String get tabProgress => 'پیشرفت';
+  String get tabProgress => 'Ù¾ÛŒØ´Ø±ÙØª';
 
   @override
-  String get tabYou => 'آپ';
+  String get tabYou => 'Ø¢Ù¾';
 
   @override
-  String get navMyDay => 'میرا دن';
+  String get navMyDay => 'Ù…ÛŒØ±Ø§ Ø¯Ù†';
 
   @override
-  String get navSettings => 'ترتیبات';
+  String get navSettings => 'ØªØ±ØªÛŒØ¨Ø§Øª';
 
   @override
-  String get navHelp => 'مدد و معاونت';
+  String get navHelp => 'Ù…Ø¯Ø¯ Ùˆ Ù…Ø¹Ø§ÙˆÙ†Øª';
 
   @override
-  String get navHistory => 'آخری 7 دن';
+  String get navHistory => 'Ø¢Ø®Ø±ÛŒ 7 Ø¯Ù†';
 
   @override
-  String get navLeftBehind => 'پیچھے چھوڑے گئے';
+  String get navLeftBehind => 'Ù¾ÛŒÚ†Ú¾Û’ Ú†Ú¾ÙˆÚ‘Û’ Ú¯Ø¦Û’';
 
   @override
-  String get navInsights => 'آپ کی پیشرفت';
+  String get navInsights => 'Ø¢Ù¾ Ú©ÛŒ Ù¾ÛŒØ´Ø±ÙØª';
 
   @override
-  String get navMedals => 'میرے تمغے';
+  String get navMedals => 'Ù…ÛŒØ±Û’ ØªÙ…ØºÛ’';
 
   @override
-  String get navManagePro => 'Pro سبسکرپشن کا انتظام کریں';
+  String get navManagePro => 'Pro Ø³Ø¨Ø³Ú©Ø±Ù¾Ø´Ù† Ú©Ø§ Ø§Ù†ØªØ¸Ø§Ù… Ú©Ø±ÛŒÚº';
 
   @override
   String get navPaywall => 'Daily Stitch Pro';
 
   @override
-  String get greetingLateNight => 'رات گئی، ابھی بھی جاگ رہے ہیں';
+  String get greetingLateNight =>
+      'Ø±Ø§Øª Ú¯Ø¦ÛŒØŒ Ø§Ø¨Ú¾ÛŒ Ø¨Ú¾ÛŒ Ø¬Ø§Ú¯ Ø±ÛÛ’ ÛÛŒÚº';
 
   @override
-  String get greetingMorning => 'صبح بخیر، سورج!';
+  String get greetingMorning => 'ØµØ¨Ø­ Ø¨Ø®ÛŒØ±ØŒ Ø³ÙˆØ±Ø¬!';
 
   @override
-  String get greetingAfternoon => 'دوپہر بخیر، دوست';
+  String get greetingAfternoon => 'Ø¯ÙˆÙ¾ÛØ± Ø¨Ø®ÛŒØ±ØŒ Ø¯ÙˆØ³Øª';
 
   @override
-  String get greetingEvening => 'شام بخیر، چیمپئن';
+  String get greetingEvening => 'Ø´Ø§Ù… Ø¨Ø®ÛŒØ±ØŒ Ú†ÛŒÙ…Ù¾Ø¦Ù†';
 
   @override
-  String get greetingNight => 'آرام سے سو رہے ہیں، نگہبان؟';
+  String get greetingNight =>
+      'Ø¢Ø±Ø§Ù… Ø³Û’ Ø³Ùˆ Ø±ÛÛ’ ÛÛŒÚºØŒ Ù†Ú¯ÛØ¨Ø§Ù†ØŸ';
 
   @override
   String todayTasksCount(String done, String total) {
-    return 'آج · $done / $total کام مکمل';
+    return 'Ø¢Ø¬ Â· $done / $total Ú©Ø§Ù… Ù…Ú©Ù…Ù„';
   }
 
   @override
   String todayHabitsCount(String done, String total) {
-    return '$done / $total عادات';
+    return '$done / $total Ø¹Ø§Ø¯Ø§Øª';
   }
 
   @override
-  String get todayChainGrows => 'زنجیر آپ کے مکمل کرنے سے بڑھتی ہے';
+  String get todayChainGrows =>
+      'Ø²Ù†Ø¬ÛŒØ± Ø¢Ù¾ Ú©Û’ Ù…Ú©Ù…Ù„ Ú©Ø±Ù†Û’ Ø³Û’ Ø¨Ú‘Ú¾ØªÛŒ ÛÛ’';
 
   @override
-  String get todayChainComplete => 'زنجیر مکمل · کل باغ کی دیکھ بھال کریں';
+  String get todayChainComplete =>
+      'Ø²Ù†Ø¬ÛŒØ± Ù…Ú©Ù…Ù„ Â· Ú©Ù„ Ø¨Ø§Øº Ú©ÛŒ Ø¯ÛŒÚ©Ú¾ Ø¨Ú¾Ø§Ù„ Ú©Ø±ÛŒÚº';
 
   @override
-  String get taskCapInfo => '5 کام کی حد کیوں؟';
+  String get taskCapInfo => '5 Ú©Ø§Ù… Ú©ÛŒ Ø­Ø¯ Ú©ÛŒÙˆÚºØŸ';
 
   @override
-  String get taskCapDiscipline => 'ڈیزائن سے پہلے نظم و ضبط';
+  String get taskCapDiscipline => 'ÚˆÛŒØ²Ø§Ø¦Ù† Ø³Û’ Ù¾ÛÙ„Û’ Ù†Ø¸Ù… Ùˆ Ø¶Ø¨Ø·';
 
   @override
   String get taskCapTitle =>
-      'ہم آپ کے دن کو جان بوجھ کر 5 کام تک محدود رکھتے ہیں۔';
+      'ÛÙ… Ø¢Ù¾ Ú©Û’ Ø¯Ù† Ú©Ùˆ Ø¬Ø§Ù† Ø¨ÙˆØ¬Ú¾ Ú©Ø± 5 Ú©Ø§Ù… ØªÚ© Ù…Ø­Ø¯ÙˆØ¯ Ø±Ú©Ú¾ØªÛ’ ÛÛŒÚºÛ”';
 
   @override
   String get taskCapBody =>
-      'چھوٹی زنجیریں لمبی زنجیروں سے بہتر ہیں۔ آپ 5 میں سے 3 کام مکمل کر کے جیتنے کا احساس محسوس کرنے کا امکان 10 میں سے 8 کو چھوڑ کر ہارنے کے احساس سے زیادہ ہے۔';
+      'Ú†Ú¾ÙˆÙ¹ÛŒ Ø²Ù†Ø¬ÛŒØ±ÛŒÚº Ù„Ù…Ø¨ÛŒ Ø²Ù†Ø¬ÛŒØ±ÙˆÚº Ø³Û’ Ø¨ÛØªØ± ÛÛŒÚºÛ” Ø¢Ù¾ 5 Ù…ÛŒÚº Ø³Û’ 3 Ú©Ø§Ù… Ù…Ú©Ù…Ù„ Ú©Ø± Ú©Û’ Ø¬ÛŒØªÙ†Û’ Ú©Ø§ Ø§Ø­Ø³Ø§Ø³ Ù…Ø­Ø³ÙˆØ³ Ú©Ø±Ù†Û’ Ú©Ø§ Ø§Ù…Ú©Ø§Ù† 10 Ù…ÛŒÚº Ø³Û’ 8 Ú©Ùˆ Ú†Ú¾ÙˆÚ‘ Ú©Ø± ÛØ§Ø±Ù†Û’ Ú©Û’ Ø§Ø­Ø³Ø§Ø³ Ø³Û’ Ø²ÛŒØ§Ø¯Û ÛÛ’Û”';
 
   @override
-  String get taskCapBulletDone => 'مکمل شدہ کام آپ کی زنجیر میں شامل ہوتے ہیں';
+  String get taskCapBulletDone =>
+      'Ù…Ú©Ù…Ù„ Ø´Ø¯Û Ú©Ø§Ù… Ø¢Ù¾ Ú©ÛŒ Ø²Ù†Ø¬ÛŒØ± Ù…ÛŒÚº Ø´Ø§Ù…Ù„ ÛÙˆØªÛ’ ÛÛŒÚº';
 
   @override
   String get taskCapBulletDoneBody =>
-      'وہ دن جب تمام 5 مکمل ہو جائیں آپ کی زنجیر میں ایک دن کا اضافہ کرتا ہے۔';
+      'ÙˆÛ Ø¯Ù† Ø¬Ø¨ ØªÙ…Ø§Ù… 5 Ù…Ú©Ù…Ù„ ÛÙˆ Ø¬Ø§Ø¦ÛŒÚº Ø¢Ù¾ Ú©ÛŒ Ø²Ù†Ø¬ÛŒØ± Ù…ÛŒÚº Ø§ÛŒÚ© Ø¯Ù† Ú©Ø§ Ø§Ø¶Ø§ÙÛ Ú©Ø±ØªØ§ ÛÛ’Û”';
 
   @override
   String get taskCapBulletMissed =>
-      'چھوٹے ہوئے کام Left Behind میں چلے جاتے ہیں';
+      'Ú†Ú¾ÙˆÙ¹Û’ ÛÙˆØ¦Û’ Ú©Ø§Ù… Left Behind Ù…ÛŒÚº Ú†Ù„Û’ Ø¬Ø§ØªÛ’ ÛÛŒÚº';
 
   @override
   String get taskCapBulletMissedBody =>
-      'رات 12 بجے، نامکمل کام Left Behind میں آ جاتے ہیں۔ صرف وہی دوبارہ شامل کریں جو ابھی بھی اہم ہوں۔';
+      'Ø±Ø§Øª 12 Ø¨Ø¬Û’ØŒ Ù†Ø§Ù…Ú©Ù…Ù„ Ú©Ø§Ù… Left Behind Ù…ÛŒÚº Ø¢ Ø¬Ø§ØªÛ’ ÛÛŒÚºÛ” ØµØ±Ù ÙˆÛÛŒ Ø¯ÙˆØ¨Ø§Ø±Û Ø´Ø§Ù…Ù„ Ú©Ø±ÛŒÚº Ø¬Ùˆ Ø§Ø¨Ú¾ÛŒ Ø¨Ú¾ÛŒ Ø§ÛÙ… ÛÙˆÚºÛ”';
 
   @override
-  String get taskCapBulletFreeze => 'اسٹریک فریز ایک چھوٹ کی معافی دیتا ہے';
+  String get taskCapBulletFreeze =>
+      'Ø§Ø³Ù¹Ø±ÛŒÚ© ÙØ±ÛŒØ² Ø§ÛŒÚ© Ú†Ú¾ÙˆÙ¹ Ú©ÛŒ Ù…Ø¹Ø§ÙÛŒ Ø¯ÛŒØªØ§ ÛÛ’';
 
   @override
   String get taskCapBulletFreezeBody =>
-      'Pro آپ کو ماہانہ 2 اسٹریک فریز دیتا ہے — وہ ایک چھوٹے ہوئے دن کو ڈھانپتے ہیں تاکہ آپ کی زنجیر زندہ رہے۔';
+      'Pro Ø¢Ù¾ Ú©Ùˆ Ù…Ø§ÛØ§Ù†Û 2 Ø§Ø³Ù¹Ø±ÛŒÚ© ÙØ±ÛŒØ² Ø¯ÛŒØªØ§ ÛÛ’ â€” ÙˆÛ Ø§ÛŒÚ© Ú†Ú¾ÙˆÙ¹Û’ ÛÙˆØ¦Û’ Ø¯Ù† Ú©Ùˆ ÚˆÚ¾Ø§Ù†Ù¾ØªÛ’ ÛÛŒÚº ØªØ§Ú©Û Ø¢Ù¾ Ú©ÛŒ Ø²Ù†Ø¬ÛŒØ± Ø²Ù†Ø¯Û Ø±ÛÛ’Û”';
 
   @override
-  String get tasksHeader => 'کام';
+  String get tasksHeader => 'Ú©Ø§Ù…';
 
   @override
   String tasksProgressCount(String done, String total) {
@@ -123,362 +129,377 @@ class AppLocalizationsUr extends AppLocalizations {
   }
 
   @override
-  String get tasksAddSeed => 'کام کا بیج شامل کریں';
+  String get tasksAddSeed => 'Ú©Ø§Ù… Ú©Ø§ Ø¨ÛŒØ¬ Ø´Ø§Ù…Ù„ Ú©Ø±ÛŒÚº';
 
   @override
   String get tasksCapReached =>
-      '5/5 جگہیں استعمال ہوئیں — نیا بیج لگانے کے لیے ایک کو مکمل کریں۔';
+      '5/5 Ø¬Ú¯ÛÛŒÚº Ø§Ø³ØªØ¹Ù…Ø§Ù„ ÛÙˆØ¦ÛŒÚº â€” Ù†ÛŒØ§ Ø¨ÛŒØ¬ Ù„Ú¯Ø§Ù†Û’ Ú©Û’ Ù„ÛŒÛ’ Ø§ÛŒÚ© Ú©Ùˆ Ù…Ú©Ù…Ù„ Ú©Ø±ÛŒÚºÛ”';
 
   @override
-  String get tasksEmptyCta => 'اپنا پہلا بیج لگائیں — آج کیا اہم ہے؟';
+  String get tasksEmptyCta =>
+      'Ø§Ù¾Ù†Ø§ Ù¾ÛÙ„Ø§ Ø¨ÛŒØ¬ Ù„Ú¯Ø§Ø¦ÛŒÚº â€” Ø¢Ø¬ Ú©ÛŒØ§ Ø§ÛÙ… ÛÛ’ØŸ';
 
   @override
-  String get habitsHeader => 'عادات';
+  String get habitsHeader => 'Ø¹Ø§Ø¯Ø§Øª';
 
   @override
   String habitsGrowing(String count) {
-    return '$count بڑھ رہی ہیں';
+    return '$count Ø¨Ú‘Ú¾ Ø±ÛÛŒ ÛÛŒÚº';
   }
 
   @override
   String habitsBestStreak(String days) {
-    return 'بہترین $days دن';
+    return 'Ø¨ÛØªØ±ÛŒÙ† $days Ø¯Ù†';
   }
 
   @override
-  String get habitsPlantNew => 'نئی عادت کا پودا لگائیں';
+  String get habitsPlantNew => 'Ù†Ø¦ÛŒ Ø¹Ø§Ø¯Øª Ú©Ø§ Ù¾ÙˆØ¯Ø§ Ù„Ú¯Ø§Ø¦ÛŒÚº';
 
   @override
-  String get habitsPlantFirst => 'عادت لگائیں';
+  String get habitsPlantFirst => 'Ø¹Ø§Ø¯Øª Ù„Ú¯Ø§Ø¦ÛŒÚº';
 
   @override
-  String get habitsLocked => 'Pro عادت کی جگہ — مزید پودے لگانے کے لیے کھولیں';
+  String get habitsLocked =>
+      'Pro Ø¹Ø§Ø¯Øª Ú©ÛŒ Ø¬Ú¯Û â€” Ù…Ø²ÛŒØ¯ Ù¾ÙˆØ¯Û’ Ù„Ú¯Ø§Ù†Û’ Ú©Û’ Ù„ÛŒÛ’ Ú©Ú¾ÙˆÙ„ÛŒÚº';
 
   @override
-  String get habitsSlotsFull => 'تمام عادت کی جگہیں فل ہیں۔';
+  String get habitsSlotsFull =>
+      'ØªÙ…Ø§Ù… Ø¹Ø§Ø¯Øª Ú©ÛŒ Ø¬Ú¯ÛÛŒÚº ÙÙ„ ÛÛŒÚºÛ”';
 
   @override
   String habitsStreakDays(String days) {
-    return '$daysدن';
+    return '$daysØ¯Ù†';
   }
 
   @override
-  String get habitsCadence => 'روزانہ';
+  String get habitsCadence => 'Ø±ÙˆØ²Ø§Ù†Û';
 
   @override
   String leftBehindBanner(String count) {
-    return '$count چھوٹے گئے — ابھی بھی Left Behind میں ہیں';
+    return '$count Ú†Ú¾ÙˆÙ¹Û’ Ú¯Ø¦Û’ â€” Ø§Ø¨Ú¾ÛŒ Ø¨Ú¾ÛŒ Left Behind Ù…ÛŒÚº ÛÛŒÚº';
   }
 
   @override
-  String get leftBehindTap => 'دوبارہ شامل کرنے یا چھوڑنے کے لیے ٹیپ کریں';
+  String get leftBehindTap =>
+      'Ø¯ÙˆØ¨Ø§Ø±Û Ø´Ø§Ù…Ù„ Ú©Ø±Ù†Û’ ÛŒØ§ Ú†Ú¾ÙˆÚ‘Ù†Û’ Ú©Û’ Ù„ÛŒÛ’ Ù¹ÛŒÙ¾ Ú©Ø±ÛŒÚº';
 
   @override
-  String get leftBehindDismiss => 'ختم کریں';
+  String get leftBehindDismiss => 'Ø®ØªÙ… Ú©Ø±ÛŒÚº';
 
   @override
-  String get leftBehindTitle => 'پیچھے چھوڑے گئے';
+  String get leftBehindTitle => 'Ù¾ÛŒÚ†Ú¾Û’ Ú†Ú¾ÙˆÚ‘Û’ Ú¯Ø¦Û’';
 
   @override
-  String get leftBehindEmpty => 'کچھ بھی پیچھے نہیں چھوڑا';
+  String get leftBehindEmpty => 'Ú©Ú†Ú¾ Ø¨Ú¾ÛŒ Ù¾ÛŒÚ†Ú¾Û’ Ù†ÛÛŒÚº Ú†Ú¾ÙˆÚ‘Ø§';
 
   @override
   String get leftBehindEmptyBody =>
-      'کوئی چھوٹا ہوا کام نہیں۔ ہر بیج جو آپ لگاتے ہیں اس کی دیکھ بھال ہو رہی ہے۔ باغ صاف ہے۔';
+      'Ú©ÙˆØ¦ÛŒ Ú†Ú¾ÙˆÙ¹Ø§ ÛÙˆØ§ Ú©Ø§Ù… Ù†ÛÛŒÚºÛ” ÛØ± Ø¨ÛŒØ¬ Ø¬Ùˆ Ø¢Ù¾ Ù„Ú¯Ø§ØªÛ’ ÛÛŒÚº Ø§Ø³ Ú©ÛŒ Ø¯ÛŒÚ©Ú¾ Ø¨Ú¾Ø§Ù„ ÛÙˆ Ø±ÛÛŒ ÛÛ’Û” Ø¨Ø§Øº ØµØ§Ù ÛÛ’Û”';
 
   @override
-  String get leftBehindClearAll => 'سب صاف کریں';
+  String get leftBehindClearAll => 'Ø³Ø¨ ØµØ§Ù Ú©Ø±ÛŒÚº';
 
   @override
-  String get leftBehindClearAllConfirm => 'سب کچھ صاف کریں؟';
+  String get leftBehindClearAllConfirm => 'Ø³Ø¨ Ú©Ú†Ú¾ ØµØ§Ù Ú©Ø±ÛŒÚºØŸ';
 
   @override
   String leftBehindClearAllBody(String count) {
-    return 'یہ $count چھوٹے ہوئے کام کو مستقل طور پر ہٹا دے گا۔ آپ اسے واپس نہیں کر سکتے۔';
+    return 'ÛŒÛ $count Ú†Ú¾ÙˆÙ¹Û’ ÛÙˆØ¦Û’ Ú©Ø§Ù… Ú©Ùˆ Ù…Ø³ØªÙ‚Ù„ Ø·ÙˆØ± Ù¾Ø± ÛÙ¹Ø§ Ø¯Û’ Ú¯Ø§Û” Ø¢Ù¾ Ø§Ø³Û’ ÙˆØ§Ù¾Ø³ Ù†ÛÛŒÚº Ú©Ø± Ø³Ú©ØªÛ’Û”';
   }
 
   @override
-  String get leftBehindReAdd => 'آج دوبارہ شامل کریں';
+  String get leftBehindReAdd => 'Ø¢Ø¬ Ø¯ÙˆØ¨Ø§Ø±Û Ø´Ø§Ù…Ù„ Ú©Ø±ÛŒÚº';
 
   @override
-  String get leftBehindReAddButton => 'دوبارہ شامل کریں';
+  String get leftBehindReAddButton => 'Ø¯ÙˆØ¨Ø§Ø±Û Ø´Ø§Ù…Ù„ Ú©Ø±ÛŒÚº';
 
   @override
-  String get leftBehindAddedToToday => 'آج شامل کر دیا گیا';
+  String get leftBehindAddedToToday => 'Ø¢Ø¬ Ø´Ø§Ù…Ù„ Ú©Ø± Ø¯ÛŒØ§ Ú¯ÛŒØ§';
 
   @override
-  String get leftBehindLetGo => 'چھوڑ دو';
+  String get leftBehindLetGo => 'Ú†Ú¾ÙˆÚ‘ Ø¯Ùˆ';
 
   @override
   String get leftBehindHeader => 'LEFT BEHIND';
 
   @override
-  String get leftBehindMissedTasks => 'چھوٹے ہوئے کام';
+  String get leftBehindMissedTasks => 'Ú†Ú¾ÙˆÙ¹Û’ ÛÙˆØ¦Û’ Ú©Ø§Ù…';
 
   @override
-  String get leftBehindWaitingOne => '1 کام آپ کا منتظر ہے۔';
+  String get leftBehindWaitingOne => '1 Ú©Ø§Ù… Ø¢Ù¾ Ú©Ø§ Ù…Ù†ØªØ¸Ø± ÛÛ’Û”';
 
   @override
   String leftBehindWaitingMany(String count) {
-    return '$count کام آپ کا منتظر ہیں۔';
+    return '$count Ú©Ø§Ù… Ø¢Ù¾ Ú©Ø§ Ù…Ù†ØªØ¸Ø± ÛÛŒÚºÛ”';
   }
 
   @override
   String get leftBehindBody =>
-      'کام کو آج واپس لانے کے لیے دوبارہ شامل کریں، یا چھوڑ دیں۔ دوبارہ شامل کرنے سے آپ کی اسٹریک زندہ رہتی ہے۔';
+      'Ú©Ø§Ù… Ú©Ùˆ Ø¢Ø¬ ÙˆØ§Ù¾Ø³ Ù„Ø§Ù†Û’ Ú©Û’ Ù„ÛŒÛ’ Ø¯ÙˆØ¨Ø§Ø±Û Ø´Ø§Ù…Ù„ Ú©Ø±ÛŒÚºØŒ ÛŒØ§ Ú†Ú¾ÙˆÚ‘ Ø¯ÛŒÚºÛ” Ø¯ÙˆØ¨Ø§Ø±Û Ø´Ø§Ù…Ù„ Ú©Ø±Ù†Û’ Ø³Û’ Ø¢Ù¾ Ú©ÛŒ Ø§Ø³Ù¹Ø±ÛŒÚ© Ø²Ù†Ø¯Û Ø±ÛØªÛŒ ÛÛ’Û”';
 
   @override
   String leftBehindReAddedSnack(String task) {
-    return '\"$task\" آپ کے دن میں واپس آ گیا۔';
+    return '\"$task\" Ø¢Ù¾ Ú©Û’ Ø¯Ù† Ù…ÛŒÚº ÙˆØ§Ù¾Ø³ Ø¢ Ú¯ÛŒØ§Û”';
   }
 
   @override
   String leftBehindRemovedSnack(String task) {
-    return '\"$task\" ہٹا دیا گیا';
+    return '\"$task\" ÛÙ¹Ø§ Ø¯ÛŒØ§ Ú¯ÛŒØ§';
   }
 
   @override
-  String get leftBehindClearedSnack => 'Left Behind صاف ہو گیا';
+  String get leftBehindClearedSnack => 'Left Behind ØµØ§Ù ÛÙˆ Ú¯ÛŒØ§';
 
   @override
   String leftBehindYesterdayDate(String date) {
-    return 'کل · $date';
+    return 'Ú©Ù„ Â· $date';
   }
 
   @override
   String streakAtRisk(String count) {
-    return 'آج کے لیے $count کام باقی ہیں';
+    return 'Ø¢Ø¬ Ú©Û’ Ù„ÛŒÛ’ $count Ú©Ø§Ù… Ø¨Ø§Ù‚ÛŒ ÛÛŒÚº';
   }
 
   @override
   String streakAtRiskLastCall(String count) {
-    return 'آخری موقع — $count کام ابھی بھی کھلے ہیں';
+    return 'Ø¢Ø®Ø±ÛŒ Ù…ÙˆÙ‚Ø¹ â€” $count Ú©Ø§Ù… Ø§Ø¨Ú¾ÛŒ Ø¨Ú¾ÛŒ Ú©Ú¾Ù„Û’ ÛÛŒÚº';
   }
 
   @override
-  String get streakAtRiskBody => 'رات قریب ہے۔ زنجیر ان پر منحصر ہے۔';
+  String get streakAtRiskBody =>
+      'Ø±Ø§Øª Ù‚Ø±ÛŒØ¨ ÛÛ’Û” Ø²Ù†Ø¬ÛŒØ± Ø§Ù† Ù¾Ø± Ù…Ù†Ø­ØµØ± ÛÛ’Û”';
 
   @override
   String get streakAtRiskBodyLow =>
-      'ابھی بھی وقت ہے۔ صاف دن آپ کی اسٹریک بڑھاتا ہے۔';
+      'Ø§Ø¨Ú¾ÛŒ Ø¨Ú¾ÛŒ ÙˆÙ‚Øª ÛÛ’Û” ØµØ§Ù Ø¯Ù† Ø¢Ù¾ Ú©ÛŒ Ø§Ø³Ù¹Ø±ÛŒÚ© Ø¨Ú‘Ú¾Ø§ØªØ§ ÛÛ’Û”';
 
   @override
-  String get streakAtRiskFreeze => 'کل چھوٹ گیا — اسٹریک فریز استعمال کریں؟';
+  String get streakAtRiskFreeze =>
+      'Ú©Ù„ Ú†Ú¾ÙˆÙ¹ Ú¯ÛŒØ§ â€” Ø§Ø³Ù¹Ø±ÛŒÚ© ÙØ±ÛŒØ² Ø§Ø³ØªØ¹Ù…Ø§Ù„ Ú©Ø±ÛŒÚºØŸ';
 
   @override
-  String get streakFreezeUse => 'فریز استعمال کریں';
+  String get streakFreezeUse => 'ÙØ±ÛŒØ² Ø§Ø³ØªØ¹Ù…Ø§Ù„ Ú©Ø±ÛŒÚº';
 
   @override
   String get streakFreezeUseForYesterday =>
-      'کل کے لیے ماہانہ اسٹریک فریز استعمال کریں';
+      'Ú©Ù„ Ú©Û’ Ù„ÛŒÛ’ Ù…Ø§ÛØ§Ù†Û Ø§Ø³Ù¹Ø±ÛŒÚ© ÙØ±ÛŒØ² Ø§Ø³ØªØ¹Ù…Ø§Ù„ Ú©Ø±ÛŒÚº';
 
   @override
   String get streakFreezeAppliedYesterday =>
-      'کل کے لیے اسٹریک فریز لاگو ہو گیا۔';
+      'Ú©Ù„ Ú©Û’ Ù„ÛŒÛ’ Ø§Ø³Ù¹Ø±ÛŒÚ© ÙØ±ÛŒØ² Ù„Ø§Ú¯Ùˆ ÛÙˆ Ú¯ÛŒØ§Û”';
 
   @override
-  String get chainBrokenTitle => 'زنجیر ٹوٹ گئی۔ کوئی بات نہیں۔';
+  String get chainBrokenTitle =>
+      'Ø²Ù†Ø¬ÛŒØ± Ù¹ÙˆÙ¹ Ú¯Ø¦ÛŒÛ” Ú©ÙˆØ¦ÛŒ Ø¨Ø§Øª Ù†ÛÛŒÚºÛ”';
 
   @override
   String get chainBrokenBody =>
-      'ہر لمبی زنجیر ایک بار ٹوٹتی ہے۔ جو اہم ہے وہ ہے آج آپ کیا لگاتے ہیں۔ ایک کامل دن اگلی زنجیر شروع کرتا ہے۔';
+      'ÛØ± Ù„Ù…Ø¨ÛŒ Ø²Ù†Ø¬ÛŒØ± Ø§ÛŒÚ© Ø¨Ø§Ø± Ù¹ÙˆÙ¹ØªÛŒ ÛÛ’Û” Ø¬Ùˆ Ø§ÛÙ… ÛÛ’ ÙˆÛ ÛÛ’ Ø¢Ø¬ Ø¢Ù¾ Ú©ÛŒØ§ Ù„Ú¯Ø§ØªÛ’ ÛÛŒÚºÛ” Ø§ÛŒÚ© Ú©Ø§Ù…Ù„ Ø¯Ù† Ø§Ú¯Ù„ÛŒ Ø²Ù†Ø¬ÛŒØ± Ø´Ø±ÙˆØ¹ Ú©Ø±ØªØ§ ÛÛ’Û”';
 
   @override
-  String get chainBrokenCta => 'آج پر واپس آئیں';
+  String get chainBrokenCta => 'Ø¢Ø¬ Ù¾Ø± ÙˆØ§Ù¾Ø³ Ø¢Ø¦ÛŒÚº';
 
   @override
-  String get chainBrokenPlantFirst => 'آج کا پہلا بیج لگائیں';
+  String get chainBrokenPlantFirst => 'Ø¢Ø¬ Ú©Ø§ Ù¾ÛÙ„Ø§ Ø¨ÛŒØ¬ Ù„Ú¯Ø§Ø¦ÛŒÚº';
 
   @override
-  String get chainBrokenCheck => 'پہلے Left Behind چیک کریں';
+  String get chainBrokenCheck => 'Ù¾ÛÙ„Û’ Left Behind Ú†ÛŒÚ© Ú©Ø±ÛŒÚº';
 
   @override
-  String get chainBrokenBestChain => 'بہترین زنجیر';
+  String get chainBrokenBestChain => 'Ø¨ÛØªØ±ÛŒÙ† Ø²Ù†Ø¬ÛŒØ±';
 
   @override
-  String get chainBrokenTasksDone => 'کام مکمل';
+  String get chainBrokenTasksDone => 'Ú©Ø§Ù… Ù…Ú©Ù…Ù„';
 
   @override
-  String get chainBrokenSprouts => 'پودے';
+  String get chainBrokenSprouts => 'Ù¾ÙˆØ¯Û’';
 
   @override
-  String get chainRecoveryFreshStart => 'نئی شروعات';
+  String get chainRecoveryFreshStart => 'Ù†Ø¦ÛŒ Ø´Ø±ÙˆØ¹Ø§Øª';
 
   @override
-  String get medalsTitle => 'میرے تمغے';
+  String get medalsTitle => 'Ù…ÛŒØ±Û’ ØªÙ…ØºÛ’';
 
   @override
-  String get medalsTrophyRoom => 'ٹرافی روم';
+  String get medalsTrophyRoom => 'Ù¹Ø±Ø§ÙÛŒ Ø±ÙˆÙ…';
 
   @override
-  String get medalsAllMedals => 'تمام تمغے';
+  String get medalsAllMedals => 'ØªÙ…Ø§Ù… ØªÙ…ØºÛ’';
 
   @override
   String medalsTrophyEarned(String earned, String total) {
-    return '$earned / $total تمغے حاصل';
+    return '$earned / $total ØªÙ…ØºÛ’ Ø­Ø§ØµÙ„';
   }
 
   @override
-  String get medalsTrophyEmpty => 'آپ کا پہلا بیج ایک کام دور ہے';
+  String get medalsTrophyEmpty =>
+      'Ø¢Ù¾ Ú©Ø§ Ù¾ÛÙ„Ø§ Ø¨ÛŒØ¬ Ø§ÛŒÚ© Ú©Ø§Ù… Ø¯ÙˆØ± ÛÛ’';
 
   @override
   String get medalsTrophyFirst =>
-      'آپ نے اپنا پہلا تمغہ حاصل کر لیا — جاری رکھیں';
+      'Ø¢Ù¾ Ù†Û’ Ø§Ù¾Ù†Ø§ Ù¾ÛÙ„Ø§ ØªÙ…ØºÛ Ø­Ø§ØµÙ„ Ú©Ø± Ù„ÛŒØ§ â€” Ø¬Ø§Ø±ÛŒ Ø±Ú©Ú¾ÛŒÚº';
 
   @override
   String medalsTrophyMany(String earned) {
-    return 'آپ کے ٹرافی روم میں $earned تمغے';
+    return 'Ø¢Ù¾ Ú©Û’ Ù¹Ø±Ø§ÙÛŒ Ø±ÙˆÙ… Ù…ÛŒÚº $earned ØªÙ…ØºÛ’';
   }
 
   @override
   String medalsProgressLabel(String total) {
-    return 'تمام $total تمغوں کی طرف پیشرفت';
+    return 'ØªÙ…Ø§Ù… $total ØªÙ…ØºÙˆÚº Ú©ÛŒ Ø·Ø±Ù Ù¾ÛŒØ´Ø±ÙØª';
   }
 
   @override
-  String get medalsShareCta => 'شیئر کرنے کے قابل کارڈ بنائیں';
+  String get medalsShareCta =>
+      'Ø´ÛŒØ¦Ø± Ú©Ø±Ù†Û’ Ú©Û’ Ù‚Ø§Ø¨Ù„ Ú©Ø§Ø±Úˆ Ø¨Ù†Ø§Ø¦ÛŒÚº';
 
   @override
-  String get medalsEmptyTitle => 'اس زمرے میں ابھی کچھ نہیں ہے';
+  String get medalsEmptyTitle =>
+      'Ø§Ø³ Ø²Ù…Ø±Û’ Ù…ÛŒÚº Ø§Ø¨Ú¾ÛŒ Ú©Ú†Ú¾ Ù†ÛÛŒÚº ÛÛ’';
 
   @override
   String get medalsEmptyBody =>
-      'ٹرافی روم شروع کرنے کے لیے کوئی کام مکمل کریں یا پودے کی دیکھ بھال کریں۔';
+      'Ù¹Ø±Ø§ÙÛŒ Ø±ÙˆÙ… Ø´Ø±ÙˆØ¹ Ú©Ø±Ù†Û’ Ú©Û’ Ù„ÛŒÛ’ Ú©ÙˆØ¦ÛŒ Ú©Ø§Ù… Ù…Ú©Ù…Ù„ Ú©Ø±ÛŒÚº ÛŒØ§ Ù¾ÙˆØ¯Û’ Ú©ÛŒ Ø¯ÛŒÚ©Ú¾ Ø¨Ú¾Ø§Ù„ Ú©Ø±ÛŒÚºÛ”';
 
   @override
-  String get medalSheetLocked => 'Pro تمغہ';
+  String get medalSheetLocked => 'Pro ØªÙ…ØºÛ';
 
   @override
   String medalSheetEarned(String tier) {
-    return 'حاصل · $tier';
+    return 'Ø­Ø§ØµÙ„ Â· $tier';
   }
 
   @override
-  String get medalSheetUnlock => 'Pro سے کھولیں';
+  String get medalSheetUnlock => 'Pro Ø³Û’ Ú©Ú¾ÙˆÙ„ÛŒÚº';
 
   @override
-  String get medalSheetProgress => 'پیشرفت';
+  String get medalSheetProgress => 'Ù¾ÛŒØ´Ø±ÙØª';
 
   @override
   String medalSheetHint(String n, String unit) {
-    return 'صرف $n مزید $unit کھولنے کے لیے۔';
+    return 'ØµØ±Ù $n Ù…Ø²ÛŒØ¯ $unit Ú©Ú¾ÙˆÙ„Ù†Û’ Ú©Û’ Ù„ÛŒÛ’Û”';
   }
 
   @override
-  String get medalSheetAlmost => 'کھولنے کے لیے ایک اور قدم۔';
+  String get medalSheetAlmost =>
+      'Ú©Ú¾ÙˆÙ„Ù†Û’ Ú©Û’ Ù„ÛŒÛ’ Ø§ÛŒÚ© Ø§ÙˆØ± Ù‚Ø¯Ù…Û”';
 
   @override
-  String get medalCategory => 'زمرہ';
+  String get medalCategory => 'Ø²Ù…Ø±Û';
 
   @override
-  String get medalShareOnSocials => 'سوشل میڈیا پر شیئر کریں';
+  String get medalShareOnSocials =>
+      'Ø³ÙˆØ´Ù„ Ù…ÛŒÚˆÛŒØ§ Ù¾Ø± Ø´ÛŒØ¦Ø± Ú©Ø±ÛŒÚº';
 
   @override
-  String get medalShareLater => 'بعد میں';
+  String get medalShareLater => 'Ø¨Ø¹Ø¯ Ù…ÛŒÚº';
 
   @override
-  String get medalUnlocked => 'تمغہ کھلا';
+  String get medalUnlocked => 'ØªÙ…ØºÛ Ú©Ú¾Ù„Ø§';
 
   @override
-  String get medalProgressTitle => 'پیشرفت';
+  String get medalProgressTitle => 'Ù¾ÛŒØ´Ø±ÙØª';
 
   @override
-  String get historyTitle => 'آخری 7 دن';
+  String get historyTitle => 'Ø¢Ø®Ø±ÛŒ 7 Ø¯Ù†';
 
   @override
-  String get historyFullTitle => 'مکمل تاریخ';
+  String get historyFullTitle => 'Ù…Ú©Ù…Ù„ ØªØ§Ø±ÛŒØ®';
 
   @override
-  String get historyLoadError => 'تاریخ لو نہیں ہو سکی۔';
+  String get historyLoadError => 'ØªØ§Ø±ÛŒØ® Ù„Ùˆ Ù†ÛÛŒÚº ÛÙˆ Ø³Ú©ÛŒÛ”';
 
   @override
-  String get historyFullCalendar => 'مکمل کیلنڈر';
+  String get historyFullCalendar => 'Ù…Ú©Ù…Ù„ Ú©ÛŒÙ„Ù†ÚˆØ±';
 
   @override
   String historyCompletedPercent(String percent) {
-    return '$percent% مکمل';
+    return '$percent% Ù…Ú©Ù…Ù„';
   }
 
   @override
   String historyThisWeek(String days) {
-    return 'آخری $days دن';
+    return 'Ø¢Ø®Ø±ÛŒ $days Ø¯Ù†';
   }
 
   @override
-  String get historyDayByDay => 'دن بہ دن';
+  String get historyDayByDay => 'Ø¯Ù† Ø¨Û Ø¯Ù†';
 
   @override
-  String get historyEmpty => 'اپنا ہفتہ دیکھنے کے لیے کچھ بیج لگائیں۔';
+  String get historyEmpty =>
+      'Ø§Ù¾Ù†Ø§ ÛÙØªÛ Ø¯ÛŒÚ©Ú¾Ù†Û’ Ú©Û’ Ù„ÛŒÛ’ Ú©Ú†Ú¾ Ø¨ÛŒØ¬ Ù„Ú¯Ø§Ø¦ÛŒÚºÛ”';
 
   @override
   String historyDoneCount(String done, String total, String perfect) {
-    return 'آپ نے $total میں سے $done کام مکمل کیے۔ $perfect کامل دن۔';
+    return 'Ø¢Ù¾ Ù†Û’ $total Ù…ÛŒÚº Ø³Û’ $done Ú©Ø§Ù… Ù…Ú©Ù…Ù„ Ú©ÛŒÛ’Û” $perfect Ú©Ø§Ù…Ù„ Ø¯Ù†Û”';
   }
 
   @override
-  String get historyUpsellTitle => 'اپنا مکمل تاریخ دیکھیں';
+  String get historyUpsellTitle => 'Ø§Ù¾Ù†Ø§ Ù…Ú©Ù…Ù„ ØªØ§Ø±ÛŒØ® Ø¯ÛŒÚ©Ú¾ÛŒÚº';
 
   @override
   String get historyUpsellBody =>
-      'Pro 30 دن کی تاریخ کھولتا ہے۔ مفت 7 دکھاتا ہے۔';
+      'Pro 30 Ø¯Ù† Ú©ÛŒ ØªØ§Ø±ÛŒØ® Ú©Ú¾ÙˆÙ„ØªØ§ ÛÛ’Û” Ù…ÙØª 7 Ø¯Ú©Ú¾Ø§ØªØ§ ÛÛ’Û”';
 
   @override
-  String get historyPerfect => 'کامل';
+  String get historyPerfect => 'Ú©Ø§Ù…Ù„';
 
   @override
-  String get historyFrozen => 'منجمد';
+  String get historyFrozen => 'Ù…Ù†Ø¬Ù…Ø¯';
 
   @override
-  String get historyToday => 'آج';
+  String get historyToday => 'Ø¢Ø¬';
 
   @override
-  String get historyEmptyDay => 'اس دن کوئی بیج نہیں لگایا گیا';
+  String get historyEmptyDay =>
+      'Ø§Ø³ Ø¯Ù† Ú©ÙˆØ¦ÛŒ Ø¨ÛŒØ¬ Ù†ÛÛŒÚº Ù„Ú¯Ø§ÛŒØ§ Ú¯ÛŒØ§';
 
   @override
   String historyLeftBehindCount(String count) {
-    return '$count پیچھے چھوڑے گئے';
+    return '$count Ù¾ÛŒÚ†Ú¾Û’ Ú†Ú¾ÙˆÚ‘Û’ Ú¯Ø¦Û’';
   }
 
   @override
-  String get progressVitality => 'آج کی جان';
+  String get progressVitality => 'Ø¢Ø¬ Ú©ÛŒ Ø¬Ø§Ù†';
 
   @override
-  String get progressVitalityEmpty => 'باغ شروع کرنے کے لیے ایک بیج لگائیں۔';
+  String get progressVitalityEmpty =>
+      'Ø¨Ø§Øº Ø´Ø±ÙˆØ¹ Ú©Ø±Ù†Û’ Ú©Û’ Ù„ÛŒÛ’ Ø§ÛŒÚ© Ø¨ÛŒØ¬ Ù„Ú¯Ø§Ø¦ÛŒÚºÛ”';
 
   @override
   String progressVitalitySeeds(String done, String total) {
-    return '$done / $total بیج آج لگائے گئے۔';
+    return '$done / $total Ø¨ÛŒØ¬ Ø¢Ø¬ Ù„Ú¯Ø§Ø¦Û’ Ú¯Ø¦Û’Û”';
   }
 
   @override
   String progressChainPill(String days) {
-    return '$days دن کی زنجیر';
+    return '$days Ø¯Ù† Ú©ÛŒ Ø²Ù†Ø¬ÛŒØ±';
   }
 
   @override
-  String get progressMetricCurrent => 'حالیہ';
+  String get progressMetricCurrent => 'Ø­Ø§Ù„ÛŒÛ';
 
   @override
-  String get progressMetricBest => 'بہترین';
+  String get progressMetricBest => 'Ø¨ÛØªØ±ÛŒÙ†';
 
   @override
-  String get progressMetricDone => 'مکمل';
+  String get progressMetricDone => 'Ù…Ú©Ù…Ù„';
 
   @override
-  String get progressMetricPerfect => 'کامل';
+  String get progressMetricPerfect => 'Ú©Ø§Ù…Ù„';
 
   @override
-  String get progressMetricHabits => 'عادات';
+  String get progressMetricHabits => 'Ø¹Ø§Ø¯Ø§Øª';
 
   @override
-  String get progressHabitBlooms => 'عادت کے پھول';
+  String get progressHabitBlooms => 'Ø¹Ø§Ø¯Øª Ú©Û’ Ù¾Ú¾ÙˆÙ„';
 
   @override
   String get progressHabitBloomsSub =>
-      'روزانہ پانی دیے جانے والے پودوں کے لیے اسٹریک سنگ میلز۔';
+      'Ø±ÙˆØ²Ø§Ù†Û Ù¾Ø§Ù†ÛŒ Ø¯ÛŒÛ’ Ø¬Ø§Ù†Û’ ÙˆØ§Ù„Û’ Ù¾ÙˆØ¯ÙˆÚº Ú©Û’ Ù„ÛŒÛ’ Ø§Ø³Ù¹Ø±ÛŒÚ© Ø³Ù†Ú¯ Ù…ÛŒÙ„Ø²Û”';
 
   @override
-  String get progressNextBadge => 'اگلا بیج';
+  String get progressNextBadge => 'Ø§Ú¯Ù„Ø§ Ø¨ÛŒØ¬';
 
   @override
   String progressMedalCount(String earned, String total) {
@@ -486,634 +507,685 @@ class AppLocalizationsUr extends AppLocalizations {
   }
 
   @override
-  String get progressPersonalActivity => 'ذاتی سرگرمی';
+  String get progressPersonalActivity => 'Ø°Ø§ØªÛŒ Ø³Ø±Ú¯Ø±Ù…ÛŒ';
 
   @override
   String progressBrowseMonth(String month) {
-    return '$month براؤز کر رہے ہیں۔ اپنی لائیو سرگرمی پر واپس جانے کے لیے \"آج\" ٹیپ کریں۔';
+    return '$month Ø¨Ø±Ø§Ø¤Ø² Ú©Ø± Ø±ÛÛ’ ÛÛŒÚºÛ” Ø§Ù¾Ù†ÛŒ Ù„Ø§Ø¦ÛŒÙˆ Ø³Ø±Ú¯Ø±Ù…ÛŒ Ù¾Ø± ÙˆØ§Ù¾Ø³ Ø¬Ø§Ù†Û’ Ú©Û’ Ù„ÛŒÛ’ \"Ø¢Ø¬\" Ù¹ÛŒÙ¾ Ú©Ø±ÛŒÚºÛ”';
   }
 
   @override
-  String get progressJumpToToday => 'آج';
+  String get progressJumpToToday => 'Ø¢Ø¬';
 
   @override
-  String get progressCalendarLegend => 'گہرا = زیادہ مکمل';
+  String get progressCalendarLegend => 'Ú¯ÛØ±Ø§ = Ø²ÛŒØ§Ø¯Û Ù…Ú©Ù…Ù„';
 
   @override
   String get progressCalendarBody =>
-      'گہرا سبز ایک کامل دن کا مطلب ہے۔ جیسے جیسے آپ چھوڑتے ہیں رنگ ہلکا ہوتا جاتا ہے۔';
+      'Ú¯ÛØ±Ø§ Ø³Ø¨Ø² Ø§ÛŒÚ© Ú©Ø§Ù…Ù„ Ø¯Ù† Ú©Ø§ Ù…Ø·Ù„Ø¨ ÛÛ’Û” Ø¬ÛŒØ³Û’ Ø¬ÛŒØ³Û’ Ø¢Ù¾ Ú†Ú¾ÙˆÚ‘ØªÛ’ ÛÛŒÚº Ø±Ù†Ú¯ ÛÙ„Ú©Ø§ ÛÙˆØªØ§ Ø¬Ø§ØªØ§ ÛÛ’Û”';
 
   @override
-  String get paywallTitle => 'زنجیر کو نہ ٹوٹنے دیں۔';
+  String get paywallTitle => 'Ø²Ù†Ø¬ÛŒØ± Ú©Ùˆ Ù†Û Ù¹ÙˆÙ¹Ù†Û’ Ø¯ÛŒÚºÛ”';
 
   @override
   String get paywallSubtitle =>
-      'Daily Stitch Pro آپ کو مکمل نظم و ضبط کا نظام دیتا ہے۔';
+      'Daily Stitch Pro Ø¢Ù¾ Ú©Ùˆ Ù…Ú©Ù…Ù„ Ù†Ø¸Ù… Ùˆ Ø¶Ø¨Ø· Ú©Ø§ Ù†Ø¸Ø§Ù… Ø¯ÛŒØªØ§ ÛÛ’Û”';
 
   @override
   String get paywallFeatures =>
-      'تمام 5 عادت کی جگہیں، صرف 3 نہیں|آپ کی مکمل تاریخ، ہمیشہ کے لیے|مکمل تمغوں کا مجموعہ|ہر ماہ اسٹریک فریز|ہفتہ وار رسید + شیئر کارڈ|تھیمز + مزید';
+      'ØªÙ…Ø§Ù… 5 Ø¹Ø§Ø¯Øª Ú©ÛŒ Ø¬Ú¯ÛÛŒÚºØŒ ØµØ±Ù 3 Ù†ÛÛŒÚº|Ø¢Ù¾ Ú©ÛŒ Ù…Ú©Ù…Ù„ ØªØ§Ø±ÛŒØ®ØŒ ÛÙ…ÛŒØ´Û Ú©Û’ Ù„ÛŒÛ’|Ù…Ú©Ù…Ù„ ØªÙ…ØºÙˆÚº Ú©Ø§ Ù…Ø¬Ù…ÙˆØ¹Û|ÛØ± Ù…Ø§Û Ø§Ø³Ù¹Ø±ÛŒÚ© ÙØ±ÛŒØ²|ÛÙØªÛ ÙˆØ§Ø± Ø±Ø³ÛŒØ¯ + Ø´ÛŒØ¦Ø± Ú©Ø§Ø±Úˆ|ØªÚ¾ÛŒÙ…Ø² + Ù…Ø²ÛŒØ¯';
 
   @override
   String get paywallFeaturesBodies =>
-      'مفت میں صرف 3 ملتے ہیں۔ Pro تمام پانچ کھولتا ہے تاکہ آپ کی مکمل روزانہ رسم یہاں رہ سکے۔|ہر وہ دن براؤز کریں جو آپ نے مکمل کیا — صرف آخری 7 نہیں۔ سالوں کو پیچھے دیکھیں، ہفتوں کو نہیں۔|Legendary ٹائر کے تمغے کھولیں۔ سب سے نادر بیج ان لوگوں کے لیے ہیں جو پوری لگن لگاتے ہیں۔|ہر ماہ 2 اسٹریک فریز تاکہ ایک برا دن آپ کی زنجیر ختم نہ کرے۔|اپنے ہفتے کے خوبصورت شیئر کارڈ۔ اپنی زنجیر پوسٹ کریں، کسی اور کو شروع کرنے کی ترغیب دیں۔|نئے رنگ اور تھیمز کھولیں جیسے ہم شامل کرتے ہیں۔ ہمیشہ مفت اپ ڈیٹس۔';
+      'Ù…ÙØª Ù…ÛŒÚº ØµØ±Ù 3 Ù…Ù„ØªÛ’ ÛÛŒÚºÛ” Pro ØªÙ…Ø§Ù… Ù¾Ø§Ù†Ú† Ú©Ú¾ÙˆÙ„ØªØ§ ÛÛ’ ØªØ§Ú©Û Ø¢Ù¾ Ú©ÛŒ Ù…Ú©Ù…Ù„ Ø±ÙˆØ²Ø§Ù†Û Ø±Ø³Ù… ÛŒÛØ§Úº Ø±Û Ø³Ú©Û’Û”|ÛØ± ÙˆÛ Ø¯Ù† Ø¨Ø±Ø§Ø¤Ø² Ú©Ø±ÛŒÚº Ø¬Ùˆ Ø¢Ù¾ Ù†Û’ Ù…Ú©Ù…Ù„ Ú©ÛŒØ§ â€” ØµØ±Ù Ø¢Ø®Ø±ÛŒ 7 Ù†ÛÛŒÚºÛ” Ø³Ø§Ù„ÙˆÚº Ú©Ùˆ Ù¾ÛŒÚ†Ú¾Û’ Ø¯ÛŒÚ©Ú¾ÛŒÚºØŒ ÛÙØªÙˆÚº Ú©Ùˆ Ù†ÛÛŒÚºÛ”|Legendary Ù¹Ø§Ø¦Ø± Ú©Û’ ØªÙ…ØºÛ’ Ú©Ú¾ÙˆÙ„ÛŒÚºÛ” Ø³Ø¨ Ø³Û’ Ù†Ø§Ø¯Ø± Ø¨ÛŒØ¬ Ø§Ù† Ù„ÙˆÚ¯ÙˆÚº Ú©Û’ Ù„ÛŒÛ’ ÛÛŒÚº Ø¬Ùˆ Ù¾ÙˆØ±ÛŒ Ù„Ú¯Ù† Ù„Ú¯Ø§ØªÛ’ ÛÛŒÚºÛ”|ÛØ± Ù…Ø§Û 2 Ø§Ø³Ù¹Ø±ÛŒÚ© ÙØ±ÛŒØ² ØªØ§Ú©Û Ø§ÛŒÚ© Ø¨Ø±Ø§ Ø¯Ù† Ø¢Ù¾ Ú©ÛŒ Ø²Ù†Ø¬ÛŒØ± Ø®ØªÙ… Ù†Û Ú©Ø±Û’Û”|Ø§Ù¾Ù†Û’ ÛÙØªÛ’ Ú©Û’ Ø®ÙˆØ¨ØµÙˆØ±Øª Ø´ÛŒØ¦Ø± Ú©Ø§Ø±ÚˆÛ” Ø§Ù¾Ù†ÛŒ Ø²Ù†Ø¬ÛŒØ± Ù¾ÙˆØ³Ù¹ Ú©Ø±ÛŒÚºØŒ Ú©Ø³ÛŒ Ø§ÙˆØ± Ú©Ùˆ Ø´Ø±ÙˆØ¹ Ú©Ø±Ù†Û’ Ú©ÛŒ ØªØ±ØºÛŒØ¨ Ø¯ÛŒÚºÛ”|Ù†Ø¦Û’ Ø±Ù†Ú¯ Ø§ÙˆØ± ØªÚ¾ÛŒÙ…Ø² Ú©Ú¾ÙˆÙ„ÛŒÚº Ø¬ÛŒØ³Û’ ÛÙ… Ø´Ø§Ù…Ù„ Ú©Ø±ØªÛ’ ÛÛŒÚºÛ” ÛÙ…ÛŒØ´Û Ù…ÙØª Ø§Ù¾ ÚˆÛŒÙ¹Ø³Û”';
 
   @override
-  String get paywallYearly => 'سالانہ';
+  String get paywallYearly => 'Ø³Ø§Ù„Ø§Ù†Û';
 
   @override
-  String get paywallYearlyCaption => 'بہترین قیمت · تقریباً \$2.50/ماہ';
+  String get paywallYearlyCaption =>
+      'Ø¨ÛØªØ±ÛŒÙ† Ù‚ÛŒÙ…Øª Â· ØªÙ‚Ø±ÛŒØ¨Ø§Ù‹ \$2.50/Ù…Ø§Û';
 
   @override
-  String get paywallYearlyBadge => '35% بچائیں';
+  String get paywallYearlyBadge => '35% Ø¨Ú†Ø§Ø¦ÛŒÚº';
 
   @override
-  String get paywallMonthly => 'ماہانہ';
+  String get paywallMonthly => 'Ù…Ø§ÛØ§Ù†Û';
 
   @override
-  String get paywallMonthlyCaption => 'ماہانہ بلنگ · کسی بھی وقت منسوخ کریں';
+  String get paywallMonthlyCaption =>
+      'Ù…Ø§ÛØ§Ù†Û Ø¨Ù„Ù†Ú¯ Â· Ú©Ø³ÛŒ Ø¨Ú¾ÛŒ ÙˆÙ‚Øª Ù…Ù†Ø³ÙˆØ® Ú©Ø±ÛŒÚº';
 
   @override
   String paywallStartCta(String price) {
-    return 'Pro شروع کریں · $price/سال';
+    return 'Pro Ø´Ø±ÙˆØ¹ Ú©Ø±ÛŒÚº Â· $price/Ø³Ø§Ù„';
   }
 
   @override
   String paywallStartCtaMonthly(String price) {
-    return 'Pro شروع کریں · $price/ماہ';
+    return 'Pro Ø´Ø±ÙˆØ¹ Ú©Ø±ÛŒÚº Â· $price/Ù…Ø§Û';
   }
 
   @override
-  String get paywallRestore => 'خریداری بحال کریں';
+  String get paywallLifetime => 'Lifetime';
 
   @override
-  String get paywallTerms => 'شرائط';
+  String get paywallLifetimeCaption => 'One-time payment · yours forever';
 
   @override
-  String get paywallPrivacy => 'رازداری';
+  String get paywallLifetimeBadge => 'BEST DEAL';
 
   @override
-  String get paywallNoRestore => 'اس اکاؤنٹ پر کوئی پچھلی خریداری نہیں ملی۔';
+  String paywallStartCtaLifetime(String price) {
+    return 'Start Pro · $price forever';
+  }
+
+  @override
+  String get paywallRestore => 'Ø®Ø±ÛŒØ¯Ø§Ø±ÛŒ Ø¨Ø­Ø§Ù„ Ú©Ø±ÛŒÚº';
+
+  @override
+  String get paywallTerms => 'Ø´Ø±Ø§Ø¦Ø·';
+
+  @override
+  String get paywallPrivacy => 'Ø±Ø§Ø²Ø¯Ø§Ø±ÛŒ';
+
+  @override
+  String get paywallNoRestore =>
+      'Ø§Ø³ Ø§Ú©Ø§Ø¤Ù†Ù¹ Ù¾Ø± Ú©ÙˆØ¦ÛŒ Ù¾Ú†Ú¾Ù„ÛŒ Ø®Ø±ÛŒØ¯Ø§Ø±ÛŒ Ù†ÛÛŒÚº Ù…Ù„ÛŒÛ”';
 
   @override
   String get paywallRestoreLater =>
-      'ہم اگلے سنک پر آپ کی خریداری بحال کر دیں گے۔';
+      'ÛÙ… Ø§Ú¯Ù„Û’ Ø³Ù†Ú© Ù¾Ø± Ø¢Ù¾ Ú©ÛŒ Ø®Ø±ÛŒØ¯Ø§Ø±ÛŒ Ø¨Ø­Ø§Ù„ Ú©Ø± Ø¯ÛŒÚº Ú¯Û’Û”';
 
   @override
-  String get paywallAlreadyPro => 'آپ Pro پر ہیں۔ آپ کی حمایت کا شکریہ۔';
+  String get paywallAlreadyPro =>
+      'Ø¢Ù¾ Pro Ù¾Ø± ÛÛŒÚºÛ” Ø¢Ù¾ Ú©ÛŒ Ø­Ù…Ø§ÛŒØª Ú©Ø§ Ø´Ú©Ø±ÛŒÛÛ”';
 
   @override
   String get paywallHabitSlotHead =>
-      'آپ نے اپنی تمام مفت عادت کی جگہیں استعمال کر لی ہیں۔ مکمل سیٹ کھولیں تاکہ ہر رسم کو لگایا جا سکے۔';
+      'Ø¢Ù¾ Ù†Û’ Ø§Ù¾Ù†ÛŒ ØªÙ…Ø§Ù… Ù…ÙØª Ø¹Ø§Ø¯Øª Ú©ÛŒ Ø¬Ú¯ÛÛŒÚº Ø§Ø³ØªØ¹Ù…Ø§Ù„ Ú©Ø± Ù„ÛŒ ÛÛŒÚºÛ” Ù…Ú©Ù…Ù„ Ø³ÛŒÙ¹ Ú©Ú¾ÙˆÙ„ÛŒÚº ØªØ§Ú©Û ÛØ± Ø±Ø³Ù… Ú©Ùˆ Ù„Ú¯Ø§ÛŒØ§ Ø¬Ø§ Ø³Ú©Û’Û”';
 
   @override
   String get paywallHistoryHead =>
-      'اپنا مکمل تاریخ دیکھیں — ہر کامل دن، ہر تمغہ، ہر واپسی۔';
+      'Ø§Ù¾Ù†Ø§ Ù…Ú©Ù…Ù„ ØªØ§Ø±ÛŒØ® Ø¯ÛŒÚ©Ú¾ÛŒÚº â€” ÛØ± Ú©Ø§Ù…Ù„ Ø¯Ù†ØŒ ÛØ± ØªÙ…ØºÛØŒ ÛØ± ÙˆØ§Ù¾Ø³ÛŒÛ”';
 
   @override
   String get paywallMedalHead =>
-      'نادر ترین تمغے صرف Pro کے لیے ہیں۔ آگے بڑھتے رہیں — وہ آپ سے زیادہ قریب ہیں جتنا آپ سوچتے ہیں۔';
+      'Ù†Ø§Ø¯Ø± ØªØ±ÛŒÙ† ØªÙ…ØºÛ’ ØµØ±Ù Pro Ú©Û’ Ù„ÛŒÛ’ ÛÛŒÚºÛ” Ø¢Ú¯Û’ Ø¨Ú‘Ú¾ØªÛ’ Ø±ÛÛŒÚº â€” ÙˆÛ Ø¢Ù¾ Ø³Û’ Ø²ÛŒØ§Ø¯Û Ù‚Ø±ÛŒØ¨ ÛÛŒÚº Ø¬ØªÙ†Ø§ Ø¢Ù¾ Ø³ÙˆÚ†ØªÛ’ ÛÛŒÚºÛ”';
 
   @override
-  String get settingsYourActivity => 'آپ کی سرگرمی';
+  String get settingsYourActivity => 'Ø¢Ù¾ Ú©ÛŒ Ø³Ø±Ú¯Ø±Ù…ÛŒ';
 
   @override
-  String get settingsHelpInfo => 'مدد اور معلومات';
+  String get settingsHelpInfo => 'Ù…Ø¯Ø¯ Ø§ÙˆØ± Ù…Ø¹Ù„ÙˆÙ…Ø§Øª';
 
   @override
-  String get settingsAccount => 'اکاؤنٹ';
+  String get settingsAccount => 'Ø§Ú©Ø§Ø¤Ù†Ù¹';
 
   @override
-  String get settingsNurturingTools => 'دیکھ بھال کے اوزار';
+  String get settingsNurturingTools => 'Ø¯ÛŒÚ©Ú¾ Ø¨Ú¾Ø§Ù„ Ú©Û’ Ø§ÙˆØ²Ø§Ø±';
 
   @override
-  String get settingsReminders => 'یاد دہانیاں';
+  String get settingsReminders => 'ÛŒØ§Ø¯ Ø¯ÛØ§Ù†ÛŒØ§Úº';
 
   @override
-  String get settingsWidgetSanctuary => 'ویجیٹ سینکچری';
+  String get settingsWidgetSanctuary => 'ÙˆÛŒØ¬ÛŒÙ¹ Ø³ÛŒÙ†Ú©Ú†Ø±ÛŒ';
 
   @override
-  String get settingsEcosystemSupport => 'ماحولیاتی معاونت';
+  String get settingsEcosystemSupport => 'Ù…Ø§Ø­ÙˆÙ„ÛŒØ§ØªÛŒ Ù…Ø¹Ø§ÙˆÙ†Øª';
 
   @override
-  String get settingsHowItWorks => 'یہ کیسے کام کرتا ہے';
+  String get settingsHowItWorks => 'ÛŒÛ Ú©ÛŒØ³Û’ Ú©Ø§Ù… Ú©Ø±ØªØ§ ÛÛ’';
 
   @override
-  String get settingsSignOut => 'سائن آؤٹ';
+  String get settingsSignOut => 'Ø³Ø§Ø¦Ù† Ø¢Ø¤Ù¹';
 
   @override
-  String get settingsSignOutConfirm => 'کیا آپ واقعی سائن آؤٹ کرنا چاہتے ہیں؟';
+  String get settingsSignOutConfirm =>
+      'Ú©ÛŒØ§ Ø¢Ù¾ ÙˆØ§Ù‚Ø¹ÛŒ Ø³Ø§Ø¦Ù† Ø¢Ø¤Ù¹ Ú©Ø±Ù†Ø§ Ú†Ø§ÛØªÛ’ ÛÛŒÚºØŸ';
 
   @override
-  String get settingsProActive => 'فعال';
+  String get settingsProActive => 'ÙØ¹Ø§Ù„';
 
   @override
-  String get settingsProFree => 'مفت ٹائر';
+  String get settingsProFree => 'Ù…ÙØª Ù¹Ø§Ø¦Ø±';
 
   @override
-  String get settingsLanguage => 'زبان';
+  String get settingsLanguage => 'Ø²Ø¨Ø§Ù†';
 
   @override
-  String get settingsLanguageValue => 'سسٹم ڈیفالٹ';
+  String get settingsLanguageValue => 'Ø³Ø³Ù¹Ù… ÚˆÛŒÙØ§Ù„Ù¹';
 
   @override
-  String get firstRunGreeting => '5 کام۔ بس۔ ان کی قدر رکھیں۔';
+  String get firstRunGreeting =>
+      '5 Ú©Ø§Ù…Û” Ø¨Ø³Û” Ø§Ù† Ú©ÛŒ Ù‚Ø¯Ø± Ø±Ú©Ú¾ÛŒÚºÛ”';
 
   @override
   String get firstRunBody =>
-      'اپنا پہلا بیج لگائیں — آج سب سے زیادہ اہم کیا ہے؟';
+      'Ø§Ù¾Ù†Ø§ Ù¾ÛÙ„Ø§ Ø¨ÛŒØ¬ Ù„Ú¯Ø§Ø¦ÛŒÚº â€” Ø¢Ø¬ Ø³Ø¨ Ø³Û’ Ø²ÛŒØ§Ø¯Û Ø§ÛÙ… Ú©ÛŒØ§ ÛÛ’ØŸ';
 
   @override
-  String get firstRunCta => 'اپنا پہلا بیج لگائیں';
+  String get firstRunCta => 'Ø§Ù¾Ù†Ø§ Ù¾ÛÙ„Ø§ Ø¨ÛŒØ¬ Ù„Ú¯Ø§Ø¦ÛŒÚº';
 
   @override
-  String get emptyStateClearAll => 'سب صاف کریں';
+  String get emptyStateClearAll => 'Ø³Ø¨ ØµØ§Ù Ú©Ø±ÛŒÚº';
 
   @override
-  String get cancel => 'منسوخ کریں';
+  String get cancel => 'Ù…Ù†Ø³ÙˆØ® Ú©Ø±ÛŒÚº';
 
   @override
-  String get intentionTitle1 => 'آئیے نئی نیت لگائیں!';
+  String get intentionTitle1 => 'Ø¢Ø¦ÛŒÛ’ Ù†Ø¦ÛŒ Ù†ÛŒØª Ù„Ú¯Ø§Ø¦ÛŒÚº!';
 
   @override
   String get intentionBody1 =>
-      'ہر طاقتور جنگل ایک چھوٹے سے انتخاب سے شروع ہوتا ہے۔ مجھے بتائیں آج ہم کیا پال رہے ہیں؟';
+      'ÛØ± Ø·Ø§Ù‚ØªÙˆØ± Ø¬Ù†Ú¯Ù„ Ø§ÛŒÚ© Ú†Ú¾ÙˆÙ¹Û’ Ø³Û’ Ø§Ù†ØªØ®Ø§Ø¨ Ø³Û’ Ø´Ø±ÙˆØ¹ ÛÙˆØªØ§ ÛÛ’Û” Ù…Ø¬Ú¾Û’ Ø¨ØªØ§Ø¦ÛŒÚº Ø¢Ø¬ ÛÙ… Ú©ÛŒØ§ Ù¾Ø§Ù„ Ø±ÛÛ’ ÛÛŒÚºØŸ';
 
   @override
-  String get intentionTitle2 => 'آج ہم کیا اگائیں؟';
+  String get intentionTitle2 => 'Ø¢Ø¬ ÛÙ… Ú©ÛŒØ§ Ø§Ú¯Ø§Ø¦ÛŒÚºØŸ';
 
   @override
   String get intentionBody2 =>
-      'چھوٹے بیج، دیکھ بھال سے، لمبے درخت بن جاتے ہیں۔ ابھی سب سے اہم انتخاب کریں۔';
+      'Ú†Ú¾ÙˆÙ¹Û’ Ø¨ÛŒØ¬ØŒ Ø¯ÛŒÚ©Ú¾ Ø¨Ú¾Ø§Ù„ Ø³Û’ØŒ Ù„Ù…Ø¨Û’ Ø¯Ø±Ø®Øª Ø¨Ù† Ø¬Ø§ØªÛ’ ÛÛŒÚºÛ” Ø§Ø¨Ú¾ÛŒ Ø³Ø¨ Ø³Û’ Ø§ÛÙ… Ø§Ù†ØªØ®Ø§Ø¨ Ú©Ø±ÛŒÚºÛ”';
 
   @override
-  String get intentionTitle3 => 'ایک بیج۔ ایک سانس۔ شروع کریں۔';
+  String get intentionTitle3 =>
+      'Ø§ÛŒÚ© Ø¨ÛŒØ¬Û” Ø§ÛŒÚ© Ø³Ø§Ù†Ø³Û” Ø´Ø±ÙˆØ¹ Ú©Ø±ÛŒÚºÛ”';
 
   @override
   String get intentionBody3 =>
-      'آپ کو پورا جنگل ایک ساتھ نہیں لگانا — صرف اگلا صحح کام کریں۔';
+      'Ø¢Ù¾ Ú©Ùˆ Ù¾ÙˆØ±Ø§ Ø¬Ù†Ú¯Ù„ Ø§ÛŒÚ© Ø³Ø§ØªÚ¾ Ù†ÛÛŒÚº Ù„Ú¯Ø§Ù†Ø§ â€” ØµØ±Ù Ø§Ú¯Ù„Ø§ ØµØ­Ø­ Ú©Ø§Ù… Ú©Ø±ÛŒÚºÛ”';
 
   @override
-  String get intentionTitle4 => 'اگلے چھوٹے قدم کی پرورش کریں۔';
+  String get intentionTitle4 =>
+      'Ø§Ú¯Ù„Û’ Ú†Ú¾ÙˆÙ¹Û’ Ù‚Ø¯Ù… Ú©ÛŒ Ù¾Ø±ÙˆØ±Ø´ Ú©Ø±ÛŒÚºÛ”';
 
   @override
   String get intentionBody4 =>
-      'مستقبل کا آپ اس پانچ منٹ میں کیے گئے انتخابوں سے بنتا ہے۔ ایک مہربان انتخاب کیا ہے؟';
+      'Ù…Ø³ØªÙ‚Ø¨Ù„ Ú©Ø§ Ø¢Ù¾ Ø§Ø³ Ù¾Ø§Ù†Ú† Ù…Ù†Ù¹ Ù…ÛŒÚº Ú©ÛŒÛ’ Ú¯Ø¦Û’ Ø§Ù†ØªØ®Ø§Ø¨ÙˆÚº Ø³Û’ Ø¨Ù†ØªØ§ ÛÛ’Û” Ø§ÛŒÚ© Ù…ÛØ±Ø¨Ø§Ù† Ø§Ù†ØªØ®Ø§Ø¨ Ú©ÛŒØ§ ÛÛ’ØŸ';
 
   @override
-  String get intentionTitle5 => 'منتخب کریں آپ کیا بننا چاہتے ہیں۔';
+  String get intentionTitle5 =>
+      'Ù…Ù†ØªØ®Ø¨ Ú©Ø±ÛŒÚº Ø¢Ù¾ Ú©ÛŒØ§ Ø¨Ù†Ù†Ø§ Ú†Ø§ÛØªÛ’ ÛÛŒÚºÛ”';
 
   @override
   String get intentionBody5 =>
-      'کام بیج ہیں، عادات پودے ہیں۔ مل کر وہ جنگل بناتے ہیں جس پر آپ کو فخر ہے۔';
+      'Ú©Ø§Ù… Ø¨ÛŒØ¬ ÛÛŒÚºØŒ Ø¹Ø§Ø¯Ø§Øª Ù¾ÙˆØ¯Û’ ÛÛŒÚºÛ” Ù…Ù„ Ú©Ø± ÙˆÛ Ø¬Ù†Ú¯Ù„ Ø¨Ù†Ø§ØªÛ’ ÛÛŒÚº Ø¬Ø³ Ù¾Ø± Ø¢Ù¾ Ú©Ùˆ ÙØ®Ø± ÛÛ’Û”';
 
   @override
-  String get intentionTitle6 => 'کچھ ایسی چیز لگائیں جو یاد رکھنے کے قابل ہو۔';
+  String get intentionTitle6 =>
+      'Ú©Ú†Ú¾ Ø§ÛŒØ³ÛŒ Ú†ÛŒØ² Ù„Ú¯Ø§Ø¦ÛŒÚº Ø¬Ùˆ ÛŒØ§Ø¯ Ø±Ú©Ú¾Ù†Û’ Ú©Û’ Ù‚Ø§Ø¨Ù„ ÛÙˆÛ”';
 
   @override
   String get intentionBody6 =>
-      'ہر دن بڑا محسوس نہیں ہوتا۔ پانی دیا گیا بیج بھی شمار ہوتا ہے۔ آئیے ایک نام دیتے ہیں۔';
+      'ÛØ± Ø¯Ù† Ø¨Ú‘Ø§ Ù…Ø­Ø³ÙˆØ³ Ù†ÛÛŒÚº ÛÙˆØªØ§Û” Ù¾Ø§Ù†ÛŒ Ø¯ÛŒØ§ Ú¯ÛŒØ§ Ø¨ÛŒØ¬ Ø¨Ú¾ÛŒ Ø´Ù…Ø§Ø± ÛÙˆØªØ§ ÛÛ’Û” Ø¢Ø¦ÛŒÛ’ Ø§ÛŒÚ© Ù†Ø§Ù… Ø¯ÛŒØªÛ’ ÛÛŒÚºÛ”';
 
   @override
-  String get intentionTitle7 => 'آج کو تھوڑا بہادر بنائیں۔';
+  String get intentionTitle7 =>
+      'Ø¢Ø¬ Ú©Ùˆ ØªÚ¾ÙˆÚ‘Ø§ Ø¨ÛØ§Ø¯Ø± Ø¨Ù†Ø§Ø¦ÛŒÚºÛ”';
 
   @override
   String get intentionBody7 =>
-      'ہمت جمع ہوتی ہے۔ وہ بیج چنیں جو آپ ٹال رہے ہیں — اس کا نام لینا بھی اسے آگے بڑھاتا ہے۔';
+      'ÛÙ…Øª Ø¬Ù…Ø¹ ÛÙˆØªÛŒ ÛÛ’Û” ÙˆÛ Ø¨ÛŒØ¬ Ú†Ù†ÛŒÚº Ø¬Ùˆ Ø¢Ù¾ Ù¹Ø§Ù„ Ø±ÛÛ’ ÛÛŒÚº â€” Ø§Ø³ Ú©Ø§ Ù†Ø§Ù… Ù„ÛŒÙ†Ø§ Ø¨Ú¾ÛŒ Ø§Ø³Û’ Ø¢Ú¯Û’ Ø¨Ú‘Ú¾Ø§ØªØ§ ÛÛ’Û”';
 
   @override
-  String get intentionTitle8 => 'بیج سے پہلے زمین کی دیکھ بھال کریں۔';
+  String get intentionTitle8 =>
+      'Ø¨ÛŒØ¬ Ø³Û’ Ù¾ÛÙ„Û’ Ø²Ù…ÛŒÙ† Ú©ÛŒ Ø¯ÛŒÚ©Ú¾ Ø¨Ú¾Ø§Ù„ Ú©Ø±ÛŒÚºÛ”';
 
   @override
   String get intentionBody8 =>
-      'کون سا ذہنیت، ٹول، یا چھوٹی رسم اس کام کو آسان بنائے گی؟ نوٹس میں شامل کریں۔';
+      'Ú©ÙˆÙ† Ø³Ø§ Ø°ÛÙ†ÛŒØªØŒ Ù¹ÙˆÙ„ØŒ ÛŒØ§ Ú†Ú¾ÙˆÙ¹ÛŒ Ø±Ø³Ù… Ø§Ø³ Ú©Ø§Ù… Ú©Ùˆ Ø¢Ø³Ø§Ù† Ø¨Ù†Ø§Ø¦Û’ Ú¯ÛŒØŸ Ù†ÙˆÙ¹Ø³ Ù…ÛŒÚº Ø´Ø§Ù…Ù„ Ú©Ø±ÛŒÚºÛ”';
 
   @override
-  String get shareCardSnapshot => 'آپ کے سینکچری کا ایک منظر';
+  String get shareCardSnapshot =>
+      'Ø¢Ù¾ Ú©Û’ Ø³ÛŒÙ†Ú©Ú†Ø±ÛŒ Ú©Ø§ Ø§ÛŒÚ© Ù…Ù†Ø¸Ø±';
 
   @override
   String get shareCardBody =>
-      'اوپر کا کارڈ PNG کے طور پر ایکسپورٹ ہوتا ہے اور آپ کی شیئر شیٹ میں بھیجا جاتا ہے۔ اسے اپنی اسٹوری پر پوسٹ کریں، دوست کو بھیجیں، یا اسٹکر کے طور پر پرنٹ کریں۔';
+      'Ø§ÙˆÙ¾Ø± Ú©Ø§ Ú©Ø§Ø±Úˆ PNG Ú©Û’ Ø·ÙˆØ± Ù¾Ø± Ø§ÛŒÚ©Ø³Ù¾ÙˆØ±Ù¹ ÛÙˆØªØ§ ÛÛ’ Ø§ÙˆØ± Ø¢Ù¾ Ú©ÛŒ Ø´ÛŒØ¦Ø± Ø´ÛŒÙ¹ Ù…ÛŒÚº Ø¨Ú¾ÛŒØ¬Ø§ Ø¬Ø§ØªØ§ ÛÛ’Û” Ø§Ø³Û’ Ø§Ù¾Ù†ÛŒ Ø§Ø³Ù¹ÙˆØ±ÛŒ Ù¾Ø± Ù¾ÙˆØ³Ù¹ Ú©Ø±ÛŒÚºØŒ Ø¯ÙˆØ³Øª Ú©Ùˆ Ø¨Ú¾ÛŒØ¬ÛŒÚºØŒ ÛŒØ§ Ø§Ø³Ù¹Ú©Ø± Ú©Û’ Ø·ÙˆØ± Ù¾Ø± Ù¾Ø±Ù†Ù¹ Ú©Ø±ÛŒÚºÛ”';
 
   @override
-  String get shareCardShareMyBloom => 'اپنا پھول شیئر کریں';
+  String get shareCardShareMyBloom => 'Ø§Ù¾Ù†Ø§ Ù¾Ú¾ÙˆÙ„ Ø´ÛŒØ¦Ø± Ú©Ø±ÛŒÚº';
 
   @override
-  String get shareCardCouldNotShare => 'ابھی شیئر نہیں کر سکتے';
+  String get shareCardCouldNotShare =>
+      'Ø§Ø¨Ú¾ÛŒ Ø´ÛŒØ¦Ø± Ù†ÛÛŒÚº Ú©Ø± Ø³Ú©ØªÛ’';
 
   @override
   String shareCardProgressText(String year) {
-    return 'میری Daily Stitch پیشرفت — Daily Stitch پر $year۔';
+    return 'Ù…ÛŒØ±ÛŒ Daily Stitch Ù¾ÛŒØ´Ø±ÙØª â€” Daily Stitch Ù¾Ø± $yearÛ”';
   }
 
   @override
   String shareCardMedalText(String title, String subtitle) {
-    return 'میں نے ابھی Daily Stitch پر \"$title\" تمغہ کھولا ہے۔ $subtitle';
+    return 'Ù…ÛŒÚº Ù†Û’ Ø§Ø¨Ú¾ÛŒ Daily Stitch Ù¾Ø± \"$title\" ØªÙ…ØºÛ Ú©Ú¾ÙˆÙ„Ø§ ÛÛ’Û” $subtitle';
   }
 
   @override
-  String get howItWorksTitle => 'یہ کیسے کام کرتا ہے';
+  String get howItWorksTitle => 'ÛŒÛ Ú©ÛŒØ³Û’ Ú©Ø§Ù… Ú©Ø±ØªØ§ ÛÛ’';
 
   @override
   String get howItWorksBody =>
-      'Daily Stitch آپ کو نظم و ضبط کی ایک چھوٹی، نہ ٹوٹنے والی زنجیر رکھنے میں مدد کرتا ہے۔ بس۔';
+      'Daily Stitch Ø¢Ù¾ Ú©Ùˆ Ù†Ø¸Ù… Ùˆ Ø¶Ø¨Ø· Ú©ÛŒ Ø§ÛŒÚ© Ú†Ú¾ÙˆÙ¹ÛŒØŒ Ù†Û Ù¹ÙˆÙ¹Ù†Û’ ÙˆØ§Ù„ÛŒ Ø²Ù†Ø¬ÛŒØ± Ø±Ú©Ú¾Ù†Û’ Ù…ÛŒÚº Ù…Ø¯Ø¯ Ú©Ø±ØªØ§ ÛÛ’Û” Ø¨Ø³Û”';
 
   @override
-  String get howItWorksToday => 'آج کا ٹیب';
+  String get howItWorksToday => 'Ø¢Ø¬ Ú©Ø§ Ù¹ÛŒØ¨';
 
   @override
   String get howItWorksTodayBody =>
-      'یہ آپ کا گھر ہے۔ یہ 5 کام اور آج کے لیے مقرر کردہ عادات دکھاتا ہے۔ رات 12 بجے تک مکمل کریں، زنجیر بڑھتی ہے۔';
+      'ÛŒÛ Ø¢Ù¾ Ú©Ø§ Ú¯Ú¾Ø± ÛÛ’Û” ÛŒÛ 5 Ú©Ø§Ù… Ø§ÙˆØ± Ø¢Ø¬ Ú©Û’ Ù„ÛŒÛ’ Ù…Ù‚Ø±Ø± Ú©Ø±Ø¯Û Ø¹Ø§Ø¯Ø§Øª Ø¯Ú©Ú¾Ø§ØªØ§ ÛÛ’Û” Ø±Ø§Øª 12 Ø¨Ø¬Û’ ØªÚ© Ù…Ú©Ù…Ù„ Ú©Ø±ÛŒÚºØŒ Ø²Ù†Ø¬ÛŒØ± Ø¨Ú‘Ú¾ØªÛŒ ÛÛ’Û”';
 
   @override
-  String get howItWorksCap => '5 کام کی حد ہی فیچر ہے';
+  String get howItWorksCap => '5 Ú©Ø§Ù… Ú©ÛŒ Ø­Ø¯ ÛÛŒ ÙÛŒÚ†Ø± ÛÛ’';
 
   @override
   String get howItWorksCapBody =>
-      'ہم آپ کو 6واں شامل نہیں کرنے دیتے۔ یہی پورا مقصد ہے۔ چھوٹی زنجیریں لمبی زنجیروں سے بہتر ہیں۔ مکمل وجہ کے لیے ہوم اسکرین پر \"?\" ٹیپ کریں۔';
+      'ÛÙ… Ø¢Ù¾ Ú©Ùˆ 6ÙˆØ§Úº Ø´Ø§Ù…Ù„ Ù†ÛÛŒÚº Ú©Ø±Ù†Û’ Ø¯ÛŒØªÛ’Û” ÛŒÛÛŒ Ù¾ÙˆØ±Ø§ Ù…Ù‚ØµØ¯ ÛÛ’Û” Ú†Ú¾ÙˆÙ¹ÛŒ Ø²Ù†Ø¬ÛŒØ±ÛŒÚº Ù„Ù…Ø¨ÛŒ Ø²Ù†Ø¬ÛŒØ±ÙˆÚº Ø³Û’ Ø¨ÛØªØ± ÛÛŒÚºÛ” Ù…Ú©Ù…Ù„ ÙˆØ¬Û Ú©Û’ Ù„ÛŒÛ’ ÛÙˆÙ… Ø§Ø³Ú©Ø±ÛŒÙ† Ù¾Ø± \"?\" Ù¹ÛŒÙ¾ Ú©Ø±ÛŒÚºÛ”';
 
   @override
-  String get howItWorksHabits => 'عادات روزانہ ہیں، زنجیر ہمیشہ کے لیے';
+  String get howItWorksHabits =>
+      'Ø¹Ø§Ø¯Ø§Øª Ø±ÙˆØ²Ø§Ù†Û ÛÛŒÚºØŒ Ø²Ù†Ø¬ÛŒØ± ÛÙ…ÛŒØ´Û Ú©Û’ Ù„ÛŒÛ’';
 
   @override
   String get howItWorksHabitsBody =>
-      'عادات (صبح یوگا، پانی پینا) ہمیشہ رہتی ہیں۔ کام ایک بار کے ہوتے ہیں۔ دونوں ایک ہی اسٹریک کو بڑھاتے ہیں۔';
+      'Ø¹Ø§Ø¯Ø§Øª (ØµØ¨Ø­ ÛŒÙˆÚ¯Ø§ØŒ Ù¾Ø§Ù†ÛŒ Ù¾ÛŒÙ†Ø§) ÛÙ…ÛŒØ´Û Ø±ÛØªÛŒ ÛÛŒÚºÛ” Ú©Ø§Ù… Ø§ÛŒÚ© Ø¨Ø§Ø± Ú©Û’ ÛÙˆØªÛ’ ÛÛŒÚºÛ” Ø¯ÙˆÙ†ÙˆÚº Ø§ÛŒÚ© ÛÛŒ Ø§Ø³Ù¹Ø±ÛŒÚ© Ú©Ùˆ Ø¨Ú‘Ú¾Ø§ØªÛ’ ÛÛŒÚºÛ”';
 
   @override
-  String get howItWorksLeftBehind => 'چھوٹے کام → Left Behind';
+  String get howItWorksLeftBehind => 'Ú†Ú¾ÙˆÙ¹Û’ Ú©Ø§Ù… â†’ Left Behind';
 
   @override
   String get howItWorksLeftBehindBody =>
-      'رات 12 بجے، نامکمل کام Left Behind میں چلے جاتے ہیں۔ صرف وہی دوبارہ شامل کریں جو ابھی بھی اہم ہو۔ باقی کو خاموشی سے چھوڑ دیا جاتا ہے۔';
+      'Ø±Ø§Øª 12 Ø¨Ø¬Û’ØŒ Ù†Ø§Ù…Ú©Ù…Ù„ Ú©Ø§Ù… Left Behind Ù…ÛŒÚº Ú†Ù„Û’ Ø¬Ø§ØªÛ’ ÛÛŒÚºÛ” ØµØ±Ù ÙˆÛÛŒ Ø¯ÙˆØ¨Ø§Ø±Û Ø´Ø§Ù…Ù„ Ú©Ø±ÛŒÚº Ø¬Ùˆ Ø§Ø¨Ú¾ÛŒ Ø¨Ú¾ÛŒ Ø§ÛÙ… ÛÙˆÛ” Ø¨Ø§Ù‚ÛŒ Ú©Ùˆ Ø®Ø§Ù…ÙˆØ´ÛŒ Ø³Û’ Ú†Ú¾ÙˆÚ‘ Ø¯ÛŒØ§ Ø¬Ø§ØªØ§ ÛÛ’Û”';
 
   @override
-  String get howItWorksProgress => 'پیشرفت کا ٹیب';
+  String get howItWorksProgress => 'Ù¾ÛŒØ´Ø±ÙØª Ú©Ø§ Ù¹ÛŒØ¨';
 
   @override
   String get howItWorksProgressBody =>
-      'اسٹریک، کیلنڈر، تمغے، تاریخ — وقت کے ساتھ آپ کیسا کر رہے ہیں اس کا سب کچھ۔ یہاں کوئی فوری کام نہیں ہے۔';
+      'Ø§Ø³Ù¹Ø±ÛŒÚ©ØŒ Ú©ÛŒÙ„Ù†ÚˆØ±ØŒ ØªÙ…ØºÛ’ØŒ ØªØ§Ø±ÛŒØ® â€” ÙˆÙ‚Øª Ú©Û’ Ø³Ø§ØªÚ¾ Ø¢Ù¾ Ú©ÛŒØ³Ø§ Ú©Ø± Ø±ÛÛ’ ÛÛŒÚº Ø§Ø³ Ú©Ø§ Ø³Ø¨ Ú©Ú†Ú¾Û” ÛŒÛØ§Úº Ú©ÙˆØ¦ÛŒ ÙÙˆØ±ÛŒ Ú©Ø§Ù… Ù†ÛÛŒÚº ÛÛ’Û”';
 
   @override
-  String get howItWorksYou => 'آپ کا ٹیب';
+  String get howItWorksYou => 'Ø¢Ù¾ Ú©Ø§ Ù¹ÛŒØ¨';
 
   @override
-  String get howItWorksYouBody => 'آپ کا اکاؤنٹ، ترتیبات، سائن آؤٹ۔ بس۔';
+  String get howItWorksYouBody =>
+      'Ø¢Ù¾ Ú©Ø§ Ø§Ú©Ø§Ø¤Ù†Ù¹ØŒ ØªØ±ØªÛŒØ¨Ø§ØªØŒ Ø³Ø§Ø¦Ù† Ø¢Ø¤Ù¹Û” Ø¨Ø³Û”';
 
   @override
-  String get howItWorksRule => 'اصول: 5 چھوٹی چیزیں، ہر روز، کوئی بہانہ نہیں۔';
+  String get howItWorksRule =>
+      'Ø§ØµÙˆÙ„: 5 Ú†Ú¾ÙˆÙ¹ÛŒ Ú†ÛŒØ²ÛŒÚºØŒ ÛØ± Ø±ÙˆØ²ØŒ Ú©ÙˆØ¦ÛŒ Ø¨ÛØ§Ù†Û Ù†ÛÛŒÚºÛ”';
 
   @override
-  String get commonRetry => 'دوبارہ کوشش کریں';
+  String get commonRetry => 'Ø¯ÙˆØ¨Ø§Ø±Û Ú©ÙˆØ´Ø´ Ú©Ø±ÛŒÚº';
 
   @override
-  String get commonBack => 'واپس';
+  String get commonBack => 'ÙˆØ§Ù¾Ø³';
 
   @override
-  String get commonDismiss => 'ختم کریں';
+  String get commonDismiss => 'Ø®ØªÙ… Ú©Ø±ÛŒÚº';
 
   @override
-  String get commonCancel => 'منسوخ کریں';
+  String get commonCancel => 'Ù…Ù†Ø³ÙˆØ® Ú©Ø±ÛŒÚº';
 
   @override
-  String get commonClose => 'بند کریں';
+  String get commonClose => 'Ø¨Ù†Ø¯ Ú©Ø±ÛŒÚº';
 
   @override
-  String get commonSend => 'بھیجیں';
+  String get commonSend => 'Ø¨Ú¾ÛŒØ¬ÛŒÚº';
 
   @override
-  String get commonCopy => 'کاپی کریں';
+  String get commonCopy => 'Ú©Ø§Ù¾ÛŒ Ú©Ø±ÛŒÚº';
 
   @override
-  String get commonShowLess => 'کم دکھائیں';
+  String get commonShowLess => 'Ú©Ù… Ø¯Ú©Ú¾Ø§Ø¦ÛŒÚº';
 
   @override
-  String get commonViewFull => 'مکمل نوٹس دیکھیں';
+  String get commonViewFull => 'Ù…Ú©Ù…Ù„ Ù†ÙˆÙ¹Ø³ Ø¯ÛŒÚ©Ú¾ÛŒÚº';
 
   @override
-  String get commonEdit => 'ترمیم کریں';
+  String get commonEdit => 'ØªØ±Ù…ÛŒÙ… Ú©Ø±ÛŒÚº';
 
   @override
-  String get commonDelete => 'حذف کریں';
+  String get commonDelete => 'Ø­Ø°Ù Ú©Ø±ÛŒÚº';
 
   @override
-  String get commonDone => 'مکمل';
+  String get commonDone => 'Ù…Ú©Ù…Ù„';
 
   @override
-  String get commonError => 'کچھ غلط ہو گیا';
+  String get commonError => 'Ú©Ú†Ú¾ ØºÙ„Ø· ÛÙˆ Ú¯ÛŒØ§';
 
   @override
-  String get commonPageNotFound => 'صفحہ نہیں ملا';
+  String get commonPageNotFound => 'ØµÙØ­Û Ù†ÛÛŒÚº Ù…Ù„Ø§';
 
   @override
-  String get commonHome => 'گھر';
+  String get commonHome => 'Ú¯Ú¾Ø±';
 
   @override
-  String get commonUnknownError => 'نامعلوم راؤٹنگ خرابی';
+  String get commonUnknownError => 'Ù†Ø§Ù…Ø¹Ù„ÙˆÙ… Ø±Ø§Ø¤Ù¹Ù†Ú¯ Ø®Ø±Ø§Ø¨ÛŒ';
 
   @override
-  String get commonSettingsTooltip => 'ترتیبات';
+  String get commonSettingsTooltip => 'ØªØ±ØªÛŒØ¨Ø§Øª';
 
   @override
-  String get commonHowThisWorks => 'یہ کیسے کام کرتا ہے';
+  String get commonHowThisWorks => 'ÛŒÛ Ú©ÛŒØ³Û’ Ú©Ø§Ù… Ú©Ø±ØªØ§ ÛÛ’';
 
   @override
-  String get myDayReminderSet => 'یاد دہانی لگائی گئی';
+  String get myDayReminderSet => 'ÛŒØ§Ø¯ Ø¯ÛØ§Ù†ÛŒ Ù„Ú¯Ø§Ø¦ÛŒ Ú¯Ø¦ÛŒ';
 
   @override
-  String get myDayPreparationNotes => 'تیاری کے نوٹس';
+  String get myDayPreparationNotes => 'ØªÛŒØ§Ø±ÛŒ Ú©Û’ Ù†ÙˆÙ¹Ø³';
 
   @override
-  String get onboardingSkip => 'چھوڑیں';
+  String get onboardingSkip => 'Ú†Ú¾ÙˆÚ‘ÛŒÚº';
 
   @override
-  String get onboardingNext => 'اگلا';
+  String get onboardingNext => 'Ø§Ú¯Ù„Ø§';
 
   @override
-  String get onboardingEnterSanctuary => 'سینکچری میں داخل ہوں';
+  String get onboardingEnterSanctuary =>
+      'Ø³ÛŒÙ†Ú©Ú†Ø±ÛŒ Ù…ÛŒÚº Ø¯Ø§Ø®Ù„ ÛÙˆÚº';
 
   @override
-  String get onboardingIntroduction => 'تعارف';
+  String get onboardingIntroduction => 'ØªØ¹Ø§Ø±Ù';
 
   @override
-  String get onboardingGrowYourForest => 'اپنا جنگل بڑھائیں';
+  String get onboardingGrowYourForest => 'Ø§Ù¾Ù†Ø§ Ø¬Ù†Ú¯Ù„ Ø¨Ú‘Ú¾Ø§Ø¦ÛŒÚº';
 
   @override
-  String get onboardingPage1Title => 'اپنے نگہبان سے ملیں۔';
+  String get onboardingPage1Title => 'Ø§Ù¾Ù†Û’ Ù†Ú¯ÛØ¨Ø§Ù† Ø³Û’ Ù…Ù„ÛŒÚºÛ”';
 
   @override
   String get onboardingPage1Body =>
-      'آپ کے ذاتی سینکچری میں خوش آمدید۔ یہاں، آپ کی ترقی آپ کے جنگل کی زندگی میں جھلکتی ہے۔';
+      'Ø¢Ù¾ Ú©Û’ Ø°Ø§ØªÛŒ Ø³ÛŒÙ†Ú©Ú†Ø±ÛŒ Ù…ÛŒÚº Ø®ÙˆØ´ Ø¢Ù…Ø¯ÛŒØ¯Û” ÛŒÛØ§ÚºØŒ Ø¢Ù¾ Ú©ÛŒ ØªØ±Ù‚ÛŒ Ø¢Ù¾ Ú©Û’ Ø¬Ù†Ú¯Ù„ Ú©ÛŒ Ø²Ù†Ø¯Ú¯ÛŒ Ù…ÛŒÚº Ø¬Ú¾Ù„Ú©ØªÛŒ ÛÛ’Û”';
 
   @override
-  String get onboardingPage2Title => 'بیج لگائیں۔ انہیں بڑھتا دیکھیں۔';
+  String get onboardingPage2Title =>
+      'Ø¨ÛŒØ¬ Ù„Ú¯Ø§Ø¦ÛŒÚºÛ” Ø§Ù†ÛÛŒÚº Ø¨Ú‘Ú¾ØªØ§ Ø¯ÛŒÚ©Ú¾ÛŒÚºÛ”';
 
   @override
   String get onboardingPage2Body =>
-      'ہر کام ایک چھوٹا بیج ہے۔ ہر عادت ایک پودا ہے جس کی آپ روزانہ دیکھ بھال کرتے ہیں۔ مل کر یہ نظم و ضبط کا جنگل بناتے ہیں۔';
+      'ÛØ± Ú©Ø§Ù… Ø§ÛŒÚ© Ú†Ú¾ÙˆÙ¹Ø§ Ø¨ÛŒØ¬ ÛÛ’Û” ÛØ± Ø¹Ø§Ø¯Øª Ø§ÛŒÚ© Ù¾ÙˆØ¯Ø§ ÛÛ’ Ø¬Ø³ Ú©ÛŒ Ø¢Ù¾ Ø±ÙˆØ²Ø§Ù†Û Ø¯ÛŒÚ©Ú¾ Ø¨Ú¾Ø§Ù„ Ú©Ø±ØªÛ’ ÛÛŒÚºÛ” Ù…Ù„ Ú©Ø± ÛŒÛ Ù†Ø¸Ù… Ùˆ Ø¶Ø¨Ø· Ú©Ø§ Ø¬Ù†Ú¯Ù„ Ø¨Ù†Ø§ØªÛ’ ÛÛŒÚºÛ”';
 
   @override
-  String get onboardingPage3Title => 'پانچ کام۔ ایک زنجیر۔';
+  String get onboardingPage3Title => 'Ù¾Ø§Ù†Ú† Ú©Ø§Ù…Û” Ø§ÛŒÚ© Ø²Ù†Ø¬ÛŒØ±Û”';
 
   @override
   String get onboardingPage3Body =>
-      'آپ روزانہ صرف 5 بیج لگا سکتے ہیں۔ یہ حد آپ کو واقعی اہم چیز پر توجہ دینے پر مجبور کرتی ہے — اور آپ کی زنجیر کی حفاظت کرتی ہے۔';
+      'Ø¢Ù¾ Ø±ÙˆØ²Ø§Ù†Û ØµØ±Ù 5 Ø¨ÛŒØ¬ Ù„Ú¯Ø§ Ø³Ú©ØªÛ’ ÛÛŒÚºÛ” ÛŒÛ Ø­Ø¯ Ø¢Ù¾ Ú©Ùˆ ÙˆØ§Ù‚Ø¹ÛŒ Ø§ÛÙ… Ú†ÛŒØ² Ù¾Ø± ØªÙˆØ¬Û Ø¯ÛŒÙ†Û’ Ù¾Ø± Ù…Ø¬Ø¨ÙˆØ± Ú©Ø±ØªÛŒ ÛÛ’ â€” Ø§ÙˆØ± Ø¢Ù¾ Ú©ÛŒ Ø²Ù†Ø¬ÛŒØ± Ú©ÛŒ Ø­ÙØ§Ø¸Øª Ú©Ø±ØªÛŒ ÛÛ’Û”';
 
   @override
-  String get onboardingPage4Title => 'اپنے پودوں کی روزانہ دیکھ بھال کریں۔';
+  String get onboardingPage4Title =>
+      'Ø§Ù¾Ù†Û’ Ù¾ÙˆØ¯ÙˆÚº Ú©ÛŒ Ø±ÙˆØ²Ø§Ù†Û Ø¯ÛŒÚ©Ú¾ Ø¨Ú¾Ø§Ù„ Ú©Ø±ÛŒÚºÛ”';
 
   @override
   String get onboardingPage4Body =>
-      'عادات بڑھانے کے لیے ٹیپ کریں۔ ایک دن چھوڑیں اور زنجیر نہیں بڑھتی۔ نگہبان آپ کے ساتھ بڑھتا ہے۔';
+      'Ø¹Ø§Ø¯Ø§Øª Ø¨Ú‘Ú¾Ø§Ù†Û’ Ú©Û’ Ù„ÛŒÛ’ Ù¹ÛŒÙ¾ Ú©Ø±ÛŒÚºÛ” Ø§ÛŒÚ© Ø¯Ù† Ú†Ú¾ÙˆÚ‘ÛŒÚº Ø§ÙˆØ± Ø²Ù†Ø¬ÛŒØ± Ù†ÛÛŒÚº Ø¨Ú‘Ú¾ØªÛŒÛ” Ù†Ú¯ÛØ¨Ø§Ù† Ø¢Ù¾ Ú©Û’ Ø³Ø§ØªÚ¾ Ø¨Ú‘Ú¾ØªØ§ ÛÛ’Û”';
 
   @override
   String get authBrand => 'DAILY STITCH';
 
   @override
-  String get authPlantFirstSeed => 'اپنا پہلا بیج لگائیں۔';
+  String get authPlantFirstSeed => 'Ø§Ù¾Ù†Ø§ Ù¾ÛÙ„Ø§ Ø¨ÛŒØ¬ Ù„Ú¯Ø§Ø¦ÛŒÚºÛ”';
 
   @override
-  String get authWelcomeBack => 'خوش آمدید، نگہبان۔';
+  String get authWelcomeBack => 'Ø®ÙˆØ´ Ø¢Ù…Ø¯ÛŒØ¯ØŒ Ù†Ú¯ÛØ¨Ø§Ù†Û”';
 
   @override
-  String get authFiveTasksDaily => 'پانچ کام۔ روزانہ عادات۔ کوئی بہانہ نہیں۔';
+  String get authFiveTasksDaily =>
+      'Ù¾Ø§Ù†Ú† Ú©Ø§Ù…Û” Ø±ÙˆØ²Ø§Ù†Û Ø¹Ø§Ø¯Ø§ØªÛ” Ú©ÙˆØ¦ÛŒ Ø¨ÛØ§Ù†Û Ù†ÛÛŒÚºÛ”';
 
   @override
-  String get authSanctuaryWaiting => 'آپ کا سینکچری منتظر ہے۔';
+  String get authSanctuaryWaiting =>
+      'Ø¢Ù¾ Ú©Ø§ Ø³ÛŒÙ†Ú©Ú†Ø±ÛŒ Ù…Ù†ØªØ¸Ø± ÛÛ’Û”';
 
   @override
-  String get authSignIn => 'سائن ان';
+  String get authSignIn => 'Ø³Ø§Ø¦Ù† Ø§Ù†';
 
   @override
-  String get authSignUp => 'سائن اپ';
+  String get authSignUp => 'Ø³Ø§Ø¦Ù† Ø§Ù¾';
 
   @override
-  String get authEmail => 'ای میل';
+  String get authEmail => 'Ø§ÛŒ Ù…ÛŒÙ„';
 
   @override
-  String get authPassword => 'پاس ورڈ';
+  String get authPassword => 'Ù¾Ø§Ø³ ÙˆØ±Úˆ';
 
   @override
   String get authEmailHint => 'you@email.com';
 
   @override
-  String get authCreateAccount => 'اکاؤنٹ بنائیں';
+  String get authCreateAccount => 'Ø§Ú©Ø§Ø¤Ù†Ù¹ Ø¨Ù†Ø§Ø¦ÛŒÚº';
 
   @override
-  String get authSignInCta => 'سائن ان';
+  String get authSignInCta => 'Ø³Ø§Ø¦Ù† Ø§Ù†';
 
   @override
-  String get authOrContinueWith => 'یا جاری رکھیں';
+  String get authOrContinueWith => 'ÛŒØ§ Ø¬Ø§Ø±ÛŒ Ø±Ú©Ú¾ÛŒÚº';
 
   @override
-  String get authContinueWithGoogle => 'Google سے جاری رکھیں';
+  String get authContinueWithGoogle => 'Google Ø³Û’ Ø¬Ø§Ø±ÛŒ Ø±Ú©Ú¾ÛŒÚº';
 
   @override
-  String get authEnterEmail => 'اپنا ای میل درج کریں';
+  String get authEnterEmail => 'Ø§Ù¾Ù†Ø§ Ø§ÛŒ Ù…ÛŒÙ„ Ø¯Ø±Ø¬ Ú©Ø±ÛŒÚº';
 
   @override
-  String get authEnterValidEmail => 'درست ای میل ایڈریس درج کریں';
+  String get authEnterValidEmail =>
+      'Ø¯Ø±Ø³Øª Ø§ÛŒ Ù…ÛŒÙ„ Ø§ÛŒÚˆØ±ÛŒØ³ Ø¯Ø±Ø¬ Ú©Ø±ÛŒÚº';
 
   @override
-  String get authPasswordTooShort => 'پاس ورڈ کم از کم 6 حروف کا ہونا چاہیے';
+  String get authPasswordTooShort =>
+      'Ù¾Ø§Ø³ ÙˆØ±Úˆ Ú©Ù… Ø§Ø² Ú©Ù… 8 Ø­Ø±ÙˆÙ Ú©Ø§ ÛÙˆÙ†Ø§ Ú†Ø§ÛÛŒÛ’';
 
   @override
   String get authAccountCreated =>
-      'اکاؤنٹ بن گیا۔ سائن ان پر جائیں اور اپنا پاس ورڈ استعمال کریں۔';
+      'Ø§Ú©Ø§Ø¤Ù†Ù¹ Ø¨Ù† Ú¯ÛŒØ§Û” Ø³Ø§Ø¦Ù† Ø§Ù† Ù¾Ø± Ø¬Ø§Ø¦ÛŒÚº Ø§ÙˆØ± Ø§Ù¾Ù†Ø§ Ù¾Ø§Ø³ ÙˆØ±Úˆ Ø§Ø³ØªØ¹Ù…Ø§Ù„ Ú©Ø±ÛŒÚºÛ”';
 
   @override
-  String get authSomethingWentWrong => 'کچھ غلط ہو گیا۔ دوبارہ کوشش کریں۔';
+  String get authSomethingWentWrong =>
+      'Ú©Ú†Ú¾ ØºÙ„Ø· ÛÙˆ Ú¯ÛŒØ§Û” Ø¯ÙˆØ¨Ø§Ø±Û Ú©ÙˆØ´Ø´ Ú©Ø±ÛŒÚºÛ”';
 
   @override
-  String get authCouldNotStartGoogle => 'Google سائن ان شروع نہیں ہو سکا۔';
+  String get authCouldNotStartGoogle =>
+      'Google Ø³Ø§Ø¦Ù† Ø§Ù† Ø´Ø±ÙˆØ¹ Ù†ÛÛŒÚº ÛÙˆ Ø³Ú©Ø§Û”';
 
   @override
   String get authMidnightReset =>
-      'سائن ان کر کے، آپ قبول کرتے ہیں کہ آپ کا دن رات 12 بجے ری سیٹ ہوتا ہے۔';
+      'Ø³Ø§Ø¦Ù† Ø§Ù† Ú©Ø± Ú©Û’ØŒ Ø¢Ù¾ Ù‚Ø¨ÙˆÙ„ Ú©Ø±ØªÛ’ ÛÛŒÚº Ú©Û Ø¢Ù¾ Ú©Ø§ Ø¯Ù† Ø±Ø§Øª 12 Ø¨Ø¬Û’ Ø±ÛŒ Ø³ÛŒÙ¹ ÛÙˆØªØ§ ÛÛ’Û”';
 
   @override
-  String get authSetupRequired => 'سیٹ اپ درکار ہے';
+  String get authSetupRequired => 'Ø³ÛŒÙ¹ Ø§Ù¾ Ø¯Ø±Ú©Ø§Ø± ÛÛ’';
 
   @override
-  String get settingsPersonalSanctuary => 'ذاتی سینکچری';
+  String get settingsPersonalSanctuary => 'Ø°Ø§ØªÛŒ Ø³ÛŒÙ†Ú©Ú†Ø±ÛŒ';
 
   @override
-  String get settingsHowThisWorks => 'یہ کیسے کام کرتا ہے';
+  String get settingsHowThisWorks => 'ÛŒÛ Ú©ÛŒØ³Û’ Ú©Ø§Ù… Ú©Ø±ØªØ§ ÛÛ’';
 
   @override
   String get settingsHowThisWorksSubtitle =>
-      'ایپ کیا ہے، حد اور اسٹریک کیسے کام کرتی ہے';
+      'Ø§ÛŒÙ¾ Ú©ÛŒØ§ ÛÛ’ØŒ Ø­Ø¯ Ø§ÙˆØ± Ø§Ø³Ù¹Ø±ÛŒÚ© Ú©ÛŒØ³Û’ Ú©Ø§Ù… Ú©Ø±ØªÛŒ ÛÛ’';
 
   @override
-  String get settingsStreakProtection => 'اسٹریک حفاظت';
+  String get settingsStreakProtection => 'Ø§Ø³Ù¹Ø±ÛŒÚ© Ø­ÙØ§Ø¸Øª';
 
   @override
-  String get settingsStreakProtectionAvailable => 'اس مہینے 1 فریز دستیاب ہے';
+  String get settingsStreakProtectionAvailable =>
+      'Ø§Ø³ Ù…ÛÛŒÙ†Û’ 1 ÙØ±ÛŒØ² Ø¯Ø³ØªÛŒØ§Ø¨ ÛÛ’';
 
   @override
-  String get settingsStreakProtectionUsed => 'اس مہینے استعمال ہو چکا';
+  String get settingsStreakProtectionUsed =>
+      'Ø§Ø³ Ù…ÛÛŒÙ†Û’ Ø§Ø³ØªØ¹Ù…Ø§Ù„ ÛÙˆ Ú†Ú©Ø§';
 
   @override
   String get settingsProSubscription => 'Daily Stitch Pro';
 
   @override
-  String get settingsManageProSubscription => 'Pro سبسکرپشن کا انتظام کریں';
+  String get settingsManageProSubscription =>
+      'Pro Ø³Ø¨Ø³Ú©Ø±Ù¾Ø´Ù† Ú©Ø§ Ø§Ù†ØªØ¸Ø§Ù… Ú©Ø±ÛŒÚº';
 
   @override
   String get settingsProCancelPlay =>
-      'Google Play میں منسوخ کریں یا پلان تبدیل کریں';
+      'Google Play Ù…ÛŒÚº Ù…Ù†Ø³ÙˆØ® Ú©Ø±ÛŒÚº ÛŒØ§ Ù¾Ù„Ø§Ù† ØªØ¨Ø¯ÛŒÙ„ Ú©Ø±ÛŒÚº';
 
   @override
-  String get settingsProUnlock => 'تمام 5 عادات، مکمل تاریخ، مزید کھولیں';
+  String get settingsProUnlock =>
+      'ØªÙ…Ø§Ù… 5 Ø¹Ø§Ø¯Ø§ØªØŒ Ù…Ú©Ù…Ù„ ØªØ§Ø±ÛŒØ®ØŒ Ù…Ø²ÛŒØ¯ Ú©Ú¾ÙˆÙ„ÛŒÚº';
 
   @override
-  String get settingsTaskAlarms => 'کام کے الارم اور آخری موقع';
+  String get settingsTaskAlarms =>
+      'Ú©Ø§Ù… Ú©Û’ Ø§Ù„Ø§Ø±Ù… Ø§ÙˆØ± Ø¢Ø®Ø±ÛŒ Ù…ÙˆÙ‚Ø¹';
 
   @override
   String get settingsTaskAlarmsSubtitle =>
-      'شام کی ترغیب اور رات 12 بجے کی تنبیہ';
+      'Ø´Ø§Ù… Ú©ÛŒ ØªØ±ØºÛŒØ¨ Ø§ÙˆØ± Ø±Ø§Øª 12 Ø¨Ø¬Û’ Ú©ÛŒ ØªÙ†Ø¨ÛŒÛ';
 
   @override
-  String get settingsHomeScreenWidget => 'ہوم اسکرین ویجیٹ';
+  String get settingsHomeScreenWidget => 'ÛÙˆÙ… Ø§Ø³Ú©Ø±ÛŒÙ† ÙˆÛŒØ¬ÛŒÙ¹';
 
   @override
   String get settingsHomeScreenWidgetSubtitle =>
-      'اپنی زنجیر کی اسٹریک ہوم اسکرین پر شامل کریں';
+      'Ø§Ù¾Ù†ÛŒ Ø²Ù†Ø¬ÛŒØ± Ú©ÛŒ Ø§Ø³Ù¹Ø±ÛŒÚ© ÛÙˆÙ… Ø§Ø³Ú©Ø±ÛŒÙ† Ù¾Ø± Ø´Ø§Ù…Ù„ Ú©Ø±ÛŒÚº';
 
   @override
-  String get settingsShareBloomTracker => 'Daily Stitch شیئر کریں';
+  String get settingsShareBloomTracker => 'Daily Stitch Ø´ÛŒØ¦Ø± Ú©Ø±ÛŒÚº';
 
   @override
   String get settingsShareBloomTrackerSubtitle =>
-      'دوست کو زنجیر کے بارے میں بتائیں';
+      'Ø¯ÙˆØ³Øª Ú©Ùˆ Ø²Ù†Ø¬ÛŒØ± Ú©Û’ Ø¨Ø§Ø±Û’ Ù…ÛŒÚº Ø¨ØªØ§Ø¦ÛŒÚº';
 
   @override
-  String get settingsHelpSupport => 'مدد و معاونت';
+  String get settingsHelpSupport => 'Ù…Ø¯Ø¯ Ùˆ Ù…Ø¹Ø§ÙˆÙ†Øª';
 
   @override
-  String get settingsHelpSupportSubtitle => 'FAQ یا مسئلہ رپورٹ کریں';
+  String get settingsHelpSupportSubtitle =>
+      'FAQ ÛŒØ§ Ù…Ø³Ø¦Ù„Û Ø±Ù¾ÙˆØ±Ù¹ Ú©Ø±ÛŒÚº';
 
   @override
-  String get settingsSignOutTile => 'سائن آؤٹ';
+  String get settingsSignOutTile => 'Ø³Ø§Ø¦Ù† Ø¢Ø¤Ù¹';
 
   @override
-  String get settingsAllFeaturesUnlocked => 'تمام فیچرز کھلے ہوئے';
+  String get settingsAllFeaturesUnlocked =>
+      'ØªÙ…Ø§Ù… ÙÛŒÚ†Ø±Ø² Ú©Ú¾Ù„Û’ ÛÙˆØ¦Û’';
 
   @override
   String get settingsAllFeaturesUnlockedSubtitle =>
-      'بیٹا بلڈ — ہم جب تک سب کچھ ٹیست کرتے ہیں سبسکرپشنز رکی ہوئی ہیں۔';
+      'Ø¨ÛŒÙ¹Ø§ Ø¨Ù„Úˆ â€” ÛÙ… Ø¬Ø¨ ØªÚ© Ø³Ø¨ Ú©Ú†Ú¾ Ù¹ÛŒØ³Øª Ú©Ø±ØªÛ’ ÛÛŒÚº Ø³Ø¨Ø³Ú©Ø±Ù¾Ø´Ù†Ø² Ø±Ú©ÛŒ ÛÙˆØ¦ÛŒ ÛÛŒÚºÛ”';
 
   @override
   String settingsVersion(Object build, Object version) {
-    return 'ورژن $version ($build)';
+    return 'ÙˆØ±Ú˜Ù† $version ($build)';
   }
 
   @override
-  String get settingsVersionUnknown => 'ورژن 1.0.0';
+  String get settingsVersionUnknown => 'ÙˆØ±Ú˜Ù† 1.0.0';
 
   @override
-  String get settingsHabitMaster => 'عادت ماسٹر';
+  String get settingsHabitMaster => 'Ø¹Ø§Ø¯Øª Ù…Ø§Ø³Ù¹Ø±';
 
   @override
   String settingsLevel(Object level) {
-    return 'لیول $level · عادت ماسٹر';
+    return 'Ù„ÛŒÙˆÙ„ $level Â· Ø¹Ø§Ø¯Øª Ù…Ø§Ø³Ù¹Ø±';
   }
 
   @override
-  String get languagePickerTitle => 'زبان';
+  String get languagePickerTitle => 'Ø²Ø¨Ø§Ù†';
 
   @override
-  String get youLast7Days => 'آخری 7 دن';
+  String get youLast7Days => 'Ø¢Ø®Ø±ÛŒ 7 Ø¯Ù†';
 
   @override
-  String get youLast7DaysSubtitle => 'دن بہ دن کام کی تاریخ';
+  String get youLast7DaysSubtitle => 'Ø¯Ù† Ø¨Û Ø¯Ù† Ú©Ø§Ù… Ú©ÛŒ ØªØ§Ø±ÛŒØ®';
 
   @override
   String get youLeftBehindSubtitle =>
-      'چھوٹے ہوئے کام جو دوبارہ شامل ہونے کا منتظر ہیں';
+      'Ú†Ú¾ÙˆÙ¹Û’ ÛÙˆØ¦Û’ Ú©Ø§Ù… Ø¬Ùˆ Ø¯ÙˆØ¨Ø§Ø±Û Ø´Ø§Ù…Ù„ ÛÙˆÙ†Û’ Ú©Ø§ Ù…Ù†ØªØ¸Ø± ÛÛŒÚº';
 
   @override
-  String get youProTier => 'Pro ٹائر';
+  String get youProTier => 'Pro Ù¹Ø§Ø¦Ø±';
 
   @override
-  String get youFreeTier => 'مفت ٹائر';
+  String get youFreeTier => 'Ù…ÙØª Ù¹Ø§Ø¦Ø±';
 
   @override
   String get youPro => 'Pro';
 
   @override
-  String get youFree => 'مفت';
+  String get youFree => 'Ù…ÙØª';
 
   @override
   String youLevelLabel(Object level) {
-    return 'لیول $level';
+    return 'Ù„ÛŒÙˆÙ„ $level';
   }
 
   @override
   String youBestStreakLabel(Object days) {
-    return 'بہترین $days دن';
+    return 'Ø¨ÛØªØ±ÛŒÙ† $days Ø¯Ù†';
   }
 
   @override
-  String get youPlantHabit => 'زنجیر شروع کرنے کے لیے عادت لگائیں۔';
+  String get youPlantHabit =>
+      'Ø²Ù†Ø¬ÛŒØ± Ø´Ø±ÙˆØ¹ Ú©Ø±Ù†Û’ Ú©Û’ Ù„ÛŒÛ’ Ø¹Ø§Ø¯Øª Ù„Ú¯Ø§Ø¦ÛŒÚºÛ”';
 
   @override
   String get youProBadge => 'PRO';
 
   @override
-  String get youUnlockDiscipline => 'مکمل نظم و ضبط کا نظام کھولیں۔';
+  String get youUnlockDiscipline =>
+      'Ù…Ú©Ù…Ù„ Ù†Ø¸Ù… Ùˆ Ø¶Ø¨Ø· Ú©Ø§ Ù†Ø¸Ø§Ù… Ú©Ú¾ÙˆÙ„ÛŒÚºÛ”';
 
   @override
   String get youProFeatures =>
-      '5 عادت کی جگہیں، مکمل تاریخ، Legendary تمغے، ماہانہ اسٹریک فریز، ہفتہ وار شیئر کارڈ۔';
+      '5 Ø¹Ø§Ø¯Øª Ú©ÛŒ Ø¬Ú¯ÛÛŒÚºØŒ Ù…Ú©Ù…Ù„ ØªØ§Ø±ÛŒØ®ØŒ Legendary ØªÙ…ØºÛ’ØŒ Ù…Ø§ÛØ§Ù†Û Ø§Ø³Ù¹Ø±ÛŒÚ© ÙØ±ÛŒØ²ØŒ ÛÙØªÛ ÙˆØ§Ø± Ø´ÛŒØ¦Ø± Ú©Ø§Ø±ÚˆÛ”';
 
   @override
-  String get youSeePlans => 'پلان دیکھیں';
+  String get youSeePlans => 'Ù¾Ù„Ø§Ù† Ø¯ÛŒÚ©Ú¾ÛŒÚº';
 
   @override
   String youFromPrice(Object price) {
-    return '$price/ماہ سے شروع';
+    return '$price/Ù…Ø§Û Ø³Û’ Ø´Ø±ÙˆØ¹';
   }
 
   @override
-  String get youBloomTrackerFooter => 'Daily Stitch · عادات اور کام';
+  String get youBloomTrackerFooter =>
+      'Daily Stitch Â· Ø¹Ø§Ø¯Ø§Øª Ø§ÙˆØ± Ú©Ø§Ù…';
 
   @override
-  String get progressMedals => 'تمغے';
+  String get progressMedals => 'ØªÙ…ØºÛ’';
 
   @override
-  String get progressLast7Days => 'آخری 7 دن';
+  String get progressLast7Days => 'Ø¢Ø®Ø±ÛŒ 7 Ø¯Ù†';
 
   @override
-  String get progressSeeAll => 'سب دیکھیں';
+  String get progressSeeAll => 'Ø³Ø¨ Ø¯ÛŒÚ©Ú¾ÛŒÚº';
 
   @override
-  String get progressSeeDayByDayActivity => 'اپنی دن بہ دن سرگرمی دیکھیں';
+  String get progressSeeDayByDayActivity =>
+      'Ø§Ù¾Ù†ÛŒ Ø¯Ù† Ø¨Û Ø¯Ù† Ø³Ø±Ú¯Ø±Ù…ÛŒ Ø¯ÛŒÚ©Ú¾ÛŒÚº';
 
   @override
   String progressTasksFinishedPct(Object done, Object pct, Object total) {
-    return '$done / $total کام مکمل · $pct%';
+    return '$done / $total Ú©Ø§Ù… Ù…Ú©Ù…Ù„ Â· $pct%';
   }
 
   @override
   String get progressNoMedalsYet =>
-      'ابھی تک کوئی تمغے نہیں — شروع کرنے کے لیے کام مکمل کریں یا پودے کی دیکھ بھال کریں۔';
+      'Ø§Ø¨Ú¾ÛŒ ØªÚ© Ú©ÙˆØ¦ÛŒ ØªÙ…ØºÛ’ Ù†ÛÛŒÚº â€” Ø´Ø±ÙˆØ¹ Ú©Ø±Ù†Û’ Ú©Û’ Ù„ÛŒÛ’ Ú©Ø§Ù… Ù…Ú©Ù…Ù„ Ú©Ø±ÛŒÚº ÛŒØ§ Ù¾ÙˆØ¯Û’ Ú©ÛŒ Ø¯ÛŒÚ©Ú¾ Ø¨Ú¾Ø§Ù„ Ú©Ø±ÛŒÚºÛ”';
 
   @override
   String progressSeeAllMedals(Object earned, Object total) {
-    return 'تمام تمغے دیکھیں · $earned / $total حاصل';
+    return 'ØªÙ…Ø§Ù… ØªÙ…ØºÛ’ Ø¯ÛŒÚ©Ú¾ÛŒÚº Â· $earned / $total Ø­Ø§ØµÙ„';
   }
 
   @override
-  String get progressGuardianInsight => 'نگہبان کی بصیرت';
+  String get progressGuardianInsight => 'Ù†Ú¯ÛØ¨Ø§Ù† Ú©ÛŒ Ø¨ØµÛŒØ±Øª';
 
   @override
   String progressNextBadgeTier(Object tier) {
-    return 'اگلا بیج · $tier';
+    return 'Ø§Ú¯Ù„Ø§ Ø¨ÛŒØ¬ Â· $tier';
   }
 
   @override
   String progressDaysTarget(Object days) {
-    return '$days دن کا ہدف';
+    return '$days Ø¯Ù† Ú©Ø§ ÛØ¯Ù';
   }
 
   @override
@@ -1122,182 +1194,190 @@ class AppLocalizationsUr extends AppLocalizations {
   }
 
   @override
-  String get helpTitle => 'مدد و معاونت';
+  String get helpTitle => 'Ù…Ø¯Ø¯ Ùˆ Ù…Ø¹Ø§ÙˆÙ†Øª';
 
   @override
   String get helpBody =>
-      'زیادہ تر جوابات نیچے ہیں۔ اگر نہیں ملے، ہمیں نوٹ بھیجیں اور ہم عام طور پر 2-3 دن میں جواب دیتے ہیں۔';
+      'Ø²ÛŒØ§Ø¯Û ØªØ± Ø¬ÙˆØ§Ø¨Ø§Øª Ù†ÛŒÚ†Û’ ÛÛŒÚºÛ” Ø§Ú¯Ø± Ù†ÛÛŒÚº Ù…Ù„Û’ØŒ ÛÙ…ÛŒÚº Ù†ÙˆÙ¹ Ø¨Ú¾ÛŒØ¬ÛŒÚº Ø§ÙˆØ± ÛÙ… Ø¹Ø§Ù… Ø·ÙˆØ± Ù¾Ø± 2-3 Ø¯Ù† Ù…ÛŒÚº Ø¬ÙˆØ§Ø¨ Ø¯ÛŒØªÛ’ ÛÛŒÚºÛ”';
 
   @override
-  String get helpSectionFAQ => 'عمومی سوالات';
+  String get helpSectionFAQ => 'Ø¹Ù…ÙˆÙ…ÛŒ Ø³ÙˆØ§Ù„Ø§Øª';
 
   @override
-  String get helpSectionContact => 'ابھی بھی مسئلہ ہے؟';
+  String get helpSectionContact => 'Ø§Ø¨Ú¾ÛŒ Ø¨Ú¾ÛŒ Ù…Ø³Ø¦Ù„Û ÛÛ’ØŸ';
 
   @override
-  String get helpAddMessage => 'پہلے مختصر پیغام شامل کریں۔';
+  String get helpAddMessage =>
+      'Ù¾ÛÙ„Û’ Ù…Ø®ØªØµØ± Ù¾ÛŒØºØ§Ù… Ø´Ø§Ù…Ù„ Ú©Ø±ÛŒÚºÛ”';
 
   @override
-  String get helpOpening => 'آپ کا میل ایپ کھل رہا ہے…';
+  String get helpOpening => 'Ø¢Ù¾ Ú©Ø§ Ù…ÛŒÙ„ Ø§ÛŒÙ¾ Ú©Ú¾Ù„ Ø±ÛØ§ ÛÛ’â€¦';
 
   @override
-  String get helpEmailUs => 'ہمیں ای میل کریں';
+  String get helpEmailUs => 'ÛÙ…ÛŒÚº Ø§ÛŒ Ù…ÛŒÙ„ Ú©Ø±ÛŒÚº';
 
   @override
-  String get helpOpeningAction => 'کھل رہا ہے…';
+  String get helpOpeningAction => 'Ú©Ú¾Ù„ Ø±ÛØ§ ÛÛ’â€¦';
 
   @override
-  String get helpCopyEmail => 'سپورٹ ای میل کاپی کریں';
+  String get helpCopyEmail => 'Ø³Ù¾ÙˆØ±Ù¹ Ø§ÛŒ Ù…ÛŒÙ„ Ú©Ø§Ù¾ÛŒ Ú©Ø±ÛŒÚº';
 
   @override
-  String get helpCopiedEmail => 'support@dailystitch.app کاپی ہو گیا';
+  String get helpCopiedEmail => 'support@dailystitch.app Ú©Ø§Ù¾ÛŒ ÛÙˆ Ú¯ÛŒØ§';
 
   @override
   String get helpNoMailApp =>
-      'کوئی میل ایپ نہیں ملی۔ ہمیں support@dailystitch.app پر ای میل کریں۔';
+      'Ú©ÙˆØ¦ÛŒ Ù…ÛŒÙ„ Ø§ÛŒÙ¾ Ù†ÛÛŒÚº Ù…Ù„ÛŒÛ” ÛÙ…ÛŒÚº support@dailystitch.app Ù¾Ø± Ø§ÛŒ Ù…ÛŒÙ„ Ú©Ø±ÛŒÚºÛ”';
 
   @override
-  String get helpTopicLabel => 'موضوع';
+  String get helpTopicLabel => 'Ù…ÙˆØ¶ÙˆØ¹';
 
   @override
-  String get helpWhatHappened => 'کیا ہوا؟';
+  String get helpWhatHappened => 'Ú©ÛŒØ§ ÛÙˆØ§ØŸ';
 
   @override
-  String get helpHint => 'مختصر بیان بہت مدد کرتا ہے…';
+  String get helpHint => 'Ù…Ø®ØªØµØ± Ø¨ÛŒØ§Ù† Ø¨ÛØª Ù…Ø¯Ø¯ Ú©Ø±ØªØ§ ÛÛ’â€¦';
 
   @override
   String get helpDisclaimer =>
-      '\"ہمیں ای میل کریں\" ٹیپ کرنے سے آپ کا میل ایپ پہلے سے بھرے ہوئے پیغام کے ساتھ کھلتا ہے (بھیجنے تک آپ کے ڈیوائس سے کوئی ڈیٹا نہیں جاتا)۔';
+      '\"ÛÙ…ÛŒÚº Ø§ÛŒ Ù…ÛŒÙ„ Ú©Ø±ÛŒÚº\" Ù¹ÛŒÙ¾ Ú©Ø±Ù†Û’ Ø³Û’ Ø¢Ù¾ Ú©Ø§ Ù…ÛŒÙ„ Ø§ÛŒÙ¾ Ù¾ÛÙ„Û’ Ø³Û’ Ø¨Ú¾Ø±Û’ ÛÙˆØ¦Û’ Ù¾ÛŒØºØ§Ù… Ú©Û’ Ø³Ø§ØªÚ¾ Ú©Ú¾Ù„ØªØ§ ÛÛ’ (Ø¨Ú¾ÛŒØ¬Ù†Û’ ØªÚ© Ø¢Ù¾ Ú©Û’ ÚˆÛŒÙˆØ§Ø¦Ø³ Ø³Û’ Ú©ÙˆØ¦ÛŒ ÚˆÛŒÙ¹Ø§ Ù†ÛÛŒÚº Ø¬Ø§ØªØ§)Û”';
 
   @override
-  String get helpFaqQ1 => '5 کام کی حد کیا ہے؟';
+  String get helpFaqQ1 => '5 Ú©Ø§Ù… Ú©ÛŒ Ø­Ø¯ Ú©ÛŒØ§ ÛÛ’ØŸ';
 
   @override
   String get helpFaqA1 =>
-      'آپ فی مقامی دن 5 تک کام شامل کر سکتے ہیں۔ 6واں جان بوجھ کر بند ہے — نظم و ضبط بھاری پر بہتر ہے۔ حد فیچر ہے، رکاوٹ نہیں۔';
+      'Ø¢Ù¾ ÙÛŒ Ù…Ù‚Ø§Ù…ÛŒ Ø¯Ù† 5 ØªÚ© Ú©Ø§Ù… Ø´Ø§Ù…Ù„ Ú©Ø± Ø³Ú©ØªÛ’ ÛÛŒÚºÛ” 6ÙˆØ§Úº Ø¬Ø§Ù† Ø¨ÙˆØ¬Ú¾ Ú©Ø± Ø¨Ù†Ø¯ ÛÛ’ â€” Ù†Ø¸Ù… Ùˆ Ø¶Ø¨Ø· Ø¨Ú¾Ø§Ø±ÛŒ Ù¾Ø± Ø¨ÛØªØ± ÛÛ’Û” Ø­Ø¯ ÙÛŒÚ†Ø± ÛÛ’ØŒ Ø±Ú©Ø§ÙˆÙ¹ Ù†ÛÛŒÚºÛ”';
 
   @override
-  String get helpFaqQ2 => 'رات 12 بجے کیا ہوتا ہے؟';
+  String get helpFaqQ2 => 'Ø±Ø§Øª 12 Ø¨Ø¬Û’ Ú©ÛŒØ§ ÛÙˆØªØ§ ÛÛ’ØŸ';
 
   @override
   String get helpFaqA2 =>
-      'آپ کے مقامی رات 12 بجے، جو بھی کام ابھی کھلا ہے وہ \"چھوٹا ہوا\" ٹیگ ہوتا ہے اور Left Behind میں چلا جاتا ہے۔ عادت کی اسٹریک ری سیٹ ہوتی ہے اگر عادت کل مکمل نہیں ہوئی۔';
+      'Ø¢Ù¾ Ú©Û’ Ù…Ù‚Ø§Ù…ÛŒ Ø±Ø§Øª 12 Ø¨Ø¬Û’ØŒ Ø¬Ùˆ Ø¨Ú¾ÛŒ Ú©Ø§Ù… Ø§Ø¨Ú¾ÛŒ Ú©Ú¾Ù„Ø§ ÛÛ’ ÙˆÛ \"Ú†Ú¾ÙˆÙ¹Ø§ ÛÙˆØ§\" Ù¹ÛŒÚ¯ ÛÙˆØªØ§ ÛÛ’ Ø§ÙˆØ± Left Behind Ù…ÛŒÚº Ú†Ù„Ø§ Ø¬Ø§ØªØ§ ÛÛ’Û” Ø¹Ø§Ø¯Øª Ú©ÛŒ Ø§Ø³Ù¹Ø±ÛŒÚ© Ø±ÛŒ Ø³ÛŒÙ¹ ÛÙˆØªÛŒ ÛÛ’ Ø§Ú¯Ø± Ø¹Ø§Ø¯Øª Ú©Ù„ Ù…Ú©Ù…Ù„ Ù†ÛÛŒÚº ÛÙˆØ¦ÛŒÛ”';
 
   @override
-  String get helpFaqQ3 => 'Left Behind کیا ہے؟';
+  String get helpFaqQ3 => 'Left Behind Ú©ÛŒØ§ ÛÛ’ØŸ';
 
   @override
   String get helpFaqA3 =>
-      'آپ کے نامکمل کاموں کی ایک نرم، ختم کرنے والی فہرست۔ اسے کھولیں، صرف وہی دوبارہ شامل کریں جو ابھی بھی اہم ہو، باقی کو چھوڑ دیں۔ مفت ٹائر آخری 7 دن دیکھتا ہے؛ Pro مکمل تاریخ دیکھتا ہے۔';
+      'Ø¢Ù¾ Ú©Û’ Ù†Ø§Ù…Ú©Ù…Ù„ Ú©Ø§Ù…ÙˆÚº Ú©ÛŒ Ø§ÛŒÚ© Ù†Ø±Ù…ØŒ Ø®ØªÙ… Ú©Ø±Ù†Û’ ÙˆØ§Ù„ÛŒ ÙÛØ±Ø³ØªÛ” Ø§Ø³Û’ Ú©Ú¾ÙˆÙ„ÛŒÚºØŒ ØµØ±Ù ÙˆÛÛŒ Ø¯ÙˆØ¨Ø§Ø±Û Ø´Ø§Ù…Ù„ Ú©Ø±ÛŒÚº Ø¬Ùˆ Ø§Ø¨Ú¾ÛŒ Ø¨Ú¾ÛŒ Ø§ÛÙ… ÛÙˆØŒ Ø¨Ø§Ù‚ÛŒ Ú©Ùˆ Ú†Ú¾ÙˆÚ‘ Ø¯ÛŒÚºÛ” Ù…ÙØª Ù¹Ø§Ø¦Ø± Ø¢Ø®Ø±ÛŒ 7 Ø¯Ù† Ø¯ÛŒÚ©Ú¾ØªØ§ ÛÛ’Ø› Pro Ù…Ú©Ù…Ù„ ØªØ§Ø±ÛŒØ® Ø¯ÛŒÚ©Ú¾ØªØ§ ÛÛ’Û”';
 
   @override
-  String get helpFaqQ4 => 'اسٹریک کیسے کام کرتی ہے؟';
+  String get helpFaqQ4 => 'Ø§Ø³Ù¹Ø±ÛŒÚ© Ú©ÛŒØ³Û’ Ú©Ø§Ù… Ú©Ø±ØªÛŒ ÛÛ’ØŸ';
 
   @override
   String get helpFaqA4 =>
-      'دن زنجیر بڑھاتا ہے جب آپ کے پاس کم از کم 1 کام تھا اور 0 چھوٹے۔ صفر کاموں والے دن زنجیر نہ بڑھاتے نہ توڑتے۔ اسٹریک فریز ہر ماہ ایک چھوٹے ہوئے دن کو معاف کرتا ہے۔';
+      'Ø¯Ù† Ø²Ù†Ø¬ÛŒØ± Ø¨Ú‘Ú¾Ø§ØªØ§ ÛÛ’ Ø¬Ø¨ Ø¢Ù¾ Ú©Û’ Ù¾Ø§Ø³ Ú©Ù… Ø§Ø² Ú©Ù… 1 Ú©Ø§Ù… ØªÚ¾Ø§ Ø§ÙˆØ± 0 Ú†Ú¾ÙˆÙ¹Û’Û” ØµÙØ± Ú©Ø§Ù…ÙˆÚº ÙˆØ§Ù„Û’ Ø¯Ù† Ø²Ù†Ø¬ÛŒØ± Ù†Û Ø¨Ú‘Ú¾Ø§ØªÛ’ Ù†Û ØªÙˆÚ‘ØªÛ’Û” Ø§Ø³Ù¹Ø±ÛŒÚ© ÙØ±ÛŒØ² ÛØ± Ù…Ø§Û Ø§ÛŒÚ© Ú†Ú¾ÙˆÙ¹Û’ ÛÙˆØ¦Û’ Ø¯Ù† Ú©Ùˆ Ù…Ø¹Ø§Ù Ú©Ø±ØªØ§ ÛÛ’Û”';
 
   @override
-  String get helpFaqQ5 => 'اسٹریک فریز کیا ہے؟';
+  String get helpFaqQ5 => 'Ø§Ø³Ù¹Ø±ÛŒÚ© ÙØ±ÛŒØ² Ú©ÛŒØ§ ÛÛ’ØŸ';
 
   @override
   String get helpFaqA5 =>
-      'ہر کیلنڈر مہینے ایک \"فریز\"، صرف Pro۔ اسے اس دن استعمال کریں جو آپ نے چھوڑا تاکہ زنجیر زندہ رہے۔ اسے پیشرفت ٹیب پر تلاش کریں۔';
+      'ÛØ± Ú©ÛŒÙ„Ù†ÚˆØ± Ù…ÛÛŒÙ†Û’ Ø§ÛŒÚ© \"ÙØ±ÛŒØ²\"ØŒ ØµØ±Ù ProÛ” Ø§Ø³Û’ Ø§Ø³ Ø¯Ù† Ø§Ø³ØªØ¹Ù…Ø§Ù„ Ú©Ø±ÛŒÚº Ø¬Ùˆ Ø¢Ù¾ Ù†Û’ Ú†Ú¾ÙˆÚ‘Ø§ ØªØ§Ú©Û Ø²Ù†Ø¬ÛŒØ± Ø²Ù†Ø¯Û Ø±ÛÛ’Û” Ø§Ø³Û’ Ù¾ÛŒØ´Ø±ÙØª Ù¹ÛŒØ¨ Ù¾Ø± ØªÙ„Ø§Ø´ Ú©Ø±ÛŒÚºÛ”';
 
   @override
-  String get helpFaqQ6 => 'میرا ڈیٹا کہاں محفوظ ہے؟';
+  String get helpFaqQ6 => 'Ù…ÛŒØ±Ø§ ÚˆÛŒÙ¹Ø§ Ú©ÛØ§Úº Ù…Ø­ÙÙˆØ¸ ÛÛ’ØŸ';
 
   @override
   String get helpFaqA6 =>
-      'تمام ڈیٹا Supabase (Postgres) میں اس اکاؤنٹ کے تحت محفوظ ہے جس سے سائن ان ہوا۔ ہم کبھی بیچتے یا شیئر نہیں کرتے۔ مکمل تفصیلات کے لیے Play Store لسٹنگ میں لکی رازداری پالیسی دیکھیں۔';
+      'ØªÙ…Ø§Ù… ÚˆÛŒÙ¹Ø§ ÛÙ…Ø§Ø±Û’ Ù…Ø­ÙÙˆØ¸ Ú©Ù„Ø§Ø¤Úˆ Ø¨ÛŒÚ© Ø§ÛŒÙ†Úˆ Ù…ÛŒÚº Ø§Ø³ Ø§Ú©Ø§Ø¤Ù†Ù¹ Ú©Û’ ØªØ­Øª Ù…Ø­ÙÙˆØ¸ ÛÛ’ Ø¬Ø³ Ø³Û’ Ø³Ø§Ø¦Ù† Ø§Ù† ÛÙˆØ§Û” ÛÙ… Ú©Ø¨Ú¾ÛŒ Ø¨ÛŒÚ†ØªÛ’ ÛŒØ§ Ø´ÛŒØ¦Ø± Ù†ÛÛŒÚº Ú©Ø±ØªÛ’Û” Ù…Ú©Ù…Ù„ ØªÙØµÛŒÙ„Ø§Øª Ú©Û’ Ù„ÛŒÛ’ Play Store Ù„Ø³Ù¹Ù†Ú¯ Ù…ÛŒÚº Ù„Ú©ÛŒ Ø±Ø§Ø²Ø¯Ø§Ø±ÛŒ Ù¾Ø§Ù„ÛŒØ³ÛŒ Ø¯ÛŒÚ©Ú¾ÛŒÚºÛ”';
 
   @override
-  String get helpFaqQ7 => 'میں اپنا اکاؤنٹ کیسے حذف کروں؟';
+  String get helpFaqQ7 =>
+      'Ù…ÛŒÚº Ø§Ù¾Ù†Ø§ Ø§Ú©Ø§Ø¤Ù†Ù¹ Ú©ÛŒØ³Û’ Ø­Ø°Ù Ú©Ø±ÙˆÚºØŸ';
 
   @override
   String get helpFaqA7 =>
-      'اکاؤنٹ حذف کرنا اگلی ریلیز میں ترتیبات میں آ رہا ہے۔ فی الحال، ہمیں support@dailystitch.app پر ای میل کریں اور ہم ایک دن میں سنبھال لیں گے۔';
+      'Ø§Ú©Ø§Ø¤Ù†Ù¹ Ø­Ø°Ù Ú©Ø±Ù†Ø§ Ø§Ú¯Ù„ÛŒ Ø±ÛŒÙ„ÛŒØ² Ù…ÛŒÚº ØªØ±ØªÛŒØ¨Ø§Øª Ù…ÛŒÚº Ø¢ Ø±ÛØ§ ÛÛ’Û” ÙÛŒ Ø§Ù„Ø­Ø§Ù„ØŒ ÛÙ…ÛŒÚº support@dailystitch.app Ù¾Ø± Ø§ÛŒ Ù…ÛŒÙ„ Ú©Ø±ÛŒÚº Ø§ÙˆØ± ÛÙ… Ø§ÛŒÚ© Ø¯Ù† Ù…ÛŒÚº Ø³Ù†Ø¨Ú¾Ø§Ù„ Ù„ÛŒÚº Ú¯Û’Û”';
 
   @override
-  String get helpTopicsGeneral => 'عمومی سوال';
+  String get helpTopicsGeneral => 'Ø¹Ù…ÙˆÙ…ÛŒ Ø³ÙˆØ§Ù„';
 
   @override
-  String get helpTopicsBug => 'بگ رپورٹ';
+  String get helpTopicsBug => 'Ø¨Ú¯ Ø±Ù¾ÙˆØ±Ù¹';
 
   @override
-  String get helpTopicsStreak => 'اسٹریک / رول اوور مسئلہ';
+  String get helpTopicsStreak => 'Ø§Ø³Ù¹Ø±ÛŒÚ© / Ø±ÙˆÙ„ Ø§ÙˆÙˆØ± Ù…Ø³Ø¦Ù„Û';
 
   @override
-  String get helpTopicsBilling => 'بلنگ یا Pro ٹائر';
+  String get helpTopicsBilling => 'Ø¨Ù„Ù†Ú¯ ÛŒØ§ Pro Ù¹Ø§Ø¦Ø±';
 
   @override
-  String get helpTopicsAccount => 'اکاؤنٹ اور ڈیٹا';
+  String get helpTopicsAccount => 'Ø§Ú©Ø§Ø¤Ù†Ù¹ Ø§ÙˆØ± ÚˆÛŒÙ¹Ø§';
 
   @override
-  String get helpTopicsFeature => 'فیچر کی درخواست';
+  String get helpTopicsFeature => 'ÙÛŒÚ†Ø± Ú©ÛŒ Ø¯Ø±Ø®ÙˆØ§Ø³Øª';
 
   @override
-  String get helpAccountAnon => '(سائن ان نہیں)';
+  String get helpAccountAnon => '(Ø³Ø§Ø¦Ù† Ø§Ù† Ù†ÛÛŒÚº)';
 
   @override
-  String get splashTagline => 'چھوٹے بیج پالیں۔ جنگل اگائیں۔';
+  String get splashTagline =>
+      'Ú†Ú¾ÙˆÙ¹Û’ Ø¨ÛŒØ¬ Ù¾Ø§Ù„ÛŒÚºÛ” Ø¬Ù†Ú¯Ù„ Ø§Ú¯Ø§Ø¦ÛŒÚºÛ”';
 
   @override
-  String get priorityStandard => 'معمولی';
+  String get priorityStandard => 'Ù…Ø¹Ù…ÙˆÙ„ÛŒ';
 
   @override
-  String get priorityVital => 'ضروری';
+  String get priorityVital => 'Ø¶Ø±ÙˆØ±ÛŒ';
 
   @override
-  String get prioritySpark => 'شعلہ';
+  String get prioritySpark => 'Ø´Ø¹Ù„Û';
 
   @override
-  String get settingsDeleteAccount => 'اکاؤنٹ حذف کریں';
+  String get settingsDeleteAccount => 'Ø§Ú©Ø§Ø¤Ù†Ù¹ Ø­Ø°Ù Ú©Ø±ÛŒÚº';
 
   @override
-  String get settingsDeleteAccountSubtitle => 'اپنا ڈیٹا مستقل طور پر ہٹائیں';
+  String get settingsDeleteAccountSubtitle =>
+      'Ø§Ù¾Ù†Ø§ ÚˆÛŒÙ¹Ø§ Ù…Ø³ØªÙ‚Ù„ Ø·ÙˆØ± Ù¾Ø± ÛÙ¹Ø§Ø¦ÛŒÚº';
 
   @override
-  String get settingsDeleteAccountConfirmTitle => 'اپنا اکاؤنٹ حذف کریں؟';
+  String get settingsDeleteAccountConfirmTitle =>
+      'Ø§Ù¾Ù†Ø§ Ø§Ú©Ø§Ø¤Ù†Ù¹ Ø­Ø°Ù Ú©Ø±ÛŒÚºØŸ';
 
   @override
   String get settingsDeleteAccountConfirmBody =>
-      'یہ آپ کی پروفائل، کام، عادات اور پیشرفت کو مستقل طور پر حذف کرتا ہے۔ فعال Play سبسکرپشنز کو الگ سے Google Play میں منسوخ کرنا ہوگا۔ یہ واپس نہیں ہو سکتا۔';
+      'ÛŒÛ Ø¢Ù¾ Ú©ÛŒ Ù¾Ø±ÙˆÙØ§Ø¦Ù„ØŒ Ú©Ø§Ù…ØŒ Ø¹Ø§Ø¯Ø§Øª Ø§ÙˆØ± Ù¾ÛŒØ´Ø±ÙØª Ú©Ùˆ Ù…Ø³ØªÙ‚Ù„ Ø·ÙˆØ± Ù¾Ø± Ø­Ø°Ù Ú©Ø±ØªØ§ ÛÛ’Û” ÙØ¹Ø§Ù„ Play Ø³Ø¨Ø³Ú©Ø±Ù¾Ø´Ù†Ø² Ú©Ùˆ Ø§Ù„Ú¯ Ø³Û’ Google Play Ù…ÛŒÚº Ù…Ù†Ø³ÙˆØ® Ú©Ø±Ù†Ø§ ÛÙˆÚ¯Ø§Û” ÛŒÛ ÙˆØ§Ù¾Ø³ Ù†ÛÛŒÚº ÛÙˆ Ø³Ú©ØªØ§Û”';
 
   @override
-  String get settingsDeleteAccountConfirmButton => 'ہمیشہ کے لیے حذف کریں';
+  String get settingsDeleteAccountConfirmButton =>
+      'ÛÙ…ÛŒØ´Û Ú©Û’ Ù„ÛŒÛ’ Ø­Ø°Ù Ú©Ø±ÛŒÚº';
 
   @override
-  String get settingsDeleteAccountSuccess => 'آپ کا اکاؤنٹ حذف ہو گیا۔';
+  String get settingsDeleteAccountSuccess =>
+      'Ø¢Ù¾ Ú©Ø§ Ø§Ú©Ø§Ø¤Ù†Ù¹ Ø­Ø°Ù ÛÙˆ Ú¯ÛŒØ§Û”';
 
   @override
   String get settingsDeleteAccountFailed =>
-      'اکاؤنٹ حذف نہیں ہو سکا۔ دوبارہ کوشش کریں یا support@dailystitch.app پر ای میل کریں۔';
+      'Ø§Ú©Ø§Ø¤Ù†Ù¹ Ø­Ø°Ù Ù†ÛÛŒÚº ÛÙˆ Ø³Ú©Ø§Û” Ø¯ÙˆØ¨Ø§Ø±Û Ú©ÙˆØ´Ø´ Ú©Ø±ÛŒÚº ÛŒØ§ support@dailystitch.app Ù¾Ø± Ø§ÛŒ Ù…ÛŒÙ„ Ú©Ø±ÛŒÚºÛ”';
 
   @override
-  String get referralYouTitle => 'دوستوں کو مہمان بنائیں · مفت Pro کمائیں';
+  String get referralYouTitle =>
+      'Ø¯ÙˆØ³ØªÙˆÚº Ú©Ùˆ Ù…ÛÙ…Ø§Ù† Ø¨Ù†Ø§Ø¦ÛŒÚº Â· Ù…ÙØª Pro Ú©Ù…Ø§Ø¦ÛŒÚº';
 
   @override
   String referralYouSubtitle(int progress, int milestone) {
-    return '$milestone میں سے $progress دوست شامل ہوئے';
+    return '$milestone Ù…ÛŒÚº Ø³Û’ $progress Ø¯ÙˆØ³Øª Ø´Ø§Ù…Ù„ ÛÙˆØ¦Û’';
   }
 
   @override
-  String get referralYouShare => 'مہمانی شیئر کریں';
+  String get referralYouShare => 'Ù…ÛÙ…Ø§Ù†ÛŒ Ø´ÛŒØ¦Ø± Ú©Ø±ÛŒÚº';
 
   @override
-  String get referralYouDetails => 'تفصیلات دیکھیں';
+  String get referralYouDetails => 'ØªÙØµÛŒÙ„Ø§Øª Ø¯ÛŒÚ©Ú¾ÛŒÚº';
 
   @override
-  String get referralPaywallTitle => 'مفت Pro مہینہ';
+  String get referralPaywallTitle => 'Ù…ÙØª Pro Ù…ÛÛŒÙ†Û';
 
   @override
   String get referralPaywallBody =>
-      '5 دستوں کو مہمان بنائیں جو سائن اپ کریں → 1 مہینہ مفت Pro';
+      '5 Ø¯Ø³ØªÙˆÚº Ú©Ùˆ Ù…ÛÙ…Ø§Ù† Ø¨Ù†Ø§Ø¦ÛŒÚº Ø¬Ùˆ Ø³Ø§Ø¦Ù† Ø§Ù¾ Ú©Ø±ÛŒÚº â†’ 1 Ù…ÛÛŒÙ†Û Ù…ÙØª Pro';
 
   @override
   String get referralPaywallProBody =>
-      'مہمان بناتے رہیں — مفت Pro مہینے جمع کریں';
+      'Ù…ÛÙ…Ø§Ù† Ø¨Ù†Ø§ØªÛ’ Ø±ÛÛŒÚº â€” Ù…ÙØª Pro Ù…ÛÛŒÙ†Û’ Ø¬Ù…Ø¹ Ú©Ø±ÛŒÚº';
 
   @override
   String referralPaywallProgress(Object count, Object milestone) {
@@ -1306,145 +1386,149 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get insightsLoadError =>
-      'آپ کی پیشرفت لو نہیں ہو سکی۔ بعد میں دوبارہ کوشش کریں۔';
+      'Ø¢Ù¾ Ú©ÛŒ Ù¾ÛŒØ´Ø±ÙØª Ù„Ùˆ Ù†ÛÛŒÚº ÛÙˆ Ø³Ú©ÛŒÛ” Ø¨Ø¹Ø¯ Ù…ÛŒÚº Ø¯ÙˆØ¨Ø§Ø±Û Ú©ÙˆØ´Ø´ Ú©Ø±ÛŒÚºÛ”';
 
   @override
-  String get insightsMetricCurrentChain => 'موجودہ زنجیر';
+  String get insightsMetricCurrentChain => 'Ù…ÙˆØ¬ÙˆØ¯Û Ø²Ù†Ø¬ÛŒØ±';
 
   @override
-  String get insightsMetricBestEver => 'اب تک کی بہترین';
+  String get insightsMetricBestEver => 'Ø§Ø¨ ØªÚ© Ú©ÛŒ Ø¨ÛØªØ±ÛŒÙ†';
 
   @override
-  String get insightsMetricTasksDone => 'کام مکمل';
+  String get insightsMetricTasksDone => 'Ú©Ø§Ù… Ù…Ú©Ù…Ù„';
 
   @override
-  String get insightsMetricPerfectDays => 'کامل دن';
+  String get insightsMetricPerfectDays => 'Ú©Ø§Ù…Ù„ Ø¯Ù†';
 
   @override
-  String get insightsMetricHabits => 'عادات';
+  String get insightsMetricHabits => 'Ø¹Ø§Ø¯Ø§Øª';
 
   @override
-  String get insightsDay => 'دن';
+  String get insightsDay => 'Ø¯Ù†';
 
   @override
-  String get insightsDays => 'دن';
+  String get insightsDays => 'Ø¯Ù†';
 
   @override
-  String get insightsSectionThisWeek => 'اس ہفتے';
+  String get insightsSectionThisWeek => 'Ø§Ø³ ÛÙØªÛ’';
 
   @override
-  String get insightsShareMyWeek => 'میرا ہفتہ شیئر کریں';
+  String get insightsShareMyWeek => 'Ù…ÛŒØ±Ø§ ÛÙØªÛ Ø´ÛŒØ¦Ø± Ú©Ø±ÛŒÚº';
 
   @override
-  String get insightsShareMyWeekPro => 'میرا ہفتہ شیئر کریں · Pro';
+  String get insightsShareMyWeekPro =>
+      'Ù…ÛŒØ±Ø§ ÛÙØªÛ Ø´ÛŒØ¦Ø± Ú©Ø±ÛŒÚº Â· Pro';
 
   @override
   String get insightsShareReceiptText =>
-      'میرا ہفتہ Daily Stitch پر۔ زنجیر نہ توڑیں۔';
+      'Ù…ÛŒØ±Ø§ ÛÙØªÛ Daily Stitch Ù¾Ø±Û” Ø²Ù†Ø¬ÛŒØ± Ù†Û ØªÙˆÚ‘ÛŒÚºÛ”';
 
   @override
   String insightsHistoryWindowTitle(int days) {
-    return 'آخری $days دن دکھا رہا ہے';
+    return 'Ø¢Ø®Ø±ÛŒ $days Ø¯Ù† Ø¯Ú©Ú¾Ø§ Ø±ÛØ§ ÛÛ’';
   }
 
   @override
-  String get insightsHistoryUpsell => 'Pro سے اپنا مکمل تاریخ کھولیں';
+  String get insightsHistoryUpsell =>
+      'Pro Ø³Û’ Ø§Ù¾Ù†Ø§ Ù…Ú©Ù…Ù„ ØªØ§Ø±ÛŒØ® Ú©Ú¾ÙˆÙ„ÛŒÚº';
 
   @override
-  String get referralScreenTitle => 'دوستوں کو مہمان بنائیں';
+  String get referralScreenTitle => 'Ø¯ÙˆØ³ØªÙˆÚº Ú©Ùˆ Ù…ÛÙ…Ø§Ù† Ø¨Ù†Ø§Ø¦ÛŒÚº';
 
   @override
-  String get referralLaunchGift => '-launch مہینے کا تحفہ';
+  String get referralLaunchGift => '-launch Ù…ÛÛŒÙ†Û’ Ú©Ø§ ØªØ­ÙÛ';
 
   @override
-  String get referralRewardTitle => '1 مہینہ مفت Pro حاصل کریں';
+  String get referralRewardTitle => '1 Ù…ÛÛŒÙ†Û Ù…ÙØª Pro Ø­Ø§ØµÙ„ Ú©Ø±ÛŒÚº';
 
   @override
   String get referralRewardBody =>
-      'اپنا کوڈ دوستوں کے ساتھ شیئر کریں۔ جب 5 لوگ اس کا استعمال کرتے ہوئے سائن اپ کریں، آپ کو 1 پورا مہینہ Daily Stitch Pro ملتا ہے۔';
+      'Ø§Ù¾Ù†Ø§ Ú©ÙˆÚˆ Ø¯ÙˆØ³ØªÙˆÚº Ú©Û’ Ø³Ø§ØªÚ¾ Ø´ÛŒØ¦Ø± Ú©Ø±ÛŒÚºÛ” Ø¬Ø¨ 5 Ù„ÙˆÚ¯ Ø§Ø³ Ú©Ø§ Ø§Ø³ØªØ¹Ù…Ø§Ù„ Ú©Ø±ØªÛ’ ÛÙˆØ¦Û’ Ø³Ø§Ø¦Ù† Ø§Ù¾ Ú©Ø±ÛŒÚºØŒ Ø¢Ù¾ Ú©Ùˆ 1 Ù¾ÙˆØ±Ø§ Ù…ÛÛŒÙ†Û Daily Stitch Pro Ù…Ù„ØªØ§ ÛÛ’Û”';
 
   @override
-  String get referralYourCode => 'آپ کا ریفرل کوڈ';
+  String get referralYourCode => 'Ø¢Ù¾ Ú©Ø§ Ø±ÛŒÙØ±Ù„ Ú©ÙˆÚˆ';
 
   @override
-  String get referralCopyCodeTooltip => 'کوڈ کاپی کریں';
+  String get referralCopyCodeTooltip => 'Ú©ÙˆÚˆ Ú©Ø§Ù¾ÛŒ Ú©Ø±ÛŒÚº';
 
   @override
-  String get referralCodeCopied => 'ریفرل کوڈ کاپی ہو گیا';
+  String get referralCodeCopied => 'Ø±ÛŒÙØ±Ù„ Ú©ÙˆÚˆ Ú©Ø§Ù¾ÛŒ ÛÙˆ Ú¯ÛŒØ§';
 
   @override
-  String get referralShareWithFriends => 'دوستوں کے ساتھ شیئر کریں';
+  String get referralShareWithFriends =>
+      'Ø¯ÙˆØ³ØªÙˆÚº Ú©Û’ Ø³Ø§ØªÚ¾ Ø´ÛŒØ¦Ø± Ú©Ø±ÛŒÚº';
 
   @override
   String get referralFooterHint =>
-      'دوست اکاؤنٹ بناتے وقت آپ کا کوڈ درج کرتے ہیں۔ ہر دوست آپ کے انعام کی طرف ایک بار شمار ہوتا ہے۔';
+      'Ø¯ÙˆØ³Øª Ø§Ú©Ø§Ø¤Ù†Ù¹ Ø¨Ù†Ø§ØªÛ’ ÙˆÙ‚Øª Ø¢Ù¾ Ú©Ø§ Ú©ÙˆÚˆ Ø¯Ø±Ø¬ Ú©Ø±ØªÛ’ ÛÛŒÚºÛ” ÛØ± Ø¯ÙˆØ³Øª Ø¢Ù¾ Ú©Û’ Ø§Ù†Ø¹Ø§Ù… Ú©ÛŒ Ø·Ø±Ù Ø§ÛŒÚ© Ø¨Ø§Ø± Ø´Ù…Ø§Ø± ÛÙˆØªØ§ ÛÛ’Û”';
 
   @override
   String referralFriendsJoinedOne(int count) {
-    return '$count دوست شامل ہو گیا';
+    return '$count Ø¯ÙˆØ³Øª Ø´Ø§Ù…Ù„ ÛÙˆ Ú¯ÛŒØ§';
   }
 
   @override
   String referralFriendsJoinedMany(int count) {
-    return '$count دوست شامل ہوئے';
+    return '$count Ø¯ÙˆØ³Øª Ø´Ø§Ù…Ù„ ÛÙˆØ¦Û’';
   }
 
   @override
   String referralRewardsEarnedOne(int count) {
-    return 'آپ نے $count مفت مہینہ Pro حاصل کیا ہے۔';
+    return 'Ø¢Ù¾ Ù†Û’ $count Ù…ÙØª Ù…ÛÛŒÙ†Û Pro Ø­Ø§ØµÙ„ Ú©ÛŒØ§ ÛÛ’Û”';
   }
 
   @override
   String referralRewardsEarnedMany(int count) {
-    return 'آپ نے $count مفت مہینے Pro حاصل کیے ہیں۔';
+    return 'Ø¢Ù¾ Ù†Û’ $count Ù…ÙØª Ù…ÛÛŒÙ†Û’ Pro Ø­Ø§ØµÙ„ Ú©ÛŒÛ’ ÛÛŒÚºÛ”';
   }
 
   @override
   String get referralRewardUnlocked =>
-      'انعام کھل گیا — اپنا مفت مہینہ Pro کا لطف اندوز ہوں!';
+      'Ø§Ù†Ø¹Ø§Ù… Ú©Ú¾Ù„ Ú¯ÛŒØ§ â€” Ø§Ù¾Ù†Ø§ Ù…ÙØª Ù…ÛÛŒÙ†Û Pro Ú©Ø§ Ù„Ø·Ù Ø§Ù†Ø¯ÙˆØ² ÛÙˆÚº!';
 
   @override
   String referralRemainingToUnlock(int remaining) {
-    return 'اپنا مفت مہینہ کھولنے کے لیے $remaining مزید';
+    return 'Ø§Ù¾Ù†Ø§ Ù…ÙØª Ù…ÛÛŒÙ†Û Ú©Ú¾ÙˆÙ„Ù†Û’ Ú©Û’ Ù„ÛŒÛ’ $remaining Ù…Ø²ÛŒØ¯';
   }
 
   @override
   String youProMemberSince(String month) {
-    return '$month سے Daily Stitch Pro ممبر';
+    return '$month Ø³Û’ Daily Stitch Pro Ù…Ù…Ø¨Ø±';
   }
 
   @override
-  String get youProPerksTitle => 'آپ کے Pro فوائد';
+  String get youProPerksTitle => 'Ø¢Ù¾ Ú©Û’ Pro ÙÙˆØ§Ø¦Ø¯';
 
   @override
-  String get manageProThankYou => 'Daily Stitch کی حمایت کا شکریہ';
+  String get manageProThankYou =>
+      'Daily Stitch Ú©ÛŒ Ø­Ù…Ø§ÛŒØª Ú©Ø§ Ø´Ú©Ø±ÛŒÛ';
 
   @override
   String get manageProReferralHint =>
-      'اپنا Pro بڑھانے کے لیے مزید دوستوں کو مہمان بنائیں';
+      'Ø§Ù¾Ù†Ø§ Pro Ø¨Ú‘Ú¾Ø§Ù†Û’ Ú©Û’ Ù„ÛŒÛ’ Ù…Ø²ÛŒØ¯ Ø¯ÙˆØ³ØªÙˆÚº Ú©Ùˆ Ù…ÛÙ…Ø§Ù† Ø¨Ù†Ø§Ø¦ÛŒÚº';
 
   @override
   String bootstrapConfigErrorBody(String detail) {
-    return '$detail\n\nleanspace/.env میں SUPABASE_URL اور SUPABASE_PUBLISHABLE_KEY (یا پرانی SUPABASE_ANON_KEY) شامل کریں، پھر دوبارہ بلڈ کریں:\n\nflutter build apk --debug';
+    return '$detail\n\nleanspace/.env Ù…ÛŒÚº API_BASE_URL Ø§ÙˆØ± GOOGLE_CLIENT_ID (ÛŒØ§ Ù¾Ø±Ø§Ù†ÛŒ GOOGLE_CLIENT_ID) Ø´Ø§Ù…Ù„ Ú©Ø±ÛŒÚºØŒ Ù¾Ú¾Ø± Ø¯ÙˆØ¨Ø§Ø±Û Ø¨Ù„Úˆ Ú©Ø±ÛŒÚº:\n\nflutter build apk --debug';
   }
 
   @override
-  String get languageSystemDefault => 'سسٹم ڈیفالٹ';
+  String get languageSystemDefault => 'Ø³Ø³Ù¹Ù… ÚˆÛŒÙØ§Ù„Ù¹';
 
   @override
   String get languageNameEn => 'English';
 
   @override
-  String get languageNameUr => 'اردو (Urdu)';
+  String get languageNameUr => 'Ø§Ø±Ø¯Ùˆ (Urdu)';
 
   @override
-  String get languageNameEs => 'Español';
+  String get languageNameEs => 'EspaÃ±ol';
 
   @override
-  String get languageNamePt => 'Português';
+  String get languageNamePt => 'PortuguÃªs';
 
   @override
-  String get languageNameFr => 'Français';
+  String get languageNameFr => 'FranÃ§ais';
 
   @override
   String get languageNameDe => 'Deutsch';
@@ -1453,1038 +1537,1091 @@ class AppLocalizationsUr extends AppLocalizations {
   String get languageNameIt => 'Italiano';
 
   @override
-  String get languageNameAr => 'العربية';
+  String get languageNameAr => 'Ø§Ù„Ø¹Ø±Ø¨ÙŠØ©';
 
   @override
-  String get languageNameTr => 'Türkçe';
+  String get languageNameTr => 'TÃ¼rkÃ§e';
 
   @override
   String get languageNameId => 'Bahasa Indonesia';
 
   @override
-  String get onboardingLanguageTitle => 'اپنی زبان منتخب کریں';
+  String get onboardingLanguageTitle => 'Ø§Ù¾Ù†ÛŒ Ø²Ø¨Ø§Ù† Ù…Ù†ØªØ®Ø¨ Ú©Ø±ÛŒÚº';
 
   @override
   String get onboardingLanguageBody =>
-      'وہ زبان چنیں جو آپ Daily Stitch میں استعمال کرنا چاہتے ہیں۔ آپ اسے کسی بھی وقت ترتیبات میں تبدیل کر سکتے ہیں۔';
+      'ÙˆÛ Ø²Ø¨Ø§Ù† Ú†Ù†ÛŒÚº Ø¬Ùˆ Ø¢Ù¾ Daily Stitch Ù…ÛŒÚº Ø§Ø³ØªØ¹Ù…Ø§Ù„ Ú©Ø±Ù†Ø§ Ú†Ø§ÛØªÛ’ ÛÛŒÚºÛ” Ø¢Ù¾ Ø§Ø³Û’ Ú©Ø³ÛŒ Ø¨Ú¾ÛŒ ÙˆÙ‚Øª ØªØ±ØªÛŒØ¨Ø§Øª Ù…ÛŒÚº ØªØ¨Ø¯ÛŒÙ„ Ú©Ø± Ø³Ú©ØªÛ’ ÛÛŒÚºÛ”';
 
   @override
-  String get onboardingLanguageContinue => 'جاری رکھیں';
+  String get onboardingLanguageContinue => 'Ø¬Ø§Ø±ÛŒ Ø±Ú©Ú¾ÛŒÚº';
 
   @override
   String get commonPro => 'PRO';
 
   @override
-  String get commonFriend => 'دوست';
+  String get commonFriend => 'Ø¯ÙˆØ³Øª';
 
   @override
-  String get settingsAppTheme => 'ایپ تھیم';
+  String get settingsAppTheme => 'Ø§ÛŒÙ¾ ØªÚ¾ÛŒÙ…';
 
   @override
-  String get settingsAppThemeSubtitle => 'اپنے ذاتی سینکچری کے رنگ منتخب کریں';
+  String get settingsAppThemeSubtitle =>
+      'Ø§Ù¾Ù†Û’ Ø°Ø§ØªÛŒ Ø³ÛŒÙ†Ú©Ú†Ø±ÛŒ Ú©Û’ Ø±Ù†Ú¯ Ù…Ù†ØªØ®Ø¨ Ú©Ø±ÛŒÚº';
 
   @override
-  String get settingsInviteFriendsTitle => 'دوستوں کو مہمان بنائیں · مفت Pro';
+  String get settingsInviteFriendsTitle =>
+      'Ø¯ÙˆØ³ØªÙˆÚº Ú©Ùˆ Ù…ÛÙ…Ø§Ù† Ø¨Ù†Ø§Ø¦ÛŒÚº Â· Ù…ÙØª Pro';
 
   @override
   String get settingsInviteFriendsSubtitle =>
-      '5 دوستوں کے شامل ہونے پر 1 مہینہ مفت';
+      '5 Ø¯ÙˆØ³ØªÙˆÚº Ú©Û’ Ø´Ø§Ù…Ù„ ÛÙˆÙ†Û’ Ù¾Ø± 1 Ù…ÛÛŒÙ†Û Ù…ÙØª';
 
   @override
-  String get themePickerTitle => 'ذاتی سینکچری';
+  String get themePickerTitle => 'Ø°Ø§ØªÛŒ Ø³ÛŒÙ†Ú©Ú†Ø±ÛŒ';
 
   @override
-  String get themePickerSubtitle => 'وہ رنگ پیلیٹ چنیں جو آپ کو سکون دے۔';
+  String get themePickerSubtitle =>
+      'ÙˆÛ Ø±Ù†Ú¯ Ù¾ÛŒÙ„ÛŒÙ¹ Ú†Ù†ÛŒÚº Ø¬Ùˆ Ø¢Ù¾ Ú©Ùˆ Ø³Ú©ÙˆÙ† Ø¯Û’Û”';
 
   @override
-  String get themeNameClassicBloom => 'کلاسک بلوم';
+  String get themeNameClassicBloom => 'Ú©Ù„Ø§Ø³Ú© Ø¨Ù„ÙˆÙ…';
 
   @override
-  String get themeNameSolarTerracotta => 'سولر ٹیرا کوٹا';
+  String get themeNameSolarTerracotta => 'Ø³ÙˆÙ„Ø± Ù¹ÛŒØ±Ø§ Ú©ÙˆÙ¹Ø§';
 
   @override
-  String get themeNameMidnightOasis => 'میڈنائٹ واسطہ';
+  String get themeNameMidnightOasis => 'Ù…ÛŒÚˆÙ†Ø§Ø¦Ù¹ ÙˆØ§Ø³Ø·Û';
 
   @override
-  String get themeNameLavenderDream => 'لیونڈر خواب';
+  String get themeNameLavenderDream => 'Ù„ÛŒÙˆÙ†ÚˆØ± Ø®ÙˆØ§Ø¨';
 
   @override
-  String get themeNameNordicFrost => 'نارڈک فراست';
+  String get themeNameNordicFrost => 'Ù†Ø§Ø±ÚˆÚ© ÙØ±Ø§Ø³Øª';
 
   @override
-  String get themeNameCyberpunkNeon => 'سائبر پنک نیون';
+  String get themeNameCyberpunkNeon => 'Ø³Ø§Ø¦Ø¨Ø± Ù¾Ù†Ú© Ù†ÛŒÙˆÙ†';
 
   @override
-  String get reminderTitle => 'یاد دہانیاں';
+  String get reminderTitle => 'ÛŒØ§Ø¯ Ø¯ÛØ§Ù†ÛŒØ§Úº';
 
   @override
   String get reminderBody =>
-      'آخری موقع رات 12 بجے سے پہلے آپ کو پنگ کرتا ہے اگر کام ابھی بھی کھلے ہوں۔';
+      'Ø¢Ø®Ø±ÛŒ Ù…ÙˆÙ‚Ø¹ Ø±Ø§Øª 12 Ø¨Ø¬Û’ Ø³Û’ Ù¾ÛÙ„Û’ Ø¢Ù¾ Ú©Ùˆ Ù¾Ù†Ú¯ Ú©Ø±ØªØ§ ÛÛ’ Ø§Ú¯Ø± Ú©Ø§Ù… Ø§Ø¨Ú¾ÛŒ Ø¨Ú¾ÛŒ Ú©Ú¾Ù„Û’ ÛÙˆÚºÛ”';
 
   @override
-  String get reminderFinalCall => 'آخری موقع';
+  String get reminderFinalCall => 'Ø¢Ø®Ø±ÛŒ Ù…ÙˆÙ‚Ø¹';
 
   @override
-  String get reminderEveningNudge => 'شام کی ترغیب';
+  String get reminderEveningNudge => 'Ø´Ø§Ù… Ú©ÛŒ ØªØ±ØºÛŒØ¨';
 
   @override
-  String get reminderChangeTime => 'وقت تبدیل کریں';
+  String get reminderChangeTime => 'ÙˆÙ‚Øª ØªØ¨Ø¯ÛŒÙ„ Ú©Ø±ÛŒÚº';
 
   @override
-  String get reminderSave => 'یاد دہانیاں محفوظ کریں';
+  String get reminderSave => 'ÛŒØ§Ø¯ Ø¯ÛØ§Ù†ÛŒØ§Úº Ù…Ø­ÙÙˆØ¸ Ú©Ø±ÛŒÚº';
 
   @override
-  String get notificationChannelReminders => 'Daily Stitch یاد دہانیاں';
+  String get notificationChannelReminders =>
+      'Daily Stitch ÛŒØ§Ø¯ Ø¯ÛØ§Ù†ÛŒØ§Úº';
 
   @override
   String get notificationChannelRemindersDesc =>
-      'شام کی ترغیب اور آخری موقع کی یاد دہانیاں';
+      'Ø´Ø§Ù… Ú©ÛŒ ØªØ±ØºÛŒØ¨ Ø§ÙˆØ± Ø¢Ø®Ø±ÛŒ Ù…ÙˆÙ‚Ø¹ Ú©ÛŒ ÛŒØ§Ø¯ Ø¯ÛØ§Ù†ÛŒØ§Úº';
 
   @override
-  String get notificationChannelAlarms => 'Daily Stitch کام کے الارم';
+  String get notificationChannelAlarms => 'Daily Stitch Ú©Ø§Ù… Ú©Û’ Ø§Ù„Ø§Ø±Ù…';
 
   @override
   String get notificationChannelAlarmsDesc =>
-      'کام کی یاد دہانیوں کے لیے بلند الارم';
+      'Ú©Ø§Ù… Ú©ÛŒ ÛŒØ§Ø¯ Ø¯ÛØ§Ù†ÛŒÙˆÚº Ú©Û’ Ù„ÛŒÛ’ Ø¨Ù„Ù†Ø¯ Ø§Ù„Ø§Ø±Ù…';
 
   @override
-  String get notificationTaskReminderTitle => 'کام کی یاد دہانی';
+  String get notificationTaskReminderTitle => 'Ú©Ø§Ù… Ú©ÛŒ ÛŒØ§Ø¯ Ø¯ÛØ§Ù†ÛŒ';
 
   @override
-  String get notificationFinalCallTitle => 'آخری موقع';
+  String get notificationFinalCallTitle => 'Ø¢Ø®Ø±ÛŒ Ù…ÙˆÙ‚Ø¹';
 
   @override
   String notificationFinalCallBody(int count) {
-    return 'آج ابھی بھی $count کام کھلے ہیں۔';
+    return 'Ø¢Ø¬ Ø§Ø¨Ú¾ÛŒ Ø¨Ú¾ÛŒ $count Ú©Ø§Ù… Ú©Ú¾Ù„Û’ ÛÛŒÚºÛ”';
   }
 
   @override
-  String get notificationEveningTitle => 'شام کی چیک ان';
+  String get notificationEveningTitle => 'Ø´Ø§Ù… Ú©ÛŒ Ú†ÛŒÚ© Ø§Ù†';
 
   @override
-  String get notificationEveningBody => 'آج آپ کا باغ کیسا بڑھا؟';
+  String get notificationEveningBody =>
+      'Ø¢Ø¬ Ø¢Ù¾ Ú©Ø§ Ø¨Ø§Øº Ú©ÛŒØ³Ø§ Ø¨Ú‘Ú¾Ø§ØŸ';
 
   @override
-  String get widgetSetupTitle => 'زنجیر ویجیٹ شامل کریں';
+  String get widgetSetupTitle => 'Ø²Ù†Ø¬ÛŒØ± ÙˆÛŒØ¬ÛŒÙ¹ Ø´Ø§Ù…Ù„ Ú©Ø±ÛŒÚº';
 
   @override
   String get widgetSetupBody =>
-      'اپنی اسٹریک ہوم اسکرین پر رکھیں — ایپ کھولنے کی ضرورت نہیں۔';
+      'Ø§Ù¾Ù†ÛŒ Ø§Ø³Ù¹Ø±ÛŒÚ© ÛÙˆÙ… Ø§Ø³Ú©Ø±ÛŒÙ† Ù¾Ø± Ø±Ú©Ú¾ÛŒÚº â€” Ø§ÛŒÙ¾ Ú©Ú¾ÙˆÙ„Ù†Û’ Ú©ÛŒ Ø¶Ø±ÙˆØ±Øª Ù†ÛÛŒÚºÛ”';
 
   @override
-  String get widgetSetupAdd => 'ہوم اسکرین پر شامل کریں';
+  String get widgetSetupAdd => 'ÛÙˆÙ… Ø§Ø³Ú©Ø±ÛŒÙ† Ù¾Ø± Ø´Ø§Ù…Ù„ Ú©Ø±ÛŒÚº';
 
   @override
-  String get widgetSetupStep1 => 'اپنی ہوم اسکرین پر دیر تک دبائیں';
+  String get widgetSetupStep1 =>
+      'Ø§Ù¾Ù†ÛŒ ÛÙˆÙ… Ø§Ø³Ú©Ø±ÛŒÙ† Ù¾Ø± Ø¯ÛŒØ± ØªÚ© Ø¯Ø¨Ø§Ø¦ÛŒÚº';
 
   @override
-  String get widgetSetupStep2 => 'ویجیٹس ٹیپ کریں';
+  String get widgetSetupStep2 => 'ÙˆÛŒØ¬ÛŒÙ¹Ø³ Ù¹ÛŒÙ¾ Ú©Ø±ÛŒÚº';
 
   @override
-  String get widgetSetupStep3 => 'Daily Stitch تلاش کریں اور اسے گھسیٹ لائیں';
+  String get widgetSetupStep3 =>
+      'Daily Stitch ØªÙ„Ø§Ø´ Ú©Ø±ÛŒÚº Ø§ÙˆØ± Ø§Ø³Û’ Ú¯Ú¾Ø³ÛŒÙ¹ Ù„Ø§Ø¦ÛŒÚº';
 
   @override
   String get widgetSetupPinSuccess =>
-      'ویجیٹ رکھنے کے لیے اپنی ہوم اسکرین چیک کریں۔';
+      'ÙˆÛŒØ¬ÛŒÙ¹ Ø±Ú©Ú¾Ù†Û’ Ú©Û’ Ù„ÛŒÛ’ Ø§Ù¾Ù†ÛŒ ÛÙˆÙ… Ø§Ø³Ú©Ø±ÛŒÙ† Ú†ÛŒÚ© Ú©Ø±ÛŒÚºÛ”';
 
   @override
   String get widgetSetupPinFallback =>
-      'آپ کا لانچر ایک ٹیپ ایڈ سپورٹ نہیں کر سکتا۔ نیچے دیے گئے دستی مراحل استعمال کریں۔';
+      'Ø¢Ù¾ Ú©Ø§ Ù„Ø§Ù†Ú†Ø± Ø§ÛŒÚ© Ù¹ÛŒÙ¾ Ø§ÛŒÚˆ Ø³Ù¾ÙˆØ±Ù¹ Ù†ÛÛŒÚº Ú©Ø± Ø³Ú©ØªØ§Û” Ù†ÛŒÚ†Û’ Ø¯ÛŒÛ’ Ú¯Ø¦Û’ Ø¯Ø³ØªÛŒ Ù…Ø±Ø§Ø­Ù„ Ø§Ø³ØªØ¹Ù…Ø§Ù„ Ú©Ø±ÛŒÚºÛ”';
 
   @override
-  String get paywallWelcomePro => 'Daily Stitch Pro میں خوش آمدید';
+  String get paywallWelcomePro => 'Daily Stitch Pro Ù…ÛŒÚº Ø®ÙˆØ´ Ø¢Ù…Ø¯ÛŒØ¯';
 
   @override
-  String get paywallSavePercent => '~16% بچائیں';
+  String get paywallSavePercent => '~16% Ø¨Ú†Ø§Ø¦ÛŒÚº';
 
   @override
-  String get paywallTermsTitle => 'سبسکرپشن کی شرائط';
+  String get paywallTermsTitle => 'Ø³Ø¨Ø³Ú©Ø±Ù¾Ø´Ù† Ú©ÛŒ Ø´Ø±Ø§Ø¦Ø·';
 
   @override
   String get paywallTermsBody =>
-      'بلنگ Google Play کے ذریعے سنبھالتی ہے۔ سبسکرپشنز خود بخود تجدید ہوتی ہیں جب تک آپ Play Store → سبسکرپشنز میں موجودہ مدت کے ختم ہونے سے کم از کم 24 گھنٹے پہلے منسوخ نہیں کرتے۔ آپ کسی بھی وقت اپنے Google Play اکاؤنٹ سے اپنی سبسکرپشن کا انتظام یا منسوخ کر سکتے ہیں۔\n\nایپ ان اسٹال کرنے سے آپ کی سبسکرپشن منسوخ نہیں ہوتی۔\n\nدکھائی قیمتیں آپ کی مقامی کرنسی میں ہیں اور علاقے کے مطابق مختلف ہو سکتی ہیں۔ ٹیکس لاگو ہو سکتے ہیں۔';
+      'Ø¨Ù„Ù†Ú¯ Google Play Ú©Û’ Ø°Ø±ÛŒØ¹Û’ Ø³Ù†Ø¨Ú¾Ø§Ù„ØªÛŒ ÛÛ’Û” Ø³Ø¨Ø³Ú©Ø±Ù¾Ø´Ù†Ø² Ø®ÙˆØ¯ Ø¨Ø®ÙˆØ¯ ØªØ¬Ø¯ÛŒØ¯ ÛÙˆØªÛŒ ÛÛŒÚº Ø¬Ø¨ ØªÚ© Ø¢Ù¾ Play Store â†’ Ø³Ø¨Ø³Ú©Ø±Ù¾Ø´Ù†Ø² Ù…ÛŒÚº Ù…ÙˆØ¬ÙˆØ¯Û Ù…Ø¯Øª Ú©Û’ Ø®ØªÙ… ÛÙˆÙ†Û’ Ø³Û’ Ú©Ù… Ø§Ø² Ú©Ù… 24 Ú¯Ú¾Ù†Ù¹Û’ Ù¾ÛÙ„Û’ Ù…Ù†Ø³ÙˆØ® Ù†ÛÛŒÚº Ú©Ø±ØªÛ’Û” Ø¢Ù¾ Ú©Ø³ÛŒ Ø¨Ú¾ÛŒ ÙˆÙ‚Øª Ø§Ù¾Ù†Û’ Google Play Ø§Ú©Ø§Ø¤Ù†Ù¹ Ø³Û’ Ø§Ù¾Ù†ÛŒ Ø³Ø¨Ø³Ú©Ø±Ù¾Ø´Ù† Ú©Ø§ Ø§Ù†ØªØ¸Ø§Ù… ÛŒØ§ Ù…Ù†Ø³ÙˆØ® Ú©Ø± Ø³Ú©ØªÛ’ ÛÛŒÚºÛ”\n\nØ§ÛŒÙ¾ Ø§Ù† Ø§Ø³Ù¹Ø§Ù„ Ú©Ø±Ù†Û’ Ø³Û’ Ø¢Ù¾ Ú©ÛŒ Ø³Ø¨Ø³Ú©Ø±Ù¾Ø´Ù† Ù…Ù†Ø³ÙˆØ® Ù†ÛÛŒÚº ÛÙˆØªÛŒÛ”\n\nØ¯Ú©Ú¾Ø§Ø¦ÛŒ Ù‚ÛŒÙ…ØªÛŒÚº Ø¢Ù¾ Ú©ÛŒ Ù…Ù‚Ø§Ù…ÛŒ Ú©Ø±Ù†Ø³ÛŒ Ù…ÛŒÚº ÛÛŒÚº Ø§ÙˆØ± Ø¹Ù„Ø§Ù‚Û’ Ú©Û’ Ù…Ø·Ø§Ø¨Ù‚ Ù…Ø®ØªÙ„Ù ÛÙˆ Ø³Ú©ØªÛŒ ÛÛŒÚºÛ” Ù¹ÛŒÚ©Ø³ Ù„Ø§Ú¯Ùˆ ÛÙˆ Ø³Ú©ØªÛ’ ÛÛŒÚºÛ”';
 
   @override
-  String get paywallPrivacyTitle => 'رازداری';
+  String get paywallPrivacyTitle => 'Ø±Ø§Ø²Ø¯Ø§Ø±ÛŒ';
 
   @override
   String get paywallPrivacyBody =>
-      'Daily Stitch آپ کے کام، عادات اور اسٹریک ڈیٹا کو ہمارے Supabase بیک اینڈ پر محفوظ کرتا ہے، جو آپ کے اکاؤنٹ سے جڑا ہوا ہے۔ ہم کبھی آپ کا ڈیٹا نہیں بیچتے۔\n\nسبسکرپشن خریداریاں Google Play کے ذریعے پروسیس ہوتی ہیں۔ ہم آپ کی Pro حیثیت کی تصدیق کے لیے Google سے ایک تصدیق شدہ خریداری ٹوکن ملتے ہیں۔ ہم آپ کی ادائیگی کی تفصیلات نہیں دیکھتے یا محفوظ کرتے۔\n\nآپ ترتیبات → اکاؤنٹ حذف کریں سے مکمل ڈیٹا ایکسپورٹ یا اکاؤنٹ حذف کی درخواست کر سکتے ہیں۔';
+      'Daily Stitch Ø¢Ù¾ Ú©Û’ Ú©Ø§Ù…ØŒ Ø¹Ø§Ø¯Ø§Øª Ø§ÙˆØ± Ø§Ø³Ù¹Ø±ÛŒÚ© ÚˆÛŒÙ¹Ø§ Ú©Ùˆ ÛÙ…Ø§Ø±Û’ Ù…Ø­ÙÙˆØ¸ Ø¨ÛŒÚ© Ø§ÛŒÙ†Úˆ Ù¾Ø± Ù…Ø­ÙÙˆØ¸ Ú©Ø±ØªØ§ ÛÛ’ØŒ Ø¬Ùˆ Ø¢Ù¾ Ú©Û’ Ø§Ú©Ø§Ø¤Ù†Ù¹ Ø³Û’ Ø¬Ú‘Ø§ ÛÙˆØ§ ÛÛ’Û” ÛÙ… Ú©Ø¨Ú¾ÛŒ Ø¢Ù¾ Ú©Ø§ ÚˆÛŒÙ¹Ø§ Ù†ÛÛŒÚº Ø¨ÛŒÚ†ØªÛ’Û”\n\nØ³Ø¨Ø³Ú©Ø±Ù¾Ø´Ù† Ø®Ø±ÛŒØ¯Ø§Ø±ÛŒØ§Úº Google Play Ú©Û’ Ø°Ø±ÛŒØ¹Û’ Ù¾Ø±ÙˆØ³ÛŒØ³ ÛÙˆØªÛŒ ÛÛŒÚºÛ” ÛÙ… Ø¢Ù¾ Ú©ÛŒ Pro Ø­ÛŒØ«ÛŒØª Ú©ÛŒ ØªØµØ¯ÛŒÙ‚ Ú©Û’ Ù„ÛŒÛ’ Google Ø³Û’ Ø§ÛŒÚ© ØªØµØ¯ÛŒÙ‚ Ø´Ø¯Û Ø®Ø±ÛŒØ¯Ø§Ø±ÛŒ Ù¹ÙˆÚ©Ù† Ù…Ù„ØªÛ’ ÛÛŒÚºÛ” ÛÙ… Ø¢Ù¾ Ú©ÛŒ Ø§Ø¯Ø§Ø¦ÛŒÚ¯ÛŒ Ú©ÛŒ ØªÙØµÛŒÙ„Ø§Øª Ù†ÛÛŒÚº Ø¯ÛŒÚ©Ú¾ØªÛ’ ÛŒØ§ Ù…Ø­ÙÙˆØ¸ Ú©Ø±ØªÛ’Û”\n\nØ¢Ù¾ ØªØ±ØªÛŒØ¨Ø§Øª â†’ Ø§Ú©Ø§Ø¤Ù†Ù¹ Ø­Ø°Ù Ú©Ø±ÛŒÚº Ø³Û’ Ù…Ú©Ù…Ù„ ÚˆÛŒÙ¹Ø§ Ø§ÛŒÚ©Ø³Ù¾ÙˆØ±Ù¹ ÛŒØ§ Ø§Ú©Ø§Ø¤Ù†Ù¹ Ø­Ø°Ù Ú©ÛŒ Ø¯Ø±Ø®ÙˆØ§Ø³Øª Ú©Ø± Ø³Ú©ØªÛ’ ÛÛŒÚºÛ”';
 
   @override
-  String get paywallCloseTooltip => 'بند کریں';
+  String get paywallCloseTooltip => 'Ø¨Ù†Ø¯ Ú©Ø±ÛŒÚº';
 
   @override
-  String get paywallFooterLinks => 'بحال کریں · شرائط · رازداری';
+  String get paywallFooterLinks =>
+      'Ø¨Ø­Ø§Ù„ Ú©Ø±ÛŒÚº Â· Ø´Ø±Ø§Ø¦Ø· Â· Ø±Ø§Ø²Ø¯Ø§Ø±ÛŒ';
 
   @override
-  String get manageProTitle => 'Pro سبسکرپشن';
+  String get manageProTitle => 'Pro Ø³Ø¨Ø³Ú©Ø±Ù¾Ø´Ù†';
 
   @override
-  String get manageProActive => 'فعال';
+  String get manageProActive => 'ÙØ¹Ø§Ù„';
 
   @override
-  String get manageProNotSubscribed => 'سبسکرائب نہیں';
+  String get manageProNotSubscribed => 'Ø³Ø¨Ø³Ú©Ø±Ø§Ø¦Ø¨ Ù†ÛÛŒÚº';
 
   @override
-  String get manageProFreeTier => 'مفت ٹائر';
+  String get manageProFreeTier => 'Ù…ÙØª Ù¹Ø§Ø¦Ø±';
 
   @override
   String manageProRenewsOn(String date) {
-    return '$date کو تجدید یا ختم ہوتا ہے۔';
+    return '$date Ú©Ùˆ ØªØ¬Ø¯ÛŒØ¯ ÛŒØ§ Ø®ØªÙ… ÛÙˆØªØ§ ÛÛ’Û”';
   }
 
   @override
   String get manageProFreeBody =>
-      'آپ Daily Stitch مفت استعمال کر رہے ہیں۔ مکمل نظام کھولنے کے لیے اپ گریڈ کریں۔';
+      'Ø¢Ù¾ Daily Stitch Ù…ÙØª Ø§Ø³ØªØ¹Ù…Ø§Ù„ Ú©Ø± Ø±ÛÛ’ ÛÛŒÚºÛ” Ù…Ú©Ù…Ù„ Ù†Ø¸Ø§Ù… Ú©Ú¾ÙˆÙ„Ù†Û’ Ú©Û’ Ù„ÛŒÛ’ Ø§Ù¾ Ú¯Ø±ÛŒÚˆ Ú©Ø±ÛŒÚºÛ”';
 
   @override
-  String get manageProSectionManage => 'انتظام';
+  String get manageProSectionManage => 'Ø§Ù†ØªØ¸Ø§Ù…';
 
   @override
-  String get manageProOpenPlay => 'Google Play سبسکرپشنز کھولیں';
+  String get manageProOpenPlay => 'Google Play Ø³Ø¨Ø³Ú©Ø±Ù¾Ø´Ù†Ø² Ú©Ú¾ÙˆÙ„ÛŒÚº';
 
   @override
   String get manageProOpenPlaySubtitlePro =>
-      'منسوخ کریں، پلان تبدیل کریں، یا ادائیگی کا طریقہ اپ ڈیٹ کریں';
+      'Ù…Ù†Ø³ÙˆØ® Ú©Ø±ÛŒÚºØŒ Ù¾Ù„Ø§Ù† ØªØ¨Ø¯ÛŒÙ„ Ú©Ø±ÛŒÚºØŒ ÛŒØ§ Ø§Ø¯Ø§Ø¦ÛŒÚ¯ÛŒ Ú©Ø§ Ø·Ø±ÛŒÙ‚Û Ø§Ù¾ ÚˆÛŒÙ¹ Ú©Ø±ÛŒÚº';
 
   @override
   String get manageProOpenPlaySubtitleFree =>
-      'اپنی موجودہ سبسکرپشن (اگر ہو) یہاں تلاش کریں';
+      'Ø§Ù¾Ù†ÛŒ Ù…ÙˆØ¬ÙˆØ¯Û Ø³Ø¨Ø³Ú©Ø±Ù¾Ø´Ù† (Ø§Ú¯Ø± ÛÙˆ) ÛŒÛØ§Úº ØªÙ„Ø§Ø´ Ú©Ø±ÛŒÚº';
 
   @override
-  String get manageProShareApp => 'Daily Stitch شیئر کریں';
+  String get manageProShareApp => 'Daily Stitch Ø´ÛŒØ¦Ø± Ú©Ø±ÛŒÚº';
 
   @override
-  String get manageProShareSubtitle => 'دوست کو زنجیر کے بارے میں بتائیں';
+  String get manageProShareSubtitle =>
+      'Ø¯ÙˆØ³Øª Ú©Ùˆ Ø²Ù†Ø¬ÛŒØ± Ú©Û’ Ø¨Ø§Ø±Û’ Ù…ÛŒÚº Ø¨ØªØ§Ø¦ÛŒÚº';
 
   @override
-  String get manageProSectionHelp => 'مدد درکار ہے؟';
+  String get manageProSectionHelp => 'Ù…Ø¯Ø¯ Ø¯Ø±Ú©Ø§Ø± ÛÛ’ØŸ';
 
   @override
-  String get manageProHelpTitle => 'مدد و معاونت';
+  String get manageProHelpTitle => 'Ù…Ø¯Ø¯ Ùˆ Ù…Ø¹Ø§ÙˆÙ†Øª';
 
   @override
-  String get manageProHelpSubtitle => 'سبسکرپشن FAQ، رابطہ، بگ رپورٹس';
+  String get manageProHelpSubtitle =>
+      'Ø³Ø¨Ø³Ú©Ø±Ù¾Ø´Ù† FAQØŒ Ø±Ø§Ø¨Ø·ÛØŒ Ø¨Ú¯ Ø±Ù¾ÙˆØ±Ù¹Ø³';
 
   @override
   String manageProBillingFooter(String version) {
-    return 'بلنگ Google Play کے ذریعے · $version';
+    return 'Ø¨Ù„Ù†Ú¯ Google Play Ú©Û’ Ø°Ø±ÛŒØ¹Û’ Â· $version';
   }
 
   @override
   String get manageProPlayInstructions =>
-      'Google Play Store ایپ کھولیں → اپنی پروفائل ٹیپ کریں → ادائیگیاں اور سبسکرپشنز → سبسکرپشنز۔';
+      'Google Play Store Ø§ÛŒÙ¾ Ú©Ú¾ÙˆÙ„ÛŒÚº â†’ Ø§Ù¾Ù†ÛŒ Ù¾Ø±ÙˆÙØ§Ø¦Ù„ Ù¹ÛŒÙ¾ Ú©Ø±ÛŒÚº â†’ Ø§Ø¯Ø§Ø¦ÛŒÚ¯ÛŒØ§Úº Ø§ÙˆØ± Ø³Ø¨Ø³Ú©Ø±Ù¾Ø´Ù†Ø² â†’ Ø³Ø¨Ø³Ú©Ø±Ù¾Ø´Ù†Ø²Û”';
 
   @override
-  String get addTaskGrowSomething => 'کچھ اگائیں';
+  String get addTaskGrowSomething => 'Ú©Ú†Ú¾ Ø§Ú¯Ø§Ø¦ÛŒÚº';
 
   @override
-  String get addTaskPlantSprout => 'پودا لگائیں';
+  String get addTaskPlantSprout => 'Ù¾ÙˆØ¯Ø§ Ù„Ú¯Ø§Ø¦ÛŒÚº';
 
   @override
-  String get addTaskIntentionName => 'نیت کا نام';
+  String get addTaskIntentionName => 'Ù†ÛŒØª Ú©Ø§ Ù†Ø§Ù…';
 
   @override
-  String get addTaskSproutName => 'پودے کا نام';
+  String get addTaskSproutName => 'Ù¾ÙˆØ¯Û’ Ú©Ø§ Ù†Ø§Ù…';
 
   @override
-  String get addTaskHintTask => 'مثلاً، صبح کا سورج نمسکار';
+  String get addTaskHintTask =>
+      'Ù…Ø«Ù„Ø§Ù‹ØŒ ØµØ¨Ø­ Ú©Ø§ Ø³ÙˆØ±Ø¬ Ù†Ù…Ø³Ú©Ø§Ø±';
 
   @override
-  String get addTaskHintHabit => 'مثلاً، صبح کا یوگا';
+  String get addTaskHintHabit => 'Ù…Ø«Ù„Ø§Ù‹ØŒ ØµØ¨Ø­ Ú©Ø§ ÛŒÙˆÚ¯Ø§';
 
   @override
-  String get addTaskWhen => 'کب؟';
+  String get addTaskWhen => 'Ú©Ø¨ØŸ';
 
   @override
-  String get addTaskPriority => 'ترجیح';
+  String get addTaskPriority => 'ØªØ±Ø¬ÛŒØ­';
 
   @override
-  String get addTaskNotes => 'نوٹس';
+  String get addTaskNotes => 'Ù†ÙˆÙ¹Ø³';
 
   @override
-  String get addTaskCadenceDaily => 'روزانہ';
+  String get addTaskCadenceDaily => 'Ø±ÙˆØ²Ø§Ù†Û';
 
   @override
-  String get addTaskCadenceWeekdays => 'ہفتے کے دن';
+  String get addTaskCadenceWeekdays => 'ÛÙØªÛ’ Ú©Û’ Ø¯Ù†';
 
   @override
-  String get addTaskCadence3x => 'ہفتے میں 3 بار';
+  String get addTaskCadence3x => 'ÛÙØªÛ’ Ù…ÛŒÚº 3 Ø¨Ø§Ø±';
 
   @override
-  String get addTaskCadenceWeekly => 'ہفتہ وار';
+  String get addTaskCadenceWeekly => 'ÛÙØªÛ ÙˆØ§Ø±';
 
   @override
-  String get addTaskPlantIntention => 'نیت لگائیں';
+  String get addTaskPlantIntention => 'Ù†ÛŒØª Ù„Ú¯Ø§Ø¦ÛŒÚº';
 
   @override
-  String get addTaskPlantSproutCta => 'پودا لگائیں';
+  String get addTaskPlantSproutCta => 'Ù¾ÙˆØ¯Ø§ Ù„Ú¯Ø§Ø¦ÛŒÚº';
 
   @override
-  String get addTaskPlanting => 'لگا رہے ہیں…';
+  String get addTaskPlanting => 'Ù„Ú¯Ø§ Ø±ÛÛ’ ÛÛŒÚºâ€¦';
 
   @override
-  String get addTaskNameIntentionError => 'اپنی نیت کا نام دیں';
+  String get addTaskNameIntentionError => 'Ø§Ù¾Ù†ÛŒ Ù†ÛŒØª Ú©Ø§ Ù†Ø§Ù… Ø¯ÛŒÚº';
 
   @override
-  String get addTaskNameSproutError => 'اپنے پودے کا نام دیں';
+  String get addTaskNameSproutError => 'Ø§Ù¾Ù†Û’ Ù¾ÙˆØ¯Û’ Ú©Ø§ Ù†Ø§Ù… Ø¯ÛŒÚº';
 
   @override
   String get addTaskNotesMigrationWarning =>
-      'کام محفوظ ہو گیا۔ نوٹس اور ترجیح کو تازہ ترین Supabase مائیگریشن کی ضرورت ہے — supabase/migrations/20260701000000_todos_notes_priority.sql چلائیں۔';
+      'Ú©Ø§Ù… Ù…Ø­ÙÙˆØ¸ ÛÙˆ Ú¯ÛŒØ§Û” Ù†ÙˆÙ¹Ø³ Ø§ÙˆØ± ØªØ±Ø¬ÛŒØ­ Ú©Ùˆ ØªØ§Ø²Û ØªØ±ÛŒÙ† Ø¨ÛŒÚ© Ø§ÛŒÙ†Úˆ Ù…Ø§Ø¦ÛŒÚ¯Ø±ÛŒØ´Ù† Ú©ÛŒ Ø¶Ø±ÙˆØ±Øª ÛÛ’Û”';
 
   @override
   String get addTaskNoSproutSlots =>
-      'کوئی خالی پودے کی جگہ نہیں — پہلے ایک کی دیکھ بھال کریں۔';
+      'Ú©ÙˆØ¦ÛŒ Ø®Ø§Ù„ÛŒ Ù¾ÙˆØ¯Û’ Ú©ÛŒ Ø¬Ú¯Û Ù†ÛÛŒÚº â€” Ù¾ÛÙ„Û’ Ø§ÛŒÚ© Ú©ÛŒ Ø¯ÛŒÚ©Ú¾ Ø¨Ú¾Ø§Ù„ Ú©Ø±ÛŒÚºÛ”';
 
   @override
   String get addTaskSaveSproutError =>
-      'پودا محفوظ نہیں ہو سکا — دوبارہ کوشش کریں۔';
+      'Ù¾ÙˆØ¯Ø§ Ù…Ø­ÙÙˆØ¸ Ù†ÛÛŒÚº ÛÙˆ Ø³Ú©Ø§ â€” Ø¯ÙˆØ¨Ø§Ø±Û Ú©ÙˆØ´Ø´ Ú©Ø±ÛŒÚºÛ”';
 
   @override
-  String get addTaskElementWater => 'پانی';
+  String get addTaskElementWater => 'Ù¾Ø§Ù†ÛŒ';
 
   @override
-  String get addTaskElementLight => 'روشنی';
+  String get addTaskElementLight => 'Ø±ÙˆØ´Ù†ÛŒ';
 
   @override
-  String get addTaskElementSoil => 'زمین';
+  String get addTaskElementSoil => 'Ø²Ù…ÛŒÙ†';
 
   @override
-  String get addTaskElementBreeze => 'ہوا';
+  String get addTaskElementBreeze => 'ÛÙˆØ§';
 
   @override
-  String get addTaskCadenceLabel => 'ترتیب';
+  String get addTaskCadenceLabel => 'ØªØ±ØªÛŒØ¨';
 
   @override
-  String get addTaskPreparationNotes => 'تیاری کے نوٹس';
+  String get addTaskPreparationNotes => 'ØªÛŒØ§Ø±ÛŒ Ú©Û’ Ù†ÙˆÙ¹Ø³';
 
   @override
-  String get addTaskTendingNotes => 'دیکھ بھال کے نوٹس';
+  String get addTaskTendingNotes => 'Ø¯ÛŒÚ©Ú¾ Ø¨Ú¾Ø§Ù„ Ú©Û’ Ù†ÙˆÙ¹Ø³';
 
   @override
-  String get addTaskNotesHintTask => 'اس کام کے لیے کوئی ٹول یا ذہنیت ٹپس؟';
+  String get addTaskNotesHintTask =>
+      'Ø§Ø³ Ú©Ø§Ù… Ú©Û’ Ù„ÛŒÛ’ Ú©ÙˆØ¦ÛŒ Ù¹ÙˆÙ„ ÛŒØ§ Ø°ÛÙ†ÛŒØª Ù¹Ù¾Ø³ØŸ';
 
   @override
-  String get addTaskNotesHintHabit => 'اس پودے کی دیکھ بھال کیسا لگتا ہے؟';
+  String get addTaskNotesHintHabit =>
+      'Ø§Ø³ Ù¾ÙˆØ¯Û’ Ú©ÛŒ Ø¯ÛŒÚ©Ú¾ Ø¨Ú¾Ø§Ù„ Ú©ÛŒØ³Ø§ Ù„Ú¯ØªØ§ ÛÛ’ØŸ';
 
   @override
-  String get addTaskChooseElement => 'عنصر منتخب کریں';
+  String get addTaskChooseElement => 'Ø¹Ù†ØµØ± Ù…Ù†ØªØ®Ø¨ Ú©Ø±ÛŒÚº';
 
   @override
-  String get addTaskElementsTooltip => 'عناصر کا کیا مطلب ہے؟';
+  String get addTaskElementsTooltip => 'Ø¹Ù†Ø§ØµØ± Ú©Ø§ Ú©ÛŒØ§ Ù…Ø·Ù„Ø¨ ÛÛ’ØŸ';
 
   @override
-  String get addTaskTaskSeed => 'کام کا بیج';
+  String get addTaskTaskSeed => 'Ú©Ø§Ù… Ú©Ø§ Ø¨ÛŒØ¬';
 
   @override
-  String get addTaskHabitSprout => 'عادت کا پودا';
+  String get addTaskHabitSprout => 'Ø¹Ø§Ø¯Øª Ú©Ø§ Ù¾ÙˆØ¯Ø§';
 
   @override
-  String get addTaskPickElement => 'صحح عنصر چنیں';
+  String get addTaskPickElement => 'ØµØ­Ø­ Ø¹Ù†ØµØ± Ú†Ù†ÛŒÚº';
 
   @override
   String get addTaskPickElementBody =>
-      'ہر عنصر مختلف قسم کی محنت سے ملتا ہے۔ نگہبان اس وقت مضبوط ہوتا ہے جب آپ صحح پانی دیتے ہیں۔';
+      'ÛØ± Ø¹Ù†ØµØ± Ù…Ø®ØªÙ„Ù Ù‚Ø³Ù… Ú©ÛŒ Ù…Ø­Ù†Øª Ø³Û’ Ù…Ù„ØªØ§ ÛÛ’Û” Ù†Ú¯ÛØ¨Ø§Ù† Ø§Ø³ ÙˆÙ‚Øª Ù…Ø¶Ø¨ÙˆØ· ÛÙˆØªØ§ ÛÛ’ Ø¬Ø¨ Ø¢Ù¾ ØµØ­Ø­ Ù¾Ø§Ù†ÛŒ Ø¯ÛŒØªÛ’ ÛÛŒÚºÛ”';
 
   @override
-  String get addTaskClearForm => 'فارم صاف کریں';
+  String get addTaskClearForm => 'ÙØ§Ø±Ù… ØµØ§Ù Ú©Ø±ÛŒÚº';
 
   @override
-  String get shareCouldNotShare => 'ابھی شیئر نہیں کر سکتے';
+  String get shareCouldNotShare => 'Ø§Ø¨Ú¾ÛŒ Ø´ÛŒØ¦Ø± Ù†ÛÛŒÚº Ú©Ø± Ø³Ú©ØªÛ’';
 
   @override
-  String get authReferralCodeLabel => 'ریفرل کوڈ (اختیاری)';
+  String get authReferralCodeLabel => 'Ø±ÛŒÙØ±Ù„ Ú©ÙˆÚˆ (Ø§Ø®ØªÛŒØ§Ø±ÛŒ)';
 
   @override
-  String get authReferralCodeHint => 'دوست کا کوڈ';
+  String get authReferralCodeHint => 'Ø¯ÙˆØ³Øª Ú©Ø§ Ú©ÙˆÚˆ';
 
   @override
-  String get youPerkHabitSlots => '5 عادت کی جگہیں';
+  String get youPerkHabitSlots => '5 Ø¹Ø§Ø¯Øª Ú©ÛŒ Ø¬Ú¯ÛÛŒÚº';
 
   @override
-  String get youPerkFullHistory => 'مکمل تاریخ';
+  String get youPerkFullHistory => 'Ù…Ú©Ù…Ù„ ØªØ§Ø±ÛŒØ®';
 
   @override
-  String get youPerkAllThemes => 'تمام تھیمز';
+  String get youPerkAllThemes => 'ØªÙ…Ø§Ù… ØªÚ¾ÛŒÙ…Ø²';
 
   @override
-  String get youPerkStreakFreezes => '2 اسٹریک فریز / ماہ';
+  String get youPerkStreakFreezes => '2 Ø§Ø³Ù¹Ø±ÛŒÚ© ÙØ±ÛŒØ² / Ù…Ø§Û';
 
   @override
-  String get youPerkLegendaryMedals => 'Legendary تمغے';
+  String get youPerkLegendaryMedals => 'Legendary ØªÙ…ØºÛ’';
 
   @override
   String get subscriptionPurchaseFailed =>
-      'خریداری ناکام ہوئی۔ دوبارہ کوشش کریں۔';
+      'Ø®Ø±ÛŒØ¯Ø§Ø±ÛŒ Ù†Ø§Ú©Ø§Ù… ÛÙˆØ¦ÛŒÛ” Ø¯ÙˆØ¨Ø§Ø±Û Ú©ÙˆØ´Ø´ Ú©Ø±ÛŒÚºÛ”';
 
   @override
   String get subscriptionUnavailable =>
-      'اس ڈیوائس پر ان ایپ خریداری دستیاب نہیں۔';
+      'Ø§Ø³ ÚˆÛŒÙˆØ§Ø¦Ø³ Ù¾Ø± Ø§Ù† Ø§ÛŒÙ¾ Ø®Ø±ÛŒØ¯Ø§Ø±ÛŒ Ø¯Ø³ØªÛŒØ§Ø¨ Ù†ÛÛŒÚºÛ”';
 
   @override
-  String get subscriptionLoadFailed => 'سبسکرپشن آپشنز لو نہیں ہو سکیں۔';
+  String get subscriptionLoadFailed =>
+      'Ø³Ø¨Ø³Ú©Ø±Ù¾Ø´Ù† Ø¢Ù¾Ø´Ù†Ø² Ù„Ùˆ Ù†ÛÛŒÚº ÛÙˆ Ø³Ú©ÛŒÚºÛ”';
 
   @override
   String get subscriptionVerifyFailed =>
-      'خریداری کی تصدیق نہیں ہو سکی۔ خریداری بحال کریں دوبارہ کوشش کریں۔';
+      'Ø®Ø±ÛŒØ¯Ø§Ø±ÛŒ Ú©ÛŒ ØªØµØ¯ÛŒÙ‚ Ù†ÛÛŒÚº ÛÙˆ Ø³Ú©ÛŒÛ” Ø®Ø±ÛŒØ¯Ø§Ø±ÛŒ Ø¨Ø­Ø§Ù„ Ú©Ø±ÛŒÚº Ø¯ÙˆØ¨Ø§Ø±Û Ú©ÙˆØ´Ø´ Ú©Ø±ÛŒÚºÛ”';
 
   @override
-  String get streakFreezeFailed => 'اسٹریک فریز استعمال نہیں ہو سکا۔';
+  String get streakFreezeFailed =>
+      'Ø§Ø³Ù¹Ø±ÛŒÚ© ÙØ±ÛŒØ² Ø§Ø³ØªØ¹Ù…Ø§Ù„ Ù†ÛÛŒÚº ÛÙˆ Ø³Ú©Ø§Û”';
 
   @override
   String get streakFreezeAlreadyUsed =>
-      'آپ نے اس مہینے اپنا فریز پہلے ہی استعمال کر لیا۔';
+      'Ø¢Ù¾ Ù†Û’ Ø§Ø³ Ù…ÛÛŒÙ†Û’ Ø§Ù¾Ù†Ø§ ÙØ±ÛŒØ² Ù¾ÛÙ„Û’ ÛÛŒ Ø§Ø³ØªØ¹Ù…Ø§Ù„ Ú©Ø± Ù„ÛŒØ§Û”';
 
   @override
   String get streakFreezeNoMissed =>
-      'اس دن فریز کرنے کے لیے کوئی چھوٹا ہوا کام نہیں۔';
+      'Ø§Ø³ Ø¯Ù† ÙØ±ÛŒØ² Ú©Ø±Ù†Û’ Ú©Û’ Ù„ÛŒÛ’ Ú©ÙˆØ¦ÛŒ Ú†Ú¾ÙˆÙ¹Ø§ ÛÙˆØ§ Ú©Ø§Ù… Ù†ÛÛŒÚºÛ”';
 
   @override
-  String get streakFreezeNotPastDay => 'آپ صرف گزشتہ دن فریز کر سکتے ہیں۔';
+  String get streakFreezeNotPastDay =>
+      'Ø¢Ù¾ ØµØ±Ù Ú¯Ø²Ø´ØªÛ Ø¯Ù† ÙØ±ÛŒØ² Ú©Ø± Ø³Ú©ØªÛ’ ÛÛŒÚºÛ”';
 
   @override
   String get myDayLoadError =>
-      'میرا دن لو نہیں ہو سکا۔ تازہ کرنے کے لیے کھینچیں۔';
+      'Ù…ÛŒØ±Ø§ Ø¯Ù† Ù„Ùˆ Ù†ÛÛŒÚº ÛÙˆ Ø³Ú©Ø§Û” ØªØ§Ø²Û Ú©Ø±Ù†Û’ Ú©Û’ Ù„ÛŒÛ’ Ú©Ú¾ÛŒÙ†Ú†ÛŒÚºÛ”';
 
   @override
-  String get myDayCapReached => 'آج کی 5 کام کی حد پوری ہو گئی۔';
+  String get myDayCapReached =>
+      'Ø¢Ø¬ Ú©ÛŒ 5 Ú©Ø§Ù… Ú©ÛŒ Ø­Ø¯ Ù¾ÙˆØ±ÛŒ ÛÙˆ Ú¯Ø¦ÛŒÛ”';
 
   @override
-  String get myDayRemoveTaskError => 'کام ہٹایا نہیں جا سکا۔';
+  String get myDayRemoveTaskError => 'Ú©Ø§Ù… ÛÙ¹Ø§ÛŒØ§ Ù†ÛÛŒÚº Ø¬Ø§ Ø³Ú©Ø§Û”';
 
   @override
-  String get shareCardTitle => 'اپنا ہفتہ شیئر کریں';
+  String get shareCardTitle => 'Ø§Ù¾Ù†Ø§ ÛÙØªÛ Ø´ÛŒØ¦Ø± Ú©Ø±ÛŒÚº';
 
   @override
-  String get shareCardCta => 'تصویر شیئر کریں';
+  String get shareCardCta => 'ØªØµÙˆÛŒØ± Ø´ÛŒØ¦Ø± Ú©Ø±ÛŒÚº';
 
   @override
-  String get medalTierSprout => 'پودا';
+  String get medalTierSprout => 'Ù¾ÙˆØ¯Ø§';
 
   @override
-  String get medalTierCommon => ' عام';
+  String get medalTierCommon => ' Ø¹Ø§Ù…';
 
   @override
-  String get medalTierRare => 'نایاب';
+  String get medalTierRare => 'Ù†Ø§ÛŒØ§Ø¨';
 
   @override
-  String get medalTierEpic => 'شاندار';
+  String get medalTierEpic => 'Ø´Ø§Ù†Ø¯Ø§Ø±';
 
   @override
   String get medalTierLegendary => ' Legendary';
 
   @override
-  String get medalCategoryTasks => 'کام';
+  String get medalCategoryTasks => 'Ú©Ø§Ù…';
 
   @override
-  String get medalCategoryHabits => 'عادات';
+  String get medalCategoryHabits => 'Ø¹Ø§Ø¯Ø§Øª';
 
   @override
-  String get medalCategoryStreaks => 'اسٹریکس';
+  String get medalCategoryStreaks => 'Ø§Ø³Ù¹Ø±ÛŒÚ©Ø³';
 
   @override
-  String get medalCategoryMastery => 'مہارت';
+  String get medalCategoryMastery => 'Ù…ÛØ§Ø±Øª';
 
   @override
-  String get medalsShareTooltip => 'کامیابیاں شیئر کریں';
+  String get medalsShareTooltip => 'Ú©Ø§Ù…ÛŒØ§Ø¨ÛŒØ§Úº Ø´ÛŒØ¦Ø± Ú©Ø±ÛŒÚº';
 
   @override
-  String get medalsFilterAll => 'سب';
+  String get medalsFilterAll => 'Ø³Ø¨';
 
   @override
-  String get addHabitTitleNew => 'نیا پودا لگائیں';
+  String get addHabitTitleNew => 'Ù†ÛŒØ§ Ù¾ÙˆØ¯Ø§ Ù„Ú¯Ø§Ø¦ÛŒÚº';
 
   @override
-  String get addHabitTitleEdit => 'اپنے پودے کی دیکھ بھال کریں';
+  String get addHabitTitleEdit =>
+      'Ø§Ù¾Ù†Û’ Ù¾ÙˆØ¯Û’ Ú©ÛŒ Ø¯ÛŒÚ©Ú¾ Ø¨Ú¾Ø§Ù„ Ú©Ø±ÛŒÚº';
 
   @override
-  String get addHabitLabelSproutName => 'پودے کا نام';
+  String get addHabitLabelSproutName => 'Ù¾ÙˆØ¯Û’ Ú©Ø§ Ù†Ø§Ù…';
 
   @override
-  String get shareCardAppBarTitle => 'شیئر کارڈ';
+  String get shareCardAppBarTitle => 'Ø´ÛŒØ¦Ø± Ú©Ø§Ø±Úˆ';
 
   @override
-  String get shareCardAppBarTitleMedal => 'اپنا تمغہ شیئر کریں';
+  String get shareCardAppBarTitleMedal => 'Ø§Ù¾Ù†Ø§ ØªÙ…ØºÛ Ø´ÛŒØ¦Ø± Ú©Ø±ÛŒÚº';
 
   @override
   String shareCardDescMedal(Object title) {
-    return 'اپنا نیا $title بیج دکھائیں';
+    return 'Ø§Ù¾Ù†Ø§ Ù†ÛŒØ§ $title Ø¨ÛŒØ¬ Ø¯Ú©Ú¾Ø§Ø¦ÛŒÚº';
   }
 
   @override
   String get shareCardBodyMedal =>
-      'کامیابی اپنے دائرے میں شیئر کریں۔ کارڈ PNG کے طور پر ایکسپورٹ ہوتا ہے اور کسی بھی سوشل ایپ کے لیے تیار ہوتا ہے۔';
+      'Ú©Ø§Ù…ÛŒØ§Ø¨ÛŒ Ø§Ù¾Ù†Û’ Ø¯Ø§Ø¦Ø±Û’ Ù…ÛŒÚº Ø´ÛŒØ¦Ø± Ú©Ø±ÛŒÚºÛ” Ú©Ø§Ø±Úˆ PNG Ú©Û’ Ø·ÙˆØ± Ù¾Ø± Ø§ÛŒÚ©Ø³Ù¾ÙˆØ±Ù¹ ÛÙˆØªØ§ ÛÛ’ Ø§ÙˆØ± Ú©Ø³ÛŒ Ø¨Ú¾ÛŒ Ø³ÙˆØ´Ù„ Ø§ÛŒÙ¾ Ú©Û’ Ù„ÛŒÛ’ ØªÛŒØ§Ø± ÛÙˆØªØ§ ÛÛ’Û”';
 
   @override
-  String get shareCardCtaPreparing => 'تیار ہو رہا ہے…';
+  String get shareCardCtaPreparing => 'ØªÛŒØ§Ø± ÛÙˆ Ø±ÛØ§ ÛÛ’â€¦';
 
   @override
-  String get shareCardMilestone => 'نئے سنگ میل کھلے';
+  String get shareCardMilestone => 'Ù†Ø¦Û’ Ø³Ù†Ú¯ Ù…ÛŒÙ„ Ú©Ú¾Ù„Û’';
 
   @override
-  String get shareCardStatChain => 'دن کی زنجیر';
+  String get shareCardStatChain => 'Ø¯Ù† Ú©ÛŒ Ø²Ù†Ø¬ÛŒØ±';
 
   @override
-  String get shareCardStatSprouts => 'پودے';
+  String get shareCardStatSprouts => 'Ù¾ÙˆØ¯Û’';
 
   @override
-  String get shareCardStatMedals => 'تمغے';
+  String get shareCardStatMedals => 'ØªÙ…ØºÛ’';
 
   @override
   String shareCardHeadlineStreak(int days) {
-    return '$days دن کی اسٹریک';
+    return '$days Ø¯Ù† Ú©ÛŒ Ø§Ø³Ù¹Ø±ÛŒÚ©';
   }
 
   @override
   String shareCardHeadlineMedals(int count) {
-    return '$count تمغے حاصل';
+    return '$count ØªÙ…ØºÛ’ Ø­Ø§ØµÙ„';
   }
 
   @override
-  String get shareCardHeadlineSproutGuardian => 'پودے کا نگہبان';
+  String get shareCardHeadlineSproutGuardian => 'Ù¾ÙˆØ¯Û’ Ú©Ø§ Ù†Ú¯ÛØ¨Ø§Ù†';
 
   @override
-  String get shareCardHeadlineFirstSeeds => 'پہلے بیج لگائے گئے';
+  String get shareCardHeadlineFirstSeeds => 'Ù¾ÛÙ„Û’ Ø¨ÛŒØ¬ Ù„Ú¯Ø§Ø¦Û’ Ú¯Ø¦Û’';
 
   @override
-  String get shareCardHeadlineGardenBegins => 'باغ شروع ہوتا ہے';
+  String get shareCardHeadlineGardenBegins => 'Ø¨Ø§Øº Ø´Ø±ÙˆØ¹ ÛÙˆØªØ§ ÛÛ’';
 
   @override
   String get shareCardSubheadMonth =>
-      'آپ نے کامیابی سے ایک پورا مہینہ اپنی عادات کی پرورش کی ہے۔';
+      'Ø¢Ù¾ Ù†Û’ Ú©Ø§Ù…ÛŒØ§Ø¨ÛŒ Ø³Û’ Ø§ÛŒÚ© Ù¾ÙˆØ±Ø§ Ù…ÛÛŒÙ†Û Ø§Ù¾Ù†ÛŒ Ø¹Ø§Ø¯Ø§Øª Ú©ÛŒ Ù¾Ø±ÙˆØ±Ø´ Ú©ÛŒ ÛÛ’Û”';
 
   @override
   String get shareCardSubheadWeek =>
-      'ایک پورا ہفتہ ترقی کا — آپ کا جنگل گھنا ہو رہا ہے۔';
+      'Ø§ÛŒÚ© Ù¾ÙˆØ±Ø§ ÛÙØªÛ ØªØ±Ù‚ÛŒ Ú©Ø§ â€” Ø¢Ù¾ Ú©Ø§ Ø¬Ù†Ú¯Ù„ Ú¯Ú¾Ù†Ø§ ÛÙˆ Ø±ÛØ§ ÛÛ’Û”';
 
   @override
   String get shareCardSubheadProgress =>
-      'آپ کا سینکچری اصلی پیشرفت دکھا رہا ہے۔ جاری رکھیں۔';
+      'Ø¢Ù¾ Ú©Ø§ Ø³ÛŒÙ†Ú©Ú†Ø±ÛŒ Ø§ØµÙ„ÛŒ Ù¾ÛŒØ´Ø±ÙØª Ø¯Ú©Ú¾Ø§ Ø±ÛØ§ ÛÛ’Û” Ø¬Ø§Ø±ÛŒ Ø±Ú©Ú¾ÛŒÚºÛ”';
 
   @override
   String get shareCardSubheadSprouts =>
-      'آپ کے پہلے پودے جڑیں پکڑ رہے ہیں۔ انہیں روزانہ پانی دیں۔';
+      'Ø¢Ù¾ Ú©Û’ Ù¾ÛÙ„Û’ Ù¾ÙˆØ¯Û’ Ø¬Ú‘ÛŒÚº Ù¾Ú©Ú‘ Ø±ÛÛ’ ÛÛŒÚºÛ” Ø§Ù†ÛÛŒÚº Ø±ÙˆØ²Ø§Ù†Û Ù¾Ø§Ù†ÛŒ Ø¯ÛŒÚºÛ”';
 
   @override
   String get shareCardSubheadFirstSeeds =>
-      'آپ کے پہلے بیج زمین میں ہیں۔ انہیں کھلتا دیکھیں۔';
+      'Ø¢Ù¾ Ú©Û’ Ù¾ÛÙ„Û’ Ø¨ÛŒØ¬ Ø²Ù…ÛŒÙ† Ù…ÛŒÚº ÛÛŒÚºÛ” Ø§Ù†ÛÛŒÚº Ú©Ú¾Ù„ØªØ§ Ø¯ÛŒÚ©Ú¾ÛŒÚºÛ”';
 
   @override
   String get shareCardSubheadFallback =>
-      'ہر جنگل ایک چھوٹے سے انتخاب سے شروع ہوتا ہے۔';
+      'ÛØ± Ø¬Ù†Ú¯Ù„ Ø§ÛŒÚ© Ú†Ú¾ÙˆÙ¹Û’ Ø³Û’ Ø§Ù†ØªØ®Ø§Ø¨ Ø³Û’ Ø´Ø±ÙˆØ¹ ÛÙˆØªØ§ ÛÛ’Û”';
 
   @override
   String shareAppText(String url) {
-    return 'Daily Stitch — روزانہ پانچ چھوٹے بیج، ایک نہ ٹوٹنے والی زنجیر۔ اپنا بیج لگائیں۔\n\n$url';
+    return 'Daily Stitch â€” Ø±ÙˆØ²Ø§Ù†Û Ù¾Ø§Ù†Ú† Ú†Ú¾ÙˆÙ¹Û’ Ø¨ÛŒØ¬ØŒ Ø§ÛŒÚ© Ù†Û Ù¹ÙˆÙ¹Ù†Û’ ÙˆØ§Ù„ÛŒ Ø²Ù†Ø¬ÛŒØ±Û” Ø§Ù¾Ù†Ø§ Ø¨ÛŒØ¬ Ù„Ú¯Ø§Ø¦ÛŒÚºÛ”\n\n$url';
   }
 
   @override
-  String get shareAppSubject => 'Daily Stitch آزمائیں';
+  String get shareAppSubject => 'Daily Stitch Ø¢Ø²Ù…Ø§Ø¦ÛŒÚº';
 
   @override
   String shareAppReferralText(String code, String url) {
-    return 'میں Daily Stitch پر اپنی روزانہ زنجیر بنا رہا ہوں — میرے ریفرل کوڈ $code سے میرے ساتھ شامل ہوں اور ہم دونوں بڑھیں۔\n\n$url';
+    return 'Ù…ÛŒÚº Daily Stitch Ù¾Ø± Ø§Ù¾Ù†ÛŒ Ø±ÙˆØ²Ø§Ù†Û Ø²Ù†Ø¬ÛŒØ± Ø¨Ù†Ø§ Ø±ÛØ§ ÛÙˆÚº â€” Ù…ÛŒØ±Û’ Ø±ÛŒÙØ±Ù„ Ú©ÙˆÚˆ $code Ø³Û’ Ù…ÛŒØ±Û’ Ø³Ø§ØªÚ¾ Ø´Ø§Ù…Ù„ ÛÙˆÚº Ø§ÙˆØ± ÛÙ… Ø¯ÙˆÙ†ÙˆÚº Ø¨Ú‘Ú¾ÛŒÚºÛ”\n\n$url';
   }
 
   @override
-  String get shareAppReferralSubject => 'Daily Stitch پر میرے ساتھ شامل ہوں';
+  String get shareAppReferralSubject =>
+      'Daily Stitch Ù¾Ø± Ù…ÛŒØ±Û’ Ø³Ø§ØªÚ¾ Ø´Ø§Ù…Ù„ ÛÙˆÚº';
 
   @override
   String shareCardShareTextProgress(String year) {
-    return 'میری Daily Stitch پیشرفت — Daily Stitch پر $year۔';
+    return 'Ù…ÛŒØ±ÛŒ Daily Stitch Ù¾ÛŒØ´Ø±ÙØª â€” Daily Stitch Ù¾Ø± $yearÛ”';
   }
 
   @override
   String shareCardShareTextMedal(String title, String subtitle) {
-    return 'میں نے ابھی Daily Stitch پر \"$title\" تمغہ کھولا ہے۔ $subtitle';
+    return 'Ù…ÛŒÚº Ù†Û’ Ø§Ø¨Ú¾ÛŒ Daily Stitch Ù¾Ø± \"$title\" ØªÙ…ØºÛ Ú©Ú¾ÙˆÙ„Ø§ ÛÛ’Û” $subtitle';
   }
 
   @override
-  String get insightsReceiptTasksDone => 'کام مکمل';
+  String get insightsReceiptTasksDone => 'Ú©Ø§Ù… Ù…Ú©Ù…Ù„';
 
   @override
-  String get insightsReceiptPerfectDays => 'کامل دن';
+  String get insightsReceiptPerfectDays => 'Ú©Ø§Ù…Ù„ Ø¯Ù†';
 
   @override
-  String get insightsReceiptCompletion => 'تکمیل';
+  String get insightsReceiptCompletion => 'ØªÚ©Ù…ÛŒÙ„';
 
   @override
   String insightsReceiptDate(String date) {
-    return 'ہفتہ $date';
+    return 'ÛÙØªÛ $date';
   }
 
   @override
-  String get insightsReceiptFooter => 'زنجیر نہ توڑیں۔';
+  String get insightsReceiptFooter => 'Ø²Ù†Ø¬ÛŒØ± Ù†Û ØªÙˆÚ‘ÛŒÚºÛ”';
 
   @override
-  String get elementLabelWater => 'پانی';
+  String get elementLabelWater => 'Ù¾Ø§Ù†ÛŒ';
 
   @override
-  String get elementLabelLight => 'روشنی';
+  String get elementLabelLight => 'Ø±ÙˆØ´Ù†ÛŒ';
 
   @override
-  String get elementLabelSoil => 'زمین';
+  String get elementLabelSoil => 'Ø²Ù…ÛŒÙ†';
 
   @override
-  String get elementLabelBreeze => 'ہوا';
+  String get elementLabelBreeze => 'ÛÙˆØ§';
 
   @override
   String get elementTaglineWater =>
-      'بحال کریں۔ آب پاشی، آرام، جذباتی دیکھ بھال — کچھ بھی جو کنویں کو دوبارہ بھرتا ہے۔';
+      'Ø¨Ø­Ø§Ù„ Ú©Ø±ÛŒÚºÛ” Ø¢Ø¨ Ù¾Ø§Ø´ÛŒØŒ Ø¢Ø±Ø§Ù…ØŒ Ø¬Ø°Ø¨Ø§ØªÛŒ Ø¯ÛŒÚ©Ú¾ Ø¨Ú¾Ø§Ù„ â€” Ú©Ú†Ú¾ Ø¨Ú¾ÛŒ Ø¬Ùˆ Ú©Ù†ÙˆÛŒÚº Ú©Ùˆ Ø¯ÙˆØ¨Ø§Ø±Û Ø¨Ú¾Ø±ØªØ§ ÛÛ’Û”';
 
   @override
   String get elementTaglineLight =>
-      'جاگیں۔ صبح کی روشنی، توجہ کے بلاکس، مطالعہ، مراقبہ — توانائی اور وضاحت۔';
+      'Ø¬Ø§Ú¯ÛŒÚºÛ” ØµØ¨Ø­ Ú©ÛŒ Ø±ÙˆØ´Ù†ÛŒØŒ ØªÙˆØ¬Û Ú©Û’ Ø¨Ù„Ø§Ú©Ø³ØŒ Ù…Ø·Ø§Ù„Ø¹ÛØŒ Ù…Ø±Ø§Ù‚Ø¨Û â€” ØªÙˆØ§Ù†Ø§Ø¦ÛŒ Ø§ÙˆØ± ÙˆØ¶Ø§Ø­ØªÛ”';
 
   @override
   String get elementTaglineSoil =>
-      'بنیاد۔ مطالعہ، جرنلنگ، گہری محنت — سست جڑیں جو طویل مزاحمت بناتی ہیں۔';
+      'Ø¨Ù†ÛŒØ§Ø¯Û” Ù…Ø·Ø§Ù„Ø¹ÛØŒ Ø¬Ø±Ù†Ù„Ù†Ú¯ØŒ Ú¯ÛØ±ÛŒ Ù…Ø­Ù†Øª â€” Ø³Ø³Øª Ø¬Ú‘ÛŒÚº Ø¬Ùˆ Ø·ÙˆÛŒÙ„ Ù…Ø²Ø§Ø­Ù…Øª Ø¨Ù†Ø§ØªÛŒ ÛÛŒÚºÛ”';
 
   @override
   String get elementTaglineBreeze =>
-      'حرکت۔ پیدل، دوڑ، سانس کی مشق — ہلکی، متحرک توانائی جو ذہن صاف کرتی ہے۔';
+      'Ø­Ø±Ú©ØªÛ” Ù¾ÛŒØ¯Ù„ØŒ Ø¯ÙˆÚ‘ØŒ Ø³Ø§Ù†Ø³ Ú©ÛŒ Ù…Ø´Ù‚ â€” ÛÙ„Ú©ÛŒØŒ Ù…ØªØ­Ø±Ú© ØªÙˆØ§Ù†Ø§Ø¦ÛŒ Ø¬Ùˆ Ø°ÛÙ† ØµØ§Ù Ú©Ø±ØªÛŒ ÛÛ’Û”';
 
   @override
-  String get elementWhenWater => 'جب آپ تھکے ہوئے یا تحلیل محسوس کریں۔';
+  String get elementWhenWater =>
+      'Ø¬Ø¨ Ø¢Ù¾ ØªÚ¾Ú©Û’ ÛÙˆØ¦Û’ ÛŒØ§ ØªØ­Ù„ÛŒÙ„ Ù…Ø­Ø³ÙˆØ³ Ú©Ø±ÛŒÚºÛ”';
 
   @override
-  String get elementWhenLight => 'جب آپ کو دن کا واضح آغاز چاہیے۔';
+  String get elementWhenLight =>
+      'Ø¬Ø¨ Ø¢Ù¾ Ú©Ùˆ Ø¯Ù† Ú©Ø§ ÙˆØ§Ø¶Ø­ Ø¢ØºØ§Ø² Ú†Ø§ÛÛŒÛ’Û”';
 
   @override
   String get elementWhenSoil =>
-      'جب کام سست ہے لیکن قابل ہے (مطالعہ، حرفت، دیکھ بھال)۔';
+      'Ø¬Ø¨ Ú©Ø§Ù… Ø³Ø³Øª ÛÛ’ Ù„ÛŒÚ©Ù† Ù‚Ø§Ø¨Ù„ ÛÛ’ (Ù…Ø·Ø§Ù„Ø¹ÛØŒ Ø­Ø±ÙØªØŒ Ø¯ÛŒÚ©Ú¾ Ø¨Ú¾Ø§Ù„)Û”';
 
   @override
   String get elementWhenBreeze =>
-      'جب آپ کا جسم (یا ذہن) کو حرکت اور سانس کی ضرورت ہو۔';
+      'Ø¬Ø¨ Ø¢Ù¾ Ú©Ø§ Ø¬Ø³Ù… (ÛŒØ§ Ø°ÛÙ†) Ú©Ùˆ Ø­Ø±Ú©Øª Ø§ÙˆØ± Ø³Ø§Ù†Ø³ Ú©ÛŒ Ø¶Ø±ÙˆØ±Øª ÛÙˆÛ”';
 
   @override
-  String get bloomTierMastery => 'مہارت';
+  String get bloomTierMastery => 'Ù…ÛØ§Ø±Øª';
 
   @override
-  String get bloomTierStrong => 'مضبوط';
+  String get bloomTierStrong => 'Ù…Ø¶Ø¨ÙˆØ·';
 
   @override
-  String get bloomTierGrowing => 'بڑھ رہا ہے';
+  String get bloomTierGrowing => 'Ø¨Ú‘Ú¾ Ø±ÛØ§ ÛÛ’';
 
   @override
-  String get bloomTierSprouting => 'پھوت دار ہو رہا ہے';
+  String get bloomTierSprouting => 'Ù¾Ú¾ÙˆØª Ø¯Ø§Ø± ÛÙˆ Ø±ÛØ§ ÛÛ’';
 
   @override
-  String get bloomTierLocked => 'بند';
+  String get bloomTierLocked => 'Ø¨Ù†Ø¯';
 
   @override
   String habitBloomSubtitle(int count, String element) {
-    return '$count دن کی اسٹریک · $element';
+    return '$count Ø¯Ù† Ú©ÛŒ Ø§Ø³Ù¹Ø±ÛŒÚ© Â· $element';
   }
 
   @override
-  String get medal_id_first_spark => 'پہلا شعلہ';
+  String get medal_id_first_spark => 'Ù¾ÛÙ„Ø§ Ø´Ø¹Ù„Û';
 
   @override
-  String get medal_sub_first_spark => 'آپ نے مچھ جلایا۔';
+  String get medal_sub_first_spark => 'Ø¢Ù¾ Ù†Û’ Ù…Ú†Ú¾ Ø¬Ù„Ø§ÛŒØ§Û”';
 
   @override
   String get medal_desc_first_spark =>
-      'اپنا پہلا کام مکمل کریں۔ ہر زنجیر یہاں سے شروع ہوتی ہے۔';
+      'Ø§Ù¾Ù†Ø§ Ù¾ÛÙ„Ø§ Ú©Ø§Ù… Ù…Ú©Ù…Ù„ Ú©Ø±ÛŒÚºÛ” ÛØ± Ø²Ù†Ø¬ÛŒØ± ÛŒÛØ§Úº Ø³Û’ Ø´Ø±ÙˆØ¹ ÛÙˆØªÛŒ ÛÛ’Û”';
 
   @override
-  String get medal_id_triple_seed => 'تین بیج';
+  String get medal_id_triple_seed => 'ØªÛŒÙ† Ø¨ÛŒØ¬';
 
   @override
-  String get medal_sub_triple_seed => 'تین زمین میں۔';
+  String get medal_sub_triple_seed => 'ØªÛŒÙ† Ø²Ù…ÛŒÙ† Ù…ÛŒÚºÛ”';
 
   @override
-  String get medal_desc_triple_seed => 'کل میں 3 کام مکمل کریں۔';
+  String get medal_desc_triple_seed =>
+      'Ú©Ù„ Ù…ÛŒÚº 3 Ú©Ø§Ù… Ù…Ú©Ù…Ù„ Ú©Ø±ÛŒÚºÛ”';
 
   @override
-  String get medal_id_dozen_sower => 'بارہ بیج لگانے والا';
+  String get medal_id_dozen_sower => 'Ø¨Ø§Ø±Û Ø¨ÛŒØ¬ Ù„Ú¯Ø§Ù†Û’ ÙˆØ§Ù„Ø§';
 
   @override
-  String get medal_sub_dozen_sower => 'بارہ کا میدان۔';
+  String get medal_sub_dozen_sower => 'Ø¨Ø§Ø±Û Ú©Ø§ Ù…ÛŒØ¯Ø§Ù†Û”';
 
   @override
-  String get medal_desc_dozen_sower => 'کل میں 12 کام مکمل کریں۔';
+  String get medal_desc_dozen_sower =>
+      'Ú©Ù„ Ù…ÛŒÚº 12 Ú©Ø§Ù… Ù…Ú©Ù…Ù„ Ú©Ø±ÛŒÚºÛ”';
 
   @override
-  String get medal_id_quarter_century => 'چوتھائی صدی';
+  String get medal_id_quarter_century => 'Ú†ÙˆØªÚ¾Ø§Ø¦ÛŒ ØµØ¯ÛŒ';
 
   @override
-  String get medal_sub_quarter_century => 'ہاں کہنے کا موسم۔';
+  String get medal_sub_quarter_century => 'ÛØ§Úº Ú©ÛÙ†Û’ Ú©Ø§ Ù…ÙˆØ³Ù…Û”';
 
   @override
-  String get medal_desc_quarter_century => 'کل میں 25 کام مکمل کریں۔';
+  String get medal_desc_quarter_century =>
+      'Ú©Ù„ Ù…ÛŒÚº 25 Ú©Ø§Ù… Ù…Ú©Ù…Ù„ Ú©Ø±ÛŒÚºÛ”';
 
   @override
-  String get medal_id_productivity_titan => 'پیداواریت کا عظیم';
+  String get medal_id_productivity_titan => 'Ù¾ÛŒØ¯Ø§ÙˆØ§Ø±ÛŒØª Ú©Ø§ Ø¹Ø¸ÛŒÙ…';
 
   @override
-  String get medal_sub_productivity_titan => 'مسلسلت جمع ہوتی ہے۔';
+  String get medal_sub_productivity_titan =>
+      'Ù…Ø³Ù„Ø³Ù„Øª Ø¬Ù…Ø¹ ÛÙˆØªÛŒ ÛÛ’Û”';
 
   @override
   String get medal_desc_productivity_titan =>
-      '50 کام مکمل کریں — آپ نے اصلی رفتار بنا لی ہے۔';
+      '50 Ú©Ø§Ù… Ù…Ú©Ù…Ù„ Ú©Ø±ÛŒÚº â€” Ø¢Ù¾ Ù†Û’ Ø§ØµÙ„ÛŒ Ø±ÙØªØ§Ø± Ø¨Ù†Ø§ Ù„ÛŒ ÛÛ’Û”';
 
   @override
-  String get medal_id_century_planter => 'صدی کا لگانے والا';
+  String get medal_id_century_planter => 'ØµØ¯ÛŒ Ú©Ø§ Ù„Ú¯Ø§Ù†Û’ ÙˆØ§Ù„Ø§';
 
   @override
-  String get medal_sub_century_planter => 'اپنا ایک جنگل۔';
+  String get medal_sub_century_planter => 'Ø§Ù¾Ù†Ø§ Ø§ÛŒÚ© Ø¬Ù†Ú¯Ù„Û”';
 
   @override
   String get medal_desc_century_planter =>
-      '100 کام مکمل کریں۔ آپ صارفین کے ٹاپ 5% میں ہیں۔';
+      '100 Ú©Ø§Ù… Ù…Ú©Ù…Ù„ Ú©Ø±ÛŒÚºÛ” Ø¢Ù¾ ØµØ§Ø±ÙÛŒÙ† Ú©Û’ Ù¹Ø§Ù¾ 5% Ù…ÛŒÚº ÛÛŒÚºÛ”';
 
   @override
-  String get medal_id_clean_day => 'صاف تختی';
+  String get medal_id_clean_day => 'ØµØ§Ù ØªØ®ØªÛŒ';
 
   @override
-  String get medal_sub_clean_day => 'ایک بھی پودا نہیں۔';
+  String get medal_sub_clean_day => 'Ø§ÛŒÚ© Ø¨Ú¾ÛŒ Ù¾ÙˆØ¯Ø§ Ù†ÛÛŒÚºÛ”';
 
   @override
-  String get medal_desc_clean_day => 'ایک دن میں لگائے گئے ہر کام مکمل کریں۔';
+  String get medal_desc_clean_day =>
+      'Ø§ÛŒÚ© Ø¯Ù† Ù…ÛŒÚº Ù„Ú¯Ø§Ø¦Û’ Ú¯Ø¦Û’ ÛØ± Ú©Ø§Ù… Ù…Ú©Ù…Ù„ Ú©Ø±ÛŒÚºÛ”';
 
   @override
-  String get medal_id_triple_perfect => 'تین کامل';
+  String get medal_id_triple_perfect => 'ØªÛŒÙ† Ú©Ø§Ù…Ù„';
 
   @override
-  String get medal_sub_triple_perfect => 'تین بے عیب دوڑ۔';
+  String get medal_sub_triple_perfect => 'ØªÛŒÙ† Ø¨Û’ Ø¹ÛŒØ¨ Ø¯ÙˆÚ‘Û”';
 
   @override
-  String get medal_desc_triple_perfect => '3 کامل دن حاصل کریں۔';
+  String get medal_desc_triple_perfect => '3 Ú©Ø§Ù…Ù„ Ø¯Ù† Ø­Ø§ØµÙ„ Ú©Ø±ÛŒÚºÛ”';
 
   @override
-  String get medal_id_perfect_week => 'کامل ہفتہ';
+  String get medal_id_perfect_week => 'Ú©Ø§Ù…Ù„ ÛÙØªÛ';
 
   @override
-  String get medal_sub_perfect_week => 'سات دن نہ ٹوٹے۔';
+  String get medal_sub_perfect_week => 'Ø³Ø§Øª Ø¯Ù† Ù†Û Ù¹ÙˆÙ¹Û’Û”';
 
   @override
-  String get medal_desc_perfect_week => 'مسلسل 7 کامل دن۔';
+  String get medal_desc_perfect_week => 'Ù…Ø³Ù„Ø³Ù„ 7 Ú©Ø§Ù…Ù„ Ø¯Ù†Û”';
 
   @override
-  String get medal_id_two_week_chain => 'پندرہ دن کی طاقت';
+  String get medal_id_two_week_chain => 'Ù¾Ù†Ø¯Ø±Û Ø¯Ù† Ú©ÛŒ Ø·Ø§Ù‚Øª';
 
   @override
-  String get medal_sub_two_week_chain => 'دو ہفتے آگ میں۔';
+  String get medal_sub_two_week_chain => 'Ø¯Ùˆ ÛÙØªÛ’ Ø¢Ú¯ Ù…ÛŒÚºÛ”';
 
   @override
-  String get medal_desc_two_week_chain => '14 دن کی زنجیر برقرار رکھیں۔';
+  String get medal_desc_two_week_chain =>
+      '14 Ø¯Ù† Ú©ÛŒ Ø²Ù†Ø¬ÛŒØ± Ø¨Ø±Ù‚Ø±Ø§Ø± Ø±Ú©Ú¾ÛŒÚºÛ”';
 
   @override
-  String get medal_id_iron_chain => 'لوہے کی زنجیر';
+  String get medal_id_iron_chain => 'Ù„ÙˆÛÛ’ Ú©ÛŒ Ø²Ù†Ø¬ÛŒØ±';
 
   @override
-  String get medal_sub_iron_chain => '30 لنکس دھرے گئے۔';
+  String get medal_sub_iron_chain => '30 Ù„Ù†Ú©Ø³ Ø¯Ú¾Ø±Û’ Ú¯Ø¦Û’Û”';
 
   @override
-  String get medal_desc_iron_chain => '30 دن کی زنجیر۔ سب سے مشکل کام کا تمغہ۔';
+  String get medal_desc_iron_chain =>
+      '30 Ø¯Ù† Ú©ÛŒ Ø²Ù†Ø¬ÛŒØ±Û” Ø³Ø¨ Ø³Û’ Ù…Ø´Ú©Ù„ Ú©Ø§Ù… Ú©Ø§ ØªÙ…ØºÛÛ”';
 
   @override
-  String get medal_id_quarterly_chain => 'سہ ماہی زنجیر';
+  String get medal_id_quarterly_chain => 'Ø³Û Ù…Ø§ÛÛŒ Ø²Ù†Ø¬ÛŒØ±';
 
   @override
-  String get medal_sub_quarterly_chain => 'ایک موسم، نہ ٹوٹا۔';
+  String get medal_sub_quarterly_chain => 'Ø§ÛŒÚ© Ù…ÙˆØ³Ù…ØŒ Ù†Û Ù¹ÙˆÙ¹Ø§Û”';
 
   @override
-  String get medal_desc_quarterly_chain => '90 دن کی زنجیر۔ Legendary حیثیت۔';
+  String get medal_desc_quarterly_chain =>
+      '90 Ø¯Ù† Ú©ÛŒ Ø²Ù†Ø¬ÛŒØ±Û” Legendary Ø­ÛŒØ«ÛŒØªÛ”';
 
   @override
-  String get medal_id_vital_priority => 'ضروری شعلہ';
+  String get medal_id_vital_priority => 'Ø¶Ø±ÙˆØ±ÛŒ Ø´Ø¹Ù„Û';
 
   @override
-  String get medal_sub_vital_priority => 'آپ نے مشکل چنے۔';
+  String get medal_sub_vital_priority => 'Ø¢Ù¾ Ù†Û’ Ù…Ø´Ú©Ù„ Ú†Ù†Û’Û”';
 
   @override
-  String get medal_desc_vital_priority => 'ضروری ترجیح والے 5 کام مکمل کریں۔';
+  String get medal_desc_vital_priority =>
+      'Ø¶Ø±ÙˆØ±ÛŒ ØªØ±Ø¬ÛŒØ­ ÙˆØ§Ù„Û’ 5 Ú©Ø§Ù… Ù…Ú©Ù…Ù„ Ú©Ø±ÛŒÚºÛ”';
 
   @override
-  String get medal_id_spark_priority => 'شعلے پر قابو';
+  String get medal_id_spark_priority => 'Ø´Ø¹Ù„Û’ Ù¾Ø± Ù‚Ø§Ø¨Ùˆ';
 
   @override
-  String get medal_sub_spark_priority => 'تیز کامیابیاں جمع ہوتی ہیں۔';
+  String get medal_sub_spark_priority =>
+      'ØªÛŒØ² Ú©Ø§Ù…ÛŒØ§Ø¨ÛŒØ§Úº Ø¬Ù…Ø¹ ÛÙˆØªÛŒ ÛÛŒÚºÛ”';
 
   @override
-  String get medal_desc_spark_priority => 'Spark ترجیح والے 5 کام مکمل کریں۔';
+  String get medal_desc_spark_priority =>
+      'Spark ØªØ±Ø¬ÛŒØ­ ÙˆØ§Ù„Û’ 5 Ú©Ø§Ù… Ù…Ú©Ù…Ù„ Ú©Ø±ÛŒÚºÛ”';
 
   @override
-  String get medal_id_note_taker => 'نوٹ لینے والا';
+  String get medal_id_note_taker => 'Ù†ÙˆÙ¹ Ù„ÛŒÙ†Û’ ÙˆØ§Ù„Ø§';
 
   @override
-  String get medal_sub_note_taker => 'کاغذ پر منصوبے ذہن سے بہتر ہیں۔';
+  String get medal_sub_note_taker =>
+      'Ú©Ø§ØºØ° Ù¾Ø± Ù…Ù†ØµÙˆØ¨Û’ Ø°ÛÙ† Ø³Û’ Ø¨ÛØªØ± ÛÛŒÚºÛ”';
 
   @override
   String get medal_desc_note_taker =>
-      '5 مختلف کاموں میں تیاری کے نوٹس شامل کریں۔';
+      '5 Ù…Ø®ØªÙ„Ù Ú©Ø§Ù…ÙˆÚº Ù…ÛŒÚº ØªÛŒØ§Ø±ÛŒ Ú©Û’ Ù†ÙˆÙ¹Ø³ Ø´Ø§Ù…Ù„ Ú©Ø±ÛŒÚºÛ”';
 
   @override
-  String get medal_id_left_behind_rescuer => 'پیچھے چھوڑے گاؤں کا بچانے والا';
+  String get medal_id_left_behind_rescuer =>
+      'Ù¾ÛŒÚ†Ú¾Û’ Ú†Ú¾ÙˆÚ‘Û’ Ú¯Ø§Ø¤Úº Ú©Ø§ Ø¨Ú†Ø§Ù†Û’ ÙˆØ§Ù„Ø§';
 
   @override
-  String get medal_sub_left_behind_rescuer => 'کوئی کام پیچھے نہ چھوڑا۔';
+  String get medal_sub_left_behind_rescuer =>
+      'Ú©ÙˆØ¦ÛŒ Ú©Ø§Ù… Ù¾ÛŒÚ†Ú¾Û’ Ù†Û Ú†Ú¾ÙˆÚ‘Ø§Û”';
 
   @override
   String get medal_desc_left_behind_rescuer =>
-      'اگلے دن 3 چھوٹے ہوئے کام دوبارہ شامل کریں۔';
+      'Ø§Ú¯Ù„Û’ Ø¯Ù† 3 Ú†Ú¾ÙˆÙ¹Û’ ÛÙˆØ¦Û’ Ú©Ø§Ù… Ø¯ÙˆØ¨Ø§Ø±Û Ø´Ø§Ù…Ù„ Ú©Ø±ÛŒÚºÛ”';
 
   @override
-  String get medal_id_first_sprout => 'پہلا پودا';
+  String get medal_id_first_sprout => 'Ù¾ÛÙ„Ø§ Ù¾ÙˆØ¯Ø§';
 
   @override
-  String get medal_sub_first_sprout => 'نئی روزانہ رسم۔';
+  String get medal_sub_first_sprout => 'Ù†Ø¦ÛŒ Ø±ÙˆØ²Ø§Ù†Û Ø±Ø³Ù…Û”';
 
   @override
-  String get medal_desc_first_sprout => 'اپنی پہلی عادت لگائیں۔';
+  String get medal_desc_first_sprout =>
+      'Ø§Ù¾Ù†ÛŒ Ù¾ÛÙ„ÛŒ Ø¹Ø§Ø¯Øª Ù„Ú¯Ø§Ø¦ÛŒÚºÛ”';
 
   @override
-  String get medal_id_trio_sprout => 'تین پودے';
+  String get medal_id_trio_sprout => 'ØªÛŒÙ† Ù¾ÙˆØ¯Û’';
 
   @override
-  String get medal_sub_trio_sprout => 'ایک چھوٹا نظام۔';
+  String get medal_sub_trio_sprout => 'Ø§ÛŒÚ© Ú†Ú¾ÙˆÙ¹Ø§ Ù†Ø¸Ø§Ù…Û”';
 
   @override
-  String get medal_desc_trio_sprout => '3 مختلف عادات لگائیں۔';
+  String get medal_desc_trio_sprout => '3 Ù…Ø®ØªÙ„Ù Ø¹Ø§Ø¯Ø§Øª Ù„Ú¯Ø§Ø¦ÛŒÚºÛ”';
 
   @override
-  String get medal_id_week_of_growth => 'ترقی کا ہفتہ';
+  String get medal_id_week_of_growth => 'ØªØ±Ù‚ÛŒ Ú©Ø§ ÛÙØªÛ';
 
   @override
-  String get medal_sub_week_of_growth => 'جڑیں پکڑنا شروع کرتی ہیں۔';
+  String get medal_sub_week_of_growth =>
+      'Ø¬Ú‘ÛŒÚº Ù¾Ú©Ú‘Ù†Ø§ Ø´Ø±ÙˆØ¹ Ú©Ø±ØªÛŒ ÛÛŒÚºÛ”';
 
   @override
   String get medal_desc_week_of_growth =>
-      '7 دن تک روزانہ عادت کی دیکھ بھال کریں۔';
+      '7 Ø¯Ù† ØªÚ© Ø±ÙˆØ²Ø§Ù†Û Ø¹Ø§Ø¯Øª Ú©ÛŒ Ø¯ÛŒÚ©Ú¾ Ø¨Ú¾Ø§Ù„ Ú©Ø±ÛŒÚºÛ”';
 
   @override
-  String get medal_id_fortnight_floret => 'پندرہ دن کا پھول';
+  String get medal_id_fortnight_floret => 'Ù¾Ù†Ø¯Ø±Û Ø¯Ù† Ú©Ø§ Ù¾Ú¾ÙˆÙ„';
 
   @override
-  String get medal_sub_fortnight_floret => 'مکمل پھول۔';
+  String get medal_sub_fortnight_floret => 'Ù…Ú©Ù…Ù„ Ù¾Ú¾ÙˆÙ„Û”';
 
   @override
-  String get medal_desc_fortnight_floret => '14 دن کی عادت کی اسٹریک۔';
+  String get medal_desc_fortnight_floret =>
+      '14 Ø¯Ù† Ú©ÛŒ Ø¹Ø§Ø¯Øª Ú©ÛŒ Ø§Ø³Ù¹Ø±ÛŒÚ©Û”';
 
   @override
-  String get medal_id_rooted_master => 'جڑیں پکڑنے والا ماہر';
+  String get medal_id_rooted_master => 'Ø¬Ú‘ÛŒÚº Ù¾Ú©Ú‘Ù†Û’ ÙˆØ§Ù„Ø§ Ù…Ø§ÛØ±';
 
   @override
-  String get medal_sub_rooted_master => 'گہری جڑیں، گہری طاقت۔';
+  String get medal_sub_rooted_master =>
+      'Ú¯ÛØ±ÛŒ Ø¬Ú‘ÛŒÚºØŒ Ú¯ÛØ±ÛŒ Ø·Ø§Ù‚ØªÛ”';
 
   @override
-  String get medal_desc_rooted_master => '30 دن کی عادت کی اسٹریک۔';
+  String get medal_desc_rooted_master =>
+      '30 Ø¯Ù† Ú©ÛŒ Ø¹Ø§Ø¯Øª Ú©ÛŒ Ø§Ø³Ù¹Ø±ÛŒÚ©Û”';
 
   @override
-  String get medal_id_half_year_bloom => 'آدھے سال کا پھول';
+  String get medal_id_half_year_bloom => 'Ø¢Ø¯Ú¾Û’ Ø³Ø§Ù„ Ú©Ø§ Ù¾Ú¾ÙˆÙ„';
 
   @override
-  String get medal_sub_half_year_bloom => 'اب باغ مستقل ہے۔';
+  String get medal_sub_half_year_bloom => 'Ø§Ø¨ Ø¨Ø§Øº Ù…Ø³ØªÙ‚Ù„ ÛÛ’Û”';
 
   @override
-  String get medal_desc_half_year_bloom => 'ایک عادت کو 180 دن برقرار رکھیں۔';
+  String get medal_desc_half_year_bloom =>
+      'Ø§ÛŒÚ© Ø¹Ø§Ø¯Øª Ú©Ùˆ 180 Ø¯Ù† Ø¨Ø±Ù‚Ø±Ø§Ø± Ø±Ú©Ú¾ÛŒÚºÛ”';
 
   @override
-  String get medal_id_garden_keeper => 'باغ کا رکھوالا';
+  String get medal_id_garden_keeper => 'Ø¨Ø§Øº Ú©Ø§ Ø±Ú©Ú¾ÙˆØ§Ù„Ø§';
 
   @override
-  String get medal_sub_garden_keeper => 'متنوعیت، ساتھ میں۔';
+  String get medal_sub_garden_keeper => 'Ù…ØªÙ†ÙˆØ¹ÛŒØªØŒ Ø³Ø§ØªÚ¾ Ù…ÛŒÚºÛ”';
 
   @override
-  String get medal_desc_garden_keeper => 'ایک ساتھ 4 مختلف عادات بڑھائیں۔';
+  String get medal_desc_garden_keeper =>
+      'Ø§ÛŒÚ© Ø³Ø§ØªÚ¾ 4 Ù…Ø®ØªÙ„Ù Ø¹Ø§Ø¯Ø§Øª Ø¨Ú‘Ú¾Ø§Ø¦ÛŒÚºÛ”';
 
   @override
-  String get medal_id_hydration_hero => 'آب پاشی کا ہیرو';
+  String get medal_id_hydration_hero => 'Ø¢Ø¨ Ù¾Ø§Ø´ÛŒ Ú©Ø§ ÛÛŒØ±Ùˆ';
 
   @override
-  String get medal_sub_hydration_hero => 'آپ کنویں کو بھرتے ہیں۔';
+  String get medal_sub_hydration_hero =>
+      'Ø¢Ù¾ Ú©Ù†ÙˆÛŒÚº Ú©Ùˆ Ø¨Ú¾Ø±ØªÛ’ ÛÛŒÚºÛ”';
 
   @override
   String get medal_desc_hydration_hero =>
-      'آب پاشی کی عادت لگائیں (پانی/مشروب)۔';
+      'Ø¢Ø¨ Ù¾Ø§Ø´ÛŒ Ú©ÛŒ Ø¹Ø§Ø¯Øª Ù„Ú¯Ø§Ø¦ÛŒÚº (Ù¾Ø§Ù†ÛŒ/Ù…Ø´Ø±ÙˆØ¨)Û”';
 
   @override
-  String get medal_id_mindful_mover => 'mindful حرکت کرنے والا';
+  String get medal_id_mindful_mover => 'mindful Ø­Ø±Ú©Øª Ú©Ø±Ù†Û’ ÙˆØ§Ù„Ø§';
 
   @override
-  String get medal_sub_mindful_mover => 'جسم یاد رکھتا ہے۔';
+  String get medal_sub_mindful_mover => 'Ø¬Ø³Ù… ÛŒØ§Ø¯ Ø±Ú©Ú¾ØªØ§ ÛÛ’Û”';
 
   @override
-  String get medal_desc_mindful_mover => 'حرکت کی عادت لگائیں (یوگا/پیدل/دوڑ)۔';
+  String get medal_desc_mindful_mover =>
+      'Ø­Ø±Ú©Øª Ú©ÛŒ Ø¹Ø§Ø¯Øª Ù„Ú¯Ø§Ø¦ÛŒÚº (ÛŒÙˆÚ¯Ø§/Ù¾ÛŒØ¯Ù„/Ø¯ÙˆÚ‘)Û”';
 
   @override
-  String get medal_id_devoted_keeper => 'وقف رکھوالا';
+  String get medal_id_devoted_keeper => 'ÙˆÙ‚Ù Ø±Ú©Ú¾ÙˆØ§Ù„Ø§';
 
   @override
-  String get medal_sub_devoted_keeper => 'ساٹھ دن، ایک مشق۔';
+  String get medal_sub_devoted_keeper => 'Ø³Ø§Ù¹Ú¾ Ø¯Ù†ØŒ Ø§ÛŒÚ© Ù…Ø´Ù‚Û”';
 
   @override
   String get medal_desc_devoted_keeper =>
-      'ایک عادت کو 60 دن تک روزانہ دیکھ بھال کریں۔';
+      'Ø§ÛŒÚ© Ø¹Ø§Ø¯Øª Ú©Ùˆ 60 Ø¯Ù† ØªÚ© Ø±ÙˆØ²Ø§Ù†Û Ø¯ÛŒÚ©Ú¾ Ø¨Ú¾Ø§Ù„ Ú©Ø±ÛŒÚºÛ”';
 
   @override
-  String get medal_id_tending_notes => 'دیکھ بھال کے نوٹس';
+  String get medal_id_tending_notes => 'Ø¯ÛŒÚ©Ú¾ Ø¨Ú¾Ø§Ù„ Ú©Û’ Ù†ÙˆÙ¹Ø³';
 
   @override
-  String get medal_sub_tending_notes => 'جاتے جاتے غور کریں۔';
+  String get medal_sub_tending_notes => 'Ø¬Ø§ØªÛ’ Ø¬Ø§ØªÛ’ ØºÙˆØ± Ú©Ø±ÛŒÚºÛ”';
 
   @override
   String get medal_desc_tending_notes =>
-      '3 عادات میں دیکھ بھال کے نوٹس شامل کریں۔';
+      '3 Ø¹Ø§Ø¯Ø§Øª Ù…ÛŒÚº Ø¯ÛŒÚ©Ú¾ Ø¨Ú¾Ø§Ù„ Ú©Û’ Ù†ÙˆÙ¹Ø³ Ø´Ø§Ù…Ù„ Ú©Ø±ÛŒÚºÛ”';
 
   @override
-  String get medalTierTaglineSprout => 'پہلا بیج لگائیں';
+  String get medalTierTaglineSprout => 'Ù¾ÛÙ„Ø§ Ø¨ÛŒØ¬ Ù„Ú¯Ø§Ø¦ÛŒÚº';
 
   @override
-  String get medalTierTaglineCommon => 'عادت بنا رہے ہیں';
+  String get medalTierTaglineCommon => 'Ø¹Ø§Ø¯Øª Ø¨Ù†Ø§ Ø±ÛÛ’ ÛÛŒÚº';
 
   @override
-  String get medalTierTaglineRare => 'اصلی رفتار دکھا رہے ہیں';
+  String get medalTierTaglineRare =>
+      'Ø§ØµÙ„ÛŒ Ø±ÙØªØ§Ø± Ø¯Ú©Ú¾Ø§ Ø±ÛÛ’ ÛÛŒÚº';
 
   @override
-  String get medalTierTaglineEpic => 'آپ قدرت کی طاقت ہیں';
+  String get medalTierTaglineEpic => 'Ø¢Ù¾ Ù‚Ø¯Ø±Øª Ú©ÛŒ Ø·Ø§Ù‚Øª ÛÛŒÚº';
 
   @override
-  String get medalTierTaglineLegendary => '神话ی، تقریباً کوئی یہاں نہیں پہنچتا';
+  String get medalTierTaglineLegendary =>
+      'ç¥žè¯ÛŒØŒ ØªÙ‚Ø±ÛŒØ¨Ø§Ù‹ Ú©ÙˆØ¦ÛŒ ÛŒÛØ§Úº Ù†ÛÛŒÚº Ù¾ÛÙ†Ú†ØªØ§';
 
   @override
   String get guardianHeadlineNoTasks =>
-      'آج کی زمین تازہ ہے۔\nاپنا پہلا بیج لگائیں\nاور اسے بڑھتا دیکھیں۔';
+      'Ø¢Ø¬ Ú©ÛŒ Ø²Ù…ÛŒÙ† ØªØ§Ø²Û ÛÛ’Û”\nØ§Ù¾Ù†Ø§ Ù¾ÛÙ„Ø§ Ø¨ÛŒØ¬ Ù„Ú¯Ø§Ø¦ÛŒÚº\nØ§ÙˆØ± Ø§Ø³Û’ Ø¨Ú‘Ú¾ØªØ§ Ø¯ÛŒÚ©Ú¾ÛŒÚºÛ”';
 
   @override
   String get guardianHeadlineAllDone =>
-      'آپ نے جو ہر بیج لگایا\nوہ پھول میں ہے۔\nآرام کریں، نگہبان — آپ نے کما لیا۔';
+      'Ø¢Ù¾ Ù†Û’ Ø¬Ùˆ ÛØ± Ø¨ÛŒØ¬ Ù„Ú¯Ø§ÛŒØ§\nÙˆÛ Ù¾Ú¾ÙˆÙ„ Ù…ÛŒÚº ÛÛ’Û”\nØ¢Ø±Ø§Ù… Ú©Ø±ÛŒÚºØŒ Ù†Ú¯ÛØ¨Ø§Ù† â€” Ø¢Ù¾ Ù†Û’ Ú©Ù…Ø§ Ù„ÛŒØ§Û”';
 
   @override
   String guardianHeadlineStreak14(int count) {
-    return '$count دن\nمسلسل ترقی کے۔\nآپ کا جنگل زندگی سے بھرا ہوا ہے۔';
+    return '$count Ø¯Ù†\nÙ…Ø³Ù„Ø³Ù„ ØªØ±Ù‚ÛŒ Ú©Û’Û”\nØ¢Ù¾ Ú©Ø§ Ø¬Ù†Ú¯Ù„ Ø²Ù†Ø¯Ú¯ÛŒ Ø³Û’ Ø¨Ú¾Ø±Ø§ ÛÙˆØ§ ÛÛ’Û”';
   }
 
   @override
   String get guardianHeadlineStreak7 =>
-      'ایک پورا ہفتہ پھول میں،\nنگہبان۔\nایک اور کامل دن\nزنجیر بڑھاتا ہے۔';
+      'Ø§ÛŒÚ© Ù¾ÙˆØ±Ø§ ÛÙØªÛ Ù¾Ú¾ÙˆÙ„ Ù…ÛŒÚºØŒ\nÙ†Ú¯ÛØ¨Ø§Ù†Û”\nØ§ÛŒÚ© Ø§ÙˆØ± Ú©Ø§Ù…Ù„ Ø¯Ù†\nØ²Ù†Ø¬ÛŒØ± Ø¨Ú‘Ú¾Ø§ØªØ§ ÛÛ’Û”';
 
   @override
   String get guardianHeadlineStreak3 =>
-      'آپ کی زنجیر برقرار ہے۔\nابھی بھی کھلے بیجوں کی\nدیکھ بھال کریں۔';
+      'Ø¢Ù¾ Ú©ÛŒ Ø²Ù†Ø¬ÛŒØ± Ø¨Ø±Ù‚Ø±Ø§Ø± ÛÛ’Û”\nØ§Ø¨Ú¾ÛŒ Ø¨Ú¾ÛŒ Ú©Ú¾Ù„Û’ Ø¨ÛŒØ¬ÙˆÚº Ú©ÛŒ\nØ¯ÛŒÚ©Ú¾ Ø¨Ú¾Ø§Ù„ Ú©Ø±ÛŒÚºÛ”';
 
   @override
   String get guardianHeadlineNoHabitsDone =>
-      'آپ کاموں کی اچھی دیکھ بھال کر رہے ہیں۔\nایک پودا لگائیں —\nعادات ہیں جو جنگل بڑھاتی ہیں۔';
+      'Ø¢Ù¾ Ú©Ø§Ù…ÙˆÚº Ú©ÛŒ Ø§Ú†Ú¾ÛŒ Ø¯ÛŒÚ©Ú¾ Ø¨Ú¾Ø§Ù„ Ú©Ø± Ø±ÛÛ’ ÛÛŒÚºÛ”\nØ§ÛŒÚ© Ù¾ÙˆØ¯Ø§ Ù„Ú¯Ø§Ø¦ÛŒÚº â€”\nØ¹Ø§Ø¯Ø§Øª ÛÛŒÚº Ø¬Ùˆ Ø¬Ù†Ú¯Ù„ Ø¨Ú‘Ú¾Ø§ØªÛŒ ÛÛŒÚºÛ”';
 
   @override
   String get guardianHeadlineSomeDone =>
-      'کچھ بیج کھلے،\nکچھ نہیں۔ کوئی بات نہیں۔\nکل ایک اور لگانے کا دن ہے۔';
+      'Ú©Ú†Ú¾ Ø¨ÛŒØ¬ Ú©Ú¾Ù„Û’ØŒ\nÚ©Ú†Ú¾ Ù†ÛÛŒÚºÛ” Ú©ÙˆØ¦ÛŒ Ø¨Ø§Øª Ù†ÛÛŒÚºÛ”\nÚ©Ù„ Ø§ÛŒÚ© Ø§ÙˆØ± Ù„Ú¯Ø§Ù†Û’ Ú©Ø§ Ø¯Ù† ÛÛ’Û”';
 
   @override
   String get guardianHeadlineMorning =>
-      'صبح بخیر، نگہبان۔\nدن ابھی جوان ہے\nاور زمین تیار ہے۔';
+      'ØµØ¨Ø­ Ø¨Ø®ÛŒØ±ØŒ Ù†Ú¯ÛØ¨Ø§Ù†Û”\nØ¯Ù† Ø§Ø¨Ú¾ÛŒ Ø¬ÙˆØ§Ù† ÛÛ’\nØ§ÙˆØ± Ø²Ù…ÛŒÙ† ØªÛŒØ§Ø± ÛÛ’Û”';
 
   @override
   String get guardianHeadlineAfternoon =>
-      'دوپہر بخیر، نگہبان۔\nآدھی روشنی باقی ہے —\nجاری رکھیں۔';
+      'Ø¯ÙˆÙ¾ÛØ± Ø¨Ø®ÛŒØ±ØŒ Ù†Ú¯ÛØ¨Ø§Ù†Û”\nØ¢Ø¯Ú¾ÛŒ Ø±ÙˆØ´Ù†ÛŒ Ø¨Ø§Ù‚ÛŒ ÛÛ’ â€”\nØ¬Ø§Ø±ÛŒ Ø±Ú©Ú¾ÛŒÚºÛ”';
 
   @override
   String get guardianHeadlineEvening =>
-      'شام بخیر، نگہبان۔\nسورج غروب ہونے سے پہلے\nایک آخری جائزہ۔';
+      'Ø´Ø§Ù… Ø¨Ø®ÛŒØ±ØŒ Ù†Ú¯ÛØ¨Ø§Ù†Û”\nØ³ÙˆØ±Ø¬ ØºØ±ÙˆØ¨ ÛÙˆÙ†Û’ Ø³Û’ Ù¾ÛÙ„Û’\nØ§ÛŒÚ© Ø¢Ø®Ø±ÛŒ Ø¬Ø§Ø¦Ø²ÛÛ”';
 
   @override
   String get guardianHeadlineNight =>
-      'رات گئی ابھی بھی جاگ رہے ہیں؟\nنگہبان بھی آرام کرتے ہیں۔\nکل کا بیج ابھی لگائیں۔';
+      'Ø±Ø§Øª Ú¯Ø¦ÛŒ Ø§Ø¨Ú¾ÛŒ Ø¨Ú¾ÛŒ Ø¬Ø§Ú¯ Ø±ÛÛ’ ÛÛŒÚºØŸ\nÙ†Ú¯ÛØ¨Ø§Ù† Ø¨Ú¾ÛŒ Ø¢Ø±Ø§Ù… Ú©Ø±ØªÛ’ ÛÛŒÚºÛ”\nÚ©Ù„ Ú©Ø§ Ø¨ÛŒØ¬ Ø§Ø¨Ú¾ÛŒ Ù„Ú¯Ø§Ø¦ÛŒÚºÛ”';
 
   @override
   String get guardianBodyNoTasks =>
-      'آپ کا سینکچری ابھی خاموش ہے۔ ایک نیت شامل کریں اور دیکھیں شام تک کیا بدلتا ہے۔';
+      'Ø¢Ù¾ Ú©Ø§ Ø³ÛŒÙ†Ú©Ú†Ø±ÛŒ Ø§Ø¨Ú¾ÛŒ Ø®Ø§Ù…ÙˆØ´ ÛÛ’Û” Ø§ÛŒÚ© Ù†ÛŒØª Ø´Ø§Ù…Ù„ Ú©Ø±ÛŒÚº Ø§ÙˆØ± Ø¯ÛŒÚ©Ú¾ÛŒÚº Ø´Ø§Ù… ØªÚ© Ú©ÛŒØ§ Ø¨Ø¯Ù„ØªØ§ ÛÛ’Û”';
 
   @override
   String guardianBodyStreak14(int count) {
-    return '$count دن سے چل رہا ہے۔ زنجیر قسمت نہیں — یہ چھوٹے انتخاب جمع ہو رہے ہیں۔ جمع ہونے دیں۔';
+    return '$count Ø¯Ù† Ø³Û’ Ú†Ù„ Ø±ÛØ§ ÛÛ’Û” Ø²Ù†Ø¬ÛŒØ± Ù‚Ø³Ù…Øª Ù†ÛÛŒÚº â€” ÛŒÛ Ú†Ú¾ÙˆÙ¹Û’ Ø§Ù†ØªØ®Ø§Ø¨ Ø¬Ù…Ø¹ ÛÙˆ Ø±ÛÛ’ ÛÛŒÚºÛ” Ø¬Ù…Ø¹ ÛÙˆÙ†Û’ Ø¯ÛŒÚºÛ”';
   }
 
   @override
   String guardianBodyStreak3(int count) {
-    return '$count دن کی زنجیر اصلی رفتار ہے۔ آج کے کھلے بیج مکمل کریں۔';
+    return '$count Ø¯Ù† Ú©ÛŒ Ø²Ù†Ø¬ÛŒØ± Ø§ØµÙ„ÛŒ Ø±ÙØªØ§Ø± ÛÛ’Û” Ø¢Ø¬ Ú©Û’ Ú©Ú¾Ù„Û’ Ø¨ÛŒØ¬ Ù…Ú©Ù…Ù„ Ú©Ø±ÛŒÚºÛ”';
   }
 
   @override
   String guardianBodyNoHabits(int count) {
-    return 'آپ نے ابھی تک $count کام لگائے ہیں۔ ایک عادت کا پودا شامل کرنے سے کام دن بدن جمع ہوتا رہے گا۔';
+    return 'Ø¢Ù¾ Ù†Û’ Ø§Ø¨Ú¾ÛŒ ØªÚ© $count Ú©Ø§Ù… Ù„Ú¯Ø§Ø¦Û’ ÛÛŒÚºÛ” Ø§ÛŒÚ© Ø¹Ø§Ø¯Øª Ú©Ø§ Ù¾ÙˆØ¯Ø§ Ø´Ø§Ù…Ù„ Ú©Ø±Ù†Û’ Ø³Û’ Ú©Ø§Ù… Ø¯Ù† Ø¨Ø¯Ù† Ø¬Ù…Ø¹ ÛÙˆØªØ§ Ø±ÛÛ’ Ú¯Ø§Û”';
   }
 
   @override
   String guardianBodyLowCompletion(int pct) {
-    return 'آپ اپنے لگائے $pct% مکمل کر رہے ہیں۔ کم، تیز بیج بکھرے ہوئے دس بیجوں سے زیادہ اونچے اگتے ہیں۔';
+    return 'Ø¢Ù¾ Ø§Ù¾Ù†Û’ Ù„Ú¯Ø§Ø¦Û’ $pct% Ù…Ú©Ù…Ù„ Ú©Ø± Ø±ÛÛ’ ÛÛŒÚºÛ” Ú©Ù…ØŒ ØªÛŒØ² Ø¨ÛŒØ¬ Ø¨Ú©Ú¾Ø±Û’ ÛÙˆØ¦Û’ Ø¯Ø³ Ø¨ÛŒØ¬ÙˆÚº Ø³Û’ Ø²ÛŒØ§Ø¯Û Ø§ÙˆÙ†Ú†Û’ Ø§Ú¯ØªÛ’ ÛÛŒÚºÛ”';
   }
 
   @override
   String guardianBodyDefault(int tasks, int sprouts) {
-    return 'آپ کا سینکچری زندہ ہے۔ $tasks کام مکمل، $sprouts پودا(پودے) بڑھ رہا — کام نظر آ رہا ہے۔';
+    return 'Ø¢Ù¾ Ú©Ø§ Ø³ÛŒÙ†Ú©Ú†Ø±ÛŒ Ø²Ù†Ø¯Û ÛÛ’Û” $tasks Ú©Ø§Ù… Ù…Ú©Ù…Ù„ØŒ $sprouts Ù¾ÙˆØ¯Ø§(Ù¾ÙˆØ¯Û’) Ø¨Ú‘Ú¾ Ø±ÛØ§ â€” Ú©Ø§Ù… Ù†Ø¸Ø± Ø¢ Ø±ÛØ§ ÛÛ’Û”';
   }
 
   @override
-  String get guardianInsightWaitingTitle => 'آپ کے پہلے قدم کا منتظر';
+  String get guardianInsightWaitingTitle =>
+      'Ø¢Ù¾ Ú©Û’ Ù¾ÛÙ„Û’ Ù‚Ø¯Ù… Ú©Ø§ Ù…Ù†ØªØ¸Ø±';
 
   @override
   String get guardianInsightWaitingBody =>
-      'کام یا عادت شامل کریں اور میں آپ کے باغ میں پیٹرن پڑھنا شروع کروں گا۔ جتنا زیادہ لگائیں، میرے لیے سیکھنے کو اتنا زیادہ ہے۔';
+      'Ú©Ø§Ù… ÛŒØ§ Ø¹Ø§Ø¯Øª Ø´Ø§Ù…Ù„ Ú©Ø±ÛŒÚº Ø§ÙˆØ± Ù…ÛŒÚº Ø¢Ù¾ Ú©Û’ Ø¨Ø§Øº Ù…ÛŒÚº Ù¾ÛŒÙ¹Ø±Ù† Ù¾Ú‘Ú¾Ù†Ø§ Ø´Ø±ÙˆØ¹ Ú©Ø±ÙˆÚº Ú¯Ø§Û” Ø¬ØªÙ†Ø§ Ø²ÛŒØ§Ø¯Û Ù„Ú¯Ø§Ø¦ÛŒÚºØŒ Ù…ÛŒØ±Û’ Ù„ÛŒÛ’ Ø³ÛŒÚ©Ú¾Ù†Û’ Ú©Ùˆ Ø§ØªÙ†Ø§ Ø²ÛŒØ§Ø¯Û ÛÛ’Û”';
 
   @override
-  String get guardianInsightWaitingCta => 'اپنا پہلا بیج لگائیں';
+  String get guardianInsightWaitingCta =>
+      'Ø§Ù¾Ù†Ø§ Ù¾ÛÙ„Ø§ Ø¨ÛŒØ¬ Ù„Ú¯Ø§Ø¦ÛŒÚº';
 
   @override
-  String get guardianInsightChainSuperTitle => 'زنجیر آپ کی طاقت ہے';
+  String get guardianInsightChainSuperTitle =>
+      'Ø²Ù†Ø¬ÛŒØ± Ø¢Ù¾ Ú©ÛŒ Ø·Ø§Ù‚Øª ÛÛ’';
 
   @override
   String guardianInsightChainSuperBody(int count) {
-    return 'آپ نے $count دن کی زنجیر برقرار رکھی ہے۔ اسٹریکس ہر بار حوصلے سے بہتر ہیں — اسے گرم رکھیں، سست دنوں میں بھی۔';
+    return 'Ø¢Ù¾ Ù†Û’ $count Ø¯Ù† Ú©ÛŒ Ø²Ù†Ø¬ÛŒØ± Ø¨Ø±Ù‚Ø±Ø§Ø± Ø±Ú©Ú¾ÛŒ ÛÛ’Û” Ø§Ø³Ù¹Ø±ÛŒÚ©Ø³ ÛØ± Ø¨Ø§Ø± Ø­ÙˆØµÙ„Û’ Ø³Û’ Ø¨ÛØªØ± ÛÛŒÚº â€” Ø§Ø³Û’ Ú¯Ø±Ù… Ø±Ú©Ú¾ÛŒÚºØŒ Ø³Ø³Øª Ø¯Ù†ÙˆÚº Ù…ÛŒÚº Ø¨Ú¾ÛŒÛ”';
   }
 
   @override
-  String get guardianInsightChainSuperCta => 'کل کا بیج شامل کریں';
+  String get guardianInsightChainSuperCta =>
+      'Ú©Ù„ Ú©Ø§ Ø¨ÛŒØ¬ Ø´Ø§Ù…Ù„ Ú©Ø±ÛŒÚº';
 
   @override
-  String get guardianInsightChainColdTitle => 'زنجیر ٹھنڈی ہے — نئی شروع کریں';
+  String get guardianInsightChainColdTitle =>
+      'Ø²Ù†Ø¬ÛŒØ± Ù¹Ú¾Ù†ÚˆÛŒ ÛÛ’ â€” Ù†Ø¦ÛŒ Ø´Ø±ÙˆØ¹ Ú©Ø±ÛŒÚº';
 
   @override
   String get guardianInsightChainColdBody =>
-      'آپ پہلے بھی لگا چکے ہیں، جس کا مطلب ہے آپ دوبارہ لگا سکتے ہیں۔ آج ایک چھوٹا کام مکمل کرنا کل لمبی زنجیر ہے۔';
+      'Ø¢Ù¾ Ù¾ÛÙ„Û’ Ø¨Ú¾ÛŒ Ù„Ú¯Ø§ Ú†Ú©Û’ ÛÛŒÚºØŒ Ø¬Ø³ Ú©Ø§ Ù…Ø·Ù„Ø¨ ÛÛ’ Ø¢Ù¾ Ø¯ÙˆØ¨Ø§Ø±Û Ù„Ú¯Ø§ Ø³Ú©ØªÛ’ ÛÛŒÚºÛ” Ø¢Ø¬ Ø§ÛŒÚ© Ú†Ú¾ÙˆÙ¹Ø§ Ú©Ø§Ù… Ù…Ú©Ù…Ù„ Ú©Ø±Ù†Ø§ Ú©Ù„ Ù„Ù…Ø¨ÛŒ Ø²Ù†Ø¬ÛŒØ± ÛÛ’Û”';
 
   @override
-  String get guardianInsightChainColdCta => 'بیج لگائیں';
+  String get guardianInsightChainColdCta => 'Ø¨ÛŒØ¬ Ù„Ú¯Ø§Ø¦ÛŒÚº';
 
   @override
-  String get guardianInsightLessIsMoreTitle => 'اس ہفتے کم زیادہ ہے';
+  String get guardianInsightLessIsMoreTitle =>
+      'Ø§Ø³ ÛÙØªÛ’ Ú©Ù… Ø²ÛŒØ§Ø¯Û ÛÛ’';
 
   @override
   String guardianInsightLessIsMoreBody(int pct) {
-    return 'آپ اپنے لگائے $pct% مکمل کرتے ہیں۔ 5 بکھرے ہوئے کاموں کی بجائے 3 تیز نیتیں آزمائیں — معیار جمع ہوتا ہے۔';
+    return 'Ø¢Ù¾ Ø§Ù¾Ù†Û’ Ù„Ú¯Ø§Ø¦Û’ $pct% Ù…Ú©Ù…Ù„ Ú©Ø±ØªÛ’ ÛÛŒÚºÛ” 5 Ø¨Ú©Ú¾Ø±Û’ ÛÙˆØ¦Û’ Ú©Ø§Ù…ÙˆÚº Ú©ÛŒ Ø¨Ø¬Ø§Ø¦Û’ 3 ØªÛŒØ² Ù†ÛŒØªÛŒÚº Ø¢Ø²Ù…Ø§Ø¦ÛŒÚº â€” Ù…Ø¹ÛŒØ§Ø± Ø¬Ù…Ø¹ ÛÙˆØªØ§ ÛÛ’Û”';
   }
 
   @override
-  String get guardianInsightLessIsMoreCta => 'دن تیز کریں';
+  String get guardianInsightLessIsMoreCta => 'Ø¯Ù† ØªÛŒØ² Ú©Ø±ÛŒÚº';
 
   @override
   String guardianInsightNextMedalTitle(String title) {
-    return 'اگلا تمغہ: $title';
+    return 'Ø§Ú¯Ù„Ø§ ØªÙ…ØºÛ: $title';
   }
 
   @override
   String guardianInsightNextMedalBody(int value, int target, String unit) {
-    return 'آپ $target میں سے $value $unit تک ہیں۔ چند اور ایمانداری والے دن اور یہ آپ کا ہے۔';
+    return 'Ø¢Ù¾ $target Ù…ÛŒÚº Ø³Û’ $value $unit ØªÚ© ÛÛŒÚºÛ” Ú†Ù†Ø¯ Ø§ÙˆØ± Ø§ÛŒÙ…Ø§Ù†Ø¯Ø§Ø±ÛŒ ÙˆØ§Ù„Û’ Ø¯Ù† Ø§ÙˆØ± ÛŒÛ Ø¢Ù¾ Ú©Ø§ ÛÛ’Û”';
   }
 
   @override
-  String get guardianInsightNextMedalCta => 'تمغہ دکھائیں';
+  String get guardianInsightNextMedalCta => 'ØªÙ…ØºÛ Ø¯Ú©Ú¾Ø§Ø¦ÛŒÚº';
 
   @override
-  String get guardianInsightSteadyTitle => 'آپ ایک مستحکل موسم میں ہیں';
+  String get guardianInsightSteadyTitle =>
+      'Ø¢Ù¾ Ø§ÛŒÚ© Ù…Ø³ØªØ­Ú©Ù„ Ù…ÙˆØ³Ù… Ù…ÛŒÚº ÛÛŒÚº';
 
   @override
   String get guardianInsightSteadyBody =>
-      'قریب کوئی تمغہ نہیں — ٹھیک ہے۔ جو ہے اس کی دیکھ بھال کریں۔ اگلا پھول رستے میں ہے۔';
+      'Ù‚Ø±ÛŒØ¨ Ú©ÙˆØ¦ÛŒ ØªÙ…ØºÛ Ù†ÛÛŒÚº â€” Ù¹Ú¾ÛŒÚ© ÛÛ’Û” Ø¬Ùˆ ÛÛ’ Ø§Ø³ Ú©ÛŒ Ø¯ÛŒÚ©Ú¾ Ø¨Ú¾Ø§Ù„ Ú©Ø±ÛŒÚºÛ” Ø§Ú¯Ù„Ø§ Ù¾Ú¾ÙˆÙ„ Ø±Ø³ØªÛ’ Ù…ÛŒÚº ÛÛ’Û”';
 
   @override
-  String get guardianInsightSteadyCta => 'پیشرفت دیکھیں';
+  String get guardianInsightSteadyCta => 'Ù¾ÛŒØ´Ø±ÙØª Ø¯ÛŒÚ©Ú¾ÛŒÚº';
 
   @override
   String notificationTaskReminderBody(String label) {
@@ -2493,29 +2630,30 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get notificationFinalCallBodyOne =>
-      'آپ کی زنجیر پر 1 کام باقی ہے۔ رات قریب ہے۔';
+      'Ø¢Ù¾ Ú©ÛŒ Ø²Ù†Ø¬ÛŒØ± Ù¾Ø± 1 Ú©Ø§Ù… Ø¨Ø§Ù‚ÛŒ ÛÛ’Û” Ø±Ø§Øª Ù‚Ø±ÛŒØ¨ ÛÛ’Û”';
 
   @override
   String notificationFinalCallBodyMany(int count) {
-    return 'آپ کی زنجیر پر $count کام باقی ہیں۔ رات قریب ہے۔';
+    return 'Ø¢Ù¾ Ú©ÛŒ Ø²Ù†Ø¬ÛŒØ± Ù¾Ø± $count Ú©Ø§Ù… Ø¨Ø§Ù‚ÛŒ ÛÛŒÚºÛ” Ø±Ø§Øª Ù‚Ø±ÛŒØ¨ ÛÛ’Û”';
   }
 
   @override
-  String get notificationEveningBodyOne => 'آج ابھی بھی 1 کام کھلا ہے۔';
+  String get notificationEveningBodyOne =>
+      'Ø¢Ø¬ Ø§Ø¨Ú¾ÛŒ Ø¨Ú¾ÛŒ 1 Ú©Ø§Ù… Ú©Ú¾Ù„Ø§ ÛÛ’Û”';
 
   @override
   String notificationEveningBodyMany(int count) {
-    return 'آج ابھی بھی $count کام کھلے ہیں۔';
+    return 'Ø¢Ø¬ Ø§Ø¨Ú¾ÛŒ Ø¨Ú¾ÛŒ $count Ú©Ø§Ù… Ú©Ú¾Ù„Û’ ÛÛŒÚºÛ”';
   }
 
   @override
-  String get notificationTickerTaskReminder => 'کام کی یاد دہانی';
+  String get notificationTickerTaskReminder => 'Ú©Ø§Ù… Ú©ÛŒ ÛŒØ§Ø¯ Ø¯ÛØ§Ù†ÛŒ';
 
   @override
-  String get notificationTickerTaskAlarm => 'کام کا الارم';
+  String get notificationTickerTaskAlarm => 'Ú©Ø§Ù… Ú©Ø§ Ø§Ù„Ø§Ø±Ù…';
 
   @override
   String habitBloomSubtitleL10n(int count, String element) {
-    return '$count دن کی اسٹریک · $element';
+    return '$count Ø¯Ù† Ú©ÛŒ Ø§Ø³Ù¹Ø±ÛŒÚ© Â· $element';
   }
 }

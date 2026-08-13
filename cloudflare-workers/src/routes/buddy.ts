@@ -47,11 +47,15 @@ buddy.post('/invite', async (c) => {
 
 buddy.post('/accept', async (c) => {
   const userId = c.get('userId');
-  const { token } = await c.req.json();
+  const body = await c.req.json<{ token?: unknown }>();
+
+  if (!body.token || typeof body.token !== 'string' || body.token.length > 200) {
+    return c.json({ error: 'invalid_token' }, 400);
+  }
 
   const invite = await c.env.DB.prepare(
     "SELECT * FROM buddy_invites WHERE jti = ? AND consumed_by IS NULL AND expires_at > datetime('now')"
-  ).bind(token).first() as any;
+  ).bind(body.token).first() as any;
   if (!invite) return c.json({ error: 'invalid_invite' }, 404);
 
   const myPair = await c.env.DB.prepare(
@@ -66,29 +70,33 @@ buddy.post('/accept', async (c) => {
   ).bind(pairId, userA, userB).run();
   await c.env.DB.prepare(
     'UPDATE buddy_invites SET consumed_by = ? WHERE jti = ?'
-  ).bind(userId, token).run();
+  ).bind(userId, body.token).run();
 
   return c.json({ ok: true, pair_id: pairId });
 });
 
 buddy.post('/nudge', async (c) => {
   const userId = c.get('userId');
-  const { pair_id } = await c.req.json();
+  const body = await c.req.json<{ pair_id?: unknown }>();
+
+  if (!body.pair_id || typeof body.pair_id !== 'string' || body.pair_id.length > 200) {
+    return c.json({ error: 'invalid_pair_id' }, 400);
+  }
 
   const pair = await c.env.DB.prepare(
     'SELECT * FROM buddy_pairs WHERE id = ? AND (user_a = ? OR user_b = ?)'
-  ).bind(pair_id, userId, userId).first();
+  ).bind(body.pair_id, userId, userId).first();
   if (!pair) return c.json({ error: 'not_found' }, 404);
 
   const today = new Date().toISOString().split('T')[0];
   const existing = await c.env.DB.prepare(
     "SELECT id FROM buddy_nudges WHERE pair_id = ? AND from_user = ? AND date(created_at) = ?"
-  ).bind(pair_id, userId, today).first();
+  ).bind(body.pair_id, userId, today).first();
   if (existing) return c.json({ error: 'already_nudged_today' }, 429);
 
   await c.env.DB.prepare(
     "INSERT INTO buddy_nudges (id, pair_id, from_user, created_at) VALUES (?, ?, ?, datetime('now'))"
-  ).bind(crypto.randomUUID(), pair_id, userId).run();
+  ).bind(crypto.randomUUID(), body.pair_id, userId).run();
 
   return c.json({ ok: true });
 });

@@ -12,108 +12,111 @@ class AppLocalizationsTr extends AppLocalizations {
   String get appTitle => 'Daily Stitch';
 
   @override
-  String get tabToday => 'Bugün';
+  String get tabToday => 'BugÃ¼n';
 
   @override
-  String get tabProgress => 'İlerleme';
+  String get tabProgress => 'Ä°lerleme';
 
   @override
   String get tabYou => 'Sen';
 
   @override
-  String get navMyDay => 'Günüm';
+  String get navMyDay => 'GÃ¼nÃ¼m';
 
   @override
   String get navSettings => 'Ayarlar';
 
   @override
-  String get navHelp => 'Yardım & Destek';
+  String get navHelp => 'YardÄ±m & Destek';
 
   @override
-  String get navHistory => 'Son 7 Gün';
+  String get navHistory => 'Son 7 GÃ¼n';
 
   @override
   String get navLeftBehind => 'Geri Kalanlar';
 
   @override
-  String get navInsights => 'İlerlemen';
+  String get navInsights => 'Ä°lerlemen';
 
   @override
-  String get navMedals => 'Madalyalarım';
+  String get navMedals => 'MadalyalarÄ±m';
 
   @override
-  String get navManagePro => 'Pro aboneliğini yönet';
+  String get navManagePro => 'Pro aboneliÄŸini yÃ¶net';
 
   @override
   String get navPaywall => 'Daily Stitch Pro';
 
   @override
-  String get greetingLateNight => 'Gece yarısında çalışıyor musun';
+  String get greetingLateNight => 'Gece yarÄ±sÄ±nda Ã§alÄ±ÅŸÄ±yor musun';
 
   @override
-  String get greetingMorning => 'Günaydın, Günışığı!';
+  String get greetingMorning => 'GÃ¼naydÄ±n, GÃ¼nÄ±ÅŸÄ±ÄŸÄ±!';
 
   @override
-  String get greetingAfternoon => 'İyi günler, Arkadaş';
+  String get greetingAfternoon => 'Ä°yi gÃ¼nler, ArkadaÅŸ';
 
   @override
-  String get greetingEvening => 'İyi akşamlar, Şampiyon';
+  String get greetingEvening => 'Ä°yi akÅŸamlar, Åžampiyon';
 
   @override
-  String get greetingNight => 'İyi dinleniyorsun, Koruyucu?';
+  String get greetingNight => 'Ä°yi dinleniyorsun, Koruyucu?';
 
   @override
   String todayTasksCount(String done, String total) {
-    return 'Bugün · $done/$total görev';
+    return 'BugÃ¼n Â· $done/$total gÃ¶rev';
   }
 
   @override
   String todayHabitsCount(String done, String total) {
-    return '$done/$total alışkanlık';
+    return '$done/$total alÄ±ÅŸkanlÄ±k';
   }
 
   @override
-  String get todayChainGrows => 'ZİNCİR SEN BİTİRİNCE BÜYÜR';
+  String get todayChainGrows => 'ZÄ°NCÄ°R SEN BÄ°TÄ°RÄ°NCE BÃœYÃœR';
 
   @override
-  String get todayChainComplete => 'ZİNCİR TAMAMLANDI · BAHÇEYİ YARIN SÜSLE';
+  String get todayChainComplete =>
+      'ZÄ°NCÄ°R TAMAMLANDI Â· BAHÃ‡EYÄ° YARIN SÃœSLE';
 
   @override
-  String get taskCapInfo => 'Neden 5 görev sınırlaması var?';
+  String get taskCapInfo => 'Neden 5 gÃ¶rev sÄ±nÄ±rlamasÄ± var?';
 
   @override
-  String get taskCapDiscipline => 'ÖNCE DİSİPLİN TASARIMI';
+  String get taskCapDiscipline => 'Ã–NCE DÄ°SÄ°PLÄ°N TASARIMI';
 
   @override
-  String get taskCapTitle => 'Gününü kasıtlı olarak 5 görevle sınırlıyoruz.';
+  String get taskCapTitle =>
+      'GÃ¼nÃ¼nÃ¼ kasÄ±tlÄ± olarak 5 gÃ¶revle sÄ±nÄ±rlÄ±yoruz.';
 
   @override
   String get taskCapBody =>
-      'Kısa zincirler uzun olanlardan daha iyidir. 5\'ten 3\'ünü bitirip kazanma hissini yaşamak, 10\'dan 8\'ini bırakıp kaybetme hissini yaşamaktan daha olasıdır.';
+      'KÄ±sa zincirler uzun olanlardan daha iyidir. 5\'ten 3\'Ã¼nÃ¼ bitirip kazanma hissini yaÅŸamak, 10\'dan 8\'ini bÄ±rakÄ±p kaybetme hissini yaÅŸamaktan daha olasÄ±dÄ±r.';
 
   @override
-  String get taskCapBulletDone => 'Tamamlanan görevler zincirine eklenir';
+  String get taskCapBulletDone => 'Tamamlanan gÃ¶revler zincirine eklenir';
 
   @override
   String get taskCapBulletDoneBody =>
-      '5\'ini de tamamladığın bir gün, serini bir gün uzatır.';
+      '5\'ini de tamamladÄ±ÄŸÄ±n bir gÃ¼n, serini bir gÃ¼n uzatÄ±r.';
 
   @override
-  String get taskCapBulletMissed => 'Kaçırılan görevler Geri Kalanlar\'a gider';
+  String get taskCapBulletMissed =>
+      'KaÃ§Ä±rÄ±lan gÃ¶revler Geri Kalanlar\'a gider';
 
   @override
   String get taskCapBulletMissedBody =>
-      'Gece yarısında tamamlanmamış görevler Geri Kalanlar\'da belirir. Sadece hâlâ önemli olanları tekrar ekle.';
+      'Gece yarÄ±sÄ±nda tamamlanmamÄ±ÅŸ gÃ¶revler Geri Kalanlar\'da belirir. Sadece hÃ¢lÃ¢ Ã¶nemli olanlarÄ± tekrar ekle.';
 
   @override
-  String get taskCapBulletFreeze => 'Seri dondurması bir kaçırmayı affeder';
+  String get taskCapBulletFreeze => 'Seri dondurmasÄ± bir kaÃ§Ä±rmayÄ± affeder';
 
   @override
   String get taskCapBulletFreezeBody =>
-      'Pro sana ayda 2 seri dondurması verir — kaçırılan bir günü kapsar, böylece zincirin hayatta kalır.';
+      'Pro sana ayda 2 seri dondurmasÄ± verir â€” kaÃ§Ä±rÄ±lan bir gÃ¼nÃ¼ kapsar, bÃ¶ylece zincirin hayatta kalÄ±r.';
 
   @override
-  String get tasksHeader => 'Görevler';
+  String get tasksHeader => 'GÃ¶revler';
 
   @override
   String tasksProgressCount(String done, String total) {
@@ -121,40 +124,40 @@ class AppLocalizationsTr extends AppLocalizations {
   }
 
   @override
-  String get tasksAddSeed => 'Bir görev tohumu ekle';
+  String get tasksAddSeed => 'Bir gÃ¶rev tohumu ekle';
 
   @override
   String get tasksCapReached =>
-      '5/5 yer kullanıldı — yeni bir tohum ekmek için birini tamamla.';
+      '5/5 yer kullanÄ±ldÄ± â€” yeni bir tohum ekmek iÃ§in birini tamamla.';
 
   @override
-  String get tasksEmptyCta => 'İlk tohumunu ek — bugün ne önemli?';
+  String get tasksEmptyCta => 'Ä°lk tohumunu ek â€” bugÃ¼n ne Ã¶nemli?';
 
   @override
-  String get habitsHeader => 'Alışkanlıklar';
+  String get habitsHeader => 'AlÄ±ÅŸkanlÄ±klar';
 
   @override
   String habitsGrowing(String count) {
-    return '$count büyüyor';
+    return '$count bÃ¼yÃ¼yor';
   }
 
   @override
   String habitsBestStreak(String days) {
-    return 'En iyi $days gün';
+    return 'En iyi $days gÃ¼n';
   }
 
   @override
-  String get habitsPlantNew => 'Yeni bir alışkanlık filizi ek';
+  String get habitsPlantNew => 'Yeni bir alÄ±ÅŸkanlÄ±k filizi ek';
 
   @override
-  String get habitsPlantFirst => 'Bir alışkanlık eke';
+  String get habitsPlantFirst => 'Bir alÄ±ÅŸkanlÄ±k eke';
 
   @override
   String get habitsLocked =>
-      'Pro alışkanlık slotu — daha fazla filiz ekmek için aç';
+      'Pro alÄ±ÅŸkanlÄ±k slotu â€” daha fazla filiz ekmek iÃ§in aÃ§';
 
   @override
-  String get habitsSlotsFull => 'Tüm alışkanlık slotları şu anda dolu.';
+  String get habitsSlotsFull => 'TÃ¼m alÄ±ÅŸkanlÄ±k slotlarÄ± ÅŸu anda dolu.';
 
   @override
   String habitsStreakDays(String days) {
@@ -162,15 +165,15 @@ class AppLocalizationsTr extends AppLocalizations {
   }
 
   @override
-  String get habitsCadence => 'GÜNLÜK';
+  String get habitsCadence => 'GÃœNLÃœK';
 
   @override
   String leftBehindBanner(String count) {
-    return '$count kaçırıldı — hâlâ Geri Kalanlar\'da';
+    return '$count kaÃ§Ä±rÄ±ldÄ± â€” hÃ¢lÃ¢ Geri Kalanlar\'da';
   }
 
   @override
-  String get leftBehindTap => 'Tekrar eklemek için dokun veya bırak';
+  String get leftBehindTap => 'Tekrar eklemek iÃ§in dokun veya bÄ±rak';
 
   @override
   String get leftBehindDismiss => 'Kapat';
@@ -179,61 +182,61 @@ class AppLocalizationsTr extends AppLocalizations {
   String get leftBehindTitle => 'Geri Kalanlar';
 
   @override
-  String get leftBehindEmpty => 'Hiçbir şey geride kalmadı';
+  String get leftBehindEmpty => 'HiÃ§bir ÅŸey geride kalmadÄ±';
 
   @override
   String get leftBehindEmptyBody =>
-      'Kaçırılmış görev yok. Ektiğin her tohum bakılıyor. Bahçe temiz.';
+      'KaÃ§Ä±rÄ±lmÄ±ÅŸ gÃ¶rev yok. EktiÄŸin her tohum bakÄ±lÄ±yor. BahÃ§e temiz.';
 
   @override
-  String get leftBehindClearAll => 'Tümünü temizle';
+  String get leftBehindClearAll => 'TÃ¼mÃ¼nÃ¼ temizle';
 
   @override
-  String get leftBehindClearAllConfirm => 'Tüm geri kalanlar temizlensin mi?';
+  String get leftBehindClearAllConfirm => 'TÃ¼m geri kalanlar temizlensin mi?';
 
   @override
   String leftBehindClearAllBody(String count) {
-    return 'Bu, $count kaçırılmış görevi kalıcı olarak silecek. Bunu geri alamazsın.';
+    return 'Bu, $count kaÃ§Ä±rÄ±lmÄ±ÅŸ gÃ¶revi kalÄ±cÄ± olarak silecek. Bunu geri alamazsÄ±n.';
   }
 
   @override
-  String get leftBehindReAdd => 'Bugüne tekrar ekle';
+  String get leftBehindReAdd => 'BugÃ¼ne tekrar ekle';
 
   @override
   String get leftBehindReAddButton => 'Tekrar ekle';
 
   @override
-  String get leftBehindAddedToToday => 'Bugüne eklendi';
+  String get leftBehindAddedToToday => 'BugÃ¼ne eklendi';
 
   @override
-  String get leftBehindLetGo => 'Bırak gitsin';
+  String get leftBehindLetGo => 'BÄ±rak gitsin';
 
   @override
-  String get leftBehindHeader => 'GERİ KALANLAR';
+  String get leftBehindHeader => 'GERÄ° KALANLAR';
 
   @override
-  String get leftBehindMissedTasks => 'KAÇIRILAN GÖREVLER';
+  String get leftBehindMissedTasks => 'KAÃ‡IRILAN GÃ–REVLER';
 
   @override
-  String get leftBehindWaitingOne => '1 görev seni bekliyor.';
+  String get leftBehindWaitingOne => '1 gÃ¶rev seni bekliyor.';
 
   @override
   String leftBehindWaitingMany(String count) {
-    return '$count görev seni bekliyor.';
+    return '$count gÃ¶rev seni bekliyor.';
   }
 
   @override
   String get leftBehindBody =>
-      'Bir görevi bugüne geri eklemek için dokun veya bırak. Tekrar eklemek serini canlı tutar.';
+      'Bir gÃ¶revi bugÃ¼ne geri eklemek iÃ§in dokun veya bÄ±rak. Tekrar eklemek serini canlÄ± tutar.';
 
   @override
   String leftBehindReAddedSnack(String task) {
-    return '\"$task\" günümüze geri döndü.';
+    return '\"$task\" gÃ¼nÃ¼mÃ¼ze geri dÃ¶ndÃ¼.';
   }
 
   @override
   String leftBehindRemovedSnack(String task) {
-    return '\"$task\" kaldırıldı';
+    return '\"$task\" kaldÄ±rÄ±ldÄ±';
   }
 
   @override
@@ -241,88 +244,89 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String leftBehindYesterdayDate(String date) {
-    return 'Dün · $date';
+    return 'DÃ¼n Â· $date';
   }
 
   @override
   String streakAtRisk(String count) {
-    return 'Bugün için $count görev kaldı';
+    return 'BugÃ¼n iÃ§in $count gÃ¶rev kaldÄ±';
   }
 
   @override
   String streakAtRiskLastCall(String count) {
-    return 'Son çağrı — $count görev hâlâ açık';
+    return 'Son Ã§aÄŸrÄ± â€” $count gÃ¶rev hÃ¢lÃ¢ aÃ§Ä±k';
   }
 
   @override
-  String get streakAtRiskBody => 'Gece yarısına yakın. Zincir bunlara bağlı.';
+  String get streakAtRiskBody =>
+      'Gece yarÄ±sÄ±na yakÄ±n. Zincir bunlara baÄŸlÄ±.';
 
   @override
   String get streakAtRiskBodyLow =>
-      'Hâlâ zamanın var. Temiz bir gün serini uzatır.';
+      'HÃ¢lÃ¢ zamanÄ±n var. Temiz bir gÃ¼n serini uzatÄ±r.';
 
   @override
   String get streakAtRiskFreeze =>
-      'Dün kaçırıldı — seri dondurması kullanılsın mı?';
+      'DÃ¼n kaÃ§Ä±rÄ±ldÄ± â€” seri dondurmasÄ± kullanÄ±lsÄ±n mÄ±?';
 
   @override
-  String get streakFreezeUse => 'Dondurmayı kullan';
+  String get streakFreezeUse => 'DondurmayÄ± kullan';
 
   @override
   String get streakFreezeUseForYesterday =>
-      'Dünkü için aylık seri dondurmasını kullan';
+      'DÃ¼nkÃ¼ iÃ§in aylÄ±k seri dondurmasÄ±nÄ± kullan';
 
   @override
   String get streakFreezeAppliedYesterday =>
-      'Dün için seri dondurması uygulandı.';
+      'DÃ¼n iÃ§in seri dondurmasÄ± uygulandÄ±.';
 
   @override
-  String get chainBrokenTitle => 'Zincir kırıldı. Sorun değil.';
+  String get chainBrokenTitle => 'Zincir kÄ±rÄ±ldÄ±. Sorun deÄŸil.';
 
   @override
   String get chainBrokenBody =>
-      'Her uzun zincir bir gün biter. Önemli olan bugünkü ektiklerin. Mükemmel bir gün bir sonrakini başlatır.';
+      'Her uzun zincir bir gÃ¼n biter. Ã–nemli olan bugÃ¼nkÃ¼ ektiklerin. MÃ¼kemmel bir gÃ¼n bir sonrakini baÅŸlatÄ±r.';
 
   @override
-  String get chainBrokenCta => 'Bugüne dön';
+  String get chainBrokenCta => 'BugÃ¼ne dÃ¶n';
 
   @override
-  String get chainBrokenPlantFirst => 'Bugünün ilk tohumunu ek';
+  String get chainBrokenPlantFirst => 'BugÃ¼nÃ¼n ilk tohumunu ek';
 
   @override
-  String get chainBrokenCheck => 'Önce Geri Kalanlar\'a bak';
+  String get chainBrokenCheck => 'Ã–nce Geri Kalanlar\'a bak';
 
   @override
   String get chainBrokenBestChain => 'en iyi zincir';
 
   @override
-  String get chainBrokenTasksDone => 'tamamlanan görev';
+  String get chainBrokenTasksDone => 'tamamlanan gÃ¶rev';
 
   @override
   String get chainBrokenSprouts => 'filiz';
 
   @override
-  String get chainRecoveryFreshStart => 'Yeni bir başlangıç';
+  String get chainRecoveryFreshStart => 'Yeni bir baÅŸlangÄ±Ã§';
 
   @override
-  String get medalsTitle => 'Madalyalarım';
+  String get medalsTitle => 'MadalyalarÄ±m';
 
   @override
-  String get medalsTrophyRoom => 'Kupa Odası';
+  String get medalsTrophyRoom => 'Kupa OdasÄ±';
 
   @override
-  String get medalsAllMedals => 'Tüm Madalyalar';
+  String get medalsAllMedals => 'TÃ¼m Madalyalar';
 
   @override
   String medalsTrophyEarned(String earned, String total) {
-    return '$total madalyadan $earned tanesi kazanıldı';
+    return '$total madalyadan $earned tanesi kazanÄ±ldÄ±';
   }
 
   @override
-  String get medalsTrophyEmpty => 'İlk rozetin bir görev uzağında';
+  String get medalsTrophyEmpty => 'Ä°lk rozetin bir gÃ¶rev uzaÄŸÄ±nda';
 
   @override
-  String get medalsTrophyFirst => 'İlk madalyanı kazandın — devam et';
+  String get medalsTrophyFirst => 'Ä°lk madalyanÄ± kazandÄ±n â€” devam et';
 
   @override
   String medalsTrophyMany(String earned) {
@@ -331,151 +335,152 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String medalsProgressLabel(String total) {
-    return '$total madalyanın ilerlemesi';
+    return '$total madalyanÄ±n ilerlemesi';
   }
 
   @override
-  String get medalsShareCta => 'Paylaşılabilir bir kart oluştur';
+  String get medalsShareCta => 'PaylaÅŸÄ±labilir bir kart oluÅŸtur';
 
   @override
-  String get medalsEmptyTitle => 'Bu kategoride henüz bir şey yok';
+  String get medalsEmptyTitle => 'Bu kategoride henÃ¼z bir ÅŸey yok';
 
   @override
   String get medalsEmptyBody =>
-      'Kupa odanı başlatmak için bir görevi tamamla veya bir filizi sula.';
+      'Kupa odanÄ± baÅŸlatmak iÃ§in bir gÃ¶revi tamamla veya bir filizi sula.';
 
   @override
   String get medalSheetLocked => 'PRO MADALYASI';
 
   @override
   String medalSheetEarned(String tier) {
-    return 'KAZANILDI · $tier';
+    return 'KAZANILDI Â· $tier';
   }
 
   @override
-  String get medalSheetUnlock => 'Pro ile aç';
+  String get medalSheetUnlock => 'Pro ile aÃ§';
 
   @override
-  String get medalSheetProgress => 'İlerleme';
+  String get medalSheetProgress => 'Ä°lerleme';
 
   @override
   String medalSheetHint(String n, String unit) {
-    return 'Açmak için sadece $n $unit daha.';
+    return 'AÃ§mak iÃ§in sadece $n $unit daha.';
   }
 
   @override
-  String get medalSheetAlmost => 'Açmak için bir adım daha.';
+  String get medalSheetAlmost => 'AÃ§mak iÃ§in bir adÄ±m daha.';
 
   @override
   String get medalCategory => 'Kategori';
 
   @override
-  String get medalShareOnSocials => 'Sosyal medyanda paylaş';
+  String get medalShareOnSocials => 'Sosyal medyanda paylaÅŸ';
 
   @override
   String get medalShareLater => 'Belki sonra';
 
   @override
-  String get medalUnlocked => 'MADALYA AÇILDI';
+  String get medalUnlocked => 'MADALYA AÃ‡ILDI';
 
   @override
-  String get medalProgressTitle => 'İlerleme';
+  String get medalProgressTitle => 'Ä°lerleme';
 
   @override
-  String get historyTitle => 'Son 7 Gün';
+  String get historyTitle => 'Son 7 GÃ¼n';
 
   @override
-  String get historyFullTitle => 'Tam geçmiş';
+  String get historyFullTitle => 'Tam geÃ§miÅŸ';
 
   @override
-  String get historyLoadError => 'Geçmiş yüklenemedi.';
+  String get historyLoadError => 'GeÃ§miÅŸ yÃ¼klenemedi.';
 
   @override
   String get historyFullCalendar => 'Takvim';
 
   @override
   String historyCompletedPercent(String percent) {
-    return '%$percent tamamlandı';
+    return '%$percent tamamlandÄ±';
   }
 
   @override
   String historyThisWeek(String days) {
-    return 'SON $days GÜN';
+    return 'SON $days GÃœN';
   }
 
   @override
-  String get historyDayByDay => 'GÜN GÜN';
+  String get historyDayByDay => 'GÃœN GÃœN';
 
   @override
   String get historyEmpty =>
-      'Haftanın nasıl geçtiğini görmek için biraz tohum ek.';
+      'HaftanÄ±n nasÄ±l geÃ§tiÄŸini gÃ¶rmek iÃ§in biraz tohum ek.';
 
   @override
   String historyDoneCount(String done, String total, String perfect) {
-    return '$total görevden $done tanesini tamamladın. $perfect mükemmel gün.';
+    return '$total gÃ¶revden $done tanesini tamamladÄ±n. $perfect mÃ¼kemmel gÃ¼n.';
   }
 
   @override
-  String get historyUpsellTitle => 'Tam geçmişini gör';
+  String get historyUpsellTitle => 'Tam geÃ§miÅŸini gÃ¶r';
 
   @override
   String get historyUpsellBody =>
-      'Pro 30 günlük geçmişi açar. Ücretsiz olan 7 gün gösterir.';
+      'Pro 30 gÃ¼nlÃ¼k geÃ§miÅŸi aÃ§ar. Ãœcretsiz olan 7 gÃ¼n gÃ¶sterir.';
 
   @override
-  String get historyPerfect => 'MÜKEMMEL';
+  String get historyPerfect => 'MÃœKEMMEL';
 
   @override
-  String get historyFrozen => 'DONMUŞ';
+  String get historyFrozen => 'DONMUÅž';
 
   @override
-  String get historyToday => 'Bugün';
+  String get historyToday => 'BugÃ¼n';
 
   @override
-  String get historyEmptyDay => 'O gün hiçbir tohum ekilmedi';
+  String get historyEmptyDay => 'O gÃ¼n hiÃ§bir tohum ekilmedi';
 
   @override
   String historyLeftBehindCount(String count) {
-    return '$count geride kaldı';
+    return '$count geride kaldÄ±';
   }
 
   @override
-  String get progressVitality => 'BUGÜNÜN CANLILIĞI';
+  String get progressVitality => 'BUGÃœNÃœN CANLILIÄžI';
 
   @override
-  String get progressVitalityEmpty => 'Bahçenü başlatmak için bir tohum ek.';
+  String get progressVitalityEmpty =>
+      'BahÃ§enÃ¼ baÅŸlatmak iÃ§in bir tohum ek.';
 
   @override
   String progressVitalitySeeds(String done, String total) {
-    return 'Bugün $total tohumdan $done tanesi ekildi.';
+    return 'BugÃ¼n $total tohumdan $done tanesi ekildi.';
   }
 
   @override
   String progressChainPill(String days) {
-    return '$days günlük zincir';
+    return '$days gÃ¼nlÃ¼k zincir';
   }
 
   @override
-  String get progressMetricCurrent => 'Şu an';
+  String get progressMetricCurrent => 'Åžu an';
 
   @override
   String get progressMetricBest => 'En iyi';
 
   @override
-  String get progressMetricDone => 'Tamamlandı';
+  String get progressMetricDone => 'TamamlandÄ±';
 
   @override
-  String get progressMetricPerfect => 'Mükemmel';
+  String get progressMetricPerfect => 'MÃ¼kemmel';
 
   @override
-  String get progressMetricHabits => 'Alışkanlıklar';
+  String get progressMetricHabits => 'AlÄ±ÅŸkanlÄ±klar';
 
   @override
-  String get progressHabitBlooms => 'Alışkanlık çiçekleri';
+  String get progressHabitBlooms => 'AlÄ±ÅŸkanlÄ±k Ã§iÃ§ekleri';
 
   @override
   String get progressHabitBloomsSub =>
-      'Her gün suladığın filizler için seri kilometre taşları.';
+      'Her gÃ¼n suladÄ±ÄŸÄ±n filizler iÃ§in seri kilometre taÅŸlarÄ±.';
 
   @override
   String get progressNextBadge => 'Sonraki rozet';
@@ -486,25 +491,25 @@ class AppLocalizationsTr extends AppLocalizations {
   }
 
   @override
-  String get progressPersonalActivity => 'Kişisel Aktivite';
+  String get progressPersonalActivity => 'KiÅŸisel Aktivite';
 
   @override
   String progressBrowseMonth(String month) {
-    return '$month ayını görüntülüyorsun. Canlı etkinliğine dönmek için \"Bugün\"e dokun.';
+    return '$month ayÄ±nÄ± gÃ¶rÃ¼ntÃ¼lÃ¼yorsun. CanlÄ± etkinliÄŸine dÃ¶nmek iÃ§in \"BugÃ¼n\"e dokun.';
   }
 
   @override
-  String get progressJumpToToday => 'Bugün';
+  String get progressJumpToToday => 'BugÃ¼n';
 
   @override
-  String get progressCalendarLegend => 'daha koyu = daha çok tamamlandı';
+  String get progressCalendarLegend => 'daha koyu = daha Ã§ok tamamlandÄ±';
 
   @override
   String get progressCalendarBody =>
-      'Koyu yeşil mükemmel bir gün demektir. Atladıkça renk solar.';
+      'Koyu yeÅŸil mÃ¼kemmel bir gÃ¼n demektir. AtladÄ±kÃ§a renk solar.';
 
   @override
-  String get paywallTitle => 'Zinciri kırılmamış tut.';
+  String get paywallTitle => 'Zinciri kÄ±rÄ±lmamÄ±ÅŸ tut.';
 
   @override
   String get paywallSubtitle =>
@@ -512,257 +517,275 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get paywallFeatures =>
-      'Tam 5 alışkanlık slotu, sadece 3 değil|Tam geçmişin, sonsuza kadar|Tüm madalya seti|Her ay seri dondurması|Haftalık Makbuz + paylaşım kartları|Temalar + daha fazlası';
+      'Tam 5 alÄ±ÅŸkanlÄ±k slotu, sadece 3 deÄŸil|Tam geÃ§miÅŸin, sonsuza kadar|TÃ¼m madalya seti|Her ay seri dondurmasÄ±|HaftalÄ±k Makbuz + paylaÅŸÄ±m kartlarÄ±|Temalar + daha fazlasÄ±';
 
   @override
   String get paywallFeaturesBodies =>
-      'Ücretsiz olan 3 verir. Pro hepsini açar, böylece günlük ritüelin burada yaşayabilir.|Tamamladığın her günü görüntüle — sadece son 7 değil. Haftalarca değil, yıllarca geriye bak. |Efsanevi seviye madalyalarını aç. En nadir rozetler, her şeyini verenler içindir.|Ayda 2 seri dondurması, böylece tek bir kötü gün zincirini bitirmez.|Haftanın güzel paylaşım kartları. Zincirini paylaş, başkasını başlatmaya ilham ver.|Yeni vurgu renkleri ve temaları ekledikçe aç. Her zaman ücretsiz güncellemeler.';
+      'Ãœcretsiz olan 3 verir. Pro hepsini aÃ§ar, bÃ¶ylece gÃ¼nlÃ¼k ritÃ¼elin burada yaÅŸayabilir.|TamamladÄ±ÄŸÄ±n her gÃ¼nÃ¼ gÃ¶rÃ¼ntÃ¼le â€” sadece son 7 deÄŸil. Haftalarca deÄŸil, yÄ±llarca geriye bak. |Efsanevi seviye madalyalarÄ±nÄ± aÃ§. En nadir rozetler, her ÅŸeyini verenler iÃ§indir.|Ayda 2 seri dondurmasÄ±, bÃ¶ylece tek bir kÃ¶tÃ¼ gÃ¼n zincirini bitirmez.|HaftanÄ±n gÃ¼zel paylaÅŸÄ±m kartlarÄ±. Zincirini paylaÅŸ, baÅŸkasÄ±nÄ± baÅŸlatmaya ilham ver.|Yeni vurgu renkleri ve temalarÄ± ekledikÃ§e aÃ§. Her zaman Ã¼cretsiz gÃ¼ncellemeler.';
 
   @override
-  String get paywallYearly => 'Yıllık';
+  String get paywallYearly => 'YÄ±llÄ±k';
 
   @override
-  String get paywallYearlyCaption => 'En iyi değer · ayda ~2.50 USD civarında';
+  String get paywallYearlyCaption =>
+      'En iyi deÄŸer Â· ayda ~2.50 USD civarÄ±nda';
 
   @override
   String get paywallYearlyBadge => '%35 TASARRUF';
 
   @override
-  String get paywallMonthly => 'Aylık';
+  String get paywallMonthly => 'AylÄ±k';
 
   @override
   String get paywallMonthlyCaption =>
-      'Her ay faturalanır · istediğin zaman iptal et';
+      'Her ay faturalanÄ±r Â· istediÄŸin zaman iptal et';
 
   @override
   String paywallStartCta(String price) {
-    return 'Pro\'yu Başlat · $price/yıl';
+    return 'Pro\'yu BaÅŸlat Â· $price/yÄ±l';
   }
 
   @override
   String paywallStartCtaMonthly(String price) {
-    return 'Pro\'yu Başlat · $price/ay';
+    return 'Pro\'yu BaÅŸlat Â· $price/ay';
   }
 
   @override
-  String get paywallRestore => 'Satın almayı geri yükle';
+  String get paywallLifetime => 'Lifetime';
 
   @override
-  String get paywallTerms => 'Koşullar';
+  String get paywallLifetimeCaption => 'One-time payment · yours forever';
+
+  @override
+  String get paywallLifetimeBadge => 'BEST DEAL';
+
+  @override
+  String paywallStartCtaLifetime(String price) {
+    return 'Start Pro · $price forever';
+  }
+
+  @override
+  String get paywallRestore => 'SatÄ±n almayÄ± geri yÃ¼kle';
+
+  @override
+  String get paywallTerms => 'KoÅŸullar';
 
   @override
   String get paywallPrivacy => 'Gizlilik';
 
   @override
-  String get paywallNoRestore => 'Bu hesapta önceki bir satın alım bulunamadı.';
+  String get paywallNoRestore =>
+      'Bu hesapta Ã¶nceki bir satÄ±n alÄ±m bulunamadÄ±.';
 
   @override
   String get paywallRestoreLater =>
-      'Satın almanı sonraki senkronizasyonda geri yükleyeceğiz.';
+      'SatÄ±n almanÄ± sonraki senkronizasyonda geri yÃ¼kleyeceÄŸiz.';
 
   @override
-  String get paywallAlreadyPro => 'Pro üyesisin. Desteğin için teşekkürler.';
+  String get paywallAlreadyPro =>
+      'Pro Ã¼yesisin. DesteÄŸin iÃ§in teÅŸekkÃ¼rler.';
 
   @override
   String get paywallHabitSlotHead =>
-      'Tüm ücretsiz alışkanlık slotlarını kullandın. Önemsediğin her ritüeli eklemek için tam seti aç.';
+      'TÃ¼m Ã¼cretsiz alÄ±ÅŸkanlÄ±k slotlarÄ±nÄ± kullandÄ±n. Ã–nemsediÄŸin her ritÃ¼eli eklemek iÃ§in tam seti aÃ§.';
 
   @override
   String get paywallHistoryHead =>
-      'Tam geçmişini gör — her mükemmel günü, her madalyayı, her geri dönüşü.';
+      'Tam geÃ§miÅŸini gÃ¶r â€” her mÃ¼kemmel gÃ¼nÃ¼, her madalyayÄ±, her geri dÃ¶nÃ¼ÅŸÃ¼.';
 
   @override
   String get paywallMedalHead =>
-      'En nadir madalyalar sadece Pro\'ya özel. Devam et — düşündüğünden daha yakınlar.';
+      'En nadir madalyalar sadece Pro\'ya Ã¶zel. Devam et â€” dÃ¼ÅŸÃ¼ndÃ¼ÄŸÃ¼nden daha yakÄ±nlar.';
 
   @override
-  String get settingsYourActivity => 'AKTİVİTEN';
+  String get settingsYourActivity => 'AKTÄ°VÄ°TEN';
 
   @override
-  String get settingsHelpInfo => 'YARDIM & BİLGİ';
+  String get settingsHelpInfo => 'YARDIM & BÄ°LGÄ°';
 
   @override
   String get settingsAccount => 'HESAP';
 
   @override
-  String get settingsNurturingTools => 'BÜYÜTME ALETLERİ';
+  String get settingsNurturingTools => 'BÃœYÃœTME ALETLERÄ°';
 
   @override
   String get settingsReminders => 'HATIRLATMALAR';
 
   @override
-  String get settingsWidgetSanctuary => 'WİDGET KORUNAĞI';
+  String get settingsWidgetSanctuary => 'WÄ°DGET KORUNAÄžI';
 
   @override
-  String get settingsEcosystemSupport => 'EKOSİSTEM DESTEĞİ';
+  String get settingsEcosystemSupport => 'EKOSÄ°STEM DESTEÄžÄ°';
 
   @override
-  String get settingsHowItWorks => 'Bu nasıl çalışır';
+  String get settingsHowItWorks => 'Bu nasÄ±l Ã§alÄ±ÅŸÄ±r';
 
   @override
-  String get settingsSignOut => 'Çıkış yap';
+  String get settingsSignOut => 'Ã‡Ä±kÄ±ÅŸ yap';
 
   @override
   String get settingsSignOutConfirm =>
-      'Çıkış yapmak istediğinizden emin misiniz?';
+      'Ã‡Ä±kÄ±ÅŸ yapmak istediÄŸinizden emin misiniz?';
 
   @override
   String get settingsProActive => 'Aktif';
 
   @override
-  String get settingsProFree => 'Ücretsiz katman';
+  String get settingsProFree => 'Ãœcretsiz katman';
 
   @override
   String get settingsLanguage => 'Dil';
 
   @override
-  String get settingsLanguageValue => 'Sistem varsayılanı';
+  String get settingsLanguageValue => 'Sistem varsayÄ±lanÄ±';
 
   @override
   String get firstRunGreeting =>
-      '5 görev. Daha fazla değil. Onları sayılı kıl.';
+      '5 gÃ¶rev. Daha fazla deÄŸil. OnlarÄ± sayÄ±lÄ± kÄ±l.';
 
   @override
-  String get firstRunBody => 'İlk tohumunu ek — bugün en çok ne önemli?';
+  String get firstRunBody => 'Ä°lk tohumunu ek â€” bugÃ¼n en Ã§ok ne Ã¶nemli?';
 
   @override
-  String get firstRunCta => 'İlk tohumunu ek';
+  String get firstRunCta => 'Ä°lk tohumunu ek';
 
   @override
-  String get emptyStateClearAll => 'Tümünü temizle';
+  String get emptyStateClearAll => 'TÃ¼mÃ¼nÃ¼ temizle';
 
   @override
-  String get cancel => 'İptal';
+  String get cancel => 'Ä°ptal';
 
   @override
   String get intentionTitle1 => 'Yeni bir niyet ekelim!';
 
   @override
   String get intentionBody1 =>
-      'Her muhteşem orman tek bir küçük choix ile başlar. Bugün neyi büyütüyoruz?';
+      'Her muhteÅŸem orman tek bir kÃ¼Ã§Ã¼k choix ile baÅŸlar. BugÃ¼n neyi bÃ¼yÃ¼tÃ¼yoruz?';
 
   @override
-  String get intentionTitle2 => 'Bugün ne ekelim?';
+  String get intentionTitle2 => 'BugÃ¼n ne ekelim?';
 
   @override
   String get intentionBody2 =>
-      'Küçük tohumlar, özenle bakılırsa yüksek ağaçlara dönüşür. Şu anda en çok önemli olanı seç.';
+      'KÃ¼Ã§Ã¼k tohumlar, Ã¶zenle bakÄ±lÄ±rsa yÃ¼ksek aÄŸaÃ§lara dÃ¶nÃ¼ÅŸÃ¼r. Åžu anda en Ã§ok Ã¶nemli olanÄ± seÃ§.';
 
   @override
-  String get intentionTitle3 => 'Bir tohum. Bir nefes. Başla.';
+  String get intentionTitle3 => 'Bir tohum. Bir nefes. BaÅŸla.';
 
   @override
   String get intentionBody3 =>
-      'Tüm ormanı bir anda ekmen gerekmez — sadece bir sonraki doğru şey.';
+      'TÃ¼m ormanÄ± bir anda ekmen gerekmez â€” sadece bir sonraki doÄŸru ÅŸey.';
 
   @override
-  String get intentionTitle4 => 'Bir sonraki küçük adımı besle.';
+  String get intentionTitle4 => 'Bir sonraki kÃ¼Ã§Ã¼k adÄ±mÄ± besle.';
 
   @override
   String get intentionBody4 =>
-      'Gelecekteki sen, önümüzdeki beş dakikada yaptığın seçimlerden oluşur. Nazik bir tane hangisi?';
+      'Gelecekteki sen, Ã¶nÃ¼mÃ¼zdeki beÅŸ dakikada yaptÄ±ÄŸÄ±n seÃ§imlerden oluÅŸur. Nazik bir tane hangisi?';
 
   @override
-  String get intentionTitle5 => 'Neye dönüşmek istediğine karar ver.';
+  String get intentionTitle5 => 'Neye dÃ¶nÃ¼ÅŸmek istediÄŸine karar ver.';
 
   @override
   String get intentionBody5 =>
-      'Görevler tohumlardır, alışkanlıklar filizlerdir. Birlikte gurur duyduğun bir orman oluştururlar.';
+      'GÃ¶revler tohumlardÄ±r, alÄ±ÅŸkanlÄ±klar filizlerdir. Birlikte gurur duyduÄŸun bir orman oluÅŸtururlar.';
 
   @override
-  String get intentionTitle6 => 'Hatıralık bir şey ek.';
+  String get intentionTitle6 => 'HatÄ±ralÄ±k bir ÅŸey ek.';
 
   @override
   String get intentionBody6 =>
-      'Her gün muhteşem hissettirmeyebilir. Sulanmış bir tohum bile sayılır. Bir tane seçelim.';
+      'Her gÃ¼n muhteÅŸem hissettirmeyebilir. SulanmÄ±ÅŸ bir tohum bile sayÄ±lÄ±r. Bir tane seÃ§elim.';
 
   @override
-  String get intentionTitle7 => 'Bugünü biraz daha cesur yap.';
+  String get intentionTitle7 => 'BugÃ¼nÃ¼ biraz daha cesur yap.';
 
   @override
   String get intentionBody7 =>
-      'Cesaret birikir. Ertelediğin tohumu seç — adını koymak bile ileriye doğru bir adımdır.';
+      'Cesaret birikir. ErtelediÄŸin tohumu seÃ§ â€” adÄ±nÄ± koymak bile ileriye doÄŸru bir adÄ±mdÄ±r.';
 
   @override
-  String get intentionTitle8 => 'Tohumdan önce toprağı hazırla.';
+  String get intentionTitle8 => 'Tohumdan Ã¶nce topraÄŸÄ± hazÄ±rla.';
 
   @override
   String get intentionBody8 =>
-      'Bu görevi kolaylaştıracak bir zihin, araç veya küçük ritüel ne olur? Notlara ekle.';
+      'Bu gÃ¶revi kolaylaÅŸtÄ±racak bir zihin, araÃ§ veya kÃ¼Ã§Ã¼k ritÃ¼el ne olur? Notlara ekle.';
 
   @override
-  String get shareCardSnapshot => 'Korunağının bir anlık görüntüsü';
+  String get shareCardSnapshot => 'KorunaÄŸÄ±nÄ±n bir anlÄ±k gÃ¶rÃ¼ntÃ¼sÃ¼';
 
   @override
   String get shareCardBody =>
-      'Yukarıdaki kart PNG olarak dışa aktarılır ve paylaşım sayfasına gönderilir. Hikayende paylaş, bir arkadaşına gönder veya sticker olarak yazdır.';
+      'YukarÄ±daki kart PNG olarak dÄ±ÅŸa aktarÄ±lÄ±r ve paylaÅŸÄ±m sayfasÄ±na gÃ¶nderilir. Hikayende paylaÅŸ, bir arkadaÅŸÄ±na gÃ¶nder veya sticker olarak yazdÄ±r.';
 
   @override
-  String get shareCardShareMyBloom => 'Çiçeğimi paylaş';
+  String get shareCardShareMyBloom => 'Ã‡iÃ§eÄŸimi paylaÅŸ';
 
   @override
-  String get shareCardCouldNotShare => 'Şu anda paylaşılamadı';
+  String get shareCardCouldNotShare => 'Åžu anda paylaÅŸÄ±lamadÄ±';
 
   @override
   String shareCardProgressText(String year) {
-    return 'Daily Stitch ilerlemem — $year Daily Stitch\'te.';
+    return 'Daily Stitch ilerlemem â€” $year Daily Stitch\'te.';
   }
 
   @override
   String shareCardMedalText(String title, String subtitle) {
-    return 'Daily Stitch\'te \"$title\" madalyasını açtım. $subtitle';
+    return 'Daily Stitch\'te \"$title\" madalyasÄ±nÄ± aÃ§tÄ±m. $subtitle';
   }
 
   @override
-  String get howItWorksTitle => 'Bu nasıl çalışır';
+  String get howItWorksTitle => 'Bu nasÄ±l Ã§alÄ±ÅŸÄ±r';
 
   @override
   String get howItWorksBody =>
-      'Daily Stitch, küçük ve kırılmaz bir disiplin zinciri tutmana yardımcı olur. Hepsi bu.';
+      'Daily Stitch, kÃ¼Ã§Ã¼k ve kÄ±rÄ±lmaz bir disiplin zinciri tutmana yardÄ±mcÄ± olur. Hepsi bu.';
 
   @override
-  String get howItWorksToday => 'Bugün sekmesi';
+  String get howItWorksToday => 'BugÃ¼n sekmesi';
 
   @override
   String get howItWorksTodayBody =>
-      'Bu senin evin. Bugünkü 5 görev ve ayarladığın alışkanlıkları gösterir. Gece yarısına kadar tamamlarsan, zincir uzar.';
+      'Bu senin evin. BugÃ¼nkÃ¼ 5 gÃ¶rev ve ayarladÄ±ÄŸÄ±n alÄ±ÅŸkanlÄ±klarÄ± gÃ¶sterir. Gece yarÄ±sÄ±na kadar tamamlarsan, zincir uzar.';
 
   @override
-  String get howItWorksCap => '5 görev sınırı özelliği';
+  String get howItWorksCap => '5 gÃ¶rev sÄ±nÄ±rÄ± Ã¶zelliÄŸi';
 
   @override
   String get howItWorksCapBody =>
-      '6. görevi eklemene izin vermiyoruz. Tüm mesele bu. Kısa zincirler uzun olanlardan iyidir. Tam açıklama için ana ekrandaki \"?\" butonuna dokun.';
+      '6. gÃ¶revi eklemene izin vermiyoruz. TÃ¼m mesele bu. KÄ±sa zincirler uzun olanlardan iyidir. Tam aÃ§Ä±klama iÃ§in ana ekrandaki \"?\" butonuna dokun.';
 
   @override
-  String get howItWorksHabits => 'Alışkanlıklar günlük, zincir ömür boyu';
+  String get howItWorksHabits =>
+      'AlÄ±ÅŸkanlÄ±klar gÃ¼nlÃ¼k, zincir Ã¶mÃ¼r boyu';
 
   @override
   String get howItWorksHabitsBody =>
-      'Alışkanlıklar (Sabah yogası, Su içme) sonsuza kadar yaşar. Görevler tek seferlik. İkisi de aynı seriyi besler.';
+      'AlÄ±ÅŸkanlÄ±klar (Sabah yogasÄ±, Su iÃ§me) sonsuza kadar yaÅŸar. GÃ¶revler tek seferlik. Ä°kisi de aynÄ± seriyi besler.';
 
   @override
-  String get howItWorksLeftBehind => 'Kaçırılan görevler → Geri Kalanlar';
+  String get howItWorksLeftBehind => 'KaÃ§Ä±rÄ±lan gÃ¶revler â†’ Geri Kalanlar';
 
   @override
   String get howItWorksLeftBehindBody =>
-      'Gece yarısında, tamamlanmamış görevler Geri Kalanlar\'a taşınır. Sadece hâlâ önemli olanları tekrar ekle. Geri kalanı sessizce bırakılır.';
+      'Gece yarÄ±sÄ±nda, tamamlanmamÄ±ÅŸ gÃ¶revler Geri Kalanlar\'a taÅŸÄ±nÄ±r. Sadece hÃ¢lÃ¢ Ã¶nemli olanlarÄ± tekrar ekle. Geri kalanÄ± sessizce bÄ±rakÄ±lÄ±r.';
 
   @override
-  String get howItWorksProgress => 'İlerleme sekmesi';
+  String get howItWorksProgress => 'Ä°lerleme sekmesi';
 
   @override
   String get howItWorksProgressBody =>
-      'Seri, takvim, madalyalar, geçmiş — zaman içinde nasıl gittiğin hakkında her şey. Burada acil bir şey yok.';
+      'Seri, takvim, madalyalar, geÃ§miÅŸ â€” zaman iÃ§inde nasÄ±l gittiÄŸin hakkÄ±nda her ÅŸey. Burada acil bir ÅŸey yok.';
 
   @override
   String get howItWorksYou => 'Sen sekmesi';
 
   @override
-  String get howItWorksYouBody => 'Hesabın, ayarların, çıkış. Hepsi bu.';
+  String get howItWorksYouBody => 'HesabÄ±n, ayarlarÄ±n, Ã§Ä±kÄ±ÅŸ. Hepsi bu.';
 
   @override
-  String get howItWorksRule => 'Kural: Her gün 5 küçük şey, bahane yok.';
+  String get howItWorksRule => 'Kural: Her gÃ¼n 5 kÃ¼Ã§Ã¼k ÅŸey, bahane yok.';
 
   @override
   String get commonRetry => 'Tekrar dene';
@@ -774,52 +797,52 @@ class AppLocalizationsTr extends AppLocalizations {
   String get commonDismiss => 'Kapat';
 
   @override
-  String get commonCancel => 'İptal';
+  String get commonCancel => 'Ä°ptal';
 
   @override
   String get commonClose => 'Kapat';
 
   @override
-  String get commonSend => 'Gönder';
+  String get commonSend => 'GÃ¶nder';
 
   @override
   String get commonCopy => 'Kopyala';
 
   @override
-  String get commonShowLess => 'Daha az göster';
+  String get commonShowLess => 'Daha az gÃ¶ster';
 
   @override
-  String get commonViewFull => 'Tam notları gör';
+  String get commonViewFull => 'Tam notlarÄ± gÃ¶r';
 
   @override
-  String get commonEdit => 'Düzenle';
+  String get commonEdit => 'DÃ¼zenle';
 
   @override
   String get commonDelete => 'Sil';
 
   @override
-  String get commonDone => 'Tamamlandı';
+  String get commonDone => 'TamamlandÄ±';
 
   @override
-  String get commonError => 'Bir şey yanlış gitti';
+  String get commonError => 'Bir ÅŸey yanlÄ±ÅŸ gitti';
 
   @override
-  String get commonPageNotFound => 'Sayfa Bulunamadı';
+  String get commonPageNotFound => 'Sayfa BulunamadÄ±';
 
   @override
   String get commonHome => 'Ana Sayfa';
 
   @override
-  String get commonUnknownError => 'Bilinmeyen yönlendirme hatası';
+  String get commonUnknownError => 'Bilinmeyen yÃ¶nlendirme hatasÄ±';
 
   @override
   String get commonSettingsTooltip => 'Ayarlar';
 
   @override
-  String get commonHowThisWorks => 'Bu nasıl çalışır';
+  String get commonHowThisWorks => 'Bu nasÄ±l Ã§alÄ±ÅŸÄ±r';
 
   @override
-  String get myDayReminderSet => 'Hatırlatıcı ayarlandı';
+  String get myDayReminderSet => 'HatÄ±rlatÄ±cÄ± ayarlandÄ±';
 
   @override
   String get myDayPreparationNotes => 'HAZIRLIK NOTLARI';
@@ -828,84 +851,84 @@ class AppLocalizationsTr extends AppLocalizations {
   String get onboardingSkip => 'ATLA';
 
   @override
-  String get onboardingNext => 'İleri';
+  String get onboardingNext => 'Ä°leri';
 
   @override
-  String get onboardingEnterSanctuary => 'Korunağa Gir';
+  String get onboardingEnterSanctuary => 'KorunaÄŸa Gir';
 
   @override
-  String get onboardingIntroduction => 'GİRİŞ';
+  String get onboardingIntroduction => 'GÄ°RÄ°Åž';
 
   @override
-  String get onboardingGrowYourForest => 'ORMANINI BÜYÜT';
+  String get onboardingGrowYourForest => 'ORMANINI BÃœYÃœT';
 
   @override
-  String get onboardingPage1Title => 'Koruyucunla tanış.';
+  String get onboardingPage1Title => 'Koruyucunla tanÄ±ÅŸ.';
 
   @override
   String get onboardingPage1Body =>
-      'Kişisel Korunağına hoş geldin. Burada, büyümen ormanının yansır.';
+      'KiÅŸisel KorunaÄŸÄ±na hoÅŸ geldin. Burada, bÃ¼yÃ¼men ormanÄ±nÄ±n yansÄ±r.';
 
   @override
-  String get onboardingPage2Title => 'Tohumlar ek. Büyürken izle.';
+  String get onboardingPage2Title => 'Tohumlar ek. BÃ¼yÃ¼rken izle.';
 
   @override
   String get onboardingPage2Body =>
-      'Her görev küçük bir tohumdur. Her alışkanlık günlük baktığın bir filizdir. Birlikte disiplin dolu bir orman oluştururlar.';
+      'Her gÃ¶rev kÃ¼Ã§Ã¼k bir tohumdur. Her alÄ±ÅŸkanlÄ±k gÃ¼nlÃ¼k baktÄ±ÄŸÄ±n bir filizdir. Birlikte disiplin dolu bir orman oluÅŸtururlar.';
 
   @override
-  String get onboardingPage3Title => 'Beş görev. Bir zincir.';
+  String get onboardingPage3Title => 'BeÅŸ gÃ¶rev. Bir zincir.';
 
   @override
   String get onboardingPage3Body =>
-      'Günde sadece 5 tohum ekabilirsin. Bu sınır, gerçekten önemli olan şeylere odaklanmanı ve zincirini korumanı sağlar.';
+      'GÃ¼nde sadece 5 tohum ekabilirsin. Bu sÄ±nÄ±r, gerÃ§ekten Ã¶nemli olan ÅŸeylere odaklanmanÄ± ve zincirini korumanÄ± saÄŸlar.';
 
   @override
-  String get onboardingPage4Title => 'Filizlerini her gün sula.';
+  String get onboardingPage4Title => 'Filizlerini her gÃ¼n sula.';
 
   @override
   String get onboardingPage4Body =>
-      'Alışkanlıklara dokunarak büyüt. Bir gün atla, zincir uzamaz. Koruyucu seninle birlikte büyür.';
+      'AlÄ±ÅŸkanlÄ±klara dokunarak bÃ¼yÃ¼t. Bir gÃ¼n atla, zincir uzamaz. Koruyucu seninle birlikte bÃ¼yÃ¼r.';
 
   @override
   String get authBrand => 'DAILY STITCH';
 
   @override
-  String get authPlantFirstSeed => 'İlk tohumunu ek.';
+  String get authPlantFirstSeed => 'Ä°lk tohumunu ek.';
 
   @override
-  String get authWelcomeBack => 'Hoş geldin, Koruyucu.';
+  String get authWelcomeBack => 'HoÅŸ geldin, Koruyucu.';
 
   @override
   String get authFiveTasksDaily =>
-      'Beş görev. Günlük alışkanlıklar. Bahane yok.';
+      'BeÅŸ gÃ¶rev. GÃ¼nlÃ¼k alÄ±ÅŸkanlÄ±klar. Bahane yok.';
 
   @override
-  String get authSanctuaryWaiting => 'Korunağın seni bekliyor.';
+  String get authSanctuaryWaiting => 'KorunaÄŸÄ±n seni bekliyor.';
 
   @override
-  String get authSignIn => 'Giriş Yap';
+  String get authSignIn => 'GiriÅŸ Yap';
 
   @override
-  String get authSignUp => 'Kayıt Ol';
+  String get authSignUp => 'KayÄ±t Ol';
 
   @override
   String get authEmail => 'E-POSTA';
 
   @override
-  String get authPassword => 'ŞİFRE';
+  String get authPassword => 'ÅžÄ°FRE';
 
   @override
   String get authEmailHint => 'ornek@email.com';
 
   @override
-  String get authCreateAccount => 'Hesap oluştur';
+  String get authCreateAccount => 'Hesap oluÅŸtur';
 
   @override
-  String get authSignInCta => 'Giriş yap';
+  String get authSignInCta => 'GiriÅŸ yap';
 
   @override
-  String get authOrContinueWith => 'veya şununla devam et';
+  String get authOrContinueWith => 'veya ÅŸununla devam et';
 
   @override
   String get authContinueWithGoogle => 'Google ile devam et';
@@ -914,138 +937,138 @@ class AppLocalizationsTr extends AppLocalizations {
   String get authEnterEmail => 'E-posta adresini gir';
 
   @override
-  String get authEnterValidEmail => 'Geçerli bir e-posta adresi gir';
+  String get authEnterValidEmail => 'GeÃ§erli bir e-posta adresi gir';
 
   @override
-  String get authPasswordTooShort => 'Şifre en az 6 karakter olmalıdır';
+  String get authPasswordTooShort => 'Åžifre en az 8 karakter olmalÄ±dÄ±r';
 
   @override
   String get authAccountCreated =>
-      'Hesap oluşturuldu. Giriş Yap\'a geç ve şifreni kullan.';
+      'Hesap oluÅŸturuldu. GiriÅŸ Yap\'a geÃ§ ve ÅŸifreni kullan.';
 
   @override
-  String get authSomethingWentWrong => 'Bir şey yanlış gitti. Tekrar dene.';
+  String get authSomethingWentWrong => 'Bir ÅŸey yanlÄ±ÅŸ gitti. Tekrar dene.';
 
   @override
-  String get authCouldNotStartGoogle => 'Google oturumu başlatılamadı.';
+  String get authCouldNotStartGoogle => 'Google oturumu baÅŸlatÄ±lamadÄ±.';
 
   @override
   String get authMidnightReset =>
-      'Giriş yaparak gününün gece yarısında sıfırlandığını kabul edersin.';
+      'GiriÅŸ yaparak gÃ¼nÃ¼nÃ¼n gece yarÄ±sÄ±nda sÄ±fÄ±rlandÄ±ÄŸÄ±nÄ± kabul edersin.';
 
   @override
   String get authSetupRequired => 'Kurulum gerekli';
 
   @override
-  String get settingsPersonalSanctuary => 'KİŞİSEL KORUNAK';
+  String get settingsPersonalSanctuary => 'KÄ°ÅžÄ°SEL KORUNAK';
 
   @override
-  String get settingsHowThisWorks => 'Bu nasıl çalışır';
+  String get settingsHowThisWorks => 'Bu nasÄ±l Ã§alÄ±ÅŸÄ±r';
 
   @override
   String get settingsHowThisWorksSubtitle =>
-      'Uygulama nedir, sınır ve seri nasıl çalışır';
+      'Uygulama nedir, sÄ±nÄ±r ve seri nasÄ±l Ã§alÄ±ÅŸÄ±r';
 
   @override
-  String get settingsStreakProtection => 'Seri Koruması';
+  String get settingsStreakProtection => 'Seri KorumasÄ±';
 
   @override
   String get settingsStreakProtectionAvailable => 'Bu ay 1 dondurma mevcut';
 
   @override
-  String get settingsStreakProtectionUsed => 'Bu ay için kullanıldı';
+  String get settingsStreakProtectionUsed => 'Bu ay iÃ§in kullanÄ±ldÄ±';
 
   @override
   String get settingsProSubscription => 'Daily Stitch Pro';
 
   @override
-  String get settingsManageProSubscription => 'Pro aboneliğini yönet';
+  String get settingsManageProSubscription => 'Pro aboneliÄŸini yÃ¶net';
 
   @override
   String get settingsProCancelPlay =>
-      'Google Play\'de planı iptal et veya değiştir';
+      'Google Play\'de planÄ± iptal et veya deÄŸiÅŸtir';
 
   @override
   String get settingsProUnlock =>
-      'Tüm 5 alışkanlığı, tam geçmişi ve daha fazlasını aç';
+      'TÃ¼m 5 alÄ±ÅŸkanlÄ±ÄŸÄ±, tam geÃ§miÅŸi ve daha fazlasÄ±nÄ± aÃ§';
 
   @override
-  String get settingsTaskAlarms => 'Görev alarmı ve Son Çağrı';
+  String get settingsTaskAlarms => 'GÃ¶rev alarmÄ± ve Son Ã‡aÄŸrÄ±';
 
   @override
   String get settingsTaskAlarmsSubtitle =>
-      'Akşam hatırlatması ve gece yarısı uyarısı';
+      'AkÅŸam hatÄ±rlatmasÄ± ve gece yarÄ±sÄ± uyarÄ±sÄ±';
 
   @override
-  String get settingsHomeScreenWidget => 'Ana ekran widget\'ı';
+  String get settingsHomeScreenWidget => 'Ana ekran widget\'Ä±';
 
   @override
   String get settingsHomeScreenWidgetSubtitle =>
       'Zincir serini ana ekrana ekle';
 
   @override
-  String get settingsShareBloomTracker => 'Daily Stitch\'i paylaş';
+  String get settingsShareBloomTracker => 'Daily Stitch\'i paylaÅŸ';
 
   @override
   String get settingsShareBloomTrackerSubtitle =>
-      'Bir arkadaşına zincirden bahset';
+      'Bir arkadaÅŸÄ±na zincirden bahset';
 
   @override
-  String get settingsHelpSupport => 'Yardım & Destek';
+  String get settingsHelpSupport => 'YardÄ±m & Destek';
 
   @override
   String get settingsHelpSupportSubtitle => 'SSS veya sorun bildir';
 
   @override
-  String get settingsSignOutTile => 'Çıkış Yap';
+  String get settingsSignOutTile => 'Ã‡Ä±kÄ±ÅŸ Yap';
 
   @override
-  String get settingsAllFeaturesUnlocked => 'Tüm özellikler açıldı';
+  String get settingsAllFeaturesUnlocked => 'TÃ¼m Ã¶zellikler aÃ§Ä±ldÄ±';
 
   @override
   String get settingsAllFeaturesUnlockedSubtitle =>
-      'Beta sürümü — her şeyi test ederken abonelikler duraklatıldı.';
+      'Beta sÃ¼rÃ¼mÃ¼ â€” her ÅŸeyi test ederken abonelikler duraklatÄ±ldÄ±.';
 
   @override
   String settingsVersion(Object build, Object version) {
-    return 'Sürüm $version ($build)';
+    return 'SÃ¼rÃ¼m $version ($build)';
   }
 
   @override
-  String get settingsVersionUnknown => 'Sürüm 1.0.0';
+  String get settingsVersionUnknown => 'SÃ¼rÃ¼m 1.0.0';
 
   @override
-  String get settingsHabitMaster => 'Alışkanlık Ustası';
+  String get settingsHabitMaster => 'AlÄ±ÅŸkanlÄ±k UstasÄ±';
 
   @override
   String settingsLevel(Object level) {
-    return 'Seviye $level · Alışkanlık Ustası';
+    return 'Seviye $level Â· AlÄ±ÅŸkanlÄ±k UstasÄ±';
   }
 
   @override
   String get languagePickerTitle => 'Dil';
 
   @override
-  String get youLast7Days => 'Son 7 gün';
+  String get youLast7Days => 'Son 7 gÃ¼n';
 
   @override
-  String get youLast7DaysSubtitle => 'Günlük görev geçmişi';
+  String get youLast7DaysSubtitle => 'GÃ¼nlÃ¼k gÃ¶rev geÃ§miÅŸi';
 
   @override
   String get youLeftBehindSubtitle =>
-      'Tekrar ekilmeyi bekleyen kaçırılan görevler';
+      'Tekrar ekilmeyi bekleyen kaÃ§Ä±rÄ±lan gÃ¶revler';
 
   @override
-  String get youProTier => 'Pro katmanı';
+  String get youProTier => 'Pro katmanÄ±';
 
   @override
-  String get youFreeTier => 'Ücretsiz katman';
+  String get youFreeTier => 'Ãœcretsiz katman';
 
   @override
   String get youPro => 'Pro';
 
   @override
-  String get youFree => 'Ücretsiz';
+  String get youFree => 'Ãœcretsiz';
 
   @override
   String youLevelLabel(Object level) {
@@ -1054,70 +1077,72 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String youBestStreakLabel(Object days) {
-    return 'En iyi $days gün';
+    return 'En iyi $days gÃ¼n';
   }
 
   @override
-  String get youPlantHabit => 'Bir zincir başlatmak için bir alışkanlık ek.';
+  String get youPlantHabit =>
+      'Bir zincir baÅŸlatmak iÃ§in bir alÄ±ÅŸkanlÄ±k ek.';
 
   @override
   String get youProBadge => 'PRO';
 
   @override
-  String get youUnlockDiscipline => 'Tam disiplin sistemini aç.';
+  String get youUnlockDiscipline => 'Tam disiplin sistemini aÃ§.';
 
   @override
   String get youProFeatures =>
-      '5 alışkanlık slotu, tam geçmiş, efsanevi madalyalar, aylık seri dondurmaları, haftalık paylaşım kartları.';
+      '5 alÄ±ÅŸkanlÄ±k slotu, tam geÃ§miÅŸ, efsanevi madalyalar, aylÄ±k seri dondurmalarÄ±, haftalÄ±k paylaÅŸÄ±m kartlarÄ±.';
 
   @override
-  String get youSeePlans => 'Planları gör';
+  String get youSeePlans => 'PlanlarÄ± gÃ¶r';
 
   @override
   String youFromPrice(Object price) {
-    return '$price/ay\'dan başlayan fiyatlarla';
+    return '$price/ay\'dan baÅŸlayan fiyatlarla';
   }
 
   @override
-  String get youBloomTrackerFooter => 'Daily Stitch · Alışkanlık & Yapılacak';
+  String get youBloomTrackerFooter =>
+      'Daily Stitch Â· AlÄ±ÅŸkanlÄ±k & YapÄ±lacak';
 
   @override
   String get progressMedals => 'Madalyalar';
 
   @override
-  String get progressLast7Days => 'Son 7 gün';
+  String get progressLast7Days => 'Son 7 gÃ¼n';
 
   @override
-  String get progressSeeAll => 'Tümünü gör';
+  String get progressSeeAll => 'TÃ¼mÃ¼nÃ¼ gÃ¶r';
 
   @override
-  String get progressSeeDayByDayActivity => 'Günlük aktiviteni gör';
+  String get progressSeeDayByDayActivity => 'GÃ¼nlÃ¼k aktiviteni gÃ¶r';
 
   @override
   String progressTasksFinishedPct(Object done, Object pct, Object total) {
-    return '$total görevden $done tanesi tamamlandı · %$pct';
+    return '$total gÃ¶revden $done tanesi tamamlandÄ± Â· %$pct';
   }
 
   @override
   String get progressNoMedalsYet =>
-      'Henüz madalya yok — başlamak için bir görevi tamamla veya bir filizi sula.';
+      'HenÃ¼z madalya yok â€” baÅŸlamak iÃ§in bir gÃ¶revi tamamla veya bir filizi sula.';
 
   @override
   String progressSeeAllMedals(Object earned, Object total) {
-    return 'Tüm madalyaları gör · $earned/$total kazanıldı';
+    return 'TÃ¼m madalyalarÄ± gÃ¶r Â· $earned/$total kazanÄ±ldÄ±';
   }
 
   @override
-  String get progressGuardianInsight => 'Koruyucu içgörüsü';
+  String get progressGuardianInsight => 'Koruyucu iÃ§gÃ¶rÃ¼sÃ¼';
 
   @override
   String progressNextBadgeTier(Object tier) {
-    return 'SONRAKİ ROZET · $tier';
+    return 'SONRAKÄ° ROZET Â· $tier';
   }
 
   @override
   String progressDaysTarget(Object days) {
-    return '$days günlük hedef';
+    return '$days gÃ¼nlÃ¼k hedef';
   }
 
   @override
@@ -1126,11 +1151,11 @@ class AppLocalizationsTr extends AppLocalizations {
   }
 
   @override
-  String get helpTitle => 'Yardım & Destek';
+  String get helpTitle => 'YardÄ±m & Destek';
 
   @override
   String get helpBody =>
-      'Cevapların çoğu aşağıda. Yoksa bize bir not gönder, genellikle 2-3 gün içinde yanıt veririz.';
+      'CevaplarÄ±n Ã§oÄŸu aÅŸaÄŸÄ±da. Yoksa bize bir not gÃ¶nder, genellikle 2-3 gÃ¼n iÃ§inde yanÄ±t veririz.';
 
   @override
   String get helpSectionFAQ => 'SIK SORULAN SORULAR';
@@ -1139,26 +1164,26 @@ class AppLocalizationsTr extends AppLocalizations {
   String get helpSectionContact => 'HALEN TAKILDI MI?';
 
   @override
-  String get helpAddMessage => 'Önce kısa bir mesaj ekle.';
+  String get helpAddMessage => 'Ã–nce kÄ±sa bir mesaj ekle.';
 
   @override
-  String get helpOpening => 'E-posta uygulaman açılıyor…';
+  String get helpOpening => 'E-posta uygulaman aÃ§Ä±lÄ±yorâ€¦';
 
   @override
-  String get helpEmailUs => 'Bize e-posta gönder';
+  String get helpEmailUs => 'Bize e-posta gÃ¶nder';
 
   @override
-  String get helpOpeningAction => 'Açılıyor…';
+  String get helpOpeningAction => 'AÃ§Ä±lÄ±yorâ€¦';
 
   @override
-  String get helpCopyEmail => 'Destek e-postasını kopyala';
+  String get helpCopyEmail => 'Destek e-postasÄ±nÄ± kopyala';
 
   @override
-  String get helpCopiedEmail => 'support@dailystitch.app kopyalandı';
+  String get helpCopiedEmail => 'support@dailystitch.app kopyalandÄ±';
 
   @override
   String get helpNoMailApp =>
-      'E-posta uygulaması bulunamadı. Bize support@dailystitch.app adresinden yazın.';
+      'E-posta uygulamasÄ± bulunamadÄ±. Bize support@dailystitch.app adresinden yazÄ±n.';
 
   @override
   String get helpTopicLabel => 'Konu';
@@ -1167,60 +1192,60 @@ class AppLocalizationsTr extends AppLocalizations {
   String get helpWhatHappened => 'Ne oldu?';
 
   @override
-  String get helpHint => 'Kısa bir açıklama çok yol alır…';
+  String get helpHint => 'KÄ±sa bir aÃ§Ä±klama Ã§ok yol alÄ±râ€¦';
 
   @override
   String get helpDisclaimer =>
-      '\"Bize e-posta gönder\"e dokunmak, önceden doldurulmuş bir mesajla e-posta uygulamanı açar (gönderene kadar hiçbir veri cihazından ayrılmaz).';
+      '\"Bize e-posta gÃ¶nder\"e dokunmak, Ã¶nceden doldurulmuÅŸ bir mesajla e-posta uygulamanÄ± aÃ§ar (gÃ¶nderene kadar hiÃ§bir veri cihazÄ±ndan ayrÄ±lmaz).';
 
   @override
-  String get helpFaqQ1 => '5 görev sınırı nedir?';
+  String get helpFaqQ1 => '5 gÃ¶rev sÄ±nÄ±rÄ± nedir?';
 
   @override
   String get helpFaqA1 =>
-      'Yerel gün başına en fazla 5 görev ekleyebilirsin. 6. görev kasıtlı olarak engellenir — disiplin aşırı yüklemeyi yener. Sınır bir özelliktir, bir kısıtlama değil.';
+      'Yerel gÃ¼n baÅŸÄ±na en fazla 5 gÃ¶rev ekleyebilirsin. 6. gÃ¶rev kasÄ±tlÄ± olarak engellenir â€” disiplin aÅŸÄ±rÄ± yÃ¼klemeyi yener. SÄ±nÄ±r bir Ã¶zelliktir, bir kÄ±sÄ±tlama deÄŸil.';
 
   @override
-  String get helpFaqQ2 => 'Gece yarısında ne olur?';
+  String get helpFaqQ2 => 'Gece yarÄ±sÄ±nda ne olur?';
 
   @override
   String get helpFaqA2 =>
-      'Yerel gece yarısında, hâlâ açık olarak işaretli her görev \"kaçırıldı\" damgası alır ve Geri Kalanlar\'a gider. Alışkanlık, bir önceki gün tamamlanmamışsa seri sıfırlanır.';
+      'Yerel gece yarÄ±sÄ±nda, hÃ¢lÃ¢ aÃ§Ä±k olarak iÅŸaretli her gÃ¶rev \"kaÃ§Ä±rÄ±ldÄ±\" damgasÄ± alÄ±r ve Geri Kalanlar\'a gider. AlÄ±ÅŸkanlÄ±k, bir Ã¶nceki gÃ¼n tamamlanmamÄ±ÅŸsa seri sÄ±fÄ±rlanÄ±r.';
 
   @override
   String get helpFaqQ3 => 'Geri Kalanlar nedir?';
 
   @override
   String get helpFaqA3 =>
-      'Bitiremediğin görevlerin nazik bir listesi. Aç, sadece hâlâ önemli olanları tekrar ekle, gerisini bırak. Ücretsiz katman son 7 günü gösterir; Pro tam geçmişi gösterir.';
+      'BitiremediÄŸin gÃ¶revlerin nazik bir listesi. AÃ§, sadece hÃ¢lÃ¢ Ã¶nemli olanlarÄ± tekrar ekle, gerisini bÄ±rak. Ãœcretsiz katman son 7 gÃ¼nÃ¼ gÃ¶sterir; Pro tam geÃ§miÅŸi gÃ¶sterir.';
 
   @override
-  String get helpFaqQ4 => 'Seriler nasıl çalışır?';
+  String get helpFaqQ4 => 'Seriler nasÄ±l Ã§alÄ±ÅŸÄ±r?';
 
   @override
   String get helpFaqA4 =>
-      'En az 1 görevin olduğu ve 0 kaçırdığın bir gün zinciri uzatır. Sıfır görevli günler ne uzatır ne de kırar. Bir seri dondurması ayda bir kaçırılan günü affeder.';
+      'En az 1 gÃ¶revin olduÄŸu ve 0 kaÃ§Ä±rdÄ±ÄŸÄ±n bir gÃ¼n zinciri uzatÄ±r. SÄ±fÄ±r gÃ¶revli gÃ¼nler ne uzatÄ±r ne de kÄ±rar. Bir seri dondurmasÄ± ayda bir kaÃ§Ä±rÄ±lan gÃ¼nÃ¼ affeder.';
 
   @override
-  String get helpFaqQ5 => 'Seri dondurması nedir?';
+  String get helpFaqQ5 => 'Seri dondurmasÄ± nedir?';
 
   @override
   String get helpFaqA5 =>
-      'Takvim ayına bir \"dondurma\", sadece Pro. Kaçırıldığın bir günde kullan, zincirini canlı tut. İlerleme sekmesinde bul.';
+      'Takvim ayÄ±na bir \"dondurma\", sadece Pro. KaÃ§Ä±rÄ±ldÄ±ÄŸÄ±n bir gÃ¼nde kullan, zincirini canlÄ± tut. Ä°lerleme sekmesinde bul.';
 
   @override
-  String get helpFaqQ6 => 'Verilerim nerede saklanıyor?';
+  String get helpFaqQ6 => 'Verilerim nerede saklanÄ±yor?';
 
   @override
   String get helpFaqA6 =>
-      'Tüm veriler, giriş yaptığın hesap altında Supabase\'de (Postgres) saklanır. Verilerini asla satmıyoruz veya paylaşmıyoruz. Tüm ayrıntılar için Play Store listesindeki gizlilik politikasına bak.';
+      'TÃ¼m veriler, giriÅŸ yaptÄ±ÄŸÄ±n hesap altÄ±nda gÃ¼venli bulut altyapÄ±mÄ±zda saklanÄ±r. Verilerini asla satmÄ±yoruz veya paylaÅŸmÄ±yoruz. TÃ¼m ayrÄ±ntÄ±lar iÃ§in Play Store listesindeki gizlilik politikasÄ±na bak.';
 
   @override
-  String get helpFaqQ7 => 'Hesabımı nasıl silerim?';
+  String get helpFaqQ7 => 'HesabÄ±mÄ± nasÄ±l silerim?';
 
   @override
   String get helpFaqA7 =>
-      'Ayarlar → Hesap → Hesabı sil yolunu izle. Bu, profilini, görevlerini, alışkanlıklarını ve abonelik verilerini kalıcı olarak siler. Aktif Play abonelikleri Google Play\'de ayrıca iptal edilmelidir.';
+      'Ayarlar â†’ Hesap â†’ HesabÄ± sil yolunu izle. Bu, profilini, gÃ¶revlerini, alÄ±ÅŸkanlÄ±klarÄ±nÄ± ve abonelik verilerini kalÄ±cÄ± olarak siler. Aktif Play abonelikleri Google Play\'de ayrÄ±ca iptal edilmelidir.';
 
   @override
   String get helpTopicsGeneral => 'Genel soru';
@@ -1232,77 +1257,79 @@ class AppLocalizationsTr extends AppLocalizations {
   String get helpTopicsStreak => 'Seri / devretme sorunu';
 
   @override
-  String get helpTopicsBilling => 'Faturalama veya Pro katmanı';
+  String get helpTopicsBilling => 'Faturalama veya Pro katmanÄ±';
 
   @override
   String get helpTopicsAccount => 'Hesap & veri';
 
   @override
-  String get helpTopicsFeature => 'Özellik isteği';
+  String get helpTopicsFeature => 'Ã–zellik isteÄŸi';
 
   @override
-  String get helpAccountAnon => '(giriş yapılmadı)';
+  String get helpAccountAnon => '(giriÅŸ yapÄ±lmadÄ±)';
 
   @override
-  String get splashTagline => 'Küçük tohumları besle. Bir orman yetiştir.';
+  String get splashTagline => 'KÃ¼Ã§Ã¼k tohumlarÄ± besle. Bir orman yetiÅŸtir.';
 
   @override
   String get priorityStandard => 'STANDART';
 
   @override
-  String get priorityVital => 'VİTAL';
+  String get priorityVital => 'VÄ°TAL';
 
   @override
   String get prioritySpark => 'KIVILCIM';
 
   @override
-  String get settingsDeleteAccount => 'Hesabı sil';
+  String get settingsDeleteAccount => 'HesabÄ± sil';
 
   @override
-  String get settingsDeleteAccountSubtitle => 'Verilerini kalıcı olarak kaldır';
+  String get settingsDeleteAccountSubtitle =>
+      'Verilerini kalÄ±cÄ± olarak kaldÄ±r';
 
   @override
   String get settingsDeleteAccountConfirmTitle =>
-      'Hesabını silmek istiyor musun?';
+      'HesabÄ±nÄ± silmek istiyor musun?';
 
   @override
   String get settingsDeleteAccountConfirmBody =>
-      'Bu, profilini, görevlerini, alışkanlıklarını ve ilerlemeni kalıcı olarak siler. Aktif abonelikler Google Play\'de ayrıca iptal edilmelidir. Bu işlem geri alınamaz.';
+      'Bu, profilini, gÃ¶revlerini, alÄ±ÅŸkanlÄ±klarÄ±nÄ± ve ilerlemeni kalÄ±cÄ± olarak siler. Aktif abonelikler Google Play\'de ayrÄ±ca iptal edilmelidir. Bu iÅŸlem geri alÄ±namaz.';
 
   @override
-  String get settingsDeleteAccountConfirmButton => 'Kalıcı olarak sil';
+  String get settingsDeleteAccountConfirmButton => 'KalÄ±cÄ± olarak sil';
 
   @override
-  String get settingsDeleteAccountSuccess => 'Hesabın silindi.';
+  String get settingsDeleteAccountSuccess => 'HesabÄ±n silindi.';
 
   @override
   String get settingsDeleteAccountFailed =>
       'Hesap silinemedi. Tekrar dene veya support@dailystitch.app adresine yaz.';
 
   @override
-  String get referralYouTitle => 'Arkadaşlarını davet et · Ücretsiz Pro kazan';
+  String get referralYouTitle =>
+      'ArkadaÅŸlarÄ±nÄ± davet et Â· Ãœcretsiz Pro kazan';
 
   @override
   String referralYouSubtitle(int progress, int milestone) {
-    return '$milestone arkadaştan $progress tanesi katıldı';
+    return '$milestone arkadaÅŸtan $progress tanesi katÄ±ldÄ±';
   }
 
   @override
-  String get referralYouShare => 'Daveti paylaş';
+  String get referralYouShare => 'Daveti paylaÅŸ';
 
   @override
-  String get referralYouDetails => 'Detayları gör';
+  String get referralYouDetails => 'DetaylarÄ± gÃ¶r';
 
   @override
-  String get referralPaywallTitle => 'Ücretsiz Pro ayı';
+  String get referralPaywallTitle => 'Ãœcretsiz Pro ayÄ±';
 
   @override
   String get referralPaywallBody =>
-      '5 arkadaş davet et ve katılsın → 1 ay ücretsiz Pro';
+      '5 arkadaÅŸ davet et ve katÄ±lsÄ±n â†’ 1 ay Ã¼cretsiz Pro';
 
   @override
   String get referralPaywallProBody =>
-      'Davet etmeye devam et — ücretsiz Pro aylarını biriktir';
+      'Davet etmeye devam et â€” Ã¼cretsiz Pro aylarÄ±nÄ± biriktir';
 
   @override
   String referralPaywallProgress(Object count, Object milestone) {
@@ -1311,62 +1338,62 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get insightsLoadError =>
-      'İlerlemen yüklenemedi. Daha sonra tekrar dene.';
+      'Ä°lerlemen yÃ¼klenemedi. Daha sonra tekrar dene.';
 
   @override
-  String get insightsMetricCurrentChain => 'MEVCUT ZİNCİR';
+  String get insightsMetricCurrentChain => 'MEVCUT ZÄ°NCÄ°R';
 
   @override
-  String get insightsMetricBestEver => 'EN İYİ';
+  String get insightsMetricBestEver => 'EN Ä°YÄ°';
 
   @override
-  String get insightsMetricTasksDone => 'TAMAMLANAN GÖREVLER';
+  String get insightsMetricTasksDone => 'TAMAMLANAN GÃ–REVLER';
 
   @override
-  String get insightsMetricPerfectDays => 'MÜKEMMEL GÜNLER';
+  String get insightsMetricPerfectDays => 'MÃœKEMMEL GÃœNLER';
 
   @override
-  String get insightsMetricHabits => 'ALIŞKANLIKLAR';
+  String get insightsMetricHabits => 'ALIÅžKANLIKLAR';
 
   @override
-  String get insightsDay => 'gün';
+  String get insightsDay => 'gÃ¼n';
 
   @override
-  String get insightsDays => 'gün';
+  String get insightsDays => 'gÃ¼n';
 
   @override
   String get insightsSectionThisWeek => 'Bu hafta';
 
   @override
-  String get insightsShareMyWeek => 'Haftamı paylaş';
+  String get insightsShareMyWeek => 'HaftamÄ± paylaÅŸ';
 
   @override
-  String get insightsShareMyWeekPro => 'Haftamı paylaş · Pro';
+  String get insightsShareMyWeekPro => 'HaftamÄ± paylaÅŸ Â· Pro';
 
   @override
   String get insightsShareReceiptText =>
-      'Daily Stitch\'te geçen haftam. Zinciri kırma.';
+      'Daily Stitch\'te geÃ§en haftam. Zinciri kÄ±rma.';
 
   @override
   String insightsHistoryWindowTitle(int days) {
-    return 'Son $days gün gösteriliyor';
+    return 'Son $days gÃ¼n gÃ¶steriliyor';
   }
 
   @override
-  String get insightsHistoryUpsell => 'Pro ile tam geçmişini aç';
+  String get insightsHistoryUpsell => 'Pro ile tam geÃ§miÅŸini aÃ§';
 
   @override
-  String get referralScreenTitle => 'Arkadaşlarını davet et';
+  String get referralScreenTitle => 'ArkadaÅŸlarÄ±nÄ± davet et';
 
   @override
-  String get referralLaunchGift => 'Lansman ayı hediyesi';
+  String get referralLaunchGift => 'Lansman ayÄ± hediyesi';
 
   @override
-  String get referralRewardTitle => '1 ay ücretsiz Pro kazan';
+  String get referralRewardTitle => '1 ay Ã¼cretsiz Pro kazan';
 
   @override
   String get referralRewardBody =>
-      'Kodunu arkadaşlarınla paylaş. 5 kişi kodunu kullanarak kayıt olduğunda, Daily Stitch Pro\'yu tam bir ay açarsın.';
+      'Kodunu arkadaÅŸlarÄ±nla paylaÅŸ. 5 kiÅŸi kodunu kullanarak kayÄ±t olduÄŸunda, Daily Stitch Pro\'yu tam bir ay aÃ§arsÄ±n.';
 
   @override
   String get referralYourCode => 'Davet kodun';
@@ -1375,81 +1402,82 @@ class AppLocalizationsTr extends AppLocalizations {
   String get referralCopyCodeTooltip => 'Kodu kopyala';
 
   @override
-  String get referralCodeCopied => 'Davet kodu kopyalandı';
+  String get referralCodeCopied => 'Davet kodu kopyalandÄ±';
 
   @override
-  String get referralShareWithFriends => 'Arkadaşlarınla paylaş';
+  String get referralShareWithFriends => 'ArkadaÅŸlarÄ±nla paylaÅŸ';
 
   @override
   String get referralFooterHint =>
-      'Arkadaşlar hesap oluştururken kodunu girer. Her arkadaş ödüle bir kez sayılır.';
+      'ArkadaÅŸlar hesap oluÅŸtururken kodunu girer. Her arkadaÅŸ Ã¶dÃ¼le bir kez sayÄ±lÄ±r.';
 
   @override
   String referralFriendsJoinedOne(int count) {
-    return '$count arkadaş katıldı';
+    return '$count arkadaÅŸ katÄ±ldÄ±';
   }
 
   @override
   String referralFriendsJoinedMany(int count) {
-    return '$count arkadaş katıldı';
+    return '$count arkadaÅŸ katÄ±ldÄ±';
   }
 
   @override
   String referralRewardsEarnedOne(int count) {
-    return '$count ücretsiz Pro ayı kazandın.';
+    return '$count Ã¼cretsiz Pro ayÄ± kazandÄ±n.';
   }
 
   @override
   String referralRewardsEarnedMany(int count) {
-    return '$count ücretsiz Pro ayı kazandın.';
+    return '$count Ã¼cretsiz Pro ayÄ± kazandÄ±n.';
   }
 
   @override
   String get referralRewardUnlocked =>
-      'Ödül açıldı — ücretsiz Pro ayının tadını çıkar!';
+      'Ã–dÃ¼l aÃ§Ä±ldÄ± â€” Ã¼cretsiz Pro ayÄ±nÄ±n tadÄ±nÄ± Ã§Ä±kar!';
 
   @override
   String referralRemainingToUnlock(int remaining) {
-    return 'Ücretsiz ayını açmak için $remaining tane daha';
+    return 'Ãœcretsiz ayÄ±nÄ± aÃ§mak iÃ§in $remaining tane daha';
   }
 
   @override
   String youProMemberSince(String month) {
-    return '$month ayından beri Bloom Pro üyesisin';
+    return '$month ayÄ±ndan beri Bloom Pro Ã¼yesisin';
   }
 
   @override
-  String get youProPerksTitle => 'Pro avantajların';
+  String get youProPerksTitle => 'Pro avantajlarÄ±n';
 
   @override
-  String get manageProThankYou => 'Bloom\'a destek olduğun için teşekkürler';
+  String get manageProThankYou =>
+      'Bloom\'a destek olduÄŸun iÃ§in teÅŸekkÃ¼rler';
 
   @override
   String get manageProReferralHint =>
-      'Pro süreni uzatmak için daha fazla arkadaş davet et';
+      'Pro sÃ¼reni uzatmak iÃ§in daha fazla arkadaÅŸ davet et';
 
   @override
   String bootstrapConfigErrorBody(String detail) {
-    return '$detail\n\nleanspace/.env dosyasına SUPABASE_URL ve SUPABASE_PUBLISHABLE_KEY (veya eski SUPABASE_ANON_KEY) ekle, sonra yeniden derle:\n\nflutter build apk --debug';
+    return '$detail\n\nleanspace/.env dosyasÄ±na API_BASE_URL ve GOOGLE_CLIENT_ID (veya eski GOOGLE_CLIENT_ID) ekle, sonra yeniden derle:\n\nflutter build apk --debug';
   }
 
   @override
-  String get languageSystemDefault => 'Sistem varsayılanı';
+  String get languageSystemDefault => 'Sistem varsayÄ±lanÄ±';
 
   @override
   String get languageNameEn => 'English';
 
   @override
-  String get languageNameUr => 'اردو (Urdu)';
+  String get languageNameUr => 'Ø§Ø±Ø¯Ùˆ (Urdu)';
 
   @override
-  String get languageNameEs => 'Español';
+  String get languageNameEs => 'EspaÃ±ol';
 
   @override
-  String get languageNamePt => 'Português';
+  String get languageNamePt => 'PortuguÃªs';
 
   @override
-  String get languageNameFr => 'Français';
+  String get languageNameFr => 'FranÃ§ais';
 
   @override
   String get languageNameDe => 'Deutsch';
@@ -1458,20 +1486,20 @@ class AppLocalizationsTr extends AppLocalizations {
   String get languageNameIt => 'Italiano';
 
   @override
-  String get languageNameAr => 'العربية';
+  String get languageNameAr => 'Ø§Ù„Ø¹Ø±Ø¨ÙŠØ©';
 
   @override
-  String get languageNameTr => 'Türkçe';
+  String get languageNameTr => 'TÃ¼rkÃ§e';
 
   @override
   String get languageNameId => 'Bahasa Indonesia';
 
   @override
-  String get onboardingLanguageTitle => 'Dilini seç';
+  String get onboardingLanguageTitle => 'Dilini seÃ§';
 
   @override
   String get onboardingLanguageBody =>
-      'Daily Stitch boyunca kullanmak istediğin dili seç. İstediğin zaman Ayarlar\'dan değiştirebilirsin.';
+      'Daily Stitch boyunca kullanmak istediÄŸin dili seÃ§. Ä°stediÄŸin zaman Ayarlar\'dan deÄŸiÅŸtirebilirsin.';
 
   @override
   String get onboardingLanguageContinue => 'Devam';
@@ -1480,39 +1508,39 @@ class AppLocalizationsTr extends AppLocalizations {
   String get commonPro => 'PRO';
 
   @override
-  String get commonFriend => 'Arkadaş';
+  String get commonFriend => 'ArkadaÅŸ';
 
   @override
-  String get settingsAppTheme => 'Uygulama Teması';
+  String get settingsAppTheme => 'Uygulama TemasÄ±';
 
   @override
-  String get settingsAppThemeSubtitle => 'Kişisel korunak renklerini seç';
+  String get settingsAppThemeSubtitle => 'KiÅŸisel korunak renklerini seÃ§';
 
   @override
   String get settingsInviteFriendsTitle =>
-      'Arkadaşlarını davet et · Ücretsiz Pro';
+      'ArkadaÅŸlarÄ±nÄ± davet et Â· Ãœcretsiz Pro';
 
   @override
   String get settingsInviteFriendsSubtitle =>
-      '5 arkadaş katıldığında 1 ay ücretsiz kazan';
+      '5 arkadaÅŸ katÄ±ldÄ±ÄŸÄ±nda 1 ay Ã¼cretsiz kazan';
 
   @override
-  String get themePickerTitle => 'Kişisel Korunak';
+  String get themePickerTitle => 'KiÅŸisel Korunak';
 
   @override
-  String get themePickerSubtitle => 'Sana huzur veren bir renk paleti seç.';
+  String get themePickerSubtitle => 'Sana huzur veren bir renk paleti seÃ§.';
 
   @override
-  String get themeNameClassicBloom => 'Klasik Çiçek';
+  String get themeNameClassicBloom => 'Klasik Ã‡iÃ§ek';
 
   @override
-  String get themeNameSolarTerracotta => 'Güneş Terrakota';
+  String get themeNameSolarTerracotta => 'GÃ¼neÅŸ Terrakota';
 
   @override
-  String get themeNameMidnightOasis => 'Gece Yarısı Vahası';
+  String get themeNameMidnightOasis => 'Gece YarÄ±sÄ± VahasÄ±';
 
   @override
-  String get themeNameLavenderDream => 'Lavanta Rüyası';
+  String get themeNameLavenderDream => 'Lavanta RÃ¼yasÄ±';
 
   @override
   String get themeNameNordicFrost => 'Kuzey Buzulu';
@@ -1521,119 +1549,119 @@ class AppLocalizationsTr extends AppLocalizations {
   String get themeNameCyberpunkNeon => 'Cyberpunk Neon';
 
   @override
-  String get reminderTitle => 'Hatırlatmalar';
+  String get reminderTitle => 'HatÄ±rlatmalar';
 
   @override
   String get reminderBody =>
-      'Son Çağrı, görevler hâlâ açıksa gece yarısından önce sana haber verir.';
+      'Son Ã‡aÄŸrÄ±, gÃ¶revler hÃ¢lÃ¢ aÃ§Ä±ksa gece yarÄ±sÄ±ndan Ã¶nce sana haber verir.';
 
   @override
-  String get reminderFinalCall => 'Son Çağrı';
+  String get reminderFinalCall => 'Son Ã‡aÄŸrÄ±';
 
   @override
-  String get reminderEveningNudge => 'Akşam hatırlatması';
+  String get reminderEveningNudge => 'AkÅŸam hatÄ±rlatmasÄ±';
 
   @override
-  String get reminderChangeTime => 'Saati değiştir';
+  String get reminderChangeTime => 'Saati deÄŸiÅŸtir';
 
   @override
-  String get reminderSave => 'Hatırlatmaları kaydet';
+  String get reminderSave => 'HatÄ±rlatmalarÄ± kaydet';
 
   @override
-  String get notificationChannelReminders => 'Daily Stitch hatırlatmaları';
+  String get notificationChannelReminders => 'Daily Stitch hatÄ±rlatmalarÄ±';
 
   @override
   String get notificationChannelRemindersDesc =>
-      'Akşam hatırlatması ve Son Çağrı hatırlatmaları';
+      'AkÅŸam hatÄ±rlatmasÄ± ve Son Ã‡aÄŸrÄ± hatÄ±rlatmalarÄ±';
 
   @override
-  String get notificationChannelAlarms => 'Daily Stitch görev alarmları';
+  String get notificationChannelAlarms => 'Daily Stitch gÃ¶rev alarmlarÄ±';
 
   @override
   String get notificationChannelAlarmsDesc =>
-      'Görev hatırlatmaları için sesli alarmlar';
+      'GÃ¶rev hatÄ±rlatmalarÄ± iÃ§in sesli alarmlar';
 
   @override
-  String get notificationTaskReminderTitle => 'Görev hatırlatması';
+  String get notificationTaskReminderTitle => 'GÃ¶rev hatÄ±rlatmasÄ±';
 
   @override
-  String get notificationFinalCallTitle => 'Son Çağrı';
+  String get notificationFinalCallTitle => 'Son Ã‡aÄŸrÄ±';
 
   @override
   String notificationFinalCallBody(int count) {
-    return 'Bugün hâlâ $count açık görevin var.';
+    return 'BugÃ¼n hÃ¢lÃ¢ $count aÃ§Ä±k gÃ¶revin var.';
   }
 
   @override
-  String get notificationEveningTitle => 'Akşam kontrolü';
+  String get notificationEveningTitle => 'AkÅŸam kontrolÃ¼';
 
   @override
-  String get notificationEveningBody => 'Bahçen bugün nasıl büyüdü?';
+  String get notificationEveningBody => 'BahÃ§en bugÃ¼n nasÄ±l bÃ¼yÃ¼dÃ¼?';
 
   @override
-  String get widgetSetupTitle => 'Zincir widget\'ı ekle';
+  String get widgetSetupTitle => 'Zincir widget\'Ä± ekle';
 
   @override
   String get widgetSetupBody =>
-      'Serini ana ekranda tut — uygulamayı açmana gerek yok.';
+      'Serini ana ekranda tut â€” uygulamayÄ± aÃ§mana gerek yok.';
 
   @override
   String get widgetSetupAdd => 'Ana ekrana ekle';
 
   @override
-  String get widgetSetupStep1 => 'Ana ekranında uzun bas';
+  String get widgetSetupStep1 => 'Ana ekranÄ±nda uzun bas';
 
   @override
   String get widgetSetupStep2 => 'Widget\'lara dokun';
 
   @override
-  String get widgetSetupStep3 => 'Daily Stitch\'i bul ve sürükle';
+  String get widgetSetupStep3 => 'Daily Stitch\'i bul ve sÃ¼rÃ¼kle';
 
   @override
   String get widgetSetupPinSuccess =>
-      'Widget\'ı yerleştirmek için ana ekranına bak.';
+      'Widget\'Ä± yerleÅŸtirmek iÃ§in ana ekranÄ±na bak.';
 
   @override
   String get widgetSetupPinFallback =>
-      'Başlatıcın tek dokunuşla eklemeyi desteklemiyor olabilir. Aşağıdaki manuel adımları kullan.';
+      'BaÅŸlatÄ±cÄ±n tek dokunuÅŸla eklemeyi desteklemiyor olabilir. AÅŸaÄŸÄ±daki manuel adÄ±mlarÄ± kullan.';
 
   @override
-  String get paywallWelcomePro => 'Daily Stitch Pro\'ya hoş geldin';
+  String get paywallWelcomePro => 'Daily Stitch Pro\'ya hoÅŸ geldin';
 
   @override
   String get paywallSavePercent => '~%16 TASARRUF';
 
   @override
-  String get paywallTermsTitle => 'Abonelik koşulları';
+  String get paywallTermsTitle => 'Abonelik koÅŸullarÄ±';
 
   @override
   String get paywallTermsBody =>
-      'Faturalama Google Play tarafından yapılır. Abonelikler, mevcut dönemin sonundan en az 24 saat önce Play Store → Abonelikler\'den iptal etmediğin sürece otomatik olarak yenilenir. Aboneliğini Google Play hesabından istediğin zaman yönetebilir veya iptal edebilirsin.\n\nUygulamayı kaldırman aboneliğini iptal etmez.\n\nGösterilen fiyatlar yerel para birimindedir ve bölgeye göre değişebilir. Vergiler uygulanabilir.';
+      'Faturalama Google Play tarafÄ±ndan yapÄ±lÄ±r. Abonelikler, mevcut dÃ¶nemin sonundan en az 24 saat Ã¶nce Play Store â†’ Abonelikler\'den iptal etmediÄŸin sÃ¼rece otomatik olarak yenilenir. AboneliÄŸini Google Play hesabÄ±ndan istediÄŸin zaman yÃ¶netebilir veya iptal edebilirsin.\n\nUygulamayÄ± kaldÄ±rman aboneliÄŸini iptal etmez.\n\nGÃ¶sterilen fiyatlar yerel para birimindedir ve bÃ¶lgeye gÃ¶re deÄŸiÅŸebilir. Vergiler uygulanabilir.';
 
   @override
   String get paywallPrivacyTitle => 'Gizlilik';
 
   @override
   String get paywallPrivacyBody =>
-      'LeanSpace, görevlerini, alışkanlıklarını ve seri verilerini Supabase arka ucunda hesabına bağlı olarak saklar. Verilerini asla satmıyoruz.\n\nAbonelik satın alımları Google Play tarafından işlenir. Pro durumunu onaylamak için Google\'dan doğrulanmış bir satın alım belirteci alırız. Ödeme bilgilerini görmeyiz veya saklamayız.\n\nAyarlar → Hesap silme yolundan tam veri dışa aktarma veya hesap silme talebinde bulunabilirsin.';
+      'Daily Stitch, gÃ¶revlerini, alÄ±ÅŸkanlÄ±klarÄ±nÄ± ve seri verilerini gÃ¼venli arka ucumuzda hesabÄ±na baÄŸlÄ± olarak saklar. Verilerini asla satmÄ±yoruz.\n\nAbonelik satÄ±n alÄ±mlarÄ± Google Play tarafÄ±ndan iÅŸlenir. Pro durumunu onaylamak iÃ§in Google\'dan doÄŸrulanmÄ±ÅŸ bir satÄ±n alÄ±m belirteci alÄ±rÄ±z. Ã–deme bilgilerini gÃ¶rmeyiz veya saklamayÄ±z.\n\nAyarlar â†’ Hesap silme yolundan tam veri dÄ±ÅŸa aktarma veya hesap silme talebinde bulunabilirsin.';
 
   @override
   String get paywallCloseTooltip => 'Kapat';
 
   @override
-  String get paywallFooterLinks => 'Geri Yükle · Koşullar · Gizlilik';
+  String get paywallFooterLinks => 'Geri YÃ¼kle Â· KoÅŸullar Â· Gizlilik';
 
   @override
-  String get manageProTitle => 'Pro aboneliği';
+  String get manageProTitle => 'Pro aboneliÄŸi';
 
   @override
   String get manageProActive => 'Aktif';
 
   @override
-  String get manageProNotSubscribed => 'Abone değil';
+  String get manageProNotSubscribed => 'Abone deÄŸil';
 
   @override
-  String get manageProFreeTier => 'Ücretsiz katman';
+  String get manageProFreeTier => 'Ãœcretsiz katman';
 
   @override
   String manageProRenewsOn(String date) {
@@ -1642,84 +1670,85 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get manageProFreeBody =>
-      'Daily Stitch Ücretsiz\'i kullanıyorsun. Tam sistemi açmak için yükselt.';
+      'Daily Stitch Ãœcretsiz\'i kullanÄ±yorsun. Tam sistemi aÃ§mak iÃ§in yÃ¼kselt.';
 
   @override
-  String get manageProSectionManage => 'YÖNET';
+  String get manageProSectionManage => 'YÃ–NET';
 
   @override
-  String get manageProOpenPlay => 'Google Play aboneliklerini aç';
+  String get manageProOpenPlay => 'Google Play aboneliklerini aÃ§';
 
   @override
   String get manageProOpenPlaySubtitlePro =>
-      'İptal et, planı değiştir veya ödeme yöntemini güncelle';
+      'Ä°ptal et, planÄ± deÄŸiÅŸtir veya Ã¶deme yÃ¶ntemini gÃ¼ncelle';
 
   @override
   String get manageProOpenPlaySubtitleFree =>
-      'Mevcut aboneliğini (varsa) burada bul';
+      'Mevcut aboneliÄŸini (varsa) burada bul';
 
   @override
-  String get manageProShareApp => 'Daily Stitch\'i paylaş';
+  String get manageProShareApp => 'Daily Stitch\'i paylaÅŸ';
 
   @override
-  String get manageProShareSubtitle => 'Bir arkadaşına zincirden bahset';
+  String get manageProShareSubtitle => 'Bir arkadaÅŸÄ±na zincirden bahset';
 
   @override
   String get manageProSectionHelp => 'YARDIM MI LAZIM?';
 
   @override
-  String get manageProHelpTitle => 'Yardım & Destek';
+  String get manageProHelpTitle => 'YardÄ±m & Destek';
 
   @override
-  String get manageProHelpSubtitle => 'Abonelik SSS, iletişim, hata raporları';
+  String get manageProHelpSubtitle =>
+      'Abonelik SSS, iletiÅŸim, hata raporlarÄ±';
 
   @override
   String manageProBillingFooter(String version) {
-    return 'Faturalama Google Play tarafından yapılır · $version';
+    return 'Faturalama Google Play tarafÄ±ndan yapÄ±lÄ±r Â· $version';
   }
 
   @override
   String get manageProPlayInstructions =>
-      'Google Play Store uygulamasını aç → profil resmine dokun → Ödemeler ve abonelikler → Abonelikler.';
+      'Google Play Store uygulamasÄ±nÄ± aÃ§ â†’ profil resmine dokun â†’ Ã–demeler ve abonelikler â†’ Abonelikler.';
 
   @override
-  String get addTaskGrowSomething => 'Bir Şey Büyüt';
+  String get addTaskGrowSomething => 'Bir Åžey BÃ¼yÃ¼t';
 
   @override
   String get addTaskPlantSprout => 'Bir Filiz Ek';
 
   @override
-  String get addTaskIntentionName => 'NİYET ADI';
+  String get addTaskIntentionName => 'NÄ°YET ADI';
 
   @override
-  String get addTaskSproutName => 'FİLİZ ADI';
+  String get addTaskSproutName => 'FÄ°LÄ°Z ADI';
 
   @override
-  String get addTaskHintTask => 'ör. Sabah Güneş Selamı';
+  String get addTaskHintTask => 'Ã¶r. Sabah GÃ¼neÅŸ SelamÄ±';
 
   @override
-  String get addTaskHintHabit => 'ör. Sabah Yogası';
+  String get addTaskHintHabit => 'Ã¶r. Sabah YogasÄ±';
 
   @override
   String get addTaskWhen => 'NE ZAMAN?';
 
   @override
-  String get addTaskPriority => 'ÖNCELİK';
+  String get addTaskPriority => 'Ã–NCELÄ°K';
 
   @override
   String get addTaskNotes => 'NOTLAR';
 
   @override
-  String get addTaskCadenceDaily => 'Günlük';
+  String get addTaskCadenceDaily => 'GÃ¼nlÃ¼k';
 
   @override
-  String get addTaskCadenceWeekdays => 'İş günleri';
+  String get addTaskCadenceWeekdays => 'Ä°ÅŸ gÃ¼nleri';
 
   @override
   String get addTaskCadence3x => 'Haftada 3x';
 
   @override
-  String get addTaskCadenceWeekly => 'Haftalık';
+  String get addTaskCadenceWeekly => 'HaftalÄ±k';
 
   @override
   String get addTaskPlantIntention => 'Niyet Ek';
@@ -1728,35 +1757,36 @@ class AppLocalizationsTr extends AppLocalizations {
   String get addTaskPlantSproutCta => 'Filiz Ek';
 
   @override
-  String get addTaskPlanting => 'Ekiliyor…';
+  String get addTaskPlanting => 'Ekiliyorâ€¦';
 
   @override
-  String get addTaskNameIntentionError => 'Niyetini adlandır';
+  String get addTaskNameIntentionError => 'Niyetini adlandÄ±r';
 
   @override
-  String get addTaskNameSproutError => 'Filizini adlandır';
+  String get addTaskNameSproutError => 'Filizini adlandÄ±r';
 
   @override
   String get addTaskNotesMigrationWarning =>
-      'Görev kaydedildi. Notlar ve öncelik için en son Supabase migrasyonu gerekiyor — supabase/migrations/20260701000000_todos_notes_priority.sql dosyasını çalıştır.';
+      'GÃ¶rev kaydedildi. Notlar ve Ã¶ncelik iÃ§in en son arka uÃ§ migrasyonu gerekiyor.';
 
   @override
-  String get addTaskNoSproutSlots => 'Boş filiz slotu yok — önce birini sula.';
+  String get addTaskNoSproutSlots =>
+      'BoÅŸ filiz slotu yok â€” Ã¶nce birini sula.';
 
   @override
-  String get addTaskSaveSproutError => 'Filiz kaydedilemedi — tekrar dene.';
+  String get addTaskSaveSproutError => 'Filiz kaydedilemedi â€” tekrar dene.';
 
   @override
   String get addTaskElementWater => 'SU';
 
   @override
-  String get addTaskElementLight => 'IŞIK';
+  String get addTaskElementLight => 'IÅžIK';
 
   @override
   String get addTaskElementSoil => 'TOPRAK';
 
   @override
-  String get addTaskElementBreeze => 'RÜZGAR';
+  String get addTaskElementBreeze => 'RÃœZGAR';
 
   @override
   String get addTaskCadenceLabel => 'SIKLIK';
@@ -1769,165 +1799,165 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get addTaskNotesHintTask =>
-      'Bu görev için araçlar veya zihin ipuçları var mı?';
+      'Bu gÃ¶rev iÃ§in araÃ§lar veya zihin ipuÃ§larÄ± var mÄ±?';
 
   @override
-  String get addTaskNotesHintHabit => 'Bu filize bakmak nasıl görünüyor?';
+  String get addTaskNotesHintHabit => 'Bu filize bakmak nasÄ±l gÃ¶rÃ¼nÃ¼yor?';
 
   @override
-  String get addTaskChooseElement => 'ÖĞE SEÇ';
+  String get addTaskChooseElement => 'Ã–ÄžE SEÃ‡';
 
   @override
-  String get addTaskElementsTooltip => 'Öğeler ne anlama gelir?';
+  String get addTaskElementsTooltip => 'Ã–ÄŸeler ne anlama gelir?';
 
   @override
-  String get addTaskTaskSeed => 'Görev Tohumu';
+  String get addTaskTaskSeed => 'GÃ¶rev Tohumu';
 
   @override
-  String get addTaskHabitSprout => 'Alışkanlık Filizi';
+  String get addTaskHabitSprout => 'AlÄ±ÅŸkanlÄ±k Filizi';
 
   @override
-  String get addTaskPickElement => 'Doğru öğeyi seç';
+  String get addTaskPickElement => 'DoÄŸru Ã¶ÄŸeyi seÃ§';
 
   @override
   String get addTaskPickElementBody =>
-      'Her öğe farklı bir çaba türüne karşılık gelir. Doğru olanı suladığında Koruyucu daha güçlü hale gelir.';
+      'Her Ã¶ÄŸe farklÄ± bir Ã§aba tÃ¼rÃ¼ne karÅŸÄ±lÄ±k gelir. DoÄŸru olanÄ± suladÄ±ÄŸÄ±nda Koruyucu daha gÃ¼Ã§lÃ¼ hale gelir.';
 
   @override
   String get addTaskClearForm => 'Formu temizle';
 
   @override
-  String get shareCouldNotShare => 'Şu anda paylaşılamadı';
+  String get shareCouldNotShare => 'Åžu anda paylaÅŸÄ±lamadÄ±';
 
   @override
-  String get authReferralCodeLabel => 'Davet kodu (isteğe bağlı)';
+  String get authReferralCodeLabel => 'Davet kodu (isteÄŸe baÄŸlÄ±)';
 
   @override
-  String get authReferralCodeHint => 'Arkadaş kodu';
+  String get authReferralCodeHint => 'ArkadaÅŸ kodu';
 
   @override
-  String get youPerkHabitSlots => '5 alışkanlık slotu';
+  String get youPerkHabitSlots => '5 alÄ±ÅŸkanlÄ±k slotu';
 
   @override
-  String get youPerkFullHistory => 'Tam geçmiş';
+  String get youPerkFullHistory => 'Tam geÃ§miÅŸ';
 
   @override
-  String get youPerkAllThemes => 'Tüm temalar';
+  String get youPerkAllThemes => 'TÃ¼m temalar';
 
   @override
-  String get youPerkStreakFreezes => 'Ayda 2 seri dondurması';
+  String get youPerkStreakFreezes => 'Ayda 2 seri dondurmasÄ±';
 
   @override
   String get youPerkLegendaryMedals => 'Efsanevi madalyalar';
 
   @override
-  String get subscriptionPurchaseFailed => 'Satın alınamadı. Tekrar dene.';
+  String get subscriptionPurchaseFailed => 'SatÄ±n alÄ±namadÄ±. Tekrar dene.';
 
   @override
   String get subscriptionUnavailable =>
-      'Bu cihazda uygulama içi satın alımlar kullanılamıyor.';
+      'Bu cihazda uygulama iÃ§i satÄ±n alÄ±mlar kullanÄ±lamÄ±yor.';
 
   @override
-  String get subscriptionLoadFailed => 'Abonelik seçenekleri yüklenemedi.';
+  String get subscriptionLoadFailed => 'Abonelik seÃ§enekleri yÃ¼klenemedi.';
 
   @override
   String get subscriptionVerifyFailed =>
-      'Satın alım doğrulanamadı. Satın Almayı Geri Yükle\'yi dene.';
+      'SatÄ±n alÄ±m doÄŸrulanamadÄ±. SatÄ±n AlmayÄ± Geri YÃ¼kle\'yi dene.';
 
   @override
-  String get streakFreezeFailed => 'Seri dondurması kullanılamadı.';
+  String get streakFreezeFailed => 'Seri dondurmasÄ± kullanÄ±lamadÄ±.';
 
   @override
-  String get streakFreezeAlreadyUsed => 'Bu ay dondurmanı zaten kullandın.';
+  String get streakFreezeAlreadyUsed => 'Bu ay dondurmanÄ± zaten kullandÄ±n.';
 
   @override
   String get streakFreezeNoMissed =>
-      'O günde dondurulacak kaçırılmış görev yok.';
+      'O gÃ¼nde dondurulacak kaÃ§Ä±rÄ±lmÄ±ÅŸ gÃ¶rev yok.';
 
   @override
   String get streakFreezeNotPastDay =>
-      'Sadece geçmiş bir günü dondurabilirsin.';
+      'Sadece geÃ§miÅŸ bir gÃ¼nÃ¼ dondurabilirsin.';
 
   @override
-  String get myDayLoadError => 'Günüm yüklenemedi. Yenilemek için çek.';
+  String get myDayLoadError => 'GÃ¼nÃ¼m yÃ¼klenemedi. Yenilemek iÃ§in Ã§ek.';
 
   @override
-  String get myDayCapReached => 'Bugünün 5 görev sınırına ulaştın.';
+  String get myDayCapReached => 'BugÃ¼nÃ¼n 5 gÃ¶rev sÄ±nÄ±rÄ±na ulaÅŸtÄ±n.';
 
   @override
-  String get myDayRemoveTaskError => 'Görev kaldırılamadı.';
+  String get myDayRemoveTaskError => 'GÃ¶rev kaldÄ±rÄ±lamadÄ±.';
 
   @override
-  String get shareCardTitle => 'Haftanı paylaş';
+  String get shareCardTitle => 'HaftanÄ± paylaÅŸ';
 
   @override
-  String get shareCardCta => 'Görseli paylaş';
+  String get shareCardCta => 'GÃ¶rseli paylaÅŸ';
 
   @override
   String get medalTierSprout => 'Filiz';
 
   @override
-  String get medalTierCommon => 'Yaygın';
+  String get medalTierCommon => 'YaygÄ±n';
 
   @override
   String get medalTierRare => 'Nadir';
 
   @override
-  String get medalTierEpic => 'Destansı';
+  String get medalTierEpic => 'DestansÄ±';
 
   @override
   String get medalTierLegendary => 'Efsanevi';
 
   @override
-  String get medalCategoryTasks => 'Görevler';
+  String get medalCategoryTasks => 'GÃ¶revler';
 
   @override
-  String get medalCategoryHabits => 'Alışkanlıklar';
+  String get medalCategoryHabits => 'AlÄ±ÅŸkanlÄ±klar';
 
   @override
   String get medalCategoryStreaks => 'Seriler';
 
   @override
-  String get medalCategoryMastery => 'Ustalık';
+  String get medalCategoryMastery => 'UstalÄ±k';
 
   @override
-  String get medalsShareTooltip => 'Başarıları paylaş';
+  String get medalsShareTooltip => 'BaÅŸarÄ±larÄ± paylaÅŸ';
 
   @override
-  String get medalsFilterAll => 'Tümü';
+  String get medalsFilterAll => 'TÃ¼mÃ¼';
 
   @override
   String get addHabitTitleNew => 'Yeni bir filiz ek';
 
   @override
-  String get addHabitTitleEdit => 'Filizine bakım yap';
+  String get addHabitTitleEdit => 'Filizine bakÄ±m yap';
 
   @override
-  String get addHabitLabelSproutName => 'FİLİZ ADI';
+  String get addHabitLabelSproutName => 'FÄ°LÄ°Z ADI';
 
   @override
-  String get shareCardAppBarTitle => 'Paylaşım Kartı';
+  String get shareCardAppBarTitle => 'PaylaÅŸÄ±m KartÄ±';
 
   @override
-  String get shareCardAppBarTitleMedal => 'Madalyanı paylaş';
+  String get shareCardAppBarTitleMedal => 'MadalyanÄ± paylaÅŸ';
 
   @override
   String shareCardDescMedal(Object title) {
-    return '$title rozetini göster';
+    return '$title rozetini gÃ¶ster';
   }
 
   @override
   String get shareCardBodyMedal =>
-      'Kazancını çevrenle paylaş. Kart PNG olarak dışa aktarılır ve herhangi bir sosyal uygulama için hazırdır.';
+      'KazancÄ±nÄ± Ã§evrenle paylaÅŸ. Kart PNG olarak dÄ±ÅŸa aktarÄ±lÄ±r ve herhangi bir sosyal uygulama iÃ§in hazÄ±rdÄ±r.';
 
   @override
-  String get shareCardCtaPreparing => 'Hazırlanıyor…';
+  String get shareCardCtaPreparing => 'HazÄ±rlanÄ±yorâ€¦';
 
   @override
-  String get shareCardMilestone => 'YENİ KİLOMETRE TAŞI AÇILDI';
+  String get shareCardMilestone => 'YENÄ° KÄ°LOMETRE TAÅžI AÃ‡ILDI';
 
   @override
-  String get shareCardStatChain => 'günlük zincir';
+  String get shareCardStatChain => 'gÃ¼nlÃ¼k zincir';
 
   @override
   String get shareCardStatSprouts => 'filiz';
@@ -1937,50 +1967,50 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String shareCardHeadlineStreak(int days) {
-    return '$days Günlük Seri';
+    return '$days GÃ¼nlÃ¼k Seri';
   }
 
   @override
   String shareCardHeadlineMedals(int count) {
-    return '$count Madalya Kazanıldı';
+    return '$count Madalya KazanÄ±ldÄ±';
   }
 
   @override
   String get shareCardHeadlineSproutGuardian => 'Filiz Koruyucusu';
 
   @override
-  String get shareCardHeadlineFirstSeeds => 'İlk Tohumlar Ekildi';
+  String get shareCardHeadlineFirstSeeds => 'Ä°lk Tohumlar Ekildi';
 
   @override
-  String get shareCardHeadlineGardenBegins => 'Bir Bahçe Başlıyor';
+  String get shareCardHeadlineGardenBegins => 'Bir BahÃ§e BaÅŸlÄ±yor';
 
   @override
   String get shareCardSubheadMonth =>
-      'Alışkanlıklarını tam bir ay başarıyla besledin.';
+      'AlÄ±ÅŸkanlÄ±klarÄ±nÄ± tam bir ay baÅŸarÄ±yla besledin.';
 
   @override
   String get shareCardSubheadWeek =>
-      'Tam bir hafta büyüme — ormanınız sıklaşıyor.';
+      'Tam bir hafta bÃ¼yÃ¼me â€” ormanÄ±nÄ±z sÄ±klaÅŸÄ±yor.';
 
   @override
   String get shareCardSubheadProgress =>
-      'Korunağın gerçek ilerleme gösteriyor. Bakmaya devam et.';
+      'KorunaÄŸÄ±n gerÃ§ek ilerleme gÃ¶steriyor. Bakmaya devam et.';
 
   @override
   String get shareCardSubheadSprouts =>
-      'İlk filizlerin kök salıyor. Her gün sula.';
+      'Ä°lk filizlerin kÃ¶k salÄ±yor. Her gÃ¼n sula.';
 
   @override
   String get shareCardSubheadFirstSeeds =>
-      'İlk tohumların toprağa ekildi. Açılmalarını izle.';
+      'Ä°lk tohumlarÄ±n topraÄŸa ekildi. AÃ§Ä±lmalarÄ±nÄ± izle.';
 
   @override
   String get shareCardSubheadFallback =>
-      'Her orman tek bir küçük seçimle başlar.';
+      'Her orman tek bir kÃ¼Ã§Ã¼k seÃ§imle baÅŸlar.';
 
   @override
   String shareAppText(String url) {
-    return 'Daily Stitch — günde beş küçük tohum, kırılmaz bir zincir. Seninkini ek.\n\n$url';
+    return 'Daily Stitch â€” gÃ¼nde beÅŸ kÃ¼Ã§Ã¼k tohum, kÄ±rÄ±lmaz bir zincir. Seninkini ek.\n\n$url';
   }
 
   @override
@@ -1988,27 +2018,27 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String shareAppReferralText(String code, String url) {
-    return 'Daily Stitch\'te günlük zincirimi oluşturuyorum — $code davet kodumla katıl, ikimiz de büyüyelim.\n\n$url';
+    return 'Daily Stitch\'te gÃ¼nlÃ¼k zincirimi oluÅŸturuyorum â€” $code davet kodumla katÄ±l, ikimiz de bÃ¼yÃ¼yelim.\n\n$url';
   }
 
   @override
-  String get shareAppReferralSubject => 'Bana Daily Stitch\'te katıl';
+  String get shareAppReferralSubject => 'Bana Daily Stitch\'te katÄ±l';
 
   @override
   String shareCardShareTextProgress(String year) {
-    return 'Daily Stitch ilerlemem — $year Daily Stitch\'te.';
+    return 'Daily Stitch ilerlemem â€” $year Daily Stitch\'te.';
   }
 
   @override
   String shareCardShareTextMedal(String title, String subtitle) {
-    return 'Daily Stitch\'te \"$title\" madalyasını açtım. $subtitle';
+    return 'Daily Stitch\'te \"$title\" madalyasÄ±nÄ± aÃ§tÄ±m. $subtitle';
   }
 
   @override
-  String get insightsReceiptTasksDone => 'Tamamlanan görevler';
+  String get insightsReceiptTasksDone => 'Tamamlanan gÃ¶revler';
 
   @override
-  String get insightsReceiptPerfectDays => 'Mükemmel günler';
+  String get insightsReceiptPerfectDays => 'MÃ¼kemmel gÃ¼nler';
 
   @override
   String get insightsReceiptCompletion => 'Tamamlanma';
@@ -2019,58 +2049,58 @@ class AppLocalizationsTr extends AppLocalizations {
   }
 
   @override
-  String get insightsReceiptFooter => 'Zinciri kırma.';
+  String get insightsReceiptFooter => 'Zinciri kÄ±rma.';
 
   @override
   String get elementLabelWater => 'Su';
 
   @override
-  String get elementLabelLight => 'Işık';
+  String get elementLabelLight => 'IÅŸÄ±k';
 
   @override
   String get elementLabelSoil => 'Toprak';
 
   @override
-  String get elementLabelBreeze => 'Rüzgar';
+  String get elementLabelBreeze => 'RÃ¼zgar';
 
   @override
   String get elementTaglineWater =>
-      'Yenile. Hidrasyon, dinlenme, duygusal bakım — kuyuyu dolduran her şey.';
+      'Yenile. Hidrasyon, dinlenme, duygusal bakÄ±m â€” kuyuyu dolduran her ÅŸey.';
 
   @override
   String get elementTaglineLight =>
-      'Uyan. Sabah ışığı, odak blokları, çalışma, meditasyon — enerji ve netlik.';
+      'Uyan. Sabah Ä±ÅŸÄ±ÄŸÄ±, odak bloklarÄ±, Ã§alÄ±ÅŸma, meditasyon â€” enerji ve netlik.';
 
   @override
   String get elementTaglineSoil =>
-      'Yerleş. Okuma, günlük, derin çalışma — uzun vadeli güç inşa eden yavaş kökler.';
+      'YerleÅŸ. Okuma, gÃ¼nlÃ¼k, derin Ã§alÄ±ÅŸma â€” uzun vadeli gÃ¼Ã§ inÅŸa eden yavaÅŸ kÃ¶kler.';
 
   @override
   String get elementTaglineBreeze =>
-      'Hareket et. Yürüyüşler, koşular, nefes egzersizleri — kafayı temizleyen hafif, mobil enerji.';
+      'Hareket et. YÃ¼rÃ¼yÃ¼ÅŸler, koÅŸular, nefes egzersizleri â€” kafayÄ± temizleyen hafif, mobil enerji.';
 
   @override
-  String get elementWhenWater => 'Tükenmiş veya yorgun hissettiğinde.';
+  String get elementWhenWater => 'TÃ¼kenmiÅŸ veya yorgun hissettiÄŸinde.';
 
   @override
-  String get elementWhenLight => 'Güne net bir başlangıç gerektiğinde.';
+  String get elementWhenLight => 'GÃ¼ne net bir baÅŸlangÄ±Ã§ gerektiÄŸinde.';
 
   @override
   String get elementWhenSoil =>
-      'İş yavaş ama değerli olduğunda (çalışma, zanaat, bakım).';
+      'Ä°ÅŸ yavaÅŸ ama deÄŸerli olduÄŸunda (Ã§alÄ±ÅŸma, zanaat, bakÄ±m).';
 
   @override
   String get elementWhenBreeze =>
-      'Bedensel (veya zihinsel) olarak hareket etmeye ve nefes almaya ihtiyacın olduğunda.';
+      'Bedensel (veya zihinsel) olarak hareket etmeye ve nefes almaya ihtiyacÄ±n olduÄŸunda.';
 
   @override
-  String get bloomTierMastery => 'Ustalık';
+  String get bloomTierMastery => 'UstalÄ±k';
 
   @override
-  String get bloomTierStrong => 'Güçlü';
+  String get bloomTierStrong => 'GÃ¼Ã§lÃ¼';
 
   @override
-  String get bloomTierGrowing => 'Büyüyor';
+  String get bloomTierGrowing => 'BÃ¼yÃ¼yor';
 
   @override
   String get bloomTierSprouting => 'Filizleniyor';
@@ -2080,65 +2110,65 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String habitBloomSubtitle(int count, String element) {
-    return '$count günlük seri · $element';
+    return '$count gÃ¼nlÃ¼k seri Â· $element';
   }
 
   @override
-  String get medal_id_first_spark => 'İlk Kıvılcım';
+  String get medal_id_first_spark => 'Ä°lk KÄ±vÄ±lcÄ±m';
 
   @override
-  String get medal_sub_first_spark => 'Çakmağı yaktın.';
+  String get medal_sub_first_spark => 'Ã‡akmaÄŸÄ± yaktÄ±n.';
 
   @override
   String get medal_desc_first_spark =>
-      'İlk görevini tamamla. Her zincir burada başlar.';
+      'Ä°lk gÃ¶revini tamamla. Her zincir burada baÅŸlar.';
 
   @override
-  String get medal_id_triple_seed => 'Üçlü Tohum';
+  String get medal_id_triple_seed => 'ÃœÃ§lÃ¼ Tohum';
 
   @override
-  String get medal_sub_triple_seed => 'Üçü toprağa.';
+  String get medal_sub_triple_seed => 'ÃœÃ§Ã¼ topraÄŸa.';
 
   @override
-  String get medal_desc_triple_seed => 'Toplam 3 görev tamamla.';
+  String get medal_desc_triple_seed => 'Toplam 3 gÃ¶rev tamamla.';
 
   @override
-  String get medal_id_dozen_sower => 'On İkili Ekici';
+  String get medal_id_dozen_sower => 'On Ä°kili Ekici';
 
   @override
   String get medal_sub_dozen_sower => 'On iki tarla.';
 
   @override
-  String get medal_desc_dozen_sower => 'Toplam 12 görev tamamla.';
+  String get medal_desc_dozen_sower => 'Toplam 12 gÃ¶rev tamamla.';
 
   @override
-  String get medal_id_quarter_century => 'Çeyrek Asır';
+  String get medal_id_quarter_century => 'Ã‡eyrek AsÄ±r';
 
   @override
   String get medal_sub_quarter_century => 'Evet demenin mevsimi.';
 
   @override
-  String get medal_desc_quarter_century => 'Toplam 25 görev tamamla.';
+  String get medal_desc_quarter_century => 'Toplam 25 gÃ¶rev tamamla.';
 
   @override
   String get medal_id_productivity_titan => 'Verimlilik Devi';
 
   @override
-  String get medal_sub_productivity_titan => 'Tutarlılık birikir.';
+  String get medal_sub_productivity_titan => 'TutarlÄ±lÄ±k birikir.';
 
   @override
   String get medal_desc_productivity_titan =>
-      '50 görev tamamla — gerçek bir ivme oluşturdun.';
+      '50 gÃ¶rev tamamla â€” gerÃ§ek bir ivme oluÅŸturdun.';
 
   @override
-  String get medal_id_century_planter => 'Yüzlük Ekici';
+  String get medal_id_century_planter => 'YÃ¼zlÃ¼k Ekici';
 
   @override
-  String get medal_sub_century_planter => 'Kendi ormanın.';
+  String get medal_sub_century_planter => 'Kendi ormanÄ±n.';
 
   @override
   String get medal_desc_century_planter =>
-      '100 görev tamamla. Kullanıcıların %5\'indesin.';
+      '100 gÃ¶rev tamamla. KullanÄ±cÄ±larÄ±n %5\'indesin.';
 
   @override
   String get medal_id_clean_day => 'Temiz Sayfa';
@@ -2148,314 +2178,319 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get medal_desc_clean_day =>
-      'Tek bir günde ektiğin her görevi tamamla.';
+      'Tek bir gÃ¼nde ektiÄŸin her gÃ¶revi tamamla.';
 
   @override
-  String get medal_id_triple_perfect => 'Üçlü Mükemmel';
+  String get medal_id_triple_perfect => 'ÃœÃ§lÃ¼ MÃ¼kemmel';
 
   @override
-  String get medal_sub_triple_perfect => 'Üç kusursuz koşu.';
+  String get medal_sub_triple_perfect => 'ÃœÃ§ kusursuz koÅŸu.';
 
   @override
-  String get medal_desc_triple_perfect => '3 mükemmel gün ulaş.';
+  String get medal_desc_triple_perfect => '3 mÃ¼kemmel gÃ¼n ulaÅŸ.';
 
   @override
-  String get medal_id_perfect_week => 'Mükemmel Hafta';
+  String get medal_id_perfect_week => 'MÃ¼kemmel Hafta';
 
   @override
-  String get medal_sub_perfect_week => 'Yedi gün kırılmadı.';
+  String get medal_sub_perfect_week => 'Yedi gÃ¼n kÄ±rÄ±lmadÄ±.';
 
   @override
-  String get medal_desc_perfect_week => 'Art arda 7 mükemmel gün.';
+  String get medal_desc_perfect_week => 'Art arda 7 mÃ¼kemmel gÃ¼n.';
 
   @override
-  String get medal_id_two_week_chain => 'İki Haftalık Kuvvet';
+  String get medal_id_two_week_chain => 'Ä°ki HaftalÄ±k Kuvvet';
 
   @override
-  String get medal_sub_two_week_chain => 'İki hafta ateş içinde.';
+  String get medal_sub_two_week_chain => 'Ä°ki hafta ateÅŸ iÃ§inde.';
 
   @override
-  String get medal_desc_two_week_chain => '14 günlük zincirini koru.';
+  String get medal_desc_two_week_chain => '14 gÃ¼nlÃ¼k zincirini koru.';
 
   @override
   String get medal_id_iron_chain => 'Demir Zincir';
 
   @override
-  String get medal_sub_iron_chain => '30 bağlantı dövüldü.';
+  String get medal_sub_iron_chain => '30 baÄŸlantÄ± dÃ¶vÃ¼ldÃ¼.';
 
   @override
   String get medal_desc_iron_chain =>
-      '30 günlük zincir. En zor görev madalyası.';
+      '30 gÃ¼nlÃ¼k zincir. En zor gÃ¶rev madalyasÄ±.';
 
   @override
-  String get medal_id_quarterly_chain => 'Üç Aylık Zincir';
+  String get medal_id_quarterly_chain => 'ÃœÃ§ AylÄ±k Zincir';
 
   @override
-  String get medal_sub_quarterly_chain => 'Bir mevsim, kırılmadı.';
+  String get medal_sub_quarterly_chain => 'Bir mevsim, kÄ±rÄ±lmadÄ±.';
 
   @override
-  String get medal_desc_quarterly_chain => '90 günlük zincir. Efsanevi statü.';
+  String get medal_desc_quarterly_chain =>
+      '90 gÃ¼nlÃ¼k zincir. Efsanevi statÃ¼.';
 
   @override
-  String get medal_id_vital_priority => 'Vital Kıvılcım';
+  String get medal_id_vital_priority => 'Vital KÄ±vÄ±lcÄ±m';
 
   @override
-  String get medal_sub_vital_priority => 'Zor olanları seçtin.';
+  String get medal_sub_vital_priority => 'Zor olanlarÄ± seÃ§tin.';
 
   @override
-  String get medal_desc_vital_priority => 'Vital öncelikli 5 görevi tamamla.';
+  String get medal_desc_vital_priority => 'Vital Ã¶ncelikli 5 gÃ¶revi tamamla.';
 
   @override
-  String get medal_id_spark_priority => 'Kıvılcım Eğitici';
+  String get medal_id_spark_priority => 'KÄ±vÄ±lcÄ±m EÄŸitici';
 
   @override
-  String get medal_sub_spark_priority => 'Hızlı kazançlar birikir.';
+  String get medal_sub_spark_priority => 'HÄ±zlÄ± kazanÃ§lar birikir.';
 
   @override
   String get medal_desc_spark_priority =>
-      'Kıvılcım öncelikli 5 görevi tamamla.';
+      'KÄ±vÄ±lcÄ±m Ã¶ncelikli 5 gÃ¶revi tamamla.';
 
   @override
   String get medal_id_note_taker => 'Not Tutan';
 
   @override
   String get medal_sub_note_taker =>
-      'Kağıttaki planlar kafadaki planları yener.';
+      'KaÄŸÄ±ttaki planlar kafadaki planlarÄ± yener.';
 
   @override
-  String get medal_desc_note_taker => '5 farklı göreve hazırlık notları ekle.';
+  String get medal_desc_note_taker =>
+      '5 farklÄ± gÃ¶reve hazÄ±rlÄ±k notlarÄ± ekle.';
 
   @override
-  String get medal_id_left_behind_rescuer => 'Geri Kalan Kurtarıcı';
+  String get medal_id_left_behind_rescuer => 'Geri Kalan KurtarÄ±cÄ±';
 
   @override
-  String get medal_sub_left_behind_rescuer => 'Görev geride kalmadı.';
+  String get medal_sub_left_behind_rescuer => 'GÃ¶rev geride kalmadÄ±.';
 
   @override
   String get medal_desc_left_behind_rescuer =>
-      'Ertesi gün 3 kaçırılmış görevi tekrar ekle.';
+      'Ertesi gÃ¼n 3 kaÃ§Ä±rÄ±lmÄ±ÅŸ gÃ¶revi tekrar ekle.';
 
   @override
-  String get medal_id_first_sprout => 'İlk Filiz';
+  String get medal_id_first_sprout => 'Ä°lk Filiz';
 
   @override
-  String get medal_sub_first_sprout => 'Yeni bir günlük ritüel.';
+  String get medal_sub_first_sprout => 'Yeni bir gÃ¼nlÃ¼k ritÃ¼el.';
 
   @override
-  String get medal_desc_first_sprout => 'İlk alışkanlığını ek.';
+  String get medal_desc_first_sprout => 'Ä°lk alÄ±ÅŸkanlÄ±ÄŸÄ±nÄ± ek.';
 
   @override
-  String get medal_id_trio_sprout => 'Üçlü Filiz';
+  String get medal_id_trio_sprout => 'ÃœÃ§lÃ¼ Filiz';
 
   @override
-  String get medal_sub_trio_sprout => 'Küçük bir ekosistem.';
+  String get medal_sub_trio_sprout => 'KÃ¼Ã§Ã¼k bir ekosistem.';
 
   @override
-  String get medal_desc_trio_sprout => '3 farklı alışkanlık ek.';
+  String get medal_desc_trio_sprout => '3 farklÄ± alÄ±ÅŸkanlÄ±k ek.';
 
   @override
-  String get medal_id_week_of_growth => 'Büyüme Haftası';
+  String get medal_id_week_of_growth => 'BÃ¼yÃ¼me HaftasÄ±';
 
   @override
-  String get medal_sub_week_of_growth => 'Kökler tutunmaya başlıyor.';
+  String get medal_sub_week_of_growth => 'KÃ¶kler tutunmaya baÅŸlÄ±yor.';
 
   @override
   String get medal_desc_week_of_growth =>
-      '7 gün boyunca her gün bir alışkanlığı sula.';
+      '7 gÃ¼n boyunca her gÃ¼n bir alÄ±ÅŸkanlÄ±ÄŸÄ± sula.';
 
   @override
-  String get medal_id_fortnight_floret => 'İki Haftalık Çiçek';
+  String get medal_id_fortnight_floret => 'Ä°ki HaftalÄ±k Ã‡iÃ§ek';
 
   @override
-  String get medal_sub_fortnight_floret => 'Tam çiçek açma.';
+  String get medal_sub_fortnight_floret => 'Tam Ã§iÃ§ek aÃ§ma.';
 
   @override
-  String get medal_desc_fortnight_floret => '14 günlük alışkanlık serisi.';
+  String get medal_desc_fortnight_floret => '14 gÃ¼nlÃ¼k alÄ±ÅŸkanlÄ±k serisi.';
 
   @override
-  String get medal_id_rooted_master => 'Köklenmiş Usta';
+  String get medal_id_rooted_master => 'KÃ¶klenmiÅŸ Usta';
 
   @override
-  String get medal_sub_rooted_master => 'Derin kökler, derin güç.';
+  String get medal_sub_rooted_master => 'Derin kÃ¶kler, derin gÃ¼Ã§.';
 
   @override
-  String get medal_desc_rooted_master => '30 günlük alışkanlık serisi.';
+  String get medal_desc_rooted_master => '30 gÃ¼nlÃ¼k alÄ±ÅŸkanlÄ±k serisi.';
 
   @override
-  String get medal_id_half_year_bloom => 'Yıllık Çiçek';
+  String get medal_id_half_year_bloom => 'YÄ±llÄ±k Ã‡iÃ§ek';
 
   @override
-  String get medal_sub_half_year_bloom => 'Bahçe artık kalıcı.';
+  String get medal_sub_half_year_bloom => 'BahÃ§e artÄ±k kalÄ±cÄ±.';
 
   @override
-  String get medal_desc_half_year_bloom => 'Tek bir alışkanlığı 180 gün koru.';
+  String get medal_desc_half_year_bloom =>
+      'Tek bir alÄ±ÅŸkanlÄ±ÄŸÄ± 180 gÃ¼n koru.';
 
   @override
-  String get medal_id_garden_keeper => 'Bahçe Bekçisi';
+  String get medal_id_garden_keeper => 'BahÃ§e BekÃ§isi';
 
   @override
-  String get medal_sub_garden_keeper => 'Çeşitlilik, birlikte.';
+  String get medal_sub_garden_keeper => 'Ã‡eÅŸitlilik, birlikte.';
 
   @override
-  String get medal_desc_garden_keeper => 'Aynı anda 4 farklı alışkanlık büyüt.';
+  String get medal_desc_garden_keeper =>
+      'AynÄ± anda 4 farklÄ± alÄ±ÅŸkanlÄ±k bÃ¼yÃ¼t.';
 
   @override
-  String get medal_id_hydration_hero => 'Hidrasyon Kahramanı';
+  String get medal_id_hydration_hero => 'Hidrasyon KahramanÄ±';
 
   @override
   String get medal_sub_hydration_hero => 'Kuyuyu dolduruyorsun.';
 
   @override
   String get medal_desc_hydration_hero =>
-      'Bir hidrasyon alışkanlığı ek (su/içecek).';
+      'Bir hidrasyon alÄ±ÅŸkanlÄ±ÄŸÄ± ek (su/iÃ§ecek).';
 
   @override
-  String get medal_id_mindful_mover => 'Bilinçli Hareketçi';
+  String get medal_id_mindful_mover => 'BilinÃ§li HareketÃ§i';
 
   @override
-  String get medal_sub_mindful_mover => 'Beden hatırlar.';
+  String get medal_sub_mindful_mover => 'Beden hatÄ±rlar.';
 
   @override
   String get medal_desc_mindful_mover =>
-      'Bir hareket alışkanlığı ek (yoga/yürüyüş/koşu).';
+      'Bir hareket alÄ±ÅŸkanlÄ±ÄŸÄ± ek (yoga/yÃ¼rÃ¼yÃ¼ÅŸ/koÅŸu).';
 
   @override
-  String get medal_id_devoted_keeper => 'Adanmış Bekçi';
+  String get medal_id_devoted_keeper => 'AdanmÄ±ÅŸ BekÃ§i';
 
   @override
-  String get medal_sub_devoted_keeper => 'Altmış gün, bir uygulama.';
+  String get medal_sub_devoted_keeper => 'AltmÄ±ÅŸ gÃ¼n, bir uygulama.';
 
   @override
   String get medal_desc_devoted_keeper =>
-      'Tek bir alışkanlığı aralıksız 60 gün sula.';
+      'Tek bir alÄ±ÅŸkanlÄ±ÄŸÄ± aralÄ±ksÄ±z 60 gÃ¼n sula.';
 
   @override
-  String get medal_id_tending_notes => 'Bakım Notları';
+  String get medal_id_tending_notes => 'BakÄ±m NotlarÄ±';
 
   @override
-  String get medal_sub_tending_notes => 'Yolculuk boyunca düşün.';
+  String get medal_sub_tending_notes => 'Yolculuk boyunca dÃ¼ÅŸÃ¼n.';
 
   @override
-  String get medal_desc_tending_notes => '3 alışkanlığa bakım notları ekle.';
+  String get medal_desc_tending_notes =>
+      '3 alÄ±ÅŸkanlÄ±ÄŸa bakÄ±m notlarÄ± ekle.';
 
   @override
-  String get medalTierTaglineSprout => 'İlk tohumu ek';
+  String get medalTierTaglineSprout => 'Ä°lk tohumu ek';
 
   @override
-  String get medalTierTaglineCommon => 'Alışkanlığı inşa et';
+  String get medalTierTaglineCommon => 'AlÄ±ÅŸkanlÄ±ÄŸÄ± inÅŸa et';
 
   @override
-  String get medalTierTaglineRare => 'Gerçek bir ivme göster';
+  String get medalTierTaglineRare => 'GerÃ§ek bir ivme gÃ¶ster';
 
   @override
-  String get medalTierTaglineEpic => 'Sen bir doğa gücüsün';
+  String get medalTierTaglineEpic => 'Sen bir doÄŸa gÃ¼cÃ¼sÃ¼n';
 
   @override
   String get medalTierTaglineLegendary =>
-      'Efsanevi, neredeyse kimse buraya ulaşamaz';
+      'Efsanevi, neredeyse kimse buraya ulaÅŸamaz';
 
   @override
   String get guardianHeadlineNoTasks =>
-      'Bugünün toprağı taze.\nİlk tohumunu ek\nve büyürken izle.';
+      'BugÃ¼nÃ¼n topraÄŸÄ± taze.\nÄ°lk tohumunu ek\nve bÃ¼yÃ¼rken izle.';
 
   @override
   String get guardianHeadlineAllDone =>
-      'Ektiğin her tohum\nççek açtı.\nDinlen, Koruyucu — hak ettin.';
+      'EktiÄŸin her tohum\nÃ§Ã§ek aÃ§tÄ±.\nDinlen, Koruyucu â€” hak ettin.';
 
   @override
   String guardianHeadlineStreak14(int count) {
-    return '$count gün\nkırılmadan büyüdü.\nOrmanın hayatla dolu.';
+    return '$count gÃ¼n\nkÄ±rÄ±lmadan bÃ¼yÃ¼dÃ¼.\nOrmanÄ±n hayatla dolu.';
   }
 
   @override
   String get guardianHeadlineStreak7 =>
-      'Tam bir hafta çiçek açtı,\nKoruyucu.\nBir mükemmel gün daha\nzinciri uzatır.';
+      'Tam bir hafta Ã§iÃ§ek aÃ§tÄ±,\nKoruyucu.\nBir mÃ¼kemmel gÃ¼n daha\nzinciri uzatÄ±r.';
 
   @override
   String get guardianHeadlineStreak3 =>
-      'Zincirin ayakta.\nHâlâ açılacak\ntohunlara bakım yap.';
+      'Zincirin ayakta.\nHÃ¢lÃ¢ aÃ§Ä±lacak\ntohunlara bakÄ±m yap.';
 
   @override
   String get guardianHeadlineNoHabitsDone =>
-      'Görevleri iyi yönetiyorsun.\nBir filiz ek —\nalışkanlıklar ormanın nasıl büyüdüğünü belirler.';
+      'GÃ¶revleri iyi yÃ¶netiyorsun.\nBir filiz ek â€”\nalÄ±ÅŸkanlÄ±klar ormanÄ±n nasÄ±l bÃ¼yÃ¼dÃ¼ÄŸÃ¼nÃ¼ belirler.';
 
   @override
   String get guardianHeadlineSomeDone =>
-      'Bazı tohumlar açtı,\nbazı açmadı. Sorun değil.\nYarın yeni bir ekim günü.';
+      'BazÄ± tohumlar aÃ§tÄ±,\nbazÄ± aÃ§madÄ±. Sorun deÄŸil.\nYarÄ±n yeni bir ekim gÃ¼nÃ¼.';
 
   @override
   String get guardianHeadlineMorning =>
-      'Günaydın, Koruyucu.\nGün henüz genç\nve toprak hazır.';
+      'GÃ¼naydÄ±n, Koruyucu.\nGÃ¼n henÃ¼z genÃ§\nve toprak hazÄ±r.';
 
   @override
   String get guardianHeadlineAfternoon =>
-      'İyi günler, Koruyucu.\nIşığın yarısı kaldı —\nbakmaya devam et.';
+      'Ä°yi gÃ¼nler, Koruyucu.\nIÅŸÄ±ÄŸÄ±n yarÄ±sÄ± kaldÄ± â€”\nbakmaya devam et.';
 
   @override
   String get guardianHeadlineEvening =>
-      'İyi akşamlar, Koruyucu.\nGüneş batmadan önce\nson bir tarama.';
+      'Ä°yi akÅŸamlar, Koruyucu.\nGÃ¼neÅŸ batmadan Ã¶nce\nson bir tarama.';
 
   @override
   String get guardianHeadlineNight =>
-      'Gece yarısında çalışıyor musun?\nKoruyucular bile dinlenir.\nYarının tohumunu şimdi ek.';
+      'Gece yarÄ±sÄ±nda Ã§alÄ±ÅŸÄ±yor musun?\nKoruyucular bile dinlenir.\nYarÄ±nÄ±n tohumunu ÅŸimdi ek.';
 
   @override
   String get guardianBodyNoTasks =>
-      'Korunağın şu anda sessiz. Bir niyet ekle ve gün batımına kadar neyin değiştiğine bak.';
+      'KorunaÄŸÄ±n ÅŸu anda sessiz. Bir niyet ekle ve gÃ¼n batÄ±mÄ±na kadar neyin deÄŸiÅŸtiÄŸine bak.';
 
   @override
   String guardianBodyStreak14(int count) {
-    return '$count gündür devam ediyor. Zincir şans değil — biriken küçük seçimler. Biriktirmeye devam et.';
+    return '$count gÃ¼ndÃ¼r devam ediyor. Zincir ÅŸans deÄŸil â€” biriken kÃ¼Ã§Ã¼k seÃ§imler. Biriktirmeye devam et.';
   }
 
   @override
   String guardianBodyStreak3(int count) {
-    return '$count günlük zincir gerçek bir ivme. Bugün açık tohumlarını bitirmeden bitirme.';
+    return '$count gÃ¼nlÃ¼k zincir gerÃ§ek bir ivme. BugÃ¼n aÃ§Ä±k tohumlarÄ±nÄ± bitirmeden bitirme.';
   }
 
   @override
   String guardianBodyNoHabits(int count) {
-    return 'Şimdiye kadar $count görev ekledin. Tek bir alışkanlık filizi eklemek, işin her gün birikmesini sağlar.';
+    return 'Åžimdiye kadar $count gÃ¶rev ekledin. Tek bir alÄ±ÅŸkanlÄ±k filizi eklemek, iÅŸin her gÃ¼n birikmesini saÄŸlar.';
   }
 
   @override
   String guardianBodyLowCompletion(int pct) {
-    return 'Ektiklerinin %$pct\'ini tamamlıyorsun. Daha az, daha keskin tohumlar genellikle on saçılımdan daha yüksek büyür.';
+    return 'Ektiklerinin %$pct\'ini tamamlÄ±yorsun. Daha az, daha keskin tohumlar genellikle on saÃ§Ä±lÄ±mdan daha yÃ¼ksek bÃ¼yÃ¼r.';
   }
 
   @override
   String guardianBodyDefault(int tasks, int sprouts) {
-    return 'Korunağın canlı. $tasks görev tamamlandı, $sprouts filiz büyüyor — emek meyvesini veriyor.';
+    return 'KorunaÄŸÄ±n canlÄ±. $tasks gÃ¶rev tamamlandÄ±, $sprouts filiz bÃ¼yÃ¼yor â€” emek meyvesini veriyor.';
   }
 
   @override
-  String get guardianInsightWaitingTitle => 'İlk hamleni bekliyor';
+  String get guardianInsightWaitingTitle => 'Ä°lk hamleni bekliyor';
 
   @override
   String get guardianInsightWaitingBody =>
-      'Bir görev veya alışkanlık ekle, bahçendeki kalıpları okumaya başlayayım. Ne kadar çok ekersen, o kadar çok şey öğrenirim.';
+      'Bir gÃ¶rev veya alÄ±ÅŸkanlÄ±k ekle, bahÃ§endeki kalÄ±plarÄ± okumaya baÅŸlayayÄ±m. Ne kadar Ã§ok ekersen, o kadar Ã§ok ÅŸey Ã¶ÄŸrenirim.';
 
   @override
-  String get guardianInsightWaitingCta => 'İlk tohumunu ek';
+  String get guardianInsightWaitingCta => 'Ä°lk tohumunu ek';
 
   @override
-  String get guardianInsightChainSuperTitle => 'Zincir süper gücün';
+  String get guardianInsightChainSuperTitle => 'Zincir sÃ¼per gÃ¼cÃ¼n';
 
   @override
   String guardianInsightChainSuperBody(int count) {
-    return '$count günlük bir zincirin var. Seriler her zaman motivasyonu yener — yavaş günlerde bile sıcak tut.';
+    return '$count gÃ¼nlÃ¼k bir zincirin var. Seriler her zaman motivasyonu yener â€” yavaÅŸ gÃ¼nlerde bile sÄ±cak tut.';
   }
 
   @override
-  String get guardianInsightChainSuperCta => 'Yarının tohumunu ekle';
+  String get guardianInsightChainSuperCta => 'YarÄ±nÄ±n tohumunu ekle';
 
   @override
   String get guardianInsightChainColdTitle =>
-      'Zincir soğuk — yeni bir tane başlat';
+      'Zincir soÄŸuk â€” yeni bir tane baÅŸlat';
 
   @override
   String get guardianInsightChainColdBody =>
-      'Daha önce ektin, bu tekrar ekebileceğin anlamına gelir. Bugün yapılan küçük bir görev, yarın daha uzun bir zincirdir.';
+      'Daha Ã¶nce ektin, bu tekrar ekebileceÄŸin anlamÄ±na gelir. BugÃ¼n yapÄ±lan kÃ¼Ã§Ã¼k bir gÃ¶rev, yarÄ±n daha uzun bir zincirdir.';
 
   @override
   String get guardianInsightChainColdCta => 'Bir tohum ek';
@@ -2465,11 +2500,11 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String guardianInsightLessIsMoreBody(int pct) {
-    return 'Ektiklerinin yaklaşık %$pct\'ini tamamlıyorsun. 5 gevşek niyet yerine 3 keskin niyet dene — kalite birikir.';
+    return 'Ektiklerinin yaklaÅŸÄ±k %$pct\'ini tamamlÄ±yorsun. 5 gevÅŸek niyet yerine 3 keskin niyet dene â€” kalite birikir.';
   }
 
   @override
-  String get guardianInsightLessIsMoreCta => 'Günü keskinleştir';
+  String get guardianInsightLessIsMoreCta => 'GÃ¼nÃ¼ keskinleÅŸtir';
 
   @override
   String guardianInsightNextMedalTitle(String title) {
@@ -2478,21 +2513,21 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String guardianInsightNextMedalBody(int value, int target, String unit) {
-    return '$target ${unit}ten $value\'indesin. Birkaç dürüst gün daha ve senin.';
+    return '$target ${unit}ten $value\'indesin. BirkaÃ§ dÃ¼rÃ¼st gÃ¼n daha ve senin.';
   }
 
   @override
-  String get guardianInsightNextMedalCta => 'Madalyayı göster';
+  String get guardianInsightNextMedalCta => 'MadalyayÄ± gÃ¶ster';
 
   @override
   String get guardianInsightSteadyTitle => 'Dengeli bir mevsimdesin';
 
   @override
   String get guardianInsightSteadyBody =>
-      'Hemen köşede bir madalya yok — sorun değil. Sahip olduğuna bakım yap. Bir sonraki çiçek açma yolda.';
+      'Hemen kÃ¶ÅŸede bir madalya yok â€” sorun deÄŸil. Sahip olduÄŸuna bakÄ±m yap. Bir sonraki Ã§iÃ§ek aÃ§ma yolda.';
 
   @override
-  String get guardianInsightSteadyCta => 'İlerlemeyi gör';
+  String get guardianInsightSteadyCta => 'Ä°lerlemeyi gÃ¶r';
 
   @override
   String notificationTaskReminderBody(String label) {
@@ -2501,29 +2536,30 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get notificationFinalCallBodyOne =>
-      'Zincirinde 1 görev kaldı. Gece yarısı geliyor.';
+      'Zincirinde 1 gÃ¶rev kaldÄ±. Gece yarÄ±sÄ± geliyor.';
 
   @override
   String notificationFinalCallBodyMany(int count) {
-    return 'Zincirinde $count görev kaldı. Gece yarısı geliyor.';
+    return 'Zincirinde $count gÃ¶rev kaldÄ±. Gece yarÄ±sÄ± geliyor.';
   }
 
   @override
-  String get notificationEveningBodyOne => 'Bugün hâlâ 1 açık görevin var.';
+  String get notificationEveningBodyOne =>
+      'BugÃ¼n hÃ¢lÃ¢ 1 aÃ§Ä±k gÃ¶revin var.';
 
   @override
   String notificationEveningBodyMany(int count) {
-    return 'Bugün hâlâ $count açık görevin var.';
+    return 'BugÃ¼n hÃ¢lÃ¢ $count aÃ§Ä±k gÃ¶revin var.';
   }
 
   @override
-  String get notificationTickerTaskReminder => 'Görev hatırlatması';
+  String get notificationTickerTaskReminder => 'GÃ¶rev hatÄ±rlatmasÄ±';
 
   @override
-  String get notificationTickerTaskAlarm => 'Görev alarmı';
+  String get notificationTickerTaskAlarm => 'GÃ¶rev alarmÄ±';
 
   @override
   String habitBloomSubtitleL10n(int count, String element) {
-    return '$count günlük seri · $element';
+    return '$count gÃ¼nlÃ¼k seri Â· $element';
   }
 }

@@ -6,8 +6,8 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'app.dart';
 import 'core/env.dart';
+import 'app.dart';
 import 'core/l10n/app_localizations.dart';
 import 'core/onboarding/onboarding_store.dart';
 import 'core/theme/app_colors.dart';
@@ -189,7 +189,7 @@ class _ReadyScope extends StatelessWidget {
       overrides: [
         notificationServiceProvider.overrideWithValue(notifications),
       ],
-      child: const DailyStitchApp(),
+      child: const LeanSpaceApp(),
     );
   }
 }

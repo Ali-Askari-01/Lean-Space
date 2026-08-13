@@ -536,6 +536,20 @@ class AppLocalizationsAr extends AppLocalizations {
   }
 
   @override
+  String get paywallLifetime => 'Lifetime';
+
+  @override
+  String get paywallLifetimeCaption => 'One-time payment · yours forever';
+
+  @override
+  String get paywallLifetimeBadge => 'BEST DEAL';
+
+  @override
+  String paywallStartCtaLifetime(String price) {
+    return 'Start Pro · $price forever';
+  }
+
+  @override
   String get paywallRestore => 'استعادة الشراء';
 
   @override
@@ -906,7 +920,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get authEnterValidEmail => 'أدخل عنوان بريد إلكتروني صالح';
 
   @override
-  String get authPasswordTooShort => 'يجب أن تكون كلمة المرور 6 أحرف على الأقل';
+  String get authPasswordTooShort => 'يجب أن تكون كلمة المرور 8 أحرف على الأقل';
 
   @override
   String get authAccountCreated =>

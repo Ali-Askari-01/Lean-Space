@@ -33,7 +33,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get navHistory => 'Letzte 7 Tage';
 
   @override
-  String get navLeftBehind => 'Zurückgelassen';
+  String get navLeftBehind => 'ZurÃ¼ckgelassen';
 
   @override
   String get navInsights => 'Dein Fortschritt';
@@ -48,7 +48,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get navPaywall => 'Daily Stitch Pro';
 
   @override
-  String get greetingLateNight => 'Das Mitternachtsöl brennen';
+  String get greetingLateNight => 'Das MitternachtsÃ¶l brennen';
 
   @override
   String get greetingMorning => 'Guten Morgen, Sonne!';
@@ -60,11 +60,11 @@ class AppLocalizationsDe extends AppLocalizations {
   String get greetingEvening => 'Guten Abend, Champion';
 
   @override
-  String get greetingNight => 'Ruhst du gut, Hüter?';
+  String get greetingNight => 'Ruhst du gut, HÃ¼ter?';
 
   @override
   String todayTasksCount(String done, String total) {
-    return 'Heute · $done von $total Aufgaben';
+    return 'Heute Â· $done von $total Aufgaben';
   }
 
   @override
@@ -73,10 +73,11 @@ class AppLocalizationsDe extends AppLocalizations {
   }
 
   @override
-  String get todayChainGrows => 'Die Kette wächst, während du fertig wirst';
+  String get todayChainGrows => 'Die Kette wÃ¤chst, wÃ¤hrend du fertig wirst';
 
   @override
-  String get todayChainComplete => 'KETTE KOMPLETT · MORGEN DEN GARTEN PFLEGEN';
+  String get todayChainComplete =>
+      'KETTE KOMPLETT Â· MORGEN DEN GARTEN PFLEGEN';
 
   @override
   String get taskCapInfo => 'Warum eine Obergrenze von 5 Aufgaben?';
@@ -90,29 +91,29 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get taskCapBody =>
-      'Kleine Ketten schlagen lange. Es ist wahrscheinlicher, dass du 3 von 5 abschließt und den Sieg spürst, als 8 von 10 aufzugeben und den Verlust zu spüren.';
+      'Kleine Ketten schlagen lange. Es ist wahrscheinlicher, dass du 3 von 5 abschlieÃŸt und den Sieg spÃ¼rst, als 8 von 10 aufzugeben und den Verlust zu spÃ¼ren.';
 
   @override
-  String get taskCapBulletDone => 'Erledigte Aufgaben zählen zu deiner Kette';
+  String get taskCapBulletDone => 'Erledigte Aufgaben zÃ¤hlen zu deiner Kette';
 
   @override
   String get taskCapBulletDoneBody =>
-      'Ein Tag, an dem alle fünf erledigt sind, verlängert deine Erfolgsserie um eins.';
+      'Ein Tag, an dem alle fÃ¼nf erledigt sind, verlÃ¤ngert deine Erfolgsserie um eins.';
 
   @override
   String get taskCapBulletMissed =>
-      'Verpasste Aufgaben werden auf Zurückgelassen übertragen';
+      'Verpasste Aufgaben werden auf ZurÃ¼ckgelassen Ã¼bertragen';
 
   @override
   String get taskCapBulletMissedBody =>
-      'Um Mitternacht tauchen in Zurückgelassen unerledigte Aufgaben auf.';
+      'Um Mitternacht tauchen in ZurÃ¼ckgelassen unerledigte Aufgaben auf.';
 
   @override
   String get taskCapBulletFreeze => 'Streak-Freeze verzeiht einen Fehlschlag';
 
   @override
   String get taskCapBulletFreezeBody =>
-      'Pro bietet dir 2 Streak-Freezes pro Monat — sie decken einen verpassten Tag ab.';
+      'Pro bietet dir 2 Streak-Freezes pro Monat â€” sie decken einen verpassten Tag ab.';
 
   @override
   String get tasksHeader => 'Aufgaben';
@@ -123,22 +124,22 @@ class AppLocalizationsDe extends AppLocalizations {
   }
 
   @override
-  String get tasksAddSeed => 'Aufgabensamen hinzufügen';
+  String get tasksAddSeed => 'Aufgabensamen hinzufÃ¼gen';
 
   @override
   String get tasksCapReached =>
-      '5/5 Plätze belegt — schließe einen ab, um einen neuen Samen zu säen.';
+      '5/5 PlÃ¤tze belegt â€” schlieÃŸe einen ab, um einen neuen Samen zu sÃ¤en.';
 
   @override
   String get tasksEmptyCta =>
-      'Pflanze deinen ersten Samen — worauf kommt es heute an?';
+      'Pflanze deinen ersten Samen â€” worauf kommt es heute an?';
 
   @override
   String get habitsHeader => 'Gewohnheiten';
 
   @override
   String habitsGrowing(String count) {
-    return '$count wächst';
+    return '$count wÃ¤chst';
   }
 
   @override
@@ -154,10 +155,10 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get habitsLocked =>
-      'Pro-Gewohnheitsplatz — freischalten, um mehr Sprossen zu pflanzen';
+      'Pro-Gewohnheitsplatz â€” freischalten, um mehr Sprossen zu pflanzen';
 
   @override
-  String get habitsSlotsFull => 'Alle Gewohnheitsplätze sind derzeit belegt.';
+  String get habitsSlotsFull => 'Alle GewohnheitsplÃ¤tze sind derzeit belegt.';
 
   @override
   String habitsStreakDays(String days) {
@@ -165,35 +166,36 @@ class AppLocalizationsDe extends AppLocalizations {
   }
 
   @override
-  String get habitsCadence => 'TÄGLICH';
+  String get habitsCadence => 'TÃ„GLICH';
 
   @override
   String leftBehindBanner(String count) {
-    return '$count verpasst — immer noch in Zurückgelassen';
+    return '$count verpasst â€” immer noch in ZurÃ¼ckgelassen';
   }
 
   @override
-  String get leftBehindTap => 'Zum erneuten Hinzufügen antippen oder loslassen';
+  String get leftBehindTap =>
+      'Zum erneuten HinzufÃ¼gen antippen oder loslassen';
 
   @override
   String get leftBehindDismiss => 'Verwerfen';
 
   @override
-  String get leftBehindTitle => 'Zurückgelassen';
+  String get leftBehindTitle => 'ZurÃ¼ckgelassen';
 
   @override
-  String get leftBehindEmpty => 'Nichts bleibt zurück';
+  String get leftBehindEmpty => 'Nichts bleibt zurÃ¼ck';
 
   @override
   String get leftBehindEmptyBody =>
       'Keine verpassten Aufgaben. Jeder Samen wird gepflegt.';
 
   @override
-  String get leftBehindClearAll => 'Alle löschen';
+  String get leftBehindClearAll => 'Alle lÃ¶schen';
 
   @override
   String get leftBehindClearAllConfirm =>
-      'Alles löschen, was zurückgeblieben ist?';
+      'Alles lÃ¶schen, was zurÃ¼ckgeblieben ist?';
 
   @override
   String leftBehindClearAllBody(String count) {
@@ -201,19 +203,19 @@ class AppLocalizationsDe extends AppLocalizations {
   }
 
   @override
-  String get leftBehindReAdd => 'Heute erneut hinzufügen';
+  String get leftBehindReAdd => 'Heute erneut hinzufÃ¼gen';
 
   @override
-  String get leftBehindReAddButton => 'Erneut hinzufügen';
+  String get leftBehindReAddButton => 'Erneut hinzufÃ¼gen';
 
   @override
-  String get leftBehindAddedToToday => 'Heute hinzugefügt';
+  String get leftBehindAddedToToday => 'Heute hinzugefÃ¼gt';
 
   @override
   String get leftBehindLetGo => 'Loslassen';
 
   @override
-  String get leftBehindHeader => 'ZURÜCKGELASSEN';
+  String get leftBehindHeader => 'ZURÃœCKGELASSEN';
 
   @override
   String get leftBehindMissedTasks => 'VERPASSTE AUFGABEN';
@@ -228,7 +230,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get leftBehindBody =>
-      'Füge eine Aufgabe erneut hinzu oder lass sie los.';
+      'FÃ¼ge eine Aufgabe erneut hinzu oder lass sie los.';
 
   @override
   String leftBehindReAddedSnack(String task) {
@@ -241,61 +243,61 @@ class AppLocalizationsDe extends AppLocalizations {
   }
 
   @override
-  String get leftBehindClearedSnack => 'Zurückgebliebene gelöscht';
+  String get leftBehindClearedSnack => 'ZurÃ¼ckgebliebene gelÃ¶scht';
 
   @override
   String leftBehindYesterdayDate(String date) {
-    return 'Gestern · $date';
+    return 'Gestern Â· $date';
   }
 
   @override
   String streakAtRisk(String count) {
-    return 'Für heute sind noch $count Aufgaben übrig';
+    return 'FÃ¼r heute sind noch $count Aufgaben Ã¼brig';
   }
 
   @override
   String streakAtRiskLastCall(String count) {
-    return 'Letzter Aufruf — $count Aufgabe(n) noch offen';
+    return 'Letzter Aufruf â€” $count Aufgabe(n) noch offen';
   }
 
   @override
   String get streakAtRiskBody =>
-      'Mitternacht ist nah. Die Kette hängt von diesen ab.';
+      'Mitternacht ist nah. Die Kette hÃ¤ngt von diesen ab.';
 
   @override
   String get streakAtRiskBodyLow =>
-      'Du hast noch Zeit. Ein sauberer Tag verlängert deine Erfolgssträhne.';
+      'Du hast noch Zeit. Ein sauberer Tag verlÃ¤ngert deine ErfolgsstrÃ¤hne.';
 
   @override
   String get streakAtRiskFreeze =>
-      'Gestern verpasst — einen Streak-Freeze verwenden?';
+      'Gestern verpasst â€” einen Streak-Freeze verwenden?';
 
   @override
   String get streakFreezeUse => 'Freeze verwenden';
 
   @override
   String get streakFreezeUseForYesterday =>
-      'Monatlichen Streak-Freeze für gestern verwenden';
+      'Monatlichen Streak-Freeze fÃ¼r gestern verwenden';
 
   @override
   String get streakFreezeAppliedYesterday =>
-      'Streak-Freeze für gestern angewendet.';
+      'Streak-Freeze fÃ¼r gestern angewendet.';
 
   @override
   String get chainBrokenTitle => 'Die Kette ist gerissen. Das ist okay.';
 
   @override
   String get chainBrokenBody =>
-      'Jede lange Kette endet einmal. Was zählt, ist, was du heute pflanzt.';
+      'Jede lange Kette endet einmal. Was zÃ¤hlt, ist, was du heute pflanzt.';
 
   @override
-  String get chainBrokenCta => 'Komm zurück zum heutigen Tag';
+  String get chainBrokenCta => 'Komm zurÃ¼ck zum heutigen Tag';
 
   @override
   String get chainBrokenPlantFirst => 'Pflanze den ersten Samen von heute';
 
   @override
-  String get chainBrokenCheck => 'Schau zuerst bei Zurückgelassen vorbei.';
+  String get chainBrokenCheck => 'Schau zuerst bei ZurÃ¼ckgelassen vorbei.';
 
   @override
   String get chainBrokenBestChain => 'beste Kette';
@@ -313,7 +315,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get medalsTitle => 'Meine Medaillen';
 
   @override
-  String get medalsTrophyRoom => 'Trophäenraum';
+  String get medalsTrophyRoom => 'TrophÃ¤enraum';
 
   @override
   String get medalsAllMedals => 'Alle Medaillen';
@@ -329,16 +331,16 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get medalsTrophyFirst =>
-      'Du hast deine erste Medaille gewonnen — mach weiter';
+      'Du hast deine erste Medaille gewonnen â€” mach weiter';
 
   @override
   String medalsTrophyMany(String earned) {
-    return '$earned Medaillen in deinem Trophäenraum';
+    return '$earned Medaillen in deinem TrophÃ¤enraum';
   }
 
   @override
   String medalsProgressLabel(String total) {
-    return 'Fortschritt für alle $total Medaillen';
+    return 'Fortschritt fÃ¼r alle $total Medaillen';
   }
 
   @override
@@ -349,14 +351,14 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get medalsEmptyBody =>
-      'Erledige eine Aufgabe oder pflege einen Spross, um deinen Trophäenraum zu eröffnen.';
+      'Erledige eine Aufgabe oder pflege einen Spross, um deinen TrophÃ¤enraum zu erÃ¶ffnen.';
 
   @override
   String get medalSheetLocked => 'PRO-MEDAILLE';
 
   @override
   String medalSheetEarned(String tier) {
-    return 'VERDIENT · $tier';
+    return 'VERDIENT Â· $tier';
   }
 
   @override
@@ -380,7 +382,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get medalShareOnSocials => 'In sozialen Netzwerken teilen';
 
   @override
-  String get medalShareLater => 'Vielleicht später';
+  String get medalShareLater => 'Vielleicht spÃ¤ter';
 
   @override
   String get medalUnlocked => 'MEDAILLE FREIGESCHALTET';
@@ -392,13 +394,13 @@ class AppLocalizationsDe extends AppLocalizations {
   String get historyTitle => 'Letzte 7 Tage';
 
   @override
-  String get historyFullTitle => 'Vollständiger Verlauf';
+  String get historyFullTitle => 'VollstÃ¤ndiger Verlauf';
 
   @override
   String get historyLoadError => 'Der Verlauf konnte nicht geladen werden.';
 
   @override
-  String get historyFullCalendar => 'Vollständiger Kalender';
+  String get historyFullCalendar => 'VollstÃ¤ndiger Kalender';
 
   @override
   String historyCompletedPercent(String percent) {
@@ -411,7 +413,7 @@ class AppLocalizationsDe extends AppLocalizations {
   }
 
   @override
-  String get historyDayByDay => 'TAG FÜR TAG';
+  String get historyDayByDay => 'TAG FÃœR TAG';
 
   @override
   String get historyEmpty =>
@@ -423,7 +425,7 @@ class AppLocalizationsDe extends AppLocalizations {
   }
 
   @override
-  String get historyUpsellTitle => 'Vollständigen Verlauf ansehen';
+  String get historyUpsellTitle => 'VollstÃ¤ndigen Verlauf ansehen';
 
   @override
   String get historyUpsellBody => 'Pro schaltet 30 Tage Verlauf frei.';
@@ -442,11 +444,11 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String historyLeftBehindCount(String count) {
-    return '$count ist zurückgeblieben';
+    return '$count ist zurÃ¼ckgeblieben';
   }
 
   @override
-  String get progressVitality => 'HEUTIGE VITALITÄT';
+  String get progressVitality => 'HEUTIGE VITALITÃ„T';
 
   @override
   String get progressVitalityEmpty =>
@@ -478,14 +480,14 @@ class AppLocalizationsDe extends AppLocalizations {
   String get progressMetricHabits => 'Gewohnheiten';
 
   @override
-  String get progressHabitBlooms => 'Gewohnheitsblüten';
+  String get progressHabitBlooms => 'GewohnheitsblÃ¼ten';
 
   @override
   String get progressHabitBloomsSub =>
-      'Streak-Meilensteine für die Sprossen, die du täglich gießt.';
+      'Streak-Meilensteine fÃ¼r die Sprossen, die du tÃ¤glich gieÃŸt.';
 
   @override
-  String get progressNextBadge => 'Nächste Marke';
+  String get progressNextBadge => 'NÃ¤chste Marke';
 
   @override
   String progressMedalCount(String earned, String total) {
@@ -493,7 +495,7 @@ class AppLocalizationsDe extends AppLocalizations {
   }
 
   @override
-  String get progressPersonalActivity => 'Persönliche Aktivität';
+  String get progressPersonalActivity => 'PersÃ¶nliche AktivitÃ¤t';
 
   @override
   String progressBrowseMonth(String month) {
@@ -507,28 +509,29 @@ class AppLocalizationsDe extends AppLocalizations {
   String get progressCalendarLegend => 'dunkler = mehr erledigt';
 
   @override
-  String get progressCalendarBody => 'Dunkelgrün bedeutet einen perfekten Tag.';
+  String get progressCalendarBody =>
+      'DunkelgrÃ¼n bedeutet einen perfekten Tag.';
 
   @override
   String get paywallTitle => 'Halte die Kette ununterbrochen.';
 
   @override
   String get paywallSubtitle =>
-      'Daily Stitch Pro bietet dir das vollständige Disziplinsystem.';
+      'Daily Stitch Pro bietet dir das vollstÃ¤ndige Disziplinsystem.';
 
   @override
   String get paywallFeatures =>
-      'Alle 5 Gewohnheitsslots, nicht nur 3|Dein vollständiger Verlauf|Medaillenset|Streak-Freeze|Share-Karten|Themen';
+      'Alle 5 Gewohnheitsslots, nicht nur 3|Dein vollstÃ¤ndiger Verlauf|Medaillenset|Streak-Freeze|Share-Karten|Themen';
 
   @override
   String get paywallFeaturesBodies =>
-      'Free gibt 3. Pro schaltet alle fünf frei.|Durchsuche jeden Tag.|Legendäre Medaillen.|2 Freezes pro Monat.|Share-Karten.|Neue Themen.';
+      'Free gibt 3. Pro schaltet alle fÃ¼nf frei.|Durchsuche jeden Tag.|LegendÃ¤re Medaillen.|2 Freezes pro Monat.|Share-Karten.|Neue Themen.';
 
   @override
-  String get paywallYearly => 'Jährlich';
+  String get paywallYearly => 'JÃ¤hrlich';
 
   @override
-  String get paywallYearlyCaption => 'Bestes Preis-Leistungs-Verhältnis';
+  String get paywallYearlyCaption => 'Bestes Preis-Leistungs-VerhÃ¤ltnis';
 
   @override
   String get paywallYearlyBadge => '35 % SPAREN';
@@ -538,16 +541,30 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get paywallMonthlyCaption =>
-      'Monatliche Abrechnung · jederzeit kündbar';
+      'Monatliche Abrechnung Â· jederzeit kÃ¼ndbar';
 
   @override
   String paywallStartCta(String price) {
-    return 'Pro starten · $price/Jahr';
+    return 'Pro starten Â· $price/Jahr';
   }
 
   @override
   String paywallStartCtaMonthly(String price) {
-    return 'Pro starten · $price/Monat';
+    return 'Pro starten Â· $price/Monat';
+  }
+
+  @override
+  String get paywallLifetime => 'Lifetime';
+
+  @override
+  String get paywallLifetimeCaption => 'One-time payment · yours forever';
+
+  @override
+  String get paywallLifetimeBadge => 'BEST DEAL';
+
+  @override
+  String paywallStartCtaLifetime(String price) {
+    return 'Start Pro · $price forever';
   }
 
   @override
@@ -561,29 +578,29 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get paywallNoRestore =>
-      'Für dieses Konto wurde kein vorheriger Kauf gefunden.';
+      'FÃ¼r dieses Konto wurde kein vorheriger Kauf gefunden.';
 
   @override
   String get paywallRestoreLater =>
-      'Wir stellen deinen Kauf bei der nächsten Synchronisierung wieder her.';
+      'Wir stellen deinen Kauf bei der nÃ¤chsten Synchronisierung wieder her.';
 
   @override
   String get paywallAlreadyPro =>
-      'Du bist auf Pro. Vielen Dank für die Unterstützung.';
+      'Du bist auf Pro. Vielen Dank fÃ¼r die UnterstÃ¼tzung.';
 
   @override
   String get paywallHabitSlotHead =>
-      'Du hast alle deine freien Gewohnheitsplätze aufgebraucht.';
+      'Du hast alle deine freien GewohnheitsplÃ¤tze aufgebraucht.';
 
   @override
   String get paywallHistoryHead => 'Schau dir deinen gesamten Verlauf an.';
 
   @override
   String get paywallMedalHead =>
-      'Die seltensten Medaillen sind nur für Profis erhältlich.';
+      'Die seltensten Medaillen sind nur fÃ¼r Profis erhÃ¤ltlich.';
 
   @override
-  String get settingsYourActivity => 'DEINE AKTIVITÄT';
+  String get settingsYourActivity => 'DEINE AKTIVITÃ„T';
 
   @override
   String get settingsHelpInfo => 'HILFE & INFORMATIONEN';
@@ -601,7 +618,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get settingsWidgetSanctuary => 'WIDGET-HEILIGTUM';
 
   @override
-  String get settingsEcosystemSupport => 'ÖKOSYSTEM-UNTERSTÜTZUNG';
+  String get settingsEcosystemSupport => 'Ã–KOSYSTEM-UNTERSTÃœTZUNG';
 
   @override
   String get settingsHowItWorks => 'Wie es funktioniert';
@@ -610,7 +627,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get settingsSignOut => 'Abmelden';
 
   @override
-  String get settingsSignOutConfirm => 'Möchtest du dich wirklich abmelden?';
+  String get settingsSignOutConfirm => 'MÃ¶chtest du dich wirklich abmelden?';
 
   @override
   String get settingsProActive => 'Aktiv';
@@ -625,17 +642,17 @@ class AppLocalizationsDe extends AppLocalizations {
   String get settingsLanguageValue => 'Systemstandard';
 
   @override
-  String get firstRunGreeting => '5 Aufgaben. Nicht mehr. Lass sie zählen.';
+  String get firstRunGreeting => '5 Aufgaben. Nicht mehr. Lass sie zÃ¤hlen.';
 
   @override
   String get firstRunBody =>
-      'Pflanze deinen ersten Samen — was ist heute am wichtigsten?';
+      'Pflanze deinen ersten Samen â€” was ist heute am wichtigsten?';
 
   @override
   String get firstRunCta => 'Pflanze deinen ersten Samen';
 
   @override
-  String get emptyStateClearAll => 'Alles löschen';
+  String get emptyStateClearAll => 'Alles lÃ¶schen';
 
   @override
   String get cancel => 'Abbrechen';
@@ -645,14 +662,14 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get intentionBody1 =>
-      'Jeder mächtige Wald beginnt mit einer einzigen winzigen Entscheidung.';
+      'Jeder mÃ¤chtige Wald beginnt mit einer einzigen winzigen Entscheidung.';
 
   @override
   String get intentionTitle2 => 'Was werden wir heute anbauen?';
 
   @override
   String get intentionBody2 =>
-      'Aus winzigen Samen werden bei sorgfältiger Pflege große Bäume.';
+      'Aus winzigen Samen werden bei sorgfÃ¤ltiger Pflege groÃŸe BÃ¤ume.';
 
   @override
   String get intentionTitle3 => 'Ein Samen. Ein Atemzug. Beginnen.';
@@ -662,14 +679,14 @@ class AppLocalizationsDe extends AppLocalizations {
       'Du musst nicht den ganzen Wald auf einmal pflanzen.';
 
   @override
-  String get intentionTitle4 => 'Fördere den nächsten kleinen Schritt.';
+  String get intentionTitle4 => 'FÃ¶rdere den nÃ¤chsten kleinen Schritt.';
 
   @override
   String get intentionBody4 =>
-      'Zukunft-Du basiert auf den Entscheidungen, die du in den nächsten fünf Minuten triffst.';
+      'Zukunft-Du basiert auf den Entscheidungen, die du in den nÃ¤chsten fÃ¼nf Minuten triffst.';
 
   @override
-  String get intentionTitle5 => 'Wähle, was du werden möchtest.';
+  String get intentionTitle5 => 'WÃ¤hle, was du werden mÃ¶chtest.';
 
   @override
   String get intentionBody5 => 'Aufgaben sind Samen, Gewohnheiten sind Keime.';
@@ -679,21 +696,21 @@ class AppLocalizationsDe extends AppLocalizations {
       'Pflanze etwas, an das du dich erinnern solltest.';
 
   @override
-  String get intentionBody6 => 'Nicht jeder Tag wird sich riesig anfühlen.';
+  String get intentionBody6 => 'Nicht jeder Tag wird sich riesig anfÃ¼hlen.';
 
   @override
   String get intentionTitle7 => 'Mache den heutigen Tag etwas mutiger.';
 
   @override
   String get intentionBody7 =>
-      'Mutverbindungen. Wähle den Samen aus, den du aufgeschoben hast.';
+      'Mutverbindungen. WÃ¤hle den Samen aus, den du aufgeschoben hast.';
 
   @override
   String get intentionTitle8 => 'Pflege den Boden vor der Aussaat.';
 
   @override
   String get intentionBody8 =>
-      'Welche Denkweise wird diese Aufgabe erleichtern? Füge es zu den Notizen hinzu.';
+      'Welche Denkweise wird diese Aufgabe erleichtern? FÃ¼ge es zu den Notizen hinzu.';
 
   @override
   String get shareCardSnapshot => 'Ein Schnappschuss deines Heiligtums';
@@ -703,14 +720,14 @@ class AppLocalizationsDe extends AppLocalizations {
       'Die obige Karte wird als PNG exportiert und an dein Freigabeblatt gesendet.';
 
   @override
-  String get shareCardShareMyBloom => 'Teile meine Blüte';
+  String get shareCardShareMyBloom => 'Teile meine BlÃ¼te';
 
   @override
   String get shareCardCouldNotShare => 'Konnte momentan nicht geteilt werden';
 
   @override
   String shareCardProgressText(String year) {
-    return 'Mein Daily Stitch-Fortschritt — $year.';
+    return 'Mein Daily Stitch-Fortschritt â€” $year.';
   }
 
   @override
@@ -737,29 +754,29 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get howItWorksCapBody =>
-      'Wir lassen nicht zu, dass du eine Sechste hinzufügst. Das ist der springende Punkt.';
+      'Wir lassen nicht zu, dass du eine Sechste hinzufÃ¼gst. Das ist der springende Punkt.';
 
   @override
   String get howItWorksHabits =>
-      'Gewohnheiten sind alltäglich, die Kette ist für immer';
+      'Gewohnheiten sind alltÃ¤glich, die Kette ist fÃ¼r immer';
 
   @override
   String get howItWorksHabitsBody =>
-      'Gewohnheiten bleiben für immer bestehen. Aufgaben sind einmalig.';
+      'Gewohnheiten bleiben fÃ¼r immer bestehen. Aufgaben sind einmalig.';
 
   @override
-  String get howItWorksLeftBehind => 'Verpasste Aufgaben → Zurückgelassen';
+  String get howItWorksLeftBehind => 'Verpasste Aufgaben â†’ ZurÃ¼ckgelassen';
 
   @override
   String get howItWorksLeftBehindBody =>
-      'Um Mitternacht werden nicht erledigte Aufgaben nach Zurückgelassen verschoben.';
+      'Um Mitternacht werden nicht erledigte Aufgaben nach ZurÃ¼ckgelassen verschoben.';
 
   @override
   String get howItWorksProgress => 'Der Fortschritt-Tab';
 
   @override
   String get howItWorksProgressBody =>
-      'Streak, Kalender, Medaillen, Verlauf — alles darüber, wie es dir geht.';
+      'Streak, Kalender, Medaillen, Verlauf â€” alles darÃ¼ber, wie es dir geht.';
 
   @override
   String get howItWorksYou => 'Der Du-Tab';
@@ -776,7 +793,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get commonRetry => 'Erneut versuchen';
 
   @override
-  String get commonBack => 'Zurück';
+  String get commonBack => 'ZurÃ¼ck';
 
   @override
   String get commonDismiss => 'Verwerfen';
@@ -785,7 +802,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get commonCancel => 'Abbrechen';
 
   @override
-  String get commonClose => 'Schließen';
+  String get commonClose => 'SchlieÃŸen';
 
   @override
   String get commonSend => 'Senden';
@@ -797,13 +814,13 @@ class AppLocalizationsDe extends AppLocalizations {
   String get commonShowLess => 'Weniger anzeigen';
 
   @override
-  String get commonViewFull => 'Vollständige Notizen anzeigen';
+  String get commonViewFull => 'VollstÃ¤ndige Notizen anzeigen';
 
   @override
   String get commonEdit => 'Bearbeiten';
 
   @override
-  String get commonDelete => 'Löschen';
+  String get commonDelete => 'LÃ¶schen';
 
   @override
   String get commonDone => 'Fertig';
@@ -833,7 +850,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get myDayPreparationNotes => 'VORBEREITUNGSHINWEISE';
 
   @override
-  String get onboardingSkip => 'ÜBERSPRINGEN';
+  String get onboardingSkip => 'ÃœBERSPRINGEN';
 
   @override
   String get onboardingNext => 'Weiter';
@@ -842,38 +859,38 @@ class AppLocalizationsDe extends AppLocalizations {
   String get onboardingEnterSanctuary => 'Heiligtum betreten';
 
   @override
-  String get onboardingIntroduction => 'EINFÜHRUNG';
+  String get onboardingIntroduction => 'EINFÃœHRUNG';
 
   @override
   String get onboardingGrowYourForest => 'DEINEN WALD WACHSEN LASSEN';
 
   @override
-  String get onboardingPage1Title => 'Lerne deinen Hüter kennen.';
+  String get onboardingPage1Title => 'Lerne deinen HÃ¼ter kennen.';
 
   @override
   String get onboardingPage1Body =>
-      'Willkommen in deinem persönlichen Heiligtum. Hier spiegelt sich dein Wachstum im Leben deines Waldes wider.';
+      'Willkommen in deinem persÃ¶nlichen Heiligtum. Hier spiegelt sich dein Wachstum im Leben deines Waldes wider.';
 
   @override
-  String get onboardingPage2Title => 'Säe Samen. Schau, wie sie wachsen.';
+  String get onboardingPage2Title => 'SÃ¤e Samen. Schau, wie sie wachsen.';
 
   @override
   String get onboardingPage2Body =>
-      'Jede Aufgabe ist ein winziger Samen. Jede Gewohnheit ist ein Spross, den du täglich pflegst. Zusammen bilden sie einen Wald der Disziplin.';
+      'Jede Aufgabe ist ein winziger Samen. Jede Gewohnheit ist ein Spross, den du tÃ¤glich pflegst. Zusammen bilden sie einen Wald der Disziplin.';
 
   @override
-  String get onboardingPage3Title => 'Fünf Aufgaben. Eine Kette.';
+  String get onboardingPage3Title => 'FÃ¼nf Aufgaben. Eine Kette.';
 
   @override
   String get onboardingPage3Body =>
-      'Du kannst nur 5 Samen pro Tag säen. Diese Obergrenze zwingt dich, dich auf das zu konzentrieren, was wirklich zählt — und deine Kette zu schützen.';
+      'Du kannst nur 5 Samen pro Tag sÃ¤en. Diese Obergrenze zwingt dich, dich auf das zu konzentrieren, was wirklich zÃ¤hlt â€” und deine Kette zu schÃ¼tzen.';
 
   @override
-  String get onboardingPage4Title => 'Pflege deine Sprossen täglich.';
+  String get onboardingPage4Title => 'Pflege deine Sprossen tÃ¤glich.';
 
   @override
   String get onboardingPage4Body =>
-      'Tippe auf Gewohnheiten, um sie wachsen zu lassen. Überspringe einen Tag und die Kette verlängert sich nicht. Der Hüter wächst mit dir.';
+      'Tippe auf Gewohnheiten, um sie wachsen zu lassen. Ãœberspringe einen Tag und die Kette verlÃ¤ngert sich nicht. Der HÃ¼ter wÃ¤chst mit dir.';
 
   @override
   String get authBrand => 'DAILY STITCH';
@@ -882,11 +899,11 @@ class AppLocalizationsDe extends AppLocalizations {
   String get authPlantFirstSeed => 'Pflanze deinen ersten Samen.';
 
   @override
-  String get authWelcomeBack => 'Willkommen zurück, Hüter.';
+  String get authWelcomeBack => 'Willkommen zurÃ¼ck, HÃ¼ter.';
 
   @override
   String get authFiveTasksDaily =>
-      'Fünf Aufgaben. Tägliche Gewohnheiten. Keine Ausreden.';
+      'FÃ¼nf Aufgaben. TÃ¤gliche Gewohnheiten. Keine Ausreden.';
 
   @override
   String get authSanctuaryWaiting => 'Dein Heiligtum wartet.';
@@ -922,11 +939,11 @@ class AppLocalizationsDe extends AppLocalizations {
   String get authEnterEmail => 'E-Mail-Adresse eingeben';
 
   @override
-  String get authEnterValidEmail => 'Gültige E-Mail-Adresse eingeben';
+  String get authEnterValidEmail => 'GÃ¼ltige E-Mail-Adresse eingeben';
 
   @override
   String get authPasswordTooShort =>
-      'Passwort muss mindestens 6 Zeichen lang sein';
+      'Passwort muss mindestens 8 Zeichen lang sein';
 
   @override
   String get authAccountCreated =>
@@ -942,13 +959,13 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get authMidnightReset =>
-      'Mit der Anmeldung akzeptierst du, dass dein Tag um Mitternacht zurückgesetzt wird.';
+      'Mit der Anmeldung akzeptierst du, dass dein Tag um Mitternacht zurÃ¼ckgesetzt wird.';
 
   @override
   String get authSetupRequired => 'Einrichtung erforderlich';
 
   @override
-  String get settingsPersonalSanctuary => 'PERSÖNLICHES HEILIGTUM';
+  String get settingsPersonalSanctuary => 'PERSÃ–NLICHES HEILIGTUM';
 
   @override
   String get settingsHowThisWorks => 'Wie es funktioniert';
@@ -962,7 +979,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get settingsStreakProtectionAvailable =>
-      '1 Freeze diesen Monat verfügbar';
+      '1 Freeze diesen Monat verfÃ¼gbar';
 
   @override
   String get settingsStreakProtectionUsed => 'Diesen Monat verwendet';
@@ -975,32 +992,32 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get settingsProCancelPlay =>
-      'Kündigen oder Plan ändern in Google Play';
+      'KÃ¼ndigen oder Plan Ã¤ndern in Google Play';
 
   @override
   String get settingsProUnlock =>
-      'Alle 5 Gewohnheiten freischalten, vollständiger Verlauf, mehr';
+      'Alle 5 Gewohnheiten freischalten, vollstÃ¤ndiger Verlauf, mehr';
 
   @override
   String get settingsTaskAlarms => 'Aufgabenalarme & Letzter Aufruf';
 
   @override
   String get settingsTaskAlarmsSubtitle =>
-      'Abendlicher Anstoß und Mitternachtswarnung';
+      'Abendlicher AnstoÃŸ und Mitternachtswarnung';
 
   @override
   String get settingsHomeScreenWidget => 'Startbildschirm-Widget';
 
   @override
   String get settingsHomeScreenWidgetSubtitle =>
-      'Füge deine Ketten-Serie zum Startbildschirm hinzu';
+      'FÃ¼ge deine Ketten-Serie zum Startbildschirm hinzu';
 
   @override
   String get settingsShareBloomTracker => 'Daily Stitch teilen';
 
   @override
   String get settingsShareBloomTrackerSubtitle =>
-      'Erzähle einem Freund von der Kette';
+      'ErzÃ¤hle einem Freund von der Kette';
 
   @override
   String get settingsHelpSupport => 'Hilfe & Support';
@@ -1016,7 +1033,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get settingsAllFeaturesUnlockedSubtitle =>
-      'Beta-Version — Abonnements sind pausiert.';
+      'Beta-Version â€” Abonnements sind pausiert.';
 
   @override
   String settingsVersion(Object build, Object version) {
@@ -1031,7 +1048,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String settingsLevel(Object level) {
-    return 'Level $level · Gewohnheitsmeister';
+    return 'Level $level Â· Gewohnheitsmeister';
   }
 
   @override
@@ -1041,11 +1058,11 @@ class AppLocalizationsDe extends AppLocalizations {
   String get youLast7Days => 'Letzte 7 Tage';
 
   @override
-  String get youLast7DaysSubtitle => 'Aufgabenverlauf Tag für Tag';
+  String get youLast7DaysSubtitle => 'Aufgabenverlauf Tag fÃ¼r Tag';
 
   @override
   String get youLeftBehindSubtitle =>
-      'Verpasste Aufgaben warten auf erneutes Hinzufügen';
+      'Verpasste Aufgaben warten auf erneutes HinzufÃ¼gen';
 
   @override
   String get youProTier => 'Pro-Stufe';
@@ -1078,14 +1095,14 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get youUnlockDiscipline =>
-      'Schalte das vollständige Disziplinsystem frei.';
+      'Schalte das vollstÃ¤ndige Disziplinsystem frei.';
 
   @override
   String get youProFeatures =>
-      '5 Gewohnheitsplätze, vollständiger Verlauf, legendäre Medaillen.';
+      '5 GewohnheitsplÃ¤tze, vollstÃ¤ndiger Verlauf, legendÃ¤re Medaillen.';
 
   @override
-  String get youSeePlans => 'Pläne ansehen';
+  String get youSeePlans => 'PlÃ¤ne ansehen';
 
   @override
   String youFromPrice(Object price) {
@@ -1093,7 +1110,7 @@ class AppLocalizationsDe extends AppLocalizations {
   }
 
   @override
-  String get youBloomTrackerFooter => 'Daily Stitch · Habit & To-Do';
+  String get youBloomTrackerFooter => 'Daily Stitch Â· Habit & To-Do';
 
   @override
   String get progressMedals => 'Medaillen';
@@ -1105,28 +1122,28 @@ class AppLocalizationsDe extends AppLocalizations {
   String get progressSeeAll => 'Alle ansehen';
 
   @override
-  String get progressSeeDayByDayActivity => 'Siehe deine tägliche Aktivität';
+  String get progressSeeDayByDayActivity => 'Siehe deine tÃ¤gliche AktivitÃ¤t';
 
   @override
   String progressTasksFinishedPct(Object done, Object pct, Object total) {
-    return '$done von $total Aufgaben erledigt · $pct%';
+    return '$done von $total Aufgaben erledigt Â· $pct%';
   }
 
   @override
   String get progressNoMedalsYet =>
-      'Noch keine Medaillen — erledige eine Aufgabe.';
+      'Noch keine Medaillen â€” erledige eine Aufgabe.';
 
   @override
   String progressSeeAllMedals(Object earned, Object total) {
-    return 'Alle Medaillen ansehen · $earned von $total verdient';
+    return 'Alle Medaillen ansehen Â· $earned von $total verdient';
   }
 
   @override
-  String get progressGuardianInsight => 'Hüter-Einblick';
+  String get progressGuardianInsight => 'HÃ¼ter-Einblick';
 
   @override
   String progressNextBadgeTier(Object tier) {
-    return 'NÄCHSTES ABZEICHEN · $tier';
+    return 'NÃ„CHSTES ABZEICHEN Â· $tier';
   }
 
   @override
@@ -1146,22 +1163,22 @@ class AppLocalizationsDe extends AppLocalizations {
   String get helpBody => 'Die meisten Antworten findest du unten.';
 
   @override
-  String get helpSectionFAQ => 'HÄUFIGE FRAGEN';
+  String get helpSectionFAQ => 'HÃ„UFIGE FRAGEN';
 
   @override
   String get helpSectionContact => 'NOCH OFFENE FRAGEN?';
 
   @override
-  String get helpAddMessage => 'Füge zuerst eine kurze Nachricht hinzu.';
+  String get helpAddMessage => 'FÃ¼ge zuerst eine kurze Nachricht hinzu.';
 
   @override
-  String get helpOpening => 'E-Mail-App wird geöffnet…';
+  String get helpOpening => 'E-Mail-App wird geÃ¶ffnetâ€¦';
 
   @override
   String get helpEmailUs => 'E-Mail senden';
 
   @override
-  String get helpOpeningAction => 'Wird geöffnet…';
+  String get helpOpeningAction => 'Wird geÃ¶ffnetâ€¦';
 
   @override
   String get helpCopyEmail => 'Support-E-Mail kopieren';
@@ -1180,18 +1197,18 @@ class AppLocalizationsDe extends AppLocalizations {
   String get helpWhatHappened => 'Was ist passiert?';
 
   @override
-  String get helpHint => 'Eine kurze Beschreibung hilft schon viel…';
+  String get helpHint => 'Eine kurze Beschreibung hilft schon vielâ€¦';
 
   @override
   String get helpDisclaimer =>
-      'Wenn du auf E-Mail senden tippst, wird deine E-Mail-App geöffnet.';
+      'Wenn du auf E-Mail senden tippst, wird deine E-Mail-App geÃ¶ffnet.';
 
   @override
   String get helpFaqQ1 => 'Was ist die 5-Aufgaben-Obergrenze?';
 
   @override
   String get helpFaqA1 =>
-      'Du kannst pro lokalen Tag maximal 5 Aufgaben hinzufügen.';
+      'Du kannst pro lokalen Tag maximal 5 Aufgaben hinzufÃ¼gen.';
 
   @override
   String get helpFaqQ2 => 'Was passiert um Mitternacht?';
@@ -1201,7 +1218,7 @@ class AppLocalizationsDe extends AppLocalizations {
       'Zu deiner lokalen Mitternacht wird jede noch offene Aufgabe als verpasst markiert.';
 
   @override
-  String get helpFaqQ3 => 'Was ist Zurückgelassen?';
+  String get helpFaqQ3 => 'Was ist ZurÃ¼ckgelassen?';
 
   @override
   String get helpFaqA3 =>
@@ -1212,26 +1229,26 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get helpFaqA4 =>
-      'Ein Tag verlängert die Kette, wenn du mindestens 1 Aufgabe hattest und 0 verpasst hast.';
+      'Ein Tag verlÃ¤ngert die Kette, wenn du mindestens 1 Aufgabe hattest und 0 verpasst hast.';
 
   @override
   String get helpFaqQ5 => 'Was ist der Streak-Freeze?';
 
   @override
-  String get helpFaqA5 => 'Ein Freeze pro Kalendermonat, nur für Pro.';
+  String get helpFaqA5 => 'Ein Freeze pro Kalendermonat, nur fÃ¼r Pro.';
 
   @override
   String get helpFaqQ6 => 'Wo werden meine Daten gespeichert?';
 
   @override
   String get helpFaqA6 =>
-      'Alle Daten werden in Supabase unter dem angemeldeten Konto gespeichert.';
+      'Alle Daten werden in unserer sicheren Cloud-Infrastruktur unter dem angemeldeten Konto gespeichert.';
 
   @override
-  String get helpFaqQ7 => 'Wie lösche ich mein Konto?';
+  String get helpFaqQ7 => 'Wie lÃ¶sche ich mein Konto?';
 
   @override
-  String get helpFaqA7 => 'Gehe zu Einstellungen → Konto → Konto löschen.';
+  String get helpFaqA7 => 'Gehe zu Einstellungen â†’ Konto â†’ Konto lÃ¶schen.';
 
   @override
   String get helpTopicsGeneral => 'Allgemeine Frage';
@@ -1268,30 +1285,30 @@ class AppLocalizationsDe extends AppLocalizations {
   String get prioritySpark => 'FUNKE';
 
   @override
-  String get settingsDeleteAccount => 'Konto löschen';
+  String get settingsDeleteAccount => 'Konto lÃ¶schen';
 
   @override
   String get settingsDeleteAccountSubtitle => 'Deine Daten dauerhaft entfernen';
 
   @override
-  String get settingsDeleteAccountConfirmTitle => 'Konto löschen?';
+  String get settingsDeleteAccountConfirmTitle => 'Konto lÃ¶schen?';
 
   @override
   String get settingsDeleteAccountConfirmBody =>
-      'Dadurch werden dein Profil, deine Aufgaben, Gewohnheiten und dein Fortschritt dauerhaft gelöscht.';
+      'Dadurch werden dein Profil, deine Aufgaben, Gewohnheiten und dein Fortschritt dauerhaft gelÃ¶scht.';
 
   @override
-  String get settingsDeleteAccountConfirmButton => 'Für immer löschen';
+  String get settingsDeleteAccountConfirmButton => 'FÃ¼r immer lÃ¶schen';
 
   @override
-  String get settingsDeleteAccountSuccess => 'Dein Konto wurde gelöscht.';
+  String get settingsDeleteAccountSuccess => 'Dein Konto wurde gelÃ¶scht.';
 
   @override
   String get settingsDeleteAccountFailed =>
-      'Konto konnte nicht gelöscht werden. Versuche es erneut.';
+      'Konto konnte nicht gelÃ¶scht werden. Versuche es erneut.';
 
   @override
-  String get referralYouTitle => 'Freunde einladen · Gratis Pro verdienen';
+  String get referralYouTitle => 'Freunde einladen Â· Gratis Pro verdienen';
 
   @override
   String referralYouSubtitle(int progress, int milestone) {
@@ -1309,11 +1326,11 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get referralPaywallBody =>
-      'Lade 5 Freunde ein, die sich anmelden → 1 Monat Pro kostenlos';
+      'Lade 5 Freunde ein, die sich anmelden â†’ 1 Monat Pro kostenlos';
 
   @override
   String get referralPaywallProBody =>
-      'Lade weiterhin ein — staple kostenlose Pro-Monate';
+      'Lade weiterhin ein â€” staple kostenlose Pro-Monate';
 
   @override
   String referralPaywallProgress(Object count, Object milestone) {
@@ -1352,7 +1369,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get insightsShareMyWeek => 'Woche teilen';
 
   @override
-  String get insightsShareMyWeekPro => 'Woche teilen · Pro';
+  String get insightsShareMyWeekPro => 'Woche teilen Â· Pro';
 
   @override
   String get insightsShareReceiptText =>
@@ -1365,13 +1382,13 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get insightsHistoryUpsell =>
-      'Schalte deinen vollständigen Verlauf mit Pro frei';
+      'Schalte deinen vollstÃ¤ndigen Verlauf mit Pro frei';
 
   @override
   String get referralScreenTitle => 'Freunde einladen';
 
   @override
-  String get referralLaunchGift => 'Geschenk zum Einführungsmonat';
+  String get referralLaunchGift => 'Geschenk zum EinfÃ¼hrungsmonat';
 
   @override
   String get referralRewardTitle => 'Erhalte 1 Monat Pro kostenlos';
@@ -1433,15 +1450,15 @@ class AppLocalizationsDe extends AppLocalizations {
   String get youProPerksTitle => 'Deine Pro-Vorteile';
 
   @override
-  String get manageProThankYou => 'Vielen Dank, dass du Bloom unterstützt';
+  String get manageProThankYou => 'Vielen Dank, dass du Bloom unterstÃ¼tzt';
 
   @override
   String get manageProReferralHint =>
-      'Lade weitere Freunde ein, um dein Pro zu verlängern';
+      'Lade weitere Freunde ein, um dein Pro zu verlÃ¤ngern';
 
   @override
   String bootstrapConfigErrorBody(String detail) {
-    return '$detail\n\nFüge SUPABASE_URL und SUPABASE_PUBLISHABLE_KEY zu leanspace/.env hinzu.';
+    return '$detail\n\nFÃ¼ge API_BASE_URL und GOOGLE_CLIENT_ID zu leanspace/.env hinzu.';
   }
 
   @override
@@ -1451,7 +1468,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get languageNameEn => 'Englisch';
 
   @override
-  String get languageNameUr => 'اردو (Urdu)';
+  String get languageNameUr => 'Ø§Ø±Ø¯Ùˆ (Urdu)';
 
   @override
   String get languageNameEs => 'Spanisch';
@@ -1460,7 +1477,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get languageNamePt => 'Portugiesisch';
 
   @override
-  String get languageNameFr => 'Französisch';
+  String get languageNameFr => 'FranzÃ¶sisch';
 
   @override
   String get languageNameDe => 'Deutsch';
@@ -1469,20 +1486,20 @@ class AppLocalizationsDe extends AppLocalizations {
   String get languageNameIt => 'Italienisch';
 
   @override
-  String get languageNameAr => 'العربية';
+  String get languageNameAr => 'Ø§Ù„Ø¹Ø±Ø¨ÙŠØ©';
 
   @override
-  String get languageNameTr => 'Türkçe';
+  String get languageNameTr => 'TÃ¼rkÃ§e';
 
   @override
   String get languageNameId => 'Bahasa Indonesien';
 
   @override
-  String get onboardingLanguageTitle => 'Wähle deine Sprache';
+  String get onboardingLanguageTitle => 'WÃ¤hle deine Sprache';
 
   @override
   String get onboardingLanguageBody =>
-      'Wähle die Sprache aus, die du im gesamten Daily Stitch verwenden möchtest.';
+      'WÃ¤hle die Sprache aus, die du im gesamten Daily Stitch verwenden mÃ¶chtest.';
 
   @override
   String get onboardingLanguageContinue => 'Weiter';
@@ -1498,24 +1515,24 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get settingsAppThemeSubtitle =>
-      'Wähle die Farben deines persönlichen Heiligtums';
+      'WÃ¤hle die Farben deines persÃ¶nlichen Heiligtums';
 
   @override
-  String get settingsInviteFriendsTitle => 'Freunde einladen · Gratis Pro';
+  String get settingsInviteFriendsTitle => 'Freunde einladen Â· Gratis Pro';
 
   @override
   String get settingsInviteFriendsSubtitle =>
       'Erhalte 1 Monat gratis, wenn 5 Freunde beitreten';
 
   @override
-  String get themePickerTitle => 'Persönliches Heiligtum';
+  String get themePickerTitle => 'PersÃ¶nliches Heiligtum';
 
   @override
   String get themePickerSubtitle =>
-      'Wähle eine Farbpalette, die dir Frieden bringt.';
+      'WÃ¤hle eine Farbpalette, die dir Frieden bringt.';
 
   @override
-  String get themeNameClassicBloom => 'Klassische Blüte';
+  String get themeNameClassicBloom => 'Klassische BlÃ¼te';
 
   @override
   String get themeNameSolarTerracotta => 'Solar-Terrakotta';
@@ -1543,10 +1560,10 @@ class AppLocalizationsDe extends AppLocalizations {
   String get reminderFinalCall => 'Letzter Aufruf';
 
   @override
-  String get reminderEveningNudge => 'Abendlicher Anstoß';
+  String get reminderEveningNudge => 'Abendlicher AnstoÃŸ';
 
   @override
-  String get reminderChangeTime => 'Zeit ändern';
+  String get reminderChangeTime => 'Zeit Ã¤ndern';
 
   @override
   String get reminderSave => 'Erinnerungen speichern';
@@ -1556,7 +1573,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get notificationChannelRemindersDesc =>
-      'Abendlicher Anstoß- und Letzter-Aufruf-Erinnerungen';
+      'Abendlicher AnstoÃŸ- und Letzter-Aufruf-Erinnerungen';
 
   @override
   String get notificationChannelAlarms => 'Daily Stitch-Aufgabenalarme';
@@ -1583,17 +1600,17 @@ class AppLocalizationsDe extends AppLocalizations {
   String get notificationEveningBody => 'Wie ist dein Garten heute gewachsen?';
 
   @override
-  String get widgetSetupTitle => 'Ketten-Widget hinzufügen';
+  String get widgetSetupTitle => 'Ketten-Widget hinzufÃ¼gen';
 
   @override
   String get widgetSetupBody =>
       'Behalte deinen Streak auf deinem Startbildschirm.';
 
   @override
-  String get widgetSetupAdd => 'Zum Startbildschirm hinzufügen';
+  String get widgetSetupAdd => 'Zum Startbildschirm hinzufÃ¼gen';
 
   @override
-  String get widgetSetupStep1 => 'Drücke lange auf deinen Startbildschirm';
+  String get widgetSetupStep1 => 'DrÃ¼cke lange auf deinen Startbildschirm';
 
   @override
   String get widgetSetupStep2 => 'Tippe auf Widgets';
@@ -1603,11 +1620,11 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get widgetSetupPinSuccess =>
-      'Überprüfe deinen Startbildschirm, um das Widget zu platzieren.';
+      'ÃœberprÃ¼fe deinen Startbildschirm, um das Widget zu platzieren.';
 
   @override
   String get widgetSetupPinFallback =>
-      'Dein Launcher unterstützt möglicherweise nicht das Hinzufügen mit einem Fingertipp.';
+      'Dein Launcher unterstÃ¼tzt mÃ¶glicherweise nicht das HinzufÃ¼gen mit einem Fingertipp.';
 
   @override
   String get paywallWelcomePro => 'Willkommen bei Daily Stitch Pro';
@@ -1620,21 +1637,21 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get paywallTermsBody =>
-      'Die Abrechnung erfolgt über Google Play. Abonnements verlängern sich automatisch.';
+      'Die Abrechnung erfolgt Ã¼ber Google Play. Abonnements verlÃ¤ngern sich automatisch.';
 
   @override
-  String get paywallPrivacyTitle => 'Privatsphäre';
+  String get paywallPrivacyTitle => 'PrivatsphÃ¤re';
 
   @override
   String get paywallPrivacyBody =>
-      'Daily Stitch speichert deine Aufgaben und Streak-Daten in unserem Supabase-Backend.';
+      'Daily Stitch speichert deine Aufgaben und Streak-Daten in unserem sicheren Backend.';
 
   @override
-  String get paywallCloseTooltip => 'Schließen';
+  String get paywallCloseTooltip => 'SchlieÃŸen';
 
   @override
   String get paywallFooterLinks =>
-      'Wiederherstellen · Bedingungen · Datenschutz';
+      'Wiederherstellen Â· Bedingungen Â· Datenschutz';
 
   @override
   String get manageProTitle => 'Pro-Abonnement';
@@ -1650,22 +1667,22 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String manageProRenewsOn(String date) {
-    return 'Wird am $date verlängert oder läuft ab.';
+    return 'Wird am $date verlÃ¤ngert oder lÃ¤uft ab.';
   }
 
   @override
   String get manageProFreeBody =>
-      'Du verwendest Daily Stitch Free. Führe ein Upgrade durch.';
+      'Du verwendest Daily Stitch Free. FÃ¼hre ein Upgrade durch.';
 
   @override
   String get manageProSectionManage => 'VERWALTEN';
 
   @override
-  String get manageProOpenPlay => 'Google Play-Abonnements öffnen';
+  String get manageProOpenPlay => 'Google Play-Abonnements Ã¶ffnen';
 
   @override
   String get manageProOpenPlaySubtitlePro =>
-      'Kündigen, Plan ändern oder Zahlungsmethode aktualisieren';
+      'KÃ¼ndigen, Plan Ã¤ndern oder Zahlungsmethode aktualisieren';
 
   @override
   String get manageProOpenPlaySubtitleFree =>
@@ -1675,7 +1692,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get manageProShareApp => 'Daily Stitch teilen';
 
   @override
-  String get manageProShareSubtitle => 'Erzähle einem Freund von der Kette';
+  String get manageProShareSubtitle => 'ErzÃ¤hle einem Freund von der Kette';
 
   @override
   String get manageProSectionHelp => 'BRAUCHST DU HILFE?';
@@ -1688,12 +1705,12 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String manageProBillingFooter(String version) {
-    return 'Abrechnung erfolgt über Google Play · $version';
+    return 'Abrechnung erfolgt Ã¼ber Google Play Â· $version';
   }
 
   @override
   String get manageProPlayInstructions =>
-      'Öffne die Google Play Store-App → tippe auf dein Profil → Zahlungen & Abonnements → Abonnements.';
+      'Ã–ffne die Google Play Store-App â†’ tippe auf dein Profil â†’ Zahlungen & Abonnements â†’ Abonnements.';
 
   @override
   String get addTaskGrowSomething => 'Etwas anbauen';
@@ -1708,7 +1725,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get addTaskSproutName => 'SPROSSENNAME';
 
   @override
-  String get addTaskHintTask => 'z. B. Morgensonnengruß';
+  String get addTaskHintTask => 'z. B. MorgensonnengruÃŸ';
 
   @override
   String get addTaskHintHabit => 'z.B. Morgenyoga';
@@ -1717,13 +1734,13 @@ class AppLocalizationsDe extends AppLocalizations {
   String get addTaskWhen => 'WANN?';
 
   @override
-  String get addTaskPriority => 'PRIORITÄT';
+  String get addTaskPriority => 'PRIORITÃ„T';
 
   @override
   String get addTaskNotes => 'HINWEISE';
 
   @override
-  String get addTaskCadenceDaily => 'Täglich';
+  String get addTaskCadenceDaily => 'TÃ¤glich';
 
   @override
   String get addTaskCadenceWeekdays => 'Werktags';
@@ -1732,7 +1749,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get addTaskCadence3x => '3x/Woche';
 
   @override
-  String get addTaskCadenceWeekly => 'Wöchentlich';
+  String get addTaskCadenceWeekly => 'WÃ¶chentlich';
 
   @override
   String get addTaskPlantIntention => 'Absicht pflanzen';
@@ -1741,7 +1758,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get addTaskPlantSproutCta => 'Spross pflanzen';
 
   @override
-  String get addTaskPlanting => 'Wird gepflanzt…';
+  String get addTaskPlanting => 'Wird gepflanztâ€¦';
 
   @override
   String get addTaskNameIntentionError => 'Benenne deine Absicht';
@@ -1751,15 +1768,15 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get addTaskNotesMigrationWarning =>
-      'Aufgabe gespeichert. Für Notizen und Priorität ist die neueste Migration erforderlich.';
+      'Aufgabe gespeichert. Notizen und PrioritÃ¤t erfordern die neueste Backend-Migration.';
 
   @override
   String get addTaskNoSproutSlots =>
-      'Keine leeren Sprossenplätze — kümmere dich zuerst um einen.';
+      'Keine leeren SprossenplÃ¤tze â€” kÃ¼mmere dich zuerst um einen.';
 
   @override
   String get addTaskSaveSproutError =>
-      'Spross konnte nicht gespeichert werden — versuche es erneut.';
+      'Spross konnte nicht gespeichert werden â€” versuche es erneut.';
 
   @override
   String get addTaskElementWater => 'WASSER';
@@ -1784,14 +1801,14 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get addTaskNotesHintTask =>
-      'Gibt es Tools oder Tipps für diese Aufgabe?';
+      'Gibt es Tools oder Tipps fÃ¼r diese Aufgabe?';
 
   @override
   String get addTaskNotesHintHabit =>
       'Wie sieht es aus, diesen Spross zu pflegen?';
 
   @override
-  String get addTaskChooseElement => 'ELEMENT WÄHLEN';
+  String get addTaskChooseElement => 'ELEMENT WÃ„HLEN';
 
   @override
   String get addTaskElementsTooltip => 'Was bedeuten die Elemente?';
@@ -1803,7 +1820,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get addTaskHabitSprout => 'Gewohnheits-Spross';
 
   @override
-  String get addTaskPickElement => 'Wähle das richtige Element aus';
+  String get addTaskPickElement => 'WÃ¤hle das richtige Element aus';
 
   @override
   String get addTaskPickElementBody =>
@@ -1822,10 +1839,10 @@ class AppLocalizationsDe extends AppLocalizations {
   String get authReferralCodeHint => 'Code eines Freundes';
 
   @override
-  String get youPerkHabitSlots => '5 Gewohnheitsplätze';
+  String get youPerkHabitSlots => '5 GewohnheitsplÃ¤tze';
 
   @override
-  String get youPerkFullHistory => 'Vollständiger Verlauf';
+  String get youPerkFullHistory => 'VollstÃ¤ndiger Verlauf';
 
   @override
   String get youPerkAllThemes => 'Alle Themen';
@@ -1834,7 +1851,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get youPerkStreakFreezes => '2 Streak-Freezes pro Monat';
 
   @override
-  String get youPerkLegendaryMedals => 'Legendäre Medaillen';
+  String get youPerkLegendaryMedals => 'LegendÃ¤re Medaillen';
 
   @override
   String get subscriptionPurchaseFailed =>
@@ -1842,7 +1859,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get subscriptionUnavailable =>
-      'In-App-Käufe sind auf diesem Gerät nicht verfügbar.';
+      'In-App-KÃ¤ufe sind auf diesem GerÃ¤t nicht verfÃ¼gbar.';
 
   @override
   String get subscriptionLoadFailed =>
@@ -1850,7 +1867,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get subscriptionVerifyFailed =>
-      'Der Kauf konnte nicht bestätigt werden.';
+      'Der Kauf konnte nicht bestÃ¤tigt werden.';
 
   @override
   String get streakFreezeFailed =>
@@ -1898,7 +1915,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get medalTierEpic => 'Episch';
 
   @override
-  String get medalTierLegendary => 'Legendär';
+  String get medalTierLegendary => 'LegendÃ¤r';
 
   @override
   String get medalCategoryTasks => 'Aufgaben';
@@ -1942,7 +1959,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get shareCardBodyMedal => 'Teile den Erfolg mit deinem Kreis.';
 
   @override
-  String get shareCardCtaPreparing => 'Wird vorbereitet…';
+  String get shareCardCtaPreparing => 'Wird vorbereitetâ€¦';
 
   @override
   String get shareCardMilestone => 'NEUES ZIEL ERREICHT';
@@ -1967,7 +1984,7 @@ class AppLocalizationsDe extends AppLocalizations {
   }
 
   @override
-  String get shareCardHeadlineSproutGuardian => 'Sprossen-Hüter';
+  String get shareCardHeadlineSproutGuardian => 'Sprossen-HÃ¼ter';
 
   @override
   String get shareCardHeadlineFirstSeeds => 'Erste Samen gepflanzt';
@@ -1981,7 +1998,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get shareCardSubheadWeek =>
-      'Eine volle Woche Wachstum — dein Wald wird dichter.';
+      'Eine volle Woche Wachstum â€” dein Wald wird dichter.';
 
   @override
   String get shareCardSubheadProgress =>
@@ -1989,7 +2006,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get shareCardSubheadSprouts =>
-      'Deine ersten Sprossen schlagen Wurzeln. Gieße sie täglich.';
+      'Deine ersten Sprossen schlagen Wurzeln. GieÃŸe sie tÃ¤glich.';
 
   @override
   String get shareCardSubheadFirstSeeds => 'Deine ersten Samen sind im Boden.';
@@ -2000,7 +2017,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String shareAppText(String url) {
-    return 'Daily Stitch — fünf kleine Samen am Tag, eine unzerbrechliche Kette.\n\n$url';
+    return 'Daily Stitch â€” fÃ¼nf kleine Samen am Tag, eine unzerbrechliche Kette.\n\n$url';
   }
 
   @override
@@ -2008,7 +2025,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String shareAppReferralText(String code, String url) {
-    return 'Ich baue meine tägliche Kette auf Daily Stitch auf — tritt mit meinem Empfehlungscode $code bei.\n\n$url';
+    return 'Ich baue meine tÃ¤gliche Kette auf Daily Stitch auf â€” tritt mit meinem Empfehlungscode $code bei.\n\n$url';
   }
 
   @override
@@ -2016,7 +2033,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String shareCardShareTextProgress(String year) {
-    return 'Mein Daily Stitch-Fortschritt — $year.';
+    return 'Mein Daily Stitch-Fortschritt â€” $year.';
   }
 
   @override
@@ -2059,18 +2076,18 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get elementTaglineLight =>
-      'Erwachen. Morgenlicht, Fokusblöcke, Lernen, Meditation.';
+      'Erwachen. Morgenlicht, FokusblÃ¶cke, Lernen, Meditation.';
 
   @override
   String get elementTaglineSoil => 'Verwurzeln. Lesen, Tagebuch, Tiefenarbeit.';
 
   @override
   String get elementTaglineBreeze =>
-      'Bewegen. Spaziergänge, Laufen, Atemarbeit.';
+      'Bewegen. SpaziergÃ¤nge, Laufen, Atemarbeit.';
 
   @override
   String get elementWhenWater =>
-      'Wenn du dich erschöpft oder ausgelaugt fühlst.';
+      'Wenn du dich erschÃ¶pft oder ausgelaugt fÃ¼hlst.';
 
   @override
   String get elementWhenLight =>
@@ -2081,7 +2098,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get elementWhenBreeze =>
-      'Wenn dein Körper (oder Geist) sich bewegen und atmen muss.';
+      'Wenn dein KÃ¶rper (oder Geist) sich bewegen und atmen muss.';
 
   @override
   String get bloomTierMastery => 'Meisterschaft';
@@ -2093,21 +2110,21 @@ class AppLocalizationsDe extends AppLocalizations {
   String get bloomTierGrowing => 'Wachsend';
 
   @override
-  String get bloomTierSprouting => 'Sprießend';
+  String get bloomTierSprouting => 'SprieÃŸend';
 
   @override
   String get bloomTierLocked => 'Gesperrt';
 
   @override
   String habitBloomSubtitle(int count, String element) {
-    return '$count-Tage-Kette · $element';
+    return '$count-Tage-Kette Â· $element';
   }
 
   @override
   String get medal_id_first_spark => 'Erster Funke';
 
   @override
-  String get medal_sub_first_spark => 'Du hast das Feuer entzündet.';
+  String get medal_sub_first_spark => 'Du hast das Feuer entzÃ¼ndet.';
 
   @override
   String get medal_desc_first_spark => 'Beende deine erste Aufgabe.';
@@ -2122,10 +2139,10 @@ class AppLocalizationsDe extends AppLocalizations {
   String get medal_desc_triple_seed => 'Beende 3 Aufgaben insgesamt.';
 
   @override
-  String get medal_id_dozen_sower => 'Dutzend-Säer';
+  String get medal_id_dozen_sower => 'Dutzend-SÃ¤er';
 
   @override
-  String get medal_sub_dozen_sower => 'Ein Feld von zwölf.';
+  String get medal_sub_dozen_sower => 'Ein Feld von zwÃ¶lf.';
 
   @override
   String get medal_desc_dozen_sower => 'Beende 12 Aufgaben insgesamt.';
@@ -2140,7 +2157,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get medal_desc_quarter_century => 'Beende 25 Aufgaben insgesamt.';
 
   @override
-  String get medal_id_productivity_titan => 'Produktivitäts-Titan';
+  String get medal_id_productivity_titan => 'ProduktivitÃ¤ts-Titan';
 
   @override
   String get medal_sub_productivity_titan => 'Konstanz setzt sich zusammen.';
@@ -2152,7 +2169,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get medal_id_century_planter => 'Jahrhundert-Pflanzer';
 
   @override
-  String get medal_sub_century_planter => 'Ein Wald ganz für dich.';
+  String get medal_sub_century_planter => 'Ein Wald ganz fÃ¼r dich.';
 
   @override
   String get medal_desc_century_planter => 'Beende 100 Aufgaben.';
@@ -2171,7 +2188,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get medal_id_triple_perfect => 'Dreifach Perfekt';
 
   @override
-  String get medal_sub_triple_perfect => 'Drei makellose Durchläufe.';
+  String get medal_sub_triple_perfect => 'Drei makellose DurchlÃ¤ufe.';
 
   @override
   String get medal_desc_triple_perfect => 'Erreiche 3 perfekte Tage.';
@@ -2183,7 +2200,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get medal_sub_perfect_week => 'Sieben Tage ohne Unterbrechung.';
 
   @override
-  String get medal_desc_perfect_week => '7 perfekte Tage am Stück.';
+  String get medal_desc_perfect_week => '7 perfekte Tage am StÃ¼ck.';
 
   @override
   String get medal_id_two_week_chain => 'Fortnight-Kraft';
@@ -2204,7 +2221,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get medal_desc_iron_chain => 'Eine 30-Tage-Kette.';
 
   @override
-  String get medal_id_quarterly_chain => 'Vierteljährliche Kette';
+  String get medal_id_quarterly_chain => 'VierteljÃ¤hrliche Kette';
 
   @override
   String get medal_sub_quarterly_chain => 'Eine Saison, ununterbrochen.';
@@ -2216,47 +2233,48 @@ class AppLocalizationsDe extends AppLocalizations {
   String get medal_id_vital_priority => 'Vitaler Funke';
 
   @override
-  String get medal_sub_vital_priority => 'Du hast die Schwierigen gewählt.';
+  String get medal_sub_vital_priority => 'Du hast die Schwierigen gewÃ¤hlt.';
 
   @override
   String get medal_desc_vital_priority =>
-      'Beende 5 Aufgaben mit vitaler Priorität.';
+      'Beende 5 Aufgaben mit vitaler PrioritÃ¤t.';
 
   @override
-  String get medal_id_spark_priority => 'Funkenbändiger';
+  String get medal_id_spark_priority => 'FunkenbÃ¤ndiger';
 
   @override
   String get medal_sub_spark_priority => 'Schnelle Siege addieren sich.';
 
   @override
   String get medal_desc_spark_priority =>
-      'Beende 5 Aufgaben mit Funken-Priorität.';
+      'Beende 5 Aufgaben mit Funken-PrioritÃ¤t.';
 
   @override
   String get medal_id_note_taker => 'Notiznehmer';
 
   @override
-  String get medal_sub_note_taker => 'Pläne auf Papier schlagen Pläne im Kopf.';
+  String get medal_sub_note_taker =>
+      'PlÃ¤ne auf Papier schlagen PlÃ¤ne im Kopf.';
 
   @override
   String get medal_desc_note_taker =>
-      'Füge Vorbereitungsnotizen zu 5 verschiedenen Aufgaben hinzu.';
+      'FÃ¼ge Vorbereitungsnotizen zu 5 verschiedenen Aufgaben hinzu.';
 
   @override
-  String get medal_id_left_behind_rescuer => 'Zurückgelassenen-Retter';
+  String get medal_id_left_behind_rescuer => 'ZurÃ¼ckgelassenen-Retter';
 
   @override
-  String get medal_sub_left_behind_rescuer => 'Keine Aufgabe zurückgelassen.';
+  String get medal_sub_left_behind_rescuer => 'Keine Aufgabe zurÃ¼ckgelassen.';
 
   @override
   String get medal_desc_left_behind_rescuer =>
-      'Füge 3 verpasste Aufgaben am nächsten Tag wieder hinzu.';
+      'FÃ¼ge 3 verpasste Aufgaben am nÃ¤chsten Tag wieder hinzu.';
 
   @override
   String get medal_id_first_sprout => 'Erste Sprosse';
 
   @override
-  String get medal_sub_first_sprout => 'Ein neues tägliches Ritual.';
+  String get medal_sub_first_sprout => 'Ein neues tÃ¤gliches Ritual.';
 
   @override
   String get medal_desc_first_sprout => 'Pflanze deine erste Gewohnheit.';
@@ -2265,7 +2283,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get medal_id_trio_sprout => 'Dreier-Sprosse';
 
   @override
-  String get medal_sub_trio_sprout => 'Ein kleines Ökosystem.';
+  String get medal_sub_trio_sprout => 'Ein kleines Ã–kosystem.';
 
   @override
   String get medal_desc_trio_sprout => 'Pflanze 3 verschiedene Gewohnheiten.';
@@ -2278,13 +2296,13 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get medal_desc_week_of_growth =>
-      'Pflege eine Gewohnheit jeden Tag für 7 Tage.';
+      'Pflege eine Gewohnheit jeden Tag fÃ¼r 7 Tage.';
 
   @override
-  String get medal_id_fortnight_floret => 'Fortnight-Blüte';
+  String get medal_id_fortnight_floret => 'Fortnight-BlÃ¼te';
 
   @override
-  String get medal_sub_fortnight_floret => 'Eine volle Blüte.';
+  String get medal_sub_fortnight_floret => 'Eine volle BlÃ¼te.';
 
   @override
   String get medal_desc_fortnight_floret => 'Eine 14-Tage-Gewohnheitskette.';
@@ -2299,17 +2317,17 @@ class AppLocalizationsDe extends AppLocalizations {
   String get medal_desc_rooted_master => 'Eine 30-Tage-Gewohnheitskette.';
 
   @override
-  String get medal_id_half_year_bloom => 'Halbjahresblüte';
+  String get medal_id_half_year_bloom => 'HalbjahresblÃ¼te';
 
   @override
   String get medal_sub_half_year_bloom => 'Der Garten ist jetzt dauerhaft.';
 
   @override
   String get medal_desc_half_year_bloom =>
-      'Halte eine einzige Gewohnheit für 180 Tage.';
+      'Halte eine einzige Gewohnheit fÃ¼r 180 Tage.';
 
   @override
-  String get medal_id_garden_keeper => 'Gartenhüter';
+  String get medal_id_garden_keeper => 'GartenhÃ¼ter';
 
   @override
   String get medal_sub_garden_keeper => 'Vielfalt, gemeinsam.';
@@ -2322,7 +2340,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get medal_id_hydration_hero => 'Hydrationsheld';
 
   @override
-  String get medal_sub_hydration_hero => 'Du füllst den Brunnen auf.';
+  String get medal_sub_hydration_hero => 'Du fÃ¼llst den Brunnen auf.';
 
   @override
   String get medal_desc_hydration_hero => 'Pflanze eine Hydrations-Gewohnheit.';
@@ -2331,20 +2349,20 @@ class AppLocalizationsDe extends AppLocalizations {
   String get medal_id_mindful_mover => 'Bewusster Beweger';
 
   @override
-  String get medal_sub_mindful_mover => 'Der Körper erinnert sich.';
+  String get medal_sub_mindful_mover => 'Der KÃ¶rper erinnert sich.';
 
   @override
   String get medal_desc_mindful_mover => 'Pflanze eine Bewegungsgewohnheit.';
 
   @override
-  String get medal_id_devoted_keeper => 'Hingebungsvoller Hüter';
+  String get medal_id_devoted_keeper => 'Hingebungsvoller HÃ¼ter';
 
   @override
   String get medal_sub_devoted_keeper => 'Sechzig Tage, eine Praxis.';
 
   @override
   String get medal_desc_devoted_keeper =>
-      'Pflege eine einzige Gewohnheit für 60 Tage am Stück.';
+      'Pflege eine einzige Gewohnheit fÃ¼r 60 Tage am StÃ¼ck.';
 
   @override
   String get medal_id_tending_notes => 'Pflegenotizen';
@@ -2354,7 +2372,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get medal_desc_tending_notes =>
-      'Füge Pflegehinweise zu 3 Gewohnheiten hinzu.';
+      'FÃ¼ge Pflegehinweise zu 3 Gewohnheiten hinzu.';
 
   @override
   String get medalTierTaglineSprout => 'Pflanze den ersten Samen';
@@ -2378,7 +2396,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get guardianHeadlineAllDone =>
-      'Jeder Samen, den du gepflanzt hast, ist in Blüte. Ruh dich aus, Hüter.';
+      'Jeder Samen, den du gepflanzt hast, ist in BlÃ¼te. Ruh dich aus, HÃ¼ter.';
 
   @override
   String guardianHeadlineStreak14(int count) {
@@ -2386,10 +2404,10 @@ class AppLocalizationsDe extends AppLocalizations {
   }
 
   @override
-  String get guardianHeadlineStreak7 => 'Eine volle Woche in Blüte, Hüter.';
+  String get guardianHeadlineStreak7 => 'Eine volle Woche in BlÃ¼te, HÃ¼ter.';
 
   @override
-  String get guardianHeadlineStreak3 => 'Deine Kette hält. Pflege die Samen.';
+  String get guardianHeadlineStreak3 => 'Deine Kette hÃ¤lt. Pflege die Samen.';
 
   @override
   String get guardianHeadlineNoHabitsDone =>
@@ -2401,23 +2419,23 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get guardianHeadlineMorning =>
-      'Guten Morgen, Hüter. Der Tag ist jung und der Boden ist bereit.';
+      'Guten Morgen, HÃ¼ter. Der Tag ist jung und der Boden ist bereit.';
 
   @override
   String get guardianHeadlineAfternoon =>
-      'Guten Tag, Hüter. Die Hälfte des Lichts bleibt.';
+      'Guten Tag, HÃ¼ter. Die HÃ¤lfte des Lichts bleibt.';
 
   @override
   String get guardianHeadlineEvening =>
-      'Guten Abend, Hüter. Ein letzter Rundgang bevor die Sonne untergeht.';
+      'Guten Abend, HÃ¼ter. Ein letzter Rundgang bevor die Sonne untergeht.';
 
   @override
   String get guardianHeadlineNight =>
-      'Mitternachtsöl brennen? Auch Hüter ruhen sich aus.';
+      'MitternachtsÃ¶l brennen? Auch HÃ¼ter ruhen sich aus.';
 
   @override
   String get guardianBodyNoTasks =>
-      'Dein Heiligtum ist jetzt ruhig. Füge eine Absicht hinzu.';
+      'Dein Heiligtum ist jetzt ruhig. FÃ¼ge eine Absicht hinzu.';
 
   @override
   String guardianBodyStreak14(int count) {
@@ -2449,7 +2467,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get guardianInsightWaitingBody =>
-      'Füge eine Aufgabe oder Gewohnheit hinzu.';
+      'FÃ¼ge eine Aufgabe oder Gewohnheit hinzu.';
 
   @override
   String get guardianInsightWaitingCta => 'Pflanze deinen ersten Samen';
@@ -2463,11 +2481,11 @@ class AppLocalizationsDe extends AppLocalizations {
   }
 
   @override
-  String get guardianInsightChainSuperCta => 'Füge den Samen von morgen hinzu';
+  String get guardianInsightChainSuperCta => 'FÃ¼ge den Samen von morgen hinzu';
 
   @override
   String get guardianInsightChainColdTitle =>
-      'Die Kette ist kalt — starte eine neue';
+      'Die Kette ist kalt â€” starte eine neue';
 
   @override
   String get guardianInsightChainColdBody =>
@@ -2485,11 +2503,11 @@ class AppLocalizationsDe extends AppLocalizations {
   }
 
   @override
-  String get guardianInsightLessIsMoreCta => 'Schärfe den Tag';
+  String get guardianInsightLessIsMoreCta => 'SchÃ¤rfe den Tag';
 
   @override
   String guardianInsightNextMedalTitle(String title) {
-    return 'Nächste Medaille: $title';
+    return 'NÃ¤chste Medaille: $title';
   }
 
   @override
@@ -2505,7 +2523,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get guardianInsightSteadyBody =>
-      'Keine Medaille in Sicht — das ist okay.';
+      'Keine Medaille in Sicht â€” das ist okay.';
 
   @override
   String get guardianInsightSteadyCta => 'Fortschritt ansehen';
@@ -2541,6 +2559,6 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String habitBloomSubtitleL10n(int count, String element) {
-    return '$count-Tage-Kette · $element';
+    return '$count-Tage-Kette Â· $element';
   }
 }

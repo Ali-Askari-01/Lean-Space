@@ -45,6 +45,7 @@ class _InsightsScreenState extends ConsumerState<InsightsScreen> {
       await file.writeAsBytes(bytes);
 
       AppHaptics.light();
+      if (!mounted) return;
       final l10n = AppLocalizations.of(context);
       await SharePlus.instance.share(
         ShareParams(

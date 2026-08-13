@@ -6,36 +6,27 @@ Google Play Store. Walk through every item and tick the box.
 ## 1. Build environment
 
 - [ ] `flutter --version` reports the same SDK the team committed to
-- [ ] All migrations have been run against the
-      production Supabase project, in this order:
-      1. `20250622000000_initial_schema.sql`
-      2. `20250622100000_users_self_insert.sql`
-      3. `20250622200000_subscriptions.sql`
-      4. `20250622300000_streak_freeze_and_buddy.sql`
-      5. `20260701000000_todos_notes_priority.sql`
-      6. `20260701100000_habits_notes.sql`
-      7. `20260713000000_security_and_limits.sql`
-      8. `20260713120000_referrals.sql`
-      9. `20260713200000_billing_hardening.sql`
-      10. `20260713210000_rls_pro_gates.sql`
-      11. `20260713220000_referral_hardening.sql`
-      12. `20260714000000_purchase_token_unique.sql`
-      13. `20260714000001_text_length_constraints.sql`
-      14. `20260714000002_fix_orphan_cascade.sql`
-      15. `20260714000003_buddy_toctou_fixes.sql`
-      16. `20260714000004_updated_at_and_triggers.sql`
-- [ ] Edge functions deployed: `verify-play-purchase`, `delete-account`, `play-rtdn`
-- [ ] Edge function secrets: `GOOGLE_SERVICE_ACCOUNT_JSON`, `PLAY_PUBSUB_TOKEN` (required)
-- [ ] Supabase Auth → URL Configuration has the redirect:
-      `com.leanspace://login-callback` (Android) and the iOS / web ones
-      if applicable.
-- [ ] `supabase functions deploy play-rtdn --no-verify-jwt` is live and
-      has `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `PLAY_PUBSUB_TOKEN`
-      set. Pub/Sub push subscription uses `X-PubSub-Token` header.
+- [ ] D1 migrations have been applied to the production database:
+      ```bash
+      cd cloudflare-workers
+      npx wrangler d1 migrations apply daily-stitch-db --remote --env production
+      ```
+- [ ] Worker deployed to production:
+      ```bash
+      cd cloudflare-workers
+      npx wrangler deploy --env production
+      ```
+- [ ] Worker secrets configured:
+      - `GOOGLE_SERVICE_ACCOUNT_JSON` — Google Play service account credentials
+      - `PLAY_PUBSUB_TOKEN` — shared token for Google Pub/Sub push subscription
+- [ ] `env.json` exists in `leanspace/` with production values:
+      ```json
+      {
+        "API_BASE_URL": "https://daily-stitch-api.<your-subdomain>.workers.dev",
+        "GOOGLE_CLIENT_ID": "<your-google-web-client-id>.apps.googleusercontent.com"
+      }
+      ```
 - [ ] **Security: Verify `feature_flags.dart` has `unlockAllFeatures = false` and `enableSubscriptions = true`**
-- [ ] **Security: Verify `grant_promotional_pro` is NOT executable by authenticated role**
-- [ ] **Security: Verify CORS headers are origin-restricted on ALL Edge Functions**
-- [ ] **Security: Verify all new migrations applied (purchase_token UNIQUE, text length constraints, etc.)**
 
 ## 2. Google Play Console
 
@@ -82,7 +73,7 @@ Google Play Store. Walk through every item and tick the box.
 - [ ] The release APK installs on a clean device
 - [ ] Manual smoke test on a clean device:
   - [ ] Onboarding completes and lands on the auth screen
-  - [ ] Email sign-up creates a real Supabase user
+  - [ ] Email sign-up creates a real user
   - [ ] Adding a task, completing it, and re-opening shows a streak = 1
   - [ ] The home-screen widget installs and reflects the streak
   - [ ] Tapping "Last 7 days" opens the history screen
@@ -93,8 +84,7 @@ Google Play Store. Walk through every item and tick the box.
   - [ ] Uninstalling does not cancel a live subscription (verified in
         Play Console → Subscriptions)
   - [ ] Sign-out returns to the auth screen
-  - [ ] Account deletion removes the Supabase user and the
-        `public.users` row
+  - [ ] Account deletion removes the user and all associated data
 - [ ] No `buddy` / `Budd` / `accountability` strings appear anywhere
       in the app
 - [ ] No "Growth Guardian" branding appears in the UI (only the
@@ -123,5 +113,5 @@ Google Play Store. Walk through every item and tick the box.
   - [ ] Play Console crash reports
   - [ ] Play Console ANR reports
   - [ ] Play Console subscription retention
-  - [ ] Supabase logs for failed purchases
+  - [ ] Cloudflare Workers logs for failed purchases
   - [ ] `app_opens` retention cohorts (D1, D7, D30)

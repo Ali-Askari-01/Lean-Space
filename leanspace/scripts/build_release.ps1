@@ -1,6 +1,6 @@
 # Build LeanSpace release AAB for Google Play Store.
 # Prerequisites:
-# 1. Copy env.json.example to env.json and fill in your Supabase keys
+# 1. Copy env.json.example to env.json and fill in your Cloudflare API URL and Google client ID
 # 2. Generate a keystore: keytool -genkey -v -keystore ~/keystores/lean-space.jks -keyalg RSA -keysize 2048 -validity 10000 -alias leanspace
 # 3. Update android/key.properties with your keystore path and passwords
 
@@ -44,7 +44,7 @@ if ($args -contains "-Clean") {
 }
 
 if (-not (Test-Path env.json)) {
-  Write-Error "Missing env.json - copy env.json.example to env.json and add your Supabase keys."
+  Write-Error "Missing env.json - copy env.json.example to env.json and add API_BASE_URL and GOOGLE_CLIENT_ID."
 }
 
 # Verify key.properties exists

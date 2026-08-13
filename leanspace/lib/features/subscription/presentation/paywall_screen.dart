@@ -20,7 +20,7 @@ class PaywallScreen extends ConsumerStatefulWidget {
 }
 
 class _PaywallScreenState extends ConsumerState<PaywallScreen> {
-  bool _annual = true;
+  String _plan = 'yearly'; // 'yearly', 'monthly', or 'lifetime'
   bool _restoreMessageShown = false;
 
   static const _featureIcons = <IconData>[
@@ -64,12 +64,13 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
 
     final monthly = sub.monthly;
     final yearly = sub.yearly;
-    final preferAnnual = _annual && yearly != null;
-    final selected = preferAnnual
-        ? yearly
-        : (!preferAnnual && monthly != null)
-            ? monthly
-            : yearly ?? monthly;
+    final lifetime = sub.lifetime;
+    final selected = switch (_plan) {
+      'yearly' => yearly,
+      'monthly' => monthly,
+      'lifetime' => lifetime,
+      _ => yearly ?? monthly ?? lifetime,
+    } ?? yearly ?? monthly ?? lifetime;
 
     return Scaffold(
       backgroundColor: AppColors.surface,
@@ -103,16 +104,16 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
                     ),
                     const SizedBox(height: 18),
                     if (!isPro) _PricingBlock(
-                      annual: _annual && yearly != null,
-                      monthlyPrice: monthly?.price ?? r'$1.99',
-                      monthlyPeriod: monthly?.price,
-                      yearlyPrice: yearly?.price ?? r'$19.99',
-                      yearlyPeriod: yearly?.price,
+                      selectedPlan: _plan,
+                      monthlyPrice: monthly?.price ?? r'$0.99',
+                      yearlyPrice: yearly?.price ?? r'$7.99',
+                      lifetimePrice: lifetime?.price ?? r'$14.99',
                       showMonthly: monthly != null,
                       showYearly: yearly != null,
-                      onSelect: (a) {
+                      showLifetime: lifetime != null,
+                      onSelect: (p) {
                         AppHaptics.light();
-                        setState(() => _annual = a);
+                        setState(() => _plan = p);
                       },
                     ),
                     if (!isPro) ...[
@@ -192,11 +193,12 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
                                     .read(subscriptionControllerProvider.notifier)
                                     .buy(selected);
                               },
-                        label: _annual
-                            ? l10n.paywallStartCta(yearly?.price ?? r'$19.99')
-                            : l10n.paywallStartCtaMonthly(
-                                monthly?.price ?? r'$1.99',
-                              ),
+                        label: switch (_plan) {
+                          'yearly' => l10n.paywallStartCta(yearly?.price ?? r'$7.99'),
+                          'monthly' => l10n.paywallStartCtaMonthly(monthly?.price ?? r'$0.99'),
+                          'lifetime' => l10n.paywallStartCtaLifetime(lifetime?.price ?? r'$14.99'),
+                          _ => l10n.paywallStartCta(yearly?.price ?? r'$7.99'),
+                        },
                       ),
                       const SizedBox(height: 8),
                       Row(
@@ -466,23 +468,23 @@ class _FeatureRow extends StatelessWidget {
 
 class _PricingBlock extends StatelessWidget {
   const _PricingBlock({
-    required this.annual,
+    required this.selectedPlan,
     required this.monthlyPrice,
-    required this.monthlyPeriod,
     required this.yearlyPrice,
-    required this.yearlyPeriod,
+    required this.lifetimePrice,
     required this.showMonthly,
     required this.showYearly,
+    required this.showLifetime,
     required this.onSelect,
   });
-  final bool annual;
+  final String selectedPlan;
   final String monthlyPrice;
-  final dynamic monthlyPeriod;
   final String yearlyPrice;
-  final dynamic yearlyPeriod;
+  final String lifetimePrice;
   final bool showMonthly;
   final bool showYearly;
-  final ValueChanged<bool> onSelect;
+  final bool showLifetime;
+  final ValueChanged<String> onSelect;
 
   @override
   Widget build(BuildContext context) {
@@ -495,8 +497,8 @@ class _PricingBlock extends StatelessWidget {
             price: yearlyPrice,
             caption: l10n.paywallYearlyCaption,
             badge: l10n.paywallSavePercent,
-            selected: annual,
-            onTap: () => onSelect(true),
+            selected: selectedPlan == 'yearly',
+            onTap: () => onSelect('yearly'),
           ),
         if (showYearly && showMonthly) const SizedBox(height: 10),
         if (showMonthly)
@@ -505,8 +507,18 @@ class _PricingBlock extends StatelessWidget {
             price: monthlyPrice,
             caption: l10n.paywallMonthlyCaption,
             badge: null,
-            selected: !annual || !showYearly,
-            onTap: () => onSelect(false),
+            selected: selectedPlan == 'monthly',
+            onTap: () => onSelect('monthly'),
+          ),
+        if ((showYearly || showMonthly) && showLifetime) const SizedBox(height: 10),
+        if (showLifetime)
+          _PlanOption(
+            title: l10n.paywallLifetime,
+            price: lifetimePrice,
+            caption: l10n.paywallLifetimeCaption,
+            badge: l10n.paywallLifetimeBadge,
+            selected: selectedPlan == 'lifetime',
+            onTap: () => onSelect('lifetime'),
           ),
       ],
     );

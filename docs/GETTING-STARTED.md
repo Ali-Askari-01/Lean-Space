@@ -8,7 +8,7 @@ Quick path from zero to `flutter run` on a physical Android device (no Android S
 
 ### Already done on this machine
 - Flutter project at `leanspace/`
-- Dependencies wired (Supabase, Riverpod, go_router)
+- Dependencies wired (Riverpod, go_router, http, flutter_secure_storage)
 - Batch 1.1 placeholder screens and routes
 - OpenJDK 17 + Android SDK (CLI) installed
 - `flutter doctor` — Android toolchain should be green
@@ -64,18 +64,20 @@ Run **one** build at a time — parallel `flutter run` / `gradlew` processes cor
 
 ---
 
-## 3. Supabase config
+## 3. Environment config
 
-1. Create a project at [supabase.com](https://supabase.com).
-2. Copy **Project URL** and **anon public key** from Dashboard → Settings → API.
-3. Edit `leanspace/.env`:
+1. Deploy your Cloudflare Worker (see `cloudflare-workers/README.md`).
+2. Copy `leanspace/env.json.example` to `leanspace/env.json`.
+3. Edit `leanspace/env.json` with your Worker URL and Google OAuth client ID:
 
+```json
+{
+  "API_BASE_URL": "https://daily-stitch-api.your-subdomain.workers.dev",
+  "GOOGLE_CLIENT_ID": "your-google-client-id.apps.googleusercontent.com"
+}
 ```
-SUPABASE_URL=https://YOUR_REF.supabase.co
-SUPABASE_ANON_KEY=your-real-anon-key
-```
 
-Never commit `.env` — it's gitignored.
+`env.json` is gitignored — never commit it.
 
 ---
 
@@ -93,10 +95,10 @@ Flutter will detect your connected phone. First build takes several minutes; lat
 
 ---
 
-## 5. What you should see (Batch 1.1)
+## 5. What you should see
 
-- If `.env` has placeholders → **Setup required** screen with instructions.
-- If Supabase is configured but you're logged out → **Auth** screen (sign in / sign up).
+- If `env.json` has placeholders → **Setup required** screen with instructions.
+- If the Worker is configured but you're logged out → **Auth** screen (sign in / sign up).
 - After auth → **My Day** tab with bottom nav to **Our Space**, settings icon top-right.
 
 ---
@@ -105,8 +107,7 @@ Flutter will detect your connected phone. First build takes several minutes; lat
 
 Once the app runs on your phone, proceed to **Batch 1.2** in `execution/12-BATCH-EXECUTION-PLAN.md`:
 
-- Apply DDL migrations (`engineering/02-TRD.md`)
-- RLS policies (`engineering/03-SECURITY.md`)
-- Run RLS checklist (`operations/07-TEST-PLAN.md` §2)
+- Apply D1 migrations (`cloudflare-workers/README.md`)
+- Run D1 schema verification (`operations/07-TEST-PLAN.md` §2)
 
 Check off items in `execution/00-IMPLEMENTATION-READINESS.md` as you go.

@@ -48,25 +48,7 @@ npm run deploy
 
 ## Data Migration
 
-### Export from Supabase
-
-1. Update `migrate-data.ts` with your Supabase credentials
-2. Run export:
-   ```bash
-   npx ts-node migrate-data.ts
-   ```
-
-### Import to D1
-
-1. Generate D1 import SQL:
-   ```bash
-   npx ts-node import-data.ts
-   ```
-
-2. Import to D1:
-   ```bash
-   npm run d1:migrate
-   ```
+Data was migrated from Supabase PostgreSQL to Cloudflare D1. The migration scripts (`migrate-data.ts`, `import-data.ts`) are included for reference but are not part of the runtime dependencies.
 
 ## API Endpoints
 
@@ -108,7 +90,7 @@ npm run deploy
 - `POST /webhook/play-rtdn` - Google Play RTDN webhook
 
 ### Entitlements
-- `GET /api/entitlements` - Get user tier and Pro status
+- `GET /api/subscription/entitlements` - Get user tier and Pro status
 
 ### Buddy System
 - `GET /api/buddy/state` - Get buddy pair status

@@ -7,16 +7,16 @@ Android-first Flutter app for LeanSpace. Run from this directory.
 1. Flutter SDK (stable) — `flutter doctor`
 2. Android SDK (command-line, no Android Studio required)
 3. Physical Android phone with **USB debugging** enabled
-4. Supabase project — copy keys into `env.json`
+4. Cloudflare Worker deployed — copy Worker URL and Google Client ID into `env.json`
 
 See `../execution/11-DEV-SETUP.md` and `../execution/00-IMPLEMENTATION-READINESS.md`.
 
 ## First-time setup
 
 ```powershell
-# 1. Configure Supabase
+# 1. Configure environment
 copy env.json.example env.json
-# Edit env.json with your SUPABASE_URL and SUPABASE_ANON_KEY
+# Edit env.json with your API_BASE_URL and GOOGLE_CLIENT_ID
 
 # 2. Install dependencies
 flutter pub get
@@ -66,7 +66,7 @@ Supported languages:
 
 ```
 lib/
-├── main.dart                 # Bootstrap, Supabase init, splash state machine
+├── main.dart                 # Bootstrap, API client init, splash state machine
 ├── app.dart                  # MaterialApp.router with locale + theme
 ├── core/
 │   ├── env.dart              # Environment variables

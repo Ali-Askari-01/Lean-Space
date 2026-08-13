@@ -31,7 +31,26 @@ todos.get('/left-behind', async (c) => {
 
 todos.post('/', async (c) => {
   const userId = c.get('userId');
-  const { text, notes, priority, is_carried_forward } = await c.req.json();
+  const body = await c.req.json<{ text?: unknown; notes?: unknown; priority?: unknown; is_carried_forward?: unknown }>();
+
+  // Validate text
+  if (!body.text || typeof body.text !== 'string' || body.text.trim().length === 0 || body.text.length > 500) {
+    return c.json({ error: 'invalid_text' }, 400);
+  }
+
+  // Validate notes
+  const notes = body.notes;
+  if (notes !== undefined && notes !== null && (typeof notes !== 'string' || notes.length > 2000)) {
+    return c.json({ error: 'invalid_notes' }, 400);
+  }
+
+  // Validate priority
+  const priority = body.priority;
+  const validPriorities = ['standard', 'vital', 'spark'];
+  if (priority !== undefined && priority !== null && (!validPriorities.includes(priority as string))) {
+    return c.json({ error: 'invalid_priority' }, 400);
+  }
+
   const today = new Date().toISOString().split('T')[0];
 
   const { count } = await c.env.DB.prepare(
@@ -43,7 +62,7 @@ todos.post('/', async (c) => {
   await c.env.DB.prepare(
     `INSERT INTO todos (id, user_id, text, status, original_date, is_carried_forward, notes, priority, created_at)
      VALUES (?, ?, ?, 'open', ?, ?, ?, ?, datetime('now'))`
-  ).bind(id, userId, text, today, is_carried_forward ? 1 : 0, notes || null, priority || null).run();
+  ).bind(id, userId, body.text.trim(), today, body.is_carried_forward ? 1 : 0, typeof notes === 'string' ? notes.trim() : null, typeof priority === 'string' ? priority : null).run();
 
   return c.json(await c.env.DB.prepare('SELECT * FROM todos WHERE id = ?').bind(id).first());
 });
@@ -63,13 +82,31 @@ todos.post('/:id/complete', async (c) => {
 todos.put('/:id', async (c) => {
   const userId = c.get('userId');
   const taskId = c.req.param('id');
-  const { text, notes, priority } = await c.req.json();
+  const body = await c.req.json<{ text?: unknown; notes?: unknown; priority?: unknown }>();
+
+  // Validate text
+  if (!body.text || typeof body.text !== 'string' || body.text.trim().length === 0 || body.text.length > 500) {
+    return c.json({ error: 'invalid_text' }, 400);
+  }
+
+  // Validate notes
+  const notes = body.notes;
+  if (notes !== undefined && notes !== null && (typeof notes !== 'string' || notes.length > 2000)) {
+    return c.json({ error: 'invalid_notes' }, 400);
+  }
+
+  // Validate priority
+  const priority = body.priority;
+  const validPriorities = ['standard', 'vital', 'spark'];
+  if (priority !== undefined && priority !== null && (!validPriorities.includes(priority as string))) {
+    return c.json({ error: 'invalid_priority' }, 400);
+  }
 
   const existing = await c.env.DB.prepare('SELECT * FROM todos WHERE id = ? AND user_id = ?').bind(taskId, userId).first();
   if (!existing) return c.json({ error: 'not_found' }, 404);
 
   await c.env.DB.prepare('UPDATE todos SET text = ?, notes = ?, priority = ? WHERE id = ? AND user_id = ?')
-    .bind(text, notes || null, priority || null, taskId, userId).run();
+    .bind(body.text.trim(), typeof notes === 'string' ? notes.trim() : null, typeof priority === 'string' ? priority : null, taskId, userId).run();
 
   return c.json(await c.env.DB.prepare('SELECT * FROM todos WHERE id = ?').bind(taskId).first());
 });

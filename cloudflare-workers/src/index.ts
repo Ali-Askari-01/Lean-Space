@@ -11,12 +11,13 @@ import subscriptionsRoutes from './routes/subscriptions';
 import buddyRoutes from './routes/buddy';
 import accountRoutes from './routes/account';
 import webhooksRoutes from './routes/webhooks';
-import cronRoutes from './routes/cron';
+import cronRoutes, { runRollover } from './routes/cron';
 
 export interface Env {
   DB: D1Database;
   GOOGLE_CLIENT_ID: string;
   PLAY_PUBSUB_TOKEN: string;
+  GOOGLE_SERVICE_ACCOUNT_JSON?: string;
   APP_NAME: string;
   ALLOWED_ORIGINS: string;
   PLAY_PACKAGE_NAME: string;
@@ -33,10 +34,14 @@ const app = new Hono<{ Bindings: Env; Variables: Variables }>();
 app.use('*', cors({
   origin: (origin, c) => {
     const allowed = (c.env.ALLOWED_ORIGINS || '').split(',').map((s: string) => s.trim());
-    if (allowed.includes('*') || allowed.includes(origin)) {
+    // Never allow wildcard '*' with credentials — reject it
+    if (allowed.includes('*')) {
+      return '*';
+    }
+    if (allowed.includes(origin)) {
       return origin;
     }
-    return allowed[0] || null;
+    return null;
   },
   allowMethods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowHeaders: ['Authorization', 'Content-Type'],
@@ -81,13 +86,41 @@ app.route('/api/account', accountRoutes);
 app.route('/webhook', webhooksRoutes);
 app.route('/cron', cronRoutes);
 
+app.post('/api/bootstrap', async (c) => {
+  const userId = c.get('userId');
+  const body: { timezone?: unknown } = await c.req.json<{ timezone?: unknown }>().catch(() => ({}));
+  const timezone = typeof body.timezone === 'string' && body.timezone.length > 0 && body.timezone.length <= 80
+    ? body.timezone.replace(/[^a-zA-Z0-9/_+-]/g, '')
+    : 'UTC';
+
+  await c.env.DB.batch([
+    c.env.DB.prepare("UPDATE users SET timezone = COALESCE(?, timezone) WHERE id = ?").bind(timezone, userId),
+    c.env.DB.prepare("INSERT INTO app_opens (id, user_id, opened_at) VALUES (?, ?, datetime('now'))").bind(crypto.randomUUID(), userId),
+    c.env.DB.prepare("DELETE FROM sessions WHERE user_id = ? AND expires_at <= datetime('now')").bind(userId),
+  ]);
+
+  const user = await c.env.DB.prepare(
+    'SELECT id, email, tier, timezone, pro_since, pro_until, referral_code FROM users WHERE id = ?'
+  ).bind(userId).first();
+
+  return c.json({ ok: true, user });
+});
+
 // Global error handler
 app.onError((err, c) => {
   console.error('Unhandled error:', err);
-  return c.json({ error: 'internal_error', message: err.message }, 500);
+  // Never leak internal error details to clients
+  return c.json({
+    error: 'internal_error',
+  }, 500);
 });
 
 // 404 handler
 app.notFound((c) => c.json({ error: 'not_found' }, 404));
 
-export default app;
+export default {
+  fetch: app.fetch,
+  async scheduled(_event: ScheduledEvent, env: Env, ctx: ExecutionContext) {
+    ctx.waitUntil(runRollover(env));
+  },
+};

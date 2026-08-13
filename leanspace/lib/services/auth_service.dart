@@ -1,4 +1,5 @@
 import 'package:google_sign_in/google_sign_in.dart';
+import '../core/env.dart';
 import 'api_client.dart';
 
 class AuthService {
@@ -7,6 +8,7 @@ class AuthService {
   final ApiClient _api;
   
   final GoogleSignIn _googleSignIn = GoogleSignIn(
+    serverClientId: Env.googleClientId,
     scopes: ['email', 'profile'],
   );
 

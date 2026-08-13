@@ -2,7 +2,8 @@ import { Hono } from 'hono';
 import type { Env } from '../index';
 import type { AppEnv } from '../types';
 import { hashPassword, verifyPassword, needsUpgrade, upgradeHashIfNeeded } from '../password';
-import { createSession, getSession, deleteSession } from '../auth';
+import { createSession, deleteSession, verifyGoogleToken } from '../auth';
+import { checkRateLimit, getRateLimitConfig, getClientIdentifier } from '../rate_limit';
 
 const auth = new Hono<AppEnv>();
 
@@ -10,12 +11,25 @@ const auth = new Hono<AppEnv>();
 
 auth.post('/signup', async (c) => {
   try {
+    // Rate limit check
+    const clientIp = getClientIdentifier(c);
+    const rlConfig = getRateLimitConfig('auth:signup')!;
+    const rl = await checkRateLimit(c.env.DB, 'auth:signup', clientIp, rlConfig);
+    if (!rl.allowed) {
+      return c.json({ error: 'rate_limited', retry_after_ms: rl.retryAfterMs }, 429);
+    }
+
     const { email, password, referral_code } = await c.req.json<{ email: string; password: string; referral_code?: string }>();
 
-    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    if (!email || typeof email !== 'string' || email.length > 254) {
       return c.json({ error: 'invalid_email' }, 400);
     }
-    if (!password || password.length < 8) {
+    // Stronger email validation
+    const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+    if (!emailRegex.test(email)) {
+      return c.json({ error: 'invalid_email' }, 400);
+    }
+    if (!password || typeof password !== 'string' || password.length < 8 || password.length > 128) {
       return c.json({ error: 'password_too_short' }, 400);
     }
 
@@ -49,14 +63,26 @@ auth.post('/signup', async (c) => {
       user: { id: userId, email, tier: 'free', timezone: 'UTC' },
     });
   } catch (e) {
-    const msg = e instanceof Error ? e.message : String(e);
-    return c.json({ error: 'signup_failed', message: msg }, 500);
+    console.error('Signup failed:', e);
+    return c.json({ error: 'signup_failed' }, 500);
   }
 });
 
 auth.post('/signin', async (c) => {
   try {
+    // Rate limit check
+    const clientIp = getClientIdentifier(c);
+    const rlConfig = getRateLimitConfig('auth:signin')!;
+    const rl = await checkRateLimit(c.env.DB, 'auth:signin', clientIp, rlConfig);
+    if (!rl.allowed) {
+      return c.json({ error: 'rate_limited', retry_after_ms: rl.retryAfterMs }, 429);
+    }
+
     const { email, password } = await c.req.json<{ email: string; password: string }>();
+
+    if (!email || typeof email !== 'string' || !password || typeof password !== 'string') {
+      return c.json({ error: 'invalid_credentials' }, 401);
+    }
 
     const user = await c.env.DB.prepare('SELECT * FROM users WHERE email = ?').bind(email).first() as any;
     if (!user) return c.json({ error: 'invalid_credentials' }, 401);
@@ -77,14 +103,25 @@ auth.post('/signin', async (c) => {
       user: { id: user.id, email: user.email, tier: user.tier, timezone: user.timezone },
     });
   } catch (e) {
-    const msg = e instanceof Error ? e.message : String(e);
-    return c.json({ error: 'signin_failed', message: msg }, 500);
+    console.error('Signin failed:', e);
+    return c.json({ error: 'signin_failed' }, 500);
   }
 });
 
 auth.post('/google', async (c) => {
   try {
-    const { idToken, referral_code } = await c.req.json<{ idToken: string; referral_code?: string }>();
+    // Rate limit check
+    const clientIp = getClientIdentifier(c);
+    const rlConfig = getRateLimitConfig('auth:google')!;
+    const rl = await checkRateLimit(c.env.DB, 'auth:google', clientIp, rlConfig);
+    if (!rl.allowed) {
+      return c.json({ error: 'rate_limited', retry_after_ms: rl.retryAfterMs }, 429);
+    }
+
+    const body = await c.req.json<{ idToken?: string; id_token?: string; referral_code?: string }>();
+    const idToken = body.idToken ?? body.id_token;
+    const referral_code = body.referral_code;
+    if (!idToken) return c.json({ error: 'missing_id_token' }, 400);
 
     const googleUser = await verifyGoogleToken(c.env, idToken);
     if (!googleUser) return c.json({ error: 'invalid_google_token' }, 401);
@@ -121,8 +158,8 @@ auth.post('/google', async (c) => {
       user: { id: user!.id, email: user!.email, tier: user!.tier, timezone: user!.timezone },
     });
   } catch (e) {
-    const msg = e instanceof Error ? e.message : String(e);
-    return c.json({ error: 'google_auth_failed', message: msg }, 500);
+    console.error('Google auth failed:', e);
+    return c.json({ error: 'google_auth_failed' }, 500);
   }
 });
 
@@ -150,22 +187,11 @@ auth.post('/signout', async (c) => {
 
 function generateReferralCode(): string {
   const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+  const bytes = new Uint8Array(8);
+  crypto.getRandomValues(bytes);
   let code = '';
-  for (let i = 0; i < 8; i++) code += chars.charAt(Math.floor(Math.random() * chars.length));
+  for (let i = 0; i < 8; i++) code += chars.charAt(bytes[i] % chars.length);
   return code;
-}
-
-async function verifyGoogleToken(env: Env, idToken: string): Promise<{ sub: string; email: string } | null> {
-  try {
-    const response = await fetch(`https://oauth2.googleapis.com/tokeninfo?id_token=${idToken}`);
-    if (!response.ok) return null;
-    const payload = await response.json() as any;
-    const aud = payload.aud;
-    if (aud !== env.GOOGLE_CLIENT_ID) return null;
-    return { sub: payload.sub, email: payload.email };
-  } catch {
-    return null;
-  }
 }
 
 async function applyReferralCode(env: Env, userId: string, code: string): Promise<void> {

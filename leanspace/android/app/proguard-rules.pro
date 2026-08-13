@@ -13,9 +13,23 @@
 -keep class io.flutter.** { *; }
 -keep class io.flutter.plugins.** { *; }
 
-# Supabase / AppAuth uses reflection
--keep class io.supabase.** { *; }
+# AppAuth uses reflection
 -keep class net.openid.appauth.** { *; }
+
+# ---------------------------------------------------------------------
+# google_mobile_ads / AdMob
+# ---------------------------------------------------------------------
+-keep class com.google.android.gms.ads.** { *; }
+-keep class com.google.ads.** { *; }
+-dontwarn com.google.android.gms.ads.**
+
+# ---------------------------------------------------------------------
+# Google Sign In (auth uses reflection via Play Services)
+# ---------------------------------------------------------------------
+-keep class com.google.android.gms.auth.** { *; }
+-keep class com.google.android.gms.common.** { *; }
+-keep class io.flutter.plugins.googlesignin.** { *; }
+-dontwarn com.google.android.gms.auth.**
 
 # ---------------------------------------------------------------------
 # in_app_purchase / Google Play Billing
@@ -58,5 +72,6 @@
 # ---------------------------------------------------------------------
 # Don't warn on missing classes from optional Play Services modules
 # ---------------------------------------------------------------------
+-keep class com.google.android.play.core.** { *; }
 -dontwarn com.google.android.play.core.**
 -dontwarn com.google.errorprone.annotations.**

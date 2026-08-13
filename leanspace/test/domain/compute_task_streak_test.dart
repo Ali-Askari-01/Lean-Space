@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:leanspace/features/my_day/domain/todo_item.dart';
+import 'package:daily_stitch/features/my_day/domain/todo_item.dart';
 
 void main() {
   group('computeTaskStreak', () {

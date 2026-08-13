@@ -64,7 +64,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String todayTasksCount(String done, String total) {
-    return 'Hari ini · $done dari $total tugas';
+    return 'Hari ini Â· $done dari $total tugas';
   }
 
   @override
@@ -76,7 +76,7 @@ class AppLocalizationsId extends AppLocalizations {
   String get todayChainGrows => 'RANTAI BERGROW SAAT ANDA MENYELESAIKAN';
 
   @override
-  String get todayChainComplete => 'RANTAI SELESAI · RAWAT KEBUN BESOK';
+  String get todayChainComplete => 'RANTAI SELESAI Â· RAWAT KEBUN BESOK';
 
   @override
   String get taskCapInfo => 'Mengapa ada batas 5 tugas?';
@@ -112,7 +112,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get taskCapBulletFreezeBody =>
-      'Pro memberi Anda 2 pembekuan rantai per bulan — mereka menutupi hari yang terlewat sehingga rantai Anda bertahan.';
+      'Pro memberi Anda 2 pembekuan rantai per bulan â€” mereka menutupi hari yang terlewat sehingga rantai Anda bertahan.';
 
   @override
   String get tasksHeader => 'Tugas';
@@ -127,11 +127,11 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get tasksCapReached =>
-      '5/5 slot terpakai — selesaikan satu untuk menanam benih baru.';
+      '5/5 slot terpakai â€” selesaikan satu untuk menanam benih baru.';
 
   @override
   String get tasksEmptyCta =>
-      'Tanam benih pertama Anda — apa yang penting hari ini?';
+      'Tanam benih pertama Anda â€” apa yang penting hari ini?';
 
   @override
   String get habitsHeader => 'Kebiasaan';
@@ -154,7 +154,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get habitsLocked =>
-      'Slot kebiasaan Pro — buka kunci untuk menanam lebih banyak tunas';
+      'Slot kebiasaan Pro â€” buka kunci untuk menanam lebih banyak tunas';
 
   @override
   String get habitsSlotsFull => 'Semua slot kebiasaan sedang penuh.';
@@ -169,7 +169,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String leftBehindBanner(String count) {
-    return '$count terlewat — masih di Tertinggal';
+    return '$count terlewat â€” masih di Tertinggal';
   }
 
   @override
@@ -244,7 +244,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String leftBehindYesterdayDate(String date) {
-    return 'Kemarin · $date';
+    return 'Kemarin Â· $date';
   }
 
   @override
@@ -254,7 +254,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String streakAtRiskLastCall(String count) {
-    return 'Panggilan terakhir — $count tugas masih terbuka';
+    return 'Panggilan terakhir â€” $count tugas masih terbuka';
   }
 
   @override
@@ -267,7 +267,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get streakAtRiskFreeze =>
-      'Kemarin terlewat — gunakan pembekuan rantai?';
+      'Kemarin terlewat â€” gunakan pembekuan rantai?';
 
   @override
   String get streakFreezeUse => 'Gunakan pembekuan';
@@ -328,7 +328,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get medalsTrophyFirst =>
-      'Anda meraih medali pertama — terus lanjutkan';
+      'Anda meraih medali pertama â€” terus lanjutkan';
 
   @override
   String medalsTrophyMany(String earned) {
@@ -355,7 +355,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String medalSheetEarned(String tier) {
-    return 'DIRAIH · $tier';
+    return 'DIRAIH Â· $tier';
   }
 
   @override
@@ -522,14 +522,14 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get paywallFeaturesBodies =>
-      'Gratis memberi Anda 3. Pro membuka semua lima sehingga ritual harian Anda bisa hidup di sini.|Jelajahi setiap hari yang telah Anda selesaikan — bukan hanya 7 hari terakhir. Lihat ke belakang bertahun-tahun, bukan minggu.|Buka kunci medali tier Legendaris. Lencana paling langka adalah untuk orang-orang yang benar-benar berkommitmen.|2 pembekuan rantai per bulan sehingga satu hari buruk tidak mengakhiri rantai Anda.|Kartu bagikan mingguan yang indah. Posting rantai Anda, inspirasi orang lain untuk memulai.|Buka kunci warna aksen dan tema baru saat kami menambahkannya. Selalu pembaruan gratis.';
+      'Gratis memberi Anda 3. Pro membuka semua lima sehingga ritual harian Anda bisa hidup di sini.|Jelajahi setiap hari yang telah Anda selesaikan â€” bukan hanya 7 hari terakhir. Lihat ke belakang bertahun-tahun, bukan minggu.|Buka kunci medali tier Legendaris. Lencana paling langka adalah untuk orang-orang yang benar-benar berkommitmen.|2 pembekuan rantai per bulan sehingga satu hari buruk tidak mengakhiri rantai Anda.|Kartu bagikan mingguan yang indah. Posting rantai Anda, inspirasi orang lain untuk memulai.|Buka kunci warna aksen dan tema baru saat kami menambahkannya. Selalu pembaruan gratis.';
 
   @override
   String get paywallYearly => 'Tahunan';
 
   @override
   String get paywallYearlyCaption =>
-      'Nilai terbaik · setara dengan ~2.50 USD/bulan';
+      'Nilai terbaik Â· setara dengan ~2.50 USD/bulan';
 
   @override
   String get paywallYearlyBadge => 'HEMAT 35%';
@@ -539,16 +539,30 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get paywallMonthlyCaption =>
-      'Ditagih setiap bulan · batalkan kapan saja';
+      'Ditagih setiap bulan Â· batalkan kapan saja';
 
   @override
   String paywallStartCta(String price) {
-    return 'Mulai Pro · $price/thn';
+    return 'Mulai Pro Â· $price/thn';
   }
 
   @override
   String paywallStartCtaMonthly(String price) {
-    return 'Mulai Pro · $price/bln';
+    return 'Mulai Pro Â· $price/bln';
+  }
+
+  @override
+  String get paywallLifetime => 'Lifetime';
+
+  @override
+  String get paywallLifetimeCaption => 'One-time payment · yours forever';
+
+  @override
+  String get paywallLifetimeBadge => 'BEST DEAL';
+
+  @override
+  String paywallStartCtaLifetime(String price) {
+    return 'Start Pro · $price forever';
   }
 
   @override
@@ -578,11 +592,11 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get paywallHistoryHead =>
-      'Lihat riwayat lengkap Anda — setiap hari sempurna, setiap medali, setiap kebangkitan.';
+      'Lihat riwayat lengkap Anda â€” setiap hari sempurna, setiap medali, setiap kebangkitan.';
 
   @override
   String get paywallMedalHead =>
-      'Medali paling langka hanya untuk Pro. Terus lanjutkan — mereka lebih dekat dari yang Anda kira.';
+      'Medali paling langka hanya untuk Pro. Terus lanjutkan â€” mereka lebih dekat dari yang Anda kira.';
 
   @override
   String get settingsYourActivity => 'AKTIVITAS ANDA';
@@ -631,7 +645,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get firstRunBody =>
-      'Tanam benih pertama Anda — apa yang paling penting hari ini?';
+      'Tanam benih pertama Anda â€” apa yang paling penting hari ini?';
 
   @override
   String get firstRunCta => 'Tanam benih pertama Anda';
@@ -661,7 +675,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get intentionBody3 =>
-      'Anda tidak harus menanam seluruh hutan sekaligus — cukup hal yang benar berikutnya.';
+      'Anda tidak harus menanam seluruh hutan sekaligus â€” cukup hal yang benar berikutnya.';
 
   @override
   String get intentionTitle4 => 'Rawat langkah kecil berikutnya.';
@@ -689,7 +703,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get intentionBody7 =>
-      'Keberanian berlipat ganda. Pilih benih yang telah Anda tunda — bahkan memberi nama sudah membuatnya maju.';
+      'Keberanian berlipat ganda. Pilih benih yang telah Anda tunda â€” bahkan memberi nama sudah membuatnya maju.';
 
   @override
   String get intentionTitle8 => 'Rawat tanah sebelum benih.';
@@ -713,7 +727,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String shareCardProgressText(String year) {
-    return 'Progres Daily Stitch saya — $year di Daily Stitch.';
+    return 'Progres Daily Stitch saya â€” $year di Daily Stitch.';
   }
 
   @override
@@ -751,7 +765,7 @@ class AppLocalizationsId extends AppLocalizations {
       'Kebiasaan (Yoga pagi, Minum air) hidup selamanya. Tugas bersifat satu kali. Keduanya memberi makan rantai yang sama.';
 
   @override
-  String get howItWorksLeftBehind => 'Tugas terlewat → Tertinggal';
+  String get howItWorksLeftBehind => 'Tugas terlewat â†’ Tertinggal';
 
   @override
   String get howItWorksLeftBehindBody =>
@@ -762,7 +776,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get howItWorksProgressBody =>
-      'Rantai, kalender, medali, riwayat — semuanya tentang bagaimana Anda berkembang dari waktu ke waktu. Tidak ada yang mendesak di sini.';
+      'Rantai, kalender, medali, riwayat â€” semuanya tentang bagaimana Anda berkembang dari waktu ke waktu. Tidak ada yang mendesak di sini.';
 
   @override
   String get howItWorksYou => 'Tab Anda';
@@ -868,7 +882,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get onboardingPage3Body =>
-      'Anda hanya bisa menanam 5 benih per hari. Batas itu memaksa Anda untuk fokus pada yang benar-benar penting — dan melindungi rantai Anda.';
+      'Anda hanya bisa menanam 5 benih per hari. Batas itu memaksa Anda untuk fokus pada yang benar-benar penting â€” dan melindungi rantai Anda.';
 
   @override
   String get onboardingPage4Title => 'Rawat tunas Anda setiap hari.';
@@ -927,7 +941,7 @@ class AppLocalizationsId extends AppLocalizations {
   String get authEnterValidEmail => 'Masukkan alamat email yang valid';
 
   @override
-  String get authPasswordTooShort => 'Kata sandi harus minimal 6 karakter';
+  String get authPasswordTooShort => 'Kata sandi harus minimal 8 karakter';
 
   @override
   String get authAccountCreated =>
@@ -1014,7 +1028,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get settingsAllFeaturesUnlockedSubtitle =>
-      'Versi beta — langganan dijeda saat kami menguji segalanya.';
+      'Versi beta â€” langganan dijeda saat kami menguji segalanya.';
 
   @override
   String settingsVersion(Object build, Object version) {
@@ -1029,7 +1043,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String settingsLevel(Object level) {
-    return 'Level $level · Master Kebiasaan';
+    return 'Level $level Â· Master Kebiasaan';
   }
 
   @override
@@ -1089,7 +1103,7 @@ class AppLocalizationsId extends AppLocalizations {
   }
 
   @override
-  String get youBloomTrackerFooter => 'Daily Stitch · Kebiasaan & To-Do';
+  String get youBloomTrackerFooter => 'Daily Stitch Â· Kebiasaan & To-Do';
 
   @override
   String get progressMedals => 'Medali';
@@ -1106,16 +1120,16 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String progressTasksFinishedPct(Object done, Object pct, Object total) {
-    return '$done dari $total tugas selesai · $pct%';
+    return '$done dari $total tugas selesai Â· $pct%';
   }
 
   @override
   String get progressNoMedalsYet =>
-      'Belum ada medali — selesaikan tugas atau rawat tunas untuk memulai.';
+      'Belum ada medali â€” selesaikan tugas atau rawat tunas untuk memulai.';
 
   @override
   String progressSeeAllMedals(Object earned, Object total) {
-    return 'Lihat semua medali · $earned dari $total diraih';
+    return 'Lihat semua medali Â· $earned dari $total diraih';
   }
 
   @override
@@ -1123,7 +1137,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String progressNextBadgeTier(Object tier) {
-    return 'LENCANA BERIKUTNYA · $tier';
+    return 'LENCANA BERIKUTNYA Â· $tier';
   }
 
   @override
@@ -1141,7 +1155,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get helpBody =>
-      'Kebanyakan jawaban ada di bawah. Jika tidak, kirimkan catatan kepada kami dan kami biasanya membalas dalam 2–3 hari.';
+      'Kebanyakan jawaban ada di bawah. Jika tidak, kirimkan catatan kepada kami dan kami biasanya membalas dalam 2â€“3 hari.';
 
   @override
   String get helpSectionFAQ => 'PERTANYAAN UMUM';
@@ -1153,13 +1167,13 @@ class AppLocalizationsId extends AppLocalizations {
   String get helpAddMessage => 'Tambahkan pesan singkat terlebih dahulu.';
 
   @override
-  String get helpOpening => 'Membuka aplikasi email Anda…';
+  String get helpOpening => 'Membuka aplikasi email Andaâ€¦';
 
   @override
   String get helpEmailUs => 'Email kami';
 
   @override
-  String get helpOpeningAction => 'Membuka…';
+  String get helpOpeningAction => 'Membukaâ€¦';
 
   @override
   String get helpCopyEmail => 'Salin email dukungan';
@@ -1178,7 +1192,7 @@ class AppLocalizationsId extends AppLocalizations {
   String get helpWhatHappened => 'Apa yang terjadi?';
 
   @override
-  String get helpHint => 'Deskripsi singkat sangat membantu…';
+  String get helpHint => 'Deskripsi singkat sangat membantuâ€¦';
 
   @override
   String get helpDisclaimer =>
@@ -1189,7 +1203,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get helpFaqA1 =>
-      'Anda dapat menambahkan hingga 5 tugas per hari lokal. Tugas ke-6 diblokir secara sengaja — disiplin mengalahkan beban berlebih. Batas itu adalah fitur, bukan keterbatasan.';
+      'Anda dapat menambahkan hingga 5 tugas per hari lokal. Tugas ke-6 diblokir secara sengaja â€” disiplin mengalahkan beban berlebih. Batas itu adalah fitur, bukan keterbatasan.';
 
   @override
   String get helpFaqQ2 => 'Apa yang terjadi pada tengah malam?';
@@ -1224,14 +1238,14 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get helpFaqA6 =>
-      'Semua data tersimpan di Supabase (Postgres) di bawah akun yang masuk. Kami tidak pernah menjual atau membaginya. Lihat kebijakan privasi yang tertaut di daftar Play Store untuk detail lengkap.';
+      'Semua data tersimpan di backend cloud aman kami di bawah akun yang masuk. Kami tidak pernah menjual atau membaginya. Lihat kebijakan privasi yang tertaut di daftar Play Store untuk detail lengkap.';
 
   @override
   String get helpFaqQ7 => 'Bagaimana cara menghapus akun saya?';
 
   @override
   String get helpFaqA7 =>
-      'Buka Pengaturan → Akun → Hapus akun. Ini menghapus profil, tugas, kebiasaan, dan data langganan Anda secara permanen. Langganan Play yang aktif harus dibatalkan secara terpisah di Google Play.';
+      'Buka Pengaturan â†’ Akun â†’ Hapus akun. Ini menghapus profil, tugas, kebiasaan, dan data langganan Anda secara permanen. Langganan Play yang aktif harus dibatalkan secara terpisah di Google Play.';
 
   @override
   String get helpTopicsGeneral => 'Pertanyaan umum';
@@ -1290,7 +1304,7 @@ class AppLocalizationsId extends AppLocalizations {
       'Tidak dapat menghapus akun. Coba lagi atau email support@dailystitch.app.';
 
   @override
-  String get referralYouTitle => 'Undang teman · dapatkan Pro gratis';
+  String get referralYouTitle => 'Undang teman Â· dapatkan Pro gratis';
 
   @override
   String referralYouSubtitle(int progress, int milestone) {
@@ -1308,11 +1322,11 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get referralPaywallBody =>
-      'Undang 5 teman yang mendaftar → 1 bulan Pro gratis';
+      'Undang 5 teman yang mendaftar â†’ 1 bulan Pro gratis';
 
   @override
   String get referralPaywallProBody =>
-      'Terus mengundang — kumpulkan bulan Pro gratis';
+      'Terus mengundang â€” kumpulkan bulan Pro gratis';
 
   @override
   String referralPaywallProgress(Object count, Object milestone) {
@@ -1351,7 +1365,7 @@ class AppLocalizationsId extends AppLocalizations {
   String get insightsShareMyWeek => 'Bagikan minggu saya';
 
   @override
-  String get insightsShareMyWeekPro => 'Bagikan minggu saya · Pro';
+  String get insightsShareMyWeekPro => 'Bagikan minggu saya Â· Pro';
 
   @override
   String get insightsShareReceiptText =>
@@ -1416,7 +1430,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get referralRewardUnlocked =>
-      'Hadiah terbuka — nikmati bulan Pro gratis Anda!';
+      'Hadiah terbuka â€” nikmati bulan Pro gratis Anda!';
 
   @override
   String referralRemainingToUnlock(int remaining) {
@@ -1440,7 +1454,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String bootstrapConfigErrorBody(String detail) {
-    return '$detail\n\nTambahkan SUPABASE_URL dan SUPABASE_PUBLISHABLE_KEY (atau SUPABASE_ANON_KEY lama) ke leanspace/.env, lalu bangun ulang:\n\nflutter build apk --debug';
+    return '$detail\n\nTambahkan API_BASE_URL dan GOOGLE_CLIENT_ID (atau GOOGLE_CLIENT_ID) ke leanspace/.env, lalu bangun ulang:\n\nflutter build apk --debug';
   }
 
   @override
@@ -1450,16 +1464,16 @@ class AppLocalizationsId extends AppLocalizations {
   String get languageNameEn => 'English';
 
   @override
-  String get languageNameUr => 'اردو (Urdu)';
+  String get languageNameUr => 'Ø§Ø±Ø¯Ùˆ (Urdu)';
 
   @override
-  String get languageNameEs => 'Español';
+  String get languageNameEs => 'EspaÃ±ol';
 
   @override
-  String get languageNamePt => 'Português';
+  String get languageNamePt => 'PortuguÃªs';
 
   @override
-  String get languageNameFr => 'Français';
+  String get languageNameFr => 'FranÃ§ais';
 
   @override
   String get languageNameDe => 'Deutsch';
@@ -1468,10 +1482,10 @@ class AppLocalizationsId extends AppLocalizations {
   String get languageNameIt => 'Italiano';
 
   @override
-  String get languageNameAr => 'العربية';
+  String get languageNameAr => 'Ø§Ù„Ø¹Ø±Ø¨ÙŠØ©';
 
   @override
-  String get languageNameTr => 'Türkçe';
+  String get languageNameTr => 'TÃ¼rkÃ§e';
 
   @override
   String get languageNameId => 'Bahasa Indonesia';
@@ -1500,7 +1514,7 @@ class AppLocalizationsId extends AppLocalizations {
       'Pilih warna tempat perlindungan pribadi Anda';
 
   @override
-  String get settingsInviteFriendsTitle => 'Undang teman · Pro Gratis';
+  String get settingsInviteFriendsTitle => 'Undang teman Â· Pro Gratis';
 
   @override
   String get settingsInviteFriendsSubtitle =>
@@ -1585,7 +1599,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get widgetSetupBody =>
-      'Pertahankan rantai di layar beranda Anda — tidak perlu membuka aplikasi.';
+      'Pertahankan rantai di layar beranda Anda â€” tidak perlu membuka aplikasi.';
 
   @override
   String get widgetSetupAdd => 'Tambahkan ke layar beranda';
@@ -1618,20 +1632,20 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get paywallTermsBody =>
-      'Penagihan ditangani oleh Google Play. Langganan memperbarui secara otomatis sampai Anda membatalkan di Play Store → Langganan setidaknya 24 jam sebelum akhir periode berjalan. Anda dapat mengelola atau membatalkan langganan kapan saja dari akun Google Play Anda.\n\nMenghapus aplikasi tidak membatalkan langganan Anda.\n\nHarga yang ditampilkan dalam mata uang lokal Anda dan dapat berbeda per wilayah. Pajak mungkin berlaku.';
+      'Penagihan ditangani oleh Google Play. Langganan memperbarui secara otomatis sampai Anda membatalkan di Play Store â†’ Langganan setidaknya 24 jam sebelum akhir periode berjalan. Anda dapat mengelola atau membatalkan langganan kapan saja dari akun Google Play Anda.\n\nMenghapus aplikasi tidak membatalkan langganan Anda.\n\nHarga yang ditampilkan dalam mata uang lokal Anda dan dapat berbeda per wilayah. Pajak mungkin berlaku.';
 
   @override
   String get paywallPrivacyTitle => 'Privasi';
 
   @override
   String get paywallPrivacyBody =>
-      'Daily Stitch menyimpan tugas, kebiasaan, dan data rantai Anda di backend Supabase kami, terkait dengan akun Anda. Kami tidak pernah menjual data Anda.\n\nPembelian langganan diproses oleh Google Play. Kami menerima token pembelian terverifikasi dari Google untuk mengonfirmasi status Pro Anda. Kami tidak melihat atau menyimpan detail pembayaran Anda.\n\nAnda dapat meminta ekspor data lengkap atau penghapusan akun dari Pengaturan → Penghapusan akun.';
+      'Daily Stitch menyimpan tugas, kebiasaan, dan data rantai Anda di backend aman kami, terkait dengan akun Anda. Kami tidak pernah menjual data Anda.\n\nPembelian langganan diproses oleh Google Play. Kami menerima token pembelian terverifikasi dari Google untuk mengonfirmasi status Pro Anda. Kami tidak melihat atau menyimpan detail pembayaran Anda.\n\nAnda dapat meminta ekspor data lengkap atau penghapusan akun dari Pengaturan â†’ Penghapusan akun.';
 
   @override
   String get paywallCloseTooltip => 'Tutup';
 
   @override
-  String get paywallFooterLinks => 'Pulihkan · Ketentuan · Privasi';
+  String get paywallFooterLinks => 'Pulihkan Â· Ketentuan Â· Privasi';
 
   @override
   String get manageProTitle => 'Langganan Pro';
@@ -1685,12 +1699,12 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String manageProBillingFooter(String version) {
-    return 'Penagihan ditangani oleh Google Play · $version';
+    return 'Penagihan ditangani oleh Google Play Â· $version';
   }
 
   @override
   String get manageProPlayInstructions =>
-      'Buka aplikasi Google Play Store → ketuk profil Anda → Pembayaran & langganan → Langganan.';
+      'Buka aplikasi Google Play Store â†’ ketuk profil Anda â†’ Pembayaran & langganan â†’ Langganan.';
 
   @override
   String get addTaskGrowSomething => 'Tumbuhkan Sesuatu';
@@ -1738,7 +1752,7 @@ class AppLocalizationsId extends AppLocalizations {
   String get addTaskPlantSproutCta => 'Tanam Tunas';
 
   @override
-  String get addTaskPlanting => 'Menanam…';
+  String get addTaskPlanting => 'Menanamâ€¦';
 
   @override
   String get addTaskNameIntentionError => 'Namai niat Anda';
@@ -1748,15 +1762,15 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get addTaskNotesMigrationWarning =>
-      'Tugas tersimpan. Catatan & prioritas memerlukan migrasi Supabase terbaru — jalankan supabase/migrations/20260701000000_todos_notes_priority.sql.';
+      'Tugas tersimpan. Catatan & prioritas memerlukan migrasi backend terbaru.';
 
   @override
   String get addTaskNoSproutSlots =>
-      'Tidak ada slot tunas kosong — rawat satu terlebih dahulu.';
+      'Tidak ada slot tunas kosong â€” rawat satu terlebih dahulu.';
 
   @override
   String get addTaskSaveSproutError =>
-      'Tidak dapat menyimpan tunas — coba lagi.';
+      'Tidak dapat menyimpan tunas â€” coba lagi.';
 
   @override
   String get addTaskElementWater => 'AIR';
@@ -1935,7 +1949,7 @@ class AppLocalizationsId extends AppLocalizations {
       'Bagikan kemenangan dengan lingkaran Anda. Kartu diekspor sebagai PNG dan siap untuk aplikasi sosial apa pun.';
 
   @override
-  String get shareCardCtaPreparing => 'Mempersiapkan…';
+  String get shareCardCtaPreparing => 'Mempersiapkanâ€¦';
 
   @override
   String get shareCardMilestone => 'TONGGAK BARU TERBUKA';
@@ -1974,7 +1988,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get shareCardSubheadWeek =>
-      'Satu minggu penuh pertumbuhan — hutan Anda semakin lebat.';
+      'Satu minggu penuh pertumbuhan â€” hutan Anda semakin lebat.';
 
   @override
   String get shareCardSubheadProgress =>
@@ -1994,7 +2008,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String shareAppText(String url) {
-    return 'Daily Stitch — lima benih kecil sehari, satu rantai tak terputus. Tanam milik Anda.\n\n$url';
+    return 'Daily Stitch â€” lima benih kecil sehari, satu rantai tak terputus. Tanam milik Anda.\n\n$url';
   }
 
   @override
@@ -2002,7 +2016,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String shareAppReferralText(String code, String url) {
-    return 'Saya membangun rantai harian saya di Daily Stitch — gabung dengan saya menggunakan kode referral saya $code dan kita berdua tumbuh.\n\n$url';
+    return 'Saya membangun rantai harian saya di Daily Stitch â€” gabung dengan saya menggunakan kode referral saya $code dan kita berdua tumbuh.\n\n$url';
   }
 
   @override
@@ -2010,7 +2024,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String shareCardShareTextProgress(String year) {
-    return 'Progres Daily Stitch saya — $year di Daily Stitch.';
+    return 'Progres Daily Stitch saya â€” $year di Daily Stitch.';
   }
 
   @override
@@ -2049,19 +2063,19 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get elementTaglineWater =>
-      'Pulihkan. Hidrasi, istirahat, perawatan emosional — apa pun yang mengisi kembali.';
+      'Pulihkan. Hidrasi, istirahat, perawatan emosional â€” apa pun yang mengisi kembali.';
 
   @override
   String get elementTaglineLight =>
-      'Bangunkan. Cahaya pagi, blok fokus, belajar, meditasi — energi dan kejernihan.';
+      'Bangunkan. Cahaya pagi, blok fokus, belajar, meditasi â€” energi dan kejernihan.';
 
   @override
   String get elementTaglineSoil =>
-      'Pendalaman. Membaca, menulis jurnal, pekerjaan mendalam — akar kuat yang membangun kekuatan jangka panjang.';
+      'Pendalaman. Membaca, menulis jurnal, pekerjaan mendalam â€” akar kuat yang membangun kekuatan jangka panjang.';
 
   @override
   String get elementTaglineBreeze =>
-      'Gerak. Berjalan, berlari, latihan pernapasan — energi ringan dan gerak yang membersihkan pikiran.';
+      'Gerak. Berjalan, berlari, latihan pernapasan â€” energi ringan dan gerak yang membersihkan pikiran.';
 
   @override
   String get elementWhenWater =>
@@ -2096,7 +2110,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String habitBloomSubtitle(int count, String element) {
-    return 'Rantai $count hari · $element';
+    return 'Rantai $count hari Â· $element';
   }
 
   @override
@@ -2144,7 +2158,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get medal_desc_productivity_titan =>
-      'Selesaikan 50 tugas — Anda telah membangun momentum nyata.';
+      'Selesaikan 50 tugas â€” Anda telah membangun momentum nyata.';
 
   @override
   String get medal_id_century_planter => 'Penanam Abad';
@@ -2381,7 +2395,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get guardianHeadlineAllDone =>
-      'Setiap benih yang Anda tanam\nsedang mekar.\nIstirahatlah, Penjaga — Anda sudah mendapatkannya.';
+      'Setiap benih yang Anda tanam\nsedang mekar.\nIstirahatlah, Penjaga â€” Anda sudah mendapatkannya.';
 
   @override
   String guardianHeadlineStreak14(int count) {
@@ -2398,7 +2412,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get guardianHeadlineNoHabitsDone =>
-      'Anda merawat tugas dengan baik.\nTanam tunas —\nkebiasaan adalah cara hutan tumbuh.';
+      'Anda merawat tugas dengan baik.\nTanam tunas â€”\nkebiasaan adalah cara hutan tumbuh.';
 
   @override
   String get guardianHeadlineSomeDone =>
@@ -2410,7 +2424,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get guardianHeadlineAfternoon =>
-      'Selamat siang, Penjaga.\nSetengah cahaya tersisa —\nterus rawat.';
+      'Selamat siang, Penjaga.\nSetengah cahaya tersisa â€”\nterus rawat.';
 
   @override
   String get guardianHeadlineEvening =>
@@ -2426,7 +2440,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String guardianBodyStreak14(int count) {
-    return '$count hari berjalan. Rantai ini bukan keberuntungan — itu adalah pilihan-pilihan kecil yang menumpuk. Terus tumpuk.';
+    return '$count hari berjalan. Rantai ini bukan keberuntungan â€” itu adalah pilihan-pilihan kecil yang menumpuk. Terus tumpuk.';
   }
 
   @override
@@ -2446,7 +2460,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String guardianBodyDefault(int tasks, int sprouts) {
-    return 'Tempat perlindungan Anda hidup. $tasks tugas selesai, $sprouts tunas tumbuh — pekerjaan mulai terlihat.';
+    return 'Tempat perlindungan Anda hidup. $tasks tugas selesai, $sprouts tunas tumbuh â€” pekerjaan mulai terlihat.';
   }
 
   @override
@@ -2465,14 +2479,15 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String guardianInsightChainSuperBody(int count) {
-    return 'Anda telah mempertahankan rantai $count hari. Rantai selalu mengalahkan motivasi — pertahankan, bahkan di hari-hari yang lambat.';
+    return 'Anda telah mempertahankan rantai $count hari. Rantai selalu mengalahkan motivasi â€” pertahankan, bahkan di hari-hari yang lambat.';
   }
 
   @override
   String get guardianInsightChainSuperCta => 'Tanam benih besok';
 
   @override
-  String get guardianInsightChainColdTitle => 'Rantai dingin — mulai yang baru';
+  String get guardianInsightChainColdTitle =>
+      'Rantai dingin â€” mulai yang baru';
 
   @override
   String get guardianInsightChainColdBody =>
@@ -2487,7 +2502,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String guardianInsightLessIsMoreBody(int pct) {
-    return 'Anda menyelesaikan sekitar $pct% dari yang Anda tanam. Coba 3 niat tajam alih-alih 5 yang longgar — kualitas berlipat ganda.';
+    return 'Anda menyelesaikan sekitar $pct% dari yang Anda tanam. Coba 3 niat tajam alih-alih 5 yang longgar â€” kualitas berlipat ganda.';
   }
 
   @override
@@ -2511,7 +2526,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get guardianInsightSteadyBody =>
-      'Tidak ada medali yang hampir diraih — tidak apa-apa. Rawat apa yang Anda miliki. Mekar berikutnya sedang dalam perjalanan.';
+      'Tidak ada medali yang hampir diraih â€” tidak apa-apa. Rawat apa yang Anda miliki. Mekar berikutnya sedang dalam perjalanan.';
 
   @override
   String get guardianInsightSteadyCta => 'Lihat progres';
@@ -2547,6 +2562,6 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String habitBloomSubtitleL10n(int count, String element) {
-    return 'Rantai $count hari · $element';
+    return 'Rantai $count hari Â· $element';
   }
 }

@@ -74,7 +74,7 @@ class ReferralController extends Notifier<ReferralStats> {
   }
 
   Future<void> refresh() async {
-    final api = ref.read(supabaseClientProvider);
+    final api = ref.read(apiClientProvider);
     final userId = api.currentUserId;
     if (userId == null) {
       state = const ReferralStats(isLoading: false);
@@ -96,7 +96,7 @@ class ReferralController extends Notifier<ReferralStats> {
   }
 
   Future<String?> applyCode(String code) async {
-    final api = ref.read(supabaseClientProvider);
+    final api = ref.read(apiClientProvider);
     try {
       await api.post('/api/referrals/apply', {'code': code.trim()});
       await ReferralStore.clearPending();

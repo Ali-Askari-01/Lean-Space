@@ -1,4 +1,3 @@
-import '../../../core/local_date.dart';
 import '../../../services/api_client.dart';
 import '../domain/habit.dart';
 import '../domain/todo_item.dart';
@@ -44,7 +43,7 @@ class MyDayRepository {
 
   Future<Habit> toggleHabit(Habit habit) async {
     final data = await _api.post('/api/habits/${habit.id}/toggle');
-    return Habit.fromJson(data as Map<String, dynamic>);
+    return Habit.fromJson(data);
   }
 
   Future<List<TodoItem>> fetchTodayTasks() async {
@@ -77,14 +76,14 @@ class MyDayRepository {
     final data = await _api.post('/api/todos', body);
     
     return AddTaskOutcome(
-      item: TodoItem.fromJson(data as Map<String, dynamic>),
+      item: TodoItem.fromJson(data),
       notesDropped: false,
     );
   }
 
   Future<TodoItem> completeTask(TodoItem task) async {
     final data = await _api.post('/api/todos/${task.id}/complete');
-    return TodoItem.fromJson(data as Map<String, dynamic>);
+    return TodoItem.fromJson(data);
   }
 
   Future<void> deleteTask(String taskId) async {
